@@ -27,10 +27,14 @@
 
     async function downloadImage(){
       // Using fetch
-      imageSrcLo="/cam-lo.jpg"
       imageSrcHi="/cam-hi.jpg"
+      imageSrcStream="/cam.mjpeg"
+      // need to pause stream for a moment and halt stream
+      var el = document.getElementById("micrographstream");
+      el.src = imageSrcHi;
+
       var el = document.getElementById("micrograph");
-      el.src = imageSrcLo;
+      el.src = imageSrcHi;
 
       const image = await fetch(imageSrcHi)
       const imageBlog = await image.blob()
@@ -42,6 +46,12 @@
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
+
+      // reenable stream
+      var el = document.getElementById("micrographstream");
+      el.src = imageSrcStream;
+
+
     }
   </script>
 
@@ -65,7 +75,7 @@
             <div class="card-header">Last Image</div>
             <div class="card-body">
               <h5 class="card-title">Hi-Res</h5>
-              <img src="/cam-lo.jpg" class="img-fluid" alt="Responsive image" id="micrograph" >
+              <img src="/cam-lo.jpg" class="rounded mx-auto d-block" alt="Responsive image" id="micrograph" >
             </div>
           </div>
         </div>
@@ -89,7 +99,7 @@
             <div class="card-header">Stream</div>
             <div class="card-body">
               <h5 class="card-title">MJPEG</h5>
-              <img src="cam.mjpeg" class="rounded mx-auto d-block" />
+              <img src="cam.mjpeg" class="rounded mx-auto d-block"  id="micrographstream" />
             </div>
           </div>
         </div>
