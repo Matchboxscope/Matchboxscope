@@ -12,7 +12,7 @@
 
 const char *SSID = "Blynk";
 const char *PWD = "12345678";
-
+const char *SSID_AP = "MatchboxScope";
 
 WebServer server(80);
 
@@ -24,9 +24,9 @@ void connectToWiFi() {
   Serial.print("Connecting to ");
   Serial.println(SSID);
 
-  WiFi.begin(SSID, PWD);
-
-  while (WiFi.status() != WL_CONNECTED) {
+  /*
+   * WiFi.begin(SSID, PWD);
+   * while (WiFi.status() != WL_CONNECTED) {
     Serial.print(".");
     delay(500);
     // we can even make the ESP32 to sleep
@@ -34,7 +34,14 @@ void connectToWiFi() {
 
   Serial.print("Connected. IP: ");
   Serial.println(WiFi.localIP());
-}
+
+   */
+
+  WiFi.softAP(SSID_AP);
+    IPAddress IP = WiFi.softAPIP();
+  Serial.print("AP IP address: ");
+  Serial.println(IP);
+  }
 
 
 void handleBmp()
@@ -139,11 +146,30 @@ void handleStyle(){
   return;  
 }
 
+void handleBootstrapMin(){
+  Serial.println("Handle bootstrap.min.css");
+  File file = SPIFFS.open("/bootstrap.min.css", "r");  
+  size_t sent = server.streamFile(file, "text/html");  
+  file.close();  
+  return;  
+}
+
+void handleBootstrapAll(){
+  Serial.println("Handle all.css");
+  File file = SPIFFS.open("/all.css", "r");  
+  size_t sent = server.streamFile(file, "text/html");  
+  file.close();
+  return;  
+}
+
+
+
+
 void setup()
 {
   Serial.begin(115200);
   Serial.println();
-
+  
   
  connectToWiFi();
 
@@ -174,6 +200,10 @@ if(!SPIFFS.begin(true)){
   Serial.println("  /cam.mjpeg");
   Serial.println("  /index.html");
   Serial.println("  /style.css");
+  Serial.println("  /all.css");
+  Serial.println("  /BootstrapMin.css");
+
+  
 
   server.on("/cam.bmp", handleBmp);
   server.on("/cam-lo.jpg", handleJpgLo);
@@ -182,6 +212,8 @@ if(!SPIFFS.begin(true)){
   server.on("/cam.mjpeg", handleMjpeg);
   server.on("/index.html", handleWebpage);
   server.on("/style.css", handleStyle);
+  server.on("/all.css", handleBootstrapAll);
+  server.on("/bootstrap.min.css", handleBootstrapMin);
   server.on("/", handleWebpage);
 
   server.begin();
