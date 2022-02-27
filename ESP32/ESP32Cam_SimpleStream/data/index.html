@@ -10,7 +10,7 @@
     var deg = 0;
     function capturePhoto() {
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', "/cam-hi.jpg", true);
+      xhr.open('GET', "http://192.168.4.1:81/cam-hi.jpg", true);
       xhr.send();
     }
     function rotatePhoto() {
@@ -29,9 +29,9 @@
 
     async function downloadImage(){
       // Using fetch
-      imageSrcLo="/cam-lo.jpg"
-      imageSrcHi="/cam-hi.jpg"
-      imageSrcStream="/cam.mjpeg"
+      imageSrcLo="http://192.168.4.1:81/cam-lo.jpg"
+      imageSrcHi="http://192.168.4.1:81/cam-hhi.jpg"
+      imageSrcStream="http://192.168.4.1:81/cam.mjpg"
       // need to pause stream for a moment and halt stream
       var el = document.getElementById("micrographstream");
       el.src = imageSrcLo;
@@ -79,7 +79,7 @@
             <div class="card-header">Last Image</div>
             <div class="card-body">
               <h5 class="card-title">Hi-Res</h5>
-              <img src="/cam-lo.jpg" class="rounded mx-auto d-block" alt="Responsive image" id="micrograph" >
+              <img src="http://192.168.4.1:81/cam-lo.jpg" class="rounded mx-auto d-block" alt="Responsive image" id="micrograph" >
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@
             <div class="card-header">Stream</div>
             <div class="card-body">
               <h5 class="card-title">MJPEG</h5>
-              <img src="cam.mjpeg" class="rounded mx-auto d-block"  id="micrographstream" />
+              <img src="http://192.168.4.1:81/cam.mjpg" class="rounded mx-auto d-block"  id="micrographstream" />
             </div>
           </div>
         </div>
