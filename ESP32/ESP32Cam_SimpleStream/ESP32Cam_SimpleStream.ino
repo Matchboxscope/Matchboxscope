@@ -3,14 +3,39 @@
 #include <esp32cam.h>
 #include <WebServer.h>
 #include <WiFi.h>
+#include <SPIFFS.h>
+#include <FS.h>
 
-const char* WIFI_SSID = "Blynk";
-const char* WIFI_PASS = "12345678";
+//const char *SSID = "ATTNVezUEM";
+//const char *PWD = "t8bfmze5a#id";
+
+
+const char *SSID = "Blynk";
+const char *PWD = "12345678";
+
 
 WebServer server(80);
 
 static auto loRes = esp32cam::Resolution::find(320, 240);
 static auto hiRes = esp32cam::Resolution::find(800, 600);
+static auto maxRes = esp32cam::Resolution::find(1600,1200);
+
+void connectToWiFi() {
+  Serial.print("Connecting to ");
+  Serial.println(SSID);
+
+  WiFi.begin(SSID, PWD);
+
+  while (WiFi.status() != WL_CONNECTED) {
+    Serial.print(".");
+    delay(500);
+    // we can even make the ESP32 to sleep
+  }
+
+  Serial.print("Connected. IP: ");
+  Serial.println(WiFi.localIP());
+}
+
 
 void handleBmp()
 {
@@ -68,7 +93,7 @@ void handleJpgLo()
 
 void handleJpgHi()
 {
-  if (!esp32cam::Camera.changeResolution(hiRes)) {
+  if (!esp32cam::Camera.changeResolution(maxRes)) {
     Serial.println("SET-HI-RES FAIL");
   }
   serveJpg();
@@ -98,16 +123,36 @@ void handleMjpeg()
   Serial.printf("STREAM END %dfrm %0.2ffps\n", res, 1000.0 * res / duration);
 }
 
+void handleWebpage(){
+  Serial.println("Handle Webpage");
+  File file = SPIFFS.open("/index.html", "r");  
+  size_t sent = server.streamFile(file, "text/html");  
+  file.close();  
+  return;  
+}
+
+void handleStyle(){
+  Serial.println("Handle Webpage");
+  File file = SPIFFS.open("/style.css", "r");  
+  size_t sent = server.streamFile(file, "text/html");  
+  file.close();  
+  return;  
+}
+
 void setup()
 {
   Serial.begin(115200);
   Serial.println();
 
+  
+ connectToWiFi();
+
   {
     using namespace esp32cam;
     Config cfg;
     cfg.setPins(pins::AiThinker);
-    cfg.setResolution(hiRes);
+    cfg.setResolution(maxRes);
+    cfg.setGrayscale();
     cfg.setBufferCount(2);
     cfg.setJpeg(80);
 
@@ -115,14 +160,11 @@ void setup()
     Serial.println(ok ? "CAMERA OK" : "CAMERA FAIL");
   }
 
-  WiFi.persistent(false);
-  WiFi.mode(WIFI_STA);
-  WiFi.begin(WIFI_SSID, WIFI_PASS);
-  Serial.println("Connecting to Wifi");
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
+if(!SPIFFS.begin(true)){
+  Serial.println("An Error has occurred while mounting SPIFFS");
+  return;
+}
+
 
   Serial.print("http://");
   Serial.println(WiFi.localIP());
@@ -130,38 +172,23 @@ void setup()
   Serial.println("  /cam-lo.jpg");
   Serial.println("  /cam-hi.jpg");
   Serial.println("  /cam.mjpeg");
+  Serial.println("  /index.html");
+  Serial.println("  /style.css");
 
   server.on("/cam.bmp", handleBmp);
   server.on("/cam-lo.jpg", handleJpgLo);
   server.on("/cam-hi.jpg", handleJpgHi);
   server.on("/cam.jpg", handleJpg);
   server.on("/cam.mjpeg", handleMjpeg);
+  server.on("/index.html", handleWebpage);
+  server.on("/style.css", handleStyle);
+  server.on("/", handleWebpage);
 
   server.begin();
+  Serial.println("START");
 }
 
 void loop()
 {
   server.handleClient();
 }
-
-
-
-/*
- * PYTHON:
- * import urllib
-import cv2
-import numpy as np
-
-url='http://192.168.8.100/cam-hi.jpg'
-
-while True:
-    imgResp=urllib.request.urlopen(url)
-    imgNp=np.array(bytearray(imgResp.read()),dtype=np.uint8)
-    img=cv2.imdecode(imgNp,-1)
-
-    # all the opencv processing is done here
-    cv2.imshow('test',img)
-    if ord('q')==cv2.waitKey(10):
-        exit(0)
- */
