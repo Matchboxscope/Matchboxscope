@@ -7,12 +7,13 @@
 #include "soc/rtc_cntl_reg.h"  // Disable brownour problems
 #include "driver/rtc_io.h"
 
+#include <Preferences.h>
+
 #include <WiFi.h>
 #include <SPIFFS.h>
 #include <FS.h>
 
 #include "SD_MMC.h" // SD card      
-#include <EEPROM.h> // EEPROM     
 
 #define WIFIAP
 #define PIN_LED 16
@@ -25,9 +26,15 @@ const char *PWD = "t8bfmze5a#id";
 #endif
 
 // define the number of bytes you want to access
-#define EEPROM_SIZE 1
+Preferences preferences;
+
 unsigned char pictureNumber = 0; // 0..255
 
+#define uS_TO_S_FACTOR 1000000  /* Conversion factor for micro seconds to seconds */
+#define TIME_TO_SLEEP  5        /* Time ESP32 will go to sleep (in seconds) */
+
+
+unsigned int is_enable = 0; // ready for operation? // setup has been enabled through HTTP? 
 
 WebServer server(80);
 
@@ -60,10 +67,9 @@ void initSpiffs()
 
 static String generate_file_name()
 {
-  // initialize EEPROM with predefined size
-  EEPROM.begin(EEPROM_SIZE);
-  pictureNumber = EEPROM.read(0) + 1;
-
+  preferences.begin("camera", false);
+  pictureNumber = preferences.getUInt("pictureNumber", 0)+1;
+  preferences.end();
   // Path where new picture will be saved in SD Card
   return "/picture" + String(pictureNumber) + ".jpg";
 }
@@ -76,7 +82,7 @@ static bool saveImage (String path)
   digitalWrite(PIN_LED, LOW);
 
   fs::FS &fs = SD_MMC;
-  listDir(SD_MMC, "/", 0);
+  //listDir(SD_MMC, "/", 0);
   Serial.printf("Picture file name: %s\n", path.c_str());
 
   File file = fs.open(path.c_str(), FILE_WRITE);
@@ -84,27 +90,30 @@ static bool saveImage (String path)
   if (!file)
   {
     Serial.println("Failed to open file in writing mode");
-      file.close();
+    file.close();
     return false;
   }
   else
   {
     if (frame == nullptr) {
       Serial.println("CAPTURE FAIL");
-        file.close();
+      file.close();
       return false;
     }
     Serial.printf("CAPTURE OK %dx%d %db\n", frame->getWidth(), frame->getHeight(),
                   static_cast<int>(frame->size()));
     file.write(frame->data(), frame->size()); // payload (image), payload length
-    EEPROM.write(0, pictureNumber);
-    EEPROM.commit();
-      file.close();
-      return true;
+
+    preferences.begin("camera",false);
+    preferences.putUInt("pictureNumber", pictureNumber);
+    preferences.end();
+
+    file.close();
+    return true;
   }
-    
-    
-  
+
+
+
 
 }
 
@@ -144,6 +153,8 @@ void initWebServerConfig()
   server.on("/all.css", handleBootstrapAll);
   server.on("/bootstrap.min.css", handleBootstrapMin);
 
+  server.on("/enable", enable);
+
   server.on("/cam.bmp", handleBmp);
   server.on("/cam-lo.jpg", handleJpgLo);
   server.on("/cam-hi.jpg", handleJpgHi);
@@ -159,6 +170,7 @@ void initWebServerConfig()
   Serial.println("  /index.html");
   Serial.println("  /style.css");
   Serial.println("  /all.css");
+  Serial.println("  /enalbe");
   Serial.println("  /BootstrapMin.css");
   Serial.println("START SERVER");
   server.begin();
@@ -292,22 +304,33 @@ void handleMjpeg()
 
 }
 
+void enable() {
+  Serial.println("ENABLING!");
+  preferences.begin("camera", false);
+  is_enable = 1;
+  preferences.putUInt("is_enable", is_enable); 
+  Serial.println(preferences.getUInt("is_enable", is_enable));
+  preferences.end();
+  server.send(200, "text/html", "You logged yourself out");
+
+}
+
 
 void initSD() {
-Serial.println("Starting SD Card");
-if(!SD_MMC.begin()){
-  Serial.println("SD Card Mount Failed");
-  return;
-}
- 
-uint8_t cardType = SD_MMC.cardType();
-Serial.print("SD Card Type: ");
-Serial.println(cardType);
-if(cardType == CARD_NONE){
-  Serial.println("No SD Card attached");
-  return;
-}
-  listDir(SD_MMC, "/", 0);
+  Serial.println("Starting SD Card");
+  if (!SD_MMC.begin()) {
+    Serial.println("SD Card Mount Failed");
+    return;
+  }
+
+  uint8_t cardType = SD_MMC.cardType();
+  Serial.print("SD Card Type: ");
+  Serial.println(cardType);
+  if (cardType == CARD_NONE) {
+    Serial.println("No SD Card attached");
+    return;
+  }
+  //listDir(SD_MMC, "/", 0);
 }
 
 void initCamera() {
@@ -325,47 +348,75 @@ void initCamera() {
 
 
 
-void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
-    Serial.printf("Listing directory: %s\n", dirname);
+void listDir(fs::FS &fs, const char * dirname, uint8_t levels) {
+  Serial.printf("Listing directory: %s\n", dirname);
 
-    File root = fs.open(dirname);
-    if(!root){
-        Serial.println("Failed to open directory");
-        return;
-    }
-    if(!root.isDirectory()){
-        Serial.println("Not a directory");
-        return;
-    }
+  File root = fs.open(dirname);
+  if (!root) {
+    Serial.println("Failed to open directory");
+    return;
+  }
+  if (!root.isDirectory()) {
+    Serial.println("Not a directory");
+    return;
+  }
 
-    File file = root.openNextFile();
-    while(file){
-        if(file.isDirectory()){
-            Serial.print("  DIR : ");
-            Serial.println(file.name());
-            if(levels){
-                listDir(fs, file.path(), levels -1);
-            }
-        } else {
-            Serial.print("  FILE: ");
-            Serial.print(file.name());
-            Serial.print("  SIZE: ");
-            Serial.println(file.size());
-        }
-        file = root.openNextFile();
+  File file = root.openNextFile();
+  while (file) {
+    if (file.isDirectory()) {
+      Serial.print("  DIR : ");
+      Serial.println(file.name());
+      if (levels) {
+        listDir(fs, file.path(), levels - 1);
+      }
+    } else {
+      Serial.print("  FILE: ");
+      Serial.print(file.name());
+      Serial.print("  SIZE: ");
+      Serial.println(file.size());
     }
+    file = root.openNextFile();
+  }
 }
+
+
+
 
 void setup()
 {
   Serial.begin(115200);
-  Serial.println();
+  
 
-  // init all external hardware parts
-  connectToWiFi();
+  // check if button is hit
+  pinMode(0,INPUT);
+  Serial.println("PRess Button if you want to refocus");
+
+  delay(4000);
+
+  bool buttonState = not digitalRead(0); // pull up
+  Serial.println("buttonState");
+  Serial.println(buttonState);
+  
+  // check if the setup is enabled
+  preferences.begin("camera", false);
+  if(buttonState){
+    preferences.putUInt("is_enable", 0); // force reset
+  }
+  is_enable = preferences.getUInt("is_enable", 0);
+  preferences.end();
+  Serial.println("ENABLING?");
+  Serial.println(is_enable);
+
+  if (!is_enable) {
+    // init all external hardware parts only if we need it
+    connectToWiFi();
+    initSpiffs();
+    initWebServerConfig();
+
+  }
+
+  // initialize camera
   initCamera();
-  initSpiffs();
-  initWebServerConfig();
 
   // setup flash
   pinMode(PIN_LED, OUTPUT);
@@ -375,9 +426,14 @@ void setup()
   initSD();
 
 
-  for (int iframe = 0; iframe < 4; iframe++) {
 
-    // Attempt to Save a picture
+
+
+}
+
+void loop()
+{
+  if (is_enable) {
     String path = generate_file_name();
     if (saveImage(path))
     {
@@ -387,16 +443,19 @@ void setup()
     {
       Serial.printf("Failed to save file to path: %s\n", path.c_str());
     }
+    Serial.println("Go to sleep now");
+    esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
+    Serial.println("Setup ESP32 to sleep for every " + String(TIME_TO_SLEEP) +
+                   " Seconds");
+
+    // Make sure LEd is switched off
+    pinMode(4,OUTPUT);
+    digitalWrite(4, LOW);
+    rtc_gpio_hold_en(GPIO_NUM_4);
+    
+    esp_deep_sleep_start();
   }
-
-
-
-
-
-
-}
-
-void loop()
-{
-  server.handleClient();
+  else {
+    server.handleClient();
+  }
 }
