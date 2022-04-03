@@ -1,12 +1,15 @@
 //IMPORTANT: ENABLE PSRAM!
 #include <esp32cam.h>
 #include <WebServer.h>
+#include "ArduinoJson.h"
+#include "internal/mjpeg.hpp"
+#include "internal/config.hpp"
 
 #include <WiFi.h>
 #include <SPIFFS.h>
 #include <FS.h>
 
-
+#define FLASH_PIN 4
 
 #define WIFIAP
 
@@ -22,6 +25,10 @@ WebServer server(80);
 static auto loRes = esp32cam::Resolution::find(320, 240);
 static auto hiRes = esp32cam::Resolution::find(800, 600);
 static auto maxRes = esp32cam::Resolution::find(1600, 1200);
+
+
+StaticJsonDocument<250> jsonDocument;
+char buffer[250];
 
 
 void initSpiffs()
@@ -45,29 +52,29 @@ void initSpiffs()
   }
 }
 
-void handleIndex(){
+void handleIndex() {
   Serial.println("Handle index.html");
-  File file = SPIFFS.open("/index.html", "r");  
-  size_t sent = server.streamFile(file, "text/html");  
-  file.close();  
-  return;  
-}
-
-
-void handleBootstrapMin(){
-  Serial.println("Handle bootstrap.min.css");
-  File file = SPIFFS.open("/bootstrap.min.css", "r");  
-  size_t sent = server.streamFile(file, "text/css");  
-  file.close();  
-  return;  
-}
-
-void handleBootstrapAll(){
-  Serial.println("Handle all.css");
-  File file = SPIFFS.open("/all.css", "r");  
-  size_t sent = server.streamFile(file, "text/css");  
+  File file = SPIFFS.open("/index.html", "r");
+  size_t sent = server.streamFile(file, "text/html");
   file.close();
-  return;  
+  return;
+}
+
+
+void handleBootstrapMin() {
+  Serial.println("Handle bootstrap.min.css");
+  File file = SPIFFS.open("/bootstrap.min.css", "r");
+  size_t sent = server.streamFile(file, "text/css");
+  file.close();
+  return;
+}
+
+void handleBootstrapAll() {
+  Serial.println("Handle all.css");
+  File file = SPIFFS.open("/all.css", "r");
+  size_t sent = server.streamFile(file, "text/css");
+  file.close();
+  return;
 }
 
 
@@ -76,29 +83,13 @@ void handleBootstrapAll(){
 
 void initWebServerConfig()
 {
-/*
-  DefaultHeaders::Instance().addHeader("Access-Control-Allow-Origin", "*");
-
-  asyncserver.on("/", HTTP_GET, [](AsyncWebServerRequest * request)
-  {
-    Serial.println("get page");
-    request->send(SPIFFS, "/index.html", "text/html");
-  });
-
-  asyncserver.on("/bootstrap.min.css", HTTP_GET, [](AsyncWebServerRequest * request)
-  {
-    request->send(SPIFFS, "/bootstrap.min.css", "text/css");
-  });
-
-  asyncserver.on("/all.css", HTTP_GET, [](AsyncWebServerRequest * request)
-  {
-    request->send(SPIFFS, "/all.css", "text/css");
-  });
-  */
+  server.on("/", handleIndex);
   server.on("/index.html", handleIndex);
   server.on("/all.css", handleBootstrapAll);
   server.on("/bootstrap.min.css", handleBootstrapMin);
-  
+
+  server.on("/led", HTTP_POST, handleLED);
+
   server.on("/cam.bmp", handleBmp);
   server.on("/cam-lo.jpg", handleJpgLo);
   server.on("/cam-hi.jpg", handleJpgHi);
@@ -187,18 +178,20 @@ void serveJpg()
 
 void handleJpgLo()
 {
-  for (int i=0; i<3; i++){
-  if (!esp32cam::Camera.changeResolution(loRes)) {
-    Serial.println("SET-LO-RES FAIL");
-  }}
+  for (int i = 0; i < 3; i++) {
+    if (!esp32cam::Camera.changeResolution(loRes)) {
+      Serial.println("SET-LO-RES FAIL");
+    }
+  }
   serveJpg();
 }
 
 void handleJpgHi()
-{ for (int i=0; i<3; i++){
-  if (!esp32cam::Camera.changeResolution(maxRes)) {
-    Serial.println("SET-HI-RES FAIL");
-  }}
+{ for (int i = 0; i < 3; i++) {
+    if (!esp32cam::Camera.changeResolution(maxRes)) {
+      Serial.println("SET-HI-RES FAIL");
+    }
+  }
   serveJpg();
 }
 
@@ -209,11 +202,11 @@ void handleJpg()
 }
 
 void handleMjpeg()
-{ for (int i=0; i<3; i++){
-  if (!esp32cam::Camera.changeResolution(hiRes)) {
-    Serial.println("SET-HI-RES FAIL");
+{ for (int i = 0; i < 3; i++) {
+    if (!esp32cam::Camera.changeResolution(hiRes)) {
+      Serial.println("SET-HI-RES FAIL");
+    }
   }
-} 
 
   Serial.println("STREAM BEGIN");
   WiFiClient client = server.client();
@@ -227,6 +220,18 @@ void handleMjpeg()
   Serial.printf("STREAM END %dfrm %0.2ffps\n", res, 1000.0 * res / duration);
 }
 
+void handleLED() {
+
+  String body = server.arg("plain");
+  deserializeJson(jsonDocument, body);
+
+  bool ledstate = jsonDocument["ledstate"];
+
+  digitalWrite(FLASH_PIN, ledstate);
+
+  server.sendHeader("Location", "/cam-hi.jpg");
+  server.send(200, "application/json", "{}");
+}
 
 
 
@@ -236,6 +241,9 @@ void setup()
   Serial.begin(115200);
   Serial.println();
 
+  // switch on / off FLASH light
+  pinMode(FLASH_PIN, OUTPUT);
+  digitalWrite(FLASH_PIN, HIGH);
 
   connectToWiFi();
 
@@ -258,11 +266,13 @@ void setup()
   Serial.print("http://");
   Serial.println(WiFi.localIP());
   Serial.println("  /cam.bmp");
+  Serial.println("  /led");
   Serial.println("  /cam-lo.jpg");
   Serial.println("  /cam-hi.jpg");
   Serial.println("  /cam.mjpeg");
   Serial.println("  /index.html");
   Serial.println("  /style.css");
+
   Serial.println("  /all.css");
   Serial.println("  /BootstrapMin.css");
   initWebServerConfig();
@@ -270,7 +280,66 @@ void setup()
   Serial.println("START SERVER");
 }
 
+bool is_stream = false;
+
+
+struct MjpegConfig
+{
+  /** @brief minimum interval between frame captures. */
+  int minInterval = 0;
+  /** @brief maximum number of frames before disconnecting. */
+  int maxFrames = -1;
+  /** @brief time limit of writing one frame in millis. */
+  int frameTimeout = 10000;
+};
+
+/*
+MjpegConfig& cfg{
+  0,
+  -1,
+  10000
+};
+*/
+
 void loop()
 {
+/*
+  WiFiClient client = server.client();
+  esp32cam::detail::MjpegHeader hdr;
+  hdr.prepareResponseHeaders();
+  hdr.writeTo(client);
+
+  using Ctrl = esp32cam::detail::MjpegController;
+  Ctrl ctrl(cfg);
+  
+    auto act = ctrl.decideAction();
+    switch (act) {
+      case Ctrl::CAPTURE: {
+        ctrl.notifyCapture();
+        break;
+      }
+      case Ctrl::RETURN: {
+        ctrl.notifyReturn(capture());
+        break;
+      }
+      case Ctrl::SEND: {
+        hdr.preparePartHeader(ctrl.getFrame()->size());
+        hdr.writeTo(client);
+        ctrl.notifySent(ctrl.getFrame()->writeTo(client, cfg.frameTimeout));
+        hdr.preparePartTrailer();
+        hdr.writeTo(client);
+        break;
+      }
+      case Ctrl::STOP: {
+        client.stop();
+        return ctrl.countSentFrames();
+      }
+      default: {
+        delay(act);
+        break;
+      }
+    }*/
+  
+  
   server.handleClient();
 }
