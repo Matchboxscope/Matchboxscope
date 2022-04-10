@@ -34,7 +34,14 @@ Fancy documentation comes later
 
 <a href="#logo" name="logo"><img src="./IMAGES/VID_20220210_081115.mp4" width="500"></a>
 
-		
+	
+# parts list
+https://www.amazon.de/Miady-Powerbank-Externer-Kompakte-Ladeger%C3%A4t/dp/B08VRL66HZ/ref=pd_sbs_1/262-0614916-1101747?pd_rd_w=KRPJn&pf_rd_p=7cf49d79-ae26-401a-94b7-1dec7a725ba4&pf_rd_r=HT3E1GZ1N68ZKETVDGZB&pd_rd_r=ea66ff21-e666-48b4-8a98-9e6d1ba54164&pd_rd_wg=PhrXi&pd_rd_i=B08VRL66HZ&psc=1
+esp32 camera
+5x screws
+double-sided sticky tape
+3x spring (optional) or elastic foam (likely shipped with the ESP32)
+	
 				
 
 
