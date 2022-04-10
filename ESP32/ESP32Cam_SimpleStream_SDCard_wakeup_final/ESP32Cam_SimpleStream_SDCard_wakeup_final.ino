@@ -35,8 +35,6 @@ unsigned char pictureNumber = 0; // 0..255
 
 
 unsigned int is_enable = 0; // ready for operation? // setup has been enabled through HTTP?
-unsigned int n_darkimages = 0; // if we collect 3 dark images, we want to refocus
-unsigned int THRESHOLD_DARK = 10000; 
 
 WebServer server(80);
 
@@ -80,7 +78,7 @@ static bool saveImage (String path)
 {
   digitalWrite(PIN_LED, HIGH);
   auto frame = esp32cam::capture();
-  for (int i = 0; i < 10; i++) frame = esp32cam::capture(); // warm up
+  for (int i = 0; i < 5; i++) frame = esp32cam::capture(); // warm up / adust
   digitalWrite(PIN_LED, LOW);
 
   fs::FS &fs = SD_MMC;
@@ -105,52 +103,6 @@ static bool saveImage (String path)
     Serial.printf("CAPTURE OK %dx%d %db\n", frame->getWidth(), frame->getHeight(),
                   static_cast<int>(frame->size()));
 
-
-
-/*
-      // check if frame is dark
-    preferences.begin("camera", false);
-    preferences.getUInt("n_darkimages", 0); // get the old counter value and initialize with zero if not available yet
-
-    double sumpixels = 0;
-    uint32_t numpixels = 0;
-
-    
-    for (uint8_t *pixel = frame->data(); pixel < frame->data()+frame->size(); pixel+=16){
-      sumpixels += *pixel; 
-      Serial.println(*pixel);
-    }
- 
-    
-    for (uint32_t i = 0; i < frame->getWidth()*frame->getHeight(); i++) {
-      numpixels++;
-    const uint8_t pixel = frame->data()[i];
-    sumpixels += pixel;
-
-  }
-  
-    Serial.print("Avg of pixels");
-    Serial.println(sumpixels / numpixels);
-
-    
-    if (static_cast<int>(frame->size()) < THRESHOLD_DARK) {
-      // if image is dark we want to reset the focus
-      n_darkimages += 1;
-    }
-    else{
-      n_darkimages = 0;
-    }
-    Serial.print("n_darkimages ");
-    Serial.println(n_darkimages);
-    preferences.putUInt("n_darkimages", n_darkimages);
-    
-
-    if (n_darkimages>2){
-      // now we have 3 dark images and want to refocus -> wifi mode will turn on on next boot
-      is_enable = 0;
-      preferences.putUInt("is_enable", is_enable); // force reset
-    }
-    */   
     file.write(frame->data(), frame->size()); // payload (image), payload length
     preferences.putUInt("pictureNumber", pictureNumber);
     preferences.end();
@@ -158,8 +110,6 @@ static bool saveImage (String path)
     file.close();
     return true;
   }
-
-
 
 
 }
@@ -172,7 +122,6 @@ void handleIndex() {
   file.close();
   return;
 }
-
 
 void handleBootstrapMin() {
   Serial.println("Handle bootstrap.min.css");
@@ -189,10 +138,6 @@ void handleBootstrapAll() {
   file.close();
   return;
 }
-
-
-
-
 
 void initWebServerConfig()
 {
@@ -281,8 +226,6 @@ void handleBmp()
   frame->writeTo(client);
 }
 
-
-
 void serveJpg()
 {
   auto frame = esp32cam::capture();
@@ -347,8 +290,6 @@ void handleMjpeg()
   auto duration = millis() - startTime;
   Serial.printf("STREAM END %dfrm %0.2ffps\n", res, 1000.0 * res / duration);
   digitalWrite(PIN_LED, LOW);
-
-
 }
 
 void enable() {
@@ -359,7 +300,6 @@ void enable() {
   Serial.println(preferences.getUInt("is_enable", is_enable));
   preferences.end();
   server.send(200, "text/html", "You logged yourself out");
-
 }
 
 
@@ -435,21 +375,19 @@ void setup()
 
 
   // check if button is hit
-  pinMode(0, INPUT);
+  pinMode(PIN_LED, INPUT);
   Serial.println("PRess Button if you want to refocus");
 
   delay(4000);
 
-  bool buttonState = not digitalRead(0); // pull up
+  bool buttonState = not digitalRead(PIN_LED); // pull up
   Serial.println("buttonState");
   Serial.println(buttonState);
 
   // check if the setup is enabled
   preferences.begin("camera", false);
   if (buttonState) {
-    n_darkimages = 0; // makesure you reset the darkcounter
-    preferences.putUInt("is_enable", 0); // force reset
-    preferences.putUInt("n_darkimages", n_darkimages); // force reset
+     preferences.putUInt("is_enable", 0); // force reset
   }
   is_enable = preferences.getUInt("is_enable", 0);
   preferences.end();
@@ -469,14 +407,8 @@ void setup()
 
   // setup flash
   pinMode(PIN_LED, OUTPUT);
-  digitalWrite(PIN_LED, HIGH);
-  delay(100);
   digitalWrite(PIN_LED, LOW);
   initSD();
-
-
-
-
 
 }
 

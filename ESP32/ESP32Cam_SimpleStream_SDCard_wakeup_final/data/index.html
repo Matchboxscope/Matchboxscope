@@ -57,50 +57,6 @@
 
 
     }
-
-    function setLed(state){
-      //https://stackoverflow.com/questions/9713058/send-post-data-using-xmlhttprequest
-      var url = "http://192.168.4.1/led"
-      const params = {"ledstate": state};
-      console.log(params);
-
-      var http = new XMLHttpRequest();
-      http.open('POST', url)
-      http.setRequestHeader('Content-type', 'application/json')
-      http.send(JSON.stringify(params)) // Make sure to stringify
-
-    }
-
-    async function downloadImage(){
-      // Using fetch
-      imageSrcLo="http://192.168.4.1/cam-lo.jpg"
-      imageSrcHi="http://192.168.4.1/cam-hi.jpg"
-      imageSrcStream="http://192.168.4.1/cam.mjpg"
-      // need to pause stream for a moment and halt stream
-      var el = document.getElementById("micrographstream");
-      el.src = imageSrcLo;
-
-      await delay(1000);
-      var el = document.getElementById("micrograph");
-      el.src = imageSrcLo;
-
-      const image = await fetch(imageSrcHi)
-      const imageBlog = await image.blob()
-      const imageURL = URL.createObjectURL(imageBlog)
-
-      const link = document.createElement('a')
-      link.href = imageURL
-      link.download = "micrograph_"+Date.now()+"jpg"
-      document.body.appendChild(link)
-      link.click()
-      document.body.removeChild(link)
-
-      // reenable stream
-      var el = document.getElementById("micrographstream");
-      el.src = imageSrcStream;
-
-
-    }
   </script>
 
 </head>
@@ -114,6 +70,7 @@
       </div>
     </div>
   </header>
+
   <section class="py-5 bg-white">
     <div class="container">
       <div class="row">
@@ -122,8 +79,7 @@
             <div class="card-header">Last Image</div>
             <div class="card-body">
               <h5 class="card-title">Hi-Res</h5>
-              <img src="http://192.168.4.1/cam-lo.jpg" width: 640px height: 460px
-              class="rounded mx-auto d-block" alt="Responsive image" id="micrograph" >
+              <img src="http://192.168.4.1/cam-lo.jpg" class="rounded mx-auto d-block" alt="Responsive image" id="micrograph" >
             </div>
           </div>
         </div>
@@ -135,13 +91,7 @@
               <p class="card-text">
               </p>
               <button type="button" class="btn btn-lg btn-warning btn-block" onmousedown="downloadImage()">
-                Download Image
-              </button>
-              <button type="button" id="btnLed" class="btn btn-lg btn-success btn-block" onmousedown="setLed(1)">
-                LED (on)
-              </button>
-              <button type="button" id="btnLed" class="btn btn-lg btn-danger btn-block" onmousedown="setLed(0)">
-                LED (off)
+                click
               </button>
             </div>
           </div>
