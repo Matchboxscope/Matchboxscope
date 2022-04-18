@@ -169,6 +169,7 @@ void initWebServerConfig()
   char endpoint_allcss[] = "/all.css";
   char endpoint_bootstrapcss[] = "/bootstrap.min.css";
   char endpoint_enable[] = "/enable";
+  char endpoint_cambmp[] = "/cam.bmp";
   char endpoint_camlo[] = "/cam-lo.jpg";
   char endpoint_camhi[] = "/cam-hi.jpg";
   char endpoint_cam[] = "/cam.jpg";
