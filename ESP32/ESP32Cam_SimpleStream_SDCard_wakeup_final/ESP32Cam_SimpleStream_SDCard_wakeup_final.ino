@@ -19,6 +19,8 @@
  * - Whitebalance/constant intensity
  * - Swap esp32cam.h with esp_camera?
  * - Any overflow to be expected with pictureNumber?
+ * - link /enable to website
+ * - fit mjjpeg into wevbsite proerly
  */
 
 // Constant settings
@@ -70,7 +72,7 @@ void initSpiffs()
 { // initiliaze internal file system 
   if (!SPIFFS.begin()) 
   {
-    Serial.println("Erreur SPIFFS...");
+    Serial.println("Error SPIFFS...");
     return;
   }
   File root = SPIFFS.open("/");    
@@ -125,6 +127,9 @@ void initCamera() {
   cfg.setJpeg(80);
 
   bool ok = Camera.begin(cfg);
+  if(not ok){
+    ESP.restart();
+  }
   Serial.println(ok ? "CAMERA OK" : "CAMERA FAIL");
 }
 
@@ -165,7 +170,7 @@ void initWebServerConfig()
 {
   // register all the endpoints
   char endpoint_index_non[]= "/";
-  char endpoint_index[] = "/";
+  char endpoint_index[] = "/index.html";
   char endpoint_allcss[] = "/all.css";
   char endpoint_bootstrapcss[] = "/bootstrap.min.css";
   char endpoint_enable[] = "/enable";
@@ -352,18 +357,28 @@ void setup()
   preferences.begin("camera", false);
 
   // did we flash a new programm? If so, we want to avoid boot-loop and go to focus-mode independent from a pressed button.
-  String compile_date_old_str = preferences.getString("compile_date_old", ""); 
+  String compile_date_old_str = preferences.getString("compile_date_old", "");  // this won't get written. Not sure why...
   String compile_date_str(compile_date);
-  
+  preferences.putString("compile_date_old", compile_date_str);
+
+  Serial.println("Compile date old:");
+  Serial.println(compile_date_old_str);
+  Serial.println("Compile date new:");
+  Serial.println(compile_date_str);
+
+  Serial.println("Compared: ");
+  Serial.println(not compile_date_old_str.equals(compile_date_str));
+
+    
   // compare and see if we need to reset
   if(not compile_date_old_str.equals(compile_date_str)){ // we flashed a new code, lets switch to refocus mode
-     preferences.putString("compile_date_old", compile_date_str);
      is_reflashed = true; // ot used yet
      preferences.putUInt("is_activated", 0); // force reset
   }
   
   // if we press a button and want to avoid bootloop check fo rhtat!
   if (!buttonState) { // it is always on - pulled up 
+    Serial.println("Resetting due to button press");
     preferences.putUInt("is_activated", 0); // force reset
   }
   
