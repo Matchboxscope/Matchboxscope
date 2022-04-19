@@ -1,23 +1,75 @@
-#include "Arduino.h"
+#pragma once
 
-// FIXME: we should move these constants out of this file
-#ifdef WIFIAP
-const char *SSID = "MatchboxScope";
-#else
-const char *SSID = "YOUR_SSID";
-const char *PWD = "YOU_PASSWORD";
-#endif
+// C++ standard library
+#include <functional>
 
-// FIXME: it would be nice to move these global variables to the main file
-WebServer server(80);
-bool is_timelapse = false; // in timelapse mode, the webserver is not enabled
-Preferences pref;
-CameraPreferences cam_pref(pref);
+// ESP32 vendor libraries
+#include <WebServer.h>
 
-// TODO: this should be hidden inside an encapsulated camera class
-static const int PIN_LED = 4;
+// Libraries
+#include <esp32cam.h>
 
-void handleIndex() {
+// Local header file
+#include "illumination.h"
+
+class RefocusingServer {
+  public:
+    explicit RefocusingServer(int port, Light &light, std::function<void(void)> on_enable) :
+      server(port), light(light), on_enable(on_enable) {}
+
+    void init();
+    void serve();
+
+  private:
+    WebServer server;
+    Light &light;
+    std::function<void(void)> on_enable;
+
+    // Route handlers
+    void handleIndex();
+    void handleBootstrapMin();
+    void handleBootstrapAll();
+    void handleBmp();
+    void handleJpgLo();
+    void handleJpgHi();
+    void handleJpg();
+    void handleMjpeg();
+    void handleEnable();
+
+    // Utilities
+    void addHandler(const char *uri, WebServer::THandlerFunction fn);
+    void serveJpg();
+};
+
+void RefocusingServer::init() {
+  Serial.print("http://");
+  Serial.println(WiFi.localIP());
+
+  addHandler("/", std::bind(&RefocusingServer::handleIndex, this));
+  addHandler("/index.html", std::bind(&RefocusingServer::handleIndex, this));
+  // Mode selection
+  addHandler("/enable", std::bind(&RefocusingServer::handleEnable, this));
+  // Camera
+  addHandler("/cam.bmp", std::bind(&RefocusingServer::handleBmp, this));
+  addHandler("/cam-lo.jpg", std::bind(&RefocusingServer::handleJpgLo, this));
+  addHandler("/cam-hi.jpg", std::bind(&RefocusingServer::handleJpgHi, this));
+  addHandler("/cam.jpg", std::bind(&RefocusingServer::handleJpg, this));
+  addHandler("/cam.mjpg", std::bind(&RefocusingServer::handleMjpeg, this));
+  // Assets
+  addHandler("/all.css", std::bind(&RefocusingServer::handleBootstrapAll, this));
+  addHandler("/bootstrap.min.css", std::bind(&RefocusingServer::handleBootstrapMin, this));
+
+  Serial.println("START SERVER");
+  server.begin();
+}
+
+void RefocusingServer::serve() {
+  server.handleClient();
+}
+
+// Route handlers
+
+void RefocusingServer::handleIndex() {
   Serial.println("Handle index.html");
   File file = SPIFFS.open("/index.html", "r");
   server.streamFile(file, "text/html");
@@ -25,7 +77,7 @@ void handleIndex() {
   return;
 }
 
-void handleBootstrapMin() {
+void RefocusingServer::handleBootstrapMin() {
   Serial.println("Handle bootstrap.min.css");
   File file = SPIFFS.open("/bootstrap.min.css", "r");
   server.streamFile(file, "text/css");
@@ -33,7 +85,7 @@ void handleBootstrapMin() {
   return;
 }
 
-void handleBootstrapAll() {
+void RefocusingServer::handleBootstrapAll() {
   Serial.println("Handle all.css");
   File file = SPIFFS.open("/all.css", "r");
   server.streamFile(file, "text/css");
@@ -45,8 +97,7 @@ void handleBootstrapAll() {
 const static auto loRes = esp32cam::Resolution::find(320, 240);
 const static auto hiRes = esp32cam::Resolution::find(800, 600);
 
-void handleBmp()
-{
+void RefocusingServer::handleBmp() {
   if (!esp32cam::Camera.changeResolution(loRes)) {
     Serial.println("SET-LO-RES FAIL");
   }
@@ -74,8 +125,73 @@ void handleBmp()
   frame->writeTo(client);
 }
 
-void serveJpg()
-{
+void RefocusingServer::handleJpgLo() {
+  for (int i = 0; i < 3; i++) {
+    if (!esp32cam::Camera.changeResolution(loRes)) {
+      Serial.println("SET-LO-RES FAIL");
+    }
+  }
+  serveJpg();
+}
+
+// FIXME: these should be hidden inside in an encapsulated camera class, maybe?
+const static auto maxRes = esp32cam::Resolution::find(1600, 1200);
+
+void RefocusingServer::handleJpgHi() {
+  for (int i = 0; i < 3; i++) {
+    if (!esp32cam::Camera.changeResolution(maxRes)) {
+      Serial.println("SET-HI-RES FAIL");
+    }
+  }
+  serveJpg();
+}
+
+void RefocusingServer::handleJpg() {
+  server.sendHeader("Location", "/cam-hi.jpg");
+  server.send(302, "", "");
+}
+
+void RefocusingServer::handleMjpeg() {
+  // let the camera "warm up" 
+  for (int i = 0; i < 3; i++) {
+    if (!esp32cam::Camera.changeResolution(maxRes)) {
+      Serial.println("SET-HI-RES FAIL");
+    }
+  }
+
+  // switch on LED for streaming
+  light.enable();
+
+
+  Serial.println("STREAM BEGIN");
+  WiFiClient client = server.client();
+  auto startTime = millis();
+  int res = esp32cam::Camera.streamMjpeg(client);
+  if (res <= 0) {
+    Serial.printf("STREAM ERROR %d\n", res);
+    return;
+  }
+  auto duration = millis() - startTime;
+  Serial.printf("STREAM END %dfrm %0.2ffps\n", res, 1000.0 * res / duration);
+  light.disable();
+}
+
+void RefocusingServer::handleEnable() {
+  Serial.println("ENABLING!");
+  on_enable();
+  // FIXME: test to see if we can make everything work without modifying the is_timelapse global variable
+  server.send(200, "text/html", "You logged yourself out. The camera will now start capturing images every N-seconds forever. To reactivate Wifi, you have to reflash the code or press the button..");
+  Serial.println("Sent response");
+}
+
+// Utilities
+
+void RefocusingServer::addHandler(const char *uri, WebServer::THandlerFunction fn) {
+  server.on(uri, fn);
+  Serial.println(uri);
+}
+
+void RefocusingServer::serveJpg() {
   auto frame = esp32cam::capture();
   if (frame == nullptr) {
     Serial.println("CAPTURE FAIL");
@@ -89,112 +205,4 @@ void serveJpg()
   server.send(200, "image/jpeg");
   WiFiClient client = server.client();
   frame->writeTo(client);
-}
-
-void handleJpgLo()
-{
-  for (int i = 0; i < 3; i++) {
-    if (!esp32cam::Camera.changeResolution(loRes)) {
-      Serial.println("SET-LO-RES FAIL");
-    }
-  }
-  serveJpg();
-}
-
-// FIXME: these should be hidden inside in an encapsulated camera class, maybe?
-const static auto maxRes = esp32cam::Resolution::find(1600, 1200);
-
-void handleJpgHi()
-{
-  for (int i = 0; i < 3; i++) {
-    if (!esp32cam::Camera.changeResolution(maxRes)) {
-      Serial.println("SET-HI-RES FAIL");
-    }
-  }
-  serveJpg();
-}
-
-void handleJpg()
-{
-  server.sendHeader("Location", "/cam-hi.jpg");
-  server.send(302, "", "");
-}
-
-void handleMjpeg()
-{ 
-  // let the camera "warm up" 
-  for (int i = 0; i < 3; i++) {
-    if (!esp32cam::Camera.changeResolution(maxRes)) {
-      Serial.println("SET-HI-RES FAIL");
-    }
-  }
-
-  // switch on LED for streaming
-  pinMode(PIN_LED, OUTPUT);
-  digitalWrite(PIN_LED, HIGH);
-
-
-  Serial.println("STREAM BEGIN");
-  WiFiClient client = server.client();
-  auto startTime = millis();
-  int res = esp32cam::Camera.streamMjpeg(client);
-  if (res <= 0) {
-    Serial.printf("STREAM ERROR %d\n", res);
-    return;
-  }
-  auto duration = millis() - startTime;
-  Serial.printf("STREAM END %dfrm %0.2ffps\n", res, 1000.0 * res / duration);
-  digitalWrite(PIN_LED, LOW);
-}
-
-void enable() {
-  Serial.println("ENABLING!");
-  // FIXME: this function modifies a global variable declared in the main file! We should decouple it somehow (how???)
-  is_timelapse = true; // focus has been set
-  cam_pref.setIsTimelapse(is_timelapse);
-  server.send(200, "text/html", "You logged yourself out. The camera will now start capturing images every N-seconds forever. To reactivate Wifi, you have to reflash the code or press the button..");
-}
-
-
-void initWebServerConfig()
-{
-  // register all the endpoints
-  char endpoint_index_non[]= "/";
-  char endpoint_index[] = "/index.html";
-  char endpoint_allcss[] = "/all.css";
-  char endpoint_bootstrapcss[] = "/bootstrap.min.css";
-  char endpoint_enable[] = "/enable";
-  char endpoint_cambmp[] = "/cam.bmp";
-  char endpoint_camlo[] = "/cam-lo.jpg";
-  char endpoint_camhi[] = "/cam-hi.jpg";
-  char endpoint_cam[] = "/cam.jpg";
-  char endpoint_cammjpg[] = "/cam.mjpg";
-    
-  server.on(endpoint_index_non, handleIndex);
-  server.on(endpoint_index, handleIndex);
-  server.on(endpoint_allcss, handleBootstrapAll);
-  server.on(endpoint_bootstrapcss, handleBootstrapMin);
-
-  server.on(endpoint_enable, enable);
-
-  server.on(endpoint_cambmp, handleBmp);
-  server.on(endpoint_camlo, handleJpgLo);
-  server.on(endpoint_camhi, handleJpgHi);
-  server.on(endpoint_cam, handleJpg);
-  server.on(endpoint_cammjpg, handleMjpeg);
-
-  Serial.print("http://");
-  Serial.println(WiFi.localIP());
-  Serial.println(endpoint_index_non);
-  Serial.println(endpoint_index);
-  Serial.println(endpoint_allcss);
-  Serial.println(endpoint_bootstrapcss);
-  Serial.println(endpoint_enable);
-  Serial.println(endpoint_camlo);
-  Serial.println(endpoint_camhi);
-  Serial.println(endpoint_cam);
-  Serial.println(endpoint_cammjpg);
-
-  Serial.println("START SERVER");
-  server.begin();
 }

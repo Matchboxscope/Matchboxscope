@@ -12,12 +12,11 @@
 #include <FS.h>
 #include "SD_MMC.h" // SD card  
 
-// Compilation constants
-#define WIFIAP                  // want to use the ESP32 as an access point?
 
 // Local header files
 #include "camera_pref.h"
-#include "webserver.h" // FIXME: this header file declares a `server` global variable, but it also depends on the `is_timelapse` global variable declared in this main .ino file!
+#include "illumination.h"
+#include "webserver.h"
 
 /*
  * 
@@ -30,12 +29,30 @@
  */
 
 // Constant settings
-static const int PIN_REEDSWITCH = 13; // pin of the external switch to "awake" the ESP (e.g. Reedrelay)
-
-// conversion factors for letting the ESP go sleep
+static const int reedSwitchPin = 13; // pin of the external switch to "awake" the ESP (e.g. Reedrelay)
 #define uS_TO_S_FACTOR 1000000  // Conversion factor for micro seconds to seconds 
 #define TIME_TO_SLEEP  10       // Time ESP32 will go to sleep (in seconds) 
+#define WIFIAP                  // want to use the ESP32 as an access point?
 
+#ifdef WIFIAP
+const char *SSID = "MatchboxScope";
+#else
+const char *SSID = "YOUR_SSID";
+const char *PWD = "YOU_PASSWORD";
+#endif
+
+
+Preferences pref;
+CameraPreferences cam_pref(pref);
+
+bool is_timelapse = false; // in timelapse mode, the webserver is not enabled
+void setTimelapse() {
+  is_timelapse = true; // focus has been set
+  cam_pref.setIsTimelapse(is_timelapse);
+}
+
+Light light(4);
+RefocusingServer server(80, light, setTimelapse);
 
 /*
  * 
@@ -125,14 +142,13 @@ void setup()
   }
 
   // If the button is pressed, switch from timelapse mode back to refocusing mode
-  pinMode(PIN_REEDSWITCH, INPUT_PULLUP);
+  pinMode(reedSwitchPin, INPUT_PULLUP);
   Serial.println("Press Button if you want to refocus (t..4s)");
   delay(4000);
-  bool buttonPressed = !digitalRead(PIN_REEDSWITCH); // pull up
+  bool buttonPressed = !digitalRead(reedSwitchPin); // pull up
   Serial.print("Button pressed? ");
   if (buttonPressed) {
-    Serial.println("yes.");
-    Serial.println("Switching from timelapse mode to refocusing mode.");
+    Serial.println("yes. Switching from timelapse mode to refocusing mode.");
     cam_pref.setIsTimelapse(false);
   } else {
     Serial.println("no");
@@ -144,23 +160,20 @@ void setup()
     Serial.println("In refocusing mode. Connect to Wifi and go to 192.168.4.1/enable once you're done with focusing.");
     initiWiFi();
     initSpiffs();
-    initWebServerConfig();
+    server.init();
   } else {
     Serial.println("In timelapse mode.");
   }
 
   // initialize camera
   initCamera();
-
-  // setup pin to work with the flash LED - make sure it's available for the SD card later!
-  pinMode(PIN_LED, OUTPUT);
 }
 
 void loop()
 {
   if (!is_timelapse) {
     // stream images and website to turn focus
-    server.handleClient();
+    server.serve();
     return;
   }
 
@@ -173,7 +186,7 @@ void loop()
   }
 
   // turn on led to see anything..
-  digitalWrite(PIN_LED, HIGH); 
+  light.enable();
   
   // warm up the camera; usually takes some frames to change resolution too
   auto frame = esp32cam::capture();

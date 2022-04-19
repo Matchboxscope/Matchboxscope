@@ -1,11 +1,11 @@
 #include "camera_pref.h"
-#include "Arduino.h"
 
-const char cameraNamespace[] = "camera";
+// Arduino core
+#include "Arduino.h"
 
 // First-run detection
 
-const char dateKey[] = "date";
+static const char dateKey[] = "date";
 String compiled_date(__DATE__ " " __TIME__);
 
 bool CameraPreferences::isFirstRun() {
@@ -31,7 +31,7 @@ bool CameraPreferences::isFirstRun() {
 
 // Timelapse mode
 
-const char timelapseKey[] = "is_timelapse";
+static const char timelapseKey[] = "is_timelapse";
 
 bool CameraPreferences::isTimelapse() {
   preferences.begin(cameraNamespace, true);
@@ -48,7 +48,7 @@ void CameraPreferences::setIsTimelapse(bool value) {
 
 // Timelapse frame indexing
 
-const char frameIndexKey[] = "frame_index";
+static const char frameIndexKey[] = "frame_index";
 
 uint32_t CameraPreferences::getFrameIndex() {
   preferences.begin(cameraNamespace, true);

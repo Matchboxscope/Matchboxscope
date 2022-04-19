@@ -1,4 +1,9 @@
+#pragma once
+
+// ESP32 vendor libraries
 #include <Preferences.h>
+
+static const char cameraNamespace[] = "camera";
 
 class CameraPreferences {
   public:
