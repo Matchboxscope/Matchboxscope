@@ -11,14 +11,12 @@
 #include <memory>
 
 // ESP32 vendor libraries
+#include <soc/soc.h>           // Disable brownour problems
+#include <soc/rtc_cntl_reg.h>  // Disable brownour problems
+#include <esp_camera.h>
 #include <Preferences.h>
 #include <SPIFFS.h>
-#include <FS.h>
-#include "SD_MMC.h" // SD card
-#include "soc/soc.h"           // Disable brownour problems
-#include "soc/rtc_cntl_reg.h"  // Disable brownour problems
-#include "driver/rtc_io.h"
-#include "esp_camera.h"
+#include <SD_MMC.h> // SD card
 
 // Arduino core
 #include "Arduino.h"
@@ -44,19 +42,21 @@
 
 // SETTINGS
 
-// Hardware pins
-static const int reedSwitchPin = 13; // pin of the external switch to "awake" the ESP (e.g. Reedrelay)
-static const int lightPin = 4; // pin of the imaging illumination LED
+// Startup
+static const uint32_t refocus_button_debounce = 4000; // ms; duration to wait for the refocus button to stabilize before reading
 
-// Sleep
-#define uS_TO_S_FACTOR 1000000  // Conversion factor for micro seconds to seconds 
-#define TIME_TO_SLEEP  10       // Time ESP32 will go to sleep (in seconds) 
+// Hardware pins
+static const gpio_num_t reedSwitchPin = GPIO_NUM_13; // pin of the external switch to "awake" the ESP (e.g. Reedrelay)
+static const gpio_num_t lightPin = GPIO_NUM_4; // pin of the imaging illumination LED
 
 // Image acquisition
 static const int res_warmup_wait = 500; // ms; how long to wait after changing the camera resolution
 static const uint32_t camera_warmup_frames = 5; // number of "warm-up" camera frames to wait before final acquisition
 static const int num_frame_buffers = 2; // number of frame buffers to keep, must be at least 1; higher values enable higher streaming fps
 static const int jpeg_quality = 80; // JPEG quality factor from 0 (worst) to 100 (best)
+
+// Timelapse
+static const uint64_t timelapseInterval = 10; // sec; timelapse interval
 
 // Wifi
 static const bool hostWifiAP = true; // whether to host a wifi AP or to join an existing network
@@ -97,7 +97,7 @@ void initNonTimelapseFunctionalities() {
   } else {
     joinWifi(wifiSSID, wifiPassword);
   }
-  if (!SPIFFS.begin()) {
+  if (!SPIFFS.begin()) { // SPIFFS must be initialized before the web server, which depends on it
     Serial.println("Couldn't open SPIFFS!");
   }
   server.init();
@@ -111,10 +111,16 @@ void setup() {
      device_pref.setIsTimelapse(false);
   }
 
+  // Initialize the camera
+  if (!camera.init()) {
+    ESP.restart();
+    return;
+  }
+
   // If the button is pressed, switch from timelapse mode back to refocusing mode
   pinMode(reedSwitchPin, INPUT_PULLUP);
   Serial.println("Press Button if you want to refocus (t..4s)");
-  delay(4000);
+  delay(refocus_button_debounce);
   bool buttonPressed = !digitalRead(reedSwitchPin); // pull up
   Serial.print("Button pressed? ");
   if (buttonPressed) {
@@ -124,16 +130,12 @@ void setup() {
     Serial.println("no");
   }
 
-  if (!camera.init()) {
-    ESP.restart();
-  }
-
+  // Initialize the remaining hardware, depending on the mode
   is_timelapse = device_pref.isTimelapse(); // set the global variable for the loop function
   if (is_timelapse) {
     Serial.println("In timelapse mode.");
     return;
   }
-
   Serial.println("In refocusing mode. Connect to Wifi and go to 192.168.4.1/enable once you're done with focusing.");
   initNonTimelapseFunctionalities();
 }
@@ -141,20 +143,19 @@ void setup() {
 
 // MAIN LOOP
 
-bool saveImage(std::unique_ptr<esp32cam::Frame> frame, String filename, FS &fs) {
-  Serial.printf("Saving to: %s\n", filename.c_str());
-  File file = fs.open(filename.c_str(), FILE_WRITE);
-  Serial.println("Opening file");
-  if (!file) {
-    Serial.println("Failed to open file in writing mode");
-    file.close();
+bool saveImage(std::unique_ptr<esp32cam::Frame> frame, String filename) {
+  if (frame == nullptr) {
     return false;
   }
 
-  file.write(frame->data(), frame->size()); // payload (image), payload length
-  Serial.println("Finished writing file.");
-  file.close();
-  return true;
+  // We initialize SD_MMC here rather than in setup() because SD_MMC needs to reset the light pin
+  // with a different pin mode.
+  if (!SD_MMC.begin()) {
+    Serial.println("SD Card Mount Failed");
+    return false;
+  }
+
+  return Camera::save(std::move(frame), filename.c_str(), SD_MMC);
 }
 
 void loop() {
@@ -164,35 +165,21 @@ void loop() {
   }
 
   // Acquire the image
-  if (!camera.useMaxRes()) {
-    Serial.println("SET-HI-RES FAIL");
-  }
+  camera.useMaxRes();
   auto frame = camera.acquire(camera_warmup_frames);
-  if (frame == nullptr) {
-    Serial.println("CAPTURE FAIL");
-    return;
-  }
-  Serial.printf(
-      "CAPTURE OK %dx%d %db\n",
-      frame->getWidth(), frame->getHeight(), static_cast<int>(frame->size())
-  );
 
   // Save image to SD card
-  if (!SD_MMC.begin()) { // initialized here rather than setup() because it resets the light pin with a different pin mode
-    Serial.println("SD Card Mount Failed");
-  }
   uint32_t frame_index = device_pref.getFrameIndex() + 1;
-  if (saveImage(std::move(frame), "/picture" + String(frame_index) + ".jpg", SD_MMC)) {
+  if (saveImage(std::move(frame), "/picture" + String(frame_index) + ".jpg")) {
     device_pref.setFrameIndex(frame_index);
   };
 
-  Serial.println("Go to sleep now");
-  esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
-  Serial.println("Setup ESP32 to sleep for every " + String(TIME_TO_SLEEP) +
-                 " Seconds");
-
-  // Make sure LED is switched off
-  light.off();
-  rtc_gpio_hold_en(GPIO_NUM_4);
+  // Sleep
+  light.sleep();
+  Serial.print("Sleeping for ");
+  Serial.print(timelapseInterval);
+  Serial.println(" s");
+  static const uint64_t usPerSec = 1000000; // Conversion factor from microseconds to seconds
+  esp_sleep_enable_timer_wakeup(timelapseInterval * usPerSec);
   esp_deep_sleep_start();
 }

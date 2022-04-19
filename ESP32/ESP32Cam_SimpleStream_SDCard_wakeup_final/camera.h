@@ -2,6 +2,7 @@
 
 // ESP32 vendor libraries
 #include <Client.h>
+#include <FS.h>
 
 // C++ standard libraries
 #include <memory>
@@ -24,6 +25,8 @@ class Camera {
       warmup_wait(res_warmup_wait),
       num_frame_buffers(num_frame_buffers),
       jpeg_quality(jpeg_quality) {}
+
+    static bool save(std::unique_ptr<esp32cam::Frame> frame, const char *filename, FS &fs);
 
     bool init();
 

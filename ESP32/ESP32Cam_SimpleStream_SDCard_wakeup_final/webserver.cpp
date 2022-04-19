@@ -53,10 +53,7 @@ void RefocusingServer::handleBootstrapAll() {
 }
 
 void RefocusingServer::handleBmp() {
-  if (!camera.useLowRes()) {
-    Serial.println("SET-LO-RES FAIL");
-  }
-
+  camera.useLowRes();
   auto frame = camera.acquire();
   if (frame == nullptr) {
     Serial.println("CAPTURE FAIL");
@@ -76,14 +73,14 @@ void RefocusingServer::handleBmp() {
 
   server.setContentLength(frame->size());
   server.send(200, "image/bmp");
-  WiFiClient client = server.client();
+  auto client = server.client();
   frame->writeTo(client);
 }
 
 void RefocusingServer::handleJpgLo() {
   for (int i = 0; i < 3; i++) {
-    if (!camera.useLowRes()) {
-      Serial.println("SET-LO-RES FAIL");
+    if (camera.useLowRes()) {
+      break;
     }
   }
   serveJpg();
@@ -91,8 +88,8 @@ void RefocusingServer::handleJpgLo() {
 
 void RefocusingServer::handleJpgHi() {
   for (int i = 0; i < 3; i++) {
-    if (!camera.useMaxRes()) {
-      Serial.println("SET-HI-RES FAIL");
+    if (camera.useMaxRes()) {
+      break;
     }
   }
   serveJpg();
@@ -106,12 +103,12 @@ void RefocusingServer::handleJpg() {
 void RefocusingServer::handleMjpeg() {
   // let the camera "warm up" 
   for (int i = 0; i < 3; i++) {
-    if (!camera.useMaxRes()) {
-      Serial.println("SET-HI-RES FAIL");
+    if (camera.useMaxRes()) {
+      break;
     }
   }
 
-  WiFiClient client = server.client();
+  auto client = server.client();
   camera.streamMjpeg(client);
 }
 
@@ -132,15 +129,12 @@ void RefocusingServer::addHandler(const char *uri, WebServer::THandlerFunction f
 void RefocusingServer::serveJpg() {
   auto frame = camera.acquire();
   if (frame == nullptr) {
-    Serial.println("CAPTURE FAIL");
     server.send(503, "", "");
     return;
   }
-  Serial.printf("CAPTURE OK %dx%d %db\n", frame->getWidth(), frame->getHeight(),
-                static_cast<int>(frame->size()));
 
   server.setContentLength(frame->size());
   server.send(200, "image/jpeg");
-  WiFiClient client = server.client();
+  auto client = server.client();
   frame->writeTo(client);
 }

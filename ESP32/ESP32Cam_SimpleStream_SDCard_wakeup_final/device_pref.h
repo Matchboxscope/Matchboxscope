@@ -3,7 +3,6 @@
 // ESP32 vendor libraries
 #include <Preferences.h>
 
-
 class DevicePreferences {
   public:
     explicit DevicePreferences(
