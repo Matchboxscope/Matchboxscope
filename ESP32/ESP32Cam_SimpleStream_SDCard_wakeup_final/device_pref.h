@@ -3,10 +3,13 @@
 // ESP32 vendor libraries
 #include <Preferences.h>
 
-class CameraPreferences {
+
+class DevicePreferences {
   public:
-    explicit CameraPreferences(Preferences &preferences, const char *group_name) :
-      preferences(preferences), group_name(group_name) {}
+    explicit DevicePreferences(
+        Preferences &preferences, const char *group_name, const char *compiled_date
+    ) :
+      preferences(preferences), group_name(group_name), compiled_date(compiled_date) {}
     bool isFirstRun();
     bool isTimelapse();
     void setIsTimelapse(bool value);
@@ -16,4 +19,5 @@ class CameraPreferences {
   private:
     Preferences &preferences;
     const char *group_name;
+    const String compiled_date;
 };

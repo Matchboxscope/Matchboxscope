@@ -7,6 +7,9 @@
 
 // HEADERS
 
+// C++ standard libraries
+#include <memory>
+
 // ESP32 vendor libraries
 #include <Preferences.h>
 #include <SPIFFS.h>
@@ -24,8 +27,9 @@
 #include <esp32cam.h>
 
 // Local header files
-#include "camera_pref.h"
+#include "device_pref.h"
 #include "illumination.h"
+#include "camera.h"
 #include "webserver.h"
 #include "wifi.h"
 
@@ -48,6 +52,12 @@ static const int lightPin = 4; // pin of the imaging illumination LED
 #define uS_TO_S_FACTOR 1000000  // Conversion factor for micro seconds to seconds 
 #define TIME_TO_SLEEP  10       // Time ESP32 will go to sleep (in seconds) 
 
+// Image acquisition
+static const int res_warmup_wait = 500; // ms; how long to wait after changing the camera resolution
+static const uint32_t camera_warmup_frames = 5; // number of "warm-up" camera frames to wait before final acquisition
+static const int num_frame_buffers = 2; // number of frame buffers to keep, must be at least 1; higher values enable higher streaming fps
+static const int jpeg_quality = 80; // JPEG quality factor from 0 (worst) to 100 (best)
+
 // Wifi
 static const bool hostWifiAP = true; // whether to host a wifi AP or to join an existing network
 const char *wifiAPSSID = "MatchboxScope"; 
@@ -62,78 +72,43 @@ bool is_timelapse = false; // in timelapse mode, the webserver is not enabled
 
 // Hardware
 Light light(lightPin);
+Camera camera(
+    esp32cam::Camera, esp32cam::pins::AiThinker, light,
+    res_warmup_wait, num_frame_buffers, jpeg_quality
+);
 
 // Preferences
 Preferences pref;
-CameraPreferences cam_pref(pref, "camera");
+DevicePreferences device_pref(pref, "camera", __DATE__ " " __TIME__);
 
 // Web server
 void setTimelapse() {
   is_timelapse = true; // focus has been set
-  cam_pref.setIsTimelapse(is_timelapse);
+  device_pref.setIsTimelapse(is_timelapse);
 }
-RefocusingServer server(80, SPIFFS, light, setTimelapse);
+RefocusingServer server(80, SPIFFS, camera, setTimelapse);
 
 
 // INITIALIZATION
 
-/*
- * 
- * Functions to initialize hardware and auxilary components
- * 
- */
-void initSpiffs()
-{ // initiliaze internal file system 
-  if (!SPIFFS.begin()) 
-  {
-    Serial.println("Error SPIFFS...");
-    return;
+void initNonTimelapseFunctionalities() {
+  if (hostWifiAP) {
+    initWifiAP(wifiAPSSID);
+  } else {
+    joinWifi(wifiSSID, wifiPassword);
   }
-  File root = SPIFFS.open("/");    
-  File file = root.openNextFile(); 
-  while (file)                     
-  {// print all files to check if website HtML file exists
-    Serial.print("File: ");
-    Serial.println(file.name());
-    file.close();
-    file = root.openNextFile(); 
+  if (!SPIFFS.begin()) {
+    Serial.println("Couldn't open SPIFFS!");
   }
+  server.init();
 }
 
-
-const static auto maxRes = esp32cam::Resolution::find(1600, 1200);
-void initCamera() {
-  using namespace esp32cam;
-
-  Config cfg;
-  cfg.setPins(pins::AiThinker);
-  cfg.setResolution(maxRes);
-  //cfg.setGrayscale(); // causes problems, doesn't add any functionality other than numpy.mean()
-  cfg.setBufferCount(2);
-  cfg.setJpeg(80);
-
-  bool ok = Camera.begin(cfg);
-  if(not ok){
-    ESP.restart();
-  }
-  Serial.println(ok ? "CAMERA OK" : "CAMERA FAIL");
-}
-
-
-
-/*
- * 
- * Setup the different functions
- * 
- */
-
-void setup()
-{
+void setup() {
   Serial.begin(115200);
 
   // Reset the EEPROM's stored timelapse mode after each re-flash
-  if (cam_pref.isFirstRun()) {
-     cam_pref.setIsTimelapse(false);
+  if (device_pref.isFirstRun()) {
+     device_pref.setIsTimelapse(false);
   }
 
   // If the button is pressed, switch from timelapse mode back to refocusing mode
@@ -144,80 +119,72 @@ void setup()
   Serial.print("Button pressed? ");
   if (buttonPressed) {
     Serial.println("yes. Switching from timelapse mode to refocusing mode.");
-    cam_pref.setIsTimelapse(false);
+    device_pref.setIsTimelapse(false);
   } else {
     Serial.println("no");
   }
 
-  is_timelapse = cam_pref.isTimelapse();
-
-  if (!is_timelapse) {
-    Serial.println("In refocusing mode. Connect to Wifi and go to 192.168.4.1/enable once you're done with focusing.");
-    if (hostWifiAP) {
-      initWifiAP(wifiAPSSID);
-    } else {
-      joinWifi(wifiSSID, wifiPassword);
-    }
-    initSpiffs();
-    server.init();
-  } else {
-    Serial.println("In timelapse mode.");
+  if (!camera.init()) {
+    ESP.restart();
   }
 
-  // initialize camera
-  initCamera();
-}
-
-void loop()
-{
-  if (!is_timelapse) {
-    // stream images and website to turn focus
-    server.serve();
+  is_timelapse = device_pref.isTimelapse(); // set the global variable for the loop function
+  if (is_timelapse) {
+    Serial.println("In timelapse mode.");
     return;
   }
 
-  // we only want to take one picture, save it and go to deep-sleep.. zzzzz
-  uint32_t frameIndex = cam_pref.getFrameIndex() + 1;
-  String path = "/picture" + String(frameIndex) + ".jpg";
+  Serial.println("In refocusing mode. Connect to Wifi and go to 192.168.4.1/enable once you're done with focusing.");
+  initNonTimelapseFunctionalities();
+}
 
-  if (!esp32cam::Camera.changeResolution(maxRes)) {
-    Serial.println("SET-HI-RES FAIL");
-  }
 
-  // Acquire the image
-  light.on();
-  auto frame = esp32cam::capture();
-  for (int i = 0; i < 5; i++) { // warm up the camera; usually takes some frames to change resolution too
-    frame = esp32cam::capture(); // warm up / adust
-  }
-  light.off();
+// MAIN LOOP
 
-  // rest pin 4 and save image on SD card
-  if (!SD_MMC.begin()) { // (!SD_MMC.begin("/sdcard", true)) { //1bit mode -
-    Serial.println("SD Card Mount Failed");
-  }
-  Serial.printf("Picture file name: %s\n", path.c_str());
-
-  fs::FS &fs = SD_MMC; 
-  File file = fs.open(path.c_str(), FILE_WRITE);
+bool saveImage(std::unique_ptr<esp32cam::Frame> frame, String filename, FS &fs) {
+  Serial.printf("Saving to: %s\n", filename.c_str());
+  File file = fs.open(filename.c_str(), FILE_WRITE);
   Serial.println("Opening file");
   if (!file) {
     Serial.println("Failed to open file in writing mode");
     file.close();
-  } else {
-    if (frame == nullptr) {
-      Serial.println("CAPTURE FAIL");
-      file.close();
-    }
-    Serial.printf("CAPTURE OK %dx%d %db\n", frame->getWidth(), frame->getHeight(),
-                  static_cast<int>(frame->size()));
-
-    file.write(frame->data(), frame->size()); // payload (image), payload length
-    Serial.println("Finished writing file.");
-    cam_pref.setFrameIndex(frameIndex);
-
-    file.close();
+    return false;
   }
+
+  file.write(frame->data(), frame->size()); // payload (image), payload length
+  Serial.println("Finished writing file.");
+  file.close();
+  return true;
+}
+
+void loop() {
+  if (!is_timelapse) {
+    server.serve(); // serve webpage and image stream to adjust focus
+    return;
+  }
+
+  // Acquire the image
+  if (!camera.useMaxRes()) {
+    Serial.println("SET-HI-RES FAIL");
+  }
+  auto frame = camera.acquire(camera_warmup_frames);
+  if (frame == nullptr) {
+    Serial.println("CAPTURE FAIL");
+    return;
+  }
+  Serial.printf(
+      "CAPTURE OK %dx%d %db\n",
+      frame->getWidth(), frame->getHeight(), static_cast<int>(frame->size())
+  );
+
+  // Save image to SD card
+  if (!SD_MMC.begin()) { // initialized here rather than setup() because it resets the light pin with a different pin mode
+    Serial.println("SD Card Mount Failed");
+  }
+  uint32_t frame_index = device_pref.getFrameIndex() + 1;
+  if (saveImage(std::move(frame), "/picture" + String(frame_index) + ".jpg", SD_MMC)) {
+    device_pref.setFrameIndex(frame_index);
+  };
 
   Serial.println("Go to sleep now");
   esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);

@@ -1,13 +1,5 @@
 #include "webserver.h"
 
-// Arduino third-party libraries
-#include <esp32cam.h>
-
-// FIXME: these should be hidden inside in an encapsulated camera class, maybe?
-const static auto loRes = esp32cam::Resolution::find(320, 240);
-const static auto hiRes = esp32cam::Resolution::find(800, 600);
-const static auto maxRes = esp32cam::Resolution::find(1600, 1200);
-
 void RefocusingServer::init() {
   Serial.print("http://");
   Serial.println(WiFi.localIP());
@@ -61,11 +53,11 @@ void RefocusingServer::handleBootstrapAll() {
 }
 
 void RefocusingServer::handleBmp() {
-  if (!esp32cam::Camera.changeResolution(loRes)) {
+  if (!camera.useLowRes()) {
     Serial.println("SET-LO-RES FAIL");
   }
 
-  auto frame = esp32cam::capture();
+  auto frame = camera.acquire();
   if (frame == nullptr) {
     Serial.println("CAPTURE FAIL");
     server.send(503, "", "");
@@ -90,7 +82,7 @@ void RefocusingServer::handleBmp() {
 
 void RefocusingServer::handleJpgLo() {
   for (int i = 0; i < 3; i++) {
-    if (!esp32cam::Camera.changeResolution(loRes)) {
+    if (!camera.useLowRes()) {
       Serial.println("SET-LO-RES FAIL");
     }
   }
@@ -99,7 +91,7 @@ void RefocusingServer::handleJpgLo() {
 
 void RefocusingServer::handleJpgHi() {
   for (int i = 0; i < 3; i++) {
-    if (!esp32cam::Camera.changeResolution(maxRes)) {
+    if (!camera.useMaxRes()) {
       Serial.println("SET-HI-RES FAIL");
     }
   }
@@ -114,45 +106,31 @@ void RefocusingServer::handleJpg() {
 void RefocusingServer::handleMjpeg() {
   // let the camera "warm up" 
   for (int i = 0; i < 3; i++) {
-    if (!esp32cam::Camera.changeResolution(maxRes)) {
+    if (!camera.useMaxRes()) {
       Serial.println("SET-HI-RES FAIL");
     }
   }
 
-  // switch on LED for streaming
-  light.on();
-
-
-  Serial.println("STREAM BEGIN");
   WiFiClient client = server.client();
-  auto startTime = millis();
-  int res = esp32cam::Camera.streamMjpeg(client);
-  if (res <= 0) {
-    Serial.printf("STREAM ERROR %d\n", res);
-    return;
-  }
-  auto duration = millis() - startTime;
-  Serial.printf("STREAM END %dfrm %0.2ffps\n", res, 1000.0 * res / duration);
-  light.off();
+  camera.streamMjpeg(client);
 }
 
 void RefocusingServer::handleEnable() {
   Serial.println("ENABLING!");
   on_enable();
-  // FIXME: test to see if we can make everything work without modifying the is_timelapse global variable
   server.send(200, "text/html", "You logged yourself out. The camera will now start capturing images every N-seconds forever. To reactivate Wifi, you have to reflash the code or press the button..");
-  Serial.println("Sent response");
 }
 
 // Utilities
 
 void RefocusingServer::addHandler(const char *uri, WebServer::THandlerFunction fn) {
   server.on(uri, fn);
-  Serial.println(uri);
+  // Serial.print("  ");
+  // Serial.println(uri);
 }
 
 void RefocusingServer::serveJpg() {
-  auto frame = esp32cam::capture();
+  auto frame = camera.acquire();
   if (frame == nullptr) {
     Serial.println("CAPTURE FAIL");
     server.send(503, "", "");

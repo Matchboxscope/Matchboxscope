@@ -8,12 +8,13 @@
 #include <FS.h>
 
 // Local header file
+#include "camera.h"
 #include "illumination.h"
 
 class RefocusingServer {
   public:
-    explicit RefocusingServer(int port, FS &fs, Light &light, std::function<void(void)> on_enable) :
-      server(port), fs(fs), light(light), on_enable(on_enable) {}
+    explicit RefocusingServer(int port, FS &fs, Camera &camera, std::function<void(void)> on_enable) :
+      server(port), fs(fs), camera(camera), on_enable(on_enable) {}
 
     void init();
     void serve();
@@ -21,7 +22,7 @@ class RefocusingServer {
   private:
     WebServer server;
     FS &fs;
-    Light &light;
+    Camera &camera;
     std::function<void(void)> on_enable;
 
     // Route handlers

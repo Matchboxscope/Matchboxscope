@@ -1,4 +1,4 @@
-#include "camera_pref.h"
+#include "device_pref.h"
 
 // Arduino core
 #include "Arduino.h"
@@ -6,9 +6,8 @@
 // First-run detection
 
 static const char dateKey[] = "date";
-String compiled_date(__DATE__ " " __TIME__);
 
-bool CameraPreferences::isFirstRun() {
+bool DevicePreferences::isFirstRun() {
   preferences.begin(group_name, false);
   String stored_date = preferences.getString(dateKey, "");  // FIXME
   preferences.putString(dateKey, compiled_date); // FIXME?
@@ -33,14 +32,14 @@ bool CameraPreferences::isFirstRun() {
 
 static const char timelapseKey[] = "is_timelapse";
 
-bool CameraPreferences::isTimelapse() {
+bool DevicePreferences::isTimelapse() {
   preferences.begin(group_name, true);
   bool value = preferences.getBool(timelapseKey, false);
   preferences.end();
   return value;
 }
 
-void CameraPreferences::setIsTimelapse(bool value) {
+void DevicePreferences::setIsTimelapse(bool value) {
   preferences.begin(group_name, false);
   preferences.putBool(timelapseKey, value);
   preferences.end();
@@ -50,14 +49,14 @@ void CameraPreferences::setIsTimelapse(bool value) {
 
 static const char frameIndexKey[] = "frame_index";
 
-uint32_t CameraPreferences::getFrameIndex() {
+uint32_t DevicePreferences::getFrameIndex() {
   preferences.begin(group_name, true);
   uint32_t value = preferences.getUInt(frameIndexKey, 0);
   preferences.end();
   return value;
 }
 
-void CameraPreferences::setFrameIndex(uint32_t value) {
+void DevicePreferences::setFrameIndex(uint32_t value) {
   preferences.begin(group_name, false);
   preferences.putUInt(frameIndexKey, value);
   preferences.end();
