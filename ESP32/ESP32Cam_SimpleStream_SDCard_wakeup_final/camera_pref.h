@@ -3,11 +3,10 @@
 // ESP32 vendor libraries
 #include <Preferences.h>
 
-static const char cameraNamespace[] = "camera";
-
 class CameraPreferences {
   public:
-    explicit CameraPreferences(Preferences &preferences) : preferences(preferences) {}
+    explicit CameraPreferences(Preferences &preferences, const char *group_name) :
+      preferences(preferences), group_name(group_name) {}
     bool isFirstRun();
     bool isTimelapse();
     void setIsTimelapse(bool value);
@@ -16,4 +15,5 @@ class CameraPreferences {
 
   private:
     Preferences &preferences;
+    const char *group_name;
 };

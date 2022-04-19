@@ -6,19 +6,9 @@
 class Light {
   public:
     explicit Light(int pin) : pin(pin) {}
-    void enable();
-    void disable();
+    void on();
+    void off();
 
   private:
     int pin;
 };
-
-void Light::enable() {
-  pinMode(pin, OUTPUT);
-  digitalWrite(pin, HIGH);
-}
-
-void Light::disable() {
-  pinMode(pin, OUTPUT);
-  digitalWrite(pin, LOW);
-}
