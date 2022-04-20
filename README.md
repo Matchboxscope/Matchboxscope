@@ -5,7 +5,32 @@ Fancy documentation comes later
 
 ## ESP32 code
 
+
+
 ### How to install 
+
+In order to get the code compiled and uploaded to your ESP32 camera board, a number of steps have to be carried out to prepare the system. 
+
+#### Compile and Upload 
+
+This code is written for the `AI_THINKER`
+
+1. Download the Arduino IDE 1.8.X from [here](https://arduino.cc/)
+2. Install the ESP32 IDF tool through the arduino board manager; Add the following link to the settings (a more in-depth tutorial can be found [here](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/):
+`https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json`
+When installing the board, go for the versin `2.0.2`
+3. Install the ESP32Cam library following this [link](https://github.com/yoursunny/esp32cam) and their README
+4. Clone this repository 
+5. Open the file `/ESP32/ESP32Cam_SimpleStream_SDCard_wakeup_final/ESP32Cam_SimpleStream_SDCard_wakeup_final.ino`.
+6. *Compiling*: Under `Tools`select your board (`DEV Module`), `port` and enable the `PSRAM` enable 4MB external PSRAM.
+7. Compile and Upload 
+
+#### Upload files to SPIFFs
+
+For the `HTML` and `CSS` files, you can upload the files to 
+
+
+
 
 ### How it works 
 
