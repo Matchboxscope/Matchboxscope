@@ -5,6 +5,8 @@ Fancy documentation comes later
 
 ## ESP32 code
 
+**ATTENTION for Android users:** The Wifi in access point mode (AP) does not offer internet, hence Android uses available cellular/mobile data and won't open the local address (`192.168.4.1`). *solution:* Switch off mobile data or disable `Wifi+`
+
 
 
 ### How to install 
