@@ -61,14 +61,13 @@ static uint64_t t_old = 0;
 
 
 // Wifi
-static const bool hostWifiAP = true; // whether to host a wifi AP or to join an existing network
 const char *wifiAPSSID = "MatchboxScope";
 const char *wifiSSID = "YOUR_SSID"; // the SSID of a wifi network to join, if not hosting a wifi AP
 const char *wifiPassword = "YOUR_PASSWORD"; // the password of a wifi network to join, if not hosting a wifi AP
 
 
 // GLOBAL STATE
-
+boolean hostWifiAP = true;
 // Mode
 bool is_timelapse = false; // in timelapse mode, the webserver is not enabled
 
@@ -149,11 +148,13 @@ bool saveImage(std::unique_ptr<esp32cam::Frame> frame, String filename) {
 
 void loop() {
 
-    server.serve(); // serve webpage and image stream to adjust focus
+  server.serve(); // serve webpage and image stream to adjust focus
 
 
   if ((millis() - t_old) > (1000*timelapseInterval)) {
+    
     t_old = millis();
+    Serial.println(t_old);
     // Acquire the image
     camera.useMaxRes();
     auto frame = camera.acquire(camera_warmup_frames);
@@ -170,5 +171,4 @@ void loop() {
     Serial.print(timelapseInterval);
     Serial.println(" s");
   }
-
 }
