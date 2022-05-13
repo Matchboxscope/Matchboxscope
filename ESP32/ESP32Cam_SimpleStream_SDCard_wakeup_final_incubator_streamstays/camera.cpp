@@ -80,14 +80,17 @@ void Camera::streamMjpeg(Client &client) {
   light.on();
   Serial.println("STREAM BEGIN");
   auto startTime = millis();
+  pinMode(4, OUTPUT); // This causes a problem. It won't turn on unless its definted as as an output, but this means the SD card won'T work anymore
+  digitalWrite(4,HIGH);
   auto streamed_count = camera.streamMjpeg(client);
-  light.off();
   if (streamed_count <= 0) {
     Serial.printf("STREAM ERROR %d\n", streamed_count);
     return;
   }
   auto elapsed = millis() - startTime;
   Serial.printf("STREAM END %dfrm %0.2ffps\n", streamed_count, 1000.0 * streamed_count / elapsed);
+  light.off();
+  ESP.restart(); // that's the only way to make it work :/
 }
 
 esp32cam::Resolution Camera::maxRes() {

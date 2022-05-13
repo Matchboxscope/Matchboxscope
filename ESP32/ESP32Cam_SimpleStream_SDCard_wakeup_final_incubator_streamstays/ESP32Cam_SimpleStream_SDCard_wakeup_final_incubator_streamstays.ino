@@ -17,6 +17,7 @@
 #include <Preferences.h>
 #include <SPIFFS.h>
 #include <SD_MMC.h> // SD card
+#include <driver/rtc_io.h>
 
 // Arduino core
 #include "Arduino.h"
@@ -56,7 +57,7 @@ static const int num_frame_buffers = 2; // number of frame buffers to keep, must
 static const int jpeg_quality = 80; // JPEG quality factor from 0 (worst) to 100 (best)
 
 // Timelapse
-static const uint64_t timelapseInterval = 60; // sec; timelapse interval
+static const uint64_t timelapseInterval = 5; // sec; timelapse interval
 static uint64_t t_old = 0;
 
 
@@ -122,11 +123,19 @@ void setup() {
   initNonTimelapseFunctionalities();
 
 
+  // take initial frame to get led happy?
+  auto frame = camera.acquire(1);
+  saveImage(std::move(frame), "/background.jpg");
+  light.on();
+  frame = camera.acquire(1);
+  saveImage(std::move(frame), "/foreground.jpg"); 
+  
   // initiliaze timer
   t_old = millis();
 
 }
 
+bool sdInitialized = false;
 
 // MAIN LOOP
 
@@ -137,12 +146,17 @@ bool saveImage(std::unique_ptr<esp32cam::Frame> frame, String filename) {
 
   // We initialize SD_MMC here rather than in setup() because SD_MMC needs to reset the light pin
   // with a different pin mode.
-  if (!SD_MMC.begin()) {
-    Serial.println("SD Card Mount Failed");
-    return false;
+  if (not sdInitialized) {
+    if (!SD_MMC.begin()) {
+      Serial.println("SD Card Mount Failed");
+      return false;
+    }
+    sdInitialized = true;
   }
 
   return Camera::save(std::move(frame), filename.c_str(), SD_MMC);
+
+
 }
 
 
@@ -150,25 +164,19 @@ void loop() {
 
   server.serve(); // serve webpage and image stream to adjust focus
 
-
-  if ((millis() - t_old) > (1000*timelapseInterval)) {
-    
+  if ((millis() - t_old) > (1000 * timelapseInterval)) {
+    //https://stackoverflow.com/questions/67090640/errors-while-interacting-with-microsd-card
     t_old = millis();
-    Serial.println(t_old);
     // Acquire the image
     camera.useMaxRes();
     auto frame = camera.acquire(camera_warmup_frames);
 
     // Save image to SD card
     uint32_t frame_index = device_pref.getFrameIndex() + 1;
+    light.sleep();
+    
     if (saveImage(std::move(frame), "/picture" + String(frame_index) + ".jpg")) {
       device_pref.setFrameIndex(frame_index);
     };
-
-    // Sleep
-    //light.sleep();
-    Serial.print("Sleeping for ");
-    Serial.print(timelapseInterval);
-    Serial.println(" s");
   }
 }
