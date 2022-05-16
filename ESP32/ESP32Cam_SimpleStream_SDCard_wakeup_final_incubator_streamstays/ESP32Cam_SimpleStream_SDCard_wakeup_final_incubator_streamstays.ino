@@ -45,6 +45,7 @@
 
 // Startup
 static const uint32_t refocus_button_debounce = 4000; // ms; duration to wait for the refocus button to stabilize before reading
+boolean sdInitialized = false;
 
 // Hardware pins
 static const gpio_num_t reedSwitchPin = GPIO_NUM_13; // pin of the external switch to "awake" the ESP (e.g. Reedrelay)
@@ -105,6 +106,7 @@ void initNonTimelapseFunctionalities() {
   server.init();
 }
 
+#define BUILTIN_LED 4
 void setup() {
   Serial.begin(115200);
 
@@ -122,20 +124,32 @@ void setup() {
   Serial.println("In refocusing mode. Connect to Wifi and go to 192.168.4.1/enable once you're done with focusing.");
   initNonTimelapseFunctionalities();
 
-
-  // take initial frame to get led happy?
-  auto frame = camera.acquire(1);
-  saveImage(std::move(frame), "/background.jpg");
-  light.on();
-  frame = camera.acquire(1);
-  saveImage(std::move(frame), "/foreground.jpg"); 
-  
+  /*
+    // take initial frame to get led happy?
+    auto frame = camera.acquire(1);
+    saveImage(std::move(frame), "/background.jpg");
+    light.on();
+    frame = camera.acquire(1);
+    saveImage(std::move(frame), "/foreground.jpg");
+  */
   // initiliaze timer
   t_old = millis();
 
+
+  // We initialize SD_MMC here rather than in setup() because SD_MMC needs to reset the light pin
+  // with a different pin mode.
+    if (!SD_MMC.begin("/sdcard", true)) {
+      Serial.println("SD Card Mount Failed");
+    }
+    sdInitialized = true;
+
+
+    
+    pinMode(BUILTIN_LED, OUTPUT);
+    digitalWrite(BUILTIN_LED, LOW);
+    
 }
 
-bool sdInitialized = false;
 
 // MAIN LOOP
 
@@ -144,15 +158,7 @@ bool saveImage(std::unique_ptr<esp32cam::Frame> frame, String filename) {
     return false;
   }
 
-  // We initialize SD_MMC here rather than in setup() because SD_MMC needs to reset the light pin
-  // with a different pin mode.
-  if (not sdInitialized) {
-    if (!SD_MMC.begin()) {
-      Serial.println("SD Card Mount Failed");
-      return false;
-    }
-    sdInitialized = true;
-  }
+  
 
   return Camera::save(std::move(frame), filename.c_str(), SD_MMC);
 
@@ -174,7 +180,7 @@ void loop() {
     // Save image to SD card
     uint32_t frame_index = device_pref.getFrameIndex() + 1;
     light.sleep();
-    
+
     if (saveImage(std::move(frame), "/picture" + String(frame_index) + ".jpg")) {
       device_pref.setFrameIndex(frame_index);
     };
