@@ -1,4 +1,5 @@
-#include "camera.h"
+
+/*#include "camera.h"
 
 bool Camera::save(std::unique_ptr<esp32cam::Frame> frame, const char *filename, FS &fs) {
   Serial.print("Saving to: ");
@@ -18,23 +19,12 @@ bool Camera::save(std::unique_ptr<esp32cam::Frame> frame, const char *filename, 
 }
 
 bool Camera::init() {
-  esp32cam::Config cfg;
-  cfg.setPins(pins);
-  cfg.setResolution(maxRes());
-  cfg.setBufferCount(num_frame_buffers);
-  cfg.setJpeg(jpeg_quality);
 
-  Serial.print("Camera ok? ");
-  if (!camera.begin(cfg)) {
-    Serial.println("no");
-    return false;
-  }
-  Serial.println("yes");
-  return true;
 }
 
 bool Camera::useMaxRes() {
-  bool success = camera.changeResolution(Camera::maxRes(), warmup_wait);
+  // bool success = camera.changeResolution(Camera::maxRes(), warmup_wait); //TODO: Update!
+  camera->set_framesize(s, FRAMESIZE_QVGA);
   if (!success) {
     Serial.println("SET-MAX-RES FAIL");
   }
@@ -70,8 +60,8 @@ std::unique_ptr<esp32cam::Frame> Camera::acquire(uint32_t warmup_frames) {
   }
 
   Serial.printf(
-      "CAPTURE OK %dx%d %db\n",
-      frame->getWidth(), frame->getHeight(), static_cast<int>(frame->size())
+    "CAPTURE OK %dx%d %db\n",
+    frame->getWidth(), frame->getHeight(), static_cast<int>(frame->size())
   );
   return frame;
 }
@@ -102,4 +92,4 @@ esp32cam::Resolution Camera::highRes() {
 
 esp32cam::Resolution Camera::lowRes() {
   return esp32cam::Resolution::find(320, 240);
-}
+}*/
