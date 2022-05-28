@@ -16,7 +16,158 @@ Fancy documentation comes later
 
 ### Additional components 
 
+ESP32 Camera
+Cable
+Screws
+3D printing material 
+Aluminium foil
+sticky tape
+
+
 ### Assembly 
+
+<a href="#logo" name="logo"><img src="./IMAGES/anglerfish_explosion.PNG" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/anglerfish.PNG" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/explosion.jpeg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/image1.png" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/imagfe2.png" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220326_185946.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220326_190242.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220326_190945.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220328_133003.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220329_093734.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220329_093902.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220329_093939.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220329_094034.jpg" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220329_094126.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_085608.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_085640.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_085707.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_085719.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_085800.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_085858.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_085909.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_090005.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_090104.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_090147.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_090159.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_090214.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220403_181212.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220403_181218.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220412_190425_1.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220412_190425.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220412_191615.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220412_191946.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220412_191953.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220412_192222.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220413_091108.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220418_080236.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220418_134433.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220418_141837.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220418_184643.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220418_184857.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220418_185010.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_113546.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_173136.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_173312.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_173507.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_173529.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_173557.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_173638.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_173917.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_174508.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_174821.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_174926.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_175259.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_175354.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_175558.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_180136.jpg" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_180221.jpg" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_180243.jpg" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_180252.jpg" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_180548.jpg" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_181108.jpg" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_181548.jpg" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_183835.jpg" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_183838.jpg" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_184820.jpg" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_191236.jpg" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/IncubatorMicroscope_static.PNG" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/printing.jpeg" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/Screenshot_20220419_184943_com.android.chrome.jpg" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/setup.jpeg" width="500"></a>
+
+
+# Videos 
+<a href="#logo" name="logo"><img src="./IMAGES/SVID_20220419_185022_1.mp4" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/SVID_20220419_190834_1.mp4" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/VID_20220210_081115.mp4" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/VID_20220328_203634.mp4" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/VID_20220402_192604.mp4" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/VID_20220517_122214.mp4" width="500"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/VID_20220517_122302.mp4" width="500"></a>
+
+
+
+
+AnglerfishLogo.pptxESP32 OV2460 - Google Chrome 2022-03-26 18-52-20.mp4
 
 <a href="#logo" name="logo"><img src="./IMAGES/IMG_20220210_080039.jpg" width="500"></a>
 

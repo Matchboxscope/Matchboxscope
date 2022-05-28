@@ -64,6 +64,7 @@ const char *wifiAPSSID = "MatchboxScope";
 const char *wifiSSID = "YOUR_SSID"; // the SSID of a wifi network to join, if not hosting a wifi AP
 const char *wifiPassword = "YOUR_PASSWORD"; // the password of a wifi network to join, if not hosting a wifi AP
 
+boolean sdInitialized = false;
 
 // GLOBAL STATE
 
@@ -111,11 +112,23 @@ void setup() {
      device_pref.setIsTimelapse(false);
   }
 
+
+
   // Initialize the camera
   if (!camera.init()) {
     ESP.restart();
     return;
   }
+
+  // 1-bit mode as suggested here:https://dr-mntn.net/2021/02/using-the-sd-card-in-1-bit-mode-on-the-esp32-cam-from-ai-thinker
+  if (!SD_MMC.begin("/sdcard", true)) {
+    Serial.println("SD Card Mount Failed");
+  }
+  else {
+    Serial.println("SD Card Mounted");
+  }
+  sdInitialized = true;
+
 
   // If the button is pressed, switch from timelapse mode back to refocusing mode
   pinMode(reedSwitchPin, INPUT_PULLUP);
@@ -148,12 +161,6 @@ bool saveImage(std::unique_ptr<esp32cam::Frame> frame, String filename) {
     return false;
   }
 
-  // We initialize SD_MMC here rather than in setup() because SD_MMC needs to reset the light pin
-  // with a different pin mode.
-  if (!SD_MMC.begin()) {
-    Serial.println("SD Card Mount Failed");
-    return false;
-  }
 
   return Camera::save(std::move(frame), filename.c_str(), SD_MMC);
 }
