@@ -8,7 +8,15 @@ However, we wanted to make the microscope a bit more practical and created some 
 
 **The Anglerfish**: This device is well preserved in your beloved jars and hence watertight. Why? Throw it in your nearby pond and collect data how microfilm grows on the jars' surface. Fun! Follow the [**BLUE PILL 🔵**](Anglerfish.md)
 
+<a href="#logo" name="logo"><img src="./IMAGES/Capture.PNG" width="500"></a>
+
+
 **The Matchboxscope**: This is a simple self-contained microscope e.g. for tacking snapshots of your microfluidic chips, your parasite containing slides or just for fun. It comes with a minimum number of parts, but offers a spring-loaded z-stage. Also idea for your incubator-contained microscopy experiments! Follow the [**RED PILL 🔴**](Matchboxscope.md)
+
+
+<a href="#logo" name="logo"><img src="./IMAGES/explosion.jpeg" width="200"></a>
+
+
 
 **The Z-Stacker**: It adds an automatic focussing unit to the *Matchboxscope* in order to create temporal Z-stacks of your beloved cell cultures. It needs more electronics, but still relies on the ESP32-CAM only. Lots of fun, too.  Follow the [**GREEN PILL 🟢**](Matchboxscope.md)
 
@@ -63,95 +71,9 @@ sticky tape
 
 
 
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220418_080236.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220418_134433.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220418_141837.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220418_184643.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220418_184857.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220418_185010.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_113546.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_173136.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_173312.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_173507.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_173529.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_173557.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_173638.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_173917.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_174508.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_174821.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_174926.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_175259.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_175354.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_175558.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_180136.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_180221.jpg" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_180243.jpg" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_180252.jpg" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_180548.jpg" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_181108.jpg" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_181548.jpg" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_183835.jpg" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_183838.jpg" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_184820.jpg" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220419_191236.jpg" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/IncubatorMicroscope_static.PNG" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/printing.jpeg" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/Screenshot_20220419_184943_com.android.chrome.jpg" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/setup.jpeg" width="500"></a>
-
-
 # Videos
-<a href="#logo" name="logo"><img src="./IMAGES/SVID_20220419_185022_1.mp4" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/SVID_20220419_190834_1.mp4" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/VID_20220210_081115.mp4" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/VID_20220328_203634.mp4" width="500"></a>
-<a href="#logo" name="logo"><img src="./IMAGES/VID_20220402_192604.mp4" width="500"></a>
 
-<a href="#logo" name="logo"><img src="./IMAGES/VID_20220517_122214.mp4" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/VID_20220517_122302.mp4" width="500"></a>
-
-
-
-
-AnglerfishLogo.pptxESP32 OV2460 - Google Chrome 2022-03-26 18-52-20.mp4
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220210_080039.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220210_080114.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220210_081045.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220210_112117.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220210_080105.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220210_080143.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220210_080613.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/VID_20220210_081115.mp4" width="500"></a>
+Comming soon
 
 
 # parts list

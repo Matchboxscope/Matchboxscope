@@ -57,16 +57,26 @@ Sticky tape |||
 Springs |||
 
 
+## 3D printing files
+
+All design files can be found in the folder [INVENTOR](./INVENTOR).
+
+All 3D-printable files can be found [here](./STL/Anglerfish_JAR):
+
+* Anglerfish_JAR_Anglerfish_Jar_Adapterplate_v1_12.stl
+* Anglerfish_JAR_Anblerfish_middle2_v1_1.stl
+* Anglerfish_JAR_Anglerfish_bottom_v0_2.stl
+* Anglerfish_JAR_Anglerfish_Lightperiscope_long_V0_21.stl
 
 
+A previous version looked like this:
 
-
-
-
-
+<a href="#logo" name="logo"><img src="./IMAGES/anglerfish/anglerfish_17.jpg" width="500"></a>
 
 
 ## Assembly of the illumination unit
+
+Some additional information for the assembly process can be found in the [Anglerfish](Angleffish.md)-documentation.
 
 The idea of the illumination unit is to re-use the LED torch that is mounted on the ESP32-CAM and can be controlled through GPIO4. Don't look directly into the LED. As said, it'S bright!
 
@@ -132,3 +142,9 @@ Add the illumination unit, insert the microSD card and you're almost done.
 <a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_090159.jpg" width="500"></a>
 
 For remote operation: Add the powerbar and look for a Wifi signal/SSID that may be called "Blynk". Connect to it and open the page http://192.168.4.1
+
+
+## Final Assembly
+
+
+<a href="#logo" name="logo"><img src="./IMAGES/setup.jpeg" width="500"></a>
