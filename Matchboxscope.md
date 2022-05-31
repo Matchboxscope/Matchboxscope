@@ -61,12 +61,13 @@ Springs |||
 
 All design files can be found in the folder [INVENTOR](./INVENTOR).
 
-All 3D-printable files can be found [here](./STL/Anglerfish_JAR):
+All 3D-printable files can be found [here](./STL/IncubatorMicroscope_static):
 
-* Anglerfish_JAR_Anglerfish_Jar_Adapterplate_v1_12.stl
-* Anglerfish_JAR_Anblerfish_middle2_v1_1.stl
-* Anglerfish_JAR_Anglerfish_bottom_v0_2.stl
-* Anglerfish_JAR_Anglerfish_Lightperiscope_long_V0_21.stl
+* IncubatorMicroscope_static_Matchboxscope_bottom_v0_3.stl
+* IncubatorMicroscope_static_Matchboxscope_Lightperiscope_long_V0_2.stl
+* IncubatorMicroscope_static_Matchboxscope_Lightperiscope_V0_1.stl
+* IncubatorMicroscope_static_Matchboxscope_middle2_v2_24.stl
+* IncubatorMicroscope_static_Matchboxscope_sample_v1_13.stl
 
 
 A previous version looked like this:
