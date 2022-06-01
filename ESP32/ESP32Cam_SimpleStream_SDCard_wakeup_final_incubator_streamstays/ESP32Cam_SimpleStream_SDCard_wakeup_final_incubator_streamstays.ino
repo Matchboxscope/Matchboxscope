@@ -136,15 +136,15 @@ void setup() {
   t_old = millis();
 
 
-  // We initialize SD_MMC here rather than in setup() because SD_MMC needs to reset the light pin
-  // with a different pin mode.
+  // We initialize SD_MMC here rather than in loop() because SD_MMC needs to reset the light pin
+  // with a different pin mode. => one bit mode
     if (!SD_MMC.begin("/sdcard", true)) {
       Serial.println("SD Card Mount Failed");
     }
     sdInitialized = true;
 
 
-    
+    // define the built-in flash LED after (!) the SD card! 
     pinMode(BUILTIN_LED, OUTPUT);
     digitalWrite(BUILTIN_LED, LOW);
     
@@ -158,11 +158,7 @@ bool saveImage(std::unique_ptr<esp32cam::Frame> frame, String filename) {
     return false;
   }
 
-  
-
   return Camera::save(std::move(frame), filename.c_str(), SD_MMC);
-
-
 }
 
 

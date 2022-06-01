@@ -77,7 +77,7 @@ std::unique_ptr<esp32cam::Frame> Camera::acquire(uint32_t warmup_frames) {
 }
 
 void Camera::streamMjpeg(Client &client) {
-  light.on();
+
   Serial.println("STREAM BEGIN");
   auto startTime = millis();
   light.on();
@@ -89,7 +89,6 @@ void Camera::streamMjpeg(Client &client) {
   auto elapsed = millis() - startTime;
   Serial.printf("STREAM END %dfrm %0.2ffps\n", streamed_count, 1000.0 * streamed_count / elapsed);
   light.off();
-  //ESP.restart(); // that's the only way to make it work :/
 }
 
 esp32cam::Resolution Camera::maxRes() {
