@@ -58,7 +58,7 @@ static const int num_frame_buffers = 2; // number of frame buffers to keep, must
 static const int jpeg_quality = 80; // JPEG quality factor from 0 (worst) to 100 (best)
 
 // Timelapse
-static const uint64_t timelapseInterval = 5; // sec; timelapse interval
+static const uint64_t timelapseInterval = 60; // sec; timelapse interval
 static uint64_t t_old = 0;
 
 
