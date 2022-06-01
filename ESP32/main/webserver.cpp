@@ -1,4 +1,5 @@
-#include "webserver.h"
+/*
+ * #include "webserver.h"
 
 void RefocusingServer::init() {
   Serial.print("http://");
@@ -78,20 +79,12 @@ void RefocusingServer::handleBmp() {
 }
 
 void RefocusingServer::handleJpgLo() {
-  for (int i = 0; i < 3; i++) {
-    if (camera.useLowRes()) {
-      break;
-    }
-  }
+  //camera.useLowRes() TODO: update
   serveJpg();
 }
 
 void RefocusingServer::handleJpgHi() {
-  for (int i = 0; i < 3; i++) {
-    if (camera.useMaxRes()) {
-      break;
-    }
-  }
+//camera.useMaxRes() TODO: update
   serveJpg();
 }
 
@@ -101,13 +94,9 @@ void RefocusingServer::handleJpg() {
 }
 
 void RefocusingServer::handleMjpeg() {
-  // let the camera "warm up" 
-  for (int i = 0; i < 3; i++) {
-    if (camera.useMaxRes()) {
-      break;
-    }
-  }
-
+  //camera.useMaxRes() TODO: update
+  serveJpg();
+  
   auto client = server.client();
   camera.streamMjpeg(client);
 }
@@ -138,3 +127,4 @@ void RefocusingServer::serveJpg() {
   auto client = server.client();
   frame->writeTo(client);
 }
+*/

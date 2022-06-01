@@ -144,10 +144,10 @@ void setup() {
     sdInitialized = true;
 
 
-    // define the built-in flash LED after (!) the SD card! 
+    // define the built-in flash LED after (!) the SD card!
     pinMode(BUILTIN_LED, OUTPUT);
     digitalWrite(BUILTIN_LED, LOW);
-    
+
 }
 
 
