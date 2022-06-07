@@ -63,15 +63,14 @@ static const int jpeg_quality = 80; // JPEG quality factor from 0 (worst) to 100
 static const uint64_t timelapseInterval = 5; // sec; timelapse interval
 static uint64_t t_old = 0;
 
-
 // Wifi
 const char *wifiAPSSID = "MatchboxScope";
-const char *wifiSSID = "YOUR_SSID"; // the SSID of a wifi network to join, if not hosting a wifi AP
-const char *wifiPassword = "YOUR_PASSWORD"; // the password of a wifi network to join, if not hosting a wifi AP
+const char *wifiSSID = "Blynk"; // the SSID of a wifi network to join, if not hosting a wifi AP
+const char *wifiPassword = "12345678"; // the password of a wifi network to join, if not hosting a wifi AP
 
 
 // GLOBAL STATE
-boolean hostWifiAP = true;
+boolean hostWifiAP = false;
 // Mode
 bool is_timelapse = false; // in timelapse mode, the webserver is not enabled
 
@@ -123,16 +122,11 @@ bool initCamera(){
   config.pixel_format = PIXFORMAT_JPEG;
 
   // Init with high specs to pre-allocate larger buffers
-  if (psramFound()) {
-    config.frame_size = FRAMESIZE_UXGA;
-    config.jpeg_quality = 10;
-    config.fb_count = 2;
-  } else {
-    config.frame_size = FRAMESIZE_SVGA;
-    config.jpeg_quality = 12;
-    config.fb_count = 1;
-  }
-
+  config.frame_size = FRAMESIZE_VGA;
+  config.jpeg_quality = 10;
+  config.fb_count = 2;
+  
+    
   // camera init
   Serial.print("Camera ok? ");
   esp_err_t err = esp_camera_init(&config);
@@ -162,7 +156,7 @@ void initNonTimelapseFunctionalities() {
  // server.init();
 }
 
-#define BUILTIN_LED 4
+
 void setup() {
   // prevent brownouts by silencing them
   WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0);
@@ -229,8 +223,8 @@ void setup() {
   int pinStep = 12;
   int pinDir = 13;
 
-  pinMode(BUILTIN_LED, OUTPUT);
-  digitalWrite(BUILTIN_LED, HIGH);
+  pinMode(lightPin, OUTPUT);
+  digitalWrite(lightPin, HIGH);
   Serial.println("Turning motor");
 
   AccelStepper stepper(1, pinStep, pinDir);
@@ -241,7 +235,7 @@ void setup() {
   stepper.runToNewPosition(-1000);
   stepper.runToNewPosition(1000);
 
-  digitalWrite(BUILTIN_LED, LOW);
+  digitalWrite(lightPin, LOW);
   Serial.println("Done Turning motor");
 
   // Check for an SD card
@@ -287,7 +281,7 @@ bool saveImage(String filename) {
 // MAIN LOOP
 void loop() {
 
-  //server.serve(); // serve webpage and image stream to adjust focus
+  server.serve(); // serve webpage and image stream to adjust focus
 
   if ((millis() - t_old) > (1000 * timelapseInterval)) {
     //https://stackoverflow.com/questions/67090640/errors-while-interacting-with-microsd-card

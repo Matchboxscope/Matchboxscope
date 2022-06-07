@@ -120,16 +120,23 @@ void startCameraServer(){
   httpd_config_t config = HTTPD_DEFAULT_CONFIG();
   config.server_port = 80;
 
-  httpd_uri_t index_uri = {
-    .uri       = "/",
+  httpd_uri_t endpoint_stream = {
+    .uri       = "/cam.mjpeg",
     .method    = HTTP_GET,
     .handler   = stream_handler,
     .user_ctx  = NULL
   };
   
+  httpd_uri_t endpoint_id = {
+    .uri       = "/",
+    .method    = HTTP_GET,
+    .handler   = id_handler,
+    .user_ctx  = NULL
+  };
+  
   //Serial.printf("Starting web server on port: '%d'\n", config.server_port);
   if (httpd_start(&stream_httpd, &config) == ESP_OK) {
-    httpd_register_uri_handler(stream_httpd, &index_uri);
+    httpd_register_uri_handler(stream_httpd, &endpoint_stream);
   }
 }
 

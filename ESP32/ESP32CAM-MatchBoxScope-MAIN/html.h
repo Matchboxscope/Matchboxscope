@@ -1,3 +1,5 @@
+static const char PROGMEM INDEX_HTML[] = R"rawliteral(
+<!DOCTYPE HTML>
 <html>
     <head>
         <meta charset="utf-8">
@@ -24,7 +26,7 @@
                 <tr><td></td><td align="center" colspan="2"></br></tr>
                 <tr><td></td><td align="center" colspan="2"></br></tr>
                 <tr><td>Flash</td><td align="center" colspan="2"><input type="range" id="flash" min="0" max="255" value="0" onchange="try{fetch(document.location.origin+'/control?var=flash&val='+this.value);}catch(e){}"><td></td></tr>
-                <tr><td>Resolution</td><td align="center" colspan="2"><input type="range" id="framesize" min="0" max="6" value="5" onchange="try{fetch(document.location.origin+'/control?var=framesize&val='+this.value);}catch(e){}"><td></td></tr>
+                <tr><td>Resolution</td><td align="center" colspan="2"><input type="range" id="framesize" min="0" max="9" value="5" onchange="try{fetch(document.location.origin+'/control?var=framesize&val='+this.value);}catch(e){}"><td></td></tr>
                 <tr><td>Quality</td><td align="center" colspan="2"><input type="range" id="quality" min="10" max="63" value="10" onchange="try{fetch(document.location.origin+'/control?var=quality&val='+this.value);}catch(e){}"><td></td></tr>
                 </table>
             </section>         
@@ -97,6 +99,7 @@
                 l.onclick = () => {
                     p()
                     j.src = `${c}/capture?_cb=${Date.now()}`
+                    downloadImage(c)
                     f(k)
                 }, o.onclick = () => {
                     p(), e(k)
@@ -130,37 +133,22 @@
                 }
             });
 
-            async function downloadImage(){
+            async function downloadImage(c){
                 // Using fetch
-                imageSrcLo="/cam-lo.jpg"
-                imageSrcHi="/cam-hi.jpg"
-                imageSrcStream="/cam.mjpg"
-                // need to pause stream for a moment and halt stream
-                var el = document.getElementById("micrographstream");
-                el.src = imageSrcLo;
-          
-                await delay(1000);
-                var el = document.getElementById("micrograph");
-                el.src = imageSrcLo;
-          
-                const image = await fetch(imageSrcHi)
+                const image = await fetch(`${c}/capture?_cb=${Date.now()}`)
                 const imageBlog = await image.blob()
                 const imageURL = URL.createObjectURL(imageBlog)
           
                 const link = document.createElement('a')
                 link.href = imageURL
-                link.download = "micrograph_"+Date.now()+"jpg"
+                link.download = "micrograph_"+Date.now()+".jpg"
                 document.body.appendChild(link)
                 link.click()
                 document.body.removeChild(link)
-          
-                // reenable stream
-                var el = document.getElementById("micrographstream");
-                el.src = imageSrcStream;
-          
           
               }
           
         </script>
     </body>
 </html>
+)rawliteral";
