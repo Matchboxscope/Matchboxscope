@@ -1,481 +1,192 @@
-//IMPORTANT: ENABLE PSRAM!
-#include <esp32cam.h>
-#include <WebServer.h>
-#include "esp_camera.h"
-#include "Arduino.h"
-#include "soc/soc.h"           // Disable brownour problems
-#include "soc/rtc_cntl_reg.h"  // Disable brownour problems
-#include "driver/rtc_io.h"
+// UPLOAD INSTRUCTIONS
+
+// Install v2.0.2 of ESP32 board support for the Arduino. Choose the "ESP32 Dev Module" board.
+// Enable the PSRAM settings. Upload the sketch.
+// Then perform the ESP32 Data Sketch Upload to upload web server data assets to the ESP32.
+
+
+// HEADERS
+
+// C++ standard libraries
+#include <memory>
+
+// ESP32 vendor libraries
+#include <soc/soc.h>           // Disable brownour problems
+#include <soc/rtc_cntl_reg.h>  // Disable brownour problems
+#include <esp_camera.h>
 #include <Preferences.h>
-#include <WiFi.h>
 #include <SPIFFS.h>
-#include <FS.h>
-#include "SD_MMC.h" // SD card  
+#include <SD_MMC.h> // SD card
 
-/*
- * 
- * TODO's:
- * 
- * - Whitebalance/constant intensity
- * - Swap esp32cam.h with esp_camera?
- * - Any overflow to be expected with pictureNumber?
- * - link /enable to website
- * - fit mjjpeg into wevbsite proerly
- */
+// Arduino core
+#include "Arduino.h"
 
-// Constant settings
-#define WIFIAP                  // want to use the ESP32 as an access point?
-#define PIN_LED 4               // pin of the LED flash
-#define PIN_REEDSWITCH 13       // pin of the external switch to "awake" the ESP (e.g. Reedrelay)
+// Arduino third-party libraries
+#include <esp32cam.h>
 
-// conversion factors for letting the ESP go sleep
-#define uS_TO_S_FACTOR 1000000  // Conversion factor for micro seconds to seconds 
-#define TIME_TO_SLEEP  10       // Time ESP32 will go to sleep (in seconds) 
+// Local header files
+#include "device_pref.h"
+#include "illumination.h"
+#include "camera.h"
+#include "webserver.h"
+#include "wifi.h"
 
 
-// determine time of compiling
-const char compile_date[] = __DATE__ " " __TIME__;
+// TODOS
+
+// TODO: Whitebalance/constant intensity
+// TODO: Swap esp32cam.h with esp_camera?
+// TODO: link /enable to website
+// TODO: fit mjpeg into website proerly
 
 
-#ifdef WIFIAP
-const char *SSID = "MatchboxScope";
-#else
-const char *SSID = "YOUR_SSID";
-const char *PWD = "YOU_PASSWORD";
-#endif
+// SETTINGS
 
-// Initiliaze constant memory (e.g. EEPROM)
-Preferences preferences;
+// Startup
+static const uint32_t refocus_button_debounce = 4000; // ms; duration to wait for the refocus button to stabilize before reading
 
-// define Webserver running on port 80
-WebServer server(80);
+// Hardware pins
+static const gpio_num_t reedSwitchPin = GPIO_NUM_13; // pin of the external switch to "awake" the ESP (e.g. Reedrelay)
+static const gpio_num_t lightPin = GPIO_NUM_4; // pin of the imaging illumination LED
 
-unsigned char pictureNumber = 0; // 0..255
+// Image acquisition
+static const int res_warmup_wait = 500; // ms; how long to wait after changing the camera resolution
+static const uint32_t camera_warmup_frames = 5; // number of "warm-up" camera frames to wait before final acquisition
+static const int num_frame_buffers = 2; // number of frame buffers to keep, must be at least 1; higher values enable higher streaming fps
+static const int jpeg_quality = 80; // JPEG quality factor from 0 (worst) to 100 (best)
 
-// switches to make sure the esp can wake up for focusssing/live mode 
-bool is_activated = false;         // ready for operation? // setup has been enabled through HTTP?
-bool is_reflashed = false;      // did we flash a new code? If so, refocus!
+// Timelapse
+static const uint64_t timelapseInterval = 60; // sec; timelapse interval
+
+// Wifi
+static const bool hostWifiAP = true; // whether to host a wifi AP or to join an existing network
+const char *wifiAPSSID = "MatchboxScope"; 
+const char *wifiSSID = "YOUR_SSID"; // the SSID of a wifi network to join, if not hosting a wifi AP
+const char *wifiPassword = "YOUR_PASSWORD"; // the password of a wifi network to join, if not hosting a wifi AP
+
+boolean sdInitialized = false;
+
+// GLOBAL STATE
+
+// Mode
+bool is_timelapse = false; // in timelapse mode, the webserver is not enabled
+
+// Hardware
+Light light(lightPin);
+Camera camera(
+    esp32cam::Camera, esp32cam::pins::AiThinker, light,
+    res_warmup_wait, num_frame_buffers, jpeg_quality
+);
+
+// Preferences
+Preferences pref;
+DevicePreferences device_pref(pref, "camera", __DATE__ " " __TIME__);
+
+// Web server
+void setTimelapse() {
+  is_timelapse = true; // focus has been set
+  device_pref.setIsTimelapse(is_timelapse);
+}
+RefocusingServer server(80, SPIFFS, camera, setTimelapse);
 
 
-static auto loRes = esp32cam::Resolution::find(320, 240);
-static auto hiRes = esp32cam::Resolution::find(800, 600);
-static auto maxRes = esp32cam::Resolution::find(1600, 1200);
+// INITIALIZATION
 
-
-
-/*
- * 
- * Functions to initialize hardware and auxilary components
- * 
- */
-void initSpiffs()
-{ // initiliaze internal file system 
-  if (!SPIFFS.begin()) 
-  {
-    Serial.println("Error SPIFFS...");
-    return;
+void initNonTimelapseFunctionalities() {
+  if (hostWifiAP) {
+    initWifiAP(wifiAPSSID);
+  } else {
+    joinWifi(wifiSSID, wifiPassword);
   }
-  File root = SPIFFS.open("/");    
-  File file = root.openNextFile(); 
-  while (file)                     
-  {// print all files to check if website HtML file exists
-    Serial.print("File: ");
-    Serial.println(file.name());
-    file.close();
-    file = root.openNextFile(); 
+  if (!SPIFFS.begin()) { // SPIFFS must be initialized before the web server, which depends on it
+    Serial.println("Couldn't open SPIFFS!");
   }
+  server.init();
 }
 
-
-void initiWiFi() {
-  // connect to Wifi; either AP or through Router
-#ifdef WIFIAP
-  Serial.print("Network SSID: ");
-  Serial.println(SSID);
-
-  WiFi.softAP(SSID);
-  IPAddress IP = WiFi.softAPIP();
-  Serial.print("AP IP address: ");
-  Serial.println(IP);
-
-#else
-  Serial.print("Connecting to ");
-  Serial.println(SSID);
-
-  WiFi.begin(SSID, PWD);
-
-  while (WiFi.status() != WL_CONNECTED) {
-    Serial.print(".");
-    delay(500);
-    // we can even make the ESP32 to sleep
-  }
-
-  Serial.print("Connected. IP: ");
-  Serial.println(WiFi.localIP());
-#endif
-}
-
-
-
-void initCamera() {
-  using namespace esp32cam;
-  Config cfg;
-  cfg.setPins(pins::AiThinker);
-  cfg.setResolution(maxRes);
-  //cfg.setGrayscale(); // causes problems, doesn't add any functionality other than numpy.mean()
-  cfg.setBufferCount(2);
-  cfg.setJpeg(80);
-
-  bool ok = Camera.begin(cfg);
-  if(not ok){
-    ESP.restart();
-  }
-  Serial.println(ok ? "CAMERA OK" : "CAMERA FAIL");
-}
-
-
-
-
-/*
- * 
- * Webserver-related settings - endpoints to listen to 
- * 
- * 
-*/
-void handleIndex() {
-  Serial.println("Handle index.html");
-  File file = SPIFFS.open("/index.html", "r");
-  size_t sent = server.streamFile(file, "text/html");
-  file.close();
-  return;
-}
-
-void handleBootstrapMin() {
-  Serial.println("Handle bootstrap.min.css");
-  File file = SPIFFS.open("/bootstrap.min.css", "r");
-  size_t sent = server.streamFile(file, "text/css");
-  file.close();
-  return;
-}
-
-void handleBootstrapAll() {
-  Serial.println("Handle all.css");
-  File file = SPIFFS.open("/all.css", "r");
-  size_t sent = server.streamFile(file, "text/css");
-  file.close();
-  return;
-}
-
-void initWebServerConfig()
-{
-  // register all the endpoints
-  char endpoint_index_non[]= "/";
-  char endpoint_index[] = "/index.html";
-  char endpoint_allcss[] = "/all.css";
-  char endpoint_bootstrapcss[] = "/bootstrap.min.css";
-  char endpoint_enable[] = "/enable";
-  char endpoint_cambmp[] = "/cam.bmp";
-  char endpoint_camlo[] = "/cam-lo.jpg";
-  char endpoint_camhi[] = "/cam-hi.jpg";
-  char endpoint_cam[] = "/cam.jpg";
-  char endpoint_cammjpg[] = "/cam.mjpg";
-    
-  server.on(endpoint_index_non, handleIndex);
-  server.on(endpoint_index, handleIndex);
-  server.on(endpoint_allcss, handleBootstrapAll);
-  server.on(endpoint_bootstrapcss, handleBootstrapMin);
-
-  server.on(endpoint_enable, enable);
-
-  server.on(endpoint_cambmp, handleBmp);
-  server.on(endpoint_camlo, handleJpgLo);
-  server.on(endpoint_camhi, handleJpgHi);
-  server.on(endpoint_cam, handleJpg);
-  server.on(endpoint_cammjpg, handleMjpeg);
-
-  Serial.print("http://");
-  Serial.println(WiFi.localIP());
-  Serial.println(endpoint_index_non);
-  Serial.println(endpoint_index);
-  Serial.println(endpoint_allcss);
-  Serial.println(endpoint_bootstrapcss);
-  Serial.println(endpoint_enable);
-  Serial.println(endpoint_camlo);
-  Serial.println(endpoint_camhi);
-  Serial.println(endpoint_cam);
-  Serial.println(endpoint_cammjpg);
-
-  Serial.println("START SERVER");
-  server.begin();
-}
-
-
-void handleBmp()
-{
-  if (!esp32cam::Camera.changeResolution(loRes)) {
-    Serial.println("SET-LO-RES FAIL");
-  }
-
-  auto frame = esp32cam::capture();
-  if (frame == nullptr) {
-    Serial.println("CAPTURE FAIL");
-    server.send(503, "", "");
-    return;
-  }
-  Serial.printf("CAPTURE OK %dx%d %db\n", frame->getWidth(), frame->getHeight(),
-                static_cast<int>(frame->size()));
-
-  if (!frame->toBmp()) {
-    Serial.println("CONVERT FAIL");
-    server.send(503, "", "");
-    return;
-  }
-  Serial.printf("CONVERT OK %dx%d %db\n", frame->getWidth(), frame->getHeight(),
-                static_cast<int>(frame->size()));
-
-  server.setContentLength(frame->size());
-  server.send(200, "image/bmp");
-  WiFiClient client = server.client();
-  frame->writeTo(client);
-}
-
-void serveJpg()
-{
-  auto frame = esp32cam::capture();
-  if (frame == nullptr) {
-    Serial.println("CAPTURE FAIL");
-    server.send(503, "", "");
-    return;
-  }
-  Serial.printf("CAPTURE OK %dx%d %db\n", frame->getWidth(), frame->getHeight(),
-                static_cast<int>(frame->size()));
-
-  server.setContentLength(frame->size());
-  server.send(200, "image/jpeg");
-  WiFiClient client = server.client();
-  frame->writeTo(client);
-}
-
-void handleJpgLo()
-{
-  for (int i = 0; i < 3; i++) {
-    if (!esp32cam::Camera.changeResolution(loRes)) {
-      Serial.println("SET-LO-RES FAIL");
-    }
-  }
-  serveJpg();
-}
-
-void handleJpgHi()
-{ for (int i = 0; i < 3; i++) {
-    if (!esp32cam::Camera.changeResolution(maxRes)) {
-      Serial.println("SET-HI-RES FAIL");
-    }
-  }
-  serveJpg();
-}
-
-void handleJpg()
-{
-  server.sendHeader("Location", "/cam-hi.jpg");
-  server.send(302, "", "");
-}
-
-void handleMjpeg()
-{ 
-  // let the camera "warm up" 
-  for (int i = 0; i < 3; i++) {
-    if (!esp32cam::Camera.changeResolution(maxRes)) {
-      Serial.println("SET-HI-RES FAIL");
-    }
-  }
-
-  // switch on LED for streaming
-  pinMode(PIN_LED, OUTPUT);
-  digitalWrite(PIN_LED, HIGH);
-
-
-  Serial.println("STREAM BEGIN");
-  WiFiClient client = server.client();
-  auto startTime = millis();
-  int res = esp32cam::Camera.streamMjpeg(client);
-  if (res <= 0) {
-    Serial.printf("STREAM ERROR %d\n", res);
-    return;
-  }
-  auto duration = millis() - startTime;
-  Serial.printf("STREAM END %dfrm %0.2ffps\n", res, 1000.0 * res / duration);
-  digitalWrite(PIN_LED, LOW);
-}
-
-
-/*
- * 
- * 
- * Deep-sleep activation
- * 
- */
-
-void enable() {
-  Serial.println("ENABLING!");
-  preferences.begin("camera", false);
-  is_activated = 1; // focus has been set
-  preferences.putUInt("is_activated", is_activated);    // permanently set the is_ready flat
-  Serial.println(preferences.getUInt("is_activated", is_activated));
-  preferences.end();
-  server.send(200, "text/html", "You logged yourself out. The camera will now start capturing images every N-seconds forever. To reactivate Wifi, you have to reflash the code or press the button..");
-}
-
-
-/*
- * 
- * Setup the different functions
- * 
- */
-
-
-
-
-
-void setup()
-{
+void setup() {
   Serial.begin(115200);
 
-  // check if button is activated to avoid deep-sleep loop
-  pinMode(PIN_REEDSWITCH, INPUT_PULLUP);
-  Serial.println("Press Button if you want to refocus (t..4s)");
-  delay(4000);
-
-  // reading button state
-  bool buttonState = digitalRead(PIN_REEDSWITCH); // pull up
-  if(buttonState)
-    Serial.println("Button has not been activated");
-  else
-    Serial.println("Button has been activated");
-
-  // Opening pref-file
-  preferences.begin("camera", false);
-
-  // did we flash a new programm? If so, we want to avoid boot-loop and go to focus-mode independent from a pressed button.
-  String compile_date_old_str = preferences.getString("compile_date_old", "");  // this won't get written. Not sure why...
-  String compile_date_str(compile_date);
-  preferences.putString("compile_date_old", compile_date_str);
-
-  Serial.println("Compile date old:");
-  Serial.println(compile_date_old_str);
-  Serial.println("Compile date new:");
-  Serial.println(compile_date_str);
-
-  Serial.println("Compared: ");
-  Serial.println(not compile_date_old_str.equals(compile_date_str));
-
-    
-  // compare and see if we need to reset
-  if(not compile_date_old_str.equals(compile_date_str)){ // we flashed a new code, lets switch to refocus mode
-     is_reflashed = true; // ot used yet
-     preferences.putUInt("is_activated", 0); // force reset
-  }
-  
-  // if we press a button and want to avoid bootloop check fo rhtat!
-  if (!buttonState) { // it is always on - pulled up 
-    Serial.println("Resetting due to button press");
-    preferences.putUInt("is_activated", 0); // force reset
-  }
-  
-  is_activated = preferences.getUInt("is_activated", 0);
-  preferences.end();
-
-  // DEBUGGING
-  if(is_activated)
-    Serial.println("The setup has been activated?");
-  else
-    Serial.println("The setup has not been activated! Connect to Wifi and go to 192.168.4.1./enable once you'Re done with focussing");
-
-
-  // init all external hardware parts only if we need it
-  if (!is_activated) {
-    initiWiFi();
-    initSpiffs();
-    initWebServerConfig();
+  // Reset the EEPROM's stored timelapse mode after each re-flash
+  if (device_pref.isFirstRun()) {
+     device_pref.setIsTimelapse(false);
   }
 
-  // initialize camera
-  initCamera();
-
-  // setup pin to work with the torch/flash - make sure it's available for the SD card later!
-  pinMode(PIN_LED, OUTPUT);
-  
-
-}
-
-void loop()
-{
-  
-  // if the setup is set-up, we only want to take one picture, save it and go to deep-sleep.. zzzzz
-  // could go to setup?
-  if (is_activated) {
-    // open EEPROM preferences
-    preferences.begin("camera", false);
-    pictureNumber = preferences.getUInt("pictureNumber", 0) + 1;
-    String path = "/picture" + String(pictureNumber) + ".jpg";
-
-     if (!esp32cam::Camera.changeResolution(maxRes)) {
-      Serial.println("SET-HI-RES FAIL");
-    }
-
-    // turn on led to see anything..
-    digitalWrite(PIN_LED, HIGH); 
-    
-    // warm up the camera; usually takes some frames to change resolution too
-    auto frame = esp32cam::capture();
-    for (int i = 0; i < 5; i++) frame = esp32cam::capture(); // warm up / adust
-
-    // Make sure LEd is switched off
-    digitalWrite(4, LOW);
-
-    // rest pinnumber 4 and save image on SD card
-    if  (!SD_MMC.begin()) { // (!SD_MMC.begin("/sdcard", true)) { //1bit mode -
-      Serial.println("SD Card Mount Failed");
-    }
-    Serial.printf("Picture file name: %s\n", path.c_str());
-
-    fs::FS &fs = SD_MMC; 
-    File file = fs.open(path.c_str(), FILE_WRITE);
-    Serial.println("Opening file");
-    if (!file)
-    {
-      Serial.println("Failed to open file in writing mode");
-      file.close();
-    }
-    else
-    {
-      if (frame == nullptr) {
-        Serial.println("CAPTURE FAIL");
-        file.close();
-      }
-      Serial.printf("CAPTURE OK %dx%d %db\n", frame->getWidth(), frame->getHeight(),
-                    static_cast<int>(frame->size()));
-
-      file.write(frame->data(), frame->size()); // payload (image), payload length
-      preferences.putUInt("pictureNumber", pictureNumber);
-      preferences.end();
 
 
-      file.close();
-    }
+  // Initialize the camera
+  if (!camera.init()) {
+    ESP.restart();
+    return;
+  }
 
-    Serial.println("Go to sleep now");
-    esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
-    Serial.println("Setup ESP32 to sleep for every " + String(TIME_TO_SLEEP) +
-                   " Seconds");
-
-    // Make sure LEd is switched off
-    digitalWrite(4, LOW);
-    rtc_gpio_hold_en(GPIO_NUM_4);
-    esp_deep_sleep_start();
+  // 1-bit mode as suggested here:https://dr-mntn.net/2021/02/using-the-sd-card-in-1-bit-mode-on-the-esp32-cam-from-ai-thinker
+  if (!SD_MMC.begin("/sdcard", true)) {
+    Serial.println("SD Card Mount Failed");
   }
   else {
-    // stream images and website to turn focus
-    server.handleClient();
+    Serial.println("SD Card Mounted");
   }
+  sdInitialized = true;
+
+
+  // If the button is pressed, switch from timelapse mode back to refocusing mode
+  pinMode(reedSwitchPin, INPUT_PULLUP);
+  Serial.println("Press Button if you want to refocus (t..4s)");
+  delay(refocus_button_debounce);
+  bool buttonPressed = !digitalRead(reedSwitchPin); // pull up
+  Serial.print("Button pressed? ");
+  if (buttonPressed) {
+    Serial.println("yes. Switching from timelapse mode to refocusing mode.");
+    device_pref.setIsTimelapse(false);
+  } else {
+    Serial.println("no");
+  }
+
+  // Initialize the remaining hardware, depending on the mode
+  is_timelapse = device_pref.isTimelapse(); // set the global variable for the loop function
+  if (is_timelapse) {
+    Serial.println("In timelapse mode.");
+    return;
+  }
+  Serial.println("In refocusing mode. Connect to Wifi and go to 192.168.4.1/enable once you're done with focusing.");
+  initNonTimelapseFunctionalities();
+}
+
+
+// MAIN LOOP
+
+bool saveImage(std::unique_ptr<esp32cam::Frame> frame, String filename) {
+  if (frame == nullptr) {
+    return false;
+  }
+
+
+  return Camera::save(std::move(frame), filename.c_str(), SD_MMC);
+}
+
+void loop() {
+  if (!is_timelapse) {
+    server.serve(); // serve webpage and image stream to adjust focus
+    return;
+  }
+
+  // Acquire the image
+  camera.useMaxRes();
+  auto frame = camera.acquire(camera_warmup_frames);
+
+  // Save image to SD card
+  uint32_t frame_index = device_pref.getFrameIndex() + 1;
+  if (saveImage(std::move(frame), "/picture" + String(frame_index) + ".jpg")) {
+    device_pref.setFrameIndex(frame_index);
+  };
+
+  // Sleep
+  light.sleep();
+  Serial.print("Sleeping for ");
+  Serial.print(timelapseInterval);
+  Serial.println(" s");
+  static const uint64_t usPerSec = 1000000; // Conversion factor from microseconds to seconds
+  esp_sleep_enable_timer_wakeup(timelapseInterval * usPerSec);
+  esp_deep_sleep_start();
 }
