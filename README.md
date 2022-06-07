@@ -35,7 +35,7 @@ When installing the board, go for the version `2.0.3`
 3. (*OBSOLTE!*) Install the ESP32Cam library following this [link](https://github.com/yoursunny/esp32cam) and their README
 4. Clone this repository
 5.
-* *MatchBoxscope*: Choose the latest release for the MatchBoxscope, open the `.ino` and flash the project
+* *MatchBoxscope*: Choose the latest release for the MatchBoxscope, open the `.ino` and flash the project ([v0.1](https://github.com/beniroquai/Matchboxscope/releases/download/Matchboxscope/ESP32CAM-MatchBoxScope-MAIN.zip))
 * *Anglerfish*: We will provide a ready-to-use software solution soon
 * *IncubatorMicroscope*: We will provide a ready-to-use software solution soon
 6. *Compiling*: Under `Tools`select your board (`DEV Module`), `port` and enable the `PSRAM` enable 4MB external PSRAM.
@@ -43,6 +43,16 @@ When installing the board, go for the version `2.0.3`
 
 **ATTENTION for Android users:** The Wifi in access point mode (*AP*) does not offer internet, hence Android uses available cellular/mobile data and won't open the local address (`192.168.4.1`). *solution:* Switch off mobile data or disable `Wifi+`
 
+**WiFi settings:**
+
+Please have a look in the wifi-settings to adjust them according to your network configuration:
+
+`cpp
+boolean hostWifiAP = true; // set this variable if you want the ESP32 to be the host
+const char* mSSID = "Blynk";
+const char* mPASSWORD = "12345678";
+const char* mSSIDAP = "Matchboxscope";
+``
 
 #### Upload files to SPIFFs
 
@@ -71,6 +81,12 @@ In deep-sleep setting it consumes virtually no power.
 - The same code could also be used in an incubator-contained micoroscope, for example, to observe the growth of cells. But for this it would be important to keep the Wifi stream running :)
 
 
+
+# Videos
+
+That's the software for the Matchboxscope:
+
+<a href="#logo" name="logo"><img src="./IMAGES/SVID_20220607_114724_1.gif" width="300"></a>
 
 
 
