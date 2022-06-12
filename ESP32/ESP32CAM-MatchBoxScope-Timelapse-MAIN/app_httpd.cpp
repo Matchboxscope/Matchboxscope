@@ -29,6 +29,35 @@ httpd_handle_t stream_httpd = NULL;
 httpd_handle_t camera_httpd = NULL;
 
 
+// global camera parameters
+int gain = 0;
+int exposureTime = 0;
+int frameSize = 0;
+
+
+void setFrameSize(int val) {
+  sensor_t * s = esp_camera_sensor_get();
+  if (val == 0)
+    s->set_framesize(s, FRAMESIZE_QQVGA);
+  else if (val == 1)
+    s->set_framesize(s, FRAMESIZE_HQVGA);
+  else if (val == 2)
+    s->set_framesize(s, FRAMESIZE_QVGA);
+  else if (val == 3)
+    s->set_framesize(s, FRAMESIZE_CIF);
+  else if (val == 4)
+    s->set_framesize(s, FRAMESIZE_VGA);
+  else if (val == 5)
+    s->set_framesize(s, FRAMESIZE_SVGA);
+  else if (val == 6)
+    s->set_framesize(s, FRAMESIZE_XGA);
+  else if (val == 7)
+    s->set_framesize(s, FRAMESIZE_SXGA);
+  else if (val == 8)
+    s->set_framesize(s, FRAMESIZE_QVGA);
+  else
+    s->set_framesize(s, FRAMESIZE_QVGA);
+}
 
 std::string get_content(httpd_req_t *req) {
   // https://github.com/chhartmann/RoboProg/blob/ccc3342fccebc030b337dbaf20f5e917b5b24e5f/src/web_interface.cpp
@@ -63,20 +92,40 @@ StaticJsonDocument<1024> doc;
 static esp_err_t json_handler(httpd_req_t *req) {
 
   std::string content = get_content(req);
+
   DeserializationError error = deserializeJson(doc, content);
 
   if (error) {
     Serial.print("deserializeJson() failed: ");
     Serial.println(error.c_str());
-    return -1;
+    httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "Failed to create file");
+    return ESP_FAIL;
   }
   else {
+    // Adjust sensor values from REST
+    sensor_t * s = esp_camera_sensor_get();
 
-    int brightness = doc["brightness"]; // 133
-    int quality = doc["quality"]; // 3
-    int effect = doc["effect"]; // 2
+    if (doc.containsKey("gain")) {
+      gain = doc["gain"];
+      s->set_agc_gain(s, gain);  // 0 to 30
+      s->set_special_effect(s, 2); //mono - has to be set again?
+      Serial.println(gain);
+    }
+    if (doc.containsKey("exposuretime")) {
+      exposureTime = doc["exposuretime"];
+      s->set_agc_gain(s, gain);  // 0 to 1600
+      s->set_special_effect(s, 2); //mono - has to be set again?
+      Serial.println(exposureTime);
+    }
+    if (doc.containsKey("framesize")) {
+      frameSize = doc["framesize"];
+      setFrameSize(frameSize);
+      Serial.println(frameSize);
+    }
 
-    return 1;
+    httpd_resp_set_hdr(req, "Connection", "close");
+    httpd_resp_send(req, "OK", HTTPD_RESP_USE_STRLEN);
+    return ESP_OK;
   }
 }
 
@@ -322,27 +371,7 @@ static esp_err_t cmd_handler(httpd_req_t *req)
   else if (!strcmp(variable, "framesize")) {
     Serial.print("framesize: ");
     Serial.println(val);
-    if (val == 0)
-      res = s->set_framesize(s, FRAMESIZE_QQVGA);
-    else if (val == 1)
-      res = s->set_framesize(s, FRAMESIZE_HQVGA);
-    else if (val == 2)
-      res = s->set_framesize(s, FRAMESIZE_QVGA);
-    else if (val == 3)
-      res = s->set_framesize(s, FRAMESIZE_CIF);
-    else if (val == 4)
-      res = s->set_framesize(s, FRAMESIZE_VGA);
-    else if (val == 5)
-      res = s->set_framesize(s, FRAMESIZE_SVGA);
-    else if (val == 6)
-      res = s->set_framesize(s, FRAMESIZE_XGA);
-    else if (val == 7)
-      res = s->set_framesize(s, FRAMESIZE_SXGA);
-    else if (val == 8)
-      res = s->set_framesize(s, FRAMESIZE_QVGA);
-    //res = s->set_framesize(s, FRAMESIZE_UXGA);
-    else
-      res = s->set_framesize(s, FRAMESIZE_QVGA);
+    setFrameSize(val);
   }
   else if (!strcmp(variable, "quality"))
   {
@@ -367,6 +396,15 @@ static esp_err_t cmd_handler(httpd_req_t *req)
   httpd_resp_set_hdr(req, "Access-Control-Allow-Origin", "*");
   return httpd_resp_send(req, NULL, 0);
 
+}
+
+static esp_err_t restart_handler(httpd_req_t *req) {
+  Serial.println("Restarting");
+  httpd_resp_set_type(req, "application/json");
+  httpd_resp_set_hdr(req, "Access-Control-Allow-Origin", "*");
+  httpd_resp_send(req, "OK", strlen("OK"));
+  ESP.restart();
+  return ESP_OK;
 }
 
 static esp_err_t id_handler(httpd_req_t *req) {
@@ -473,9 +511,16 @@ void startCameraServer()
     .user_ctx  = NULL
   };
 
-  httpd_uri_t setjson_uri = {
-    .uri       = "/setjson",
+  httpd_uri_t restart_uri = {
+    .uri       = "/restart",
     .method    = HTTP_GET,
+    .handler   = restart_handler,
+    .user_ctx  = NULL
+  };
+
+  httpd_uri_t postjson_uri = {
+    .uri       = "/postjson",
+    .method    = HTTP_POST,
     .handler   = json_handler,
     .user_ctx  = NULL
   };
@@ -488,7 +533,8 @@ void startCameraServer()
     httpd_register_uri_handler(camera_httpd, &capture_uri);
     httpd_register_uri_handler(camera_httpd, &id_uri);
     httpd_register_uri_handler(camera_httpd, &indexhtml_uri);
-    httpd_register_uri_handler(camera_httpd, &setjson_uri);
+    httpd_register_uri_handler(camera_httpd, &postjson_uri);
+    httpd_register_uri_handler(camera_httpd, &restart_uri);
   }
 
   config.server_port += 1;

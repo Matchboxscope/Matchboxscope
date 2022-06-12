@@ -24,14 +24,14 @@ FtpServer ftpSrv;   //set #define FTP_DEBUG in ESP8266FtpServer.h to see ftp ver
 
 // WIFI
 boolean hostWifiAP = false; // set this variable if you want the ESP32 to be the host
-const char* mSSID = "UC2-F8Team"; //"IPHT-Konf"; // "Blynk";
-const char* mPASSWORD = "_lachmannUC2"; //"WIa2!DcJ"; //"12345678";
+const char* mSSID = "BenMur";//"UC2-F8Team"; //"IPHT-Konf"; // "Blynk";
+const char* mPASSWORD = "MurBen3128"; //"_lachmannUC2"; //"WIa2!DcJ"; //"12345678";
 const char* mSSIDAP = "Matchboxscope";
 
 // Timelapse
 static const uint64_t timelapseInterval = 60; // sec; timelapse interval
 static uint64_t t_old = 0;
-boolean isTimelapse = true;
+boolean isTimelapse = false;
 
 // LED
 const int freq = 5000;
@@ -53,10 +53,18 @@ void setup()
 {
   WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0); // prevent brownouts by silencing them
 
+  // INIT SERIAL
   Serial.begin(115200);
   Serial.setDebugOutput(true);
   Serial.println();
+  
+  // INIT WIFI
+  if (hostWifiAP)
+    initWifiAP(mSSIDAP);
+  else
+    joinWifi(mSSID, mPASSWORD);
 
+  // INIT Camera
   camera_config_t config;
   config.ledc_channel = LEDC_CHANNEL_0;
   config.ledc_timer = LEDC_TIMER_0;
@@ -139,17 +147,7 @@ void setup()
   s->set_awb_gain(s, 0);
   s->set_lenc(s, 1);
 
-
-
-
-
-
-  // INIT WIFI
-  if (hostWifiAP)
-    initWifiAP(mSSIDAP);
-  else
-    joinWifi(mSSID, mPASSWORD);
-
+  // Start the camera and command server
   startCameraServer();
 
   // INIT LED
