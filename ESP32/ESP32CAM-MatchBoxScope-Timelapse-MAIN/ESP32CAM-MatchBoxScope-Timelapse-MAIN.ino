@@ -1,6 +1,7 @@
 /*
   ESP32 Matchboxscoe Camera Softare
 */
+#define DEFAULT_STORAGE_TYPE_ESP32 STORAGE_SPIFFS
 
 //http://192.168.2.168/control?var=flash&val=100
 
@@ -14,11 +15,23 @@
 #include <SD_MMC.h> // SD card
 #include "device_pref.h"
 
+
+
+#include "SimpleFTPServer.h"
+FtpServer ftpSrv;   //set #define FTP_DEBUG in ESP8266FtpServer.h to see ftp verbose on serial
+ 
+ 
+
 // WIFI
-boolean hostWifiAP = true; // set this variable if you want the ESP32 to be the host
-const char* mSSID = "Blynk";
-const char* mPASSWORD = "12345678";
+boolean hostWifiAP = false; // set this variable if you want the ESP32 to be the host
+const char* mSSID = "UC2-F8Team"; //"IPHT-Konf"; // "Blynk";
+const char* mPASSWORD = "_lachmannUC2"; //"WIa2!DcJ"; //"12345678";
 const char* mSSIDAP = "Matchboxscope";
+
+// Timelapse
+static const uint64_t timelapseInterval = 60; // sec; timelapse interval
+static uint64_t t_old = 0;
+boolean isTimelapse = true;
 
 // LED
 const int freq = 5000;
@@ -34,9 +47,6 @@ void startCameraServer();
 Preferences pref;
 DevicePreferences device_pref(pref, "camera", __DATE__ " " __TIME__);
 
-// Timelapse
-static const uint64_t timelapseInterval = 60; // sec; timelapse interval
-static uint64_t t_old = 0;
 
 
 void setup()
@@ -93,6 +103,7 @@ void setup()
   // 1-bit mode as suggested here:https://dr-mntn.net/2021/02/using-the-sd-card-in-1-bit-mode-on-the-esp32-cam-from-ai-thinker
   if (!SD_MMC.begin("/sdcard", true)) {
     Serial.println("SD Card Mount Failed");
+     ftpSrv.begin("matchboxscope","matchboxscope"); 
   }
   else {
     Serial.println("SD Card Mounted");
@@ -102,7 +113,6 @@ void setup()
   uint8_t cardType = SD_MMC.cardType();
   if (cardType == CARD_NONE) {
     Serial.println("No SD card attached");
-    return;
   }
   else {
     Serial.println(cardType);
@@ -110,16 +120,24 @@ void setup()
 
 
 
-  //drop down frame size for higher initial frame rate
+   // Apply manual settings
+
   sensor_t * s = esp_camera_sensor_get();
   s->set_framesize(s, FRAMESIZE_QVGA);
   s->set_vflip(s, 1);
   s->set_hmirror(s, 1);
-  s->set_brightness(s, 1);     // -2 to 2
-  s->set_special_effect(s, 2);
+  s->set_gain_ctrl(s, 0);                       // auto gain off
+  s->set_awb_gain(s, 1);                        // Auto White Balance enable (0 or 1)
+  s->set_exposure_ctrl(s, 0);                   // auto exposure off
+  s->set_brightness(s, 0);     // -2 to 2
+  s->set_special_effect(s, 2); //mono
   s->set_wb_mode(s, 0);
-  s->set_lenc(s, 0);
-  s->set_gain_ctrl(s, 0);
+  s->set_awb_gain(s, 0);
+  s->set_lenc(s, 1);
+
+
+
+       
 
 
   // INIT WIFI
@@ -182,7 +200,9 @@ bool saveImage(String filename) {
 
 
 void loop() {
-  if ((millis() - t_old) > (1000 * timelapseInterval)) {
+  ftpSrv.handleFTP(); 
+  
+  if (isTimelapse and ((millis() - t_old) > (1000 * timelapseInterval))) {
     //https://stackoverflow.com/questions/67090640/errors-while-interacting-with-microsd-card
     t_old = millis();
 

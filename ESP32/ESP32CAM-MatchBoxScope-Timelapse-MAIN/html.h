@@ -27,7 +27,10 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
                 <tr><td></td><td align="center" colspan="2"></br></tr>
                 <tr><td>Flash</td><td align="center" colspan="2"><input type="range" id="flash" min="0" max="255" value="0" onchange="try{fetch(document.location.origin+'/control?var=flash&val='+this.value);}catch(e){}"><td></td></tr>
                 <tr><td>Resolution</td><td align="center" colspan="2"><input type="range" id="framesize" min="0" max="9" value="5" onchange="try{fetch(document.location.origin+'/control?var=framesize&val='+this.value);}catch(e){}"><td></td></tr>
-                <tr><td>Quality</td><td align="center" colspan="2"><input type="range" id="quality" min="10" max="63" value="10" onchange="try{fetch(document.location.origin+'/control?var=quality&val='+this.value);}catch(e){}"><td></td></tr>
+                <tr><td>Brightness</td><td align="center" colspan="2"><input type="range" id="brightness" min="-20" max="20" value="0" onchange="try{fetch(document.location.origin+'/control?var=brightness&val='+this.value);}catch(e){}"><td></td></tr>
+                <tr><td>Gain</td><td align="center" colspan="2"><input type="range" id="gain" min="0" max="30" value="0" onchange="try{fetch(document.location.origin+'/control?var=gain&val='+this.value);}catch(e){}"><td></td></tr>
+                <tr><td>Exposure Time</td><td align="center" colspan="2"><input type="range" id="exposuretime" min="0" max="1600" value="100" onchange="try{fetch(document.location.origin+'/control?var=exposuretime&val='+this.value);}catch(e){}"><td></td></tr>
+                <tr><td>Quality</td><td align="center" colspan="2"><input type="range" id="quality" min="10" max="63" value="10" onchange="try{fetch(document.location.origin+'/control?var=quality&val='+this.value);}catch(e){}"><td></td></tr>              
                 </table>
             </section>         
         </section>

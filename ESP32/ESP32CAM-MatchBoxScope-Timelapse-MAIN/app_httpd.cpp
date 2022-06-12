@@ -5,6 +5,7 @@
 #include "img_converters.h"
 #include "Arduino.h"
 #include <SPIFFS.h>
+#include "ArduinoJson.h"
 
 #include "html.h"
 
@@ -27,29 +28,48 @@ static const char* _STREAM_PART = "Content-Type: image/jpeg\r\nContent-Length: %
 httpd_handle_t stream_httpd = NULL;
 httpd_handle_t camera_httpd = NULL;
 
+/*
+// Stream& input;
+StaticJsonDocument<1024> doc;
 
+static void json_handler(httpd_req_t *req) {
 
-int readFile(char *fname,httpd_req_t *req){
+  DeserializationError error = deserializeJson(doc, req);
+
+  if (error) {
+    Serial.print("deserializeJson() failed: ");
+    Serial.println(error.c_str());
+    return;
+  }
+
+  int brightness = doc["brightness"]; // 133
+  int quality = doc["quality"]; // 3
+  int effect = doc["effect"]; // 2
+
+}
+*/
+
+int readFile(char *fname, httpd_req_t *req) {
   //https://github.com/k-kimura123/Final_candyart_project/blob/ff3c950d02614a1ea169afaa0ac1793b503db4c5/main/include/myserver_config.c
   int res;
   char buf[1024];
-  
-  FILE *fd = fopen(fname,"rb");
-  if(fd == NULL){
-    ESP_LOGE(TAG,"ERROR opening file (%d) %s\n", errno,strerror(errno));
+
+  FILE *fd = fopen(fname, "rb");
+  if (fd == NULL) {
+    ESP_LOGE(TAG, "ERROR opening file (%d) %s\n", errno, strerror(errno));
     httpd_resp_send_404(req);
     return 0;
   }
-  do{
-    res = fread(buf,1,sizeof(buf),fd);
-    if(res > 0){
-      httpd_resp_send_chunk(req,buf,res);
+  do {
+    res = fread(buf, 1, sizeof(buf), fd);
+    if (res > 0) {
+      httpd_resp_send_chunk(req, buf, res);
       printf("Read %d\n", res);
     }
-  }while(res>0);
-  httpd_resp_send_chunk(req,NULL,0);
+  } while (res > 0);
+  httpd_resp_send_chunk(req, NULL, 0);
   res = fclose(fd);
-  if(res){
+  if (res) {
     printf("Error closing file\n");
   }
   return 1;
@@ -71,21 +91,24 @@ static esp_err_t capture_handler(httpd_req_t *req) {
 
   camera_fb_t * fb = NULL;
   esp_err_t res = ESP_OK;
-  int64_t fr_start = esp_timer_get_time();
-  fb = esp_camera_fb_get();
-    
-  /*// make sure buffer is freed and framesize is taken over
-    sensor_t * s = esp_camera_sensor_get();
-    s->set_framesize(s, FRAMESIZE_UXGA);
+  
+  // make sure buffer is freed and framesize is taken over
+  sensor_t * s = esp_camera_sensor_get();
+  s->set_framesize(s, FRAMESIZE_UXGA);
 
-    for(int i=0; i<3; i++){
+  for(int i=0; i<3; i++){
     fb = esp_camera_fb_get();
     esp_camera_fb_return(fb);
-    }
-  */
+  }
+
+  // capture
+  int64_t fr_start = esp_timer_get_time();
+  fb = esp_camera_fb_get();
+
   if (!fb) {
     Serial.println("Camera capture failed");
     httpd_resp_send_500(req);
+    ESP.restart();
     return ESP_FAIL;
   }
 
@@ -145,6 +168,7 @@ static esp_err_t stream_handler(httpd_req_t *req) {
     if (!fb) {
       Serial.println("Camera capture failed");
       res = ESP_FAIL;
+      ESP.restart();
     } else {
       {
         if (fb->format != PIXFORMAT_JPEG) {
@@ -202,6 +226,7 @@ state actstate = stp;
 
 static esp_err_t cmd_handler(httpd_req_t *req)
 {
+  // TODO: this should be arduinojson
   char*  buf;
   size_t buf_len;
   char variable[32] = {0,};
@@ -238,11 +263,29 @@ static esp_err_t cmd_handler(httpd_req_t *req)
   sensor_t * s = esp_camera_sensor_get();
   int res = 0;
 
-  if (!strcmp(variable, "framesizeOLD"))
+  if (!strcmp(variable, "brightness"))
   {
-    Serial.println("framesizeOLD");
-    if (s->pixformat == PIXFORMAT_JPEG)
-      res = s->set_framesize(s, (framesize_t)val);
+    Serial.print("brightness ");
+    float brightness = (float)val / 10;
+    Serial.println(brightness);
+    s->set_brightness(s,brightness);   // -2 to 2
+    s->set_special_effect(s, 2); //mono - has to be set again?
+  }
+  else if (!strcmp(variable, "gain"))
+  {
+    Serial.print("gain ");
+    int gain = val;
+    Serial.println(gain);
+    s->set_agc_gain(s,gain);   // 0 to 30
+    s->set_special_effect(s, 2); //mono - has to be set again?
+  }
+  else if (!strcmp(variable, "exposuretime"))
+  {
+    Serial.print("exposuretime ");
+    int exposuretime = val;
+    Serial.println(exposuretime);
+    s->set_aec_value(s,exposuretime);   // 0 to 30
+    s->set_special_effect(s, 2); //mono - has to be set again?
   }
   else if (!strcmp(variable, "framesize")) {
     Serial.print("framesize: ");
@@ -264,7 +307,8 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     else if (val == 7)
       res = s->set_framesize(s, FRAMESIZE_SXGA);
     else if (val == 8)
-      res = s->set_framesize(s, FRAMESIZE_UXGA);
+      res = s->set_framesize(s, FRAMESIZE_QVGA);
+      //res = s->set_framesize(s, FRAMESIZE_UXGA);
     else
       res = s->set_framesize(s, FRAMESIZE_QVGA);
   }
@@ -310,9 +354,9 @@ static esp_err_t id_handler(httpd_req_t *req) {
   return httpd_resp_send(req, json_response, strlen(json_response));
 }
 
-static esp_err_t index_handler(httpd_req_t *req){
-    httpd_resp_set_type(req, "text/html");
-    return httpd_resp_send(req, (const char *)INDEX_HTML, strlen(INDEX_HTML));
+static esp_err_t index_handler(httpd_req_t *req) {
+  httpd_resp_set_type(req, "text/html");
+  return httpd_resp_send(req, (const char *)INDEX_HTML, strlen(INDEX_HTML));
 }
 
 static esp_err_t status_handler(httpd_req_t *req) {
@@ -333,12 +377,12 @@ static esp_err_t status_handler(httpd_req_t *req) {
 
 
 
-esp_err_t indexhtml_handler(httpd_req_t *req){
+esp_err_t indexhtml_handler(httpd_req_t *req) {
   ESP_LOGI(TAG, "url %s was hit", req->uri);
   printf("main page requested\r\n");
-  httpd_resp_set_type(req,"text/html");
-  readFile("/spiffs/index.html",req);
-  
+  httpd_resp_set_type(req, "text/html");
+  readFile("/spiffs/index.html", req);
+
   return ESP_OK;
 }
 
