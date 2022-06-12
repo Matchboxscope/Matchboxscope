@@ -28,26 +28,58 @@ static const char* _STREAM_PART = "Content-Type: image/jpeg\r\nContent-Length: %
 httpd_handle_t stream_httpd = NULL;
 httpd_handle_t camera_httpd = NULL;
 
-/*
+
+
+std::string get_content(httpd_req_t *req) {
+  // https://github.com/chhartmann/RoboProg/blob/ccc3342fccebc030b337dbaf20f5e917b5b24e5f/src/web_interface.cpp
+  char buf[1025];
+  int received;
+
+  unsigned int remaining = req->content_len;
+  std::string content;
+  content.reserve(remaining);
+
+  while (remaining > 0) {
+    if ((received = httpd_req_recv(req, buf, std::min(remaining, sizeof(buf) - 1))) <= 0) {
+      if (received == HTTPD_SOCK_ERR_TIMEOUT) {
+        /* Retry if timeout occurred */
+        continue;
+      }
+
+      /* In case of unrecoverable error, close and delete the unfinished file*/
+      httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "Failed to receive file");
+    } else {
+      buf[received] = '\0';
+      content += buf;
+      remaining -= received;
+    }
+  }
+  return content;
+}
+
+
 // Stream& input;
 StaticJsonDocument<1024> doc;
+static esp_err_t json_handler(httpd_req_t *req) {
 
-static void json_handler(httpd_req_t *req) {
-
-  DeserializationError error = deserializeJson(doc, req);
+  std::string content = get_content(req);
+  DeserializationError error = deserializeJson(doc, content);
 
   if (error) {
     Serial.print("deserializeJson() failed: ");
     Serial.println(error.c_str());
-    return;
+    return -1;
   }
+  else {
 
-  int brightness = doc["brightness"]; // 133
-  int quality = doc["quality"]; // 3
-  int effect = doc["effect"]; // 2
+    int brightness = doc["brightness"]; // 133
+    int quality = doc["quality"]; // 3
+    int effect = doc["effect"]; // 2
 
+    return 1;
+  }
 }
-*/
+
 
 int readFile(char *fname, httpd_req_t *req) {
   //https://github.com/k-kimura123/Final_candyart_project/blob/ff3c950d02614a1ea169afaa0ac1793b503db4c5/main/include/myserver_config.c
@@ -91,12 +123,12 @@ static esp_err_t capture_handler(httpd_req_t *req) {
 
   camera_fb_t * fb = NULL;
   esp_err_t res = ESP_OK;
-  
+
   // make sure buffer is freed and framesize is taken over
   sensor_t * s = esp_camera_sensor_get();
   s->set_framesize(s, FRAMESIZE_UXGA);
 
-  for(int i=0; i<3; i++){
+  for (int i = 0; i < 3; i++) {
     fb = esp_camera_fb_get();
     esp_camera_fb_return(fb);
   }
@@ -268,7 +300,7 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     Serial.print("brightness ");
     float brightness = (float)val / 10;
     Serial.println(brightness);
-    s->set_brightness(s,brightness);   // -2 to 2
+    s->set_brightness(s, brightness);  // -2 to 2
     s->set_special_effect(s, 2); //mono - has to be set again?
   }
   else if (!strcmp(variable, "gain"))
@@ -276,7 +308,7 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     Serial.print("gain ");
     int gain = val;
     Serial.println(gain);
-    s->set_agc_gain(s,gain);   // 0 to 30
+    s->set_agc_gain(s, gain);  // 0 to 30
     s->set_special_effect(s, 2); //mono - has to be set again?
   }
   else if (!strcmp(variable, "exposuretime"))
@@ -284,7 +316,7 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     Serial.print("exposuretime ");
     int exposuretime = val;
     Serial.println(exposuretime);
-    s->set_aec_value(s,exposuretime);   // 0 to 30
+    s->set_aec_value(s, exposuretime);  // 0 to 30
     s->set_special_effect(s, 2); //mono - has to be set again?
   }
   else if (!strcmp(variable, "framesize")) {
@@ -308,7 +340,7 @@ static esp_err_t cmd_handler(httpd_req_t *req)
       res = s->set_framesize(s, FRAMESIZE_SXGA);
     else if (val == 8)
       res = s->set_framesize(s, FRAMESIZE_QVGA);
-      //res = s->set_framesize(s, FRAMESIZE_UXGA);
+    //res = s->set_framesize(s, FRAMESIZE_UXGA);
     else
       res = s->set_framesize(s, FRAMESIZE_QVGA);
   }
@@ -340,7 +372,7 @@ static esp_err_t cmd_handler(httpd_req_t *req)
 static esp_err_t id_handler(httpd_req_t *req) {
   Serial.println("Handling ID");
   static char json_response[1024];
-  String uniqueID = __DATE__ " " __TIME__;
+  String uniqueID = "OMNISCOPE" __DATE__ " " __TIME__;
   Serial.println("Handling ID");
   Serial.println(uniqueID);
 
@@ -406,7 +438,6 @@ void startCameraServer()
     .user_ctx  = NULL
   };
 
-
   httpd_uri_t status_uri = {
     .uri       = "/status",
     .method    = HTTP_GET,
@@ -429,7 +460,7 @@ void startCameraServer()
   };
 
   httpd_uri_t stream_uri = {
-    .uri       = "/stream",
+    .uri       = "/stream.mjpeg",
     .method    = HTTP_GET,
     .handler   = stream_handler,
     .user_ctx  = NULL
@@ -442,6 +473,12 @@ void startCameraServer()
     .user_ctx  = NULL
   };
 
+  httpd_uri_t setjson_uri = {
+    .uri       = "/setjson",
+    .method    = HTTP_GET,
+    .handler   = json_handler,
+    .user_ctx  = NULL
+  };
 
   Serial.printf("Starting web server on port: '%d'\n", config.server_port);
   if (httpd_start(&camera_httpd, &config) == ESP_OK) {
@@ -451,6 +488,7 @@ void startCameraServer()
     httpd_register_uri_handler(camera_httpd, &capture_uri);
     httpd_register_uri_handler(camera_httpd, &id_uri);
     httpd_register_uri_handler(camera_httpd, &indexhtml_uri);
+    httpd_register_uri_handler(camera_httpd, &setjson_uri);
   }
 
   config.server_port += 1;

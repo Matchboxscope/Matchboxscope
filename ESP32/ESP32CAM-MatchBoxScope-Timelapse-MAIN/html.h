@@ -97,7 +97,7 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
                         window.stop(), m.innerHTML = 'Start Stream'
                     },
                     q = () => {
-                        j.src = `${c+':81'}/stream`, f(k), m.innerHTML = 'Stop Stream'
+                        j.src = `${c+':81'}/stream.mjpeg`, f(k), m.innerHTML = 'Stop Stream'
                     };
                 l.onclick = () => {
                     p()

@@ -19,8 +19,8 @@
 
 #include "SimpleFTPServer.h"
 FtpServer ftpSrv;   //set #define FTP_DEBUG in ESP8266FtpServer.h to see ftp verbose on serial
- 
- 
+
+
 
 // WIFI
 boolean hostWifiAP = false; // set this variable if you want the ESP32 to be the host
@@ -103,7 +103,11 @@ void setup()
   // 1-bit mode as suggested here:https://dr-mntn.net/2021/02/using-the-sd-card-in-1-bit-mode-on-the-esp32-cam-from-ai-thinker
   if (!SD_MMC.begin("/sdcard", true)) {
     Serial.println("SD Card Mount Failed");
-     ftpSrv.begin("matchboxscope","matchboxscope"); 
+    ftpSrv.setCallback(_callback);
+    ftpSrv.setTransferCallback(_transferCallback);
+
+    ftpSrv.begin("esp8266", "esp8266");   //username, password for ftp.   (default 21, 50009 for PASV)
+
   }
   else {
     Serial.println("SD Card Mounted");
@@ -120,7 +124,7 @@ void setup()
 
 
 
-   // Apply manual settings
+  // Apply manual settings
 
   sensor_t * s = esp_camera_sensor_get();
   s->set_framesize(s, FRAMESIZE_QVGA);
@@ -137,7 +141,7 @@ void setup()
 
 
 
-       
+
 
 
   // INIT WIFI
@@ -200,8 +204,8 @@ bool saveImage(String filename) {
 
 
 void loop() {
-  ftpSrv.handleFTP(); 
-  
+  ftpSrv.handleFTP();
+
   if (isTimelapse and ((millis() - t_old) > (1000 * timelapseInterval))) {
     //https://stackoverflow.com/questions/67090640/errors-while-interacting-with-microsd-card
     t_old = millis();
