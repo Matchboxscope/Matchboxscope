@@ -216,6 +216,7 @@ bool saveImage(String filename) {
 void loop() {
   if (isWebserver) {
     ftpSrv.handleFTP();
+    wm.process();
   }
 
 
