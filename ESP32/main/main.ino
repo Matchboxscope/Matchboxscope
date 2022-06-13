@@ -26,6 +26,8 @@ const char* mSSID = "BenMur";//"UC2-F8Team"; //"IPHT-Konf"; // "Blynk";
 const char* mPASSWORD = "MurBen3128"; //"_lachmannUC2"; //"WIa2!DcJ"; //"12345678";
 const char* mSSIDAP = "Matchboxscope";
 const char* hostname = "matchboxscope";
+//WiFiManager, Global intialization. Once its business is done, there is no need to keep it around
+WiFiManager wm;
 
 // Timelapse
 static const uint64_t timelapseInterval = 60; // sec; timelapse interval
@@ -40,6 +42,7 @@ const int freq = 5000;
 const int ledChannel = 7;
 const int pwmResolution = 8;
 const int ledPin = 4;
+
 
 
 boolean sdInitialized = false;
@@ -216,7 +219,6 @@ bool saveImage(String filename) {
 void loop() {
   if (isWebserver) {
     ftpSrv.handleFTP();
-    wm.process();
   }
 
 

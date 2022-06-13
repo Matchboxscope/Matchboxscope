@@ -29,10 +29,11 @@ httpd_handle_t stream_httpd = NULL;
 httpd_handle_t camera_httpd = NULL;
 
 
-// global camera parameters
+// global camera parameters for REST
 int gain = 0;
 int exposureTime = 0;
 int frameSize = 0;
+int ledintensity = 0;
 
 
 void setFrameSize(int val) {
@@ -121,6 +122,11 @@ static esp_err_t json_handler(httpd_req_t *req) {
       frameSize = doc["framesize"];
       setFrameSize(frameSize);
       Serial.println(frameSize);
+    }
+    if (doc.containsKey("ledintensity")) {
+      ledintensity = doc["ledintensity"];
+      ledcWrite(ledChannel, ledintensity);
+      Serial.println(ledintensity);
     }
 
     httpd_resp_set_hdr(req, "Connection", "close");
