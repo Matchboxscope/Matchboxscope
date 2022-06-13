@@ -1,26 +1,5 @@
 
-// v98x-WiFiMan
-// Workaround for the WebServer.h vs esp_http_server.h problem
-// https://github.com/jameszah/ESP32-CAM-Video-Recorder/blob/1d387ab82d1488b789be37dd6886dbc7ab963057/vA1/TimeLapseAviA1x.ino
-#define _HTTP_Method_H_
 
-typedef enum {
-  jHTTP_GET     = 0b00000001,
-  jHTTP_POST    = 0b00000010,
-  jHTTP_DELETE  = 0b00000100,
-  jHTTP_PUT     = 0b00001000,
-  jHTTP_PATCH   = 0b00010000,
-  jHTTP_HEAD    = 0b00100000,
-  jHTTP_OPTIONS = 0b01000000,
-  jHTTP_ANY     = 0b01111111,
-} HTTPMethod;
-
-// LED
-//const int ledChannel = 7;
-//const int ledPin = 4;
-
-Preferences pref;
-  
 typedef struct {
   httpd_req_t *req;
   size_t len;
