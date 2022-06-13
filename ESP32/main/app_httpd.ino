@@ -1,20 +1,26 @@
-#include <esp32-hal-ledc.h>
-#include "esp_http_server.h"
-#include "esp_timer.h"
-#include "esp_camera.h"
-#include "img_converters.h"
-#include "Arduino.h"
-#include <SPIFFS.h>
-#include "ArduinoJson.h"
 
-#include "html.h"
+// v98x-WiFiMan
+// Workaround for the WebServer.h vs esp_http_server.h problem
+// https://github.com/jameszah/ESP32-CAM-Video-Recorder/blob/1d387ab82d1488b789be37dd6886dbc7ab963057/vA1/TimeLapseAviA1x.ino
+#define _HTTP_Method_H_
 
-//#include <dl_lib.h>
+typedef enum {
+  jHTTP_GET     = 0b00000001,
+  jHTTP_POST    = 0b00000010,
+  jHTTP_DELETE  = 0b00000100,
+  jHTTP_PUT     = 0b00001000,
+  jHTTP_PATCH   = 0b00010000,
+  jHTTP_HEAD    = 0b00100000,
+  jHTTP_OPTIONS = 0b01000000,
+  jHTTP_ANY     = 0b01111111,
+} HTTPMethod;
 
 // LED
-const int ledChannel = 7;
-const int ledPin = 4;
+//const int ledChannel = 7;
+//const int ledPin = 4;
 
+Preferences pref;
+  
 typedef struct {
   httpd_req_t *req;
   size_t len;
@@ -92,8 +98,9 @@ std::string get_content(httpd_req_t *req) {
 StaticJsonDocument<1024> doc;
 static esp_err_t json_handler(httpd_req_t *req) {
 
-  std::string content = get_content(req);
 
+  // convert http to json
+  std::string content = get_content(req);
   DeserializationError error = deserializeJson(doc, content);
 
   if (error) {
@@ -108,15 +115,17 @@ static esp_err_t json_handler(httpd_req_t *req) {
 
     if (doc.containsKey("gain")) {
       gain = doc["gain"];
-      s->set_agc_gain(s, gain);  // 0 to 30
+      device_pref.setCameraGain(gain);
+      Serial.println(gain);      
+      s->set_agc_gain(s, device_pref.getCameraGain());  // 0 to 30
       s->set_special_effect(s, 2); //mono - has to be set again?
-      Serial.println(gain);
     }
     if (doc.containsKey("exposuretime")) {
       exposureTime = doc["exposuretime"];
-      s->set_agc_gain(s, gain);  // 0 to 1600
-      s->set_special_effect(s, 2); //mono - has to be set again?
+      device_pref.setCameraExposureTime(exposureTime);
       Serial.println(exposureTime);
+      s->set_aec_value(s, device_pref.getCameraExposureTime());    // (aec_value) 0 to 1200
+      s->set_special_effect(s, 2); //mono - has to be set again?
     }
     if (doc.containsKey("framesize")) {
       frameSize = doc["framesize"];
@@ -313,11 +322,14 @@ state actstate = stp;
 
 static esp_err_t cmd_handler(httpd_req_t *req)
 {
+
   // TODO: this should be arduinojson
   char*  buf;
   size_t buf_len;
   char variable[32] = {0,};
   char value[32] = {0,};
+
+  // save camera values permanently
 
   buf_len = httpd_req_get_url_query_len(req) + 1;
   if (buf_len > 1) {
@@ -363,7 +375,10 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     Serial.print("gain ");
     int gain = val;
     Serial.println(gain);
-    s->set_agc_gain(s, gain);  // 0 to 30
+    device_pref.setCameraGain(gain);
+    Serial.println(gain);      
+    s->set_agc_gain(s, device_pref.getCameraGain());  // 0 to 30
+    Serial.println(device_pref.getCameraGain());
     s->set_special_effect(s, 2); //mono - has to be set again?
   }
   else if (!strcmp(variable, "exposuretime"))
@@ -373,6 +388,7 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     Serial.println(exposuretime);
     s->set_aec_value(s, exposuretime);  // 0 to 30
     s->set_special_effect(s, 2); //mono - has to be set again?
+    device_pref.setCameraExposureTime(exposuretime);
   }
   else if (!strcmp(variable, "framesize")) {
     Serial.print("framesize: ");

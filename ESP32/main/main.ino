@@ -13,9 +13,26 @@
 #include <SPIFFS.h>
 #include "camera.h"
 #include <SD_MMC.h> // SD card
-#include "device_pref.h"
 #include <WiFiManager.h> // https://github.com/tzapu/WiFiManager
+#include <esp32-hal-ledc.h>
+#include "esp_http_server.h"
+#include "esp_timer.h"
+#include "esp_camera.h"
+#include "img_converters.h"
+#include "Arduino.h"
+#include <SPIFFS.h>
+#include "ArduinoJson.h"
+#include "html.h"
+#include "device_pref.h"
 
+#include <esp_log.h>"
+
+#include <HTTPClient.h>
+#include <esp_camera.h>
+
+
+// Local header files
+#include "device_pref.h"
 
 #include "SimpleFTPServer.h"
 FtpServer ftpSrv;   //set #define FTP_DEBUG in ESP8266FtpServer.h to see ftp verbose on serial
@@ -51,8 +68,6 @@ void startCameraServer();
 // Preferences
 Preferences pref;
 DevicePreferences device_pref(pref, "camera", __DATE__ " " __TIME__);
-
-
 
 void setup()
 {
@@ -145,20 +160,28 @@ void setup()
   }
 
 
-
+  int exposuretime = device_pref.getCameraExposureTime();
+  int gain = device_pref.getCameraGain();
+  Serial.println(exposuretime);
+  Serial.println(gain);
+  
   // Apply manual settings for the camera
   sensor_t * s = esp_camera_sensor_get();
   s->set_framesize(s, FRAMESIZE_QVGA);
-  s->set_vflip(s, 1);
-  s->set_hmirror(s, 1);
+  //s->set_vflip(s, 1);
+  //s->set_hmirror(s, 1);
+  s->set_exposure_ctrl(s, 0);  // (aec) 0 = disable , 1 = enable
+  s->set_aec2(s, 0);           // (aec2) Auto EXP DSP 0 = disable , 1 = enable
+  s->set_ae_level(s, 0);       // (ae_level) -2 to 2
+  s->set_aec_value(s, exposuretime);    // (aec_value) 0 to 1200
   s->set_gain_ctrl(s, 0);                       // auto gain off
-  s->set_awb_gain(s, 1);                        // Auto White Balance enable (0 or 1)
-  s->set_exposure_ctrl(s, 0);                   // auto exposure off
-  s->set_brightness(s, 0);     // -2 to 2
-  s->set_special_effect(s, 2); //mono
+  s->set_brightness(s, 0);                      // -2 to 2
+  s->set_special_effect(s, 2);                  //mono
   s->set_wb_mode(s, 0);
   s->set_awb_gain(s, 0);
   s->set_lenc(s, 1);
+  s->set_agc_gain(s, gain);  // 0 to 30
+    
 
   if (isWebserver) {
     // Start the camera and command server
@@ -171,8 +194,6 @@ void setup()
   ledcWrite(ledChannel, 255);
   delay(100);
   ledcWrite(ledChannel, 0);
-
-
 
   // initiliaze timer
   t_old = millis();
