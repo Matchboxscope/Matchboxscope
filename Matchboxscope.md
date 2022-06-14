@@ -83,10 +83,11 @@ Part |  Purpose | Source | Price |
 :----------------:|:------------:|:----------------:|:------------:
 ESP32-CAM (MB) | |  | 6€
 USB Micro Cable ||| 1€
-M3 Screws (Cylindrical head, 15mm, 8mm)|||
+M3 Screws (Cylindrical head, 20mm, 16mm)|||
 3D printing material (PLA) |||
 Aluminium foil (sticking if possible)|||
 Sticky tape |||
+Neodymium magnets round 12x2 or 12x3|||
 Springs |||
 
 
