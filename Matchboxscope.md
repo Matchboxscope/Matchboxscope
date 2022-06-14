@@ -73,7 +73,7 @@ and here you go. Enjoy your new tiny scope.
 
 <a href="#logo" name="logo"><img src="./IMAGES/Zstage.gif" width="800"></a>
 
-a video of the build can be found here: 
+a video of the build can be found here: https://www.youtube.com/watch?v=iw_hoDRlnpg 
 
 ## Components
 
