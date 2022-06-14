@@ -69,6 +69,8 @@ Screw the M3x20 in position and attach the illumination periscope. If needed, ad
 
 and here you go. Enjoy your new tiny scope. 
 
+<a href="#logo" name="logo"><img src="./IMAGES/Zstage.gif" width="800"></a>
+
 a video of the build can be found here: 
 
 ## Components
