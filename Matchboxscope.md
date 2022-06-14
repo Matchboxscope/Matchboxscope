@@ -36,7 +36,40 @@ This how it looks like - like an [Anglerfish](Anglerfish.md):
 
 # Assembly
 
-We will give you a step-by-step guide how to assemble the hole microscope. If anything fails or doesnt' match as expected (most likely), please file an issue immediately. We will be there for you.
+Once you have obtained the parts, the assebly can be done in 5 minutes. 
+<a href="#logo" name="logo"><img src="./IMAGES/guidev1001.jpeg" width="800"></a>
+
+You need: the ESP32 cam, the 3D printed parts, 3 M3x20 or M3x25 screws, 3 M3x16 screws, 12x2 or 12x3 neodymium magnets, superglue, M3 Allen Key, plier and tweezers. 
+
+<a href="#logo" name="logo"><img src="./IMAGES/guidev1002.jpeg" width="800"></a>
+
+With a plier, and very gently, unscrew the lens from the ESP32 camera and, if not attached yet, attach it to the board. 
+
+<a href="#logo" name="logo"><img src="./IMAGES/guidev1003.jpeg" width="800"></a>
+
+put the lens on the 3D printed "middle" part, and the board in the 3D printed "bottom" opart. Alling the middle part and the bottom part. 
+
+<a href="#logo" name="logo"><img src="./IMAGES/guidev1004.jpeg" width="800"></a>
+
+once alligned, push the middle part to fix the camera on the 3D printed part. Once the camera is in the 3D printed middle part, bend the camera cable to allign the two 3D printed parts. 
+
+<a href="#logo" name="logo"><img src="./IMAGES/guidev1005.jpeg" width="800"></a>
+
+screw the two parts using 3 M3x16 screw, and glue the magnets in position (both with polarity pointing in the same direction) 
+
+<a href="#logo" name="logo"><img src="./IMAGES/guidev1006.jpeg" width="800"></a>
+
+glue the other two magnets on the 3D printed sample part, and remmeber that the the magnet should repel the ones on the middle part. 
+
+<a href="#logo" name="logo"><img src="./IMAGES/guidev1007.jpeg" width="800"></a>
+ 
+Screw the M3x20 in position and attach the illumination periscope. If needed, add more magnets to make the repuslion sturdier.
+
+<a href="#logo" name="logo"><img src="./IMAGES/guidev1008.jpeg" width="800"></a>
+
+and here you go. Enjoy your new tiny scope. 
+
+a video of the build can be found here: 
 
 ## Components
 
