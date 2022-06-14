@@ -6,6 +6,8 @@ Below, we will guide you through the process to build the full device that will 
 
 <a href="#logo" name="logo"><img src="./IMAGES/IMG_20220328_133003.jpg" width="500"></a>
 
+<a href="#logo" name="logo"><img src="./IMAGES/Roti.gif" width="500"></a>
+
 ## Some theory
 
 *Why can you actually magnify?* Good question! In fact, we don't magnify at all, but since the pixels of the OV2460 camera are really small and we make use of the objective lens with a relatively small focal length (f'=~5mm), we perform a "4f-imaging". In this context this means, we have a sample at a distance of 2f (focal lengths) in front of the lens, which will in turn create an image at 2f away from it. The camera chip will digitize the image and send it over to your displaying device. You can tune the magnification by changing the distance between sample-lens and lens-sensor. The formular is give by:
