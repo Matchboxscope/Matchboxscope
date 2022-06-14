@@ -14,11 +14,6 @@ httpd_handle_t stream_httpd = NULL;
 httpd_handle_t camera_httpd = NULL;
 
 
-// global camera parameters for REST
-int gain = 0;
-int exposureTime = 0;
-int frameSize = 0;
-int ledintensity = 0;
 
 
 void setFrameSize(int val) {
@@ -76,7 +71,8 @@ std::string get_content(httpd_req_t *req) {
 // Stream& input;
 StaticJsonDocument<1024> doc;
 static esp_err_t json_handler(httpd_req_t *req) {
-
+  //we have to ways of changinv values through Json and random..
+  // json-only would be better
 
   // convert http to json
   std::string content = get_content(req);
@@ -95,24 +91,30 @@ static esp_err_t json_handler(httpd_req_t *req) {
     if (doc.containsKey("gain")) {
       gain = doc["gain"];
       device_pref.setCameraGain(gain);
-      Serial.println(gain);      
+      Serial.println(gain);
       s->set_agc_gain(s, device_pref.getCameraGain());  // 0 to 30
       s->set_special_effect(s, 2); //mono - has to be set again?
     }
-    if (doc.containsKey("exposuretime")) {
-      exposureTime = doc["exposuretime"];
+    if (doc.containsKey("exposureTime")) {
+      exposureTime = doc["exposureTime"];
       device_pref.setCameraExposureTime(exposureTime);
       Serial.println(exposureTime);
       s->set_aec_value(s, device_pref.getCameraExposureTime());    // (aec_value) 0 to 1200
       s->set_special_effect(s, 2); //mono - has to be set again?
     }
     if (doc.containsKey("framesize")) {
+      // FRAMESIZE
       frameSize = doc["framesize"];
-      setFrameSize(frameSize);
-      Serial.println(frameSize);
+      Serial.print("framesize: ");
+      device_pref.setCameraFramesize(frameSize);
+      setFrameSize(device_pref.getCameraFramesize());
+      Serial.println(device_pref.getCameraFramesize());
+      s->set_special_effect(s, 2); //mono - has to be set again?
     }
     if (doc.containsKey("ledintensity")) {
+      // LED Intensity
       ledintensity = doc["ledintensity"];
+      ledValueOld = ledintensity;
       ledcWrite(ledChannel, ledintensity);
       Serial.println(ledintensity);
     }
@@ -182,8 +184,8 @@ static esp_err_t capture_handler(httpd_req_t *req) {
 
   if (!fb) {
     Serial.println("Camera capture failed");
-    httpd_resp_send_500(req);
     ESP.restart();
+    httpd_resp_send_500(req);
     return ESP_FAIL;
   }
 
@@ -238,7 +240,10 @@ static esp_err_t stream_handler(httpd_req_t *req) {
     return res;
   }
 
-  while (true) {
+  // in case we want to stop it externally
+  isStreaming = true;
+
+  while (isStreaming) {
     fb = esp_camera_fb_get();
     if (!fb) {
       Serial.println("Camera capture failed");
@@ -308,8 +313,7 @@ static esp_err_t cmd_handler(httpd_req_t *req)
   char variable[32] = {0,};
   char value[32] = {0,};
 
-  // save camera values permanently
-
+  // adjust parameters
   buf_len = httpd_req_get_url_query_len(req) + 1;
   if (buf_len > 1) {
     buf = (char*)malloc(buf_len);
@@ -336,7 +340,6 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     return ESP_FAIL;
   }
 
-
   int val = atoi(value);
   sensor_t * s = esp_camera_sensor_get();
   int res = 0;
@@ -351,39 +354,61 @@ static esp_err_t cmd_handler(httpd_req_t *req)
   }
   else if (!strcmp(variable, "gain"))
   {
-    Serial.print("gain ");
-    int gain = val;
-    Serial.println(gain);
+    gain = val;
     device_pref.setCameraGain(gain);
-    Serial.println(gain);      
     s->set_agc_gain(s, device_pref.getCameraGain());  // 0 to 30
-    Serial.println(device_pref.getCameraGain());
     s->set_special_effect(s, 2); //mono - has to be set again?
+
+    Serial.print("gain ");
+    Serial.println(gain);
+    Serial.println(device_pref.getCameraGain());
   }
   else if (!strcmp(variable, "exposuretime"))
   {
-    Serial.print("exposuretime ");
-    int exposuretime = val;
-    Serial.println(exposuretime);
-    s->set_aec_value(s, exposuretime);  // 0 to 30
+    // EXPOSURE TIME
+    exposureTime = val;
+    device_pref.setCameraExposureTime(exposureTime);
+    s->set_aec_value(s, device_pref.getCameraExposureTime());  // 0 to 30
     s->set_special_effect(s, 2); //mono - has to be set again?
-    device_pref.setCameraExposureTime(exposuretime);
+
+    Serial.print("exposureTime ");
+    Serial.println(device_pref.getCameraExposureTime());
+    Serial.println(exposureTime);
   }
   else if (!strcmp(variable, "framesize")) {
+    // FRAMESIZE
+    frameSize = val;
+    device_pref.setCameraFramesize(frameSize);
+    setFrameSize(device_pref.getCameraFramesize());
+    s->set_special_effect(s, 2); //mono - has to be set again?
+
     Serial.print("framesize: ");
+    Serial.println(device_pref.getCameraFramesize());
     Serial.println(val);
-    setFrameSize(val);
+  }
+  else if (!strcmp(variable, "timelapseinterval")) {
+    // Timelapse Periode
+    device_pref.setTimelapseInterval(val);
+    timelapseInterval = device_pref.getTimelapseInterval();
+
+    Serial.print("timelapse Interval: ");
+    Serial.println(device_pref.getTimelapseInterval());
+    Serial.println(val);
   }
   else if (!strcmp(variable, "quality"))
   {
+    // QUALITY
     Serial.println("quality");
     res = s->set_quality(s, val);
   }
   else if (!strcmp(variable, "flash"))
   {
-    ledcWrite(ledChannel, val);
+    // FLASH
+    ledValueOld = val;
+    ledcWrite(ledChannel, ledValueOld);
+    Serial.print("LED VAlue");
+    Serial.println(ledValueOld);
   }
-
   else
   {
     Serial.println("variable");
