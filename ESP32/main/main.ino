@@ -2,6 +2,7 @@
   ESP32 Matchboxscoe Camera Softare
 */
 //#define DEFAULT_STORAGE_TYPE_ESP32 STORAGE_SPIFFS
+#define DEFAULT_STORAGE_TYPE_ESP32 STORAGE_SD
 
 //http://192.168.2.168/control?var=flash&val=100
 

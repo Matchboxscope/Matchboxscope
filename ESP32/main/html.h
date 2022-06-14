@@ -32,6 +32,7 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
                 <tr><td>Exposure Time</td><td align="center" colspan="2"><input type="range" id="exposuretime" min="0" max="1600" value="100" onchange="try{fetch(document.location.origin+'/control?var=exposuretime&val='+this.value);}catch(e){}"><td></td></tr>
                 <tr><td>Quality</td><td align="center" colspan="2"><input type="range" id="quality" min="10" max="63" value="10" onchange="try{fetch(document.location.origin+'/control?var=quality&val='+this.value);}catch(e){}"><td></td></tr>              
                 <tr><td>Timelapse Interval (0..180s; 0 => off) </td><td align="center" colspan="2"><input type="range" id="timelapse" min="0" max="180" value="0" onchange="try{fetch(document.location.origin+'/control?var=timelapseinterval&val='+this.value);}catch(e){}"><td></td></tr>
+                <tr><td align="center"><a href="https://ij.imjoy.io/?open=http://192.168.178.50/capture.jpeg"> <img alt="ImJoy" src="https://ij.imjoy.io/assets/badge/open-in-imagej-js-badge.svg" alt="Send To ImJoy"></td></tr>
                 </table>
             </section>         
         </section>
