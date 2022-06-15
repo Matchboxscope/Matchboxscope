@@ -4,7 +4,7 @@ This device is not much larger than a matchbox (hence its name - surprise..). Be
 Below, we will guide you through the process to build the full device that will be powered with a USB powerbank or power supply
 
 
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220328_133003.jpg" width="500"></a>
+<!--- <a href="#logo" name="logo"><img src="./IMAGES/IMG_20220328_133003.jpg" width="500"></a> --->
 
 <a href="#logo" name="logo"><img src="./IMAGES/Roti.gif" width="500"></a>
 
@@ -89,7 +89,9 @@ A previous version looked like this:
 
 <a href="#logo" name="logo"><img src="./IMAGES/anglerfish/anglerfish_17.jpg" width="500"></a>
 
-# Assembly
+## Assembly of the microscope
+
+a video of the build can be found here: https://www.youtube.com/watch?v=iw_hoDRlnpg  
 
 Once you have obtained the parts, the assebly can be done in 5 minutes. 
 <a href="#logo" name="logo"><img src="./IMAGES/guidev1001.jpeg" width="800"></a>
@@ -125,15 +127,17 @@ Screw the M3x20 in position and attach the illumination periscope. If needed, ad
 and here you go. Enjoy your new tiny scope. 
 
 
-a video of the build can be found here: https://www.youtube.com/watch?v=iw_hoDRlnpg 
-
 
 
 ## Assembly of the illumination unit
 
 Some additional information for the assembly process can be found in the [Anglerfish](Angleffish.md)-documentation.
 
-The idea of the illumination unit is to re-use the LED torch that is mounted on the ESP32-CAM and can be controlled through GPIO4. Don't look directly into the LED. As said, it'S bright!
+The idea of the illumination unit is to re-use the LED torch that is mounted on the ESP32-CAM and can be controlled through GPIO4. Don't look directly into the LED. As said, it's bright!
+
+One option is to glue, or stick some aluminium foil in the "periscope". Another option is to use sliver spray paint to paint it (or use any silver paint you want). Both option worked fine: 
+
+<a href="#logo" name="logo"><img src="./IMAGES/periscope.jpeg" width="700"></a>
 
 Print the little periscope and add aluminium foil inside the little channel, but keep the round holes open. Double-sided sticky tape will help you to mount the aluminium foil. Alternatively, use self-sticky aluminium foil. Tweezers help you in the process of placing the foil.
 
@@ -143,63 +147,5 @@ Print the little periscope and add aluminium foil inside the little channel, but
 
 You can also seal the "light-channel" with additional aluminium foil. A small piece of diffuse Sticky-tape/scotch tape (3M) on the end of the channel will make the illumination much smoother but is not necessary (actually not visible on the photo).
 
-## Assembly of the Microscope
+## Pictures taken with the Matchboxscope 
 
-These are the parts you will need to assemble the microscope. Tools are: your hands, an M3 compatible hex key, the tweezers you used before and patience.
-
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220329_094034.jpg" width="500"></a>
-
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220329_094126.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_085608.jpg" width="500"></a>
-
-## Prepare the camera
-First of all, remove the lens inside the camera. Be careful to not rip apart the flexible PCB. This is most likely the most crucial part where things my fail. The lens is threaded into the sensor assembly and then glued to not loos focus. You have to release this glue by unscrewing it with some force. Use the tweezers or pliers. BUT: Be careful to not destroy the lens or the camera.
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_085640.jpg" width="500"></a>
-
-## Assemble the stage
-
-Now that the camera lens is gone, add the flatband cable/flex PCB to the ESP board and stick the round plastic case of the sensor through the 3D printed base as indicated below. The orientation of the circular part is right if the label "SD" aligns with the side of the microSD card slot.
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_085707.jpg" width="500"></a>
-
-Now add the second base to the assembly and fix the sandwich with 4 M3x15 screws
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_085719.jpg" width="500"></a>
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_085800.jpg" width="500"></a>
-
-The result may look like in the image below. Now: Add the objective lens from the camera, which you unscrewed earlier to the tube (this may be deprecated since the middle layer already contains the tube).
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_085858.jpg" width="500"></a>
-
-In the next step, insert the tube into the thread from the camera sensor unit:
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_085909.jpg" width="500"></a>
-
-Equip all 3 screws that will mount the top layer to the middle layer (M3x20, cylindrical head) with springs that will push the layer away from the camera.
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_090005.jpg" width="500"></a>
-
-Mount the top layer to the camera such that all springs are *"under pressure"*
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_090104.jpg" width="500"></a>
-
-..and from the other side:
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_090147.jpg" width="500"></a>
-
-Add the illumination unit, insert the microSD card and you're almost done.
-
-<a href="#logo" name="logo"><img src="./IMAGES/IMG_20220330_090159.jpg" width="500"></a>
-
-For remote operation: Add the powerbar and look for a Wifi signal/SSID that may be called "Blynk". Connect to it and open the page http://192.168.4.1
-
-
-## Final Assembly
-
-
-<a href="#logo" name="logo"><img src="./IMAGES/setup.jpeg" width="500"></a>
