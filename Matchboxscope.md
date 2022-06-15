@@ -150,4 +150,25 @@ Print the little periscope and add aluminium foil inside the little channel, but
 You can also seal the "light-channel" with additional aluminium foil. A small piece of diffuse Sticky-tape/scotch tape (3M) on the end of the channel will make the illumination much smoother but is not necessary (actually not visible on the photo).
 
 ## Pictures taken with the Matchboxscope 
+div=0.01mm
 
+<a href="#logo" name="logo"><img src="./IMAGES/example1.jpg" width="800"></a>
+
+Rotifer 
+
+<a href="#logo" name="logo"><img src="./IMAGES/example2.jpg" width="800"></a>
+
+Mosquito larvae 
+
+<a href="#logo" name="logo"><img src="./IMAGES/example3.jpg" width="800"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/example4.jpg" width="800"></a>
+
+<a href="#logo" name="logo"><img src="./IMAGES/example5.jpg" width="800"></a>
+
+Rotifers and Tardigrade
+
+<a href="#logo" name="logo"><img src="./IMAGES/example6.jpg" width="800"></a>
+
+
+and a video of life in a drop of pond water is here: https://www.youtube.com/watch?v=x27QPLMVoFQ 
