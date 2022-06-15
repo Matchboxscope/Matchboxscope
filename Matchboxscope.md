@@ -35,6 +35,59 @@ This how it looks like - like an [Anglerfish](Anglerfish.md):
 
 <a href="#logo" name="logo"><img src="./IMAGES/IMG_20220326_190242.jpg" width="500"></a>
 
+## Z Stage 
+
+In the Matchboxscope, the Z stage is controlled by magnets and by three screws. The magnets between the middle part and the top part are repelling each other and in this way keeping the sample stage in place: 
+
+<a href="#logo" name="logo"><img src="./IMAGES/Zstage.gif" width="800"></a> 
+
+If you are, somehow adverse to magnets, you can use springs as well. In this case we suggest to use a nut for safaty (and not to shoot the spring loaded  glass slide in the sky). 
+
+<a href="#logo" name="logo"><img src="./IMAGES/spring.jpeg" width="800"></a> 
+
+
+
+## Components
+
+This you will need for your device in order to work:
+
+<a href="#logo" name="logo"><img src="./IMAGES/explosion.jpeg" width="200"></a>
+
+### Bill of material
+
+Part |  Purpose | Source | Price |
+:----------------:|:------------:|:----------------:|:------------:
+ESP32-CAM (MB) | |  | 6€
+USB Micro Cable ||| 1€
+M3 Screws (Cylindrical head, 20mm, 12mm)|||
+3D printing material (PLA) |||
+Aluminium foil or silver spray paint (sticking if possible)|||
+Neodymium magnets round 12x2 or 12x3|||
+Springs (for the spring version) |||
+
+
+## 3D printing files
+
+All design files can be found in the folder [INVENTOR](./INVENTOR).
+
+All 3D-printable files can be found [here](./STL/IncubatorMicroscope_static):
+
+The Matchboxscope is composed of three parts:
+
+The bottom part, for the ESP32 board
+
+The middle part, which acts as a spacer between the lens and the camera sensor
+
+The top part (the sample part), for holding the glass slide and the illumination periscope.
+
+So far there are three different possibilities for the top part: a flexure to fix the glass slide, a squared 18x18mm for coverslips, and a flat large one to be used with a magnet. The choice is yours:  
+
+<a href="#logo" name="logo"><img src="./IMAGES/top.jpeg" width="500"></a>
+
+
+A previous version looked like this:
+
+<a href="#logo" name="logo"><img src="./IMAGES/anglerfish/anglerfish_17.jpg" width="500"></a>
 
 # Assembly
 
@@ -71,46 +124,9 @@ Screw the M3x20 in position and attach the illumination periscope. If needed, ad
 
 and here you go. Enjoy your new tiny scope. 
 
-<a href="#logo" name="logo"><img src="./IMAGES/Zstage.gif" width="800"></a>
 
 a video of the build can be found here: https://www.youtube.com/watch?v=iw_hoDRlnpg 
 
-## Components
-
-This you will need for your device in order to work:
-
-<a href="#logo" name="logo"><img src="./IMAGES/explosion.jpeg" width="200"></a>
-
-### Bill of material
-
-Part |  Purpose | Source | Price |
-:----------------:|:------------:|:----------------:|:------------:
-ESP32-CAM (MB) | |  | 6€
-USB Micro Cable ||| 1€
-M3 Screws (Cylindrical head, 20mm, 16mm)|||
-3D printing material (PLA) |||
-Aluminium foil (sticking if possible)|||
-Sticky tape |||
-Neodymium magnets round 12x2 or 12x3|||
-Springs |||
-
-
-## 3D printing files
-
-All design files can be found in the folder [INVENTOR](./INVENTOR).
-
-All 3D-printable files can be found [here](./STL/IncubatorMicroscope_static):
-
-* IncubatorMicroscope_static_Matchboxscope_bottom_v0_3.stl
-* IncubatorMicroscope_static_Matchboxscope_Lightperiscope_long_V0_2.stl
-* IncubatorMicroscope_static_Matchboxscope_Lightperiscope_V0_1.stl
-* IncubatorMicroscope_static_Matchboxscope_middle2_v2_24.stl
-* IncubatorMicroscope_static_Matchboxscope_sample_v1_13.stl
-
-
-A previous version looked like this:
-
-<a href="#logo" name="logo"><img src="./IMAGES/anglerfish/anglerfish_17.jpg" width="500"></a>
 
 
 ## Assembly of the illumination unit
