@@ -37,7 +37,7 @@ void initCamera() {
 }
 
 
-void initCameraSettings(){
+void initCameraSettings() {
   // Apply manual settings for the camera
   sensor_t * s = esp_camera_sensor_get();
   s->set_framesize(s, FRAMESIZE_QVGA);
@@ -49,7 +49,7 @@ void initCameraSettings(){
   s->set_aec_value(s, exposureTime);    // (aec_value) 0 to 1200
   s->set_gain_ctrl(s, 0);                       // auto gain off
   s->set_brightness(s, 0);                      // -2 to 2
-  s->set_special_effect(s, 2);                  //mono
+  s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
   s->set_wb_mode(s, 0);
   s->set_awb_gain(s, 0);
   s->set_lenc(s, 1);
@@ -214,14 +214,14 @@ static esp_err_t json_handler(httpd_req_t *req) {
       device_pref.setCameraGain(gain);
       Serial.println(gain);
       s->set_agc_gain(s, device_pref.getCameraGain());  // 0 to 30
-      s->set_special_effect(s, 2); //mono - has to be set again?
+      s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
     }
     if (doc.containsKey("exposureTime")) {
       exposureTime = doc["exposureTime"];
       device_pref.setCameraExposureTime(exposureTime);
       Serial.println(exposureTime);
       s->set_aec_value(s, device_pref.getCameraExposureTime());    // (aec_value) 0 to 1200
-      s->set_special_effect(s, 2); //mono - has to be set again?
+      s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
     }
     if (doc.containsKey("framesize")) {
       // FRAMESIZE
@@ -230,7 +230,7 @@ static esp_err_t json_handler(httpd_req_t *req) {
       device_pref.setCameraFramesize(frameSize);
       setFrameSize(device_pref.getCameraFramesize());
       Serial.println(device_pref.getCameraFramesize());
-      s->set_special_effect(s, 2); //mono - has to be set again?
+      s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
     }
     if (doc.containsKey("ledintensity")) {
       // LED Intensity
@@ -471,14 +471,23 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     float brightness = (float)val / 10;
     Serial.println(brightness);
     s->set_brightness(s, brightness);  // -2 to 2
-    s->set_special_effect(s, 2); //mono - has to be set again?
+    s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
+  }
+  if (!strcmp(variable, "effect"))
+  {
+    Serial.print("effect ");
+    float effect = val;
+    device_pref.setCameraEffect(effect);
+    s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
+    Serial.println(device_pref.getCameraEffect());
+
   }
   else if (!strcmp(variable, "gain"))
   {
     gain = val;
     device_pref.setCameraGain(gain);
     s->set_agc_gain(s, device_pref.getCameraGain());  // 0 to 30
-    s->set_special_effect(s, 2); //mono - has to be set again?
+    s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
 
     Serial.print("gain ");
     Serial.println(gain);
@@ -490,7 +499,7 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     exposureTime = val;
     device_pref.setCameraExposureTime(exposureTime);
     s->set_aec_value(s, device_pref.getCameraExposureTime());  // 0 to 30
-    s->set_special_effect(s, 2); //mono - has to be set again?
+    s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
 
     Serial.print("exposureTime ");
     Serial.println(device_pref.getCameraExposureTime());
@@ -501,7 +510,7 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     frameSize = val;
     device_pref.setCameraFramesize(frameSize);
     setFrameSize(device_pref.getCameraFramesize());
-    s->set_special_effect(s, 2); //mono - has to be set again?
+    s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
 
     Serial.print("framesize: ");
     Serial.println(device_pref.getCameraFramesize());
@@ -659,7 +668,7 @@ void startCameraServer()
     .handler   = cmd_handler,
     .user_ctx  = NULL
   };
-  
+
   httpd_uri_t enable_uri = {
     .uri       = "/enable",
     .method    = HTTP_GET,
