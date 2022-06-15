@@ -1,12 +1,16 @@
 # Matchboxscope
 
 This device is not much larger than a matchbox (hence its name - surprise..). Besides the ESP32-CAM it only needs 3D printed components, screws, aluminium foil and (optional) springs.
-Below, we will guide you through the process to build the full device that will be powered with a USB powerbank or power supply
+Below, we will guide you through the process to build the full device
 
 
 <!--- <a href="#logo" name="logo"><img src="./IMAGES/IMG_20220328_133003.jpg" width="500"></a> --->
 
 <a href="#logo" name="logo"><img src="./IMAGES/Roti.gif" width="500"></a>
+
+The Matchboxscope just need some juice on usb and can work using a powerbank. It has wifi capabilities and it can stream the images to whataver device you want :) 
+
+<a href="#logo" name="logo"><img src="./IMAGES/lice.gif" width="500"></a>
 
 ## Some theory
 
@@ -30,7 +34,6 @@ Essentially, this configuration is also known as a finite-corrected microscopy a
 
 This how it looks like - like an [Anglerfish](Anglerfish.md):
 
-
 <a href="#logo" name="logo"><img src="./IMAGES/IMG_20220326_185946.jpg" width="500"></a>
 
 <a href="#logo" name="logo"><img src="./IMAGES/IMG_20220326_190242.jpg" width="500"></a>
@@ -44,7 +47,6 @@ In the Matchboxscope, the Z stage is controlled by magnets and by three screws. 
 If you are, somehow adverse to magnets, you can use springs as well. In this case we suggest to use a nut for safaty (and not to shoot the spring loaded  glass slide in the sky). 
 
 <a href="#logo" name="logo"><img src="./IMAGES/spring.jpeg" width="800"></a> 
-
 
 
 ## Components
@@ -126,7 +128,7 @@ Screw the M3x20 in position and attach the illumination periscope. If needed, ad
 
 and here you go. Enjoy your new tiny scope. 
 
-
+<a href="#logo" name="logo"><img src="./IMAGES/powerbank.jpg" width="800"></a>
 
 
 ## Assembly of the illumination unit
