@@ -91,7 +91,6 @@ RefocusingServer server(80, SPIFFS, camera, setTimelapse);
 
 
 // INITIALIZATION
-
 void initNonTimelapseFunctionalities() {
   if (hostWifiAP) {
     initWifiAP(wifiAPSSID);

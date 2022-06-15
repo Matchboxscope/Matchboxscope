@@ -1,3 +1,115 @@
+void initCamera() {
+  // INIT Camera
+  camera_config_t config;
+  config.ledc_channel = LEDC_CHANNEL_0;
+  config.ledc_timer = LEDC_TIMER_0;
+  config.pin_d0 = Y2_GPIO_NUM;
+  config.pin_d1 = Y3_GPIO_NUM;
+  config.pin_d2 = Y4_GPIO_NUM;
+  config.pin_d3 = Y5_GPIO_NUM;
+  config.pin_d4 = Y6_GPIO_NUM;
+  config.pin_d5 = Y7_GPIO_NUM;
+  config.pin_d6 = Y8_GPIO_NUM;
+  config.pin_d7 = Y9_GPIO_NUM;
+  config.pin_xclk = XCLK_GPIO_NUM;
+  config.pin_pclk = PCLK_GPIO_NUM;
+  config.pin_vsync = VSYNC_GPIO_NUM;
+  config.pin_href = HREF_GPIO_NUM;
+  config.pin_sscb_sda = SIOD_GPIO_NUM;
+  config.pin_sscb_scl = SIOC_GPIO_NUM;
+  config.pin_pwdn = PWDN_GPIO_NUM;
+  config.pin_reset = RESET_GPIO_NUM;
+  config.xclk_freq_hz = 20000000;
+  config.pixel_format = PIXFORMAT_JPEG;
+  //init with high specs to pre-allocate larger buffers
+
+  config.frame_size = FRAMESIZE_VGA;
+  config.jpeg_quality = 10;
+  config.fb_count = 2;
+
+  // camera init
+  esp_err_t err = esp_camera_init(&config);
+  if (err != ESP_OK) {
+    Serial.printf("Camera init failed with error 0x % x", err);
+    ESP.restart();
+    return;
+  }
+}
+
+
+void initCameraSettings(){
+  // Apply manual settings for the camera
+  sensor_t * s = esp_camera_sensor_get();
+  s->set_framesize(s, FRAMESIZE_QVGA);
+  //s->set_vflip(s, 1);
+  //s->set_hmirror(s, 1);
+  s->set_exposure_ctrl(s, 0);  // (aec) 0 = disable , 1 = enable
+  s->set_aec2(s, 0);           // (aec2) Auto EXP DSP 0 = disable , 1 = enable
+  s->set_ae_level(s, 0);       // (ae_level) -2 to 2
+  s->set_aec_value(s, exposureTime);    // (aec_value) 0 to 1200
+  s->set_gain_ctrl(s, 0);                       // auto gain off
+  s->set_brightness(s, 0);                      // -2 to 2
+  s->set_special_effect(s, 2);                  //mono
+  s->set_wb_mode(s, 0);
+  s->set_awb_gain(s, 0);
+  s->set_lenc(s, 1);
+  s->set_agc_gain(s, gain);  // 0 to 30
+}
+
+
+bool saveImage(String filename) {
+
+  // Stop stream
+  isStreaming = false;
+
+  // TODO: We need to stop the stream here!
+  if (sdInitialized) { // Do not attempt to save anything to a non-existig SD card
+    camera_fb_t * frameBuffer = NULL;
+
+    // turn on LED
+    ledcWrite(ledChannel, 255);
+
+    // set maximum framesize
+    sensor_t * s = esp_camera_sensor_get();
+    s->set_framesize(s, FRAMESIZE_UXGA);
+
+    // Take Picture with Camera, but first let camera warm up => make sure low res frame in buffer is freed
+    for (int iwarmup = 0; iwarmup < 3; iwarmup++) {
+      frameBuffer = esp_camera_fb_get();
+      esp_camera_fb_return(frameBuffer);
+    }
+    frameBuffer = esp_camera_fb_get();
+
+    if (!frameBuffer) {
+      Serial.println("Camera capture failed");
+      ESP.restart();
+      return false;
+    }
+    ledcWrite(ledChannel, ledValueOld);
+
+    // Save image to disk
+    fs::FS &fs = SD_MMC;
+    File imgFile = fs.open(filename.c_str(), FILE_WRITE);
+    if (!imgFile) {
+      Serial.println("Failed to open file in writing mode");
+      return false;
+    } else {
+      imgFile.write(frameBuffer->buf, frameBuffer->len);
+      Serial.println("Saved " + filename);
+    }
+    imgFile.close();
+    esp_camera_fb_return(frameBuffer);
+    delay(500);
+
+    // resetFramesize to value before frame caputring
+    setFrameSize(device_pref.getCameraFramesize());
+
+    return true;
+  }
+  else {
+    return false;
+  }
+}
 
 
 typedef struct {
@@ -17,6 +129,15 @@ httpd_handle_t camera_httpd = NULL;
 
 
 void setFrameSize(int val) {
+  /*
+    FRAMESIZE_UXGA (1600 x 1200)
+    FRAMESIZE_QVGA (320 x 240)
+    FRAMESIZE_CIF (352 x 288)
+    FRAMESIZE_VGA (640 x 480)
+    FRAMESIZE_SVGA (800 x 600)
+    FRAMESIZE_XGA (1024 x 768)
+    FRAMESIZE_SXGA (1280 x 1024)
+  */
   sensor_t * s = esp_camera_sensor_get();
   if (val == 0)
     s->set_framesize(s, FRAMESIZE_QQVGA);
@@ -386,6 +507,14 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     Serial.println(device_pref.getCameraFramesize());
     Serial.println(val);
   }
+  else if (!strcmp(variable, "lenscorrection")) {
+    // Timelapse Periode
+    s->set_lenc(s, val);
+    Serial.print(" lenscorrection: ");
+    Serial.println(val);
+  }
+
+
   else if (!strcmp(variable, "timelapseinterval")) {
     // Timelapse Periode
     device_pref.setTimelapseInterval(val);
@@ -471,6 +600,21 @@ static esp_err_t status_handler(httpd_req_t *req) {
   return httpd_resp_send(req, json_response, strlen(json_response));
 }
 
+static esp_err_t enable_handler(httpd_req_t *req) {
+  device_pref.setIsTimelapse(true);
+  static char json_response[1024];
+  char * p = json_response;
+  *p++ = '{';
+  p += sprintf(p, "You have enabled long-time timelpase - reflash the code or release the button to wake up the ESP again");
+  *p++ = '}';
+  *p++ = 0;
+  httpd_resp_set_type(req, "application/json");
+  httpd_resp_set_hdr(req, "Access-Control-Allow-Origin", "*");
+  httpd_resp_send(req, json_response, strlen(json_response));
+
+  ESP.restart();
+  return 0;
+}
 
 
 esp_err_t indexhtml_handler(httpd_req_t *req) {
@@ -515,6 +659,13 @@ void startCameraServer()
     .handler   = cmd_handler,
     .user_ctx  = NULL
   };
+  
+  httpd_uri_t enable_uri = {
+    .uri       = "/enable",
+    .method    = HTTP_GET,
+    .handler   = enable_handler,
+    .user_ctx  = NULL
+  };
 
   httpd_uri_t capture_uri = {
     .uri       = "/capture.jpeg",
@@ -555,6 +706,7 @@ void startCameraServer()
   if (httpd_start(&camera_httpd, &config) == ESP_OK) {
     httpd_register_uri_handler(camera_httpd, &index_uri);
     httpd_register_uri_handler(camera_httpd, &cmd_uri);
+    httpd_register_uri_handler(camera_httpd, &enable_uri);
     httpd_register_uri_handler(camera_httpd, &status_uri);
     httpd_register_uri_handler(camera_httpd, &capture_uri);
     httpd_register_uri_handler(camera_httpd, &id_uri);
