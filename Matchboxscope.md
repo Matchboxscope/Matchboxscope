@@ -1,14 +1,16 @@
+<a href="#logo" name="logo"><img src="./IMAGES/expl.gif" width="500"></a>
+
 # Matchboxscope
 
-This device is not much larger than a matchbox (hence its name - surprise..). Besides the ESP32-CAM it only needs 3D printed components, screws, aluminium foil and (optional) springs.
+This device is not much larger than a matchbox (hence its name - surprise..). Besides the ESP32-CAM it only needs 3D printed components, screws, aluminium foil and a couple of magnets (or optional springs).
 Below, we will guide you through the process to build the full device
 
 
-<!--- <a href="#logo" name="logo"><img src="./IMAGES/IMG_20220328_133003.jpg" width="500"></a> --->
+<!--- <a href="#logo" name="logo"><img src="./IMAGES/IMG_20220328_133003.jpg" width="500"></a> 
 
-<a href="#logo" name="logo"><img src="./IMAGES/Roti.gif" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/Roti.gif" width="500"></a> --->
 
-The Matchboxscope just need some juice on usb and can work using a powerbank. It has wifi capabilities and it can stream the images to whataver device you want :) 
+The Matchboxscope just need some juice from usb and can work using a powerbank. It has wifi capabilities and it can live stream to whataver device you want :) 
 
 <a href="#logo" name="logo"><img src="./IMAGES/lice.gif" width="500"></a>
 
