@@ -171,4 +171,4 @@ Rotifers and Tardigrade
 <a href="#logo" name="logo"><img src="./IMAGES/example6.jpg" width="800"></a>
 
 
-and a video of life in a drop of pond water is here: https://www.youtube.com/watch?v=x27QPLMVoFQ 
+and a video recorded from the Matchboxscope is here: https://www.youtube.com/watch?v=x27QPLMVoFQ 
