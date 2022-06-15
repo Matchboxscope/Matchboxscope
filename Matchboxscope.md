@@ -53,7 +53,8 @@ If you are, somehow adverse to magnets, you can use springs as well. In this cas
 
 This you will need for your device in order to work:
 
-<a href="#logo" name="logo"><img src="./IMAGES/explosion.jpeg" width="200"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/render2.png" width="500"></a>
+<a href="#logo" name="logo"><img src="./IMAGES/render1.png" width="500"></a>
 
 ### Bill of material
 
