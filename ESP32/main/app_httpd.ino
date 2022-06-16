@@ -71,7 +71,11 @@ bool saveImage(String filename) {
 
     // set maximum framesize
     sensor_t * s = esp_camera_sensor_get();
-    s->set_framesize(s, FRAMESIZE_UXGA);
+    setFrameSize(device_pref.getCameraFramesize()); // TODO: Why does it change the exposure time/brightness??! 
+    s->set_aec_value(s, device_pref.getCameraExposureTime());    // (aec_value) 0 to 1200
+    s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
+    s->set_agc_gain(s, device_pref.getCameraGain());  // 0 to 30
+
 
     // Take Picture with Camera, but first let camera warm up => make sure low res frame in buffer is freed
     for (int iwarmup = 0; iwarmup < 3; iwarmup++) {
@@ -232,6 +236,14 @@ static esp_err_t json_handler(httpd_req_t *req) {
       Serial.println(device_pref.getCameraFramesize());
       s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
     }
+    if (doc.containsKey("effect")) {
+      // FRAMESIZE
+      effect = doc["effect"];
+      Serial.print("effect: ");
+      device_pref.setCameraEffect(effect);
+      s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
+      Serial.println(device_pref.getCameraEffect());
+    } 
     if (doc.containsKey("ledintensity")) {
       // LED Intensity
       ledintensity = doc["ledintensity"];
@@ -287,55 +299,55 @@ static size_t jpg_encode_stream(void * arg, size_t index, const void* data, size
 
 static esp_err_t capture_handler(httpd_req_t *req) {
 
-  camera_fb_t * fb = NULL;
-  esp_err_t res = ESP_OK;
+  // Stop stream
+  isStreaming = false;
 
   // make sure buffer is freed and framesize is taken over
   sensor_t * s = esp_camera_sensor_get();
-  s->set_framesize(s, FRAMESIZE_UXGA);
+  setFrameSize(device_pref.getCameraFramesize()); // TODO: Why does it change the exposure time/brightness??! 
+  s->set_aec_value(s, device_pref.getCameraExposureTime());    // (aec_value) 0 to 1200
+  s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
+  s->set_agc_gain(s, device_pref.getCameraGain());  // 0 to 30
 
-  for (int i = 0; i < 3; i++) {
-    fb = esp_camera_fb_get();
-    esp_camera_fb_return(fb);
+  camera_fb_t * frameBuffer = NULL;
+
+  // Take Picture with Camera, but first let camera warm up => make sure low res frame in buffer is freed
+  for (int iwarmup = 0; iwarmup < 3; iwarmup++) {
+    frameBuffer = esp_camera_fb_get();
+    esp_camera_fb_return(frameBuffer);
   }
+  frameBuffer = esp_camera_fb_get();
 
-  // capture
-  int64_t fr_start = esp_timer_get_time();
-  fb = esp_camera_fb_get();
-
-  if (!fb) {
+  if (!frameBuffer) {
     Serial.println("Camera capture failed");
     ESP.restart();
-    httpd_resp_send_500(req);
-    return ESP_FAIL;
+    return false;
   }
+
 
   httpd_resp_set_type(req, "image/jpeg");
   httpd_resp_set_hdr(req, "Content-Disposition", "inline; filename=capture.jpeg");
 
   size_t out_len, out_width, out_height;
   uint8_t * out_buf;
+  esp_err_t res = -1;
   //bool s;
-  {
+  {  
     size_t fb_len = 0;
-    if (fb->format == PIXFORMAT_JPEG) {
-      fb_len = fb->len;
-      res = httpd_resp_send(req, (const char *)fb->buf, fb->len);
+    if (frameBuffer->format == PIXFORMAT_JPEG) {
+      fb_len = frameBuffer->len;
+      res = httpd_resp_send(req, (const char *)frameBuffer->buf, frameBuffer->len);
     } else {
       jpg_chunking_t jchunk = {req, 0};
-      res = frame2jpg_cb(fb, 80, jpg_encode_stream, &jchunk) ? ESP_OK : ESP_FAIL;
+      res = frame2jpg_cb(frameBuffer, 80, jpg_encode_stream, &jchunk) ? ESP_OK : ESP_FAIL;
       httpd_resp_send_chunk(req, NULL, 0);
       fb_len = jchunk.len;
     }
-    esp_camera_fb_return(fb);
-    int64_t fr_end = esp_timer_get_time();
-    Serial.printf("JPG: %uB %ums\n", (uint32_t)(fb_len), (uint32_t)((fr_end - fr_start) / 1000));
+    esp_camera_fb_return(frameBuffer);
+    Serial.printf("JPG: %uB", (uint32_t)(fb_len));
     return res;
   }
-
-  // dl_matrix3du_t *image_matrix = dl_matrix3du_alloc(1, fb->width, fb->height, 3);
-  //    if (!image_matrix) {
-  esp_camera_fb_return(fb);
+  esp_camera_fb_return(frameBuffer);
   Serial.println("dl_matrix3du_alloc failed");
   httpd_resp_send_500(req);
   return ESP_FAIL;
@@ -407,15 +419,6 @@ static esp_err_t stream_handler(httpd_req_t *req) {
     if (res != ESP_OK) {
       break;
     }
-    int64_t fr_end = esp_timer_get_time();
-    int64_t frame_time = fr_end - last_frame;
-    last_frame = fr_end;
-    frame_time /= 1000;
-    /*Serial.printf("MJPG: %uB %ums (%.1ffps)\n",
-                  (uint32_t)(_jpg_buf_len),
-                  (uint32_t)frame_time, 1000.0 / (uint32_t)frame_time
-                 );
-    */
   }
 
   last_frame = 0;
@@ -480,7 +483,6 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     device_pref.setCameraEffect(effect);
     s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
     Serial.println(device_pref.getCameraEffect());
-
   }
   else if (!strcmp(variable, "gain"))
   {

@@ -38,7 +38,7 @@
 FtpServer ftpSrv;   //set #define FTP_DEBUG in ESP8266FtpServer.h to see ftp verbose on serial
 
 // ANGLERFISH?
-const boolean isAnglerfish = true;
+const boolean isAnglerfish = false;
 const int timelapseIntervalAnglerfish = 60;
 boolean isTimelapseAnglerfish = false;
 
@@ -81,16 +81,15 @@ uint32_t gain = 0;
 uint32_t exposureTime = 0;
 uint32_t frameSize = 0;
 uint32_t ledintensity = 0;
+uint32_t effect = 2;
 
 // SD Card parameters
 boolean sdInitialized = false;
+boolean isFirstRun = false;
 
 // Preferences
 Preferences pref;
 DevicePreferences device_pref(pref, "camera", __DATE__ " " __TIME__);
-
-
-
 
 void setup()
 {
@@ -106,7 +105,8 @@ void setup()
   */
 
   // Reset the EEPROM's stored timelapse mode after each re-flash
-  if (device_pref.isFirstRun()) {
+  isFirstRun = device_pref.isFirstRun();
+  if (isFirstRun) {
     device_pref.setIsTimelapse(false);
   }
 
@@ -193,7 +193,7 @@ void setup()
   // INIT WIFI
   if (isWebserver) {
     if (isCaptivePortal) {
-      autoconnectWifi();
+      autoconnectWifi(isFirstRun);
     }
     else {
       if (hostWifiAP) {
