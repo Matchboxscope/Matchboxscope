@@ -26,6 +26,9 @@
 #include "html.h"
 #include "device_pref.h"
 
+// stepper motor
+#include <AccelStepper.h>
+
 #include <esp_log.h>"
 
 #include <HTTPClient.h>
@@ -66,11 +69,20 @@ boolean isTimelapse = true;
 boolean isWebserver = true;
 
 // LED
-const int freq = 5000;
+int pwmResolution = 15;
+int freq = 800000;//19000; //12000
+int pwm_max = (int)pow(2,pwmResolution);
+//const int freq = 5000;
+//const int pwmResolution = 8;
 const int ledChannel = 7;
-const int pwmResolution = 8;
+
 const int ledPin = 4;
 int ledValueOld = 0;
+
+// LENS
+const int lensChannel = 6;
+const int lensPin = 13;
+int lensValueOld = 0;
 
 // SWITCH for resetting
 const int reedSwitchPin = 13;
@@ -86,6 +98,11 @@ uint32_t effect = 2;
 // SD Card parameters
 boolean sdInitialized = false;
 boolean isFirstRun = false;
+
+// initiliaze stepper motor
+//#define IS_MOTOR 
+int pinStep = 12;
+int pinDir = 13;
 
 // Preferences
 Preferences pref;
@@ -165,6 +182,29 @@ void setup()
   delay(100);
   ledcWrite(ledChannel, 0);
 
+  // INIT LENS
+  ledcSetup(lensChannel, freq, pwmResolution);
+  ledcAttachPin(lensPin, lensChannel);
+  ledcWrite(lensChannel, 255);
+  delay(100);
+  ledcWrite(lensChannel, 0);
+  
+  // INIT STEPPER
+  /*#ifdef IS_MOTOR
+  AccelStepper stepper(1, pinStep, pinDir);
+  
+  stepper.setMaxSpeed(10000);
+  stepper.setAcceleration(10000);
+  stepper.enableOutputs();
+  
+  Serial.println("Movinb forward");
+  stepper.runToNewPosition(-1000);
+  Serial.println("Movinb bwrd");
+  stepper.runToNewPosition(1000);
+  #endif
+  */
+
+
 
   // Initialize the remaining hardware, depending on the mode
   isTimelapseAnglerfish = device_pref.isTimelapse(); // set the global variable for the loop function
@@ -193,6 +233,7 @@ void setup()
   // INIT WIFI
   if (isWebserver) {
     if (isCaptivePortal) {
+      isFirstRun=false;
       autoconnectWifi(isFirstRun);
     }
     else {

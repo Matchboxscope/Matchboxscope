@@ -251,7 +251,13 @@ static esp_err_t json_handler(httpd_req_t *req) {
       ledcWrite(ledChannel, ledintensity);
       Serial.println(ledintensity);
     }
-
+    if (doc.containsKey("lensvalue")) {
+      // LENS Value 
+      lensValueOld = doc["lensvalue"];
+      ledcWrite(lensChannel, lensValueOld);
+      Serial.println(lensValueOld);
+    }
+    
     httpd_resp_set_hdr(req, "Connection", "close");
     httpd_resp_send(req, "OK", HTTPD_RESP_USE_STRLEN);
     return ESP_OK;
@@ -548,6 +554,14 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     ledcWrite(ledChannel, ledValueOld);
     Serial.print("LED VAlue");
     Serial.println(ledValueOld);
+  }
+  else if (!strcmp(variable, "lens"))
+  {
+    // FLASH
+    lensValueOld = val;
+    ledcWrite(lensChannel, lensValueOld);
+    Serial.print("LENS VAlue");
+    Serial.println(lensValueOld);
   }
   else
   {
