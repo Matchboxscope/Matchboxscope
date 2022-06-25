@@ -45,6 +45,9 @@ const boolean isAnglerfish = false;
 const int timelapseIntervalAnglerfish = 60;
 boolean isTimelapseAnglerfish = false;
 
+// OMNISCOPE
+const boolean isOmniscope = true;
+
 // WIFI
 boolean hostWifiAP = false; // set this variable if you want the ESP32 to be the host
 boolean isCaptivePortal = true; // want to autoconnect to wifi networks?
@@ -67,13 +70,13 @@ boolean isTimelapse = true;
 
 // Server
 boolean isWebserver = true;
+boolean isFTPServer = true;
 
 // LED
-int pwmResolution = 15;
-int freq = 800000;//19000; //12000
-int pwm_max = (int)pow(2,pwmResolution);
-//const int freq = 5000;
-//const int pwmResolution = 8;
+//int pwmResolution = 15;
+//int freq = 800000;//19000; //12000
+const int freq = 12000;
+const int pwmResolution = 8;
 const int ledChannel = 7;
 
 const int ledPin = 4;
@@ -98,9 +101,10 @@ uint32_t effect = 2;
 // SD Card parameters
 boolean sdInitialized = false;
 boolean isFirstRun = false;
+boolean isUseSD = true;
 
 // initiliaze stepper motor
-//#define IS_MOTOR 
+//#define IS_MOTOR
 int pinStep = 12;
 int pinDir = 13;
 
@@ -108,9 +112,28 @@ int pinDir = 13;
 Preferences pref;
 DevicePreferences device_pref(pref, "camera", __DATE__ " " __TIME__);
 
+
+
+
+
 void setup()
 {
   WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0); // prevent brownouts by silencing them
+
+  // device-specific settings
+  if (isOmniscope){
+    isUseSD = false;
+    isWebserver = true;
+    isFTPServer = false;
+    isTimelapseAnglerfish = false;
+    isCaptivePortal = false;
+    hostWifiAP = false;
+    isTimelapse = false;
+  }
+  else if(isAnglerfish){
+    isUseSD=true;
+    isFTPServer=false;
+  }
 
   // INIT SERIAL
   Serial.begin(115200);
@@ -127,7 +150,7 @@ void setup()
     device_pref.setIsTimelapse(false);
   }
 
-    // INIT CAMERA
+  // INIT CAMERA
   initCamera();
   initCameraSettings();
 
@@ -135,7 +158,7 @@ void setup()
   // We initialize SD_MMC here rather than in setup() because SD_MMC needs to reset the light pin
   // with a different pin mode.
   // 1-bit mode as suggested here:https://dr-mntn.net/2021/02/using-the-sd-card-in-1-bit-mode-on-the-esp32-cam-from-ai-thinker
-  if (!SD_MMC.begin("/sdcard", true)) {
+  if (not isUseSD or !SD_MMC.begin(" / sdcard", true)) {
     Serial.println("SD Card Mount Failed");
     sdInitialized = false;
   }
@@ -153,17 +176,19 @@ void setup()
     }
   }
 
-  // If the button is pressed, switch from timelapse mode back to refocusing mode
-  pinMode(reedSwitchPin, INPUT_PULLDOWN);
-  Serial.println("Press Button if you want to refocus (t..1s)");
-  delay(refocus_button_debounce);
-  bool buttonPressed = !digitalRead(reedSwitchPin); // pull up
-  Serial.print("Button pressed ? ");
-  if (buttonPressed) {
-    Serial.println("yes. Switching from timelapse mode to refocusing mode.");
-    device_pref.setIsTimelapse(false);
-  } else {
-    Serial.println("no");
+  if(isAnglerfish){
+    // If the button is pressed, switch from timelapse mode back to refocusing mode
+    pinMode(reedSwitchPin, INPUT_PULLDOWN);
+    Serial.println("Press Button if you want to refocus (t..1s)");
+    delay(refocus_button_debounce);
+    bool buttonPressed = !digitalRead(reedSwitchPin); // pull up
+    Serial.print("Button pressed ? ");
+    if (buttonPressed) {
+      Serial.println("yes. Switching from timelapse mode to refocusing mode.");
+      device_pref.setIsTimelapse(false);
+    } else {
+      Serial.println("no");
+    }
   }
 
   // retrieve old camera setting values
@@ -178,25 +203,24 @@ void setup()
   // INIT LED
   ledcSetup(ledChannel, freq, pwmResolution);
   ledcAttachPin(ledPin, ledChannel);
-  ledcWrite(ledChannel, 255);
-  delay(100);
-  ledcWrite(ledChannel, 0);
-
+  blinkLed(1);
+  
   // INIT LENS
   ledcSetup(lensChannel, freq, pwmResolution);
   ledcAttachPin(lensPin, lensChannel);
+  blinkLed(1);
   ledcWrite(lensChannel, 255);
   delay(100);
   ledcWrite(lensChannel, 0);
-  
+
   // INIT STEPPER
   /*#ifdef IS_MOTOR
   AccelStepper stepper(1, pinStep, pinDir);
-  
+
   stepper.setMaxSpeed(10000);
   stepper.setAcceleration(10000);
   stepper.enableOutputs();
-  
+
   Serial.println("Movinb forward");
   stepper.runToNewPosition(-1000);
   Serial.println("Movinb bwrd");
@@ -204,31 +228,31 @@ void setup()
   #endif
   */
 
-
-
   // Initialize the remaining hardware, depending on the mode
   isTimelapseAnglerfish = device_pref.isTimelapse(); // set the global variable for the loop function
-  if (isAnglerfish and isTimelapseAnglerfish) {
-    // ONLY IF YOU WANT TO CAPTURE in ANGLERFISHMODE
-    Serial.println("In timelapse mode.");
-    // Save image to SD card
-    uint32_t frame_index = device_pref.getFrameIndex() + 1;
-    if (saveImage("/picture" + String(frame_index) + ".jpg")) {
-      device_pref.setFrameIndex(frame_index);
-    };
+  if (isAnglerfish) {
+    if(isTimelapseAnglerfish){
+      // ONLY IF YOU WANT TO CAPTURE in ANGLERFISHMODE
+      Serial.println("In timelapse mode.");
+      // Save image to SD card
+      uint32_t frame_index = device_pref.getFrameIndex() + 1;
+      if (saveImage(" / picture" + String(frame_index) + ".jpg")) {
+        device_pref.setFrameIndex(frame_index);
+      };
 
-    // Sleep
-    Serial.print("Sleeping for ");
-    Serial.print(timelapseIntervalAnglerfish);
-    Serial.println(" s");
-    static const uint64_t usPerSec = 1000000; // Conversion factor from microseconds to seconds
-    esp_sleep_enable_timer_wakeup(timelapseIntervalAnglerfish * usPerSec);
-    esp_deep_sleep_start();
-    return;
+      // Sleep
+      Serial.print("Sleeping for ");
+      Serial.print(timelapseIntervalAnglerfish);
+      Serial.println(" s");
+      static const uint64_t usPerSec = 1000000; // Conversion factor from microseconds to seconds
+      esp_sleep_enable_timer_wakeup(timelapseIntervalAnglerfish * usPerSec);
+      esp_deep_sleep_start();
+      return;
+    }
+    else{
+      Serial.println("In refocusing mode. Connect to Wifi and go to 192.168.4.1 / enable once you're done with focusing.");
+    }
   }
-
-  Serial.println("In refocusing mode. Connect to Wifi and go to 192.168.4.1 / enable once you're done with focusing.");
-
 
   // INIT WIFI
   if (isWebserver) {
@@ -246,6 +270,9 @@ void setup()
     }
   }
 
+  // Blink LED twice
+  blinkLed(2);
+  
 
   // INIT SPIFFS
   if (!SPIFFS.begin()) { // SPIFFS must be initialized before the web server, which depends on it
@@ -268,9 +295,18 @@ void setup()
 
 }
 
+void blinkLed(int nTimes){
+  for(int iBlink=0; iBlink<nTimes; iBlink++){
+    ledcWrite(ledChannel, 255);
+    delay(50);
+    ledcWrite(ledChannel, 0);
+    delay(50);
+  }
+  delay(150);
+}
 
 void loop() {
-  if (isWebserver) {
+  if (isFTPServer) {
     ftpSrv.handleFTP();
   }
 

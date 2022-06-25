@@ -71,7 +71,7 @@ bool saveImage(String filename) {
 
     // set maximum framesize
     sensor_t * s = esp_camera_sensor_get();
-    setFrameSize(device_pref.getCameraFramesize()); // TODO: Why does it change the exposure time/brightness??! 
+    setFrameSize(device_pref.getCameraFramesize()); // TODO: Why does it change the exposure time/brightness??!
     s->set_aec_value(s, device_pref.getCameraExposureTime());    // (aec_value) 0 to 1200
     s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
     s->set_agc_gain(s, device_pref.getCameraGain());  // 0 to 30
@@ -243,7 +243,7 @@ static esp_err_t json_handler(httpd_req_t *req) {
       device_pref.setCameraEffect(effect);
       s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
       Serial.println(device_pref.getCameraEffect());
-    } 
+    }
     if (doc.containsKey("ledintensity")) {
       // LED Intensity
       ledintensity = doc["ledintensity"];
@@ -252,12 +252,12 @@ static esp_err_t json_handler(httpd_req_t *req) {
       Serial.println(ledintensity);
     }
     if (doc.containsKey("lensvalue")) {
-      // LENS Value 
+      // LENS Value
       lensValueOld = doc["lensvalue"];
       ledcWrite(lensChannel, lensValueOld);
       Serial.println(lensValueOld);
     }
-    
+
     httpd_resp_set_hdr(req, "Connection", "close");
     httpd_resp_send(req, "OK", HTTPD_RESP_USE_STRLEN);
     return ESP_OK;
@@ -310,7 +310,7 @@ static esp_err_t capture_handler(httpd_req_t *req) {
 
   // make sure buffer is freed and framesize is taken over
   sensor_t * s = esp_camera_sensor_get();
-  setFrameSize(device_pref.getCameraFramesize()); // TODO: Why does it change the exposure time/brightness??! 
+  setFrameSize(device_pref.getCameraFramesize()); // TODO: Why does it change the exposure time/brightness??!
   s->set_aec_value(s, device_pref.getCameraExposureTime());    // (aec_value) 0 to 1200
   s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
   s->set_agc_gain(s, device_pref.getCameraGain());  // 0 to 30
@@ -338,7 +338,7 @@ static esp_err_t capture_handler(httpd_req_t *req) {
   uint8_t * out_buf;
   esp_err_t res = -1;
   //bool s;
-  {  
+  {
     size_t fb_len = 0;
     if (frameBuffer->format == PIXFORMAT_JPEG) {
       fb_len = frameBuffer->len;
@@ -587,6 +587,56 @@ static esp_err_t restart_handler(httpd_req_t *req) {
   return ESP_OK;
 }
 
+static esp_err_t stack_handler(httpd_req_t *req) {
+  Serial.println("Recording Stack");
+  httpd_resp_set_type(req, "application/json");
+  httpd_resp_set_hdr(req, "Access-Control-Allow-Origin", "*");
+  httpd_resp_send(req, "OK", strlen("OK"));
+
+
+  // perform STACK
+  uint32_t frame_index = device_pref.getFrameIndex() + 1;
+  // Acquire the image and save
+
+  bool savedSuccessfully = True
+                           int maxSharpness = 0;
+  int lensValMaxSharpness = 0;
+
+  for (int iLensVal = 0; iLensVal < 255; iLensVal += 5) {
+    ledcWrite(lensChannel, iLensVal);
+    delay(50);
+
+    savedSuccessfully = savedSuccessfully and saveImage(" / picture" + String(frame_index) + "_" + String(iLensVal) + ".jpg");
+
+    // Measure sharpness
+    frameBuffer = esp_camera_fb_get();
+    esp_camera_fb_return(frameBuffer);
+    size_t fb_len = 0;
+    fb_len = frameBuffer->len;
+    Serial.printf("JPG: %uB", (uint32_t)(fb_len));
+    if (fb_len > maxSharpness)
+    {
+      maxSharpness = fb_len;
+      lensValMaxSharpness = iLensVal;
+    }
+
+  }
+  // autofocus? 
+  ledcWrite(lensChannel, lensValMaxSharpness);
+
+  if (savedSucessfully) {
+    device_pref.setFrameIndex(frame_index);
+  }
+
+}
+
+
+ESP.restart();
+return ESP_OK;
+}
+
+
+
 static esp_err_t id_handler(httpd_req_t *req) {
   Serial.println("Handling ID");
   static char json_response[1024];
@@ -727,6 +777,13 @@ void startCameraServer()
     .user_ctx  = NULL
   };
 
+  httpd_uri_t stack_uri = {
+    .uri       = "/getStack",
+    .method    = HTTP_POST,
+    .handler   = stack_handler,
+    .user_ctx  = NULL
+  };
+
   Serial.printf("Starting web server on port: '%d'\n", config.server_port);
   if (httpd_start(&camera_httpd, &config) == ESP_OK) {
     httpd_register_uri_handler(camera_httpd, &index_uri);
@@ -738,6 +795,7 @@ void startCameraServer()
     httpd_register_uri_handler(camera_httpd, &indexhtml_uri);
     httpd_register_uri_handler(camera_httpd, &postjson_uri);
     httpd_register_uri_handler(camera_httpd, &restart_uri);
+    httpd_register_uri_handler(camera_httpd, &stack_uri);
   }
 
   config.server_port += 1;

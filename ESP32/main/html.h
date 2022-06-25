@@ -20,6 +20,7 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
             <section id="buttons">
                 <table>
                 <tr><td align="center"><button id="get-still">Get Still</button></td><td><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td><td align="center"><button id="toggle-stream">Start Stream</button></td></tr>
+                <tr><td align="center"><button id="perform-stack">Stack</button></td><td><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td><td align="center"><button id="get-stack">Perform Stack</button></td></tr>
                 <tr><td></td><td align="center">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<td></td><td></td></tr>
                 <tr><td align="center">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td><td align="center">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<td></td><td align="center">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td></tr>
                 <tr><td></td><td align="center" colspan="2"></br></tr>
@@ -153,7 +154,14 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
                     },
                     q = () => {
                         j.src = `${c+':81'}/stream.mjpeg`, f(k), m.innerHTML = 'Stop Stream'
-                    };
+                    },
+                    getStack = () =>{
+                      try{
+                        fetch(document.location.origin+'/getStack');
+                        }
+                      catch(e){}
+                    },
+                    r = document.getElementById('get-stack'),;
                 l.onclick = () => {
                     p()
                     j.src = `${c}/capture.jpeg?_cb=${Date.now()}`
@@ -161,9 +169,11 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
                     f(k)
                 }, o.onclick = () => {
                     p(), e(k)
-                }, m.onclick = () => {
+                }, m.onclick = () => { //toggle stream
                     const B = 'Stop Stream' === m.innerHTML;
                     B ? p() : q()
+                }, r.onclick = () => { // stack
+                    getStack() 
                 }, n.onclick = () => {
                     b(n)
                 }, document.querySelectorAll('.default-action').forEach(B => {
@@ -188,7 +198,7 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
                 const A = document.getElementById('framesize');
                 A.onchange = () => {
                     b(A), 5 < A.value && (i(y, !1), i(z, !1))
-                }
+                };
             });
 
             async function downloadImage(c){
