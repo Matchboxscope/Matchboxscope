@@ -431,12 +431,10 @@ static esp_err_t stream_handler(httpd_req_t *req) {
   return res;
 }
 
-enum state {fwd, rev, stp};
-state actstate = stp;
+
 
 static esp_err_t cmd_handler(httpd_req_t *req)
 {
-
   // TODO: this should be arduinojson
   char*  buf;
   size_t buf_len;
@@ -530,8 +528,6 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     Serial.print(" lenscorrection: ");
     Serial.println(val);
   }
-
-
   else if (!strcmp(variable, "timelapseinterval")) {
     // Timelapse Periode
     device_pref.setTimelapseInterval(val);
@@ -587,26 +583,27 @@ static esp_err_t restart_handler(httpd_req_t *req) {
   return ESP_OK;
 }
 
-static esp_err_t stack_handler(httpd_req_t *req) {
-  Serial.println("Recording Stack");
-  httpd_resp_set_type(req, "application/json");
-  httpd_resp_set_hdr(req, "Access-Control-Allow-Origin", "*");
-  httpd_resp_send(req, "OK", strlen("OK"));
-
+int doFocus(int lensIncrement, bool isSave, bool isFocus) {
+  // reserve buffer
+  camera_fb_t * frameBuffer = NULL;
 
   // perform STACK
   uint32_t frame_index = device_pref.getFrameIndex() + 1;
   // Acquire the image and save
 
-  bool savedSuccessfully = True
-                           int maxSharpness = 0;
+  bool savedSuccessfully = true;
+  int maxSharpness = 0;
   int lensValMaxSharpness = 0;
 
-  for (int iLensVal = 0; iLensVal < 255; iLensVal += 5) {
+  for (int iLensVal = 0; iLensVal < 255; iLensVal += abs(lensIncrement)) {
+    // move lens
     ledcWrite(lensChannel, iLensVal);
     delay(50);
 
-    savedSuccessfully = savedSuccessfully and saveImage(" / picture" + String(frame_index) + "_" + String(iLensVal) + ".jpg");
+    // save frame - eventually
+    if (isSave) {
+      savedSuccessfully = savedSuccessfully and saveImage(" /picture" + String(frame_index) + "_" + String(iLensVal) + ".jpg");
+    }
 
     // Measure sharpness
     frameBuffer = esp_camera_fb_get();
@@ -621,20 +618,30 @@ static esp_err_t stack_handler(httpd_req_t *req) {
     }
 
   }
-  // autofocus? 
-  ledcWrite(lensChannel, lensValMaxSharpness);
+  // autofocus?
+  if (isFocus) {
+    ledcWrite(lensChannel, lensValMaxSharpness);
+  }
 
-  if (savedSucessfully) {
+  if (savedSuccessfully) {
     device_pref.setFrameIndex(frame_index);
   }
 
+  return lensValMaxSharpness;
+
 }
 
-
-ESP.restart();
-return ESP_OK;
+static esp_err_t stack_handler(httpd_req_t *req) {
+  Serial.println("Recording Stack");
+  httpd_resp_set_type(req, "application/json");
+  httpd_resp_set_hdr(req, "Access-Control-Allow-Origin", "*");
+  httpd_resp_send(req, "OK", strlen("OK"));
+  // acquire a stack
+  doFocus(5, true, true);
+  // focus back on old value
+  ledcWrite(lensChannel, lensValueOld);
+  return ESP_OK;
 }
-
 
 
 static esp_err_t id_handler(httpd_req_t *req) {
@@ -763,6 +770,13 @@ void startCameraServer()
     .user_ctx  = NULL
   };
 
+  httpd_uri_t stack_uri = {
+    .uri       = "/stack",
+    .method    = HTTP_GET,
+    .handler   = stack_handler,
+    .user_ctx  = NULL
+  };
+  
   httpd_uri_t restart_uri = {
     .uri       = "/restart",
     .method    = HTTP_GET,
@@ -777,13 +791,6 @@ void startCameraServer()
     .user_ctx  = NULL
   };
 
-  httpd_uri_t stack_uri = {
-    .uri       = "/getStack",
-    .method    = HTTP_POST,
-    .handler   = stack_handler,
-    .user_ctx  = NULL
-  };
-
   Serial.printf("Starting web server on port: '%d'\n", config.server_port);
   if (httpd_start(&camera_httpd, &config) == ESP_OK) {
     httpd_register_uri_handler(camera_httpd, &index_uri);
@@ -792,10 +799,11 @@ void startCameraServer()
     httpd_register_uri_handler(camera_httpd, &status_uri);
     httpd_register_uri_handler(camera_httpd, &capture_uri);
     httpd_register_uri_handler(camera_httpd, &id_uri);
+    httpd_register_uri_handler(camera_httpd, &stack_uri);
     httpd_register_uri_handler(camera_httpd, &indexhtml_uri);
     httpd_register_uri_handler(camera_httpd, &postjson_uri);
     httpd_register_uri_handler(camera_httpd, &restart_uri);
-    httpd_register_uri_handler(camera_httpd, &stack_uri);
+    
   }
 
   config.server_port += 1;

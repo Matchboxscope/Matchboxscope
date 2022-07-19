@@ -26,17 +26,17 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
                 <tr><td></td><td align="center" colspan="2"></br></tr>
                 <tr><td></td><td align="center" colspan="2"></br></tr>
                 <tr><td></td><td align="center" colspan="2"></br></tr>
-                <tr><td>Flash</td><td align="center" colspan="2"><input type="range" id="flash" min="0" max="32768" value="0" onchange="try{fetch(document.location.origin+'/control?var=flash&val='+this.value);}catch(e){}"><td></td></tr>
-                <tr><td>LENS</td><td align="center" colspan="2"><input type="range" id="lens" min="0" max="32768" value="0" onchange="try{fetch(document.location.origin+'/control?var=lens&val='+this.value);}catch(e){}"><td></td></tr>
+                <tr><td>Flash</td><td align="center" colspan="2"><input type="range" id="flash" min="0" max="255" value="0" onchange="try{fetch(document.location.origin+'/control?var=flash&val='+this.value);}catch(e){}"><td></td></tr>
+                <tr><td>LENS</td><td align="center" colspan="2"><input type="range" id="lens" min="0" max="255" value="0" onchange="try{fetch(document.location.origin+'/control?var=lens&val='+this.value);}catch(e){}"><td></td></tr>
                 <tr><td>Resolution</td><td align="center" colspan="2"><input type="range" id="framesize" min="0" max="9" value="5" onchange="try{fetch(document.location.origin+'/control?var=framesize&val='+this.value);}catch(e){}"><td></td></tr>
                 <tr><td>Effect</td><td align="center" colspan="2"><input type="range" id="effect" min="0" max="5" value="2" onchange="try{fetch(document.location.origin+'/control?var=effect&val='+this.value);}catch(e){}"><td></td></tr>
                 <tr><td>Gain</td><td align="center" colspan="2"><input type="range" id="gain" min="0" max="30" value="0" onchange="try{fetch(document.location.origin+'/control?var=gain&val='+this.value);}catch(e){}"><td></td></tr>
                 <tr><td>Exposure Time</td><td align="center" colspan="2"><input type="range" id="exposuretime" min="0" max="1600" value="100" onchange="try{fetch(document.location.origin+'/control?var=exposuretime&val='+this.value);}catch(e){}"><td></td></tr>
-                <tr><td>Quality</td><td align="center" colspan="2"><input type="range" id="quality" min="10" max="63" value="10" onchange="try{fetch(document.location.origin+'/control?var=quality&val='+this.value);}catch(e){}"><td></td></tr>              
+                <tr><td>Quality</td><td align="center" colspan="2"><input type="range" id="quality" min="10" max="63" value="10" onchange="try{fetch(document.location.origin+'/control?var=quality&val='+this.value);}catch(e){}"><td></td></tr>
                 <tr><td>Timelapse Interval (0..180s; 0 => off) </td><td align="center" colspan="2"><input type="range" id="timelapse" min="0" max="180" value="0" onchange="try{fetch(document.location.origin+'/control?var=timelapseinterval&val='+this.value);}catch(e){}"><td></td></tr>
                 <tr><td align="center"><a href="#" onclick="sendToImageJ()"> <img alt="ImJoy" src="https://ij.imjoy.io/assets/badge/open-in-imagej-js-badge.svg" alt="Send To ImJoy"></td></tr>
                 </table>
-            </section>         
+            </section>
         </section>
 
         <div id="window-container"></div>
@@ -67,7 +67,7 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
                     if (uri) app.loadPlugin(uri);
                     },
                 });
-                
+
                 window.sendToImageJ = async function(){
                     const imageURL = document.location.origin
                     const response = await fetch(`${imageURL}/capture.jpeg?_cb=${Date.now()}`);
@@ -147,7 +147,6 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
                     k = document.getElementById('stream-container'),
                     l = document.getElementById('get-still'),
                     m = document.getElementById('toggle-stream'),
-                    n = document.getElementById('face_enroll'),
                     o = document.getElementById('close-stream'),
                     p = () => {
                         window.stop(), m.innerHTML = 'Start Stream'
@@ -155,50 +154,23 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
                     q = () => {
                         j.src = `${c+':81'}/stream.mjpeg`, f(k), m.innerHTML = 'Stop Stream'
                     },
-                    getStack = () =>{
-                      try{
-                        fetch(document.location.origin+'/getStack');
-                        }
-                      catch(e){}
-                    },
-                    r = document.getElementById('get-stack'),;
-                l.onclick = () => {
+                    r = document.getElementById('get-stack');
+                    l.onclick = () => {
                     p()
                     j.src = `${c}/capture.jpeg?_cb=${Date.now()}`
                     downloadImage(c)
                     f(k)
-                }, o.onclick = () => {
+                },
+                o.onclick = () => {
                     p(), e(k)
-                }, m.onclick = () => { //toggle stream
+                },
+                m.onclick = () => { //toggle stream
                     const B = 'Stop Stream' === m.innerHTML;
                     B ? p() : q()
-                }, r.onclick = () => { // stack
-                    getStack() 
-                }, n.onclick = () => {
-                    b(n)
-                }, document.querySelectorAll('.default-action').forEach(B => {
-                    B.onchange = () => b(B)
-                });
-                const r = document.getElementById('agc'),
-                    s = document.getElementById('agc_gain-group'),
-                    t = document.getElementById('gainceiling-group');
-                r.onchange = () => {
-                    b(r), r.checked ? (f(t), e(s)) : (e(t), f(s))
-                };
-                const u = document.getElementById('aec'),
-                    v = document.getElementById('aec_value-group');
-                u.onchange = () => {
-                    b(u), u.checked ? e(v) : f(v)
-                };
-                const w = document.getElementById('awb_gain'),
-                    x = document.getElementById('wb_mode-group');
-                w.onchange = () => {
-                    b(w), w.checked ? f(x) : e(x)
-                };
-                const A = document.getElementById('framesize');
-                A.onchange = () => {
-                    b(A), 5 < A.value && (i(y, !1), i(z, !1))
-                };
+                },
+                r.onclick = () => { // stack
+                    getStack()
+                }
             });
 
             async function downloadImage(c){
@@ -206,16 +178,21 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
                 const image = await fetch(`${c}/capture.jpeg?_cb=${Date.now()}`)
                 const imageBlog = await image.blob()
                 const imageURL = URL.createObjectURL(imageBlog)
-          
+
                 const link = document.createElement('a')
                 link.href = imageURL
                 link.download = "micrograph_"+Date.now()+".jpg"
                 document.body.appendChild(link)
                 link.click()
                 document.body.removeChild(link)
-          
-              }
-          
+              };
+
+            async function getStack(){
+                try{
+                  fetch(document.location.origin+'/getstack');
+                  }
+                catch(e){}
+              };
         </script>
     </body>
 </html>

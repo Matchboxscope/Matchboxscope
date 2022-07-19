@@ -41,12 +41,13 @@
 FtpServer ftpSrv;   //set #define FTP_DEBUG in ESP8266FtpServer.h to see ftp verbose on serial
 
 // ANGLERFISH?
-const boolean isAnglerfish = false;
+const boolean isAnglerfish = true;
 const int timelapseIntervalAnglerfish = 60;
-boolean isTimelapseAnglerfish = false;
+boolean isTimelapseAnglerfish = false; // keep as false!
+boolean anglerfishIsAcquireStack = true; // acquire only single image or stack?
 
 // OMNISCOPE
-const boolean isOmniscope = true;
+const boolean isOmniscope = false;
 
 // WIFI
 boolean hostWifiAP = false; // set this variable if you want the ESP32 to be the host
@@ -88,7 +89,7 @@ const int lensPin = 13;
 int lensValueOld = 0;
 
 // SWITCH for resetting
-const int reedSwitchPin = 13;
+const int reedSwitchPin = 12;
 const int refocus_button_debounce = 1000;
 
 // global camera parameters for REST
@@ -131,8 +132,10 @@ void setup()
     isTimelapse = false;
   }
   else if(isAnglerfish){
+    isCaptivePortal = false;
     isUseSD=true;
     isFTPServer=false;
+    hostWifiAP=true;
   }
 
   // INIT SERIAL
@@ -204,7 +207,7 @@ void setup()
   ledcSetup(ledChannel, freq, pwmResolution);
   ledcAttachPin(ledPin, ledChannel);
   blinkLed(1);
-  
+
   // INIT LENS
   ledcSetup(lensChannel, freq, pwmResolution);
   ledcAttachPin(lensPin, lensChannel);
@@ -257,14 +260,17 @@ void setup()
   // INIT WIFI
   if (isWebserver) {
     if (isCaptivePortal) {
+      // create a captive portal to connect to an existing WiFi AP with SSID/PW provided through the portal
       isFirstRun=false;
       autoconnectWifi(isFirstRun);
     }
     else {
       if (hostWifiAP) {
+        // create an ESP32-based AP
         initWifiAP(mSSIDAP);
       }
       else {
+        // connect to an existing Wifi /W SSID/PW
         joinWifi(mSSID, mPASSWORD);
       }
     }
@@ -272,7 +278,6 @@ void setup()
 
   // Blink LED twice
   blinkLed(2);
-  
 
   // INIT SPIFFS
   if (!SPIFFS.begin()) { // SPIFFS must be initialized before the web server, which depends on it
@@ -315,11 +320,20 @@ void loop() {
     //https://stackoverflow.com/questions/67090640/errors-while-interacting-with-microsd-card
     t_old = millis();
 
-    uint32_t frame_index = device_pref.getFrameIndex() + 1;
-    // Acquire the image and save
 
-    if (saveImage(" / picture" + String(frame_index) + ".jpg")) {
-      device_pref.setFrameIndex(frame_index);
-    };
+    if(anglerfishIsAcquireStack){
+      // acquire a stack
+      doFocus(5, true, true);
+      // switch off lens
+      ledcWrite(lensChannel, 0);
+    }
+    else{
+      uint32_t frame_index = device_pref.getFrameIndex() + 1;
+      // Acquire the image and save
+      ledcWrite(lensChannel, lensValueOld);
+      if (saveImage(" / picture" + String(frame_index) + ".jpg")) {
+        device_pref.setFrameIndex(frame_index);
+      };
+    }
   }
 }
