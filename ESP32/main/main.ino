@@ -12,7 +12,8 @@
 #include "soc/soc.h"
 #include "soc/rtc_cntl_reg.h"
 #include <SPIFFS.h>
-#include "camera.h"
+//#include "camera.h"
+#include "cameraM5Stack.h"
 #include <SD_MMC.h> // SD card
 #include <WiFiManager.h> // https://github.com/tzapu/WiFiManager
 #include <esp32-hal-ledc.h>
