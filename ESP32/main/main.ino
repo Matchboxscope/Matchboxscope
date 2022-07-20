@@ -8,12 +8,14 @@
 
 #include "esp_wifi.h"
 #include "esp_camera.h"
+#include "ESP32_OV5640_AF.h"
 #include <WiFi.h>
 #include "soc/soc.h"
 #include "soc/rtc_cntl_reg.h"
 #include <SPIFFS.h>
 //#include "camera.h"
-#include "cameraM5Stack.h"
+//#include "cameraM5Stack.h"
+#include "camera_OV5640.h"
 #include <SD_MMC.h> // SD card
 #include <WiFiManager.h> // https://github.com/tzapu/WiFiManager
 #include <esp32-hal-ledc.h>
@@ -114,6 +116,8 @@ int pinDir = 13;
 Preferences pref;
 DevicePreferences device_pref(pref, "camera", __DATE__ " " __TIME__);
 
+// camera object
+OV5640 ov5640 = OV5640();
 
 
 
@@ -157,6 +161,22 @@ void setup()
   // INIT CAMERA
   initCamera();
   initCameraSettings();
+
+// test autofocus
+
+  uint8_t rc = ov5640.getFWStatus();
+  Serial.printf("FW_STATUS = 0x%x\n", rc);
+
+  if (rc == -1) {
+    Serial.println("Check your OV5640");
+  } else if (rc == FW_STATUS_S_FOCUSED) {
+    Serial.println("Focused!");
+  } else if (rc == FW_STATUS_S_FOCUSING) {
+    Serial.println("Focusing!");
+  } else {
+  }
+
+
 
   // INIT SD
   // We initialize SD_MMC here rather than in setup() because SD_MMC needs to reset the light pin
