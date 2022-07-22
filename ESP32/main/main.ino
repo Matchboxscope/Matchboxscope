@@ -12,8 +12,8 @@
 #include "soc/soc.h"
 #include "soc/rtc_cntl_reg.h"
 #include <SPIFFS.h>
-//#include "camera.h"
-#include "cameraM5Stack.h"
+#include "camera.h"
+//#include "cameraM5Stack.h"
 #include <SD_MMC.h> // SD card
 #include <WiFiManager.h> // https://github.com/tzapu/WiFiManager
 #include <esp32-hal-ledc.h>
@@ -162,7 +162,7 @@ void setup()
   // We initialize SD_MMC here rather than in setup() because SD_MMC needs to reset the light pin
   // with a different pin mode.
   // 1-bit mode as suggested here:https://dr-mntn.net/2021/02/using-the-sd-card-in-1-bit-mode-on-the-esp32-cam-from-ai-thinker
-  if (not isUseSD or !SD_MMC.begin(" / sdcard", true)) {
+  if (not isUseSD or !SD_MMC.begin("/sdcard", true)) {
     Serial.println("SD Card Mount Failed");
     sdInitialized = false;
   }

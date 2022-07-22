@@ -34,6 +34,9 @@ void initCamera() {
     ESP.restart();
     return;
   }
+  else{
+    Serial.printf("Camera init success!");
+  }
 }
 
 
