@@ -6,6 +6,8 @@
 
 //http://192.168.2.168/control?var=flash&val=100
 
+#include <Adafruit_NeoPixel.h>
+
 #include "esp_wifi.h"
 #include "esp_camera.h"
 #include <WiFi.h>
@@ -26,6 +28,8 @@
 #include "ArduinoJson.h"
 #include "html.h"
 #include "device_pref.h"
+
+
 
 // stepper motor
 #include <AccelStepper.h>
@@ -115,6 +119,12 @@ Preferences pref;
 DevicePreferences device_pref(pref, "camera", __DATE__ " " __TIME__);
 
 
+// LED ARRAY
+#define LED_PIN 4
+#define LED_COUNT 2
+// Declare our NeoPixel strip object:
+Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
+
 
 
 
@@ -144,6 +154,11 @@ void setup()
   Serial.setDebugOutput(true);
   Serial.println();
 
+  // LED ARRAY
+  strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
+  strip.show();            // Turn OFF all pixels ASAP
+  strip.setBrightness(255); // Set BRIGHTNESS to about 1/5 (max = 255)
+  
   /*
   * AGLERFISH RELATED
   */
@@ -162,7 +177,7 @@ void setup()
   // We initialize SD_MMC here rather than in setup() because SD_MMC needs to reset the light pin
   // with a different pin mode.
   // 1-bit mode as suggested here:https://dr-mntn.net/2021/02/using-the-sd-card-in-1-bit-mode-on-the-esp32-cam-from-ai-thinker
-  if (not isUseSD or !SD_MMC.begin("/sdcard", true)) {
+  if (not isUseSD or !SD_MMC.begin(" / sdcard", true)) {
     Serial.println("SD Card Mount Failed");
     sdInitialized = false;
   }
@@ -205,8 +220,6 @@ void setup()
 
 
   // INIT LED
-  ledcSetup(ledChannel, freq, pwmResolution);
-  ledcAttachPin(ledPin, ledChannel);
   blinkLed(1);
 
   // INIT LENS
@@ -301,15 +314,6 @@ void setup()
 
 }
 
-void blinkLed(int nTimes){
-  for(int iBlink=0; iBlink<nTimes; iBlink++){
-    ledcWrite(ledChannel, 255);
-    delay(50);
-    ledcWrite(ledChannel, 0);
-    delay(50);
-  }
-  delay(150);
-}
 
 void loop() {
   if (isFTPServer) {
@@ -337,4 +341,22 @@ void loop() {
       };
     }
   }
+}
+
+void setLED(int numberLED, int intensity){
+  //ledcWrite(ledChannel, intensity);
+    strip.setPixelColor(0, strip.Color(intensity, intensity, intensity)); // Set pixel 'c' to value 'color'
+    strip.show();            // Turn OFF all pixels ASAP
+}
+
+void blinkLed(int nTimes){
+  for(int iBlink=0; iBlink<nTimes; iBlink++){
+    setLED(0, 255);
+    setLED(1, 255);
+    delay(50);
+    setLED(0, 0);
+    setLED(1, 0);
+    delay(50);
+  }
+  delay(150);
 }

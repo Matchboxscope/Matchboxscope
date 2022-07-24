@@ -27,6 +27,7 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
                 <tr><td></td><td align="center" colspan="2"></br></tr>
                 <tr><td></td><td align="center" colspan="2"></br></tr>
                 <tr><td>Flash</td><td align="center" colspan="2"><input type="range" id="flash" min="0" max="255" value="0" onchange="try{fetch(document.location.origin+'/control?var=flash&val='+this.value);}catch(e){}"><td></td></tr>
+                <tr><td>Flash 2</td><td align="center" colspan="2"><input type="range" id="flash2" min="0" max="255" value="0" onchange="try{fetch(document.location.origin+'/control?var=flash2&val='+this.value);}catch(e){}"><td></td></tr>
                 <tr><td>LENS</td><td align="center" colspan="2"><input type="range" id="lens" min="0" max="255" value="0" onchange="try{fetch(document.location.origin+'/control?var=lens&val='+this.value);}catch(e){}"><td></td></tr>
                 <tr><td>Resolution</td><td align="center" colspan="2"><input type="range" id="framesize" min="0" max="9" value="5" onchange="try{fetch(document.location.origin+'/control?var=framesize&val='+this.value);}catch(e){}"><td></td></tr>
                 <tr><td>Effect</td><td align="center" colspan="2"><input type="range" id="effect" min="0" max="5" value="2" onchange="try{fetch(document.location.origin+'/control?var=effect&val='+this.value);}catch(e){}"><td></td></tr>

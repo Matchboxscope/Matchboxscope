@@ -70,8 +70,8 @@ bool saveImage(String filename) {
     camera_fb_t * frameBuffer = NULL;
 
     // turn on LED
-    ledcWrite(ledChannel, 255);
-
+    setLED(0, 255);
+    
     // set maximum framesize
     sensor_t * s = esp_camera_sensor_get();
     setFrameSize(device_pref.getCameraFramesize()); // TODO: Why does it change the exposure time/brightness??!
@@ -92,7 +92,7 @@ bool saveImage(String filename) {
       ESP.restart();
       return false;
     }
-    ledcWrite(ledChannel, ledValueOld);
+    setLED(0, ledValueOld);
 
     // Save image to disk
     fs::FS &fs = SD_MMC;
@@ -251,7 +251,16 @@ static esp_err_t json_handler(httpd_req_t *req) {
       // LED Intensity
       ledintensity = doc["ledintensity"];
       ledValueOld = ledintensity;
-      ledcWrite(ledChannel, ledintensity);
+      setLED(0, ledValueOld);
+      
+      Serial.println(ledintensity);
+    }
+    if (doc.containsKey("ledintensity2")) {
+      // LED Intensity
+      ledintensity = doc["ledintensity2"];
+      ledValueOld = ledintensity;
+      setLED(1, ledValueOld);
+      
       Serial.println(ledintensity);
     }
     if (doc.containsKey("lensvalue")) {
@@ -550,10 +559,20 @@ static esp_err_t cmd_handler(httpd_req_t *req)
   {
     // FLASH
     ledValueOld = val;
-    ledcWrite(ledChannel, ledValueOld);
+    setLED(0, ledValueOld);
+    
     Serial.print("LED VAlue");
     Serial.println(ledValueOld);
   }
+  else if (!strcmp(variable, "flash2"))
+  {
+    // FLASH
+    ledValueOld = val;
+    setLED(1, ledValueOld);
+    
+    Serial.print("LED VAlue2");
+    Serial.println(ledValueOld);
+  }  
   else if (!strcmp(variable, "lens"))
   {
     // FLASH
