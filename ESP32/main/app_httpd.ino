@@ -34,7 +34,7 @@ void initCamera() {
     ESP.restart();
     return;
   }
-  else{
+  else {
     Serial.printf("Camera init success!");
   }
 }
@@ -69,9 +69,6 @@ bool saveImage(String filename) {
   if (sdInitialized) { // Do not attempt to save anything to a non-existig SD card
     camera_fb_t * frameBuffer = NULL;
 
-    // turn on LED
-    setLED(0, 255);
-    
     // set maximum framesize
     sensor_t * s = esp_camera_sensor_get();
     setFrameSize(device_pref.getCameraFramesize()); // TODO: Why does it change the exposure time/brightness??!
@@ -85,6 +82,8 @@ bool saveImage(String filename) {
       frameBuffer = esp_camera_fb_get();
       esp_camera_fb_return(frameBuffer);
     }
+
+    // Take picture LED #0
     frameBuffer = esp_camera_fb_get();
 
     if (!frameBuffer) {
@@ -92,7 +91,6 @@ bool saveImage(String filename) {
       ESP.restart();
       return false;
     }
-    setLED(0, ledValueOld);
 
     // Save image to disk
     fs::FS &fs = SD_MMC;
@@ -106,7 +104,7 @@ bool saveImage(String filename) {
     }
     imgFile.close();
     esp_camera_fb_return(frameBuffer);
-    delay(500);
+    delay(100);
 
     // resetFramesize to value before frame caputring
     setFrameSize(device_pref.getCameraFramesize());
@@ -252,7 +250,7 @@ static esp_err_t json_handler(httpd_req_t *req) {
       ledintensity = doc["ledintensity"];
       ledValueOld = ledintensity;
       setLED(0, ledValueOld);
-      
+
       Serial.println(ledintensity);
     }
     if (doc.containsKey("ledintensity2")) {
@@ -260,13 +258,13 @@ static esp_err_t json_handler(httpd_req_t *req) {
       ledintensity = doc["ledintensity2"];
       ledValueOld = ledintensity;
       setLED(1, ledValueOld);
-      
+
       Serial.println(ledintensity);
     }
     if (doc.containsKey("lensvalue")) {
       // LENS Value
       lensValueOld = doc["lensvalue"];
-      ledcWrite(lensChannel, lensValueOld);
+      moveLens(lensValueOld);
       Serial.println(lensValueOld);
     }
 
@@ -276,6 +274,16 @@ static esp_err_t json_handler(httpd_req_t *req) {
   }
 }
 
+void moveLens(int lensValue) {
+  if (lensValue > 255)
+    lensValue = 255;
+  else if (lensValue < 0) {
+    lensValue = 0;
+  }
+  Serial.print("LENS Value");
+  Serial.println(lensValue);
+  ledcWrite(lensChannel, lensValue);
+}
 
 int readFile(char *fname, httpd_req_t *req) {
   //https://github.com/k-kimura123/Final_candyart_project/blob/ff3c950d02614a1ea169afaa0ac1793b503db4c5/main/include/myserver_config.c
@@ -560,7 +568,7 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     // FLASH
     ledValueOld = val;
     setLED(0, ledValueOld);
-    
+
     Serial.print("LED VAlue");
     Serial.println(ledValueOld);
   }
@@ -569,17 +577,15 @@ static esp_err_t cmd_handler(httpd_req_t *req)
     // FLASH
     ledValueOld = val;
     setLED(1, ledValueOld);
-    
+
     Serial.print("LED VAlue2");
     Serial.println(ledValueOld);
-  }  
+  }
   else if (!strcmp(variable, "lens"))
   {
-    // FLASH
+    // LENS
     lensValueOld = val;
-    ledcWrite(lensChannel, lensValueOld);
-    Serial.print("LENS VAlue");
-    Serial.println(lensValueOld);
+    moveLens(lensValueOld);
   }
   else
   {
@@ -605,6 +611,14 @@ static esp_err_t restart_handler(httpd_req_t *req) {
   return ESP_OK;
 }
 
+boolean snapPhoto(String fileName, int ledNum, int ledIntensity) {
+  bool savedSuccessfully = false;
+  setLED(ledNum, ledIntensity); // turn on LED
+  savedSuccessfully = saveImage(fileName + ".jpg");
+  setLED(ledNum, ledValueOld); // tune LED to old value
+  return savedSuccessfully;
+}
+
 int doFocus(int lensIncrement, bool isSave, bool isFocus) {
   // reserve buffer
   camera_fb_t * frameBuffer = NULL;
@@ -613,18 +627,25 @@ int doFocus(int lensIncrement, bool isSave, bool isFocus) {
   uint32_t frame_index = device_pref.getFrameIndex() + 1;
   // Acquire the image and save
 
-  bool savedSuccessfully = true;
   int maxSharpness = 0;
   int lensValMaxSharpness = 0;
 
+  int ledIntensity = 255;
+  bool savedSuccessfully = false;
+
   for (int iLensVal = 0; iLensVal < 255; iLensVal += abs(lensIncrement)) {
     // move lens
-    ledcWrite(lensChannel, iLensVal);
+    moveLens(iLensVal);
     delay(50);
 
     // save frame - eventually
     if (isSave) {
-      savedSuccessfully = savedSuccessfully and saveImage(" /picture" + String(frame_index) + "_" + String(iLensVal) + ".jpg");
+      savedSuccessfully = snapPhoto("/picture_LED0_" + String(frame_index) + "_Z_" + String(iLensVal), 0, ledIntensity);
+
+      if (isAnglerfish) {
+        // also take Darkfield image
+        savedSuccessfully = snapPhoto("/picture_LED1_"  + String(frame_index) + "_Z_" + String(iLensVal), 1, ledIntensity);
+      }
     }
 
     // Measure sharpness
@@ -642,7 +663,7 @@ int doFocus(int lensIncrement, bool isSave, bool isFocus) {
   }
   // autofocus?
   if (isFocus) {
-    ledcWrite(lensChannel, lensValMaxSharpness);
+    moveLens(lensValMaxSharpness);
   }
 
   if (savedSuccessfully) {
@@ -661,7 +682,7 @@ static esp_err_t stack_handler(httpd_req_t *req) {
   // acquire a stack
   doFocus(5, true, true);
   // focus back on old value
-  ledcWrite(lensChannel, lensValueOld);
+  moveLens(lensValueOld);
   return ESP_OK;
 }
 
@@ -798,7 +819,7 @@ void startCameraServer()
     .handler   = stack_handler,
     .user_ctx  = NULL
   };
-  
+
   httpd_uri_t restart_uri = {
     .uri       = "/restart",
     .method    = HTTP_GET,
@@ -825,7 +846,7 @@ void startCameraServer()
     httpd_register_uri_handler(camera_httpd, &indexhtml_uri);
     httpd_register_uri_handler(camera_httpd, &postjson_uri);
     httpd_register_uri_handler(camera_httpd, &restart_uri);
-    
+
   }
 
   config.server_port += 1;
