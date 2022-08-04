@@ -282,6 +282,8 @@ void moveLens(int lensValue) {
   }
   Serial.print("LENS Value");
   Serial.println(lensValue);
+  ledcSetup(lensChannel, freq, pwmResolution);
+  ledcAttachPin(lensPin, lensChannel);
   ledcWrite(lensChannel, lensValue);
 }
 

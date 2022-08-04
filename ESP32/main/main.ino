@@ -1,5 +1,7 @@
 /*
   ESP32 Matchboxscoe Camera Software
+  inspired by:
+  https://www.hackster.io/KDPA/esp32-cam-video-surveillance-robot-a22367
 */
 //#define DEFAULT_STORAGE_TYPE_ESP32 STORAGE_SPIFFS
 #define DEFAULT_STORAGE_TYPE_ESP32 STORAGE_SD
@@ -98,12 +100,12 @@ Ext. HARDWARE
 // LED
 const int freq = 8000; //800000;//19000; //12000
 const int pwmResolution = 8; //15
-const int ledChannel = 7; //some are used by the camera
+const int ledChannel = 3; //some are used by the camera
 const int ledPin = 4;
 int ledValueOld = 0;
 
 // LENS
-const int lensChannel =  8; //some are used by the camera
+const int lensChannel =  4; //some are used by the camera
 const int lensPin = 13;
 uint32_t lensValueOld = 0;
 
@@ -236,10 +238,11 @@ void setup()
     strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
     strip.show();            // Turn OFF all pixels ASAP
     strip.setBrightness(255); // Set BRIGHTNESS to about 1/5 (max = 255)
-    ledcSetup(ledChannel, freq, pwmResolution);
+    //ledcSetup(ledChannel, freq, pwmResolution);
     //ledcAttachPin(0, ledChannel); // necessary?
   }
   else {
+    Serial.println("Setting up LED / PWM");
     ledcSetup(ledChannel, freq, pwmResolution);
     ledcAttachPin(ledPin, ledChannel);
   }
@@ -257,27 +260,12 @@ void setup()
   blinkLed(1);
 
   // INIT LENS
-  ledcSetup(lensChannel, freq, pwmResolution);
-  ledcAttachPin(lensPin, lensChannel);
   moveLens(255);
   delay(100);
   moveLens(0);
 
-  // INIT STEPPER
-  /*#ifdef IS_MOTOR
-    AccelStepper stepper(1, pinStep, pinDir);
 
-    stepper.setMaxSpeed(10000);
-    stepper.setAcceleration(10000);
-    stepper.enableOutputs();
-
-    Serial.println("Movinb forward");
-    stepper.runToNewPosition(-1000);
-    Serial.println("Movinb bwrd");
-    stepper.runToNewPosition(1000);
-    #endif
-  */
-
+  // only for Anglerfish if already focussed
   isTimelapseAnglerfish = device_pref.isTimelapse(); // set the global variable for the loop function
   if (isAnglerfish) {
     if (isTimelapseAnglerfish) {
@@ -315,6 +303,10 @@ void setup()
     }
   }
 
+  moveLens(255);
+  delay(100);
+  moveLens(0);
+
   // INIT WIFI
   if (isWebserver) {
     if (isCaptivePortal) {
@@ -334,9 +326,6 @@ void setup()
     }
   }
 
-  // Blink LED twice
-  blinkLed(2);
-
   // INIT SPIFFS
   /*
     if (!SPIFFS.begin()) { // SPIFFS must be initialized before the web server, which depends on it
@@ -346,18 +335,27 @@ void setup()
 
   // INIT Webserver
   if (isWebserver) {
-    Serial.println("Starting FTP Server");
     // Start the camera and command server
     startCameraServer();
+
+    moveLens(255);
+    delay(100);
+    moveLens(0);
 
     // INIT FTP Server
     //ftpSrv.setCallback(_callback);
     //ftpSrv.setTransferCallback(_transferCallback);
-    ftpSrv.begin("esp32", "esp32");   //username, password for ftp.   (default 21, 50009 for PASV)
+    if (isFTPServer and sdInitialized) {
+      Serial.println("Starting FTP Server");
+      ftpSrv.begin("esp32", "esp32");   //username, password for ftp.   (default 21, 50009 for PASV)
+    }
   }
 
   // initiliaze timer
   t_old = millis();
+
+
+
 
 }
 
@@ -392,16 +390,21 @@ void loop() {
 void setLED(int numberLED, int intensity) {
   if (isAnglerfish) {
     // use LED strip
+    Serial.print("LED ARRAY:");
+    Serial.println(intensity);
     strip.setPixelColor(numberLED, strip.Color(intensity, intensity, intensity));
     strip.show();            // Turn OFF all pixels ASAP
   }
   else {
     // use internal LED/TORCH
+    Serial.print("LED:");
+    Serial.println(intensity);
     ledcWrite(ledChannel, intensity);
   }
 }
 
 void blinkLed(int nTimes) {
+  //TODO: Be careful with this - interferes with sensor and ledcWrite?!
   for (int iBlink = 0; iBlink < nTimes; iBlink++) {
     setLED(0, 255);
     setLED(1, 255);
