@@ -194,46 +194,6 @@ std::string get_content(httpd_req_t *req) {
 }
 
 
-
-static esp_err_t update_handler(httpd_req_t *req) {
-  //we have to ways of changinv values through Json and random..
-  // json-only would be better
-
-  // convert http to json
-  std::string content = get_content(req);
-  DeserializationError error = deserializeJson(doc, content);
-
-  server.sendHeader("Connection", "close");
-  server.send(200, "text/plain", (Update.hasError()) ? "FAIL" : "OK");
-  ESP.restart();
-}, []() {
-  HTTPUpload& upload = server.upload();
-  if (upload.status == UPLOAD_FILE_START) {
-    Serial.printf("Update: %s\n", upload.filename.c_str());
-    if (!Update.begin(UPDATE_SIZE_UNKNOWN)) { //start with max available size
-      Update.printError(Serial);
-    }
-  } else if (upload.status == UPLOAD_FILE_WRITE) {
-    /* flashing firmware to ESP*/
-    if (Update.write(upload.buf, upload.currentSize) != upload.currentSize) {
-      Update.printError(Serial);
-    }
-  } else if (upload.status == UPLOAD_FILE_END) {
-    if (Update.end(true)) { //true to set the size to the current progress
-      Serial.printf("Update Success: %u\nRebooting...\n", upload.totalSize);
-    } else {
-      Update.printError(Serial);
-    }
-  }
-});
-
-
-
-return ESP_OK;
-}
-
-
-
 // Stream& input;
 StaticJsonDocument<1024> doc;
 static esp_err_t json_handler(httpd_req_t *req) {
@@ -793,11 +753,7 @@ esp_err_t indexhtml_handler(httpd_req_t *req) {
   return ESP_OK;
 }
 
-static esp_err_t index_handler(httpd_req_t *req) {
-  printf("update page requested\r\n");
-  httpd_resp_set_type(req, "text/html");
-  return httpd_resp_send(req, (const char *)otaIndex, strlen(otaIndex));
-}
+
 
 void startCameraServer()
 {
@@ -880,24 +836,6 @@ void startCameraServer()
     .user_ctx  = NULL
   };
 
-  /*
-     OTA related
-  */
-
-  httpd_uri_t OTAIndex_uri = {
-    .uri       = "/otaindex",
-    .method    = HTTP_GET,
-    .handler   = OTAIndex_handler,
-    .user_ctx  = NULL
-  };
-
-  httpd_uri_t update_uri = {
-    .uri       = "/update",
-    .method    = HTTP_POST,
-    .handler   = update_handler,
-    .user_ctx  = NULL
-  };
-
   Serial.printf("Starting web server on port: '%d'\n", config.server_port);
   if (httpd_start(&camera_httpd, &config) == ESP_OK) {
     httpd_register_uri_handler(camera_httpd, &index_uri);
@@ -910,8 +848,7 @@ void startCameraServer()
     httpd_register_uri_handler(camera_httpd, &indexhtml_uri);
     httpd_register_uri_handler(camera_httpd, &postjson_uri);
     httpd_register_uri_handler(camera_httpd, &restart_uri);
-    httpd_register_uri_handler(camera_httpd, &OTAIndex_uri);
-    httpd_register_uri_handler(camera_httpd, &update_uri);
+
   }
 
   config.server_port += 1;
