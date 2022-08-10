@@ -1,48 +1,97 @@
 static const char PROGMEM INDEX_HTML[] = R"rawliteral(
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>ESP32 OV2460</title>
-        <style>          body{font-family:Arial,Helvetica,sans-serif;background:#181818;color:#EFEFEF;font-size:16px}h2{font-size:18px}section.main{display:flex}#menu,section.main{flex-direction:column}#menu{display:none;flex-wrap:nowrap;min-width:340px;background:#363636;padding:8px;border-radius:4px;margin-top:-10px;margin-right:10px}#content{display:flex;flex-wrap:wrap;align-items:stretch}figure{padding:0;margin:0;-webkit-margin-before:0;margin-block-start:0;-webkit-margin-after:0;margin-block-end:0;-webkit-margin-start:0;margin-inline-start:0;-webkit-margin-end:0;margin-inline-end:0}figure img{display:block;width:100%;height:auto;border-radius:4px;margin-top:8px}@media (min-width: 800px) and (orientation:landscape){#content{display:flex;flex-wrap:nowrap;align-items:stretch}figure img{display:block;max-width:100%;max-height:calc(100vh - 40px);width:auto;height:auto}figure{padding:0;margin:0;-webkit-margin-before:0;margin-block-start:0;-webkit-margin-after:0;margin-block-end:0;-webkit-margin-start:0;margin-inline-start:0;-webkit-margin-end:0;margin-inline-end:0}}section#buttons{display:flex;flex-wrap:nowrap;justify-content:space-between}#nav-toggle{cursor:pointer;display:block}#nav-toggle-cb{outline:0;opacity:0;width:0;height:0}#nav-toggle-cb:checked+#menu{display:flex}.input-group{display:flex;flex-wrap:nowrap;line-height:22px;margin:5px 0}.input-group>label{display:inline-block;padding-right:10px;min-width:47%}.input-group input,.input-group select{flex-grow:1}.range-max,.range-min{display:inline-block;padding:0 5px}button{display:block;margin:5px;padding:0 12px;border:0;line-height:28px;cursor:pointer;color:#fff;background:#ff3034;border-radius:5px;font-size:16px;outline:0}button:hover{background:#ff494d}button:active{background:#f21c21}button.disabled{cursor:default;background:#a0a0a0}input[type=range]{-webkit-appearance:none;width:100%;height:22px;background:#363636;cursor:pointer;margin:0}input[type=range]:focus{outline:0}input[type=range]::-webkit-slider-runnable-track{width:100%;height:2px;cursor:pointer;background:#EFEFEF;border-radius:0;border:0 solid #EFEFEF}input[type=range]::-webkit-slider-thumb{border:1px solid rgba(0,0,30,0);height:22px;width:22px;border-radius:50px;background:#ff3034;cursor:pointer;-webkit-appearance:none;margin-top:-11.5px}input[type=range]:focus::-webkit-slider-runnable-track{background:#EFEFEF}input[type=range]::-moz-range-track{width:100%;height:2px;cursor:pointer;background:#EFEFEF;border-radius:0;border:0 solid #EFEFEF}input[type=range]::-moz-range-thumb{border:1px solid rgba(0,0,30,0);height:22px;width:22px;border-radius:50px;background:#ff3034;cursor:pointer}input[type=range]::-ms-track{width:100%;height:2px;cursor:pointer;background:0 0;border-color:transparent;color:transparent}input[type=range]::-ms-fill-lower{background:#EFEFEF;border:0 solid #EFEFEF;border-radius:0}input[type=range]::-ms-fill-upper{background:#EFEFEF;border:0 solid #EFEFEF;border-radius:0}input[type=range]::-ms-thumb{border:1px solid rgba(0,0,30,0);height:22px;width:22px;border-radius:50px;background:#ff3034;cursor:pointer;height:2px}input[type=range]:focus::-ms-fill-lower{background:#EFEFEF}input[type=range]:focus::-ms-fill-upper{background:#363636}.switch{display:block;position:relative;line-height:22px;font-size:16px;height:22px}.switch input{outline:0;opacity:0;width:0;height:0}.slider{width:50px;height:22px;border-radius:22px;cursor:pointer;background-color:grey}.slider,.slider:before{display:inline-block;transition:.4s}.slider:before{position:relative;content:"";border-radius:50%;height:16px;width:16px;left:4px;top:3px;background-color:#fff}input:checked+.slider{background-color:#ff3034}input:checked+.slider:before{-webkit-transform:translateX(26px);transform:translateX(26px)}select{border:1px solid #363636;font-size:14px;height:22px;outline:0;border-radius:5px}.image-container{position:relative;min-width:160px}.close{position:absolute;right:5px;top:5px;background:#ff3034;width:16px;height:16px;border-radius:100px;color:#fff;text-align:center;line-height:18px;cursor:pointer}.hidden{display:none}
-        </style>
-        <script src="https://lib.imjoy.io/imjoy-loader.js"></script>
-    </head>
-    <body>
-    <figure>
-      <div id="stream-container" class="image-container hidden">
-        <div class="close" id="close-stream">×</div>
-        <img id="stream" src="">
-      </div>
-    </figure>
-        <section class="main">
-            <section id="buttons">
-                <table>
-                <tr><td align="center"><button id="get-still">Get Still</button></td><td><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td><td align="center"><button id="toggle-stream">Start Stream</button></td></tr>
-                <tr><td align="center"><button id="perform-stack">Stack</button></td><td><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td><td align="center"><button id="get-stack">Perform Stack</button></td></tr>
-                <tr><td></td><td align="center">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<td></td><td></td></tr>
-                <tr><td align="center">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td><td align="center">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<td></td><td align="center">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td></tr>
-                <tr><td></td><td align="center" colspan="2"></br></tr>
-                <tr><td></td><td align="center" colspan="2"></br></tr>
-                <tr><td></td><td align="center" colspan="2"></br></tr>
-                <tr><td>Flash</td><td align="center" colspan="2"><input type="range" id="flash" min="0" max="255" value="0" onchange="try{fetch(document.location.origin+'/control?var=flash&val='+this.value);}catch(e){}"><td></td></tr>
-                <tr><td>Flash 2</td><td align="center" colspan="2"><input type="range" id="flash2" min="0" max="255" value="0" onchange="try{fetch(document.location.origin+'/control?var=flash2&val='+this.value);}catch(e){}"><td></td></tr>
-                <tr><td>LENS</td><td align="center" colspan="2"><input type="range" id="lens" min="0" max="255" value="0" onchange="try{fetch(document.location.origin+'/control?var=lens&val='+this.value);}catch(e){}"><td></td></tr>
-                <tr><td>Resolution</td><td align="center" colspan="2"><input type="range" id="framesize" min="0" max="9" value="5" onchange="try{fetch(document.location.origin+'/control?var=framesize&val='+this.value);}catch(e){}"><td></td></tr>
-                <tr><td>Effect</td><td align="center" colspan="2"><input type="range" id="effect" min="0" max="5" value="2" onchange="try{fetch(document.location.origin+'/control?var=effect&val='+this.value);}catch(e){}"><td></td></tr>
-                <tr><td>Gain</td><td align="center" colspan="2"><input type="range" id="gain" min="0" max="30" value="0" onchange="try{fetch(document.location.origin+'/control?var=gain&val='+this.value);}catch(e){}"><td></td></tr>
-                <tr><td>Exposure Time</td><td align="center" colspan="2"><input type="range" id="exposuretime" min="0" max="1600" value="100" onchange="try{fetch(document.location.origin+'/control?var=exposuretime&val='+this.value);}catch(e){}"><td></td></tr>
-                <tr><td>Quality</td><td align="center" colspan="2"><input type="range" id="quality" min="10" max="63" value="10" onchange="try{fetch(document.location.origin+'/control?var=quality&val='+this.value);}catch(e){}"><td></td></tr>
-                <tr><td>Timelapse Interval (0..180s; 0 => off) </td><td align="center" colspan="2"><input type="range" id="timelapse" min="0" max="180" value="0" onchange="try{fetch(document.location.origin+'/control?var=timelapseinterval&val='+this.value);}catch(e){}"><td></td></tr>
-                <tr><td align="center"><a href="#" onclick="sendToImageJ()"> <img alt="ImJoy" src="https://ij.imjoy.io/assets/badge/open-in-imagej-js-badge.svg" alt="Send To ImJoy"></td></tr>
-                </table>
-            </section>
-        </section>
-
-        <div id="window-container"></div>
-        <div id="menu-container"></div>
-        <script>
+<h3>Anglerfish</h3>
+<span style="font-family: arial, helvetica, sans-serif;"><img id="stream" />
+<p>This is the GUI for the Anglerfish / Matchboxscope&nbsp;</p>
+<p>If you have questions for its use, please have a look in the <a href="https://github.com/beniroquai/Matchboxscope/" target="_blank" rel="noopener">Github repository</a></p>
+<p>If you wish to upload a new firmware (bin), please follow <a href="/" onclick="javascript:event.target.port=82">this link.</a> </p>
+</span>
+<p><span style="font-family: arial, helvetica, sans-serif;">
+<script src="https://lib.imjoy.io/imjoy-loader.js"></script>
+</span></p>
+<figure>
+<div id="stream-container" class="image-container hidden">
+<div class="close" id="close-stream"><span style="font-family: arial, helvetica, sans-serif;">&times;</span></div>
+<span style="font-family: arial, helvetica, sans-serif;"><img id="stream" /></span></div>
+</figure>
+<section class="main">
+<section id="buttons">
+<table style="height: 424px; width: 47.8344%;">
+<tbody>
+<tr style="height: 41px;">
+<td align="center" style="height: 41px; width: 29.663%;"><span style="font-family: arial, helvetica, sans-serif;"><button id="get-still">Get Still</button></span></td>
+<td style="height: 41px; width: 24.9576%;"></td>
+<td align="center" style="height: 41px; width: 21.1088%;"><span style="font-family: arial, helvetica, sans-serif;"><button id="toggle-stream">Start Stream</button></span></td>
+</tr>
+<tr style="height: 41px;">
+<td align="center" style="height: 41px; width: 29.663%;"><span style="font-family: arial, helvetica, sans-serif;"><button id="perform-stack">Stack</button></span></td>
+<td style="height: 41px; width: 24.9576%;"></td>
+<td align="center" style="height: 41px; width: 21.1088%;"><span style="font-family: arial, helvetica, sans-serif;"><button id="get-stack">Perform Stack</button></span></td>
+</tr>
+<tr style="height: 3px;">
+<td style="height: 3px; width: 29.663%;"></td>
+<td align="center" style="height: 3px; width: 24.9576%;"></td>
+<td style="width: 21.1088%; height: 3px;"></td>
+</tr>
+<tr style="height: 31px;">
+<td style="height: 31px; width: 29.663%;"><span style="font-family: arial, helvetica, sans-serif;">Flash</span></td>
+<td align="center" style="height: 31px; width: 24.9576%;"><span style="font-family: arial, helvetica, sans-serif;"><input type="range" id="flash" min="0" max="255" value="0" onchange="try{fetch(document.location.origin+'/control?var=flash&amp;val='+this.value);}catch(e){}" /></span></td>
+<td style="height: 31px; width: 21.1088%;"></td>
+</tr>
+<tr style="height: 31px;">
+<td style="height: 31px; width: 29.663%;"><span style="font-family: arial, helvetica, sans-serif;">Flash 2</span></td>
+<td align="center" style="height: 31px; width: 24.9576%;"><span style="font-family: arial, helvetica, sans-serif;"><input type="range" id="flash2" min="0" max="255" value="0" onchange="try{fetch(document.location.origin+'/control?var=flash2&amp;val='+this.value);}catch(e){}" /></span></td>
+<td style="height: 31px; width: 21.1088%;"></td>
+</tr>
+<tr style="height: 31px;">
+<td style="height: 31px; width: 29.663%;"><span style="font-family: arial, helvetica, sans-serif;">LENS</span></td>
+<td align="center" style="height: 31px; width: 24.9576%;"><span style="font-family: arial, helvetica, sans-serif;"><input type="range" id="lens" min="0" max="255" value="0" onchange="try{fetch(document.location.origin+'/control?var=lens&amp;val='+this.value);}catch(e){}" /></span></td>
+<td style="height: 31px; width: 21.1088%;"></td>
+</tr>
+<tr style="height: 31px;">
+<td style="height: 31px; width: 29.663%;"><span style="font-family: arial, helvetica, sans-serif;">Resolution</span></td>
+<td align="center" style="height: 31px; width: 24.9576%;"><span style="font-family: arial, helvetica, sans-serif;"><input type="range" id="framesize" min="0" max="9" value="5" onchange="try{fetch(document.location.origin+'/control?var=framesize&amp;val='+this.value);}catch(e){}" /></span></td>
+<td style="height: 31px; width: 21.1088%;"></td>
+</tr>
+<tr style="height: 31px;">
+<td style="height: 31px; width: 29.663%;"><span style="font-family: arial, helvetica, sans-serif;">Effect</span></td>
+<td align="center" style="height: 31px; width: 24.9576%;"><span style="font-family: arial, helvetica, sans-serif;"><input type="range" id="effect" min="0" max="5" value="2" onchange="try{fetch(document.location.origin+'/control?var=effect&amp;val='+this.value);}catch(e){}" /></span></td>
+<td style="height: 31px; width: 21.1088%;"></td>
+</tr>
+<tr style="height: 31px;">
+<td style="height: 31px; width: 29.663%;"><span style="font-family: arial, helvetica, sans-serif;">Gain</span></td>
+<td align="center" style="height: 31px; width: 24.9576%;"><span style="font-family: arial, helvetica, sans-serif;"><input type="range" id="gain" min="0" max="30" value="0" onchange="try{fetch(document.location.origin+'/control?var=gain&amp;val='+this.value);}catch(e){}" /></span></td>
+<td style="height: 31px; width: 21.1088%;"></td>
+</tr>
+<tr style="height: 31px;">
+<td style="height: 31px; width: 29.663%;"><span style="font-family: arial, helvetica, sans-serif;">Exposure Time</span></td>
+<td align="center" style="height: 31px; width: 24.9576%;"><span style="font-family: arial, helvetica, sans-serif;"><input type="range" id="exposuretime" min="0" max="1600" value="100" onchange="try{fetch(document.location.origin+'/control?var=exposuretime&amp;val='+this.value);}catch(e){}" /></span></td>
+<td style="height: 31px; width: 21.1088%;"></td>
+</tr>
+<tr style="height: 31px;">
+<td style="height: 31px; width: 29.663%;"><span style="font-family: arial, helvetica, sans-serif;">Quality</span></td>
+<td align="center" style="height: 31px; width: 24.9576%;"><span style="font-family: arial, helvetica, sans-serif;"><input type="range" id="quality" min="10" max="63" value="10" onchange="try{fetch(document.location.origin+'/control?var=quality&amp;val='+this.value);}catch(e){}" /></span></td>
+<td style="height: 31px; width: 21.1088%;"></td>
+</tr>
+<tr style="height: 31px;">
+<td style="height: 31px; width: 29.663%;"><span style="font-family: arial, helvetica, sans-serif;">Timelapse Interval (0..180s; 0 =&gt; off)</span></td>
+<td align="center" style="height: 31px; width: 24.9576%;"><span style="font-family: arial, helvetica, sans-serif;"><input type="range" id="timelapse" min="0" max="180" value="0" onchange="try{fetch(document.location.origin+'/control?var=timelapseinterval&amp;val='+this.value);}catch(e){}" /></span></td>
+<td style="height: 31px; width: 21.1088%;"></td>
+</tr>
+<tr style="height: 27px;">
+<td align="center" style="height: 27px; width: 29.663%;"><span style="font-family: arial, helvetica, sans-serif;"><a href="#" onclick="sendToImageJ()"> <img alt="ImJoy" src="https://ij.imjoy.io/assets/badge/open-in-imagej-js-badge.svg" /></a></span></td>
+<td style="width: 24.9576%; height: 27px;"></td>
+<td style="width: 21.1088%; height: 27px;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<div id="window-container"></div>
+<div id="menu-container"></div>
+<p><span style="font-family: arial, helvetica, sans-serif;">
+<script>
             loadImJoyBasicApp({
                 process_url_query: true,
                 show_window_title: false,
@@ -91,7 +140,7 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
                 }
             });
         </script>
-        <script>
+<script>
             document.addEventListener('DOMContentLoaded', function() {
                 function b(B) {
                     let C;
@@ -195,6 +244,55 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
                 catch(e){}
               };
         </script>
-    </body>
+</span></p>
+</html>
+)rawliteral";
+
+
+
+
+static const char PROGMEM otaindex[] = R"rawliteral(
+<!DOCTYPE HTML>
+<html>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</span></p>
+<form method="POST" action="#" enctype="multipart/form-data" id="upload_form">
+<h2><span style="font-family: tahoma, arial, helvetica, sans-serif;"><strong>OTA Updater for the Anglerfish</strong></span></h2>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;">Please go to the<a href="https://github.com/beniroquai/Matchboxscope/" title="URL" target="_blank" rel="noopener"> Github repository </a>of the Anglerfish and download the latest ".bin" file.&nbsp;&nbsp;</span><span style="font-family: tahoma, arial, helvetica, sans-serif;"></span></p>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;"><input type="file" name="update" /> <input type="submit" value="Update" /></span></p>
+</form>
+<div id="prg"><span style="font-family: tahoma, arial, helvetica, sans-serif;"><em>Progress</em>: 0%</span></div>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;">
+<script>
+  $('form').submit(function(e){
+  e.preventDefault();
+  var form = $('#upload_form')[0];
+  var data = new FormData(form);
+   $.ajax({
+  url: '/update',
+  type: 'POST',
+  data: data,
+  contentType: false,
+  processData:false,
+  xhr: function() {
+  var xhr = new window.XMLHttpRequest();
+  xhr.upload.addEventListener('progress', function(evt) {
+  if (evt.lengthComputable) {
+  var per = evt.loaded / evt.total;
+  $('#prg').html('progress: ' + Math.round(per*100) + '%');
+  }
+  }, false);
+  return xhr;
+  },
+  success:function(d, s) {
+  console.log('success!')
+ },
+ error: function (a, b, c) {
+ }
+ });
+ });
+ </script>
+</span></p>
 </html>
 )rawliteral";

@@ -1,4 +1,4 @@
-void initCamera() {
+bool initCamera() {
   // INIT Camera
   camera_config_t config;
   config.ledc_channel = LEDC_CHANNEL_0;
@@ -31,11 +31,12 @@ void initCamera() {
   esp_err_t err = esp_camera_init(&config);
   if (err != ESP_OK) {
     Serial.printf("Camera init failed with error 0x % x", err);
-    ESP.restart();
-    return;
+    //ESP.restart();
+    return false;
   }
   else {
     Serial.printf("Camera init success!");
+    return true;
   }
 }
 
@@ -857,4 +858,43 @@ void startCameraServer()
   if (httpd_start(&stream_httpd, &config) == ESP_OK) {
     httpd_register_uri_handler(stream_httpd, &stream_uri);
   }
+}
+
+
+
+void startOTAServer() {
+  /*return index page which is stored in serverIndex */
+
+  Serial.println("Spinning up OTA server");
+  OTAserver.on("/", HTTP_GET, []() {
+    OTAserver.sendHeader("Connection", "close");
+    OTAserver.send(200, "text/html", otaindex);
+  });
+  /*handling uploading firmware file */
+  OTAserver.on("/update", HTTP_POST, []() {
+    OTAserver.sendHeader("Connection", "close");
+    OTAserver.send(200, "text/plain", (Update.hasError()) ? "FAIL" : "OK");
+    ESP.restart();
+  }, []() {
+    HTTPUpload& upload = OTAserver.upload();
+    if (upload.status == UPLOAD_FILE_START) {
+      Serial.printf("Update: %s\n", upload.filename.c_str());
+      if (!Update.begin(UPDATE_SIZE_UNKNOWN)) { //start with max available size
+        Update.printError(Serial);
+      }
+    } else if (upload.status == UPLOAD_FILE_WRITE) {
+      /* flashing firmware to ESP*/
+      if (Update.write(upload.buf, upload.currentSize) != upload.currentSize) {
+        Update.printError(Serial);
+      }
+    } else if (upload.status == UPLOAD_FILE_END) {
+      if (Update.end(true)) { //true to set the size to the current progress
+        Serial.printf("Update Success: %u\nRebooting...\n", upload.totalSize);
+      } else {
+        Update.printError(Serial);
+      }
+    }
+  });
+  OTAserver.begin();
+  Serial.println("Starting OTA server on port: '82'");
 }

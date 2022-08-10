@@ -34,6 +34,8 @@
 #include <AccelStepper.h>
 #include <esp_log.h>"
 #include "ESP32FtpServer.h"
+#include <Update.h>
+
 
 // Local header files
 #include <HTTPClient.h>
@@ -140,7 +142,16 @@ int ledMatrixCount = 2;
 // Declare our NeoPixel strip object:
 Adafruit_NeoPixel strip;
 
+/*
+*  OTA Server
+*/
 
+WebServer OTAserver(82);
+
+/*
+* CAMERA
+*/
+bool isCameraAttached = false;
 
 void setup()
 {
@@ -194,8 +205,10 @@ void setup()
   }
 
   // INIT CAMERA
-  initCamera();
-  initCameraSettings();
+  isCameraAttached = initCamera();
+  if (isCameraAttached) {
+    initCameraSettings();
+  }
 
   // INIT SD
   // We initialize SD_MMC here rather than in setup() because SD_MMC needs to reset the light pin
@@ -351,9 +364,11 @@ void setup()
     }
   }
 
+  // OTA
+  startOTAServer();
+
   // initiliaze timer
   t_old = millis();
-
 
 
 
@@ -361,6 +376,11 @@ void setup()
 
 
 void loop() {
+
+  // wait for incoming OTA client udpates
+  OTAserver.handleClient();
+
+  // offer file transfer via FTP - eventually
   if (isFTPServer and sdInitialized) {
     ftpSrv.handleFTP();
   }
