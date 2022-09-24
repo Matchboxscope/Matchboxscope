@@ -7,13 +7,14 @@
 #define DEFAULT_STORAGE_TYPE_ESP32 STORAGE_SD
 
 //http://192.168.2.168/control?var=flash&val=100
-//http://192.168.1.4/control?var=lens&val=100
+//http://192.168.1.4/controll?var=lens&val=100
 
 // external libraries
 #include <Adafruit_NeoPixel.h>
 #include "esp_wifi.h"
 #include "esp_camera.h"
 #include <WiFi.h>
+#include <WiFiClientSecure.h>
 #include "soc/soc.h"
 #include "soc/rtc_cntl_reg.h"
 #include <SPIFFS.h>
@@ -36,11 +37,14 @@
 #include "ESP32FtpServer.h"
 #include <Update.h>
 
+#include "Base64.h"
+
 
 // Local header files
 #include <HTTPClient.h>
 #include <esp_camera.h>
 #include "device_pref.h"
+#include <ESP32Ping.h>
 
 // FTP server to access data outside the "Jar"
 FtpServer ftpSrv;   //set #define FTP_DEBUG in ESP32FtpServer.h to see ftp verbose on serial
@@ -80,6 +84,21 @@ bool isStreaming = false;
 bool isStreamingStoppped = false;
 
 
+/*********************
+*
+* Upload to Google Drive Settings
+*
+*********************/
+
+const char* myDomain = "script.google.com";
+String myScript = "/macros/s/AKfycbwBdRLAms_hB0jy8oi3xBPtwD9tTj4igbHV_TlbNw2iUHwoSaHPeI2m-gv1D9isGK0P/exec";    //Replace with your own url
+String myFilename = "filename=ESP32-CAM.jpg";
+String mimeType = "&mimetype=image/jpeg";
+String myImage = "&datase=";
+
+int waitingTime = 30000; //Wait 30 seconds to google response.
+
+
 /**********************
 
 Timelapse
@@ -100,14 +119,15 @@ Ext. HARDWARE
 
 **********************/
 // LED
+const boolean IS_NEOPIXEL = false;
 const int freq = 8000; //800000;//19000; //12000
 const int pwmResolution = 8; //15
-const int ledChannel = 3; //some are used by the camera
+const int ledChannel = 4; //some are used by the camera
 const int ledPin = 4;
 int ledValueOld = 0;
 
 // LENS
-const int lensChannel =  4; //some are used by the camera
+const int lensChannel = 5; //some are used by the camera
 const int lensPin = 13;
 uint32_t lensValueOld = 0;
 
@@ -159,7 +179,7 @@ void setup()
 
   // device-specific flags
   if (isOmniscope){
-    Serial.println("I', an omniscope");
+    Serial.println("I'm an omniscope");
     isUseSD = false;
     isWebserver = true;
     isFTPServer = false;
@@ -247,17 +267,24 @@ void setup()
     }
 
     // LED ARRAY
-    strip = Adafruit_NeoPixel(ledMatrixCount, ledPin, NEO_GRB + NEO_KHZ800);
-    strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
-    strip.show();            // Turn OFF all pixels ASAP
-    strip.setBrightness(255); // Set BRIGHTNESS to about 1/5 (max = 255)
-    //ledcSetup(ledChannel, freq, pwmResolution);
-    //ledcAttachPin(0, ledChannel); // necessary?
+    if (IS_NEOPIXEL) {
+      Serial.println("Using Neopixel strip");
+      strip = Adafruit_NeoPixel(ledMatrixCount, ledPin, NEO_GRB + NEO_KHZ800);
+      strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
+      strip.show();            // Turn OFF all pixels ASAP
+      strip.setBrightness(255); // Set BRIGHTNESS to about 1/5 (max = 255)
+    }
+    else {
+      Serial.println("Using LEDc");
+      digitalWrite(ledChannel, HIGH);
+      delay(100);
+      digitalWrite(ledChannel, LOW);
+      ledcSetup(ledChannel, freq, pwmResolution);
+      ledcAttachPin(ledPin, ledChannel);
+    }
   }
   else {
     Serial.println("Setting up LED / PWM");
-    ledcSetup(ledChannel, freq, pwmResolution);
-    ledcAttachPin(ledPin, ledChannel);
   }
 
   // retrieve old camera setting values
@@ -371,6 +398,18 @@ void setup()
   t_old = millis();
 
 
+  bool success = Ping.ping("www.google.com", 3);
+
+  if (!success) {
+    Serial.println("Ping failed -> we are not connected to the internet most likely!");
+  }
+  else{
+    Serial.println("Ping succesful -> we are connected to the internet most likely!.");  
+  }
+
+
+  // Save image in Google Drive
+  saveCapturedImageGDrive();
 
 }
 
@@ -408,7 +447,7 @@ void loop() {
 }
 
 void setLED(int numberLED, int intensity) {
-  if (isAnglerfish) {
+  if (IS_NEOPIXEL) {
     // use LED strip
     Serial.print("LED ARRAY:");
     Serial.println(intensity);

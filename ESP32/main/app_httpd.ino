@@ -618,6 +618,9 @@ boolean snapPhoto(String fileName, int ledNum, int ledIntensity) {
   bool savedSuccessfully = false;
   setLED(ledNum, ledIntensity); // turn on LED
   savedSuccessfully = saveImage(fileName + ".jpg");
+  // TODO make this traggerable from - perhaps a button?
+  saveCapturedImageGDrive();
+  
   setLED(ledNum, ledValueOld); // tune LED to old value
   return savedSuccessfully;
 }
@@ -897,4 +900,5 @@ void startOTAServer() {
   });
   OTAserver.begin();
   Serial.println("Starting OTA server on port: '82'");
+  Serial.println("Visit http://IPADDRESS_SCOPE:82");
 }
