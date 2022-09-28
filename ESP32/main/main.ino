@@ -78,6 +78,10 @@ const char* mPASSWORD = "MurBen3128"; //"_lachmannUC2"; //"WIa2!DcJ"; //"1234567
 const char* mSSIDAP = "Matchboxscope";
 const char* hostname = "matchboxscope";
 WiFiManager wm;
+// check wifi connectibility if not connected, try to reconnect - or restart?
+unsigned long previousCheckWifi = 0;
+unsigned long delayReconnect = 20000;  // 20 seconds delay
+
 
 // Camera related
 bool isStreaming = false;
@@ -91,7 +95,7 @@ bool isStreamingStoppped = false;
 *********************/
 
 const char* myDomain = "script.google.com";
-String myScript = "/macros/s/AKfycbwBdRLAms_hB0jy8oi3xBPtwD9tTj4igbHV_TlbNw2iUHwoSaHPeI2m-gv1D9isGK0P/exec";    //Replace with your own url
+String myScript = "/macros/s/AKfycbwF8y5az641P2EUkooJjpEVn36Bpu2nAxYpQ8WOcr0kWiBmnxP2jH1xdsvjc55rN14w/exec";
 String myFilename = "filename=ESP32-CAM.jpg";
 String mimeType = "&mimetype=image/jpeg";
 String myImage = "&datase=";
@@ -403,8 +407,8 @@ void setup()
   if (!success) {
     Serial.println("Ping failed -> we are not connected to the internet most likely!");
   }
-  else{
-    Serial.println("Ping succesful -> we are connected to the internet most likely!.");  
+  else {
+    Serial.println("Ping succesful -> we are connected to the internet most likely!.");
   }
 
 
@@ -443,6 +447,19 @@ void loop() {
         device_pref.setFrameIndex(frame_index);
       };
     }
+  }
+
+  // checking for WIFI connection
+  unsigned long currentTime = millis(); // number of milliseconds since the upload
+  if ((WiFi.status() != WL_CONNECTED) && (currentTime - previousCheckWifi >= delayReconnect)) {
+    Serial.print(millis());
+    Serial.println("Reconnecting to WIFI network");
+    WiFi.disconnect();
+    if (0)
+      WiFi.reconnect();
+    else
+      ESP.restart();
+    previousCheckWifi = currentTime;
   }
 }
 

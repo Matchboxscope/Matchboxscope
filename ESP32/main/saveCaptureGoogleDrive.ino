@@ -1,6 +1,7 @@
 //https://github.com/gsampallo/esp32cam-gdrive
 void saveCapturedImageGDrive() {
   Serial.println("Connect to " + String(myDomain));
+  Serial.println("Connect to " + String(myDomain));
   WiFiClientSecure clientSecure;
   clientSecure.setInsecure();   //run version 1.0.5 or above
 
