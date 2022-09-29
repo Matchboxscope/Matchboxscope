@@ -1,4 +1,17 @@
 //https://github.com/gsampallo/esp32cam-gdrive
+
+
+void saveCapturedImageGithub(){
+    /* Need to package: 
+    curl   -X PUT   -H "Accept: application/vnd.github+json"   \
+    -H "Authorization: Bearer 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"  \
+    https://api.github.com/repos/anglerfishbot/AnglerfishGallery/contents/test3   -\
+    d '{"message":"my commit message","committer":{"name":"anglerfishbot","email":"benedictdied@gmail.com"},"content":"bXkgbmV3IGZpbGUgY29udGVudHM="}' 
+    */
+
+    
+}
+
 void saveCapturedImageGDrive() {
   Serial.println("Connect to " + String(myDomain));
   Serial.println("Connect to " + String(myDomain));

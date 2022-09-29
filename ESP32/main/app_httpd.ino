@@ -250,7 +250,7 @@ static esp_err_t json_handler(httpd_req_t *req) {
       // LED Intensity
       ledintensity = doc["ledintensity"];
       ledValueOld = ledintensity;
-      setLED(0, ledValueOld);
+      setLED(ledValueOld);
 
       Serial.println(ledintensity);
     }
@@ -258,7 +258,7 @@ static esp_err_t json_handler(httpd_req_t *req) {
       // LED Intensity
       ledintensity = doc["ledintensity2"];
       ledValueOld = ledintensity;
-      setLED(1, ledValueOld);
+      setLED(ledValueOld);
 
       Serial.println(ledintensity);
     }
@@ -457,7 +457,7 @@ static esp_err_t stream_handler(httpd_req_t *req) {
 
 
 static esp_err_t cmd_handler(httpd_req_t *req)
-{
+{ //FIXME: This should be merged with the REST API in line 200 - website works with this interface..not good!
   // TODO: this should be arduinojson
   char*  buf;
   size_t buf_len;
@@ -498,7 +498,7 @@ static esp_err_t cmd_handler(httpd_req_t *req)
   if (!strcmp(variable, "brightness"))
   {
     Serial.print("brightness ");
-    float brightness = (float)val / 10;
+    float brightness = (float)val;
     Serial.println(brightness);
     s->set_brightness(s, brightness);  // -2 to 2
     s->set_special_effect(s, device_pref.getCameraEffect()); //mono - has to be set again?
@@ -570,7 +570,7 @@ static esp_err_t cmd_handler(httpd_req_t *req)
   {
     // FLASH
     ledValueOld = val;
-    setLED(0, ledValueOld);
+    setLED(ledValueOld);
 
     Serial.print("LED VAlue");
     Serial.println(ledValueOld);
@@ -579,7 +579,7 @@ static esp_err_t cmd_handler(httpd_req_t *req)
   {
     // FLASH
     ledValueOld = val;
-    setLED(1, ledValueOld);
+    setLED(ledValueOld);
 
     Serial.print("LED VAlue2");
     Serial.println(ledValueOld);
@@ -614,25 +614,28 @@ static esp_err_t restart_handler(httpd_req_t *req) {
   return ESP_OK;
 }
 
-boolean snapPhoto(String fileName, int ledNum, int ledIntensity) {
+boolean snapPhoto(String fileName, int ledIntensity) {
   bool savedSuccessfully = false;
-  setLED(ledNum, ledIntensity); // turn on LED
+
+  // FIXME: clever to have the LED turned on here or rather outside the snap function? 
+  setLED(ledIntensity); // turn on LED
   savedSuccessfully = saveImage(fileName + ".jpg");
   // TODO make this traggerable from - perhaps a button?
-  saveCapturedImageGDrive();
-  
-  setLED(ledNum, ledValueOld); // tune LED to old value
+  // FIXME: this should be triggered by a buttun - or only if wifi and internet are available:
+  if (isInternetAvailable) {
+    saveCapturedImageGDrive();
+  }
+
+  setLED(ledValueOld); // tune LED to old value
   return savedSuccessfully;
 }
 
-int doFocus(int lensIncrement, bool isSave, bool isFocus) {
+// FIXME: This method sounds not true; Rather focus Stack?
+bool doFocus(int lensIncrement, bool isSave, bool isFocus, String fileName) {
   // reserve buffer
   camera_fb_t * frameBuffer = NULL;
 
-  // perform STACK
-  uint32_t frame_index = device_pref.getFrameIndex() + 1;
   // Acquire the image and save
-
   int maxSharpness = 0;
   int lensValMaxSharpness = 0;
 
@@ -646,12 +649,8 @@ int doFocus(int lensIncrement, bool isSave, bool isFocus) {
 
     // save frame - eventually
     if (isSave) {
-      savedSuccessfully = snapPhoto("/picture_LED0_" + String(frame_index) + "_Z_" + String(iLensVal), 0, ledIntensity);
-
-      if (isAnglerfish) {
-        // also take Darkfield image
-        savedSuccessfully = snapPhoto("/picture_LED1_"  + String(frame_index) + "_Z_" + String(iLensVal), 1, ledIntensity);
-      }
+      Serial.println("/" + fileName +  "_Z_" + String(iLensVal));
+      savedSuccessfully = snapPhoto("/" + fileName +  "_Z_" + String(iLensVal), ledIntensity);
     }
 
     // Measure sharpness
@@ -672,11 +671,7 @@ int doFocus(int lensIncrement, bool isSave, bool isFocus) {
     moveLens(lensValMaxSharpness);
   }
 
-  if (savedSuccessfully) {
-    device_pref.setFrameIndex(frame_index);
-  }
-
-  return lensValMaxSharpness;
+  return savedSuccessfully;
 
 }
 
@@ -686,9 +681,13 @@ static esp_err_t stack_handler(httpd_req_t *req) {
   httpd_resp_set_hdr(req, "Access-Control-Allow-Origin", "*");
   httpd_resp_send(req, "OK", strlen("OK"));
   // acquire a stack
-  doFocus(5, true, true);
+  uint32_t frame_index = device_pref.getFrameIndex() + 1;
+  bool imageSaved = false;
+  // FIXME: decide which method to use..
+  imageSaved = doFocus(5, true, true, "/anglerfish_" + String(frame_index));
+  
   // focus back on old value
-  moveLens(lensValueOld);
+  //FIXME - perform autofocus here? moveLens(lensValueOld);
   return ESP_OK;
 }
 
@@ -705,13 +704,13 @@ static esp_err_t id_handler(httpd_req_t *req) {
   p += sprintf(p, uniqueID.c_str());
   *p++ = '}';
   *p++ = 0;
-  httpd_resp_set_type(req, "application/json");
-  httpd_resp_set_hdr(req, "Access-Control-Allow-Origin", "*");
+  httpd_resp_set_type(req, "applicationjson");
+  httpd_resp_set_hdr(req, "Access - Control - Allow - Origin", "*");
   return httpd_resp_send(req, json_response, strlen(json_response));
 }
 
 static esp_err_t index_handler(httpd_req_t *req) {
-  httpd_resp_set_type(req, "text/html");
+  httpd_resp_set_type(req, "texthtml");
   return httpd_resp_send(req, (const char *)INDEX_HTML, strlen(INDEX_HTML));
 }
 
@@ -732,6 +731,8 @@ static esp_err_t status_handler(httpd_req_t *req) {
 }
 
 static esp_err_t enable_handler(httpd_req_t *req) {
+  Serial.println("Going into deepsleep mode");
+  Serial.println(timelapseIntervalAnglerfish);
   device_pref.setIsTimelapse(true);
   static char json_response[1024];
   char * p = json_response;

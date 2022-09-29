@@ -3,14 +3,12 @@
   inspired by:
   https://www.hackster.io/KDPA/esp32-cam-video-surveillance-robot-a22367
 */
-//#define DEFAULT_STORAGE_TYPE_ESP32 STORAGE_SPIFFS
-#define DEFAULT_STORAGE_TYPE_ESP32 STORAGE_SD
-
+// Some URLS for controlling e.g. the light intensity in the browser
 //http://192.168.2.168/control?var=flash&val=100
 //http://192.168.1.4/controll?var=lens&val=100
 
 // external libraries
-#include <Adafruit_NeoPixel.h>
+
 #include "esp_wifi.h"
 #include "esp_camera.h"
 #include <WiFi.h>
@@ -18,8 +16,6 @@
 #include "soc/soc.h"
 #include "soc/rtc_cntl_reg.h"
 #include <SPIFFS.h>
-#include "camera.h"
-//#include "cameraM5Stack.h"
 #include <SD_MMC.h> // SD card
 #include <WiFiManager.h> // https://github.com/tzapu/WiFiManager
 #include <esp32-hal-ledc.h>
@@ -30,11 +26,9 @@
 #include "Arduino.h"
 #include <SPIFFS.h>
 #include "ArduinoJson.h"
-#include "html.h"
 #include "device_pref.h"
 #include <AccelStepper.h>
 #include <esp_log.h>"
-#include "ESP32FtpServer.h"
 #include <Update.h>
 
 #include "Base64.h"
@@ -45,26 +39,21 @@
 #include <esp_camera.h>
 #include "device_pref.h"
 #include <ESP32Ping.h>
+#include "html.h"
+#include "camera.h"
+//#include "cameraM5Stack.h"
 
-// FTP server to access data outside the "Jar"
-FtpServer ftpSrv;   //set #define FTP_DEBUG in ESP32FtpServer.h to see ftp verbose on serial
 
 /**********************
 
 ANGLERFISH settings
 
 **********************/
-const boolean isAnglerfish = true;
+//FIXME: We mostly need to differentiate between Matchboxcope/Anglerfish, where Anglerfish has the "dangerzone" aka: deepsleep that will never wake up
 const int timelapseIntervalAnglerfish = 60;
 boolean isTimelapseAnglerfish = false; // keep as false!
-boolean anglerfishIsAcquireStack = true; // acquire only single image or stack?
+boolean isAcquireStack = false; // acquire only single image or stack?
 
-/**********************
-
-OMNISCOPE settings
-
-**********************/
-const boolean isOmniscope = false;
 
 /**********************
 
@@ -73,15 +62,15 @@ WIFI
 **********************/
 boolean hostWifiAP = false; // set this variable if you want the ESP32 to be the host
 boolean isCaptivePortal = true; // want to autoconnect to wifi networks?
-const char* mSSID = "BenMur";//"UC2 - F8Team"; //"IPHT - Konf"; // "Blynk";
-const char* mPASSWORD = "MurBen3128"; //"_lachmannUC2"; //"WIa2!DcJ"; //"12345678";
+const char* mSSID = "Blynk2";//"UC2 - F8Team"; //"IPHT - Konf"; // "Blynk";
+const char* mPASSWORD = "12345678"; //"_lachmannUC2"; //"WIa2!DcJ"; //"12345678";
 const char* mSSIDAP = "Matchboxscope";
 const char* hostname = "matchboxscope";
 WiFiManager wm;
 // check wifi connectibility if not connected, try to reconnect - or restart?
 unsigned long previousCheckWifi = 0;
 unsigned long delayReconnect = 20000;  // 20 seconds delay
-
+bool isInternetAvailable = false;
 
 // Camera related
 bool isStreaming = false;
@@ -96,9 +85,9 @@ bool isStreamingStoppped = false;
 
 const char* myDomain = "script.google.com";
 String myScript = "/macros/s/AKfycbwF8y5az641P2EUkooJjpEVn36Bpu2nAxYpQ8WOcr0kWiBmnxP2jH1xdsvjc55rN14w/exec";
-String myFilename = "filename=ESP32-CAM.jpg";
-String mimeType = "&mimetype=image/jpeg";
-String myImage = "&datase=";
+String myFilename = "filename = ESP32 - CAM.jpg";
+String mimeType = "&mimetype = imagejpeg";
+String myImage = "&datase = ";
 
 int waitingTime = 30000; //Wait 30 seconds to google response.
 
@@ -114,7 +103,6 @@ boolean isTimelapse = true;
 
 // Server
 boolean isWebserver = true;
-boolean isFTPServer = true;
 
 
 /**********************
@@ -123,7 +111,7 @@ Ext. HARDWARE
 
 **********************/
 // LED
-const boolean IS_NEOPIXEL = false;
+
 const int freq = 8000; //800000;//19000; //12000
 const int pwmResolution = 8; //15
 const int ledChannel = 4; //some are used by the camera
@@ -163,9 +151,6 @@ DevicePreferences device_pref(pref, "camera", __DATE__ " " __TIME__);
 // LED ARRAY
 int ledMatrixCount = 2;
 
-// Declare our NeoPixel strip object:
-Adafruit_NeoPixel strip;
-
 /*
 *  OTA Server
 */
@@ -182,36 +167,12 @@ void setup()
   WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0); // prevent brownouts by silencing them
 
   // device-specific flags
-  if (isOmniscope){
-    Serial.println("I'm an omniscope");
-    isUseSD = false;
-    isWebserver = true;
-    isFTPServer = false;
-    isTimelapseAnglerfish = false;
-    isCaptivePortal = true;
-    hostWifiAP = false;
-    isTimelapse = false;
-  }
-  else if(isAnglerfish){
-    Serial.println("I', an anglerfish");
-    isUseSD = true;
-    isWebserver = true;
-    isFTPServer = true;
-    isTimelapseAnglerfish = false;
-    isCaptivePortal = true;//false;
-    hostWifiAP = false;//true;
-    isTimelapse = false;
-  }
-  else{ // most likely it's matchboxscope
-    Serial.println("I', a matchboxscope");
-    isUseSD = true;
-    isWebserver = true;
-    isFTPServer = true;
-    isTimelapseAnglerfish = false;
-    isCaptivePortal = false;
-    hostWifiAP = false;
-    isTimelapse = true;
-  }
+  isUseSD = true;
+  isWebserver = true;
+
+  isCaptivePortal = false;
+  hostWifiAP = false;
+  isTimelapse = true;
 
   // INIT SERIAL
   Serial.begin(115200);
@@ -220,7 +181,7 @@ void setup()
 
 
   /*
-  * AGLERFISH RELATED
+  AGLERFISH RELATED
   */
   // Reset the EEPROM's stored timelapse mode after each re - flash
   isFirstRun = device_pref.isFirstRun();
@@ -231,14 +192,18 @@ void setup()
   // INIT CAMERA
   isCameraAttached = initCamera();
   if (isCameraAttached) {
+    Serial.println("Camera is working");
     initCameraSettings();
+  }
+  else{
+    Serial.println("Camera is not working");
   }
 
   // INIT SD
   // We initialize SD_MMC here rather than in setup() because SD_MMC needs to reset the light pin
   // with a different pin mode.
   // 1-bit mode as suggested here:https://dr-mntn.net/2021/02/using-the-sd-card-in-1-bit-mode-on-the-esp32-cam-from-ai-thinker
-  if (not isUseSD or !SD_MMC.begin(" / sdcard", true)) {
+  if (not isUseSD or !SD_MMC.begin("sdcard", true)) { //FIXME: this sometimes leads to issues Unix vs. Windows formating - text encoding? Sometimes it copies to "sdcard" => Autoformating does this!!!
     Serial.println("SD Card Mount Failed");
     sdInitialized = false;
   }
@@ -256,40 +221,33 @@ void setup()
     }
   }
 
+  /* FIXME: I think a switch for the switch in case people have not connected it would be good? ;)
   if (isAnglerfish) {
-    // If the button is pressed, switch from timelapse mode back to refocusing mode
-    pinMode(reedSwitchPin, INPUT_PULLDOWN);
-    Serial.println("Press Button if you want to refocus (t..1s)");
-    delay(refocus_button_debounce);
-    bool buttonPressed = !digitalRead(reedSwitchPin); // pull up
-    Serial.print("Button pressed ? ");
-    if (buttonPressed) {
-      Serial.println("yes. Switching from timelapse mode to refocusing mode.");
-      device_pref.setIsTimelapse(false);
-    } else {
-      Serial.println("no");
-    }
+  // If the button is pressed, switch from timelapse mode back to refocusing mode
+  pinMode(reedSwitchPin, INPUT_PULLDOWN);
+  Serial.println("Press Button if you want to refocus (t..1s)");
+  delay(refocus_button_debounce);
+  bool buttonPressed = !digitalRead(reedSwitchPin); // pull up
+  Serial.print("Button pressed ? ");
+  if (buttonPressed) {
+  Serial.println("yes. Switching from timelapse mode to refocusing mode.");
+  device_pref.setIsTimelapse(false);
+  } else {
+  Serial.println("no");
+  }
 
-    // LED ARRAY
-    if (IS_NEOPIXEL) {
-      Serial.println("Using Neopixel strip");
-      strip = Adafruit_NeoPixel(ledMatrixCount, ledPin, NEO_GRB + NEO_KHZ800);
-      strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
-      strip.show();            // Turn OFF all pixels ASAP
-      strip.setBrightness(255); // Set BRIGHTNESS to about 1/5 (max = 255)
-    }
-    else {
-      Serial.println("Using LEDc");
-      digitalWrite(ledChannel, HIGH);
-      delay(100);
-      digitalWrite(ledChannel, LOW);
-      ledcSetup(ledChannel, freq, pwmResolution);
-      ledcAttachPin(ledPin, ledChannel);
-    }
+  Serial.println("Using LEDc");
+  digitalWrite(ledChannel, HIGH);
+  delay(100);
+  digitalWrite(ledChannel, LOW);
+  ledcSetup(ledChannel, freq, pwmResolution);
+  ledcAttachPin(ledPin, ledChannel);
+
   }
   else {
-    Serial.println("Setting up LED / PWM");
+  Serial.println("Setting up LEDPWM");
   }
+  */
 
   // retrieve old camera setting values
   exposureTime = device_pref.getCameraExposureTime();
@@ -299,101 +257,96 @@ void setup()
   Serial.print("gain : "); Serial.println(gain);
   Serial.print("timelapseInterval : "); Serial.println(timelapseInterval);
 
+  // Setting up LED
+  ledcSetup(ledChannel, freq, pwmResolution);
+  ledcAttachPin(ledPin, ledChannel);
 
-  // INIT LED
+  // Test Hardware
   blinkLed(1);
 
-  // INIT LENS
   moveLens(255);
   delay(100);
   moveLens(0);
 
 
+
   // only for Anglerfish if already focussed
   isTimelapseAnglerfish = device_pref.isTimelapse(); // set the global variable for the loop function
-  if (isAnglerfish) {
-    if (isTimelapseAnglerfish) {
-      int ledIntensity = 255;
 
-      // ONLY IF YOU WANT TO CAPTURE in ANGLERFISHMODE
-      Serial.println("In timelapse mode.");
-      // Save image to SD card
-      uint32_t frame_index = device_pref.getFrameIndex() + 1;
+  if (isTimelapseAnglerfish) {
+    int ledIntensity = 255;
 
-      // save frame - eventually
-      bool imageSaved = false;
-      imageSaved = snapPhoto(" / picture_LED0_" + String(frame_index), 0, ledIntensity);
+    // ONLY IF YOU WANT TO CAPTURE in ANGLERFISHMODE
+    Serial.println("In timelapse mode.");
+    // Save image to SD card
+    uint32_t frame_index = device_pref.getFrameIndex() + 1;
 
-      if (isAnglerfish) {
-        // also take Darkfield image
-        imageSaved = snapPhoto(" / picture_LED1_"  + String(frame_index), 1, ledIntensity);
+    // save frame - eventually
+    bool imageSaved = false;
 
-        if (imageSaved) {
-          device_pref.setFrameIndex(frame_index);
-        }
-      }
+    // FIXME: decide which method to use..
+    imageSaved = doFocus(5, true, false, "anglerfish_" + String(frame_index));
+    //imageSaved = snapPhoto("anglerfish_" + String(frame_index), ledIntensity);
 
-      // Sleep
-      Serial.print("Sleeping for ");
-      Serial.print(timelapseIntervalAnglerfish);
-      Serial.println(" s");
-      static const uint64_t usPerSec = 1000000; // Conversion factor from microseconds to seconds
-      esp_sleep_enable_timer_wakeup(timelapseIntervalAnglerfish * usPerSec);
-      esp_deep_sleep_start();
-      return;
+    // also take Darkfield image
+    //FIXME: This becomes obsolete nowimageSaved = snapPhoto("picture_LED1_"  + String(frame_index), 1, ledIntensity);
+    if (imageSaved) {
+      device_pref.setFrameIndex(frame_index);
     }
-    else {
-      Serial.println("In refocusing mode. Connect to Wifi and go to 192.168.4.1 / enable once you're done with focusing.");
-    }
+    // Sleep
+    Serial.print("Sleeping for ");
+    Serial.print(timelapseIntervalAnglerfish);
+    Serial.println(" s");
+    static const uint64_t usPerSec = 1000000; // Conversion factor from microseconds to seconds
+    esp_sleep_enable_timer_wakeup(timelapseIntervalAnglerfish * usPerSec);
+    esp_deep_sleep_start();
+    return;
   }
+  else {
+    Serial.println("In refocusing mode. Connect to Wifi and go to 192.168.4.1enable once you're done with focusing.");
+  }
+
 
   moveLens(255);
   delay(100);
   moveLens(0);
 
   // INIT WIFI
-  if (isWebserver) {
-    if (isCaptivePortal) {
-      // create a captive portal to connect to an existing WiFi AP with SSID/PW provided through the portal
-      isFirstRun = false;
-      autoconnectWifi(isFirstRun);
+  // FIXME: The strategy should be:
+  // 1. If starting up and no Wifi is set up (e.g. EEPROM settings empty), offer an AP (SSID: anglerfish)
+  // 1.a. if settings are available => connect
+  // 1.b. if wifi settings are available but not valid => offer AP
+  // 2. Save Wifi settings from "captive portal" (not necessarily the Wifimanager.h - bloatware? ;) ) and connect
+  // 3. continousyl check if wifi signal available, if not => restart
+  if (isCaptivePortal) {
+    // create a captive portal to connect to an existing WiFi AP with SSID/PW provided through the portal
+    isFirstRun = false;
+    autoconnectWifi(isFirstRun);
+  }
+  else {
+    if (hostWifiAP) {
+      // create an ESP32-based AP
+      initWifiAP(mSSIDAP);
     }
     else {
-      if (hostWifiAP) {
-        // create an ESP32-based AP
-        initWifiAP(mSSIDAP);
-      }
-      else {
-        // connect to an existing Wifi /W SSID/PW
-        joinWifi(mSSID, mPASSWORD);
-      }
+      // connect to an existing Wifi /W SSID/PW
+      joinWifi(mSSID, mPASSWORD);
     }
   }
+
 
   // INIT SPIFFS
   /*
-    if (!SPIFFS.begin()) { // SPIFFS must be initialized before the web server, which depends on it
-    Serial.println("Couldn't open SPIFFS!");
-    }
+  if (!SPIFFS.begin()) { // SPIFFS must be initialized before the web server, which depends on it
+  Serial.println("Couldn't open SPIFFS!");
+  }
   */
 
   // INIT Webserver
-  if (isWebserver) {
-    // Start the camera and command server
-    startCameraServer();
 
-    moveLens(255);
-    delay(100);
-    moveLens(0);
+  // Start the camera and command server
+  startCameraServer();
 
-    // INIT FTP Server
-    //ftpSrv.setCallback(_callback);
-    //ftpSrv.setTransferCallback(_transferCallback);
-    if (isFTPServer and sdInitialized) {
-      Serial.println("Starting FTP Server");
-      ftpSrv.begin("esp32", "esp32");   //username, password for ftp.   (default 21, 50009 for PASV)
-    }
-  }
 
   // OTA
   startOTAServer();
@@ -401,19 +354,19 @@ void setup()
   // initiliaze timer
   t_old = millis();
 
-
-  bool success = Ping.ping("www.google.com", 3);
-
-  if (!success) {
+  // FIXME: This is just a tet to see if this works in general - the standalone application works; My guess: An issue with the image dimensions
+  isInternetAvailable = Ping.ping("www.google.com", 3);
+  if (!isInternetAvailable) {
     Serial.println("Ping failed -> we are not connected to the internet most likely!");
   }
   else {
     Serial.println("Ping succesful -> we are connected to the internet most likely!.");
+    // Save image in Google Drive
+    saveCapturedImageGDrive();
   }
 
 
-  // Save image in Google Drive
-  saveCapturedImageGDrive();
+
 
 }
 
@@ -421,32 +374,39 @@ void setup()
 void loop() {
 
   // wait for incoming OTA client udpates
-  OTAserver.handleClient();
-
-  // offer file transfer via FTP - eventually
-  if (isFTPServer and sdInitialized) {
-    ftpSrv.handleFTP();
-  }
+  OTAserver.handleClient(); // FIXME: the OTA, "REST API" and stream run on 3 different ports - cause: me not being able to merge OTA and REST; STREAM shuold be independent to have a non-blockig experience
 
   // Perform timelapse imaging
   if (timelapseInterval > 0 and isTimelapse and ((millis() - t_old) > (1000 * timelapseInterval))) {
     //https://stackoverflow.com/questions/67090640/errors-while-interacting-with-microsd-card
     t_old = millis();
+    uint32_t frame_index = device_pref.getFrameIndex() + 1;
+    bool imageSaved = false;
+    
+    // turn on led
+    setLED(ledValueOld);
 
-    if (anglerfishIsAcquireStack) {
+    
+    if (isAcquireStack) { // FIXME: We could have a switch in the GUI for this settig
       // acquire a stack
-      doFocus(5, true, true);
+      // FIXME: decide which method to use..
+      imageSaved = doFocus(5, true, false, "/anglerfish_" + String(frame_index));
+
       // switch off lens
-      moveLens(0);
+      moveLens(0); // save energy
+      
     }
     else {
-      uint32_t frame_index = device_pref.getFrameIndex() + 1;
       // Acquire the image and save
       moveLens(lensValueOld);
-      if (saveImage(" / picture" + String(frame_index) + ".jpg")) {
+      imageSaved = saveImage("/picture" + String(frame_index) + ".jpg");
+    }
+    
+    if (imageSaved) {
         device_pref.setFrameIndex(frame_index);
       };
-    }
+    // turn off led
+    setLED(0);
   }
 
   // checking for WIFI connection
@@ -463,30 +423,22 @@ void loop() {
   }
 }
 
-void setLED(int numberLED, int intensity) {
-  if (IS_NEOPIXEL) {
-    // use LED strip
-    Serial.print("LED ARRAY:");
-    Serial.println(intensity);
-    strip.setPixelColor(numberLED, strip.Color(intensity, intensity, intensity));
-    strip.show();            // Turn OFF all pixels ASAP
-  }
-  else {
-    // use internal LED/TORCH
-    Serial.print("LED:");
-    Serial.println(intensity);
-    ledcWrite(ledChannel, intensity);
-  }
+void setLED(int intensity) {
+  // use internal LED/TORCH
+  Serial.print("LED : ");
+  Serial.println(intensity);
+  ledcWrite(ledChannel, intensity);
+
 }
 
 void blinkLed(int nTimes) {
   //TODO: Be careful with this - interferes with sensor and ledcWrite?!
   for (int iBlink = 0; iBlink < nTimes; iBlink++) {
-    setLED(0, 255);
-    setLED(1, 255);
+    setLED(255);
+    setLED(255);
     delay(50);
-    setLED(0, 0);
-    setLED(1, 0);
+    setLED(0);
+    setLED(0);
     delay(50);
   }
   delay(150);
