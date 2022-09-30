@@ -4,7 +4,7 @@
 void saveCapturedImageGithub(){
     /* Need to package: 
     curl   -X PUT   -H "Accept: application/vnd.github+json"   \
-    -H "Authorization: Bearer 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"  \
+    -H "Authorization: Bearer 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"  \ // FIXME: we can not store tokens in github :D 
     https://api.github.com/repos/anglerfishbot/AnglerfishGallery/contents/test3   -\
     d '{"message":"my commit message","committer":{"name":"anglerfishbot","email":"benedictdied@gmail.com"},"content":"bXkgbmV3IGZpbGUgY29udGVudHM="}' 
     */
@@ -21,6 +21,7 @@ void saveCapturedImageGDrive() {
   if (clientSecure.connect(myDomain, 443)) {
     Serial.println("Connection successful");
 
+    setLED(255); 
     camera_fb_t * fb = NULL;
     fb = esp_camera_fb_get();
     if (!fb) {
@@ -76,6 +77,7 @@ void saveCapturedImageGDrive() {
     Serial.println("Connection to " + String(myDomain) + " failed.");
   }
   clientSecure.stop();
+  setLED(0);
 }
 
 //https://github.com/zenmanenergy/ESP8266-Arduino-Examples/

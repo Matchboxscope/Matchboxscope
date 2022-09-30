@@ -50,7 +50,8 @@ ANGLERFISH settings
 
 **********************/
 //FIXME: We mostly need to differentiate between Matchboxcope/Anglerfish, where Anglerfish has the "dangerzone" aka: deepsleep that will never wake up
-const int timelapseIntervalAnglerfish = 60;
+const int timelapseIntervalAnglerfish = 10*60; // FIXME: This value should be adjustable through the GUI
+const int focuStackStepsizeAnglerfish = 25; // FIXME: This value should be adjustable through the GUI
 boolean isTimelapseAnglerfish = false; // keep as false!
 boolean isAcquireStack = false; // acquire only single image or stack?
 
@@ -97,9 +98,8 @@ int waitingTime = 30000; //Wait 30 seconds to google response.
 Timelapse
 
 **********************/
-uint64_t timelapseInterval = 60; // sec; timelapse interval // will be read from preferences!
+uint64_t timelapseInterval = -1; // FIXME: we should have a button in the GUI to enable it ;  sec; timelapse interval // will be read from preferences!
 static uint64_t t_old = 0;
-boolean isTimelapse = true;
 
 // Server
 boolean isWebserver = true;
@@ -166,14 +166,6 @@ void setup()
 {
   WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0); // prevent brownouts by silencing them
 
-  // device-specific flags
-  isUseSD = true;
-  isWebserver = true;
-
-  isCaptivePortal = false;
-  hostWifiAP = false;
-  isTimelapse = true;
-
   // INIT SERIAL
   Serial.begin(115200);
   Serial.setDebugOutput(true);
@@ -203,8 +195,9 @@ void setup()
   // We initialize SD_MMC here rather than in setup() because SD_MMC needs to reset the light pin
   // with a different pin mode.
   // 1-bit mode as suggested here:https://dr-mntn.net/2021/02/using-the-sd-card-in-1-bit-mode-on-the-esp32-cam-from-ai-thinker
-  if (not isUseSD or !SD_MMC.begin("sdcard", true)) { //FIXME: this sometimes leads to issues Unix vs. Windows formating - text encoding? Sometimes it copies to "sdcard" => Autoformating does this!!!
+  if (!SD_MMC.begin("/sdcard", true)) { //FIXME: this sometimes leads to issues Unix vs. Windows formating - text encoding? Sometimes it copies to "sdcard" => Autoformating does this!!!
     Serial.println("SD Card Mount Failed");
+    //FIXME: This should be indicated in the GUI 
     sdInitialized = false;
   }
   else {
@@ -222,6 +215,7 @@ void setup()
   }
 
   /* FIXME: I think a switch for the switch in case people have not connected it would be good? ;)
+   *  FIXME2: Alternatively we could check for the existance of a file on the SD card - then=> no soldering required, yey!
   if (isAnglerfish) {
   // If the button is pressed, switch from timelapse mode back to refocusing mode
   pinMode(reedSwitchPin, INPUT_PULLDOWN);
@@ -285,7 +279,7 @@ void setup()
     bool imageSaved = false;
 
     // FIXME: decide which method to use..
-    imageSaved = doFocus(5, true, false, "anglerfish_" + String(frame_index));
+    imageSaved = doFocus(focuStackStepsizeAnglerfish, true, false, "anglerfish_" + String(frame_index));
     //imageSaved = snapPhoto("anglerfish_" + String(frame_index), ledIntensity);
 
     // also take Darkfield image
@@ -377,16 +371,16 @@ void loop() {
   OTAserver.handleClient(); // FIXME: the OTA, "REST API" and stream run on 3 different ports - cause: me not being able to merge OTA and REST; STREAM shuold be independent to have a non-blockig experience
 
   // Perform timelapse imaging
-  if (timelapseInterval > 0 and isTimelapse and ((millis() - t_old) > (1000 * timelapseInterval))) {
+  if (timelapseInterval > 0 and ((millis() - t_old) > (1000 * timelapseInterval))) {
     //https://stackoverflow.com/questions/67090640/errors-while-interacting-with-microsd-card
     t_old = millis();
     uint32_t frame_index = device_pref.getFrameIndex() + 1;
     bool imageSaved = false;
-    
+
     // turn on led
     setLED(ledValueOld);
 
-    
+
     if (isAcquireStack) { // FIXME: We could have a switch in the GUI for this settig
       // acquire a stack
       // FIXME: decide which method to use..
@@ -394,17 +388,17 @@ void loop() {
 
       // switch off lens
       moveLens(0); // save energy
-      
+
     }
     else {
       // Acquire the image and save
       moveLens(lensValueOld);
       imageSaved = saveImage("/picture" + String(frame_index) + ".jpg");
     }
-    
+
     if (imageSaved) {
-        device_pref.setFrameIndex(frame_index);
-      };
+      device_pref.setFrameIndex(frame_index);
+    };
     // turn off led
     setLED(0);
   }
@@ -421,25 +415,4 @@ void loop() {
       ESP.restart();
     previousCheckWifi = currentTime;
   }
-}
-
-void setLED(int intensity) {
-  // use internal LED/TORCH
-  Serial.print("LED : ");
-  Serial.println(intensity);
-  ledcWrite(ledChannel, intensity);
-
-}
-
-void blinkLed(int nTimes) {
-  //TODO: Be careful with this - interferes with sensor and ledcWrite?!
-  for (int iBlink = 0; iBlink < nTimes; iBlink++) {
-    setLED(255);
-    setLED(255);
-    delay(50);
-    setLED(0);
-    setLED(0);
-    delay(50);
-  }
-  delay(150);
 }

@@ -281,7 +281,7 @@ void moveLens(int lensValue) {
   else if (lensValue < 0) {
     lensValue = 0;
   }
-  Serial.print("LENS Value");
+  Serial.print("LENS Value: ");
   Serial.println(lensValue);
   ledcSetup(lensChannel, freq, pwmResolution);
   ledcAttachPin(lensPin, lensChannel);
@@ -374,6 +374,7 @@ static esp_err_t capture_handler(httpd_req_t *req) {
     }
     esp_camera_fb_return(frameBuffer);
     Serial.printf("JPG: %uB", (uint32_t)(fb_len));
+    Serial.println("");
     return res;
   }
   esp_camera_fb_return(frameBuffer);
@@ -902,4 +903,26 @@ void startOTAServer() {
   OTAserver.begin();
   Serial.println("Starting OTA server on port: '82'");
   Serial.println("Visit http://IPADDRESS_SCOPE:82");
+}
+
+
+void setLED(int intensity) {
+  // use internal LED/TORCH
+  Serial.print("LED : ");
+  Serial.println(intensity);
+  ledcWrite(ledChannel, intensity);
+
+}
+
+void blinkLed(int nTimes) {
+  //TODO: Be careful with this - interferes with sensor and ledcWrite?!
+  for (int iBlink = 0; iBlink < nTimes; iBlink++) {
+    setLED(255);
+    setLED(255);
+    delay(50);
+    setLED(0);
+    setLED(0);
+    delay(50);
+  }
+  delay(150);
 }
