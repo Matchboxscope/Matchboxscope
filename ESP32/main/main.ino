@@ -199,6 +199,7 @@ void setup()
     Serial.println("SD Card Mount Failed");
     //FIXME: This should be indicated in the GUI 
     sdInitialized = false;
+    blinkLed(5);
   }
   else {
     sdInitialized = true;
