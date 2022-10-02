@@ -9,6 +9,7 @@
 
 // external libraries
 
+#include "FS.h"
 #include "esp_wifi.h"
 #include "esp_camera.h"
 #include <WiFi.h>
@@ -50,11 +51,12 @@ ANGLERFISH settings
 
 **********************/
 //FIXME: We mostly need to differentiate between Matchboxcope/Anglerfish, where Anglerfish has the "dangerzone" aka: deepsleep that will never wake up
-const int timelapseIntervalAnglerfish = 10*60; // FIXME: This value should be adjustable through the GUI
+const int timelapseIntervalAnglerfish = 1*60; // FIXME: This value should be adjustable through the GUI
 const int focuStackStepsizeAnglerfish = 25; // FIXME: This value should be adjustable through the GUI
 boolean isTimelapseAnglerfish = false; // keep as false!
 boolean isAcquireStack = false; // acquire only single image or stack?
 
+File myFile;
 
 /**********************
 
@@ -171,6 +173,12 @@ void setup()
   Serial.setDebugOutput(true);
   Serial.println();
 
+  
+
+
+  //Print the wakeup reason for ESP32
+  print_wakeup_reason();
+  
 
   /*
   AGLERFISH RELATED
@@ -199,7 +207,12 @@ void setup()
     Serial.println("SD Card Mount Failed");
     //FIXME: This should be indicated in the GUI 
     sdInitialized = false;
-    blinkLed(5);
+    // FIXME: won't work since LEDC is not yet initiated blinkLed(5);
+    /*
+      moveLens(255); delay(100); moveLens(0); delay(100);
+      moveLens(255); delay(100); moveLens(0); delay(100);
+      moveLens(255); delay(100); moveLens(0); delay(100);
+    */
   }
   else {
     sdInitialized = true;
@@ -213,36 +226,18 @@ void setup()
     else {
       Serial.println(cardType);
     }
+
+    Serial.println("Writing to file...");
+    writeFile(SD_MMC, "/debug.txt", "Starting to debug...");
+    
   }
 
-  /* FIXME: I think a switch for the switch in case people have not connected it would be good? ;)
-   *  FIXME2: Alternatively we could check for the existance of a file on the SD card - then=> no soldering required, yey!
-  if (isAnglerfish) {
-  // If the button is pressed, switch from timelapse mode back to refocusing mode
-  pinMode(reedSwitchPin, INPUT_PULLDOWN);
-  Serial.println("Press Button if you want to refocus (t..1s)");
-  delay(refocus_button_debounce);
-  bool buttonPressed = !digitalRead(reedSwitchPin); // pull up
-  Serial.print("Button pressed ? ");
-  if (buttonPressed) {
-  Serial.println("yes. Switching from timelapse mode to refocusing mode.");
-  device_pref.setIsTimelapse(false);
-  } else {
-  Serial.println("no");
-  }
+  // After SD Card init?
+  // ATTENTIONN: DON'T USE ANY SD-CARD RELATED GPIO!!
+  // set a wakeup pin so that we reset the Snow-white deepsleep and turn on the Wifi again: // FIXME: Makes sense?
+  esp_sleep_enable_ext0_wakeup(GPIO_NUM_13, 1); //=> GPIO: 4, level: 1
+  Serial.println("Set pin 13 high to wake up the ESP32 from deepsleep");
 
-  Serial.println("Using LEDc");
-  digitalWrite(ledChannel, HIGH);
-  delay(100);
-  digitalWrite(ledChannel, LOW);
-  ledcSetup(ledChannel, freq, pwmResolution);
-  ledcAttachPin(ledPin, ledChannel);
-
-  }
-  else {
-  Serial.println("Setting up LEDPWM");
-  }
-  */
 
   // retrieve old camera setting values
   exposureTime = device_pref.getCameraExposureTime();
@@ -253,12 +248,20 @@ void setup()
   Serial.print("timelapseInterval : "); Serial.println(timelapseInterval);
 
   // Setting up LED
+  appendFile(SD_MMC, "/debug.txt", "LOG 1!\n");
   ledcSetup(ledChannel, freq, pwmResolution);
   ledcAttachPin(ledPin, ledChannel);
+  appendFile(SD_MMC, "/debug.txt", "LOG 1.1!\n");
+  ledcSetup(lensChannel, freq, pwmResolution);
+  ledcAttachPin(lensPin, lensChannel);
+
 
   // Test Hardware
-  blinkLed(1);
-
+  appendFile(SD_MMC, "/debug.txt", "LOG 2!\n");
+  setLED(255);
+  delay(100);
+  setLED(0);
+  
   moveLens(255);
   delay(100);
   moveLens(0);
@@ -266,9 +269,11 @@ void setup()
 
 
   // only for Anglerfish if already focussed
+  appendFile(SD_MMC, "/debug.txt", "LOG 3!\n");
   isTimelapseAnglerfish = device_pref.isTimelapse(); // set the global variable for the loop function
 
   if (isTimelapseAnglerfish) {
+    appendFile(SD_MMC, "/debug.txt", "LOG 4!\n");
     int ledIntensity = 255;
 
     // ONLY IF YOU WANT TO CAPTURE in ANGLERFISHMODE
@@ -280,27 +285,33 @@ void setup()
     bool imageSaved = false;
 
     // FIXME: decide which method to use..
+    appendFile(SD_MMC, "/debug.txt", "LOG 5!\n");
+    device_pref.setFrameIndex(frame_index);
     imageSaved = doFocus(focuStackStepsizeAnglerfish, true, false, "anglerfish_" + String(frame_index));
     //imageSaved = snapPhoto("anglerfish_" + String(frame_index), ledIntensity);
 
     // also take Darkfield image
     //FIXME: This becomes obsolete nowimageSaved = snapPhoto("picture_LED1_"  + String(frame_index), 1, ledIntensity);
-    if (imageSaved) {
+    appendFile(SD_MMC, "/debug.txt", "LOG 6!\n");
+    /*if (imageSaved) {//FIXME: we should increase framenumber even if failed - since a corrupted file may lead to issues? 
       device_pref.setFrameIndex(frame_index);
     }
+    */
+    
     // Sleep
     Serial.print("Sleeping for ");
     Serial.print(timelapseIntervalAnglerfish);
     Serial.println(" s");
     static const uint64_t usPerSec = 1000000; // Conversion factor from microseconds to seconds
     esp_sleep_enable_timer_wakeup(timelapseIntervalAnglerfish * usPerSec);
+    myFile.close();
+    SD_MMC.end(); // FIXME: may cause issues when file not closed? categoreis: LED/SD-CARD issues
     esp_deep_sleep_start();
     return;
   }
   else {
     Serial.println("In refocusing mode. Connect to Wifi and go to 192.168.4.1enable once you're done with focusing.");
   }
-
 
   moveLens(255);
   delay(100);
@@ -397,7 +408,7 @@ void loop() {
       imageSaved = saveImage("/picture" + String(frame_index) + ".jpg");
     }
 
-    if (imageSaved) {
+    if (true) { //FIXME: we should increase framenumber even if failed - since a corrupted file may lead to issues? (imageSaved) {
       device_pref.setFrameIndex(frame_index);
     };
     // turn off led
@@ -416,4 +427,70 @@ void loop() {
       ESP.restart();
     previousCheckWifi = currentTime;
   }
+}
+
+
+
+//https://randomnerdtutorials.com/esp32-deep-sleep-arduino-ide-wake-up-sources/
+void print_wakeup_reason(){
+  esp_sleep_wakeup_cause_t wakeup_reason;
+
+  wakeup_reason = esp_sleep_get_wakeup_cause();
+
+  switch(wakeup_reason)
+  {
+    case ESP_SLEEP_WAKEUP_EXT0 :
+    Serial.println("Wakeup caused by external signal using RTC_IO => resetting timelapse mode"); 
+    device_pref.setIsTimelapse(false);
+    break;
+    case ESP_SLEEP_WAKEUP_EXT1 :
+    Serial.println("Wakeup caused by external signal using RTC_CNTL"); 
+    break;
+    case ESP_SLEEP_WAKEUP_TIMER :
+    Serial.println("Wakeup caused by timer"); 
+    break;
+    case ESP_SLEEP_WAKEUP_TOUCHPAD :
+    Serial.println("Wakeup caused by touchpad"); 
+    break;
+    case ESP_SLEEP_WAKEUP_ULP :
+    Serial.println("Wakeup caused by ULP program"); 
+    break;
+    default :
+    Serial.println(wakeup_reason);
+    Serial.printf("Wakeup was not caused by deep sleep: %d\n",wakeup_reason); 
+    break;
+  }
+}
+
+void writeFile(fs::FS &fs, const char * path, const char * message){
+  Serial.printf("Writing file: %s\n", path);
+
+  File file = fs.open(path, FILE_WRITE);
+  if(!file){
+    Serial.println("Failed to open file for writing");
+    return;
+  }
+  if(file.print(message)){
+    Serial.println("File written");
+  } else {
+    Serial.println("Write failed");
+  }
+  file.close();
+}
+
+
+void appendFile(fs::FS &fs, const char * path, const char * message){
+    Serial.printf("Appending to file: %s\n", path);
+
+    File file = fs.open(path, FILE_APPEND);
+    if(!file){
+        Serial.println("Failed to open file for appending");
+        return;
+    }
+    if(file.print(message)){
+        Serial.println("Message appended");
+    } else {
+        Serial.println("Append failed");
+    }
+    file.close();
 }

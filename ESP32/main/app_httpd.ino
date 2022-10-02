@@ -283,8 +283,6 @@ void moveLens(int lensValue) {
   }
   Serial.print("LENS Value: ");
   Serial.println(lensValue);
-  ledcSetup(lensChannel, freq, pwmResolution);
-  ledcAttachPin(lensPin, lensChannel);
   ledcWrite(lensChannel, lensValue);
 }
 
@@ -373,8 +371,8 @@ static esp_err_t capture_handler(httpd_req_t *req) {
       fb_len = jchunk.len;
     }
     esp_camera_fb_return(frameBuffer);
-    Serial.printf("JPG: %uB", (uint32_t)(fb_len));
-    Serial.println("");
+    Serial.printf("JPG: %uB\n", (uint32_t)(fb_len));
+    
     return res;
   }
   esp_camera_fb_return(frameBuffer);
@@ -654,6 +652,7 @@ bool doFocus(int lensIncrement, bool isSave, bool isFocus, String fileName) {
       savedSuccessfully = snapPhoto("/" + fileName +  "_Z_" + String(iLensVal), ledIntensity);
     }
 
+/* FIXME: This causes issues when in deepsleep mode . .see error.h
     // Measure sharpness
     frameBuffer = esp_camera_fb_get();
     esp_camera_fb_return(frameBuffer);
@@ -671,6 +670,8 @@ bool doFocus(int lensIncrement, bool isSave, bool isFocus, String fileName) {
   if (isFocus) {
     moveLens(lensValMaxSharpness);
   }
+  */
+  }
 
   return savedSuccessfully;
 
@@ -686,7 +687,9 @@ static esp_err_t stack_handler(httpd_req_t *req) {
   bool imageSaved = false;
   // FIXME: decide which method to use..
   imageSaved = doFocus(5, true, true, "/anglerfish_" + String(frame_index));
-  
+  if(true){ //(imageSaved)
+    device_pref.setFrameIndex(frame_index);
+  }
   // focus back on old value
   //FIXME - perform autofocus here? moveLens(lensValueOld);
   return ESP_OK;
@@ -745,6 +748,7 @@ static esp_err_t enable_handler(httpd_req_t *req) {
   httpd_resp_set_hdr(req, "Access-Control-Allow-Origin", "*");
   httpd_resp_send(req, json_response, strlen(json_response));
 
+  SD_MMC.end(); // FIXME: may cause issues when file not closed? categoreis: LED/SD-CARD issues
   ESP.restart();
   return 0;
 }
