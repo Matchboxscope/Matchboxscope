@@ -51,7 +51,7 @@ ANGLERFISH settings
 
 **********************/
 //FIXME: We mostly need to differentiate between Matchboxcope/Anglerfish, where Anglerfish has the "dangerzone" aka: deepsleep that will never wake up
-const int timelapseIntervalAnglerfish = 1*60; // FIXME: This value should be adjustable through the GUI
+const int timelapseIntervalAnglerfish = 10;//10*60; // FIXME: This value should be adjustable through the GUI
 const int focuStackStepsizeAnglerfish = 25; // FIXME: This value should be adjustable through the GUI
 boolean isTimelapseAnglerfish = false; // keep as false!
 boolean isAcquireStack = false; // acquire only single image or stack?
@@ -235,8 +235,8 @@ void setup()
   // After SD Card init?
   // ATTENTIONN: DON'T USE ANY SD-CARD RELATED GPIO!!
   // set a wakeup pin so that we reset the Snow-white deepsleep and turn on the Wifi again: // FIXME: Makes sense?
-  esp_sleep_enable_ext0_wakeup(GPIO_NUM_13, 1); //=> GPIO: 4, level: 1
-  Serial.println("Set pin 13 high to wake up the ESP32 from deepsleep");
+  esp_sleep_enable_ext0_wakeup(GPIO_NUM_12, 1); //=> GPIO: 4, level: 1
+  Serial.println("Set pin 12 high to wake up the ESP32 from deepsleep");
 
 
   // retrieve old camera setting values
