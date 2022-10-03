@@ -122,11 +122,10 @@ int ledValueOld = 0;
 
 // LENS
 const int lensChannel = 5; //some are used by the camera
-const int lensPin = 13;
+const int lensPin = 12;
 uint32_t lensValueOld = 0;
 
 // Button/reed-switch for resetting
-const int reedSwitchPin = 12;
 const int refocus_button_debounce = 1000;
 
 // global camera parameters for REST
@@ -141,10 +140,6 @@ boolean sdInitialized = false;
 boolean isFirstRun = false;
 boolean isUseSD = true;
 
-// initiliaze stepper motor
-//#define IS_MOTOR
-int pinStep = 12;
-int pinDir = 13;
 
 // Preferences
 Preferences pref;
@@ -172,12 +167,14 @@ void setup()
   Serial.begin(115200);
   Serial.setDebugOutput(true);
   Serial.println();
-
+  
+  //Print the wakeup reason for ESP32
+  print_wakeup_reason();
+  detachInterrupt(T3); // FIXME: just in case?
   
 
 
-  //Print the wakeup reason for ESP32
-  print_wakeup_reason();
+
   
 
   /*
@@ -207,6 +204,7 @@ void setup()
     Serial.println("SD Card Mount Failed");
     //FIXME: This should be indicated in the GUI 
     sdInitialized = false;
+    device_pref.setIsTimelapse(false); // FIXME: if SD card is missing => streaming mode!
     // FIXME: won't work since LEDC is not yet initiated blinkLed(5);
     /*
       moveLens(255); delay(100); moveLens(0); delay(100);
@@ -232,11 +230,6 @@ void setup()
     
   }
 
-  // After SD Card init?
-  // ATTENTIONN: DON'T USE ANY SD-CARD RELATED GPIO!!
-  // set a wakeup pin so that we reset the Snow-white deepsleep and turn on the Wifi again: // FIXME: Makes sense?
-  esp_sleep_enable_ext0_wakeup(GPIO_NUM_12, 1); //=> GPIO: 4, level: 1
-  Serial.println("Set pin 12 high to wake up the ESP32 from deepsleep");
 
 
   // retrieve old camera setting values
@@ -306,6 +299,20 @@ void setup()
     esp_sleep_enable_timer_wakeup(timelapseIntervalAnglerfish * usPerSec);
     myFile.close();
     SD_MMC.end(); // FIXME: may cause issues when file not closed? categoreis: LED/SD-CARD issues
+
+
+    // After SD Card init? and after the Lens was used?
+    // ATTENTIONN: DON'T USE ANY SD-CARD RELATED GPIO!!
+    // set a wakeup pin so that we reset the Snow-white deepsleep and turn on the Wifi again: // FIXME: Makes sense?
+    //esp_sleep_enable_ext0_wakeup(GPIO_NUM_15, 1); //=> GPIO: 4, level: 1
+    //Setup interrupt on Touch Pad 3 (GPIO15)
+    //touchAttachInterrupt(T3, callbackTouchpad, 40);
+    //Configure Touchpad as wakeup source
+    //esp_sleep_enable_touchpad_wakeup();
+
+    Serial.println("Set pin 12 high to wake up the ESP32 from deepsleep");
+    
+
     esp_deep_sleep_start();
     return;
   }
@@ -316,6 +323,19 @@ void setup()
   moveLens(255);
   delay(100);
   moveLens(0);
+
+  // After SD Card init? and after the Lens was used?
+  // ATTENTIONN: DON'T USE ANY SD-CARD RELATED GPIO!!
+  // set a wakeup pin so that we reset the Snow-white deepsleep and turn on the Wifi again: // FIXME: Makes sense?
+  //esp_sleep_enable_ext0_wakeup(GPIO_NUM_15, 1); //=> GPIO: 4, level: 1
+
+ //Setup interrupt on Touch Pad 3 (GPIO15)
+  //touchAttachInterrupt(T3, callbackTouchpad, 40);
+  //Configure Touchpad as wakeup source
+  //esp_sleep_enable_touchpad_wakeup();
+
+  Serial.println("Set pin 12 high to wake up the ESP32 from deepsleep");
+
 
   // INIT WIFI
   // FIXME: The strategy should be:
@@ -440,14 +460,15 @@ void print_wakeup_reason(){
   switch(wakeup_reason)
   {
     case ESP_SLEEP_WAKEUP_EXT0 :
-    Serial.println("Wakeup caused by external signal using RTC_IO => resetting timelapse mode"); 
-    device_pref.setIsTimelapse(false);
+    Serial.println("Wakeup caused by external signal using RTC_IO"); 
     break;
     case ESP_SLEEP_WAKEUP_EXT1 :
     Serial.println("Wakeup caused by external signal using RTC_CNTL"); 
     break;
     case ESP_SLEEP_WAKEUP_TIMER :
     Serial.println("Wakeup caused by timer"); 
+    // VSM still not working after automatic reboot - hitting Reset does the job :/ 
+    ESP.restart(); // FIMXE: Yup, this is weird: Since we connect the awake-Button AND the VCM transistor to Pin12, the pin is still in input mode when the esp is woken up by timer..so we have to get another cause for the wake up=> force restart!
     break;
     case ESP_SLEEP_WAKEUP_TOUCHPAD :
     Serial.println("Wakeup caused by touchpad"); 
@@ -456,7 +477,6 @@ void print_wakeup_reason(){
     Serial.println("Wakeup caused by ULP program"); 
     break;
     default :
-    Serial.println(wakeup_reason);
     Serial.printf("Wakeup was not caused by deep sleep: %d\n",wakeup_reason); 
     break;
   }
@@ -493,4 +513,8 @@ void appendFile(fs::FS &fs, const char * path, const char * message){
         Serial.println("Append failed");
     }
     file.close();
+}
+
+void callbackTouchpad(){
+  
 }
