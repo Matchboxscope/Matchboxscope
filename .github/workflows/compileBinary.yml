@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Upload-BIN
-          path: $PWD/build
+          path: /home/runner/work/Matchboxscope/Matchboxscope/ESP32/build
       
       - name: auto-commit
         uses: stefanzweifel/git-auto-commit-action@v4
