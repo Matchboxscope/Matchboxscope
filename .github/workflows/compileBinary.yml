@@ -1,4 +1,4 @@
-name: Compile ESP32 binary
+name: Compile ESP32 bin
 'on':
   - push
   - pull_request
@@ -22,13 +22,17 @@ jobs:
           arduino-cli --additional-urls
           https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json
           core update-index
+
           arduino-cli --additional-urls
           https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json
           core install arduino:samd
+
           arduino-cli --additional-urls
           https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json
           core install esp32:esp32
+
           arduino-cli core update-index
+
           arduino-cli core install esp32:esp32
       - name: Compile Sketch
         run: |

@@ -18,7 +18,6 @@
 #include "soc/rtc_cntl_reg.h"
 #include <SPIFFS.h>
 #include <SD_MMC.h> // SD card
-#include <WiFiManager.h> // https://github.com/tzapu/WiFiManager
 #include <esp32-hal-ledc.h>
 #include "esp_http_server.h"
 #include "esp_timer.h"
@@ -26,16 +25,16 @@
 #include "img_converters.h"
 #include "Arduino.h"
 #include <SPIFFS.h>
-#include "ArduinoJson.h"
 #include "device_pref.h"
-#include <AccelStepper.h>
 #include <esp_log.h>"
 #include <Update.h>
 
-#include "Base64.h"
-
+// External libraries
+#include "ArduinoJson.h"
+#include <WiFiManager.h> // https://github.com/tzapu/WiFiManager
 
 // Local header files
+#include "Base64.h"
 #include <HTTPClient.h>
 #include <esp_camera.h>
 #include "device_pref.h"
