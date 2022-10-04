@@ -11,7 +11,7 @@ jobs:
         include:
           - arduino-platform: 'esp32:esp32'
             fqbn: 'esp32:esp32:esp32'
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -39,9 +39,7 @@ jobs:
           arduino-cli compile --fqbn esp32:esp32:esp32:PSRAM=enabled,PartitionScheme=min_spiffs,CPUFreq=240 ./ESP32/main/main.ino   --libraries ./ESP32/libraries/ --clean --build-path $PWD/build
           #arduino-cli compile --fqbn esp32:esp32:esp32:PSRAM=disabled,PartitionScheme=huge_app,CPUFreq=80  ./ESP32/main/main.ino --libraries ./ESP32/libraries/ --export-binaries
           ls ./
-          ls ./ESP32/
-          if exist ESP32/build ( dir ESP32/build) else ( echo No)
-                    
+          ls ./ESP32/        
           #IF EXIST ./ESP32/build/main.ino.elf DEL /F ./ESP32/build/main.ino.elf
           #IF EXIST ./ESP32/build/main.ino.map DEL /F ./ESP32/build/main.ino.map
           #IF EXIST ./ESP32/build/main.ino.partitions.bin DEL /F ./ESP32/build/main.ino.partitions.bin
