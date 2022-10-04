@@ -38,7 +38,10 @@ jobs:
         run: |
           arduino-cli compile --fqbn esp32:esp32:esp32:PSRAM=enabled,PartitionScheme=min_spiffs,CPUFreq=240 ./ESP32/main/main.ino   --libraries ./ESP32/libraries/ --clean
           #arduino-cli compile --fqbn esp32:esp32:esp32:PSRAM=disabled,PartitionScheme=huge_app,CPUFreq=80  ./ESP32/main/main.ino --libraries ./ESP32/libraries/ --export-binaries
-          dir ./ESP32/build/
+          dir ./
+          dir ./ESP32/
+          if exist ESP32/build ( dir ESP32/build) else ( echo No)
+                    
           #IF EXIST ./ESP32/build/main.ino.elf DEL /F ./ESP32/build/main.ino.elf
           #IF EXIST ./ESP32/build/main.ino.map DEL /F ./ESP32/build/main.ino.map
           #IF EXIST ./ESP32/build/main.ino.partitions.bin DEL /F ./ESP32/build/main.ino.partitions.bin
