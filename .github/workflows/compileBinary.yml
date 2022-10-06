@@ -38,7 +38,7 @@ jobs:
         run: |
           arduino-cli compile --fqbn esp32:esp32:esp32:PSRAM=enabled,PartitionScheme=min_spiffs,CPUFreq=240 ./ESP32/main/main.ino   --libraries ./ESP32/libraries/ --clean --build-path $PWD/build
           #arduino-cli compile --fqbn esp32:esp32:esp32:PSRAM=disabled,PartitionScheme=huge_app,CPUFreq=80  ./ESP32/main/main.ino --libraries ./ESP32/libraries/ --export-binaries
-          $PWD/build  
+          echo $PWD
           ls $PWD/build           
       - name: Archive
         uses: actions/upload-artifact@v2
