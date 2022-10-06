@@ -38,12 +38,13 @@ jobs:
         run: |
           arduino-cli compile --fqbn esp32:esp32:esp32:PSRAM=enabled,PartitionScheme=min_spiffs,CPUFreq=240 ./ESP32/main/main.ino   --libraries ./ESP32/libraries/ --clean --build-path $PWD/build
           #arduino-cli compile --fqbn esp32:esp32:esp32:PSRAM=disabled,PartitionScheme=huge_app,CPUFreq=80  ./ESP32/main/main.ino --libraries ./ESP32/libraries/ --export-binaries
+          $PWD/build  
           ls $PWD/build           
       - name: Archive
         uses: actions/upload-artifact@v2
         with:
           name: Upload-BIN
-          path: /home/runner/work/Matchboxscope/Matchboxscope/ESP32/build
+          path: /home/runner/work/Matchboxscope/Matchboxscope/build
       
       - name: auto-commit
         uses: stefanzweifel/git-auto-commit-action@v4
