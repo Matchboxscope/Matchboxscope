@@ -401,6 +401,8 @@ void loop() {
   // wait for incoming OTA client udpates
   OTAserver.handleClient(); // FIXME: the OTA, "REST API" and stream run on 3 different ports - cause: me not being able to merge OTA and REST; STREAM shuold be independent to have a non-blockig experience
 
+  // reconnect wifi
+
   // Perform timelapse imaging
   if (timelapseInterval > 0 and ((millis() - t_old) > (1000 * timelapseInterval))) {
     //https://stackoverflow.com/questions/67090640/errors-while-interacting-with-microsd-card
