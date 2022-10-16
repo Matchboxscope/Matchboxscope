@@ -424,6 +424,8 @@ void loop() {
     ftpSrv.handleFTP();
   }
 
+  // reconnect wifi
+
   // Perform timelapse imaging
   if (timelapseInterval > 0 and isTimelapse and ((millis() - t_old) > (1000 * timelapseInterval))) {
     //https://stackoverflow.com/questions/67090640/errors-while-interacting-with-microsd-card
