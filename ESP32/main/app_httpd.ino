@@ -61,7 +61,7 @@ void initCameraSettings() {
 }
 
 
-bool saveImage(String filename) {
+bool saveImage(String filename, int ledIntensity) {
 
   // Stop stream
   isStreaming = false;
@@ -70,6 +70,7 @@ bool saveImage(String filename) {
   if (sdInitialized) { // Do not attempt to save anything to a non-existig SD card
     camera_fb_t * frameBuffer = NULL;
 
+    setLED(ledIntensity);
     // set maximum framesize
     sensor_t * s = esp_camera_sensor_get();
     setFrameSize(device_pref.getCameraFramesize()); // TODO: Why does it change the exposure time/brightness??!
@@ -86,6 +87,7 @@ bool saveImage(String filename) {
 
     // Take picture LED #0
     frameBuffer = esp_camera_fb_get();
+    setLED(0);
 
     if (!frameBuffer) {
       Serial.println("Camera capture failed");
@@ -617,15 +619,15 @@ boolean snapPhoto(String fileName, int ledIntensity) {
   bool savedSuccessfully = false;
 
   // FIXME: clever to have the LED turned on here or rather outside the snap function? 
-  setLED(ledIntensity); // turn on LED
-  savedSuccessfully = saveImage(fileName + ".jpg");
+  //setLED(ledIntensity); // turn on LED
+  savedSuccessfully = saveImage(fileName + ".jpg", ledIntensity);
   // TODO make this traggerable from - perhaps a button?
   // FIXME: this should be triggered by a buttun - or only if wifi and internet are available:
   if (isInternetAvailable) {
     saveCapturedImageGDrive();
   }
 
-  setLED(ledValueOld); // tune LED to old value
+  //setLED(ledValueOld); // tune LED to old value
   return savedSuccessfully;
 }
 

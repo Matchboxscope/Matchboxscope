@@ -424,7 +424,7 @@ void loop() {
     else {
       // Acquire the image and save
       moveLens(lensValueOld);
-      imageSaved = saveImage("/picture" + String(frame_index) + ".jpg");
+      imageSaved = saveImage("/picture" + String(frame_index) + ".jpg", ledValueOld);
     }
 
     if (true) { //FIXME: we should increase framenumber even if failed - since a corrupted file may lead to issues? (imageSaved) {
