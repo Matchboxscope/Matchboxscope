@@ -6,3 +6,6 @@ STL/Matchboxscope_v0_Bauteil50_10.stl
 STL/Matchboxscope_v0_00_chip_7.stl
 STL/Matchboxscope_v0_00_chip_25.stl
 *.tif
+build/*
+bin/*
+ESP32/bin/*
