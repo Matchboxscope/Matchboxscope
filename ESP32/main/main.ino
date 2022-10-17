@@ -206,9 +206,9 @@ void setup()
     device_pref.setIsTimelapse(false); // FIXME: if SD card is missing => streaming mode!
     // FIXME: won't work since LEDC is not yet initiated blinkLed(5);
     /*
-      moveLens(255); delay(100); moveLens(0); delay(100);
-      moveLens(255); delay(100); moveLens(0); delay(100);
-      moveLens(255); delay(100); moveLens(0); delay(100);
+      setLens(255); delay(100); setLens(0); delay(100);
+      setLens(255); delay(100); setLens(0); delay(100);
+      setLens(255); delay(100); setLens(0); delay(100);
     */
   }
   else {
@@ -254,9 +254,9 @@ void setup()
   delay(100);
   setLED(0);
   
-  moveLens(255);
+  setLens(255);
   delay(100);
-  moveLens(0);
+  setLens(0);
 
 
 
@@ -319,9 +319,9 @@ void setup()
     Serial.println("In refocusing mode. Connect to Wifi and go to 192.168.4.1enable once you're done with focusing.");
   }
 
-  moveLens(255);
+  setLens(255);
   delay(100);
-  moveLens(0);
+  setLens(0);
 
   // After SD Card init? and after the Lens was used?
   // ATTENTIONN: DON'T USE ANY SD-CARD RELATED GPIO!!
@@ -420,13 +420,12 @@ void loop() {
       imageSaved = doFocus(5, true, false, "/anglerfish_" + String(frame_index));
 
       // switch off lens
-      moveLens(0); // save energy
+      setLens(0); // save energy
 
     }
     else {
       // Acquire the image and save
-      moveLens(lensValueOld);
-      imageSaved = saveImage("/picture" + String(frame_index) + ".jpg", ledValueOld);
+      imageSaved = saveImage("/picture" + String(frame_index) + ".jpg", ledValueOld, lensValueOld);
     }
 
     if (true) { //FIXME: we should increase framenumber even if failed - since a corrupted file may lead to issues? (imageSaved) {

@@ -61,7 +61,7 @@ void initCameraSettings() {
 }
 
 
-bool saveImage(String filename, int ledIntensity) {
+bool saveImage(String filename, int ledIntensity, int lensValue) {
 
   // Stop stream
   isStreaming = false;
@@ -70,6 +70,9 @@ bool saveImage(String filename, int ledIntensity) {
   if (sdInitialized) { // Do not attempt to save anything to a non-existig SD card
     camera_fb_t * frameBuffer = NULL;
 
+    // move lens
+    setLens(lensValue);
+    delay(50);
     setLED(ledIntensity);
     // set maximum framesize
     sensor_t * s = esp_camera_sensor_get();
@@ -87,7 +90,11 @@ bool saveImage(String filename, int ledIntensity) {
 
     // Take picture LED #0
     frameBuffer = esp_camera_fb_get();
+    
+    // turn off lens/LED to save energy
     setLED(0);
+    setLens(0);
+    
 
     if (!frameBuffer) {
       Serial.println("Camera capture failed");
@@ -267,7 +274,7 @@ static esp_err_t json_handler(httpd_req_t *req) {
     if (doc.containsKey("lensvalue")) {
       // LENS Value
       lensValueOld = doc["lensvalue"];
-      moveLens(lensValueOld);
+      setLens(lensValueOld);
       Serial.println(lensValueOld);
     }
 
@@ -277,16 +284,6 @@ static esp_err_t json_handler(httpd_req_t *req) {
   }
 }
 
-void moveLens(int lensValue) {
-  if (lensValue > 255)
-    lensValue = 255;
-  else if (lensValue < 0) {
-    lensValue = 0;
-  }
-  Serial.print("LENS Value: ");
-  Serial.println(lensValue);
-  ledcWrite(lensChannel, lensValue);
-}
 
 int readFile(char *fname, httpd_req_t *req) {
   //https://github.com/k-kimura123/Final_candyart_project/blob/ff3c950d02614a1ea169afaa0ac1793b503db4c5/main/include/myserver_config.c
@@ -589,7 +586,7 @@ static esp_err_t cmd_handler(httpd_req_t *req)
   {
     // LENS
     lensValueOld = val;
-    moveLens(lensValueOld);
+    setLens(lensValueOld);
   }
   else
   {
@@ -615,12 +612,12 @@ static esp_err_t restart_handler(httpd_req_t *req) {
   return ESP_OK;
 }
 
-boolean snapPhoto(String fileName, int ledIntensity) {
+boolean snapPhoto(String fileName, int ledIntensity, int lensVal) {
   bool savedSuccessfully = false;
 
   // FIXME: clever to have the LED turned on here or rather outside the snap function? 
   //setLED(ledIntensity); // turn on LED
-  savedSuccessfully = saveImage(fileName + ".jpg", ledIntensity);
+  savedSuccessfully = saveImage(fileName + ".jpg", ledIntensity, lensVal);
   // TODO make this traggerable from - perhaps a button?
   // FIXME: this should be triggered by a buttun - or only if wifi and internet are available:
   if (isInternetAvailable) {
@@ -644,17 +641,14 @@ bool doFocus(int lensIncrement, bool isSave, bool isFocus, String fileName) {
   bool savedSuccessfully = false;
 
   for (int iLensVal = 0; iLensVal < 255; iLensVal += abs(lensIncrement)) {
-    // move lens
-    moveLens(iLensVal);
-    delay(50);
 
     // save frame - eventually
     if (isSave) {
       Serial.println("/" + fileName +  "_Z_" + String(iLensVal));
-      savedSuccessfully = snapPhoto("/" + fileName +  "_Z_" + String(iLensVal), ledIntensity);
+      savedSuccessfully = snapPhoto("/" + fileName +  "_Z_" + String(iLensVal), ledIntensity, iLensVal);
     }
 
-/* FIXME: This causes issues when in deepsleep mode . .see error.h
+    /* FIXME: This causes issues when in deepsleep mode . .see error.h
     // Measure sharpness
     frameBuffer = esp_camera_fb_get();
     esp_camera_fb_return(frameBuffer);
@@ -670,7 +664,7 @@ bool doFocus(int lensIncrement, bool isSave, bool isFocus, String fileName) {
   }
   // autofocus?
   if (isFocus) {
-    moveLens(lensValMaxSharpness);
+    setLens(lensValMaxSharpness);
   }
   */
   }
@@ -693,7 +687,7 @@ static esp_err_t stack_handler(httpd_req_t *req) {
     device_pref.setFrameIndex(frame_index);
   }
   // focus back on old value
-  //FIXME - perform autofocus here? moveLens(lensValueOld);
+  //FIXME - perform autofocus here? setLens(lensValueOld);
   return ESP_OK;
 }
 
@@ -912,12 +906,23 @@ void startOTAServer() {
 }
 
 
+void setLens(int lensValue) {
+  if (lensValue > 255)
+    lensValue = 255;
+  else if (lensValue < 0) {
+    lensValue = 0;
+  }
+  Serial.print("LENS Value: ");
+  Serial.println(lensValue);
+  ledcWrite(lensChannel, lensValue);
+}
+
+
 void setLED(int intensity) {
   // use internal LED/TORCH
   Serial.print("LED : ");
   Serial.println(intensity);
   ledcWrite(ledChannel, intensity);
-
 }
 
 void blinkLed(int nTimes) {
