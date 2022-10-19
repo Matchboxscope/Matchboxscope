@@ -268,6 +268,13 @@ void setup()
     appendFile(SD_MMC, "/debug.txt", "LOG 4!\n");
     int ledIntensity = 255;
 
+    // override  camera settings
+     sensor_t * s = esp_camera_sensor_get();
+  if (val == 0)
+    s->set_framesize(s, FRAMESIZE_UXGA);
+    s->set_quality(s, 10);
+    
+
     // ONLY IF YOU WANT TO CAPTURE in ANGLERFISHMODE
     Serial.println("In timelapse mode.");
     // Save image to SD card
