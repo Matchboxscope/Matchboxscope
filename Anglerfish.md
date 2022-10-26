@@ -17,6 +17,11 @@ A [quick survey](https://twitter.com/OpenUc2/status/1528406118816534529 ) led to
 
 The **Anglerfish** shares many aspects with the **Matchboxscope**, hence it may be worth to also have a look [here](Matchboxscope.md)
 
+<a href="#logo" name="logo"><img src="[./IMAGES/anglerfish/image.png](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2F%3Fhl%3DDE&psig=AOvVaw2SV0vT-h0arN0Z_GGUlUUH&ust=1666905786937000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCIjbuIzq_voCFQAAAAAdAAAAABAE)" width="300"></a>
+
+***NEW !!!!*** We have a Youtube Video hat guides you through the process of building your own Anglerfish: https://www.youtube.com/watch?v=XuOOWYZesqA&feature=youtu.be
+
+
 
 # Assembly
 
