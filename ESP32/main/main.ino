@@ -64,7 +64,7 @@ WIFI
 **********************/
 boolean hostWifiAP = false; // set this variable if you want the ESP32 to be the host
 boolean isCaptivePortal = true; // want to autoconnect to wifi networks?
-const char* mSSID = "Blynk2";//"UC2 - F8Team"; //"IPHT - Konf"; // "Blynk";
+const char* mSSID = "Blynk";//"UC2 - F8Team"; //"IPHT - Konf"; // "Blynk";
 const char* mPASSWORD = "12345678"; //"_lachmannUC2"; //"WIa2!DcJ"; //"12345678";
 const char* mSSIDAP = "Matchboxscope";
 const char* hostname = "matchboxscope";
@@ -166,15 +166,12 @@ void setup()
   Serial.begin(115200);
   Serial.setDebugOutput(true);
   Serial.println();
-  
+
   //Print the wakeup reason for ESP32
   print_wakeup_reason();
   detachInterrupt(T3); // FIXME: just in case?
-  
 
 
-
-  
 
   /*
   AGLERFISH RELATED
@@ -185,11 +182,20 @@ void setup()
     device_pref.setIsTimelapse(false);
   }
 
+  // retrieve old camera setting values
+  exposureTime = device_pref.getCameraExposureTime();
+  gain = device_pref.getCameraGain();
+  timelapseInterval = device_pref.getTimelapseInterval();  // Get timelapseInterval
+  Serial.print("exposureTime : "); Serial.println(exposureTime );
+  Serial.print("gain : "); Serial.println(gain);
+  Serial.print("timelapseInterval : "); Serial.println(timelapseInterval);
+
+
   // INIT CAMERA
   isCameraAttached = initCamera();
   if (isCameraAttached) {
     Serial.println("Camera is working");
-    initCameraSettings();
+    initCameraSettings(); // set camera settings - exposure time and gain will betaken from preferences
   }
   else{
     Serial.println("Camera is not working");
@@ -201,14 +207,14 @@ void setup()
   // 1-bit mode as suggested here:https://dr-mntn.net/2021/02/using-the-sd-card-in-1-bit-mode-on-the-esp32-cam-from-ai-thinker
   if (!SD_MMC.begin("/sdcard", true)) { //FIXME: this sometimes leads to issues Unix vs. Windows formating - text encoding? Sometimes it copies to "sdcard" => Autoformating does this!!!
     Serial.println("SD Card Mount Failed");
-    //FIXME: This should be indicated in the GUI 
+    //FIXME: This should be indicated in the GUI
     sdInitialized = false;
     device_pref.setIsTimelapse(false); // FIXME: if SD card is missing => streaming mode!
     // FIXME: won't work since LEDC is not yet initiated blinkLed(5);
     /*
-      setLens(255); delay(100); setLens(0); delay(100);
-      setLens(255); delay(100); setLens(0); delay(100);
-      setLens(255); delay(100); setLens(0); delay(100);
+    setLens(255); delay(100); setLens(0); delay(100);
+    setLens(255); delay(100); setLens(0); delay(100);
+    setLens(255); delay(100); setLens(0); delay(100);
     */
   }
   else {
@@ -226,18 +232,12 @@ void setup()
 
     Serial.println("Writing to file...");
     writeFile(SD_MMC, "/debug.txt", "Starting to debug...");
-    
+
   }
 
 
 
-  // retrieve old camera setting values
-  exposureTime = device_pref.getCameraExposureTime();
-  gain = device_pref.getCameraGain();
-  timelapseInterval = device_pref.getTimelapseInterval();  // Get timelapseInterval
-  Serial.print("exposureTime : "); Serial.println(exposureTime );
-  Serial.print("gain : "); Serial.println(gain);
-  Serial.print("timelapseInterval : "); Serial.println(timelapseInterval);
+
 
   // Setting up LED
   appendFile(SD_MMC, "/debug.txt", "LOG 1!\n");
@@ -253,7 +253,7 @@ void setup()
   setLED(255);
   delay(100);
   setLED(0);
-  
+
   setLens(255);
   delay(100);
   setLens(0);
@@ -269,11 +269,10 @@ void setup()
     int ledIntensity = 255;
 
     // override  camera settings
-     sensor_t * s = esp_camera_sensor_get();
-  if (val == 0)
+    sensor_t * s = esp_camera_sensor_get();
     s->set_framesize(s, FRAMESIZE_UXGA);
     s->set_quality(s, 10);
-    
+
 
     // ONLY IF YOU WANT TO CAPTURE in ANGLERFISHMODE
     Serial.println("In timelapse mode.");
@@ -292,11 +291,11 @@ void setup()
     // also take Darkfield image
     //FIXME: This becomes obsolete nowimageSaved = snapPhoto("picture_LED1_"  + String(frame_index), 1, ledIntensity);
     appendFile(SD_MMC, "/debug.txt", "LOG 6!\n");
-    /*if (imageSaved) {//FIXME: we should increase framenumber even if failed - since a corrupted file may lead to issues? 
-      device_pref.setFrameIndex(frame_index);
+    /*if (imageSaved) {//FIXME: we should increase framenumber even if failed - since a corrupted file may lead to issues?
+    device_pref.setFrameIndex(frame_index);
     }
     */
-    
+
     // Sleep
     Serial.print("Sleeping for ");
     Serial.print(timelapseIntervalAnglerfish);
@@ -317,7 +316,7 @@ void setup()
     //esp_sleep_enable_touchpad_wakeup();
 
     Serial.println("Set pin 12 high to wake up the ESP32 from deepsleep");
-    
+
 
     esp_deep_sleep_start();
     return;
@@ -331,11 +330,11 @@ void setup()
   setLens(0);
 
   // After SD Card init? and after the Lens was used?
-  // ATTENTIONN: DON'T USE ANY SD-CARD RELATED GPIO!!
+  // ATTENTIONN: DON'T USE ANY SD - CARD RELATED GPIO!!
   // set a wakeup pin so that we reset the Snow-white deepsleep and turn on the Wifi again: // FIXME: Makes sense?
   //esp_sleep_enable_ext0_wakeup(GPIO_NUM_15, 1); //=> GPIO: 4, level: 1
 
- //Setup interrupt on Touch Pad 3 (GPIO15)
+  //Setup interrupt on Touch Pad 3 (GPIO15)
   //touchAttachInterrupt(T3, callbackTouchpad, 40);
   //Configure Touchpad as wakeup source
   //esp_sleep_enable_touchpad_wakeup();
@@ -369,9 +368,9 @@ void setup()
 
   // INIT SPIFFS
   /*
-  if (!SPIFFS.begin()) { // SPIFFS must be initialized before the web server, which depends on it
-  Serial.println("Couldn't open SPIFFS!");
-  }
+    if (!SPIFFS.begin()) { // SPIFFS must be initialized before the web server, which depends on it
+    Serial.println("Couldn't open SPIFFS!");
+    }
   */
 
   // INIT Webserver
@@ -459,45 +458,45 @@ void loop() {
 
 
 //https://randomnerdtutorials.com/esp32-deep-sleep-arduino-ide-wake-up-sources/
-void print_wakeup_reason(){
+void print_wakeup_reason() {
   esp_sleep_wakeup_cause_t wakeup_reason;
 
   wakeup_reason = esp_sleep_get_wakeup_cause();
 
-  switch(wakeup_reason)
+  switch (wakeup_reason)
   {
     case ESP_SLEEP_WAKEUP_EXT0 :
-    Serial.println("Wakeup caused by external signal using RTC_IO"); 
-    break;
+      Serial.println("Wakeup caused by external signal using RTC_IO");
+      break;
     case ESP_SLEEP_WAKEUP_EXT1 :
-    Serial.println("Wakeup caused by external signal using RTC_CNTL"); 
-    break;
+      Serial.println("Wakeup caused by external signal using RTC_CNTL");
+      break;
     case ESP_SLEEP_WAKEUP_TIMER :
-    Serial.println("Wakeup caused by timer"); 
-    // VSM still not working after automatic reboot - hitting Reset does the job :/ 
-    ESP.restart(); // FIMXE: Yup, this is weird: Since we connect the awake-Button AND the VCM transistor to Pin12, the pin is still in input mode when the esp is woken up by timer..so we have to get another cause for the wake up=> force restart!
-    break;
+      Serial.println("Wakeup caused by timer");
+      // VSM still not working after automatic reboot - hitting Reset does the job :/
+      ESP.restart(); // FIMXE: Yup, this is weird: Since we connect the awake-Button AND the VCM transistor to Pin12, the pin is still in input mode when the esp is woken up by timer..so we have to get another cause for the wake up=> force restart!
+      break;
     case ESP_SLEEP_WAKEUP_TOUCHPAD :
-    Serial.println("Wakeup caused by touchpad"); 
-    break;
+      Serial.println("Wakeup caused by touchpad");
+      break;
     case ESP_SLEEP_WAKEUP_ULP :
-    Serial.println("Wakeup caused by ULP program"); 
-    break;
+      Serial.println("Wakeup caused by ULP program");
+      break;
     default :
-    Serial.printf("Wakeup was not caused by deep sleep: %d\n",wakeup_reason); 
-    break;
+      Serial.printf("Wakeup was not caused by deep sleep: %d\n", wakeup_reason);
+      break;
   }
 }
 
-void writeFile(fs::FS &fs, const char * path, const char * message){
+void writeFile(fs::FS &fs, const char * path, const char * message) {
   Serial.printf("Writing file: %s\n", path);
 
   File file = fs.open(path, FILE_WRITE);
-  if(!file){
+  if (!file) {
     Serial.println("Failed to open file for writing");
     return;
   }
-  if(file.print(message)){
+  if (file.print(message)) {
     Serial.println("File written");
   } else {
     Serial.println("Write failed");
@@ -506,22 +505,22 @@ void writeFile(fs::FS &fs, const char * path, const char * message){
 }
 
 
-void appendFile(fs::FS &fs, const char * path, const char * message){
-    Serial.printf("Appending to file: %s\n", path);
+void appendFile(fs::FS &fs, const char * path, const char * message) {
+  Serial.printf("Appending to file: %s\n", path);
 
-    File file = fs.open(path, FILE_APPEND);
-    if(!file){
-        Serial.println("Failed to open file for appending");
-        return;
-    }
-    if(file.print(message)){
-        Serial.println("Message appended");
-    } else {
-        Serial.println("Append failed");
-    }
-    file.close();
+  File file = fs.open(path, FILE_APPEND);
+  if (!file) {
+    Serial.println("Failed to open file for appending");
+    return;
+  }
+  if (file.print(message)) {
+    Serial.println("Message appended");
+  } else {
+    Serial.println("Append failed");
+  }
+  file.close();
 }
 
-void callbackTouchpad(){
-  
+void callbackTouchpad() {
+
 }
