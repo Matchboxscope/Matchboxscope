@@ -1,5 +1,4 @@
-/*
-// Observation:
+> Observation:
 if voltage of battery drops => SD card error since file may be written only partially
 File cannot be recovered and since we do the ++1 for file name 
 
@@ -15,7 +14,7 @@ Decoding stack results
 0x400ea996: loopTask(void*) at /Users/bene/Library/Arduino15/packages/esp32/hardware/esp32/2.0.3/cores/esp32/main.cpp line 42
 
 
-// only a complete reflash resolved this issue..
+>  only a complete reflash resolved this issue..
 
 
 Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
@@ -791,5 +790,3 @@ LED : 0
 JPG: 2355BAppending to file: /debug.txt
 Failed to open file for appending
 Sleeping for 600 s
-
-*/

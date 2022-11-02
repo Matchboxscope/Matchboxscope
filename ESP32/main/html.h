@@ -1,3 +1,5 @@
+#pragma once
+
 static const char PROGMEM INDEX_HTML[] = R"rawliteral(
 <!DOCTYPE HTML>
 <html>
