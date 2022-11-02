@@ -83,6 +83,10 @@ The Matchboxscope firmware serves a web interface which depends on some HTML, CS
 
 ## Usage
 
+## Wifi Configuration with the Captive Portal
+
+Instructions for how to use the captive portal to make the Matchboxscope software connect to a wifi network are not provided at this time.
+
 ## Matchboxscope Mode
 
 Instructions for how to operate the Matchboxscope software in Matchboxscope mode are not provided at this time.
