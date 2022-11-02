@@ -8,8 +8,8 @@
 //http://192.168.1.4/controll?var=lens&val=100
 
 /*
- * HEADERS
- */
+  HEADERS
+*/
 
 // ESP-IDF headers (in alphabetical order!)
 #include <esp_log.h>
@@ -45,8 +45,8 @@
 #include "html.h"
 
 /*
- * USER-CONFIGURED SETTINGS
- */
+  USER-CONFIGURED SETTINGS
+*/
 
 // Anglerfish
 
@@ -74,8 +74,8 @@ const String myImage = "&datase = ";
 const int waitingTime = 30000; //Wait 30 seconds to google response.
 
 /*
- * GLOBAL CONSTANTS & STATE
- */
+  GLOBAL CONSTANTS & STATE
+*/
 
 // LED
 
