@@ -58,8 +58,8 @@ const int focuStackStepsizeAnglerfish = 25; // FIXME: This value should be adjus
 
 const boolean hostWifiAP = true; // set this variable if you want the ESP32 to be the host
 const boolean isCaptivePortal = false; // want to autoconnect to wifi networks?
-const char *mSSID = "Stanford";//"UC2 - F8Team"; //"IPHT - Konf"; // "Blynk";
-const char *mPASSWORD = ""; //"_lachmannUC2"; //"WIa2!DcJ"; //"12345678";
+const char *mSSID = "Blynk";
+const char *mPASSWORD = "12345678";
 const char *mSSIDAP = "Matchboxscope";
 const char *hostname = "matchboxscope";
 
@@ -366,7 +366,7 @@ void setup()
 
   // FIXME: This is just a tet to see if this works in general - the standalone application works; My guess: An issue with the image dimensions
   isInternetAvailable = Ping.ping("www.google.com", 3);
-  if (!isInternetAvailable) {
+  if (!isInternetAvailable or hostWifiAP) {
     Serial.println("Ping failed -> we are not connected to the internet most likely!");
   }
   else {
