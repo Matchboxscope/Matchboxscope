@@ -7,110 +7,76 @@
 //http://192.168.2.168/control?var=flash&val=100
 //http://192.168.1.4/controll?var=lens&val=100
 
-// external libraries
+/*
+  HEADERS
+*/
 
-#include "FS.h"
-#include "esp_wifi.h"
-#include "esp_camera.h"
+// ESP-IDF headers (in alphabetical order!)
+#include <esp_log.h>
+#include <esp_camera.h>
+#include <esp_http_server.h>
+#include <esp_timer.h>
+#include <esp_wifi.h>
+#include <img_converters.h>
+#include <soc/soc.h>
+#include <soc/rtc_cntl_reg.h>
+
+// Arduino ESP32 headers (in alphabetical order!)
+#include <Arduino.h>
+#include <esp32-hal-ledc.h>
+#include <FS.h>
+#include <HTTPClient.h>
+#include <SD_MMC.h>
+#include <SPIFFS.h>
+#include <Update.h>
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
-#include "soc/soc.h"
-#include "soc/rtc_cntl_reg.h"
-#include <SPIFFS.h>
-#include <SD_MMC.h> // SD card
-#include <esp32-hal-ledc.h>
-#include "esp_http_server.h"
-#include "esp_timer.h"
-#include "esp_camera.h"
-#include "img_converters.h"
-#include "Arduino.h"
-#include <SPIFFS.h>
-#include "device_pref.h"
-#include <esp_log.h>"
-#include <Update.h>
 
-// External libraries
-#include "ArduinoJson.h"
-#include <WiFiManager.h> // https://github.com/tzapu/WiFiManager
+// Third-party library headers  (in alphabetical order!)
+#include "ArduinoJson.h" // https://github.com/bblanchon/ArduinoJson
+#include "ESP32Ping.h" // https://github.com/marian-craciunescu/ESP32Ping
+#include "WiFiManager.h" // https://github.com/tzapu/WiFiManager
 
-// Local header files
+// Local header files (in alphabetical order!)
 #include "Base64.h"
-#include <HTTPClient.h>
-#include <esp_camera.h>
-#include "device_pref.h"
-#include <ESP32Ping.h>
-#include "html.h"
 #include "camera.h"
 //#include "cameraM5Stack.h"
+#include "device_pref.h"
+#include "html.h"
 
+/*
+  USER-CONFIGURED SETTINGS
+*/
 
-/**********************
+// Anglerfish
 
-ANGLERFISH settings
-
-**********************/
 //FIXME: We mostly need to differentiate between Matchboxcope/Anglerfish, where Anglerfish has the "dangerzone" aka: deepsleep that will never wake up
 const int timelapseIntervalAnglerfish = 10;//10*60; // FIXME: This value should be adjustable through the GUI
 const int focuStackStepsizeAnglerfish = 25; // FIXME: This value should be adjustable through the GUI
-boolean isTimelapseAnglerfish = false; // keep as false!
-boolean isAcquireStack = false; // acquire only single image or stack?
 
-File myFile;
+// Wifi
 
-/**********************
+const boolean hostWifiAP = true; // set this variable if you want the ESP32 to be the host
+const boolean isCaptivePortal = false; // want to autoconnect to wifi networks?
+const char *mSSID = "Blynk";
+const char *mPASSWORD = "12345678";
+const char *mSSIDAP = "Matchboxscope";
+const char *hostname = "matchboxscope";
 
-WIFI
+// Google Drive Upload
 
-**********************/
-boolean hostWifiAP = false; // set this variable if you want the ESP32 to be the host
-boolean isCaptivePortal = true; // want to autoconnect to wifi networks?
-const char* mSSID = "Blynk";//"UC2 - F8Team"; //"IPHT - Konf"; // "Blynk";
-const char* mPASSWORD = "12345678"; //"_lachmannUC2"; //"WIa2!DcJ"; //"12345678";
-const char* mSSIDAP = "Matchboxscope";
-const char* hostname = "matchboxscope";
-WiFiManager wm;
-// check wifi connectibility if not connected, try to reconnect - or restart?
-unsigned long previousCheckWifi = 0;
-unsigned long delayReconnect = 20000;  // 20 seconds delay
-bool isInternetAvailable = false;
+const char *myDomain = "script.google.com";
+const String myScript = "/macros/s/AKfycbwF8y5az641P2EUkooJjpEVn36Bpu2nAxYpQ8WOcr0kWiBmnxP2jH1xdsvjc55rN14w/exec";
+const String myFilename = "filename = ESP32 - CAM.jpg";
+const String mimeType = "&mimetype = imagejpeg";
+const String myImage = "&datase = ";
 
-// Camera related
-bool isStreaming = false;
-bool isStreamingStoppped = false;
+const int waitingTime = 30000; //Wait 30 seconds to google response.
 
+/*
+  GLOBAL CONSTANTS & STATE
+*/
 
-/*********************
-*
-* Upload to Google Drive Settings
-*
-*********************/
-
-const char* myDomain = "script.google.com";
-String myScript = "/macros/s/AKfycbwF8y5az641P2EUkooJjpEVn36Bpu2nAxYpQ8WOcr0kWiBmnxP2jH1xdsvjc55rN14w/exec";
-String myFilename = "filename = ESP32 - CAM.jpg";
-String mimeType = "&mimetype = imagejpeg";
-String myImage = "&datase = ";
-
-int waitingTime = 30000; //Wait 30 seconds to google response.
-
-
-/**********************
-
-Timelapse
-
-**********************/
-uint64_t timelapseInterval = -1; // FIXME: we should have a button in the GUI to enable it ;  sec; timelapse interval // will be read from preferences!
-static uint64_t t_old = 0;
-
-// Server
-boolean isWebserver = true;
-
-
-/**********************
-
-Ext. HARDWARE
-
-**********************/
 // LED
 
 const int freq = 8000; //800000;//19000; //12000
@@ -119,7 +85,10 @@ const int ledChannel = 4; //some are used by the camera
 const int ledPin = 4;
 int ledValueOld = 0;
 
-// LENS
+// LED array
+int ledMatrixCount = 2;
+
+// Lens
 const int lensChannel = 5; //some are used by the camera
 const int lensPin = 12;
 uint32_t lensValueOld = 0;
@@ -127,36 +96,46 @@ uint32_t lensValueOld = 0;
 // Button/reed-switch for resetting
 const int refocus_button_debounce = 1000;
 
-// global camera parameters for REST
+// Camera
 uint32_t gain = 0;
 uint32_t exposureTime = 0;
 uint32_t frameSize = 0;
 uint32_t ledintensity = 0;
 uint32_t effect = 2;
+bool isStreaming = false;
+bool isStreamingStoppped = false;
+bool isCameraAttached = false;
 
-// SD Card parameters
+// SD Card
 boolean sdInitialized = false;
 boolean isFirstRun = false;
 boolean isUseSD = true;
 
+// Timelapse
+uint64_t timelapseInterval = -1; // FIXME: we should have a button in the GUI to enable it ;  sec; timelapse interval // will be read from preferences!
+static uint64_t t_old = 0;
 
 // Preferences
 Preferences pref;
 DevicePreferences device_pref(pref, "camera", __DATE__ " " __TIME__);
 
-// LED ARRAY
-int ledMatrixCount = 2;
+// Wifi
+WiFiManager wm;
+bool isInternetAvailable = false;
+// check wifi connectibility if not connected, try to reconnect - or restart?
+unsigned long previousCheckWifi = 0;
+unsigned long delayReconnect = 20000;  // 20 seconds delay
 
-/*
-*  OTA Server
-*/
+// Server
+boolean isWebserver = true;
 
+// Anglerfish
+boolean isTimelapseAnglerfish = false; // keep as false!
+boolean isAcquireStack = false; // acquire only single image or stack?
+File myFile;
+
+// OTA server
 WebServer OTAserver(82);
-
-/*
-* CAMERA
-*/
-bool isCameraAttached = false;
 
 void setup()
 {
@@ -174,7 +153,7 @@ void setup()
 
 
   /*
-  AGLERFISH RELATED
+    AGLERFISH RELATED
   */
   // Reset the EEPROM's stored timelapse mode after each re - flash
   isFirstRun = device_pref.isFirstRun();
@@ -197,7 +176,7 @@ void setup()
     Serial.println("Camera is working");
     initCameraSettings(); // set camera settings - exposure time and gain will betaken from preferences
   }
-  else{
+  else {
     Serial.println("Camera is not working");
   }
 
@@ -212,9 +191,9 @@ void setup()
     device_pref.setIsTimelapse(false); // FIXME: if SD card is missing => streaming mode!
     // FIXME: won't work since LEDC is not yet initiated blinkLed(5);
     /*
-    setLens(255); delay(100); setLens(0); delay(100);
-    setLens(255); delay(100); setLens(0); delay(100);
-    setLens(255); delay(100); setLens(0); delay(100);
+      setLens(255); delay(100); setLens(0); delay(100);
+      setLens(255); delay(100); setLens(0); delay(100);
+      setLens(255); delay(100); setLens(0); delay(100);
     */
   }
   else {
@@ -292,8 +271,8 @@ void setup()
     //FIXME: This becomes obsolete nowimageSaved = snapPhoto("picture_LED1_"  + String(frame_index), 1, ledIntensity);
     appendFile(SD_MMC, "/debug.txt", "LOG 6!\n");
     /*if (imageSaved) {//FIXME: we should increase framenumber even if failed - since a corrupted file may lead to issues?
-    device_pref.setFrameIndex(frame_index);
-    }
+      device_pref.setFrameIndex(frame_index);
+      }
     */
 
     // Sleep
@@ -387,7 +366,7 @@ void setup()
 
   // FIXME: This is just a tet to see if this works in general - the standalone application works; My guess: An issue with the image dimensions
   isInternetAvailable = Ping.ping("www.google.com", 3);
-  if (!isInternetAvailable) {
+  if (!isInternetAvailable or hostWifiAP) {
     Serial.println("Ping failed -> we are not connected to the internet most likely!");
   }
   else {
