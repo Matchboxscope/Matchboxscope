@@ -209,6 +209,7 @@ void setup()
       Serial.println(cardType);
     }
 
+    listDir(SD_MMC, "/", 0);
     Serial.println("Writing to file...");
     writeFile(SD_MMC, "/debug.txt", "Starting to debug...");
 
@@ -422,10 +423,11 @@ void loop() {
 
   // checking for WIFI connection
   unsigned long currentTime = millis(); // number of milliseconds since the upload
-  if ((WiFi.status() != WL_CONNECTED) && (currentTime - previousCheckWifi >= delayReconnect)) {
+  if (not hostWifiAP and (WiFi.status() != WL_CONNECTED) && (currentTime - previousCheckWifi >= delayReconnect)) {
     Serial.print(millis());
     Serial.println("Reconnecting to WIFI network");
     WiFi.disconnect();
+    // FIXME: Here we should offer an ACCESS POINT where we can supply credentials for SSID and PW
     if (0)
       WiFi.reconnect();
     else
