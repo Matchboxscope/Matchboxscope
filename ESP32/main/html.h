@@ -1,3 +1,5 @@
+#pragma once
+
 static const char PROGMEM INDEX_HTML[] = R"rawliteral(
 <!DOCTYPE HTML>
 <html>
@@ -40,12 +42,7 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
 <td style="height: 31px; width: 21.1088%;"></td>
 </tr>
 <tr style="height: 31px;">
-<td style="height: 31px; width: 29.663%;"><span style="font-family: arial, helvetica, sans-serif;">Flash 2</span></td>
-<td align="center" style="height: 31px; width: 24.9576%;"><span style="font-family: arial, helvetica, sans-serif;"><input type="range" id="flash2" min="0" max="255" value="0" onchange="try{fetch(document.location.origin+'/control?var=flash2&amp;val='+this.value);}catch(e){}" /></span></td>
-<td style="height: 31px; width: 21.1088%;"></td>
-</tr>
-<tr style="height: 31px;">
-<td style="height: 31px; width: 29.663%;"><span style="font-family: arial, helvetica, sans-serif;">LENS</span></td>
+<td style="height: 31px; width: 29.663%;"><span style="font-family: arial, helvetica, sans-serif;">Lens/Pump</span></td>
 <td align="center" style="height: 31px; width: 24.9576%;"><span style="font-family: arial, helvetica, sans-serif;"><input type="range" id="lens" min="0" max="255" value="0" onchange="try{fetch(document.location.origin+'/control?var=lens&amp;val='+this.value);}catch(e){}" /></span></td>
 <td style="height: 31px; width: 21.1088%;"></td>
 </tr>

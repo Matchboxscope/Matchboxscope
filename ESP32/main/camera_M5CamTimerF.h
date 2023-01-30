@@ -1,3 +1,5 @@
+#pragma once
+
 #define PWDN_GPIO_NUM  -1
 #define RESET_GPIO_NUM 15
 #define XCLK_GPIO_NUM  27
