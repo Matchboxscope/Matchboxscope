@@ -120,7 +120,7 @@ screw the two parts using 3 M3x16 screw, and glue the magnets in position (both 
 
 <a href="#logo" name="logo"><img src="./IMAGES/guidev1006.jpeg" width="800"></a>
 
-glue the other two magnets on the 3D printed sample part, and remmember that the the magnet should repel the ones on the middle part. 
+glue the other two magnets on the 3D printed sample part, and remember that the the magnet should repel the ones on the middle part. 
 
 <a href="#logo" name="logo"><img src="./IMAGES/guidev1007.jpeg" width="800"></a>
  
