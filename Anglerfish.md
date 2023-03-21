@@ -9,7 +9,7 @@ While designing the Anglerfish - which actually looks like an anglerfish conside
 *One way of doing it, but way too complicated*
 
 
-There are great threads on building watertight assemblies using PVC tubes (LINK) or 3D rinted parts (LINK, PRUSA). However, one day (actually during cooking something) we came across the idea of using jars from jams.
+There are great threads on building watertight assemblies using PVC tubes (LINK) or 3D printed parts (LINK, PRUSA). However, one day (actually during cooking something) we came across the idea of using jars from jams.
 
 
 
@@ -26,7 +26,7 @@ The **Anglerfish** shares many aspects with the **Matchboxscope**, hence it may 
 
 # Assembly
 
-We will give you a step-by-step guide how to assemble the hole microscope. If anything fails or doesn't match as expected (most likely), please file an issue immediately. We will be there for you. Most of the steps below are very similar to the [Matchboxscope](Matchboxscope.md). only the way the screws for focusing the sample are oriented differently.
+We will give you a step-by-step guide on how to assemble the whole microscope. If anything fails or doesn't match as expected (most likely), please file an issue immediately. We will be there for you. Most of the steps below are very similar to the [Matchboxscope](Matchboxscope.md). Only the screws for focusing the sample are oriented differently.
 
 ## Components
 
@@ -34,7 +34,7 @@ This you will need for your device in order to work:
 
 <a href="#logo" name="logo"><img src="./IMAGES/explosion.jpeg" width="200"></a>
 
-### Bill of material
+### Bill of materials
 
 Part |  Purpose | Source | Price |
 :----------------:|:------------:|:----------------:|:------------:
@@ -117,11 +117,11 @@ Alternatively you can use a small powerbank that fits into the assembly.
 
 <a href="#logo" name="logo"><img src="./IMAGES/anglerfish/anglerfish_18.jpg" width="500"></a>
 
-Solder a USB cable or siply two wires to the 5V/GND of the ESP32 on one end. The other end goes to the large USB or 5V/GND of the TP5400. This is the supply voltage.
+Solder a USB cable or simply two wires to the 5V/GND of the ESP32 on one end. The other end goes to the large USB or 5V/GND of the TP5400. This is the supply voltage.
 
 <a href="#logo" name="logo"><img src="./IMAGES/anglerfish/anglerfish_12.jpg" width="500"></a>
 
-The Litium Ion battery will be connected to the TP5400 input (B+/B-)
+The lithium-ion battery will be connected to the TP5400 input (B+/B-)
 
 <a href="#logo" name="logo"><img src="./IMAGES/anglerfish/anglerfish_13.jpg" width="500"></a>
 
@@ -134,7 +134,7 @@ Mount the camera assembly to the jar baseplate:
 
 <a href="#logo" name="logo"><img src="./IMAGES/anglerfish/anglerfish_10.jpg" width="500"></a>
 
-Adjust the focus by first turning on the ESP32 and connect to the Wifi (`SSID: Matchboxscope`). Open the page http://192.168.4.1. Make a mark on the glass surface in front of the objective lens (has to be removed afterwards!). Turn the three focusing screws such that you create a sharp image of the mark on the glass.
+Adjust the focus by first turning on the ESP32 and connect to the Wi-Fi (`SSID: Matchboxscope`). Open the page http://192.168.4.1. Make a mark on the glass surface in front of the objective lens (has to be removed afterwards!). Turn the three focusing screws such that you create a sharp image of the mark on the glass.
 
 <a href="#logo" name="logo"><img src="./IMAGES/anglerfish/anglerfish_11.jpg" width="500"></a>
 
