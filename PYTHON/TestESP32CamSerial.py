@@ -1,32 +1,43 @@
+#%%
 import serial
+import time
 import serial.tools.list_ports
 from PIL import Image
 import base64
 import io
 import numpy as np
 import matplotlib.pyplot as plt
+import tifffile as tif
 
 devices = serial.tools.list_ports.comports(include_links=False)
 
 serialport = devices[-1].device 
 
 # connect to Camera
-serialdevice = serial.Serial(port=serialport,baudrate=2000000,timeout=1)
+serialdevice = serial.Serial(port=serialport,baudrate=1000000,timeout=1)
 
 #%%
-for iimage in range(1000):
-        
-    try:
-        #read image and decode
-        imageB64 = serialdevice.readline()
-        image = np.array(Image.open(io.BytesIO(base64.b64decode(imageB64))))
-        
-        # show image
-        plt.imshow(image)
-        plt.show()
-    except:
-        print(iimage)
-        
+iError = 0
+t0 = time.time()
+
+message = ""
+imageString = ""
+for iimage in range(100):
+  try:
+      #read image and decode
+      imageB64 = serialdevice.readline()
+      #imageB64 = str(imageB64).split("+++++")[-1].split("----")[0]
+      image = np.array(Image.open(io.BytesIO(base64.b64decode(imageB64))))
+      
+      print("framerate: "+(str(1/(time.time()-t0))))
+      tif.imsave("test_stack_esp32.tif", image, append=True)
+  except Exception as e:
+    print(e)
+    iError += 1
+    
+print(iError)
+
+#%%
         
         
 ''' ESP CODE
@@ -119,3 +130,4 @@ void grabImage() {
 }
 
 '''
+# %%

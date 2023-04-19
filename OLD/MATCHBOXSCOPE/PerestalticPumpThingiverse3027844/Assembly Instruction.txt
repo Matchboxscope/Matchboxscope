@@ -1,0 +1,21 @@
+*Aside from electronics ( stepper motor, driver board / controller ) and tubing, all components are 3D printable
+
+Insert tubing into the slots on the BOTTOM HALF SHELL
+
+Push 24T GEAR into BOTTOM HALF SHELL with gear portion facing towards top
+
+Fit 12T INPUT GEAR against the 24T GEAR
+
+*Apply glue to the three extrusion on BOTTOM HALF SHELL and the three corresponding slots of the TOP HALF SHELL
+
+Push BOTTOM HALF SHELL against TOP HALF SHELL, let glue secure
+
+Insert CENTRAL SHAFT from TOP HALF SHELL ( top to bottom )
+
+*Apply glue to SHAFT CAP, secure to CENTRAL SHAFT
+
+Insert Stepper Motor shaft into the keyway of 12T INPUT GEAR
+
+Rotate until mounting holes of the Stepper Motor align with pin holes on TOP HALF SHELL
+
+*Apply glue to PINS, secure inside pin holes
