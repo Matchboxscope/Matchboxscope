@@ -14,7 +14,7 @@ import tifffile as tif
 def connect_to_usb_device(manufacturer):
     ports = serial.tools.list_ports.comports()
     for port in ports:
-        if port.manufacturer == manufacturer:
+        if port.manufacturer == manufacturer or port.manufacturer == "Microsoft":
             try:
                 ser = serial.Serial(port.device, baudrate=2000000, timeout=1)
                 print(f"Connected to device: {port.description}")
