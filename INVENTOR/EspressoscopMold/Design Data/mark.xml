@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<Mark Version="1">
+
+  <!--Created by Autodesk Inventor Version 27.0 Internal-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style EditFlag="0" InternalName="1:Default&#xA;" Layer="IV_MARK_SURFACE" LayerBack="IV_MARK_SURFACE_BACK" LineType="28100" LineTypeBack="28100" LineWeight="0.0254" LineWeightBack="0.0254" MarkingColor="255:255:0:255" MarkingColorBack="128:255:128:255" OpType="0" OutLineText="0" ShxFont="romanc">
+    <Name Description="" Language="1028">標記表面</Name>
+    <Name Description="" Language="1029">Označit povrch</Name>
+    <Name Description="" Language="1031">Fläche markieren</Name>
+    <Name Description="" Language="1033">Mark Surface</Name>
+    <Name Description="" Language="1036">Marquer la surface</Name>
+    <Name Description="" Language="1038">Felület megjelölése</Name>
+    <Name Description="" Language="1040">Contrassegna superficie</Name>
+    <Name Description="" Language="1041">サーフェスをマーク</Name>
+    <Name Description="" Language="1042">표면 표식</Name>
+    <Name Description="" Language="1045">Oznacz powierzchnię</Name>
+    <Name Description="" Language="1046">Marcar superfície</Name>
+    <Name Description="" Language="1049">Отметить на поверхности</Name>
+    <Name Description="" Language="2052">标记曲面</Name>
+    <Name Description="" Language="3082">Marcar la superficie</Name>
+  </Style>
+
+  <Style EditFlag="3" InternalName="1:Copy of Scribe&#xA;" Layer="IV_MARK_THROUGH" LayerBack="IV_MARK_THROUGH_BACK" LineType="28100" LineTypeBack="28100" LineWeight="0.051" LineWeightBack="0.051" MarkingColor="255:0:0:255" MarkingColorBack="0:128:255:255" OpType="1" OutLineText="1" ShxFont="isocp">
+    <Name Description="" Language="1028">標記通過</Name>
+    <Name Description="" Language="1029">Označit skrz</Name>
+    <Name Description="" Language="1031">Durchgehend markieren</Name>
+    <Name Description="" Language="1033">Mark Through</Name>
+    <Name Description="" Language="1036">Marquer à travers</Name>
+    <Name Description="" Language="1038">Átmenő megjelölése</Name>
+    <Name Description="" Language="1040">Contrassegna passante</Name>
+    <Name Description="" Language="1041">貫通してマーク</Name>
+    <Name Description="" Language="1042">관통 표식</Name>
+    <Name Description="" Language="1045">Oznacz przez</Name>
+    <Name Description="" Language="1046">Marcar passante</Name>
+    <Name Description="" Language="1049">Отметить сквозь</Name>
+    <Name Description="" Language="2052">标记贯通</Name>
+    <Name Description="" Language="3082">Marcar a través</Name>
+  </Style>
+
+</Mark>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<Hatch Version="3">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style Angle="45" Double="0" EditFlag="0" InternalName="1:Hatch (ANSI)&#xA;" Scale="1" Shift="0">
+    <HatchPatternRawData>
+      <PatternLine>*ANSI 31, ANSI Iron, Brick, Stone masonry</PatternLine>
+      <PatternLine>45,0,0,0,0.125</PatternLine>
+    </HatchPatternRawData>
+    <Name Description="" Language="1028">填充線 (ANSI)</Name>
+    <Name Description="" Language="1029">Šrafy (ANSI)</Name>
+    <Name Description="" Language="1031">Schraffur (ANSI)</Name>
+    <Name Description="" Language="1033">Hatch (ANSI)</Name>
+    <Name Description="" Language="1036">Hachure (ANSI)</Name>
+    <Name Description="" Language="1038">Sraffozás (ANSI)</Name>
+    <Name Description="" Language="1040">Tratteggio (ANSI)</Name>
+    <Name Description="" Language="1041">Hatch (ANSI)</Name>
+    <Name Description="" Language="1042">해치 (ANSI)</Name>
+    <Name Description="" Language="1045">Kreskowanie (ANSI)</Name>
+    <Name Description="" Language="1046">Hachura (ANSI)</Name>
+    <Name Description="" Language="1049">Штриховка (ANSI)</Name>
+    <Name Description="" Language="2052">剖面线 (ANSI)</Name>
+    <Name Description="" Language="3082">Sombreado (ANSI)</Name>
+  </Style>
+
+  <Style Angle="45" Double="0" EditFlag="0" InternalName="1:Hatch (GOST)&#xA;" Scale="1" Shift="0">
+    <HatchPatternRawData>
+      <PatternLine>*ANSI 31, ANSI Iron, Brick, Stone masonry</PatternLine>
+      <PatternLine>45,0,0,0,0.125</PatternLine>
+    </HatchPatternRawData>
+    <Name Description="" Language="1028">填充線 (GOST)</Name>
+    <Name Description="" Language="1029">Šrafy (GOST)</Name>
+    <Name Description="" Language="1031">Schraffur (GOST)</Name>
+    <Name Description="" Language="1033">Hatch (GOST)</Name>
+    <Name Description="" Language="1036">Hachure (GOST)</Name>
+    <Name Description="" Language="1038">Sraffozás (GOST)</Name>
+    <Name Description="" Language="1040">Tratteggio (GOST)</Name>
+    <Name Description="" Language="1041">Hatch (GOST)</Name>
+    <Name Description="" Language="1042">해치 (GOST)</Name>
+    <Name Description="" Language="1045">Kreskowanie (GOST)</Name>
+    <Name Description="" Language="1046">Hachura (GOST)</Name>
+    <Name Description="" Language="1049">Штриховка (ГОСТ)</Name>
+    <Name Description="" Language="2052">剖面线 (GOST)</Name>
+    <Name Description="" Language="3082">Sombreado (GOST)</Name>
+  </Style>
+
+  <Style Angle="45" Double="0" EditFlag="0" InternalName="1:Hatch (ISO)&#xA;" Scale="1" Shift="0">
+    <HatchPatternRawData>
+      <PatternLine>*ANSI 31, ANSI Iron, Brick, Stone masonry</PatternLine>
+      <PatternLine>45,0,0,0,0.125</PatternLine>
+    </HatchPatternRawData>
+    <Name Description="" Language="1028">填充線 (ISO)</Name>
+    <Name Description="" Language="1029">Šrafy (ISO)</Name>
+    <Name Description="" Language="1031">Schraffur (ISO)</Name>
+    <Name Description="" Language="1033">Hatch (ISO)</Name>
+    <Name Description="" Language="1036">Hachure (ISO)</Name>
+    <Name Description="" Language="1038">Sraffozás (ISO)</Name>
+    <Name Description="" Language="1040">Tratteggio (ISO)</Name>
+    <Name Description="" Language="1041">Hatch (ISO)</Name>
+    <Name Description="" Language="1042">해치 (ISO)</Name>
+    <Name Description="" Language="1045">Kreskowanie (ISO)</Name>
+    <Name Description="" Language="1046">Hachura (ISO)</Name>
+    <Name Description="" Language="1049">Штриховка (ISO)</Name>
+    <Name Description="" Language="2052">剖面线 (ISO)</Name>
+    <Name Description="" Language="3082">Sombreado (ISO)</Name>
+  </Style>
+
+</Hatch>

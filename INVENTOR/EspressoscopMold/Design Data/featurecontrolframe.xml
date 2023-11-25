@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<FeatureControlFrame Version="6">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style AdditionalSymbols="0" AllowAltUnit="0" AllowTolerance2="1" AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="1" AltSuppressTrailZero="0" AltUnitType="1" AuxSymbols="12799" DatumAlignment="0" DatumOnLeaderSide="0" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" EnableAuxiliaryIndicators="0" EnableInlineNotes="0" EndPadding="0" FitPrimSuppressLeadZero="1" GdtSymbols="16383" InternalName="1:Feature Control Frame (ANSI)&#xA;" ItalicizeDatum="0" LeaderAtCorner="0" MergeDatum="0" MergeSymbol="1" MergeTolerance="0" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="0.9525" UseCommonString="1" WhiteSpace="0.0889">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ANSI)</SubStyle>
+    <Name Description="根據 ASME Y14.5M - 1994" Language="1028">特徵控制框 (ANSI)</Name>
+    <Name Description="Podle normy ASME Y14.5M - 1994" Language="1029">Geometrická tolerance (ANSI)</Name>
+    <Name Description="Basiert auf ASME Y14.5M - 1994" Language="1031">Form- und Lagetoleranzen (ANSI)</Name>
+    <Name Description="Based on ASME Y14.5M - 1994" Language="1033">Feature Control Frame (ANSI)</Name>
+    <Name Description="En fonction d'ASME Y14.5M - 1994" Language="1036">Tolérancement géométrique (ANSI)</Name>
+    <Name Description="Alapja: ASME Y14.5M - 1994" Language="1038">Alaktűréskeret (ANSI)</Name>
+    <Name Description="Basato su ASME Y14.5M - 1994" Language="1040">Riquadro di controllo della geometria (ANSI)</Name>
+    <Name Description="Based on ASME Y14.5M - 1994" Language="1041">Feature Control Frame (ANSI)</Name>
+    <Name Description="ASME Y14.5M - 1994 기준" Language="1042">형상 공차 (ANSI)</Name>
+    <Name Description="Na podstawie ASME Y14.5M - 1994" Language="1045">Tolerancja kształtu i położenia (ANSI)</Name>
+    <Name Description="Baseado na ASME Y14.5M - 1994" Language="1046">Tolerância geométrica (ANSI)</Name>
+    <Name Description="Согласно ASME Y14.5M - 1994" Language="1049">Допуск формы и расположения (ANSI)</Name>
+    <Name Description="基于 ASME Y14.5M - 1994" Language="2052">形位公差符号 (ANSI)</Name>
+    <Name Description="Basado en ASME Y14.5M - 1994" Language="3082">Rectángulo de tolerancia (ANSI)</Name>
+  </Style>
+
+  <Style AdditionalSymbols="0" AllowAltUnit="0" AllowTolerance2="1" AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="1" AltSuppressTrailZero="0" AltUnitType="1" AuxSymbols="12799" DatumAlignment="0" DatumOnLeaderSide="0" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" EnableAuxiliaryIndicators="0" EnableInlineNotes="0" EndPadding="0" FitPrimSuppressLeadZero="1" GdtSymbols="16383" InternalName="1:Feature Control Frame (ANSI) - 3DA&#xA;" ItalicizeDatum="0" LeaderAtCorner="0" MergeDatum="0" MergeSymbol="1" MergeTolerance="0" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="0.9525" UseCommonString="1" WhiteSpace="0.0889">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ANSI) - 3DA</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ANSI) - 3DA</SubStyle>
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知。" Language="1028">特徵控制框 (ANSI) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku." Language="1029">Geometrická tolerance (ANSI) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden." Language="1031">Form- und Lagetoleranzen (ANSI) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1033">Feature Control Frame (ANSI) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">Tolérancement géométrique (ANSI) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához." Language="1038">Alaktűréskeret (ANSI) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">Riquadro di controllo della geometria (ANSI) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1041">Feature Control Frame (ANSI) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">형상 공차 (ANSI) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D." Language="1045">Tolerancja kształtu i położenia (ANSI) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D." Language="1046">Tolerância geométrica (ANSI) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Допуск формы и расположения (ANSI) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知。" Language="2052">形位公差符号 (ANSI) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">Rectángulo de tolerancia (ANSI) - 3DA</Name>
+  </Style>
+
+  <Style AdditionalSymbols="34084927567872" AllowAltUnit="0" AllowTolerance2="0" AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" AuxSymbols="50071" DatumAlignment="0" DatumOnLeaderSide="0" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" EnableAuxiliaryIndicators="0" EnableInlineNotes="0" EndPadding="1" FitPrimSuppressLeadZero="0" GdtSymbols="16383" InternalName="1:Feature Control Frame (BSI)&#xA;" ItalicizeDatum="0" LeaderAtCorner="0" MergeDatum="1" MergeSymbol="1" MergeTolerance="1" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonString="1" WhiteSpace="0.1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (BSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 ISO 1101 - 2013" Language="1028">特徵控制框 (BSI)</Name>
+    <Name Description="Podle normy ISO 1101 - 2013" Language="1029">Geometrická tolerance (BSI)</Name>
+    <Name Description="Basiert auf ISO 1101 - 2013" Language="1031">Form- und Lagetoleranzen (BSI)</Name>
+    <Name Description="Based on ISO 1101 - 2013" Language="1033">Feature Control Frame (BSI)</Name>
+    <Name Description="En fonction d'ISO 1101 - 2013" Language="1036">Tolérancement géométrique (BSI)</Name>
+    <Name Description="Alapja: ISO 1101 - 2013" Language="1038">Alaktűréskeret (BSI)</Name>
+    <Name Description="Basato su ISO 1101 - 2013" Language="1040">Riquadro di controllo della geometria (BSI)</Name>
+    <Name Description="Based on ISO 1101 - 2013" Language="1041">Feature Control Frame (BSI)</Name>
+    <Name Description="ISO 1101 - 2013 기준" Language="1042">형상 공차 (BSI)</Name>
+    <Name Description="Na podstawie ISO 1101 - 2013" Language="1045">Tolerancja kształtu i położenia (BSI)</Name>
+    <Name Description="Baseado na ISO 1101 - 2013" Language="1046">Tolerância geométrica (BSI)</Name>
+    <Name Description="Согласно ISO 1101 - 2013" Language="1049">Допуск формы и расположения (BSI)</Name>
+    <Name Description="基于 ISO 1101 - 2013" Language="2052">形位公差符号 (BSI)</Name>
+    <Name Description="Basado en ISO 1101 - 2013" Language="3082">Rectángulo de tolerancia (BSI)</Name>
+  </Style>
+
+  <Style AdditionalSymbols="2047" AllowAltUnit="0" AllowTolerance2="0" AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" AuxSymbols="4095" DatumAlignment="0" DatumOnLeaderSide="0" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" EnableAuxiliaryIndicators="0" EnableInlineNotes="0" EndPadding="1" FitPrimSuppressLeadZero="0" GdtSymbols="16383" InternalName="1:Feature Control Frame (DIN)&#xA;" ItalicizeDatum="0" LeaderAtCorner="0" MergeDatum="1" MergeSymbol="1" MergeTolerance="0" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonString="1" WhiteSpace="0.1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN)</SubStyle>
+    <Name Description="根據 DIN EN ISO 1101-2008" Language="1028">特徵控制框 (DIN)</Name>
+    <Name Description="Podle normy DIN EN ISO 1101-2008" Language="1029">Geometrická tolerance (DIN)</Name>
+    <Name Description="Basiert auf ISO 1101 - 1983" Language="1031">Form- und Lagetoleranzen (DIN)</Name>
+    <Name Description="Based on DIN EN ISO 1101-2008" Language="1033">Feature Control Frame (DIN)</Name>
+    <Name Description="En fonction d'DIN EN ISO 1101-2008" Language="1036">Tolérancement géométrique (DIN)</Name>
+    <Name Description="Alapja: DIN EN ISO 1101-2008" Language="1038">Alaktűréskeret (DIN)</Name>
+    <Name Description="Basato su DIN EN ISO 1101-2008" Language="1040">Riquadro di controllo della geometria (DIN)</Name>
+    <Name Description="Based on DIN EN ISO 1101-2008" Language="1041">Feature Control Frame (DIN)</Name>
+    <Name Description="IDIN EN ISO 1101-2008 기준" Language="1042">형상 공차 (DIN)</Name>
+    <Name Description="Na podstawie DIN EN ISO 1101-2008" Language="1045">Tolerancja kształtu i położenia (DIN)</Name>
+    <Name Description="Baseado na DIN EN ISO 1101-2008" Language="1046">Tolerância geométrica (DIN)</Name>
+    <Name Description="Согласно DIN EN ISO 1101-2008" Language="1049">Допуск формы и расположения (DIN)</Name>
+    <Name Description="基于 DIN EN ISO 1101-2008" Language="2052">形位公差符号 (DIN)</Name>
+    <Name Description="Basado en DIN EN ISO 1101-2008" Language="3082">Rectángulo de tolerancia (DIN)</Name>
+  </Style>
+
+  <Style AdditionalSymbols="35184305371136" AllowAltUnit="0" AllowTolerance2="0" AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" AuxSymbols="791" DatumAlignment="0" DatumOnLeaderSide="0" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" EnableAuxiliaryIndicators="1" EnableInlineNotes="1" EndPadding="1" FitPrimSuppressLeadZero="0" GdtSymbols="16383" InternalName="1:Feature Control Frame (DIN) - 3DA&#xA;" ItalicizeDatum="0" LeaderAtCorner="0" MergeDatum="1" MergeSymbol="1" MergeTolerance="0" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonString="1" WhiteSpace="0.1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO) - 3DA</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN) - 3DA</SubStyle>
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知。" Language="1028">特徵控制框 (DIN) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku." Language="1029">Geometrická tolerance (DIN) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden." Language="1031">Form- und Lagetoleranzen (DIN) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1033">Feature Control Frame (DIN) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">Tolérancement géométrique (DIN) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához." Language="1038">Alaktűréskeret (DIN) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">Riquadro di controllo della geometria (DIN) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1041">Feature Control Frame (DIN) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">형상 공차 (DIN) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D." Language="1045">Tolerancja kształtu i położenia (DIN) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D." Language="1046">Tolerância geométrica (DIN) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Допуск формы и расположения (DIN) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知。" Language="2052">形位公差符号 (DIN) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">Rectángulo de tolerancia (DIN) - 3DA</Name>
+  </Style>
+
+  <Style AdditionalSymbols="34084860852224" AllowAltUnit="0" AllowTolerance2="0" AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" AuxSymbols="823" DatumAlignment="0" DatumOnLeaderSide="0" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" EnableAuxiliaryIndicators="0" EnableInlineNotes="0" EndPadding="1" FitPrimSuppressLeadZero="0" GdtSymbols="16383" InternalName="1:Feature Control Frame (GB)&#xA;" ItalicizeDatum="0" LeaderAtCorner="0" MergeDatum="1" MergeSymbol="1" MergeTolerance="0" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonString="1" WhiteSpace="0.1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (GB)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 GB/T 1182-2008" Language="1028">特徵控制框 (GB)</Name>
+    <Name Description="Podle normy GB/T 1182-2008" Language="1029">Geometrická tolerance (GB)</Name>
+    <Name Description="Basiert auf GB/T 1182-2008" Language="1031">Form- und Lagetoleranzen (GB)</Name>
+    <Name Description="Based on GB/T 1182-2008" Language="1033">Feature Control Frame (GB)</Name>
+    <Name Description="En fonction d'GB/T 1182-2008" Language="1036">Tolérancement géométrique (GB)</Name>
+    <Name Description="Alapja: GB/T 1182-2008" Language="1038">Alaktűréskeret (GB)</Name>
+    <Name Description="Basato su GB/T 1182-2008" Language="1040">Riquadro di controllo della geometria (GB)</Name>
+    <Name Description="Based on GB/T 1182-2008" Language="1041">Feature Control Frame (GB)</Name>
+    <Name Description="GB/T 1182-2008 기준" Language="1042">형상 공차 (GB)</Name>
+    <Name Description="Na podstawie GB/T 1182-2008" Language="1045">Tolerancja kształtu i położenia (GB)</Name>
+    <Name Description="Baseado na GB/T 1182-2008" Language="1046">Tolerância geométrica (GB)</Name>
+    <Name Description="Согласно GB/T 1182-2008" Language="1049">Допуск формы и расположения (GB)</Name>
+    <Name Description="基于 GB/T 1182-2008" Language="2052">形位公差符号 (GB)</Name>
+    <Name Description="Basado en GB/T 1182-2008" Language="3082">Rectángulo de tolerancia (GB)</Name>
+  </Style>
+
+  <Style AdditionalSymbols="2047" AllowAltUnit="0" AllowTolerance2="0" AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" AuxSymbols="295" DatumAlignment="1" DatumOnLeaderSide="1" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" EnableAuxiliaryIndicators="0" EnableInlineNotes="0" EndPadding="1" FitPrimSuppressLeadZero="0" GdtSymbols="994303" InternalName="1:Feature Control Frame (GOST)&#xA;" ItalicizeDatum="0" LeaderAtCorner="1" MergeDatum="1" MergeSymbol="1" MergeTolerance="0" PrimDecimalMarker="0" PrimSuppressTrailZero="1" PrimUnitType="1" ScaleToTextHeight="1" Size="0.953" UseCommonString="1" WhiteSpace="0.2">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Normale Textgröße (GOST)</SubStyle>
+    <Name Description="根據 GOST 2.308-79" Language="1028">特徵控制框 (GOST)</Name>
+    <Name Description="Podle normy GOST 2.308-79" Language="1029">Geometrická tolerance (GOST)</Name>
+    <Name Description="Basiert auf GOST 2.308-79" Language="1031">Form- und Lagetoleranzen (GOST)</Name>
+    <Name Description="Based on GOST 2.308-79" Language="1033">Feature Control Frame (GOST)</Name>
+    <Name Description="En fonction d'GOST 2.308-79" Language="1036">Tolérancement géométrique (GOST)</Name>
+    <Name Description="Alapja: GOST 2.308-79" Language="1038">Alaktűréskeret (GOST)</Name>
+    <Name Description="Basato su GOST 2.308-79" Language="1040">Riquadro di controllo della geometria (GOST)</Name>
+    <Name Description="Based on GOST 2.308-79" Language="1041">Feature Control Frame (GOST)</Name>
+    <Name Description="GOST 2.308-79 기준" Language="1042">형상 공차 (GOST)</Name>
+    <Name Description="Na podstawie GOST 2.308-79" Language="1045">Tolerancja kształtu i położenia (GOST)</Name>
+    <Name Description="Baseado na GOST 2.308-79" Language="1046">Tolerância geométrica (GOST)</Name>
+    <Name Description="Согласно GOST 2.308-79" Language="1049">Допуск формы и расположения (ГОСТ)</Name>
+    <Name Description="基于 GOST 2.308-79" Language="2052">形位公差符号 (GOST)</Name>
+    <Name Description="Basado en GOST 2.308-79" Language="3082">Rectángulo de tolerancia (GOST)</Name>
+  </Style>
+
+  <Style AdditionalSymbols="34084927567872" AllowAltUnit="0" AllowTolerance2="0" AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" AuxSymbols="50071" DatumAlignment="0" DatumOnLeaderSide="0" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" EnableAuxiliaryIndicators="1" EnableInlineNotes="1" EndPadding="1" FitPrimSuppressLeadZero="0" GdtSymbols="16383" InternalName="1:Feature Control Frame (ISO)&#xA;" ItalicizeDatum="0" LeaderAtCorner="0" MergeDatum="1" MergeSymbol="1" MergeTolerance="0" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonString="1" WhiteSpace="0.1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 ISO 1101 - 2012" Language="1028">特徵控制框 (ISO)</Name>
+    <Name Description="Podle normy ISO 1101 - 2012" Language="1029">Geometrická tolerance (ISO)</Name>
+    <Name Description="Basiert auf ISO 1101 - 2012" Language="1031">Form- und Lagetoleranzen (ISO)</Name>
+    <Name Description="Based on ISO 1101 - 2012" Language="1033">Feature Control Frame (ISO)</Name>
+    <Name Description="En fonction d'ISO 1101 - 2012" Language="1036">Tolérancement géométrique (ISO)</Name>
+    <Name Description="Alapja: ISO 1101 - 2012" Language="1038">Alaktűréskeret (ISO)</Name>
+    <Name Description="Basato su ISO 1101 - 2012" Language="1040">Riquadro di controllo della geometria (ISO)</Name>
+    <Name Description="Based on ISO 1101 - 2012" Language="1041">Feature Control Frame (ISO)</Name>
+    <Name Description="ISO 1101 - 2012 기준" Language="1042">형상 공차 (ISO)</Name>
+    <Name Description="Na podstawie ISO 1101 - 2012" Language="1045">Tolerancja kształtu i położenia (ISO)</Name>
+    <Name Description="Baseado na ISO 1101 - 2012" Language="1046">Tolerância geométrica (ISO)</Name>
+    <Name Description="Согласно ISO 1101 - 2012" Language="1049">Допуск формы и расположения (ISO)</Name>
+    <Name Description="基于 ISO 1101 - 2012" Language="2052">形位公差符号 (ISO)</Name>
+    <Name Description="Basado en ISO 1101 - 2012" Language="3082">Rectángulo de tolerancia (ISO)</Name>
+  </Style>
+
+  <Style AdditionalSymbols="34084927567872" AllowAltUnit="0" AllowTolerance2="0" AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" AuxSymbols="50071" DatumAlignment="0" DatumOnLeaderSide="0" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" EnableAuxiliaryIndicators="1" EnableInlineNotes="1" EndPadding="1" FitPrimSuppressLeadZero="0" GdtSymbols="16383" InternalName="1:Feature Control Frame (ISO) - 3DA&#xA;" ItalicizeDatum="0" LeaderAtCorner="0" MergeDatum="1" MergeSymbol="1" MergeTolerance="0" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonString="1" WhiteSpace="0.1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO) - 3DA</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO) - 3DA</SubStyle>
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知。" Language="1028">特徵控制框 (ISO) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku." Language="1029">Geometrická tolerance (ISO) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden." Language="1031">Form- und Lagetoleranzen (ISO) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1033">Feature Control Frame (ISO) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">Tolérancement géométrique (ISO) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához." Language="1038">Alaktűréskeret (ISO) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">Riquadro di controllo della geometria (ISO) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1041">Feature Control Frame (ISO) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">형상 공차 (ISO) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D." Language="1045">Tolerancja kształtu i położenia (ISO) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D." Language="1046">Tolerância geométrica (ISO) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Допуск формы и расположения (ISO) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知。" Language="2052">形位公差符号 (ISO) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">Rectángulo de tolerancia (ISO) - 3DA</Name>
+  </Style>
+
+  <Style AdditionalSymbols="34084860723200" AllowAltUnit="0" AllowTolerance2="0" AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" AuxSymbols="791" DatumAlignment="0" DatumOnLeaderSide="0" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" EnableAuxiliaryIndicators="0" EnableInlineNotes="0" EndPadding="0" FitPrimSuppressLeadZero="0" GdtSymbols="16383" InternalName="1:Feature Control Frame (JIS)&#xA;" ItalicizeDatum="0" LeaderAtCorner="0" MergeDatum="0" MergeSymbol="1" MergeTolerance="0" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonString="1" WhiteSpace="0.1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (JIS)</SubStyle>
+    <Name Description="根據 JIS B 0021 - 1998" Language="1028">特徵控制框 (JIS)</Name>
+    <Name Description="Podle normy JIS B 0021 - 1998" Language="1029">Geometrická tolerance (JIS)</Name>
+    <Name Description="Basiert auf JIS B 0021 - 1998" Language="1031">Form- und Lagetoleranzen (JIS)</Name>
+    <Name Description="Based on JIS B 0021 - 1998" Language="1033">Feature Control Frame (JIS)</Name>
+    <Name Description="En fonction de JIS B 0021 - 1998" Language="1036">Tolérancement géométrique (JIS)</Name>
+    <Name Description="Alapja: JIS B 0021 - 1998" Language="1038">Alaktűréskeret (JIS)</Name>
+    <Name Description="Basato su JIS B 0021 - 1998" Language="1040">Riquadro di controllo della geometria (JIS)</Name>
+    <Name Description="Based on JIS B 0021 - 1998" Language="1041">Feature Control Frame (JIS)</Name>
+    <Name Description="JIS B 0021 - 1998 기준" Language="1042">형상 공차 (JIS)</Name>
+    <Name Description="Na podstawie JIS B 0021 - 1998" Language="1045">Tolerancja kształtu i położenia (JIS)</Name>
+    <Name Description="Baseado na JIS B 0021 - 1998" Language="1046">Tolerância geométrica (JIS)</Name>
+    <Name Description="Согласно JIS B 0021 - 1998" Language="1049">Допуск формы и расположения (JIS)</Name>
+    <Name Description="基于 JIS B 0021 - 1998" Language="2052">形位公差符号 (JIS)</Name>
+    <Name Description="Basado en JIS B 0021 - 1998" Language="3082">Rectángulo de tolerancia (JIS)</Name>
+  </Style>
+
+</FeatureControlFrame>

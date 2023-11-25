@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<Weld Version="4">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style ArrowSidePosition="1" EditFlag="0" FieldFlagDirection="0" IdentLineGap="0.105" IdentLineType="0" IdentLineTypeId="28101" InternalName="1:Weld Symbol (ANSI)&#xA;" JustifyToLeader="1" LinkSymSizeToTextHeight="1" RecoverPrefix="1" ReferenceLineMargin="0.59944" Scale="1">
+    <SubStyle Collection="Leader" Language="1031" Type="kWeldLeaderStyle">Allgemein (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="kWeldTextStyle">Notiztext (ANSI)</SubStyle>
+    <EnabledSymbols Id="0" Name="Schweißsymbole">
+      <Symbol Value="1"/>
+      <Symbol Value="5"/>
+      <Symbol Value="8"/>
+      <Symbol Value="9"/>
+      <Symbol Value="10"/>
+      <Symbol Value="13"/>
+      <Symbol Value="15"/>
+      <Symbol Value="18"/>
+      <Symbol Value="20"/>
+      <Symbol Value="23"/>
+      <Symbol Value="26"/>
+      <Symbol Value="29"/>
+      <Symbol Value="31"/>
+      <Symbol Value="34"/>
+      <Symbol Value="35"/>
+      <Symbol Value="38"/>
+      <Symbol Value="41"/>
+      <Symbol Value="44"/>
+      <Symbol Value="47"/>
+      <Symbol Value="49"/>
+      <Symbol Value="51"/>
+      <Symbol Value="62"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="1" Name="Konturensymbole">
+      <Symbol Value="2"/>
+      <Symbol Value="4"/>
+      <Symbol Value="6"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="2" Name="Nahtausführung">
+      <Symbol Value="2"/>
+      <Symbol Value="5"/>
+      <Symbol Value="6"/>
+    </EnabledSymbols>
+    <Name Description="根據 AWS/ANSI A2.4-93" Language="1028">熔接符號 (ANSI)</Name>
+    <Name Description="Podle normy AWS/ANSI A2.4-93" Language="1029">Označení svaru (ANSI)</Name>
+    <Name Description="Basiert auf AWS/ANSI A2.4-93" Language="1031">Schweißsymbol (ANSI)</Name>
+    <Name Description="Based on AWS/ANSI A2.4-93" Language="1033">Weld Symbol (ANSI)</Name>
+    <Name Description="En fonction d'AWS/ANSI A2.4-93" Language="1036">Symbole de soudure (ANSI)</Name>
+    <Name Description="Alapja: AWS/ANSI A2.4-93" Language="1038">Hegesztési jel (ANSI)</Name>
+    <Name Description="Basato su AWS/ANSI A2.4-93" Language="1040">Simbolo di saldatura (ANSI)</Name>
+    <Name Description="Based on AWS/ANSI A2.4-93" Language="1041">Weld Symbol (ANSI)</Name>
+    <Name Description="AWS/ANSI A2.4-93 기준" Language="1042">용접 기호 (ANSI)</Name>
+    <Name Description="Na podstawie AWS/ANSI A2.4-93" Language="1045">Symbol spoiny (ANSI)</Name>
+    <Name Description="Baseado na AWS/ANSI A2.4-93" Language="1046">Símbolo de solda (ANSI)</Name>
+    <Name Description="Согласно AWS/ANSI A2.4-93" Language="1049">Обозначение сварного шва (ANSI)</Name>
+    <Name Description="基于 AWS/ANSI A2.4-93" Language="2052">焊接符号 (ANSI)</Name>
+    <Name Description="Basado en AWS/ANSI A2.4-93" Language="3082">Símbolo de soldadura (ANSI)</Name>
+  </Style>
+
+  <Style ArrowSidePosition="1" EditFlag="0" FieldFlagDirection="0" IdentLineGap="0.105" IdentLineType="0" IdentLineTypeId="28101" InternalName="1:Weld Symbol (ANSI) - 3DA&#xA;" JustifyToLeader="1" LinkSymSizeToTextHeight="1" RecoverPrefix="1" ReferenceLineMargin="0.59944" Scale="1">
+    <SubStyle Collection="Leader" Language="1031" Type="kWeldLeaderStyle">Allgemein (ANSI) - 3DA</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="kWeldTextStyle">Notiztext (ANSI) - 3DA</SubStyle>
+    <EnabledSymbols Id="0" Name="Schweißsymbole">
+      <Symbol Value="1"/>
+      <Symbol Value="5"/>
+      <Symbol Value="8"/>
+      <Symbol Value="9"/>
+      <Symbol Value="10"/>
+      <Symbol Value="13"/>
+      <Symbol Value="15"/>
+      <Symbol Value="18"/>
+      <Symbol Value="20"/>
+      <Symbol Value="23"/>
+      <Symbol Value="26"/>
+      <Symbol Value="29"/>
+      <Symbol Value="31"/>
+      <Symbol Value="34"/>
+      <Symbol Value="35"/>
+      <Symbol Value="38"/>
+      <Symbol Value="41"/>
+      <Symbol Value="44"/>
+      <Symbol Value="47"/>
+      <Symbol Value="49"/>
+      <Symbol Value="51"/>
+      <Symbol Value="62"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="1" Name="Konturensymbole">
+      <Symbol Value="2"/>
+      <Symbol Value="4"/>
+      <Symbol Value="6"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="2" Name="Nahtausführung">
+      <Symbol Value="2"/>
+      <Symbol Value="5"/>
+      <Symbol Value="6"/>
+    </EnabledSymbols>
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知。" Language="1028">熔接符號 (ANSI) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku." Language="1029">Označení svaru (ANSI) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden." Language="1031">Schweißsymbol (ANSI) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1033">Weld Symbol (ANSI) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">Symbole de soudure (ANSI) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához." Language="1038">Hegesztési jel (ANSI) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">Simbolo di saldatura (ANSI) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1041">Weld Symbol (ANSI) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">용접 기호 (ANSI) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D." Language="1045">Symbol spoiny (ANSI) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D." Language="1046">Símbolo de solda (ANSI) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Обозначение сварного шва (ANSI) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知。" Language="2052">焊接符号 (ANSI) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">Símbolo de soldadura (ANSI) - 3DA</Name>
+  </Style>
+
+  <Style ArrowSidePosition="0" EditFlag="0" FieldFlagDirection="0" IdentLineGap="0.105" IdentLineType="2" IdentLineTypeId="28101" InternalName="1:Weld Symbol (BSI)&#xA;" JustifyToLeader="1" LinkSymSizeToTextHeight="1" RecoverPrefix="1" ReferenceLineMargin="0.59944" Scale="1">
+    <SubStyle Collection="Leader" Language="1031" Type="kWeldLeaderStyle">Allgemein (BSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="kWeldTextStyle">Notiztext (ISO)</SubStyle>
+    <EnabledSymbols Id="0" Name="Schweißsymbole">
+      <Symbol Value="2"/>
+      <Symbol Value="6"/>
+      <Symbol Value="11"/>
+      <Symbol Value="14"/>
+      <Symbol Value="16"/>
+      <Symbol Value="19"/>
+      <Symbol Value="21"/>
+      <Symbol Value="24"/>
+      <Symbol Value="27"/>
+      <Symbol Value="32"/>
+      <Symbol Value="36"/>
+      <Symbol Value="39"/>
+      <Symbol Value="42"/>
+      <Symbol Value="45"/>
+      <Symbol Value="54"/>
+      <Symbol Value="55"/>
+      <Symbol Value="56"/>
+      <Symbol Value="57"/>
+      <Symbol Value="58"/>
+      <Symbol Value="59"/>
+      <Symbol Value="60"/>
+      <Symbol Value="62"/>
+      <Symbol Value="63"/>
+      <Symbol Value="64"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="1" Name="Konturensymbole">
+      <Symbol Value="1"/>
+      <Symbol Value="3"/>
+      <Symbol Value="5"/>
+      <Symbol Value="7"/>
+      <Symbol Value="8"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="2" Name="Nahtausführung">
+      <Symbol Value="1"/>
+      <Symbol Value="3"/>
+      <Symbol Value="5"/>
+    </EnabledSymbols>
+    <Name Description="根據 ISO 2553 - 1984 &amp; 2019" Language="1028">熔接符號 (BSI)</Name>
+    <Name Description="Podle normy ISO 2553 - 1984 &amp; 2019" Language="1029">Označení svaru (BSI)</Name>
+    <Name Description="Basiert auf ISO 2553 - 1984 &amp; 2019" Language="1031">Schweißsymbol (BSI)</Name>
+    <Name Description="Based on ISO 2553 - 1984 &amp; 2019" Language="1033">Weld Symbol (BSI)</Name>
+    <Name Description="En fonction d'ISO 2553 - 1984 &amp; 2019" Language="1036">Symbole de soudure (BSI)</Name>
+    <Name Description="Alapja: ISO 2553 - 1984 &amp; 2019" Language="1038">Hegesztési jel (BSI)</Name>
+    <Name Description="Basato su ISO 2553 - 1984 &amp; 2019" Language="1040">Simbolo di saldatura (BSI)</Name>
+    <Name Description="Based on ISO 2553 - 1984 &amp; 2019" Language="1041">Weld Symbol (BSI)</Name>
+    <Name Description="ISO 2553 - 1984 &amp; 2019 기준" Language="1042">용접 기호 (BSI)</Name>
+    <Name Description="Na podstawie ISO 2553 - 1984 &amp; 2019" Language="1045">Symbol spoiny (BSI)</Name>
+    <Name Description="Baseado na ISO 2553 - 1984 &amp; 2019" Language="1046">Símbolo de solda (BSI)</Name>
+    <Name Description="Согласно ISO 2553 - 1984 &amp; 2019" Language="1049">Обозначение сварного шва (BSI)</Name>
+    <Name Description="基于 ISO 2553 - 1984 &amp; 2019" Language="2052">焊接符号 (BSI)</Name>
+    <Name Description="Basado en ISO 2553 - 1984 &amp; 2019" Language="3082">Símbolo de soldadura (BSI)</Name>
+  </Style>
+
+  <Style ArrowSidePosition="0" EditFlag="0" FieldFlagDirection="0" IdentLineGap="0.105" IdentLineType="2" IdentLineTypeId="28101" InternalName="1:Weld Symbol (DIN)&#xA;" JustifyToLeader="1" LinkSymSizeToTextHeight="1" RecoverPrefix="1" ReferenceLineMargin="0.59944" Scale="1">
+    <SubStyle Collection="Leader" Language="1031" Type="kWeldLeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="kWeldTextStyle">Notiztext (DIN)</SubStyle>
+    <EnabledSymbols Id="0" Name="Schweißsymbole">
+      <Symbol Value="2"/>
+      <Symbol Value="6"/>
+      <Symbol Value="11"/>
+      <Symbol Value="14"/>
+      <Symbol Value="16"/>
+      <Symbol Value="19"/>
+      <Symbol Value="21"/>
+      <Symbol Value="24"/>
+      <Symbol Value="27"/>
+      <Symbol Value="32"/>
+      <Symbol Value="36"/>
+      <Symbol Value="39"/>
+      <Symbol Value="42"/>
+      <Symbol Value="45"/>
+      <Symbol Value="53"/>
+      <Symbol Value="54"/>
+      <Symbol Value="55"/>
+      <Symbol Value="56"/>
+      <Symbol Value="57"/>
+      <Symbol Value="58"/>
+      <Symbol Value="59"/>
+      <Symbol Value="60"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="1" Name="Konturensymbole">
+      <Symbol Value="1"/>
+      <Symbol Value="3"/>
+      <Symbol Value="5"/>
+      <Symbol Value="7"/>
+      <Symbol Value="8"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="2" Name="Nahtausführung">
+      <Symbol Value="1"/>
+      <Symbol Value="3"/>
+      <Symbol Value="5"/>
+    </EnabledSymbols>
+    <Name Description="根據 ISO 2553 - 1984 &amp; 2019" Language="1028">熔接符號 (DIN)</Name>
+    <Name Description="Podle normy ISO 2553 - 1984 &amp; 2019" Language="1029">Označení svaru (DIN)</Name>
+    <Name Description="Basiert auf ISO 2553 - 1984" Language="1031">Schweißsymbol (DIN)</Name>
+    <Name Description="Based on ISO 2553 - 1984 &amp; 2019" Language="1033">Weld Symbol (DIN)</Name>
+    <Name Description="En fonction d'ISO 2553 - 1984 &amp; 2019" Language="1036">Symbole de soudure (DIN)</Name>
+    <Name Description="Alapja: ISO 2553 - 1984 &amp; 2019" Language="1038">Hegesztési jel (DIN)</Name>
+    <Name Description="Basato su ISO 2553 - 1984 &amp; 2019" Language="1040">Simbolo di saldatura (DIN)</Name>
+    <Name Description="Based on ISO 2553 - 1984 &amp; 2019" Language="1041">Weld Symbol (DIN)</Name>
+    <Name Description="ISO 2553 - 1984 &amp; 2019 기준" Language="1042">용접 기호 (DIN)</Name>
+    <Name Description="Na podstawie ISO 2553 - 1984 &amp; 2019" Language="1045">Symbol spoiny (DIN)</Name>
+    <Name Description="Baseado na ISO 2553 - 1984 &amp; 2019" Language="1046">Símbolo de solda (DIN)</Name>
+    <Name Description="Согласно ISO 2553 - 1984 &amp; 2019" Language="1049">Обозначение сварного шва (DIN)</Name>
+    <Name Description="基于 ISO 2553 - 1984 &amp; 2019" Language="2052">焊接符号 (DIN)</Name>
+    <Name Description="Basado en ISO 2553 - 1984 &amp; 2019" Language="3082">Símbolo de soldadura (DIN)</Name>
+  </Style>
+
+  <Style ArrowSidePosition="0" EditFlag="0" FieldFlagDirection="0" IdentLineGap="0.105" IdentLineType="2" IdentLineTypeId="28101" InternalName="1:Weld Symbol (DIN) - 3DA&#xA;" JustifyToLeader="1" LinkSymSizeToTextHeight="1" RecoverPrefix="1" ReferenceLineMargin="0.59944" Scale="1">
+    <SubStyle Collection="Leader" Language="1031" Type="kWeldLeaderStyle">Allgemein (ISO) - 3DA</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="kWeldTextStyle">Notiztext (DIN) - 3DA</SubStyle>
+    <EnabledSymbols Id="0" Name="Schweißsymbole">
+      <Symbol Value="2"/>
+      <Symbol Value="6"/>
+      <Symbol Value="11"/>
+      <Symbol Value="14"/>
+      <Symbol Value="16"/>
+      <Symbol Value="19"/>
+      <Symbol Value="21"/>
+      <Symbol Value="24"/>
+      <Symbol Value="27"/>
+      <Symbol Value="32"/>
+      <Symbol Value="36"/>
+      <Symbol Value="39"/>
+      <Symbol Value="42"/>
+      <Symbol Value="45"/>
+      <Symbol Value="54"/>
+      <Symbol Value="55"/>
+      <Symbol Value="56"/>
+      <Symbol Value="57"/>
+      <Symbol Value="58"/>
+      <Symbol Value="59"/>
+      <Symbol Value="60"/>
+      <Symbol Value="62"/>
+      <Symbol Value="63"/>
+      <Symbol Value="64"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="1" Name="Konturensymbole">
+      <Symbol Value="1"/>
+      <Symbol Value="3"/>
+      <Symbol Value="5"/>
+      <Symbol Value="7"/>
+      <Symbol Value="8"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="2" Name="Nahtausführung">
+      <Symbol Value="1"/>
+      <Symbol Value="3"/>
+      <Symbol Value="5"/>
+    </EnabledSymbols>
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知。" Language="1028">熔接符號 (DIN) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku." Language="1029">Označení svaru (DIN) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden." Language="1031">Schweißsymbol (DIN) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1033">Weld Symbol (DIN) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">Symbole de soudure (DIN) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához." Language="1038">Hegesztési jel (DIN) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">Simbolo di saldatura (DIN) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1041">Weld Symbol (DIN) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">용접 기호 (DIN) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D." Language="1045">Symbol spoiny (DIN) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D." Language="1046">Símbolo de solda (DIN) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Обозначение сварного шва (DIN) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知。" Language="2052">焊接符号 (DIN) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">Símbolo de soldadura (DIN) - 3DA</Name>
+  </Style>
+
+  <Style ArrowSidePosition="1" EditFlag="0" FieldFlagDirection="0" IdentLineGap="0.105" IdentLineType="1" IdentLineTypeId="28101" InternalName="1:Weld Symbol (GB)&#xA;" JustifyToLeader="1" LinkSymSizeToTextHeight="1" RecoverPrefix="1" ReferenceLineMargin="0.59944" Scale="1">
+    <SubStyle Collection="Leader" Language="1031" Type="kWeldLeaderStyle">Allgemein (GB)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="kWeldTextStyle">Notiztext (ISO)</SubStyle>
+    <EnabledSymbols Id="0" Name="Schweißsymbole">
+      <Symbol Value="2"/>
+      <Symbol Value="6"/>
+      <Symbol Value="11"/>
+      <Symbol Value="14"/>
+      <Symbol Value="16"/>
+      <Symbol Value="19"/>
+      <Symbol Value="21"/>
+      <Symbol Value="24"/>
+      <Symbol Value="27"/>
+      <Symbol Value="32"/>
+      <Symbol Value="36"/>
+      <Symbol Value="39"/>
+      <Symbol Value="42"/>
+      <Symbol Value="45"/>
+      <Symbol Value="54"/>
+      <Symbol Value="55"/>
+      <Symbol Value="56"/>
+      <Symbol Value="57"/>
+      <Symbol Value="58"/>
+      <Symbol Value="59"/>
+      <Symbol Value="60"/>
+      <Symbol Value="62"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="1" Name="Konturensymbole">
+      <Symbol Value="1"/>
+      <Symbol Value="3"/>
+      <Symbol Value="5"/>
+      <Symbol Value="7"/>
+      <Symbol Value="8"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="2" Name="Nahtausführung">
+      <Symbol Value="1"/>
+      <Symbol Value="3"/>
+      <Symbol Value="4"/>
+    </EnabledSymbols>
+    <Name Description="根據 GB 324-88" Language="1028">熔接符號 (GB)</Name>
+    <Name Description="Podle normy GB 324-88" Language="1029">Označení svaru (GB)</Name>
+    <Name Description="Basiert auf GB 324-88" Language="1031">Schweißsymbol (GB)</Name>
+    <Name Description="Based on GB 324-88" Language="1033">Weld Symbol (GB)</Name>
+    <Name Description="En fonction de GB 324-88" Language="1036">Symbole de soudure (GB)</Name>
+    <Name Description="Alapja: GB 324-88" Language="1038">Hegesztési jel (GB)</Name>
+    <Name Description="Basato su GB 324-88" Language="1040">Simbolo di saldatura (GB)</Name>
+    <Name Description="Based on GB 324-88" Language="1041">Weld Symbol (GB)</Name>
+    <Name Description="GB 324-88 기준" Language="1042">용접 기호 (GB)</Name>
+    <Name Description="Na podstawie GB 324-88" Language="1045">Symbol spoiny (GB)</Name>
+    <Name Description="Baseado na GB 324-88" Language="1046">Símbolo de solda (GB)</Name>
+    <Name Description="Согласно GB 324-88" Language="1049">Обозначение сварного шва (GB)</Name>
+    <Name Description="基于 GB 324-88" Language="2052">焊接符号 (GB)</Name>
+    <Name Description="Basado en GB 324-88" Language="3082">Símbolo de soldadura (GB)</Name>
+  </Style>
+
+  <Style ArrowSidePosition="0" EditFlag="0" FieldFlagDirection="0" IdentLineGap="0.105" IdentLineType="2" IdentLineTypeId="28101" InternalName="1:Weld Symbol (GOST)&#xA;" JustifyToLeader="1" LinkSymSizeToTextHeight="1" RecoverPrefix="1" ReferenceLineMargin="0.59944" Scale="1">
+    <SubStyle Collection="Leader" Language="1031" Type="kWeldLeaderStyle">Allgemein (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="kWeldTextStyle">Normale Textgröße (GOST)</SubStyle>
+    <EnabledSymbols Id="0" Name="Schweißsymbole">
+      <Symbol Value="2"/>
+      <Symbol Value="6"/>
+      <Symbol Value="11"/>
+      <Symbol Value="14"/>
+      <Symbol Value="16"/>
+      <Symbol Value="19"/>
+      <Symbol Value="21"/>
+      <Symbol Value="24"/>
+      <Symbol Value="27"/>
+      <Symbol Value="32"/>
+      <Symbol Value="36"/>
+      <Symbol Value="39"/>
+      <Symbol Value="42"/>
+      <Symbol Value="45"/>
+      <Symbol Value="53"/>
+      <Symbol Value="54"/>
+      <Symbol Value="55"/>
+      <Symbol Value="56"/>
+      <Symbol Value="57"/>
+      <Symbol Value="58"/>
+      <Symbol Value="59"/>
+      <Symbol Value="60"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="1" Name="Konturensymbole">
+      <Symbol Value="1"/>
+      <Symbol Value="3"/>
+      <Symbol Value="5"/>
+      <Symbol Value="7"/>
+      <Symbol Value="8"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="2" Name="Nahtausführung">
+      <Symbol Value="1"/>
+      <Symbol Value="3"/>
+    </EnabledSymbols>
+    <Name Description="根據 ISO 2553 - 1984" Language="1028">熔接符號 (GOST)</Name>
+    <Name Description="Podle normy ISO 2553 - 1984" Language="1029">Označení svaru (GOST)</Name>
+    <Name Description="Basiert auf ISO 2553 - 1984" Language="1031">Schweißsymbol (GOST)</Name>
+    <Name Description="Based on ISO 2553 - 1984" Language="1033">Weld Symbol (GOST)</Name>
+    <Name Description="En fonction d'ISO 2553 - 1984" Language="1036">Symbole de soudure (GOST)</Name>
+    <Name Description="Alapja: ISO 2553 - 1984" Language="1038">Hegesztési jel (GOST)</Name>
+    <Name Description="Basato su ISO 2553 - 1984" Language="1040">Simbolo di saldatura (GOST)</Name>
+    <Name Description="Based on ISO 2553 - 1984" Language="1041">Weld Symbol (GOST)</Name>
+    <Name Description="ISO 2553 - 1984 기준" Language="1042">용접 기호(GOST)</Name>
+    <Name Description="Na podstawie ISO 2553 - 1984" Language="1045">Symbol spoiny (GOST)</Name>
+    <Name Description="Baseado na ISO 2553 - 1984" Language="1046">Símbolo de solda (GOST)</Name>
+    <Name Description="Согласно ISO 2553 - 1984" Language="1049">Обозначение сварного шва (ГОСТ)</Name>
+    <Name Description="基于 ISO 2553 - 1984" Language="2052">焊接符号 (GOST)</Name>
+    <Name Description="Basado en ISO 2553 - 1984" Language="3082">Símbolo de soldadura (GOST)</Name>
+  </Style>
+
+  <Style ArrowSidePosition="0" EditFlag="0" FieldFlagDirection="0" IdentLineGap="0.105" IdentLineType="2" IdentLineTypeId="28101" InternalName="1:Weld Symbol (ISO)&#xA;" JustifyToLeader="1" LinkSymSizeToTextHeight="1" RecoverPrefix="1" ReferenceLineMargin="0.59944" Scale="1">
+    <SubStyle Collection="Leader" Language="1031" Type="kWeldLeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="kWeldTextStyle">Notiztext (ISO)</SubStyle>
+    <EnabledSymbols Id="0" Name="Schweißsymbole">
+      <Symbol Value="2"/>
+      <Symbol Value="6"/>
+      <Symbol Value="11"/>
+      <Symbol Value="14"/>
+      <Symbol Value="16"/>
+      <Symbol Value="19"/>
+      <Symbol Value="21"/>
+      <Symbol Value="24"/>
+      <Symbol Value="27"/>
+      <Symbol Value="32"/>
+      <Symbol Value="36"/>
+      <Symbol Value="39"/>
+      <Symbol Value="42"/>
+      <Symbol Value="45"/>
+      <Symbol Value="54"/>
+      <Symbol Value="55"/>
+      <Symbol Value="56"/>
+      <Symbol Value="57"/>
+      <Symbol Value="58"/>
+      <Symbol Value="59"/>
+      <Symbol Value="60"/>
+      <Symbol Value="62"/>
+      <Symbol Value="63"/>
+      <Symbol Value="64"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="1" Name="Konturensymbole">
+      <Symbol Value="1"/>
+      <Symbol Value="3"/>
+      <Symbol Value="5"/>
+      <Symbol Value="7"/>
+      <Symbol Value="8"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="2" Name="Nahtausführung">
+      <Symbol Value="1"/>
+      <Symbol Value="3"/>
+    </EnabledSymbols>
+    <Name Description="根據 ISO 2553 - 1984 &amp; 2019" Language="1028">熔接符號 (ISO)</Name>
+    <Name Description="Podle normy ISO 2553 - 1984 &amp; 2019" Language="1029">Označení svaru (ISO)</Name>
+    <Name Description="Basiert auf ISO 2553 - 1984 &amp; 2019" Language="1031">Schweißsymbol (ISO)</Name>
+    <Name Description="Based on ISO 2553 - 1984 &amp; 2019" Language="1033">Weld Symbol (ISO)</Name>
+    <Name Description="En fonction d'ISO 2553 - 1984 &amp; 2019" Language="1036">Symbole de soudure (ISO)</Name>
+    <Name Description="Alapja: ISO 2553 - 1984 &amp; 2019" Language="1038">Hegesztési jel (ISO)</Name>
+    <Name Description="Basato su ISO 2553 - 1984 &amp; 2019" Language="1040">Simbolo di saldatura (ISO)</Name>
+    <Name Description="Based on ISO 2553 - 1984 &amp; 2019" Language="1041">Weld Symbol (ISO)</Name>
+    <Name Description="ISO 2553 - 1984 &amp; 2019 기준" Language="1042">용접 기호 (ISO)</Name>
+    <Name Description="Na podstawie ISO 2553 - 1984 &amp; 2019" Language="1045">Symbol spoiny (ISO)</Name>
+    <Name Description="Baseado na ISO 2553 - 1984 &amp; 2019" Language="1046">Símbolo de solda (ISO)</Name>
+    <Name Description="Согласно ISO 2553 - 1984 &amp; 2019" Language="1049">Обозначение сварного шва (ISO)</Name>
+    <Name Description="基于 ISO 2553 - 1984 &amp; 2019" Language="2052">焊接符号 (ISO)</Name>
+    <Name Description="Basado en ISO 2553 - 1984 &amp; 2019" Language="3082">Símbolo de soldadura (ISO)</Name>
+  </Style>
+
+  <Style ArrowSidePosition="0" EditFlag="0" FieldFlagDirection="0" IdentLineGap="0.105" IdentLineType="2" IdentLineTypeId="28101" InternalName="1:Weld Symbol (ISO) - 3DA&#xA;" JustifyToLeader="1" LinkSymSizeToTextHeight="1" RecoverPrefix="1" ReferenceLineMargin="0.59944" Scale="1">
+    <SubStyle Collection="Leader" Language="1031" Type="kWeldLeaderStyle">Allgemein (ISO) - 3DA</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="kWeldTextStyle">Notiztext (ISO) - 3DA</SubStyle>
+    <EnabledSymbols Id="0" Name="Schweißsymbole">
+      <Symbol Value="2"/>
+      <Symbol Value="6"/>
+      <Symbol Value="11"/>
+      <Symbol Value="14"/>
+      <Symbol Value="16"/>
+      <Symbol Value="19"/>
+      <Symbol Value="21"/>
+      <Symbol Value="24"/>
+      <Symbol Value="27"/>
+      <Symbol Value="32"/>
+      <Symbol Value="36"/>
+      <Symbol Value="39"/>
+      <Symbol Value="42"/>
+      <Symbol Value="45"/>
+      <Symbol Value="54"/>
+      <Symbol Value="55"/>
+      <Symbol Value="56"/>
+      <Symbol Value="57"/>
+      <Symbol Value="58"/>
+      <Symbol Value="59"/>
+      <Symbol Value="60"/>
+      <Symbol Value="62"/>
+      <Symbol Value="63"/>
+      <Symbol Value="64"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="1" Name="Konturensymbole">
+      <Symbol Value="1"/>
+      <Symbol Value="3"/>
+      <Symbol Value="5"/>
+      <Symbol Value="7"/>
+      <Symbol Value="8"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="2" Name="Nahtausführung">
+      <Symbol Value="1"/>
+      <Symbol Value="3"/>
+    </EnabledSymbols>
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知。" Language="1028">熔接符號 (ISO) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku. " Language="1029">Označení svaru (ISO) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden." Language="1031">Schweißsymbol (ISO) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1033">Weld Symbol (ISO) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">Symbole de soudure (ISO) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához." Language="1038">Hegesztési jel (ISO) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">Simbolo di saldatura (ISO) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1041">Weld Symbol (ISO) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">용접 기호 (ISO) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D." Language="1045">Symbol spoiny (ISO) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D." Language="1046">Símbolo de solda (ISO) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Обозначение сварного шва (ISO) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知。" Language="2052">焊接符号 (ISO) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">Símbolo de soldadura (ISO) - 3DA</Name>
+  </Style>
+
+  <Style ArrowSidePosition="0" EditFlag="0" FieldFlagDirection="2" IdentLineGap="0.105" IdentLineType="0" IdentLineTypeId="28101" InternalName="1:Weld Symbol (JIS)&#xA;" JustifyToLeader="1" LinkSymSizeToTextHeight="1" RecoverPrefix="1" ReferenceLineMargin="0.59944" Scale="1">
+    <SubStyle Collection="Leader" Language="1031" Type="kWeldLeaderStyle">Allgemein (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="kWeldTextStyle">Notiztext (JIS)</SubStyle>
+    <EnabledSymbols Id="0" Name="Schweißsymbole">
+      <Symbol Value="4"/>
+      <Symbol Value="7"/>
+      <Symbol Value="12"/>
+      <Symbol Value="17"/>
+      <Symbol Value="22"/>
+      <Symbol Value="25"/>
+      <Symbol Value="28"/>
+      <Symbol Value="30"/>
+      <Symbol Value="33"/>
+      <Symbol Value="37"/>
+      <Symbol Value="40"/>
+      <Symbol Value="43"/>
+      <Symbol Value="46"/>
+      <Symbol Value="48"/>
+      <Symbol Value="50"/>
+      <Symbol Value="52"/>
+      <Symbol Value="54"/>
+      <Symbol Value="55"/>
+      <Symbol Value="56"/>
+      <Symbol Value="59"/>
+      <Symbol Value="60"/>
+      <Symbol Value="62"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="1" Name="Konturensymbole">
+      <Symbol Value="2"/>
+      <Symbol Value="4"/>
+      <Symbol Value="6"/>
+      <Symbol Value="7"/>
+      <Symbol Value="8"/>
+    </EnabledSymbols>
+    <EnabledSymbols Id="2" Name="Nahtausführung">
+      <Symbol Value="2"/>
+      <Symbol Value="3"/>
+    </EnabledSymbols>
+    <Name Description="根據 JIS Z 3021 - 1987" Language="1028">熔接符號 (JIS)</Name>
+    <Name Description="Podle normy JIS Z 3021 - 1987" Language="1029">Označení svaru (JIS)</Name>
+    <Name Description="Basiert auf JIS Z 3021 - 1987" Language="1031">Schweißsymbol (JIS)</Name>
+    <Name Description="Based on JIS Z 3021 - 1987" Language="1033">Weld Symbol (JIS)</Name>
+    <Name Description="En fonction de JIS Z 3021 - 1987" Language="1036">Symbole de soudure (JIS)</Name>
+    <Name Description="Alapja: JIS Z 3021 - 1987" Language="1038">Hegesztési jel (JIS)</Name>
+    <Name Description="Basato su JIS Z 3021 - 1987" Language="1040">Simbolo di saldatura (JIS)</Name>
+    <Name Description="Based on JIS Z 3021 - 1987" Language="1041">Weld Symbol (JIS)</Name>
+    <Name Description="JIS Z 3021 - 1987 기준" Language="1042">용접 기호 (JIS)</Name>
+    <Name Description="Na podstawie JIS Z 3021 - 1987" Language="1045">Symbol spoiny (JIS)</Name>
+    <Name Description="Baseado na JIS Z 3021 - 1987" Language="1046">Símbolo de solda (JIS)</Name>
+    <Name Description="Согласно JIS Z 3021 - 1987" Language="1049">Обозначение сварного шва (JIS)</Name>
+    <Name Description="基于 JIS Z 3021 - 1987" Language="2052">焊接符号 (JIS)</Name>
+    <Name Description="Basado en JIS Z 3021 - 1987" Language="3082">Símbolo de soldadura (JIS)</Name>
+  </Style>
+
+</Weld>

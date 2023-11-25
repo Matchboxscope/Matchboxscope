@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<SheetMetalUnfold Version="3">
+
+  <!--Created by Autodesk Inventor Version 19.0 Internal-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style EditFlag="3" InternalName="1:BendCompensation&#xA;" KFactor="0.440 ul" KFactorBackup="0.440 ul" SplineFactor="0.500 ul" Type="4">
+    <BendTable AngleTolerance="0.004" InputUnit="3" IsOuterAngle="0" RadiiTolerance="0.004" ThicknessTolerance="4e-005"/>
+    <CustomEquation EquationIsOuterAngle="0" EquationType="1">
+      <Equation EquationBound="0 deg≤β≤90 deg" EquationString="π * ((180deg - β)/180deg) * (ρ + (μ/2ul) * (0.65ul + 0.5ul * log(ρ/μ))) - 2ul * (ρ + μ)"/>
+      <Equation EquationBound="90 deg&lt;β≤165 deg" EquationString="π * ((180deg - β)/180deg) * (ρ + (μ/2ul) * (0.65ul + 0.5ul * log(ρ/μ))) - 2ul * (ρ + μ) * tan((180 deg - β)/2ul)"/>
+      <Equation EquationBound="165 deg&lt;β≤180 deg" EquationString="0 in"/>
+    </CustomEquation>
+    <Name Description="" Language="1028">折彎補償</Name>
+    <Name Description="" Language="1029">Kompenzace ohybu</Name>
+    <Name Description="" Language="1031">Biegungsausgleich</Name>
+    <Name Description="" Language="1033">BendCompensation</Name>
+    <Name Description="" Language="1036">Compensation du pli</Name>
+    <Name Description="" Language="1038">Hajlás kiegyenlítés</Name>
+    <Name Description="" Language="1040">Compensazione piega</Name>
+    <Name Description="" Language="1041">BendCompensation</Name>
+    <Name Description="" Language="1042">절곡부 보정</Name>
+    <Name Description="" Language="1045">KompensacjaZagięcia</Name>
+    <Name Description="" Language="1046">CompensaçãoDobra</Name>
+    <Name Description="" Language="1049">Компенсация сгиба</Name>
+    <Name Description="" Language="2052">折弯补偿</Name>
+    <Name Description="" Language="3082">CompensaciónPliegue</Name>
+  </Style>
+
+  <Style EditFlag="3" InternalName="1:Default_KFactor&#xA;" KFactor="0.440 ul" KFactorBackup="0.440 ul" SplineFactor="0.500 ul" Type="1">
+    <BendTable AngleTolerance="0.004" InputUnit="3" IsOuterAngle="0" RadiiTolerance="0.004" ThicknessTolerance="4e-005"/>
+    <Name Description="" Language="1028">預設 K 係數(_K)</Name>
+    <Name Description="" Language="1029">Výchozí_KFaktor</Name>
+    <Name Description="" Language="1031">Standard_KFaktor</Name>
+    <Name Description="" Language="1033">Default_KFactor</Name>
+    <Name Description="" Language="1036">Par défaut_FacteurX</Name>
+    <Name Description="" Language="1038">Alapértelmezett_KFaktor</Name>
+    <Name Description="" Language="1040">FattoreK_di_default</Name>
+    <Name Description="" Language="1041">Default_KFactor</Name>
+    <Name Description="" Language="1042">기본값_KFactor</Name>
+    <Name Description="" Language="1045">Domyślny_WspółczynnikK</Name>
+    <Name Description="" Language="1046">Padrão_Fator-K</Name>
+    <Name Description="" Language="1049">По умолчанию_Поправка</Name>
+    <Name Description="" Language="2052">默认 K 系数</Name>
+    <Name Description="" Language="3082">FactorK_Pordefecto</Name>
+  </Style>
+
+</SheetMetalUnfold>

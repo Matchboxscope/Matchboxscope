@@ -1,0 +1,1308 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<Layers Version="1">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:3D Sketch Geometry (ANSI)&#xA;" LinePattern="28107" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">3D 草圖幾何圖形 (ANSI)</Name>
+    <Name Description="" Language="1029">3D Geometrie náčrtu (ANSI)</Name>
+    <Name Description="" Language="1031">3D Skizziergeometrie (ANSI)</Name>
+    <Name Description="" Language="1033">3D Sketch Geometry (ANSI)</Name>
+    <Name Description="" Language="1036">3D Géométrie d'esquisse (ANSI)</Name>
+    <Name Description="" Language="1038">3D vázlatgeometria (ANSI)</Name>
+    <Name Description="" Language="1040">Geometria schizzo 3D (ANSI)</Name>
+    <Name Description="" Language="1041">3D Sketch Geometry (ANSI)</Name>
+    <Name Description="" Language="1042">3D 스케치 형상(ANSI)</Name>
+    <Name Description="" Language="1045">3D Geometria szkicu (ANSI)</Name>
+    <Name Description="" Language="1046">Geometria de rascunho 3D (ANSI)</Name>
+    <Name Description="" Language="1049">3D Эскизная геометрия (ANSI)</Name>
+    <Name Description="" Language="2052">三维草图几何图元 (ANSI)</Name>
+    <Name Description="" Language="3082">3D Geometría de boceto (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:3D Sketch Geometry (GOST)&#xA;" LinePattern="28107" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">3D 草圖幾何圖形 (GOST)</Name>
+    <Name Description="" Language="1029">3D Geometrie náčrtu (GOST)</Name>
+    <Name Description="" Language="1031">3D Skizziergeometrie (GOST)</Name>
+    <Name Description="" Language="1033">3D Sketch Geometry (GOST)</Name>
+    <Name Description="" Language="1036">3D Géométrie d'esquisse (GOST)</Name>
+    <Name Description="" Language="1038">3D vázlatgeometria (GOST)</Name>
+    <Name Description="" Language="1040">Geometria schizzo 3D (GOST)</Name>
+    <Name Description="" Language="1041">3D Sketch Geometry (GOST)</Name>
+    <Name Description="" Language="1042">3D 스케치 형상(GOST)</Name>
+    <Name Description="" Language="1045">3D Geometria szkicu (GOST)</Name>
+    <Name Description="" Language="1046">Geometria de rascunho 3D (GOST)</Name>
+    <Name Description="" Language="1049">3D Эскизная геометрия (ГОСТ)</Name>
+    <Name Description="" Language="2052">三维草图几何图元 (GOST)</Name>
+    <Name Description="" Language="3082">3D Geometría de boceto (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:3D Sketch Geometry (ISO)&#xA;" LinePattern="28107" LineThickness="0.013" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">3D 草圖幾何圖形 (ISO)</Name>
+    <Name Description="" Language="1029">3D Geometrie náčrtu (ISO)</Name>
+    <Name Description="" Language="1031">3D Skizziergeometrie (ISO)</Name>
+    <Name Description="" Language="1033">3D Sketch Geometry (ISO)</Name>
+    <Name Description="" Language="1036">3D Géométrie d'esquisse (ISO)</Name>
+    <Name Description="" Language="1038">3D vázlatgeometria (ISO)</Name>
+    <Name Description="" Language="1040">Geometria schizzo 3D (ISO)</Name>
+    <Name Description="" Language="1041">3D Sketch Geometry (ISO)</Name>
+    <Name Description="" Language="1042">3D 스케치 형상(ISO)</Name>
+    <Name Description="" Language="1045">3D Geometria szkicu (ISO)</Name>
+    <Name Description="" Language="1046">Geometria de rascunho 3D (ISO)</Name>
+    <Name Description="" Language="1049">3D Эскизная геометрия (ISO)</Name>
+    <Name Description="" Language="2052">三维草图几何图元 (ISO)</Name>
+    <Name Description="" Language="3082">3D Geometría de boceto (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Work Axis (ANSI)&#xA;" LinePattern="28107" LineThickness="0.0254" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">工作軸 (ANSI)</Name>
+    <Name Description="" Language="1029">Pracovní osa (ANSI)</Name>
+    <Name Description="" Language="1031">Arbeitsachse (ANSI)</Name>
+    <Name Description="" Language="1033">Work Axis (ANSI)</Name>
+    <Name Description="" Language="1036">Axe de construction (ANSI)</Name>
+    <Name Description="" Language="1038">Munkatengely (ANSI)</Name>
+    <Name Description="" Language="1040">Asse di lavoro (ANSI)</Name>
+    <Name Description="" Language="1041">Work Axis (ANSI)</Name>
+    <Name Description="" Language="1042">작업 축(ANSI)</Name>
+    <Name Description="" Language="1045">Oś konstrukcyjna (ANSI)</Name>
+    <Name Description="" Language="1046">Eixo de trabalho (ANSI)</Name>
+    <Name Description="" Language="1049">Рабочая ось (ANSI)</Name>
+    <Name Description="" Language="2052">工作轴 (ANSI)</Name>
+    <Name Description="" Language="3082">Eje de trabajo (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Work Axis (GOST)&#xA;" LinePattern="28107" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">工作軸 (GOST)</Name>
+    <Name Description="" Language="1029">Pracovní osa (GOST)</Name>
+    <Name Description="" Language="1031">Arbeitsachse (GOST)</Name>
+    <Name Description="" Language="1033">Work Axis (GOST)</Name>
+    <Name Description="" Language="1036">Axe de construction (GOST)</Name>
+    <Name Description="" Language="1038">Munkatengely (GOST)</Name>
+    <Name Description="" Language="1040">Asse di lavoro (GOST)</Name>
+    <Name Description="" Language="1041">Work Axis (GOST)</Name>
+    <Name Description="" Language="1042">작업축(GOST)</Name>
+    <Name Description="" Language="1045">Oś konstrukcyjna (GOST)</Name>
+    <Name Description="" Language="1046">Eixo de trabalho (GOST)</Name>
+    <Name Description="" Language="1049">Рабочая ось (ГОСТ)</Name>
+    <Name Description="" Language="2052">工作轴 (GOST)</Name>
+    <Name Description="" Language="3082">Eje de trabajo (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Work Axis (ISO)&#xA;" LinePattern="28107" LineThickness="0.013" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">工作軸 (ISO)</Name>
+    <Name Description="" Language="1029">Pracovní osa (ISO)</Name>
+    <Name Description="" Language="1031">Arbeitsachse (ISO)</Name>
+    <Name Description="" Language="1033">Work Axis (ISO)</Name>
+    <Name Description="" Language="1036">Axe de construction (ISO)</Name>
+    <Name Description="" Language="1038">Munkatengely (ISO)</Name>
+    <Name Description="" Language="1040">Asse di lavoro (ISO)</Name>
+    <Name Description="" Language="1041">Work Axis (ISO)</Name>
+    <Name Description="" Language="1042">작업 축(ISO)</Name>
+    <Name Description="" Language="1045">Oś konstrukcyjna (ISO)</Name>
+    <Name Description="" Language="1046">Eixo de trabalho (ISO)</Name>
+    <Name Description="" Language="1049">Рабочая ось (ISO)</Name>
+    <Name Description="" Language="2052">工作轴 (ISO)</Name>
+    <Name Description="" Language="3082">Eje de trabajo (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Work Plane (ANSI)&#xA;" LinePattern="28108" LineThickness="0.0254" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">工作平面 (ANSI)</Name>
+    <Name Description="" Language="1029">Pracovní rovina (ANSI)</Name>
+    <Name Description="" Language="1031">Arbeitsebene (ANSI)</Name>
+    <Name Description="" Language="1033">Work Plane (ANSI)</Name>
+    <Name Description="" Language="1036">Plan de construction (ANSI)</Name>
+    <Name Description="" Language="1038">Munkasík (ANSI)</Name>
+    <Name Description="" Language="1040">Piano di lavoro (ANSI)</Name>
+    <Name Description="" Language="1041">Work Plane (ANSI)</Name>
+    <Name Description="" Language="1042">작업 평면(ANSI)</Name>
+    <Name Description="" Language="1045">Płaszczyzna konstrukcyjna (ANSI)</Name>
+    <Name Description="" Language="1046">Plano de trabalho (ANSI)</Name>
+    <Name Description="" Language="1049">Рабочая плоскость (ANSI)</Name>
+    <Name Description="" Language="2052">工作平面 (ANSI)</Name>
+    <Name Description="" Language="3082">Plano de trabajo (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Work Plane (GOST)&#xA;" LinePattern="28108" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">工作平面 (GOST)</Name>
+    <Name Description="" Language="1029">Pracovní rovina (GOST)</Name>
+    <Name Description="" Language="1031">Arbeitsebene (GOST)</Name>
+    <Name Description="" Language="1033">Work Plane (GOST)</Name>
+    <Name Description="" Language="1036">Plan de construction (GOST)</Name>
+    <Name Description="" Language="1038">Munkasík (GOST)</Name>
+    <Name Description="" Language="1040">Piano di lavoro (GOST)</Name>
+    <Name Description="" Language="1041">Work Plane (GOST)</Name>
+    <Name Description="" Language="1042">작업 평면(GOST)</Name>
+    <Name Description="" Language="1045">Płaszczyzna konstrukcyjna (GOST)</Name>
+    <Name Description="" Language="1046">Plano de trabalho (GOST)</Name>
+    <Name Description="" Language="1049">Рабочая плоскость (ГОСТ)</Name>
+    <Name Description="" Language="2052">工作平面 (GOST)</Name>
+    <Name Description="" Language="3082">Plano de trabajo (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Work Plane (ISO)&#xA;" LinePattern="28108" LineThickness="0.013" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">工作平面 (ISO)</Name>
+    <Name Description="" Language="1029">Pracovní rovina (ISO)</Name>
+    <Name Description="" Language="1031">Arbeitsebene (ISO)</Name>
+    <Name Description="" Language="1033">Work Plane (ISO)</Name>
+    <Name Description="" Language="1036">Plan de construction (ISO)</Name>
+    <Name Description="" Language="1038">Munkasík (ISO)</Name>
+    <Name Description="" Language="1040">Piano di lavoro (ISO)</Name>
+    <Name Description="" Language="1041">Work Plane (ISO)</Name>
+    <Name Description="" Language="1042">작업 평면(ISO)</Name>
+    <Name Description="" Language="1045">Płaszczyzna konstrukcyjna (ISO)</Name>
+    <Name Description="" Language="1046">Plano de trabalho (ISO)</Name>
+    <Name Description="" Language="1049">Рабочая плоскость (ISO)</Name>
+    <Name Description="" Language="2052">工作平面 (ISO)</Name>
+    <Name Description="" Language="3082">Plano de trabajo (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Work Point (ANSI)&#xA;" LinePattern="28100" LineThickness="0.0254" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">工作點 (ANSI)</Name>
+    <Name Description="" Language="1029">Pracovní bod (ANSI)</Name>
+    <Name Description="" Language="1031">Arbeitspunkt (ANSI)</Name>
+    <Name Description="" Language="1033">Work Point (ANSI)</Name>
+    <Name Description="" Language="1036">Point de construction (ANSI)</Name>
+    <Name Description="" Language="1038">Munkapont (ANSI)</Name>
+    <Name Description="" Language="1040">Punto di riferimento (ANSI)</Name>
+    <Name Description="" Language="1041">Work Point (ANSI)</Name>
+    <Name Description="" Language="1042">작업 점(ANSI)</Name>
+    <Name Description="" Language="1045">Punkt konstrukcyjny (ANSI)</Name>
+    <Name Description="" Language="1046">Ponto de trabalho (ANSI)</Name>
+    <Name Description="" Language="1049">Рабочая точка (ANSI)</Name>
+    <Name Description="" Language="2052">工作点 (ANSI)</Name>
+    <Name Description="" Language="3082">Punto de trabajo (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Work Point (GOST)&#xA;" LinePattern="28100" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">工作點 (GOST)</Name>
+    <Name Description="" Language="1029">Pracovní bod (GOST)</Name>
+    <Name Description="" Language="1031">Arbeitspunkt (GOST)</Name>
+    <Name Description="" Language="1033">Work Point (GOST)</Name>
+    <Name Description="" Language="1036">Point de construction (GOST)</Name>
+    <Name Description="" Language="1038">Munkapont (GOST)</Name>
+    <Name Description="" Language="1040">Punto di riferimento (GOST)</Name>
+    <Name Description="" Language="1041">Work Point (GOST)</Name>
+    <Name Description="" Language="1042">작업 점(GOST)</Name>
+    <Name Description="" Language="1045">Punkt konstrukcyjny (GOST)</Name>
+    <Name Description="" Language="1046">Ponto de trabalho (GOST)</Name>
+    <Name Description="" Language="1049">Рабочая точка (ГОСТ)</Name>
+    <Name Description="" Language="2052">工作点 (GOST)</Name>
+    <Name Description="" Language="3082">Punto de trabajo (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Work Point (ISO)&#xA;" LinePattern="28100" LineThickness="0.013" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">工作點 (ISO)</Name>
+    <Name Description="" Language="1029">Pracovní bod (ISO)</Name>
+    <Name Description="" Language="1031">Arbeitspunkt (ISO)</Name>
+    <Name Description="" Language="1033">Work Point (ISO)</Name>
+    <Name Description="" Language="1036">Point de construction (ISO)</Name>
+    <Name Description="" Language="1038">Munkapont (ISO)</Name>
+    <Name Description="" Language="1040">Punto di riferimento (ISO)</Name>
+    <Name Description="" Language="1041">Work Point (ISO)</Name>
+    <Name Description="" Language="1042">작업 점(ISO)</Name>
+    <Name Description="" Language="1045">Punkt konstrukcyjny (ISO)</Name>
+    <Name Description="" Language="1046">Ponto de trabalho (ISO)</Name>
+    <Name Description="" Language="1049">Рабочая точка (ISO)</Name>
+    <Name Description="" Language="2052">工作点 (ISO)</Name>
+    <Name Description="" Language="3082">Punto de trabajo (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Dimension (ANSI)&#xA;" LinePattern="28100" LineThickness="0.0254" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">標註 (ANSI)</Name>
+    <Name Description="" Language="1029">Kóta (ANSI)</Name>
+    <Name Description="" Language="1031">Bemaßung (ANSI)</Name>
+    <Name Description="" Language="1033">Dimension (ANSI)</Name>
+    <Name Description="" Language="1036">Cote (ANSI)</Name>
+    <Name Description="" Language="1038">Méret (ANSI)</Name>
+    <Name Description="" Language="1040">Quota (ANSI)</Name>
+    <Name Description="" Language="1041">Dimension (ANSI)</Name>
+    <Name Description="" Language="1042">치수(ANSI)</Name>
+    <Name Description="" Language="1045">Wymiar (ANSI)</Name>
+    <Name Description="" Language="1046">Dimensão (ANSI)</Name>
+    <Name Description="" Language="1049">Размер (ANSI)</Name>
+    <Name Description="" Language="2052">尺寸 (ANSI)</Name>
+    <Name Description="" Language="3082">Cota (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Dimensions(ISO)&#xA;" LinePattern="28100" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">標註 (GOST)</Name>
+    <Name Description="" Language="1029">Kóta (GOST)</Name>
+    <Name Description="" Language="1031">Bemaßung (GOST)</Name>
+    <Name Description="" Language="1033">Dimension (GOST)</Name>
+    <Name Description="" Language="1036">Cote (GOST)</Name>
+    <Name Description="" Language="1038">Méret (GOST)</Name>
+    <Name Description="" Language="1040">Quota (GOST)</Name>
+    <Name Description="" Language="1041">Dimension (GOST)</Name>
+    <Name Description="" Language="1042">치수(GOST)</Name>
+    <Name Description="" Language="1045">Wymiar (GOST)</Name>
+    <Name Description="" Language="1046">Dimensão (GOST)</Name>
+    <Name Description="" Language="1049">Размер (ГОСТ)</Name>
+    <Name Description="" Language="2052">尺寸 (GOST)</Name>
+    <Name Description="" Language="3082">Cota (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Dimension (ISO)&#xA;" LinePattern="28100" LineThickness="0.013" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">標註 (ISO)</Name>
+    <Name Description="" Language="1029">Kóta (ISO)</Name>
+    <Name Description="" Language="1031">Bemaßung (ISO)</Name>
+    <Name Description="" Language="1033">Dimension (ISO)</Name>
+    <Name Description="" Language="1036">Cote (ISO)</Name>
+    <Name Description="" Language="1038">Méret (ISO)</Name>
+    <Name Description="" Language="1040">Quota (ISO)</Name>
+    <Name Description="" Language="1041">Dimension (ISO)</Name>
+    <Name Description="" Language="1042">치수(ISO)</Name>
+    <Name Description="" Language="1045">Wymiar (ISO)</Name>
+    <Name Description="" Language="1046">Dimensão (ISO)</Name>
+    <Name Description="" Language="1049">Размер (ISO)</Name>
+    <Name Description="" Language="2052">尺寸 (ISO)</Name>
+    <Name Description="" Language="3082">Cota (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Bend Extent (ANSI)&#xA;" LinePattern="28100" LineThickness="0.05" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">折彎範圍 (ANSI)</Name>
+    <Name Description="" Language="1029">Rozsah ohybu (ANSI)</Name>
+    <Name Description="" Language="1031">Biegungsende (ANSI)</Name>
+    <Name Description="" Language="1033">Bend Extent (ANSI)</Name>
+    <Name Description="" Language="1036">Encombrement du pli (ANSI)</Name>
+    <Name Description="" Language="1038">Hajlítás terjedelme (ANSI)</Name>
+    <Name Description="" Language="1040">Estensione piega (ANSI)</Name>
+    <Name Description="" Language="1041">Bend Extent (ANSI)</Name>
+    <Name Description="" Language="1042">절곡부 범위(ANSI)</Name>
+    <Name Description="" Language="1045">Zakres zgięcia (ANSI)</Name>
+    <Name Description="" Language="1046">Extensão da curva (ANSI)</Name>
+    <Name Description="" Language="1049">Граница сгиба (ANSI)</Name>
+    <Name Description="" Language="2052">折弯范围 (ANSI)</Name>
+    <Name Description="" Language="3082">Extensión de pliegue (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Bend Extent (GOST)&#xA;" LinePattern="28100" LineThickness="0.05" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">折彎範圍 (GOST)</Name>
+    <Name Description="" Language="1029">Rozsah ohybu (GOST)</Name>
+    <Name Description="" Language="1031">Biegungsende (GOST)</Name>
+    <Name Description="" Language="1033">Bend Extent (GOST)</Name>
+    <Name Description="" Language="1036">Encombrement du pli (GOST)</Name>
+    <Name Description="" Language="1038">Hajlítás terjedelme (GOST)</Name>
+    <Name Description="" Language="1040">Estensione piega (GOST)</Name>
+    <Name Description="" Language="1041">Bend Extent (GOST)</Name>
+    <Name Description="" Language="1042">절곡부 범위(GOST)</Name>
+    <Name Description="" Language="1045">Zakres zgięcia (GOST)</Name>
+    <Name Description="" Language="1046">Extensão da curva (GOST)</Name>
+    <Name Description="" Language="1049">Граница сгиба (ГОСТ)</Name>
+    <Name Description="" Language="2052">折弯范围 (GOST)</Name>
+    <Name Description="" Language="3082">Extensión de pliegue (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Bend Extent (ISO)&#xA;" LinePattern="28100" LineThickness="0.05" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">折彎範圍 (ISO)</Name>
+    <Name Description="" Language="1029">Rozsah ohybu (ISO)</Name>
+    <Name Description="" Language="1031">Biegungsende (ISO)</Name>
+    <Name Description="" Language="1033">Bend Extent (ISO)</Name>
+    <Name Description="" Language="1036">Encombrement du pli (ISO)</Name>
+    <Name Description="" Language="1038">Hajlítás terjedelme (ISO)</Name>
+    <Name Description="" Language="1040">Estensione piega (ISO)</Name>
+    <Name Description="" Language="1041">Bend Extent (ISO)</Name>
+    <Name Description="" Language="1042">절곡부 범위(ISO)</Name>
+    <Name Description="" Language="1045">Zakres zgięcia (ISO)</Name>
+    <Name Description="" Language="1046">Extensão da curva  (ISO)</Name>
+    <Name Description="" Language="1049">Граница сгиба (ISO)</Name>
+    <Name Description="" Language="2052">折弯范围 (ISO)</Name>
+    <Name Description="" Language="3082">Extensión de pliegue (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Bend Extent (ISO)&#xA;" LinePattern="28100" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1031">Biegungsenden (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Bend Centerline (ANSI)&#xA;" LinePattern="28107" LineThickness="0.0254" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">折彎中心線 (ANSI)</Name>
+    <Name Description="" Language="1029">Osa ohybu (ANSI)</Name>
+    <Name Description="" Language="1031">Biegungsmittellinie (ANSI)</Name>
+    <Name Description="" Language="1033">Bend Centerline (ANSI)</Name>
+    <Name Description="" Language="1036">Trait d'axe de pliage (ANSI)</Name>
+    <Name Description="" Language="1038">Hajlítás középvonala (ANSI)</Name>
+    <Name Description="" Language="1040">Linea d'asse piega (ANSI)</Name>
+    <Name Description="" Language="1041">Bend Centerline (ANSI)</Name>
+    <Name Description="" Language="1042">절곡부 중심선(ANSI)</Name>
+    <Name Description="" Language="1045">Linia środkowa zgięcia (ANSI)</Name>
+    <Name Description="" Language="1046">Linha de centro curva (ANSI)</Name>
+    <Name Description="" Language="1049">Осевая линия сгиба (ANSI)</Name>
+    <Name Description="" Language="2052">折弯中心线 (ANSI)</Name>
+    <Name Description="" Language="3082">Eje de pliegue (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Bend Centerline (GOST)&#xA;" LinePattern="28107" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">折彎中心線 (GOST)</Name>
+    <Name Description="" Language="1029">Osa ohybu (GOST)</Name>
+    <Name Description="" Language="1031">Biegungsmittellinie (GOST)</Name>
+    <Name Description="" Language="1033">Bend Centerline (GOST)</Name>
+    <Name Description="" Language="1036">Trait d'axe de pliage (GOST)</Name>
+    <Name Description="" Language="1038">Hajlítás középvonala (GOST)</Name>
+    <Name Description="" Language="1040">Linea d'asse piega (GOST)</Name>
+    <Name Description="" Language="1041">Bend Centerline (GOST)</Name>
+    <Name Description="" Language="1042">절곡부 중심선(GOST)</Name>
+    <Name Description="" Language="1045">Linia środkowa zgięcia (GOST)</Name>
+    <Name Description="" Language="1046">Linha de centro curva (GOST)</Name>
+    <Name Description="" Language="1049">Осевая линия сгиба (ГОСТ)</Name>
+    <Name Description="" Language="2052">折弯中心线 (GOST)</Name>
+    <Name Description="" Language="3082">Eje de pliegue (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Bend Centerline (ISO)&#xA;" LinePattern="28107" LineThickness="0.013" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">折彎中心線 (ISO)</Name>
+    <Name Description="" Language="1029">Osa ohybu (ISO)</Name>
+    <Name Description="" Language="1031">Biegungsmittellinie (ISO)</Name>
+    <Name Description="" Language="1033">Bend Centerline (ISO)</Name>
+    <Name Description="" Language="1036">Trait d'axe de pliage (ISO)</Name>
+    <Name Description="" Language="1038">Hajlítás középvonala (ISO)</Name>
+    <Name Description="" Language="1040">Linea d'asse piega (ISO)</Name>
+    <Name Description="" Language="1041">Bend Centerline (ISO)</Name>
+    <Name Description="" Language="1042">절곡부 중심선(ISO)</Name>
+    <Name Description="" Language="1045">Linia środkowa zgięcia (ISO)</Name>
+    <Name Description="" Language="1046">Linha de centro curva (ISO)</Name>
+    <Name Description="" Language="1049">Осевая линия сгиба (ISO)</Name>
+    <Name Description="" Language="2052">折弯中心线 (ISO)</Name>
+    <Name Description="" Language="3082">Eje de pliegue (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Break Line (ANSI)&#xA;" LinePattern="28100" LineThickness="0.0508" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">折斷線 (ANSI)</Name>
+    <Name Description="" Language="1029">Čára přerušení (ANSI)</Name>
+    <Name Description="" Language="1031">Bruchlinie (ANSI)</Name>
+    <Name Description="" Language="1033">Break Line (ANSI)</Name>
+    <Name Description="" Language="1036">Ligne interrompue (ANSI)</Name>
+    <Name Description="" Language="1038">Megtörési vonal (ANSI)</Name>
+    <Name Description="" Language="1040">Linea di interruzione (ANSI)</Name>
+    <Name Description="" Language="1041">Break Line (ANSI)</Name>
+    <Name Description="" Language="1042">절단선(ANSI)</Name>
+    <Name Description="" Language="1045">Linia przerwania (ANSI)</Name>
+    <Name Description="" Language="1046">Linha tracejada (ANSI)</Name>
+    <Name Description="" Language="1049">Линия обрыва (ANSI)</Name>
+    <Name Description="" Language="2052">折线 (ANSI)</Name>
+    <Name Description="" Language="3082">Línea de vista descubierta (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Break Line (GOST)&#xA;" LinePattern="28100" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">折斷線 (GOST)</Name>
+    <Name Description="" Language="1029">Čára přerušení (GOST)</Name>
+    <Name Description="" Language="1031">Bruchlinie (GOST)</Name>
+    <Name Description="" Language="1033">Break Line (GOST)</Name>
+    <Name Description="" Language="1036">Ligne interrompue (GOST)</Name>
+    <Name Description="" Language="1038">Megtörési vonal (GOST)</Name>
+    <Name Description="" Language="1040">Linea di interruzione (GOST)</Name>
+    <Name Description="" Language="1041">Break Line (GOST)</Name>
+    <Name Description="" Language="1042">절단선(GOST)</Name>
+    <Name Description="" Language="1045">Linia przerwania (GOST)</Name>
+    <Name Description="" Language="1046">Linha tracejada (GOST)</Name>
+    <Name Description="" Language="1049">Линия обрыва (ГОСТ)</Name>
+    <Name Description="" Language="2052">折线 (GOST)</Name>
+    <Name Description="" Language="3082">Línea de vista descubierta (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Break Line (ISO)&#xA;" LinePattern="28100" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">折斷線 (ISO)</Name>
+    <Name Description="" Language="1029">Čára přerušení (ISO)</Name>
+    <Name Description="" Language="1031">Bruchlinie (ISO)</Name>
+    <Name Description="" Language="1033">Break Line (ISO)</Name>
+    <Name Description="" Language="1036">Ligne interrompue (ISO)</Name>
+    <Name Description="" Language="1038">Megtörési vonal (ISO)</Name>
+    <Name Description="" Language="1040">Linea di interruzione (ISO)</Name>
+    <Name Description="" Language="1041">Break Line (ISO)</Name>
+    <Name Description="" Language="1042">절단선(ISO)</Name>
+    <Name Description="" Language="1045">Linia przerwania (ISO)</Name>
+    <Name Description="" Language="1046">Linha tracejada (ISO)</Name>
+    <Name Description="" Language="1049">Линия обрыва (ISO)</Name>
+    <Name Description="" Language="2052">折线 (ISO)</Name>
+    <Name Description="" Language="3082">Línea de vista descubierta (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Break Line (JIS)&#xA;" LinePattern="28100" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">折斷線 (JIS)</Name>
+    <Name Description="" Language="1029">Čára přerušení (JIS)</Name>
+    <Name Description="" Language="1031">Bruchlinie (JIS)</Name>
+    <Name Description="" Language="1033">Break Line (JIS)</Name>
+    <Name Description="" Language="1036">Ligne interrompue (JIS)</Name>
+    <Name Description="" Language="1038">Megtörési vonal (JIS)</Name>
+    <Name Description="" Language="1040">Linea di interruzione (JIS)</Name>
+    <Name Description="" Language="1041">Break Line (JIS)</Name>
+    <Name Description="" Language="1042">절단선(JIS)</Name>
+    <Name Description="" Language="1045">Linia przerwania (JIS)</Name>
+    <Name Description="" Language="1046">Linha tracejada (JIS)</Name>
+    <Name Description="" Language="1049">Линия обрыва (JIS)</Name>
+    <Name Description="" Language="2052">折线 (JIS)</Name>
+    <Name Description="" Language="3082">Línea de vista descubierta (JIS)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Detail Boundary (ANSI)&#xA;" LinePattern="28108" LineThickness="0.0508" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">詳圖邊界 (ANSI)</Name>
+    <Name Description="" Language="1029">Detailní hranice (ANSI)</Name>
+    <Name Description="" Language="1031">Detailumgrenzung (ANSI)</Name>
+    <Name Description="" Language="1033">Detail Boundary (ANSI)</Name>
+    <Name Description="" Language="1036">Contour de détail (ANSI)</Name>
+    <Name Description="" Language="1038">Részlet határvonala (ANSI)</Name>
+    <Name Description="" Language="1040">Contorno dettaglio (ANSI)</Name>
+    <Name Description="" Language="1041">Detail Boundary (ANSI)</Name>
+    <Name Description="" Language="1042">상세 경계(ANSI)</Name>
+    <Name Description="" Language="1045">Obramowanie detalu (ANSI)</Name>
+    <Name Description="" Language="1046">Condições de contorno (ANSI)</Name>
+    <Name Description="" Language="1049">Граница выносного элемента (ANSI)</Name>
+    <Name Description="" Language="2052">局部视图边界 (ANSI)</Name>
+    <Name Description="" Language="3082">Contorno de detalle (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Detail Boundary (GOST)&#xA;" LinePattern="28100" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">詳圖邊界 (GOST)</Name>
+    <Name Description="" Language="1029">Detailní hranice (GOST)</Name>
+    <Name Description="" Language="1031">Detailumgrenzung (GOST)</Name>
+    <Name Description="" Language="1033">Detail Boundary (GOST)</Name>
+    <Name Description="" Language="1036">Contour de détail (GOST)</Name>
+    <Name Description="" Language="1038">Részlet határvonala (GOST)</Name>
+    <Name Description="" Language="1040">Contorno dettaglio (GOST)</Name>
+    <Name Description="" Language="1041">Detail Boundary (GOST)</Name>
+    <Name Description="" Language="1042">상세 경계(GOST)</Name>
+    <Name Description="" Language="1045">Obramowanie detalu (GOST)</Name>
+    <Name Description="" Language="1046">Condições de contorno (GOST)</Name>
+    <Name Description="" Language="1049">Граница выносного элемента (ГОСТ)</Name>
+    <Name Description="" Language="2052">局部视图边界 (GOST)</Name>
+    <Name Description="" Language="3082">Contorno de detalle (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Detail Boundary (ISO)&#xA;" LinePattern="28100" LineThickness="0.0125" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">詳圖邊界 (ISO)</Name>
+    <Name Description="" Language="1029">Detailní hranice (ISO)</Name>
+    <Name Description="" Language="1031">Detailumgrenzung (ISO)</Name>
+    <Name Description="" Language="1033">Detail Boundary (ISO)</Name>
+    <Name Description="" Language="1036">Contour de détail (ISO)</Name>
+    <Name Description="" Language="1038">Részlet határvonala (ISO)</Name>
+    <Name Description="" Language="1040">Contorno dettaglio (ISO)</Name>
+    <Name Description="" Language="1041">Detail Boundary (ISO)</Name>
+    <Name Description="" Language="1042">상세 경계(ISO)</Name>
+    <Name Description="" Language="1045">Obramowanie detalu (ISO)</Name>
+    <Name Description="" Language="1046">Condições de contorno (ISO)</Name>
+    <Name Description="" Language="1049">Граница выносного элемента (ISO)</Name>
+    <Name Description="" Language="2052">局部视图边界 (ISO)</Name>
+    <Name Description="" Language="3082">Contorno de detalle (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Detail Boundary (JIS)&#xA;" LinePattern="28100" LineThickness="0.05" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">詳圖邊界 (JIS)</Name>
+    <Name Description="" Language="1029">Detailní hranice (JIS)</Name>
+    <Name Description="" Language="1031">Detailumgrenzung (JIS)</Name>
+    <Name Description="" Language="1033">Detail Boundary (JIS)</Name>
+    <Name Description="" Language="1036">Contour de détail (JIS)</Name>
+    <Name Description="" Language="1038">Részlet határvonala (JIS)</Name>
+    <Name Description="" Language="1040">Contorno dettaglio (JIS)</Name>
+    <Name Description="" Language="1041">Detail Boundary (JIS)</Name>
+    <Name Description="" Language="1042">상세 경계(JIS)</Name>
+    <Name Description="" Language="1045">Obramowanie detalu (JIS)</Name>
+    <Name Description="" Language="1046">Condições de contorno (JIS)</Name>
+    <Name Description="" Language="1049">Граница выносного элемента (JIS)</Name>
+    <Name Description="" Language="2052">局部视图边界 (JIS)</Name>
+    <Name Description="" Language="3082">Contorno de detalle (JIS)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Threads(ISO)&#xA;" LinePattern="28100" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">螺紋線 (GOST)</Name>
+    <Name Description="" Language="1029">Čára závitu (GOST)</Name>
+    <Name Description="" Language="1031">Gewindelinie (GOST)</Name>
+    <Name Description="" Language="1033">Thread Line (GOST)</Name>
+    <Name Description="" Language="1036">Ligne de taraudage (GOST)</Name>
+    <Name Description="" Language="1038">Menet vonala (GOST)</Name>
+    <Name Description="" Language="1040">Linea filettatura (GOST)</Name>
+    <Name Description="" Language="1041">Thread Line (GOST)</Name>
+    <Name Description="" Language="1042">스레드 선(GOST)</Name>
+    <Name Description="" Language="1045">Linia gwintu (GOST)</Name>
+    <Name Description="" Language="1046">Linha da rosca (GOST)</Name>
+    <Name Description="" Language="1049">Линия резьбы (ГОСТ)</Name>
+    <Name Description="" Language="2052">螺纹线 (GOST)</Name>
+    <Name Description="" Language="3082">Línea de rosca (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Centerline (ANSI)&#xA;" LinePattern="28100" LineThickness="0.0254" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">中心線 (ANSI)</Name>
+    <Name Description="" Language="1029">Osa (ANSI)</Name>
+    <Name Description="" Language="1031">Mittellinie (ANSI)</Name>
+    <Name Description="" Language="1033">Centerline (ANSI)</Name>
+    <Name Description="" Language="1036">Trait d'axe (ANSI)</Name>
+    <Name Description="" Language="1038">Középvonal (ANSI)</Name>
+    <Name Description="" Language="1040">Linea d'asse (ANSI)</Name>
+    <Name Description="" Language="1041">Centerline (ANSI)</Name>
+    <Name Description="" Language="1042">중심선(ANSI)</Name>
+    <Name Description="" Language="1045">Linia środkowa (ANSI)</Name>
+    <Name Description="" Language="1046">Linha de centro (ANSI)</Name>
+    <Name Description="" Language="1049">Осевая линия (ANSI)</Name>
+    <Name Description="" Language="2052">中心线 (ANSI)</Name>
+    <Name Description="" Language="3082">Eje (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Centerline (GOST)&#xA;" LinePattern="28100" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">中心線 (GOST)</Name>
+    <Name Description="" Language="1029">Osa (GOST)</Name>
+    <Name Description="" Language="1031">Mittellinie (GOST)</Name>
+    <Name Description="" Language="1033">Centerline (GOST)</Name>
+    <Name Description="" Language="1036">Trait d'axe (GOST)</Name>
+    <Name Description="" Language="1038">Középvonal (GOST)</Name>
+    <Name Description="" Language="1040">Linea d'asse (GOST)</Name>
+    <Name Description="" Language="1041">Centerline (GOST)</Name>
+    <Name Description="" Language="1042">중심선(GOST)</Name>
+    <Name Description="" Language="1045">Linia środkowa (GOST)</Name>
+    <Name Description="" Language="1046">Linha de centro (GOST)</Name>
+    <Name Description="" Language="1049">Осевая линия (ГОСТ)</Name>
+    <Name Description="" Language="2052">中心线 (GOST)</Name>
+    <Name Description="" Language="3082">Eje (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Centerline (ISO)&#xA;" LinePattern="28100" LineThickness="0.0125" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">中心線 (ISO)</Name>
+    <Name Description="" Language="1029">Osa (ISO)</Name>
+    <Name Description="" Language="1031">Mittellinie (ISO)</Name>
+    <Name Description="" Language="1033">Centerline (ISO)</Name>
+    <Name Description="" Language="1036">Trait d'axe (ISO)</Name>
+    <Name Description="" Language="1038">Középvonal (ISO)</Name>
+    <Name Description="" Language="1040">Linea d'asse (ISO)</Name>
+    <Name Description="" Language="1041">Centerline (ISO)</Name>
+    <Name Description="" Language="1042">중심선(ISO)</Name>
+    <Name Description="" Language="1045">Linia środkowa (ISO)</Name>
+    <Name Description="" Language="1046">Linha de centro (ISO)</Name>
+    <Name Description="" Language="1049">Осевая линия (ISO)</Name>
+    <Name Description="" Language="2052">中心线 (ISO)</Name>
+    <Name Description="" Language="3082">Eje (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Center Mark (ANSI)&#xA;" LinePattern="28100" LineThickness="0.0254" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">中心標記 (ANSI)</Name>
+    <Name Description="" Language="1029">Středová značka (ANSI)</Name>
+    <Name Description="" Language="1031">Mittelpunktmarkierung (ANSI)</Name>
+    <Name Description="" Language="1033">Center Mark (ANSI)</Name>
+    <Name Description="" Language="1036">Marque de centre (ANSI)</Name>
+    <Name Description="" Language="1038">Középjel (ANSI)</Name>
+    <Name Description="" Language="1040">Centro (ANSI)</Name>
+    <Name Description="" Language="1041">Center Mark (ANSI)</Name>
+    <Name Description="" Language="1042">중심 표식(ANSI)</Name>
+    <Name Description="" Language="1045">Znacznik środka (ANSI)</Name>
+    <Name Description="" Language="1046">Marca de centro (ANSI)</Name>
+    <Name Description="" Language="1049">Маркер центра (ANSI)</Name>
+    <Name Description="" Language="2052">中心标记 (ANSI)</Name>
+    <Name Description="" Language="3082">Marca de centro (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Center Mark (GOST)&#xA;" LinePattern="28100" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">中心標記 (GOST)</Name>
+    <Name Description="" Language="1029">Středová značka (GOST)</Name>
+    <Name Description="" Language="1031">Mittelpunktmarkierung (GOST)</Name>
+    <Name Description="" Language="1033">Center Mark (GOST)</Name>
+    <Name Description="" Language="1036">Marque de centre (GOST)</Name>
+    <Name Description="" Language="1038">Középjel (GOST)</Name>
+    <Name Description="" Language="1040">Centro (GOST)</Name>
+    <Name Description="" Language="1041">Center Mark (GOST)</Name>
+    <Name Description="" Language="1042">중심 표식(GOST)</Name>
+    <Name Description="" Language="1045">Znacznik środka (GOST)</Name>
+    <Name Description="" Language="1046">Marca de centro (GOST)</Name>
+    <Name Description="" Language="1049">Маркер центра (ГОСТ)</Name>
+    <Name Description="" Language="2052">中心标记 (GOST)</Name>
+    <Name Description="" Language="3082">Marca de centro (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Center Mark (ISO)&#xA;" LinePattern="28100" LineThickness="0.013" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">中心標記 (ISO)</Name>
+    <Name Description="" Language="1029">Středová značka (ISO)</Name>
+    <Name Description="" Language="1031">Mittelpunktmarkierung (ISO)</Name>
+    <Name Description="" Language="1033">Center Mark (ISO)</Name>
+    <Name Description="" Language="1036">Marque de centre (ISO)</Name>
+    <Name Description="" Language="1038">Középjel (ISO)</Name>
+    <Name Description="" Language="1040">Centro (ISO)</Name>
+    <Name Description="" Language="1041">Center Mark (ISO)</Name>
+    <Name Description="" Language="1042">중심 표식(ISO)</Name>
+    <Name Description="" Language="1045">Znacznik środka (ISO)</Name>
+    <Name Description="" Language="1046">Marca de centro (ISO)</Name>
+    <Name Description="" Language="1049">Маркер центра (ISO)</Name>
+    <Name Description="" Language="2052">中心标记 (ISO)</Name>
+    <Name Description="" Language="3082">Marca de centro (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Tweak Trail (ANSI)&#xA;" LinePattern="28100" LineThickness="0.0254" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">轉折系統線 (ANSI)</Name>
+    <Name Description="" Language="1029">Pohyb trajektorie (ANSI)</Name>
+    <Name Description="" Language="1031">Positionsveränderungspfad (ANSI)</Name>
+    <Name Description="" Language="1033">Tweak Trail (ANSI)</Name>
+    <Name Description="" Language="1036">Ligne de montage d'espacement (ANSI)</Name>
+    <Name Description="" Language="1038">Kimozgatás nyomvonala (ANSI)</Name>
+    <Name Description="" Language="1040">Aggiustamento traccia (ANSI)</Name>
+    <Name Description="" Language="1041">Tweak Trail (ANSI)</Name>
+    <Name Description="" Language="1042">트레일 미세조정(ANSI)</Name>
+    <Name Description="" Language="1045">Tor rozsunięcia (ANSI)</Name>
+    <Name Description="" Language="1046">Trilho torcido (ANSI)</Name>
+    <Name Description="" Language="1049">Линия сдвига (ANSI)</Name>
+    <Name Description="" Language="2052">位置参数轨迹线 (ANSI)</Name>
+    <Name Description="" Language="3082">Trayect. despiece de movimiento (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Tweak Trail (GOST)&#xA;" LinePattern="28100" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">轉折系統線 (GOST)</Name>
+    <Name Description="" Language="1029">Pohyb trajektorie (GOST)</Name>
+    <Name Description="" Language="1031">Positionsveränderungspfad (GOST)</Name>
+    <Name Description="" Language="1033">Tweak Trail (GOST)</Name>
+    <Name Description="" Language="1036">Ligne de montage d'espacement (GOST)</Name>
+    <Name Description="" Language="1038">Kimozgatás nyomvonala (GOST)</Name>
+    <Name Description="" Language="1040">Aggiustamento traccia (GOST)</Name>
+    <Name Description="" Language="1041">Tweak Trail (GOST)</Name>
+    <Name Description="" Language="1042">트레일 미세조정(GOST)</Name>
+    <Name Description="" Language="1045">Tor rozsunięcia (GOST)</Name>
+    <Name Description="" Language="1046">Trilho torcido (GOST)</Name>
+    <Name Description="" Language="1049">Линия сдвига (ГОСТ)</Name>
+    <Name Description="" Language="2052">位置参数轨迹线 (GOST)</Name>
+    <Name Description="" Language="3082">Trayect. despiece de movimiento (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Tweak Trail (ISO)&#xA;" LinePattern="28100" LineThickness="0.013" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">轉折系統線 (ISO)</Name>
+    <Name Description="" Language="1029">Pohyb trajektorie (ISO)</Name>
+    <Name Description="" Language="1031">Positionsveränderungspfad (ISO)</Name>
+    <Name Description="" Language="1033">Tweak Trail (ISO)</Name>
+    <Name Description="" Language="1036">Ligne de montage d'espacement (ISO)</Name>
+    <Name Description="" Language="1038">Kimozgatás nyomvonala (ISO)</Name>
+    <Name Description="" Language="1040">Aggiustamento traccia (ISO)</Name>
+    <Name Description="" Language="1041">Tweak Trail (ISO)</Name>
+    <Name Description="" Language="1042">트레일 미세조정(ISO)</Name>
+    <Name Description="" Language="1045">Tor rozsunięcia (ISO)</Name>
+    <Name Description="" Language="1046">Trilho torcido (ISO)</Name>
+    <Name Description="" Language="1049">Линия сдвига (ISO)</Name>
+    <Name Description="" Language="2052">位置参数轨迹线 (ISO)</Name>
+    <Name Description="" Language="3082">Trayect. despiece de movimiento (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Border (ANSI)&#xA;" LinePattern="28100" LineThickness="0.07112" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">圖框 (ANSI)</Name>
+    <Name Description="" Language="1029">Rámeček (ANSI)</Name>
+    <Name Description="" Language="1031">Rahmen (ANSI)</Name>
+    <Name Description="" Language="1033">Border (ANSI)</Name>
+    <Name Description="" Language="1036">Cadre (ANSI)</Name>
+    <Name Description="" Language="1038">Rajzkeret (ANSI)</Name>
+    <Name Description="" Language="1040">Bordo (ANSI)</Name>
+    <Name Description="" Language="1041">Border (ANSI)</Name>
+    <Name Description="" Language="1042">경계(ANSI)</Name>
+    <Name Description="" Language="1045">Obramowanie (ANSI)</Name>
+    <Name Description="" Language="1046">Borda (ANSI)</Name>
+    <Name Description="" Language="1049">Кромка (ANSI)</Name>
+    <Name Description="" Language="2052">图框 (ANSI)</Name>
+    <Name Description="" Language="3082">Borde (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Border (GOST)&#xA;" LinePattern="28100" LineThickness="0.05" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">圖框 (GOST)</Name>
+    <Name Description="" Language="1029">Rámeček (GOST)</Name>
+    <Name Description="" Language="1031">Rahmen (GOST)</Name>
+    <Name Description="" Language="1033">Border (GOST)</Name>
+    <Name Description="" Language="1036">Cadre (GOST)</Name>
+    <Name Description="" Language="1038">Rajzkeret (GOST)</Name>
+    <Name Description="" Language="1040">Bordo (GOST)</Name>
+    <Name Description="" Language="1041">Border (GOST)</Name>
+    <Name Description="" Language="1042">경계(GOST)</Name>
+    <Name Description="" Language="1045">Obramowanie (GOST)</Name>
+    <Name Description="" Language="1046">Borda (GOST)</Name>
+    <Name Description="" Language="1049">Кромка (ГОСТ)</Name>
+    <Name Description="" Language="2052">图框 (GOST)</Name>
+    <Name Description="" Language="3082">Borde (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Border (ISO)&#xA;" LinePattern="28100" LineThickness="0.035" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">圖框 (ISO)</Name>
+    <Name Description="" Language="1029">Rámeček (ISO)</Name>
+    <Name Description="" Language="1031">Rahmen (ISO)</Name>
+    <Name Description="" Language="1033">Border (ISO)</Name>
+    <Name Description="" Language="1036">Cadre (ISO)</Name>
+    <Name Description="" Language="1038">Rajzkeret (ISO)</Name>
+    <Name Description="" Language="1040">Bordo (ISO)</Name>
+    <Name Description="" Language="1041">Border (ISO)</Name>
+    <Name Description="" Language="1042">경계(ISO)</Name>
+    <Name Description="" Language="1045">Obramowanie (ISO)</Name>
+    <Name Description="" Language="1046">Borda (ISO)</Name>
+    <Name Description="" Language="1049">Кромка (ISO)</Name>
+    <Name Description="" Language="2052">图框 (ISO)</Name>
+    <Name Description="" Language="3082">Borde (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Reference (ANSI)&#xA;" LinePattern="28108" LineThickness="0.07112" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">參考 (ANSI)</Name>
+    <Name Description="" Language="1029">Reference (ANSI)</Name>
+    <Name Description="" Language="1031">Referenz (ANSI)</Name>
+    <Name Description="" Language="1033">Reference (ANSI)</Name>
+    <Name Description="" Language="1036">Référence (ANSI)</Name>
+    <Name Description="" Language="1038">Referencia (ANSI)</Name>
+    <Name Description="" Language="1040">Riferimento (ANSI)</Name>
+    <Name Description="" Language="1041">Reference (ANSI)</Name>
+    <Name Description="" Language="1042">참조(ANSI)</Name>
+    <Name Description="" Language="1045">Odniesienie (ANSI)</Name>
+    <Name Description="" Language="1046">Referência (ANSI)</Name>
+    <Name Description="" Language="1049">Ссылка (ANSI)</Name>
+    <Name Description="" Language="2052">引用 (ANSI)</Name>
+    <Name Description="" Language="3082">Referencia (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Reference (GOST)&#xA;" LinePattern="28108" LineThickness="0.035" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">參考 (GOST)</Name>
+    <Name Description="" Language="1029">Reference (GOST)</Name>
+    <Name Description="" Language="1031">Referenz (GOST)</Name>
+    <Name Description="" Language="1033">Reference (GOST)</Name>
+    <Name Description="" Language="1036">Référence (GOST)</Name>
+    <Name Description="" Language="1038">Referencia (GOST)</Name>
+    <Name Description="" Language="1040">Riferimento (GOST)</Name>
+    <Name Description="" Language="1041">Reference (GOST)</Name>
+    <Name Description="" Language="1042">참조(GOST)</Name>
+    <Name Description="" Language="1045">Odniesienie (GOST)</Name>
+    <Name Description="" Language="1046">Referência (GOST)</Name>
+    <Name Description="" Language="1049">Ссылка (ГОСТ)</Name>
+    <Name Description="" Language="2052">引用 (GOST)</Name>
+    <Name Description="" Language="3082">Referencia (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Reference (ISO)&#xA;" LinePattern="28108" LineThickness="0.018" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">參考 (ISO)</Name>
+    <Name Description="" Language="1029">Reference (ISO)</Name>
+    <Name Description="" Language="1031">Referenz (ISO)</Name>
+    <Name Description="" Language="1033">Reference (ISO)</Name>
+    <Name Description="" Language="1036">Référence (ISO)</Name>
+    <Name Description="" Language="1038">Referencia (ISO)</Name>
+    <Name Description="" Language="1040">Riferimento (ISO)</Name>
+    <Name Description="" Language="1041">Reference (ISO)</Name>
+    <Name Description="" Language="1042">참조(ISO)</Name>
+    <Name Description="" Language="1045">Odniesienie (ISO)</Name>
+    <Name Description="" Language="1046">Referência (ISO)</Name>
+    <Name Description="" Language="1049">Ссылка (ISO)</Name>
+    <Name Description="" Language="2052">引用 (ISO)</Name>
+    <Name Description="" Language="3082">Referencia (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Roll Centerline&#xA;" LinePattern="28107" LineThickness="0.0254" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">轉向中心線</Name>
+    <Name Description="" Language="1029">Osa rolování</Name>
+    <Name Description="" Language="1031">Rollen-Mittellinie</Name>
+    <Name Description="" Language="1033">Roll Centerline</Name>
+    <Name Description="" Language="1036">Trait d'axe de rotation</Name>
+    <Name Description="" Language="1038">Henger középvonal</Name>
+    <Name Description="" Language="1040">Linea d'asse rotazione</Name>
+    <Name Description="" Language="1041">ロール中心線</Name>
+    <Name Description="" Language="1042">롤 중심선</Name>
+    <Name Description="" Language="1045">Linia środkowa rolki</Name>
+    <Name Description="" Language="1046">Rolar linha central</Name>
+    <Name Description="" Language="1049">Осевая линия ролика</Name>
+    <Name Description="" Language="2052">旋转中心线</Name>
+    <Name Description="" Language="3082">Eje de curva</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Rollmittellinie&#xA;" LinePattern="28107" LineThickness="0.013" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1031">Rollmittellinie</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Section Line (ANSI)&#xA;" LinePattern="28108" LineThickness="0.07112" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">剖面線 (ANSI)</Name>
+    <Name Description="" Language="1029">Čára řezu (ANSI)</Name>
+    <Name Description="" Language="1031">Schnittlinie (ANSI)</Name>
+    <Name Description="" Language="1033">Section Line (ANSI)</Name>
+    <Name Description="" Language="1036">Ligne de coupe (ANSI)</Name>
+    <Name Description="" Language="1038">Metszet nyomvonal (ANSI)</Name>
+    <Name Description="" Language="1040">Linea di sezione (ANSI)</Name>
+    <Name Description="" Language="1041">Section Line (ANSI)</Name>
+    <Name Description="" Language="1042">단면선(ANSI)</Name>
+    <Name Description="" Language="1045">Linia przekroju (ANSI)</Name>
+    <Name Description="" Language="1046">Linha de corte (ANSI)</Name>
+    <Name Description="" Language="1049">Линия  разреза (ANSI)</Name>
+    <Name Description="" Language="2052">剖切线 (ANSI)</Name>
+    <Name Description="" Language="3082">Línea de sección (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Section Line (GOST)&#xA;" LinePattern="28107" LineThickness="0.07" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">剖面線 (GOST)</Name>
+    <Name Description="" Language="1029">Čára řezu (GOST)</Name>
+    <Name Description="" Language="1031">Schnittlinie (GOST)</Name>
+    <Name Description="" Language="1033">Section Line (GOST)</Name>
+    <Name Description="" Language="1036">Ligne de coupe (GOST)</Name>
+    <Name Description="" Language="1038">Metszet nyomvonala (GOST)</Name>
+    <Name Description="" Language="1040">Linea di sezione (GOST)</Name>
+    <Name Description="" Language="1041">Section Line (GOST)</Name>
+    <Name Description="" Language="1042">단면선(GOST)</Name>
+    <Name Description="" Language="1045">Linia przekroju (GOST)</Name>
+    <Name Description="" Language="1046">Linha de corte (GOST)</Name>
+    <Name Description="" Language="1049">Линия  разреза (ГОСТ)</Name>
+    <Name Description="" Language="2052">剖切线 (GOST)</Name>
+    <Name Description="" Language="3082">Línea de sección (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Section Line (ISO)&#xA;" LinePattern="28107" LineThickness="0.035" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">剖面線 (ISO)</Name>
+    <Name Description="" Language="1029">Čára řezu (ISO)</Name>
+    <Name Description="" Language="1031">Schnittlinie (ISO)</Name>
+    <Name Description="" Language="1033">Section Line (ISO)</Name>
+    <Name Description="" Language="1036">Ligne de coupe (ISO)</Name>
+    <Name Description="" Language="1038">Metszet nyomvonal (ISO)</Name>
+    <Name Description="" Language="1040">Linea di sezione (ISO)</Name>
+    <Name Description="" Language="1041">Section Line (ISO)</Name>
+    <Name Description="" Language="1042">단면선(ISO)</Name>
+    <Name Description="" Language="1045">Linia przekroju (ISO)</Name>
+    <Name Description="" Language="1046">Linha de corte  (ISO)</Name>
+    <Name Description="" Language="1049">Линия  разреза (ISO)</Name>
+    <Name Description="" Language="2052">剖切线 (ISO)</Name>
+    <Name Description="" Language="3082">Línea de sección (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Hatch (ANSI)&#xA;" LinePattern="28100" LineThickness="0.01778" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">填充線 (ANSI)</Name>
+    <Name Description="" Language="1029">Šrafy (ANSI)</Name>
+    <Name Description="" Language="1031">Schraffur (ANSI)</Name>
+    <Name Description="" Language="1033">Hatch (ANSI)</Name>
+    <Name Description="" Language="1036">Hachure (ANSI)</Name>
+    <Name Description="" Language="1038">Sraffozás (ANSI)</Name>
+    <Name Description="" Language="1040">Tratteggio (ANSI)</Name>
+    <Name Description="" Language="1041">Hatch (ANSI)</Name>
+    <Name Description="" Language="1042">해치 (ANSI)</Name>
+    <Name Description="" Language="1045">Kreskowanie (ANSI)</Name>
+    <Name Description="" Language="1046">Hachura (ANSI)</Name>
+    <Name Description="" Language="1049">Штриховка (ANSI)</Name>
+    <Name Description="" Language="2052">剖面线 (ANSI)</Name>
+    <Name Description="" Language="3082">Sombreado (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Hatch (GOST)&#xA;" LinePattern="28100" LineThickness="0.018" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">填充線 (GOST)</Name>
+    <Name Description="" Language="1029">Šrafy (GOST)</Name>
+    <Name Description="" Language="1031">Schraffur (GOST)</Name>
+    <Name Description="" Language="1033">Hatch (GOST)</Name>
+    <Name Description="" Language="1036">Hachure (GOST)</Name>
+    <Name Description="" Language="1038">Sraffozás (GOST)</Name>
+    <Name Description="" Language="1040">Tratteggio (GOST)</Name>
+    <Name Description="" Language="1041">Hatch (GOST)</Name>
+    <Name Description="" Language="1042">해치 (GOST)</Name>
+    <Name Description="" Language="1045">Kreskowanie (GOST)</Name>
+    <Name Description="" Language="1046">Hachura (GOST)</Name>
+    <Name Description="" Language="1049">Штриховка (ГОСТ)</Name>
+    <Name Description="" Language="2052">剖面线 (GOST)</Name>
+    <Name Description="" Language="3082">Sombreado (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Hatch (ISO)&#xA;" LinePattern="28100" LineThickness="0.009" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">填充線 (ISO)</Name>
+    <Name Description="" Language="1029">Šrafy (ISO)</Name>
+    <Name Description="" Language="1031">Schraffur (ISO)</Name>
+    <Name Description="" Language="1033">Hatch (ISO)</Name>
+    <Name Description="" Language="1036">Hachure (ISO)</Name>
+    <Name Description="" Language="1038">Sraffozás (ISO)</Name>
+    <Name Description="" Language="1040">Tratteggio (ISO)</Name>
+    <Name Description="" Language="1041">Hatch (ISO)</Name>
+    <Name Description="" Language="1042">해치 (ISO)</Name>
+    <Name Description="" Language="1045">Kreskowanie (ISO)</Name>
+    <Name Description="" Language="1046">Hachura (ISO)</Name>
+    <Name Description="" Language="1049">Штриховка (ISO)</Name>
+    <Name Description="" Language="2052">剖面线 (ISO)</Name>
+    <Name Description="" Language="3082">Sombreado (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Visible (ANSI)&#xA;" LinePattern="28100" LineThickness="0.0508" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">可見 (ANSI)</Name>
+    <Name Description="" Language="1029">Viditelná (ANSI)</Name>
+    <Name Description="" Language="1031">Sichtbar (ANSI)</Name>
+    <Name Description="" Language="1033">Visible (ANSI)</Name>
+    <Name Description="" Language="1036">Visible (ANSI)</Name>
+    <Name Description="" Language="1038">Látható (ANSI)</Name>
+    <Name Description="" Language="1040">Visibile (ANSI)</Name>
+    <Name Description="" Language="1041">Visible (ANSI)</Name>
+    <Name Description="" Language="1042">외형선(ANSI)</Name>
+    <Name Description="" Language="1045">Widoczne (ANSI)</Name>
+    <Name Description="" Language="1046">Visível (ANSI)</Name>
+    <Name Description="" Language="1049">Видимый контур (ANSI)</Name>
+    <Name Description="" Language="2052">可见 (ANSI)</Name>
+    <Name Description="" Language="3082">Visible (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Visible (GOST)&#xA;" LinePattern="28100" LineThickness="0.05" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">可見 (GOST)</Name>
+    <Name Description="" Language="1029">Viditelná (GOST)</Name>
+    <Name Description="" Language="1031">Sichtbar (GOST)</Name>
+    <Name Description="" Language="1033">Visible (GOST)</Name>
+    <Name Description="" Language="1036">Visible (GOST)</Name>
+    <Name Description="" Language="1038">Látható (GOST)</Name>
+    <Name Description="" Language="1040">Visibile (GOST)</Name>
+    <Name Description="" Language="1041">Visible (GOST)</Name>
+    <Name Description="" Language="1042">외형선(GOST)</Name>
+    <Name Description="" Language="1045">Widoczne (GOST)</Name>
+    <Name Description="" Language="1046">Visível (GOST)</Name>
+    <Name Description="" Language="1049">Видимый контур (ГОСТ)</Name>
+    <Name Description="" Language="2052">可见 (GOST)</Name>
+    <Name Description="" Language="3082">Visible (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Visible (ISO)&#xA;" LinePattern="28100" LineThickness="0.035" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">可見 (ISO)</Name>
+    <Name Description="" Language="1029">Viditelná (ISO)</Name>
+    <Name Description="" Language="1031">Sichtbar (ISO)</Name>
+    <Name Description="" Language="1033">Visible (ISO)</Name>
+    <Name Description="" Language="1036">Visible (ISO)</Name>
+    <Name Description="" Language="1038">Látható (ISO)</Name>
+    <Name Description="" Language="1040">Visibile (ISO)</Name>
+    <Name Description="" Language="1041">Visible (ISO)</Name>
+    <Name Description="" Language="1042">외형선(ISO)</Name>
+    <Name Description="" Language="1045">Widoczne (ISO)</Name>
+    <Name Description="" Language="1046">Visível (ISO)</Name>
+    <Name Description="" Language="1049">Видимый контур (ISO)</Name>
+    <Name Description="" Language="2052">可见 (ISO)</Name>
+    <Name Description="" Language="3082">Visible (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Visible Narrow (ANSI)&#xA;" LinePattern="28100" LineThickness="0.03556" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">窄部可見 (ANSI)</Name>
+    <Name Description="" Language="1029">Viditelná tenká (ANSI)</Name>
+    <Name Description="" Language="1031">Sichtbar schmal (ANSI)</Name>
+    <Name Description="" Language="1033">Visible Narrow (ANSI)</Name>
+    <Name Description="" Language="1036">Etroit visible (ANSI)</Name>
+    <Name Description="" Language="1038">Látható vékony (ANSI)</Name>
+    <Name Description="" Language="1040">Visibile sottile (ANSI)</Name>
+    <Name Description="" Language="1041">Visible Narrow (ANSI)</Name>
+    <Name Description="" Language="1042">좁은 외형선(ANSI)</Name>
+    <Name Description="" Language="1045">Widoczne wąskie (ANSI)</Name>
+    <Name Description="" Language="1046">Estreito visível (ANSI)</Name>
+    <Name Description="" Language="1049">Видимые тонкие (ANSI)</Name>
+    <Name Description="" Language="2052">可见窄的 (ANSI)</Name>
+    <Name Description="" Language="3082">Visible fina (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Visible Narrow (GOST)&#xA;" LinePattern="28100" LineThickness="0.035" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">窄部可見 (GOST)</Name>
+    <Name Description="" Language="1029">Viditelná tenká (GOST)</Name>
+    <Name Description="" Language="1031">Sichtbar schmal (GOST)</Name>
+    <Name Description="" Language="1033">Visible Narrow (GOST)</Name>
+    <Name Description="" Language="1036">Etroit visible (GOST)</Name>
+    <Name Description="" Language="1038">Látható vékony (GOST)</Name>
+    <Name Description="" Language="1040">Visibile sottile (GOST)</Name>
+    <Name Description="" Language="1041">Visible Narrow (GOST)</Name>
+    <Name Description="" Language="1042">좁은 외형선(GOST)</Name>
+    <Name Description="" Language="1045">Widoczne wąskie (GOST)</Name>
+    <Name Description="" Language="1046">Estreito visível (GOST)</Name>
+    <Name Description="" Language="1049">Видимые тонкие (ГОСТ)</Name>
+    <Name Description="" Language="2052">可见窄的 (GOST)</Name>
+    <Name Description="" Language="3082">Visible fina (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Visible Narrow (ISO)&#xA;" LinePattern="28100" LineThickness="0.018" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">窄部可見 (ISO)</Name>
+    <Name Description="" Language="1029">Viditelná tenká (ISO)</Name>
+    <Name Description="" Language="1031">Sichtbar schmal (ISO)</Name>
+    <Name Description="" Language="1033">Visible Narrow (ISO)</Name>
+    <Name Description="" Language="1036">Etroit visible (ISO)</Name>
+    <Name Description="" Language="1038">Látható vékony (ISO)</Name>
+    <Name Description="" Language="1040">Visibile sottile (ISO)</Name>
+    <Name Description="" Language="1041">Visible Narrow (ISO)</Name>
+    <Name Description="" Language="1042">좁은 외형선(ISO)</Name>
+    <Name Description="" Language="1045">Widoczne wąskie (ISO)</Name>
+    <Name Description="" Language="1046">Estreito visível (ISO)</Name>
+    <Name Description="" Language="1049">Видимые тонкие (ISO)</Name>
+    <Name Description="" Language="2052">可见窄的 (ISO)</Name>
+    <Name Description="" Language="3082">Visible fina (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Sketch Geometry (ANSI)&#xA;" LinePattern="28100" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">草圖幾何圖形 (ANSI)</Name>
+    <Name Description="" Language="1029">Geometrie náčrtu (ANSI)</Name>
+    <Name Description="" Language="1031">Skizziergeometrie (ANSI)</Name>
+    <Name Description="" Language="1033">Sketch Geometry (ANSI)</Name>
+    <Name Description="" Language="1036">Géométrie d'esquisse (ANSI)</Name>
+    <Name Description="" Language="1038">Vázlat geometria (ANSI)</Name>
+    <Name Description="" Language="1040">Geometria schizzo (ANSI)</Name>
+    <Name Description="" Language="1041">Sketch Geometry (ANSI)</Name>
+    <Name Description="" Language="1042">스케치 형상(ANSI)</Name>
+    <Name Description="" Language="1045">Geometria szkicu (ANSI)</Name>
+    <Name Description="" Language="1046">Geometria de rascunho (ANSI)</Name>
+    <Name Description="" Language="1049">Эскизная геометрия (ANSI)</Name>
+    <Name Description="" Language="2052">草图几何图元 (ANSI)</Name>
+    <Name Description="" Language="3082">Geometría de boceto (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Sketch Geometry (GOST)&#xA;" LinePattern="28100" LineThickness="0.05" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">草圖幾何圖形 (GOST)</Name>
+    <Name Description="" Language="1029">Geometrie náčrtu (GOST)</Name>
+    <Name Description="" Language="1031">Skizziergeometrie (GOST)</Name>
+    <Name Description="" Language="1033">Sketch Geometry (GOST)</Name>
+    <Name Description="" Language="1036">Géométrie d'esquisse (GOST)</Name>
+    <Name Description="" Language="1038">Vázlat geometria (GOST)</Name>
+    <Name Description="" Language="1040">Geometria schizzo (GOST)</Name>
+    <Name Description="" Language="1041">Sketch Geometry (GOST)</Name>
+    <Name Description="" Language="1042">스케치 형상(GOST)</Name>
+    <Name Description="" Language="1045">Geometria szkicu (GOST)</Name>
+    <Name Description="" Language="1046">Geometria de rascunho (GOST)</Name>
+    <Name Description="" Language="1049">Эскизная геометрия (ГОСТ)</Name>
+    <Name Description="" Language="2052">草图几何图元 (GOST)</Name>
+    <Name Description="" Language="3082">Geometría de boceto (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Sketch Geometry (ISO)&#xA;" LinePattern="28100" LineThickness="0.013" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">草圖幾何圖形 (ISO)</Name>
+    <Name Description="" Language="1029">Geometrie náčrtu (ISO)</Name>
+    <Name Description="" Language="1031">Skizziergeometrie (ISO)</Name>
+    <Name Description="" Language="1033">Sketch Geometry (ISO)</Name>
+    <Name Description="" Language="1036">Géométrie d'esquisse (ISO)</Name>
+    <Name Description="" Language="1038">Vázlat geometria (ISO)</Name>
+    <Name Description="" Language="1040">Geometria schizzo (ISO)</Name>
+    <Name Description="" Language="1041">Sketch Geometry (ISO)</Name>
+    <Name Description="" Language="1042">스케치 형상(ISO)</Name>
+    <Name Description="" Language="1045">Geometria szkicu (ISO)</Name>
+    <Name Description="" Language="1046">Geometria de rascunho (ISO)</Name>
+    <Name Description="" Language="1049">Эскизная геометрия (ISO)</Name>
+    <Name Description="" Language="2052">草图几何图元 (ISO)</Name>
+    <Name Description="" Language="3082">Geometría de boceto (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Symbol (ANSI)&#xA;" LinePattern="28100" LineThickness="0.0254" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">符號 (ANSI)</Name>
+    <Name Description="" Language="1029">Značka (ANSI)</Name>
+    <Name Description="" Language="1031">Symbol (ANSI)</Name>
+    <Name Description="" Language="1033">Symbol (ANSI)</Name>
+    <Name Description="" Language="1036">Symbole (ANSI)</Name>
+    <Name Description="" Language="1038">Jel (ANSI)</Name>
+    <Name Description="" Language="1040">Simbolo (ANSI)</Name>
+    <Name Description="" Language="1041">Symbol (ANSI)</Name>
+    <Name Description="" Language="1042">기호(ANSI)</Name>
+    <Name Description="" Language="1045">Symbol (ANSI)</Name>
+    <Name Description="" Language="1046">Símbolo (ANSI)</Name>
+    <Name Description="" Language="1049">Обозначение (ANSI)</Name>
+    <Name Description="" Language="2052">符号 (ANSI)</Name>
+    <Name Description="" Language="3082">Símbolo (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Symbols(ISO)&#xA;" LinePattern="28100" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">符號 (GOST)</Name>
+    <Name Description="" Language="1029">Značka (GOST)</Name>
+    <Name Description="" Language="1031">Symbol (GOST)</Name>
+    <Name Description="" Language="1033">Symbol (GOST)</Name>
+    <Name Description="" Language="1036">Symbole (GOST)</Name>
+    <Name Description="" Language="1038">Jel (GOST)</Name>
+    <Name Description="" Language="1040">Simbolo (GOST)</Name>
+    <Name Description="" Language="1041">Symbol (GOST)</Name>
+    <Name Description="" Language="1042">기호(GOST)</Name>
+    <Name Description="" Language="1045">Symbol (GOST)</Name>
+    <Name Description="" Language="1046">Símbolo (GOST)</Name>
+    <Name Description="" Language="1049">Обозначение (ГОСТ)</Name>
+    <Name Description="" Language="2052">符号 (GOST)</Name>
+    <Name Description="" Language="3082">Símbolo (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Symbol (ISO)&#xA;" LinePattern="28100" LineThickness="0.013" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">符號 (ISO)</Name>
+    <Name Description="" Language="1029">Značka (ISO)</Name>
+    <Name Description="" Language="1031">Symbol (ISO)</Name>
+    <Name Description="" Language="1033">Symbol (ISO)</Name>
+    <Name Description="" Language="1036">Symbole (ISO)</Name>
+    <Name Description="" Language="1038">Jel (ISO)</Name>
+    <Name Description="" Language="1040">Simbolo (ISO)</Name>
+    <Name Description="" Language="1041">Symbol (ISO)</Name>
+    <Name Description="" Language="1042">기호(ISO)</Name>
+    <Name Description="" Language="1045">Symbol (ISO)</Name>
+    <Name Description="" Language="1046">Símbolo (ISO)</Name>
+    <Name Description="" Language="1049">Обозначение (ISO)</Name>
+    <Name Description="" Language="2052">符号 (ISO)</Name>
+    <Name Description="" Language="3082">Símbolo (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Title (ANSI)&#xA;" LinePattern="28100" LineThickness="0.0508" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">標題 (ANSI)</Name>
+    <Name Description="" Language="1029">Nadpis (ANSI)</Name>
+    <Name Description="" Language="1031">Titel (ANSI)</Name>
+    <Name Description="" Language="1033">Title (ANSI)</Name>
+    <Name Description="" Language="1036">Titre (ANSI)</Name>
+    <Name Description="" Language="1038">Cím (ANSI)</Name>
+    <Name Description="" Language="1040">Titolo (ANSI)</Name>
+    <Name Description="" Language="1041">Title (ANSI)</Name>
+    <Name Description="" Language="1042">제목(ANSI)</Name>
+    <Name Description="" Language="1045">Tytuł (ANSI)</Name>
+    <Name Description="" Language="1046">Título (ANSI)</Name>
+    <Name Description="" Language="1049">Заголовок (ANSI)</Name>
+    <Name Description="" Language="2052">标题 (ANSI)</Name>
+    <Name Description="" Language="3082">Título (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Title (GOST)&#xA;" LinePattern="28100" LineThickness="0.05" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">標題 (GOST)</Name>
+    <Name Description="" Language="1029">Nadpis (GOST)</Name>
+    <Name Description="" Language="1031">Titel (GOST)</Name>
+    <Name Description="" Language="1033">Title (GOST)</Name>
+    <Name Description="" Language="1036">Titre (GOST)</Name>
+    <Name Description="" Language="1038">Cím (GOST)</Name>
+    <Name Description="" Language="1040">Titolo (GOST)</Name>
+    <Name Description="" Language="1041">Title (GOST)</Name>
+    <Name Description="" Language="1042">제목(GOST)</Name>
+    <Name Description="" Language="1045">Tytuł (GOST)</Name>
+    <Name Description="" Language="1046">Título (GOST)</Name>
+    <Name Description="" Language="1049">Заголовок (ГОСТ)</Name>
+    <Name Description="" Language="2052">标题 (GOST)</Name>
+    <Name Description="" Language="3082">Título (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Title (ISO)&#xA;" LinePattern="28100" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">標題 (ISO)</Name>
+    <Name Description="" Language="1029">Nadpis (ISO)</Name>
+    <Name Description="" Language="1031">Titel (ISO)</Name>
+    <Name Description="" Language="1033">Title (ISO)</Name>
+    <Name Description="" Language="1036">Titre (ISO)</Name>
+    <Name Description="" Language="1038">Cím (ISO)</Name>
+    <Name Description="" Language="1040">Titolo (ISO)</Name>
+    <Name Description="" Language="1041">Title (ISO)</Name>
+    <Name Description="" Language="1042">제목(ISO)</Name>
+    <Name Description="" Language="1045">Tytuł (ISO)</Name>
+    <Name Description="" Language="1046">Título (ISO)</Name>
+    <Name Description="" Language="1049">Заголовок (ISO)</Name>
+    <Name Description="" Language="2052">标题 (ISO)</Name>
+    <Name Description="" Language="3082">Título (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Overlay (ANSI)&#xA;" LinePattern="28103" LineThickness="0.0508" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">覆疊 (ANSI)</Name>
+    <Name Description="" Language="1029">Podlož (ANSI)</Name>
+    <Name Description="" Language="1031">Überlagern (ANSI)</Name>
+    <Name Description="" Language="1033">Overlay (ANSI)</Name>
+    <Name Description="" Language="1036">Superposer (ANSI)</Name>
+    <Name Description="" Language="1038">Alávetít (ANSI)</Name>
+    <Name Description="" Language="1040">Sovrapposizione (ANSI)</Name>
+    <Name Description="" Language="1041">Overlay (ANSI)</Name>
+    <Name Description="" Language="1042">중첩(ANSI)</Name>
+    <Name Description="" Language="1045">Nakładkowy (ANSI)</Name>
+    <Name Description="" Language="1046">Sobreposição (ANSI)</Name>
+    <Name Description="" Language="1049">Наложить (ANSI)</Name>
+    <Name Description="" Language="2052">覆盖 (ANSI)</Name>
+    <Name Description="" Language="3082">Superponer (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Overlay (GOST)&#xA;" LinePattern="28103" LineThickness="0.05" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">覆疊 (GOST)</Name>
+    <Name Description="" Language="1029">Podlož (GOST)</Name>
+    <Name Description="" Language="1031">Überlagern (GOST)</Name>
+    <Name Description="" Language="1033">Overlay (GOST)</Name>
+    <Name Description="" Language="1036">Superposer (GOST)</Name>
+    <Name Description="" Language="1038">Alávetít (GOST)</Name>
+    <Name Description="" Language="1040">Sovrapposizione (GOST)</Name>
+    <Name Description="" Language="1041">Overlay (GOST)</Name>
+    <Name Description="" Language="1042">중첩(GOST)</Name>
+    <Name Description="" Language="1045">Nakładkowy (GOST)</Name>
+    <Name Description="" Language="1046">Sobreposição (GOST)</Name>
+    <Name Description="" Language="1049">Наложить (ГОСТ)</Name>
+    <Name Description="" Language="2052">覆盖 (GOST)</Name>
+    <Name Description="" Language="3082">Superponer (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Overlay (ISO)&#xA;" LinePattern="28103" LineThickness="0.025" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">覆疊 (ISO)</Name>
+    <Name Description="" Language="1029">Podlož (ISO)</Name>
+    <Name Description="" Language="1031">Überlagern (ISO)</Name>
+    <Name Description="" Language="1033">Overlay (ISO)</Name>
+    <Name Description="" Language="1036">Superposer (ISO)</Name>
+    <Name Description="" Language="1038">Alávetít (ISO)</Name>
+    <Name Description="" Language="1040">Sovrapposizione (ISO)</Name>
+    <Name Description="" Language="1041">Overlay (ISO)</Name>
+    <Name Description="" Language="1042">중첩(ISO)</Name>
+    <Name Description="" Language="1045">Nakładkowy (ISO)</Name>
+    <Name Description="" Language="1046">Sobreposição (ISO)</Name>
+    <Name Description="" Language="1049">Наложить (ISO)</Name>
+    <Name Description="" Language="2052">覆盖 (ISO)</Name>
+    <Name Description="" Language="3082">Superponer (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Hidden (ANSI)&#xA;" LinePattern="28101" LineThickness="0.03556" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">隱藏 (ANSI)</Name>
+    <Name Description="" Language="1029">Skrytá (ANSI)</Name>
+    <Name Description="" Language="1031">Verdeckt (ANSI)</Name>
+    <Name Description="" Language="1033">Hidden (ANSI)</Name>
+    <Name Description="" Language="1036">Masqué (ANSI)</Name>
+    <Name Description="" Language="1038">Takart (ANSI)</Name>
+    <Name Description="" Language="1040">Nascosta (ANSI)</Name>
+    <Name Description="" Language="1041">Hidden (ANSI)</Name>
+    <Name Description="" Language="1042">은선 (ANSI)</Name>
+    <Name Description="" Language="1045">Ukryty (ANSI)</Name>
+    <Name Description="" Language="1046">Oculto (ANSI)</Name>
+    <Name Description="" Language="1049">Невидимый контур (ANSI)</Name>
+    <Name Description="" Language="2052">隐藏 (ANSI)</Name>
+    <Name Description="" Language="3082">Oculto (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Hidden (GOST)&#xA;" LinePattern="28101" LineThickness="0.035" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">隱藏 (GOST)</Name>
+    <Name Description="" Language="1029">Skrytá (GOST)</Name>
+    <Name Description="" Language="1031">Verdeckt (GOST)</Name>
+    <Name Description="" Language="1033">Hidden (GOST)</Name>
+    <Name Description="" Language="1036">Masqué (GOST)</Name>
+    <Name Description="" Language="1038">Takart (GOST)</Name>
+    <Name Description="" Language="1040">Nascosta (GOST)</Name>
+    <Name Description="" Language="1041">Hidden (GOST)</Name>
+    <Name Description="" Language="1042">은선 (GOST)</Name>
+    <Name Description="" Language="1045">Ukryty (GOST)</Name>
+    <Name Description="" Language="1046">Oculto (GOST)</Name>
+    <Name Description="" Language="1049">Невидимый контур (ГОСТ)</Name>
+    <Name Description="" Language="2052">隐藏 (GOST)</Name>
+    <Name Description="" Language="3082">Oculto (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Hidden (ISO)&#xA;" LinePattern="28101" LineThickness="0.018" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">隱藏 (ISO)</Name>
+    <Name Description="" Language="1029">Skrytá (ISO)</Name>
+    <Name Description="" Language="1031">Verdeckt (ISO)</Name>
+    <Name Description="" Language="1033">Hidden (ISO)</Name>
+    <Name Description="" Language="1036">Masqué (ISO)</Name>
+    <Name Description="" Language="1038">Takart (ISO)</Name>
+    <Name Description="" Language="1040">Nascosta (ISO)</Name>
+    <Name Description="" Language="1041">Hidden (ISO)</Name>
+    <Name Description="" Language="1042">은선 (ISO)</Name>
+    <Name Description="" Language="1045">Ukryte (ISO)</Name>
+    <Name Description="" Language="1046">Oculto (ISO)</Name>
+    <Name Description="" Language="1049">Невидимый контур (ISO)</Name>
+    <Name Description="" Language="2052">隐藏 (ISO)</Name>
+    <Name Description="" Language="3082">Oculto (ISO)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Hidden Narrow (ANSI)&#xA;" LinePattern="28101" LineThickness="0.0254" LineTypeScale="1" Printable="1" ScaleByLineWeight="0">
+    <Name Description="" Language="1028">窄部隱藏 (ANSI)</Name>
+    <Name Description="" Language="1029">Neviditelná tenká (ANSI)</Name>
+    <Name Description="" Language="1031">Verdeckt schmal (ANSI)</Name>
+    <Name Description="" Language="1033">Hidden Narrow (ANSI)</Name>
+    <Name Description="" Language="1036">Caché étroit (ANSI)</Name>
+    <Name Description="" Language="1038">Takart vékony (ANSI)</Name>
+    <Name Description="" Language="1040">Nascosta sottile (ANSI)</Name>
+    <Name Description="" Language="1041">Hidden Narrow (ANSI)</Name>
+    <Name Description="" Language="1042">좁은 은선 (ANSI)</Name>
+    <Name Description="" Language="1045">Ukryte wąskie (ANSI)</Name>
+    <Name Description="" Language="1046">Estreito oculto (ANSI)</Name>
+    <Name Description="" Language="1049">Невидимые тонкие (ANSI)</Name>
+    <Name Description="" Language="2052">隐藏窄的 (ANSI)</Name>
+    <Name Description="" Language="3082">Oculta fina (ANSI)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Hidden Narrow (GOST)&#xA;" LinePattern="28101" LineThickness="0.0254" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">窄部隱藏 (GOST)</Name>
+    <Name Description="" Language="1029">Neviditelná tenká (GOST)</Name>
+    <Name Description="" Language="1031">Verdeckt schmal (GOST)</Name>
+    <Name Description="" Language="1033">Hidden Narrow (GOST)</Name>
+    <Name Description="" Language="1036">Caché étroit (GOST)</Name>
+    <Name Description="" Language="1038">Takart vékony (GOST)</Name>
+    <Name Description="" Language="1040">Nascosta sottile (GOST)</Name>
+    <Name Description="" Language="1041">Hidden Narrow (GOST)</Name>
+    <Name Description="" Language="1042">좁은 은선 (GOST)</Name>
+    <Name Description="" Language="1045">Ukryte wąskie (GOST)</Name>
+    <Name Description="" Language="1046">Estreito oculto (GOST)</Name>
+    <Name Description="" Language="1049">Невидимые тонкие (ГОСТ)</Name>
+    <Name Description="" Language="2052">隐藏窄的 (GOST)</Name>
+    <Name Description="" Language="3082">Oculta fina (GOST)</Name>
+  </Style>
+
+  <Style Color="-2 -2 -2 -2" EditFlag="0" InternalName="1:Hidden Narrow (ISO)&#xA;" LinePattern="28101" LineThickness="0.013" LineTypeScale="1" Printable="1" ScaleByLineWeight="1">
+    <Name Description="" Language="1028">窄部隱藏 (ISO)</Name>
+    <Name Description="" Language="1029">Neviditelná tenká (ISO)</Name>
+    <Name Description="" Language="1031">Verdeckt schmal (ISO)</Name>
+    <Name Description="" Language="1033">Hidden Narrow (ISO)</Name>
+    <Name Description="" Language="1036">Caché étroit (ISO)</Name>
+    <Name Description="" Language="1038">Takart vékony (ISO)</Name>
+    <Name Description="" Language="1040">Nascosta sottile (ISO)</Name>
+    <Name Description="" Language="1041">Hidden Narrow (ISO)</Name>
+    <Name Description="" Language="1042">좁은 은선 (ISO)</Name>
+    <Name Description="" Language="1045">Ukryte wąskie (ISO)</Name>
+    <Name Description="" Language="1046">Estreito oculto (ISO)</Name>
+    <Name Description="" Language="1049">Невидимые тонкие (ISO)</Name>
+    <Name Description="" Language="2052">隐藏窄的 (ISO)</Name>
+    <Name Description="" Language="3082">Oculta fina (ISO)</Name>
+  </Style>
+
+</Layers>

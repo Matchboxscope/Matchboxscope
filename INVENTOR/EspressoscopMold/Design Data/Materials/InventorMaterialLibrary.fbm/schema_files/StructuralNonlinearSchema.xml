@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+<AssetSchema>
+        <Base val="CommonSchema" file="../../../Common/CommonSchema.xml" />
+        <!--This schema is to hold all the advanced properties-->
+        <UID val="StructuralNonlinearSchema"/>
+        <Integer id="SchemaVersion" val="8" public="false" readonly="true" />
+        <type val="Nonlinear" />
+        <localtype val="Nonlinear" />
+        <localname val="Nonlinear" />
+        <!--Meta-data properties-->
+        <String id="structural_source" val="" label="Source" />
+        <String id="structural_sourceURL" val="" label="Source URL" />
+        <!-- Constant values for CommonSchema properties -->
+        <ui id="UIDefinition" val="Structural/Nonlinear/NonlinearStructuralUI.xml"/>
+        
+        <!--Data properties-->
+        <!--Model Type-->
+        <Choice id="structural_Model_Type" val="structural_Model_Isotropic" label="Material Model Type">
+                <ChoiceValue id="structural_Model_Isotropic" val="0" label="Isotropic" />
+                <ChoiceValue id="structural_Model_Hyperelastic" val="1" label="Hyperelastic" />
+        </Choice>
+        <!--Behavior Type-->
+        <Choice id="structural_Behavior_Type" val="structural_Behavior_Linear" label="Behavior Type">
+                <ChoiceValue id="structural_Behavior_Linear" val="0" label="Linear" />
+                <ChoiceValue id="structural_Behavior_Temperature_Dependent" val="1" label="Temperature Dependent" />
+                <ChoiceValue id="structural_Behavior_Nonlinear" val="2" label="Nonlinear" />
+                <ChoiceValue id="structural_Behavior_Mooney_Rivlin" val="3" label="Mooney Rivlin" />
+        </Choice>
+
+        <!--Nonlinear Type Begin-->
+        <!--Deprecated-->
+        <Choice id="structural_Nonlinear_Type" val="structural_Nonlinear_Elastic" label="Nonlinear Type">
+                <ChoiceValue id="structural_Nonlinear_Elastic" val="0" label="Elastic" />
+                <ChoiceValue id="structural_Nonlinear_Plastic" val="1" label="Plastic" />
+        </Choice>
+		<!--Internal property to handle deprecated Nonlinear Type reading in old documents-->
+		<Boolean id="structural_Nonlinear_Type_Deprecated" val="false" label="Deprecated" />	
+        <!--Nonlinear Type-->
+        <Choice id="structural_Nonlinear_Type_Ex" val="structural_Nonlinear_Elastic" label="Nonlinear Type">
+                <ChoiceValue id="structural_Nonlinear_Elastic" val="0" label="Elastic" />
+                <ChoiceValue id="structural_Nonlinear_Plastic" val="1" label="Plastic" />
+                <ChoiceValue id="structural_Nonlinear_Elasto-plastic" val="2" label="Elasto-plastic" />
+        </Choice>
+		
+		<!--Stress unit="Kilopascal"-->
+        <Float id="structural_Nonlinear_Plastic_Stress" val="1.0e+5" label="Nonlinear Plastic Stress" allowmultiplevalues="true"></Float>
+        <Float id="structural_Nonlinear_Plastic_Strain" val="1.0e+5" label="Nonlinear Plastic Strain" allowmultiplevalues="true"></Float>
+		<!--Stress unit="Kilopascal"-->
+        <Float id="structural_Nonlinear_Elastic_Stress" val="1.0e+5" label="Nonlinear Elastic Stress" allowmultiplevalues="true"></Float>
+        <Float id="structural_Nonlinear_Elastic_Strain" val="1.0e+5" label="Nonlinear Elastic Strain" allowmultiplevalues="true"></Float>
+        <!--Tangent Modulus-->
+        <Float id="structural_Nonlinear_Tangent_modulus" val="0" unit="Kilopascal" label="Tangent Modulus"></Float>
+        <!--Hardening Rule-->
+        <Choice id="structural_Nonlinear_Hardening_Rule" val="structural_Nonlinear_Isotropic" label="Hardening Rule">
+                <ChoiceValue id="structural_Nonlinear_Isotropic" val="0" label="Isotropic" />
+                <ChoiceValue id="structural_Nonlinear_Kinematic" val="1" label="Kinematic" />
+                <ChoiceValue id="structural_Nonlinear_Isotropic+Kinematic" val="2" label="Isotropic+Kinematic" />
+        </Choice>
+        <Choice id="structural_Nonlinear_Yield_Criterion" val="structural_Nonlinear_Yield_Criterion_Von_Mises" label="Yield Criterion">
+                <ChoiceValue id="structural_Nonlinear_Yield_Criterion_Von_Mises" val="0" label="von Mises" />
+                <ChoiceValue id="structural_Nonlinear_Tresca" val="1" label="Tresca" />
+                <ChoiceValue id="structural_Nonlinear_Mohr_Coulomb" val="2" label="Mohr-Coulomb" />
+                <ChoiceValue id="structural_Nonlinear_Drucker_Prager" val="3" label="Drucker-Prager" />
+        </Choice>
+        <!--Initial Yield Stress-->
+        <Float id="structural_Nonlinear_Yield_Stress" val="0" unit="Kilopascal" label="Initial Yield Stress"></Float>
+        <!--Friction Angle-->
+        <Float id="structural_Nonlinear_Friction_Angle" val="0" unit="Degree" label="Friction Angle"></Float>
+        <!--Nonlinear Type End-->
+
+        <!--Temperature Dependent Properties Begin-->
+		<!--structural_Dependent_Specific_Heat unit="JoulePerGramCelsius"-->
+        <Float id="structural_Dependent_Specific_Heat" val="1" label="Specific Heat" allowmultiplevalues="true"></Float>
+		<!--structural_Dependent_Specific_Heat_Temperature unit="DegreeCelsius" -->
+        <Float id="structural_Dependent_Specific_Heat_Temperature" val="27" label="Temperature" allowmultiplevalues="true"></Float>
+		<!--structural_Dependent_Youngs_Modulus unit="Kilopascal" -->
+        <Float id="structural_Dependent_Youngs_Modulus" val="0.03" label="Young's Modulus" allowmultiplevalues="true"></Float>
+		<!--structural_Dependent_Youngs_Modulus_Temperature unit="DegreeCelsius" -->
+        <Float id="structural_Dependent_Youngs_Modulus_Temperature" val="27" label="Temperature" allowmultiplevalues="true"></Float>
+		<!--structural_Dependent_Poissons_Ratio unit="Unitless" -->
+        <Float id="structural_Dependent_Poissons_Ratio" val="0.03" label="Poisson's Ratio" allowmultiplevalues="true"></Float>
+		<!--structural_Dependent_Poissons_Ratio_Temperature unit="DegreeCelsius" -->
+        <Float id="structural_Dependent_Poissons_Ratio_Temperature" val="27" label="Temperature" allowmultiplevalues="true"></Float>
+		<!--structural_Dependent_Yield_Strength unit="Kilopascal" -->
+        <Float id="structural_Dependent_Yield_Strength" val="0.01" label="Yield Strength" allowmultiplevalues="true"></Float>
+		<!--structural_Dependent_Yield_Strength_Temperature unit="DegreeCelsius" -->
+        <Float id="structural_Dependent_Yield_Strength_Temperature" val="27" label="Temperature" allowmultiplevalues="true"></Float>
+		<!--structural_Dependent_Ultimate_Strength unit="Kilopascal" -->
+        <Float id="structural_Dependent_Ultimate_Strength" val="0.01" label="Ultimate Tensile Strength" allowmultiplevalues="true"></Float>
+		<!--structural_Dependent_Ultimate_Strength_Temperature unit="DegreeCelsius" -->
+        <Float id="structural_Dependent_Ultimate_Strength_Temperature" val="27" label="Temperature" allowmultiplevalues="true"></Float>
+		<!--structural_Dependent_Thermal_Conductivity unit="WattPerMeterKelvin" -->
+        <Float id="structural_Dependent_Thermal_Conductivity" val="1.00" label="Thermal Conductivity" allowmultiplevalues="true"></Float>
+		<!--structural_Dependent_Thermal_Conductivity_Temperature unit="DegreeCelsius" -->
+        <Float id="structural_Dependent_Thermal_Conductivity_Temperature" val="27" label="Temperature" allowmultiplevalues="true"></Float>
+		<!--structural_Dependent_Thermal_Expansion unit="MicrometerPerMeterCelsius" -->
+        <Float id="structural_Dependent_Thermal_Expansion" val="0.1" label="Thermal Expansion Coefficient" allowmultiplevalues="true"></Float>
+		<!--structural_Dependent_Thermal_Expansion_Temperature unit="DegreeCelsius" -->
+        <Float id="structural_Dependent_Thermal_Expansion_Temperature" val="27" label="Temperature" allowmultiplevalues="true"></Float>
+        <!--Temperature Dependent Properties End-->
+
+        <!--Mooney Rivlin Begin-->
+		<!--Mooney Rivlin General-->
+		<!--<Float id="structural_Mooney_Rivlin_Volumetric_Expansion" val="0" unit="MicrometerPerMeterCelsius" label="Volumetric Expansion"></Float>-->
+        <!--Mooney Rivlin Data Type-->
+        <Choice id="structural_Mooney_Rivlin_Data_Type" val="structural_Mooney_Rivlin_Constants" label="Data Type">
+                <ChoiceValue id="structural_Mooney_Rivlin_Constants" val="0" label="Constants" />
+                <ChoiceValue id="structural_Mooney_Rivlin_Curves" val="1" label="Curves" />
+        </Choice>	
+        <Float id="structural_Mooney_Rivlin_Constant_A01" val="0" unit="Pascal" label="A01"></Float>
+        <Float id="structural_Mooney_Rivlin_Constant_A10" val="0" unit="Pascal" label="A10"></Float>
+        <Float id="structural_Mooney_Rivlin_Constant_D1" val="0" unit="Pascal" label="D1"></Float>
+        <Boolean id="structural_Mooney_Rivlin_Simple_Tension" val="false" label="Simple Tension" />
+		<!--structural_Mooney_Rivlin_Simple_Tension_X unit="Unitless" -->
+        <Float id="structural_Mooney_Rivlin_Simple_Tension_X" val="0.1" label="Stretch Ratio" allowmultiplevalues="true"></Float>
+		<!--structural_Mooney_Rivlin_Simple_Tension_Y unit="Unitless" -->
+        <Float id="structural_Mooney_Rivlin_Simple_Tension_Y" val="0.1" label="Engineering Strain" allowmultiplevalues="true"></Float>
+        <Boolean id="structural_Mooney_Rivlin_Pure_Volumetric_Compression" val="false" label="Pure Volumetric Compression" />
+		<!--structural_Mooney_Rivlin_Pure_Volumetric_Compression_X unit="Unitless" -->
+        <Float id="structural_Mooney_Rivlin_Pure_Volumetric_Compression_X" val="0.1" label="Volume Ratios" allowmultiplevalues="true"></Float>
+		<!--structural_Mooney_Rivlin_Pure_Volumetric_Compression_Y unit="Kilopascal" -->
+        <Float id="structural_Mooney_Rivlin_Pure_Volumetric_Compression_Y" val="0" label="Pressure" allowmultiplevalues="true"></Float>
+        <Boolean id="structural_Mooney_Rivlin_Simple_Shear" val="false" label="Simple Shear" />
+		<!--structural_Mooney_Rivlin_Simple_Shear_X unit="Kilopascal" -->
+        <Float id="structural_Mooney_Rivlin_Simple_Shear_X" val="0" label="Shear Tangent" allowmultiplevalues="true"></Float>
+		<!--structural_Mooney_Rivlin_Simple_Shear_Y unit="Kilopascal" -->
+        <Float id="structural_Mooney_Rivlin_Simple_Shear_Y" val="0.1" label="Engineering Stress" allowmultiplevalues="true"></Float>
+        <Boolean id="structural_Mooney_Rivlin_Pure_Shear" val="false" label="Pure Shear" />
+		<!--structural_Mooney_Rivlin_Pure_Shear_X unit="Unitless" -->
+        <Float id="structural_Mooney_Rivlin_Pure_Shear_X" val="0.1" label="Stretch Ratios" allowmultiplevalues="true"></Float>
+		<!--structural_Mooney_Rivlin_Pure_Shear_Y unit="Kilopascal" -->
+        <Float id="structural_Mooney_Rivlin_Pure_Shear_Y" val="0" label="Nominal Stress" allowmultiplevalues="true"></Float>
+        <Boolean id="structural_Mooney_Rivlin_Equibiaxial_Tension" val="false" label="Equibiaxial Tension" />
+		<!--structural_Mooney_Rivlin_Equibiaxial_Tension_X unit="Unitless" -->
+        <Float id="structural_Mooney_Rivlin_Equibiaxial_Tension_X" val="0.1" label="Stretch Ratios" allowmultiplevalues="true"></Float>
+		<!--structural_Mooney_Rivlin_Equibiaxial_Tension_Y unit="Kilopascal" -->
+        <Float id="structural_Mooney_Rivlin_Equibiaxial_Tension_Y" val="0.1" label="Engineering Stress" allowmultiplevalues="true"></Float>
+        <!--Mooney Rivlin End-->
+
+</AssetSchema>

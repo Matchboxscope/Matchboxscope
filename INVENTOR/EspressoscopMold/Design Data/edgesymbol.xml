@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<EdgeSymbol Version="0">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style EditFlag="0" InternalName="1:Edge Symbol (ISO)&#xA;">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 ISO 13715 - 2021" Language="1028">邊符號 (ISO)</Name>
+    <Name Description="Podle normy ISO 13715 - 2021" Language="1029">Značka hrany (ISO)</Name>
+    <Name Description="Basiert auf ISO 13715 - 2021" Language="1031">Kantensymbol (ISO)</Name>
+    <Name Description="Based on ISO 13715 - 2021" Language="1033">Edge Symbol (ISO)</Name>
+    <Name Description="En fonction d'ISO 13715 - 2021" Language="1036">Symbole d'arête (ISO)</Name>
+    <Name Description="Alapja: ISO 13715 - 2021" Language="1038">Éljel (ISO)</Name>
+    <Name Description="Basato su ISO 13715 - 2021" Language="1040">Simbolo spigolo (ISO)</Name>
+    <Name Description="Based on ISO 13715 - 2021" Language="1041">Edge Symbol (ISO)</Name>
+    <Name Description="ISO 13715 - 2021 기준" Language="1042">모서리 기호 (ISO)</Name>
+    <Name Description="Na podstawie ISO 13715 - 2021" Language="1045">Symbol krawędzi (ISO)</Name>
+    <Name Description="Baseado na ISO 13715 - 2021" Language="1046">Símbolo de aresta (ISO)</Name>
+    <Name Description="Согласно ISO 13715 - 2021" Language="1049">Обозначение ребра (ISO)</Name>
+    <Name Description="基于 ISO 13715 - 2021" Language="2052">边界符号 (ISO)</Name>
+    <Name Description="Basado en ISO 13715 - 2021" Language="3082">Símbolo de arista (ISO)</Name>
+  </Style>
+
+  <Style EditFlag="3" InternalName="1:Kantensymbol (Standardnorm (DIN))&#xA;">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN)</SubStyle>
+    <Name Description="" Language="1031">Kantensymbol (Standardnorm (DIN))</Name>
+  </Style>
+
+</EdgeSymbol>

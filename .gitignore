@@ -6,6 +6,13 @@ STL/Matchboxscope_v0_Bauteil50_10.stl
 STL/Matchboxscope_v0_00_chip_7.stl
 STL/Matchboxscope_v0_00_chip_25.stl
 *.tif
+*.stl
 build/*
 bin/*
 ESP32/bin/*
+flutter*
+IMAGES/FIGURES_Matchboxscope.pptx
+IMAGES/~$ESP32MicroscopeVariations.pptx
+IMAGES/FIGURES_Matchboxscope.pptx
+IMAGES/~$AnglerfishLogo.pptx
+IMAGES/FIGURES_Matchboxscope.pptx

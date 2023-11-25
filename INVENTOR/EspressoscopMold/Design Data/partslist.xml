@@ -1,0 +1,2273 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<PartsList Version="2">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="1" GroupingDisplayGroupedItemNumber="0" Heading="1" HeadingGap="0.0889" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Parts List (ANSI-AIP)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="55" Key1PropertyMemberID="" Key1PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key2PropertyID="55" Key2PropertyMemberID="" Key2PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key3PropertyID="55" Key3PropertyMemberID="" Key3PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.0889" TitleGap="0.0889">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (ANSI)</SubStyle>
+    <Title>
+      <Item Language="1038" String="ALKATRÉSZLISTA"/>
+      <Item Language="1031" String="BAUTEILLISTE"/>
+      <Item Language="1040" String="ELENCO PARTI"/>
+      <Item Language="1029" String="KUSOVNÍK"/>
+      <Item Language="1045" String="LISTA CZĘŚCI"/>
+      <Item Language="1046" String="LISTA DE PEÇAS"/>
+      <Item Language="3082" String="LISTA DE PIEZAS"/>
+      <Item Language="1036" String="LISTE DE PIECES"/>
+      <Item Language="1033 1041" String="PARTS LIST"/>
+      <Item Language="1049" String="СПИСОК ДЕТАЛЕЙ"/>
+      <Item Language="2052" String="明细栏"/>
+      <Item Language="1028" String="零件表"/>
+      <Item Language="1042" String="부품 리스트"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1041 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1045" String="POZYCJA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ЭЛЕМЕНТ"/>
+          <Item Language="2052" String="序号"/>
+          <Item Language="1028" String="料件"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="1" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="1" SubstituteMergeResult="1" SubstitutePrecision="2" SubstitutePropertyID="PL" SubstitutePropertyMemberID="" SubstitutePropertySet="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" SubstituteTrailingZeros="1" SubstituteUnitFormat="1" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033 1041" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ."/>
+          <Item Language="2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BAUTEILNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1038" String="AZONOSÍTÓ"/>
+          <Item Language="1031" String="BAUTEILNUMMER"/>
+          <Item Language="1045" String="NUMER CZĘŚCI"/>
+          <Item Language="1036" String="NUMERO DE PIECE"/>
+          <Item Language="1040" String="NUMERO PARTE"/>
+          <Item Language="3082" String="Nº DE PIEZA"/>
+          <Item Language="1046" String="NÚMERO DA PEÇA"/>
+          <Item Language="1033 1041" String="PART NUMBER"/>
+          <Item Language="1029" String="ČÍSLO SOUČÁSTI"/>
+          <Item Language="1049" String="ОБОЗНАЧЕНИЕ"/>
+          <Item Language="2052" String="零件代号"/>
+          <Item Language="1028" String="零件號碼"/>
+          <Item Language="1042" String="부품 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="7.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESTANDSNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="55" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESTANDSNUMMER"/>
+          <Item Language="1045" String="NUMER KATALOGOWY"/>
+          <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+          <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+          <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+          <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+          <Item Language="1038" String="RAKTÁRI SZÁM"/>
+          <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+          <Item Language="1033 1041" String="STOCK NUMBER"/>
+          <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+          <Item Language="2052" String="库存编号"/>
+          <Item Language="1028" String="庫存號碼"/>
+          <Item Language="1042" String="스톡 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="29" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036 1041" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName/>
+    <Key2PropertyExternalName/>
+    <Key3PropertyExternalName/>
+    <Name Description="" Language="1028">零件表 (ANSI-AIP)</Name>
+    <Name Description="" Language="1029">Kusovník (ANSI-AIP)</Name>
+    <Name Description="" Language="1031">Bauteilliste (ANSI-AIP)</Name>
+    <Name Description="" Language="1033">Parts List (ANSI-AIP)</Name>
+    <Name Description="" Language="1036">Liste de pièces (ANSI-AIP)</Name>
+    <Name Description="" Language="1038">Alkatrészlista (ANSI-AIP)</Name>
+    <Name Description="" Language="1040">Elenco parti (ANSI-AIP)</Name>
+    <Name Description="" Language="1041">Parts List (ANSI-AIP)</Name>
+    <Name Description="" Language="1042">부품 리스트 (ANSI-AIP)</Name>
+    <Name Description="" Language="1045">Lista części (ANSI-AIP)</Name>
+    <Name Description="" Language="1046">Lista de peças (ANSI-AIP)</Name>
+    <Name Description="" Language="1049">Список деталей (ANSI-AIP)</Name>
+    <Name Description="" Language="2052">明细栏 (ANSI-AIP)</Name>
+    <Name Description="" Language="3082">Lista de piezas (ANSI-AIP)</Name>
+  </Style>
+
+  <Style Direction="0" DisplayParticipants="1" DisplayTitle="1" EditFlag="0" Grouping="0" GroupingDisplayGroupedItemNumber="1" Heading="1" HeadingGap="0.0889" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Parts List (ANSI)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="55" Key1PropertyMemberID="" Key1PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key2PropertyID="55" Key2PropertyMemberID="" Key2PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key3PropertyID="55" Key3PropertyMemberID="" Key3PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.0889" TitleGap="0.0889">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (ANSI)</SubStyle>
+    <Title>
+      <Item Language="1038" String="ALKATRÉSZLISTA"/>
+      <Item Language="1031" String="BAUTEILLISTE"/>
+      <Item Language="1040" String="ELENCO PARTI"/>
+      <Item Language="1029" String="KUSOVNÍK"/>
+      <Item Language="1045" String="LISTA CZĘŚCI"/>
+      <Item Language="1046" String="LISTA DE PEÇAS"/>
+      <Item Language="3082" String="LISTA DE PIEZAS"/>
+      <Item Language="1036" String="LISTE DE PIECES"/>
+      <Item Language="1033 1041" String="PARTS LIST"/>
+      <Item Language="1049" String="СПИСОК ДЕТАЛЕЙ"/>
+      <Item Language="2052" String="明细栏"/>
+      <Item Language="1028" String="零件表"/>
+      <Item Language="1042" String="부품 리스트"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1041 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1045" String="POZYCJA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ЭЛЕМЕНТ"/>
+          <Item Language="2052" String="序号"/>
+          <Item Language="1028" String="料件"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033 1041" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ."/>
+          <Item Language="2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="0" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BAUTEILNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="1" Precision="2" PropertyID="5" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="1" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1038" String="AZONOSÍTÓ"/>
+          <Item Language="1031" String="BAUTEILNUMMER"/>
+          <Item Language="1045" String="NUMER CZĘŚCI"/>
+          <Item Language="1036" String="NUMERO DE PIECE"/>
+          <Item Language="1040" String="NUMERO PARTE"/>
+          <Item Language="3082" String="Nº DE PIEZA"/>
+          <Item Language="1046" String="NÚMERO DA PEÇA"/>
+          <Item Language="1033 1041" String="PART NUMBER"/>
+          <Item Language="1029" String="ČÍSLO SOUČÁSTI"/>
+          <Item Language="1049" String="ОБОЗНАЧЕНИЕ"/>
+          <Item Language="2052" String="零件代号"/>
+          <Item Language="1028" String="零件號碼"/>
+          <Item Language="1042" String="부품 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="29" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036 1041" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName>
+      <Item Language="1031" String="BESTANDSNUMMER"/>
+      <Item Language="1045" String="NUMER KATALOGOWY"/>
+      <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+      <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+      <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+      <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+      <Item Language="1038" String="RAKTÁRI SZÁM"/>
+      <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+      <Item Language="1033" String="STOCK NUMBER"/>
+      <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+      <Item Language="1041" String="ストック番号"/>
+      <Item Language="2052" String="库存编号"/>
+      <Item Language="1028" String="庫存號碼"/>
+      <Item Language="1042" String="스톡 번호"/>
+    </Key1PropertyExternalName>
+    <Key2PropertyExternalName>
+      <Item Language="1031" String="BESTANDSNUMMER"/>
+      <Item Language="1045" String="NUMER KATALOGOWY"/>
+      <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+      <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+      <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+      <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+      <Item Language="1038" String="RAKTÁRI SZÁM"/>
+      <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+      <Item Language="1033" String="STOCK NUMBER"/>
+      <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+      <Item Language="1041" String="ストック番号"/>
+      <Item Language="2052" String="库存编号"/>
+      <Item Language="1028" String="庫存號碼"/>
+      <Item Language="1042" String="스톡 번호"/>
+    </Key2PropertyExternalName>
+    <Key3PropertyExternalName>
+      <Item Language="1031" String="BESTANDSNUMMER"/>
+      <Item Language="1045" String="NUMER KATALOGOWY"/>
+      <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+      <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+      <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+      <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+      <Item Language="1038" String="RAKTÁRI SZÁM"/>
+      <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+      <Item Language="1033" String="STOCK NUMBER"/>
+      <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+      <Item Language="1041" String="ストック番号"/>
+      <Item Language="2052" String="库存编号"/>
+      <Item Language="1028" String="庫存號碼"/>
+      <Item Language="1042" String="스톡 번호"/>
+    </Key3PropertyExternalName>
+    <Name Description="根據 ASME Y14.36M - 1989" Language="1028">零件表 (ANSI)</Name>
+    <Name Description="Podle normy ASME Y14.36M - 1989" Language="1029">Kusovník (ANSI)</Name>
+    <Name Description="Basiert auf ASME Y14.36M - 1989" Language="1031">Bauteilliste (ANSI)</Name>
+    <Name Description="Based on ASME Y14.36M - 1989" Language="1033">Parts List (ANSI)</Name>
+    <Name Description="En fonction d'ASME Y14.36M - 1989" Language="1036">Liste de pièces (ANSI)</Name>
+    <Name Description="Alapja: ASME Y14.36M - 1989" Language="1038">Alkatrészlista (ANSI)</Name>
+    <Name Description="Basato su ASME Y14.36M - 1989" Language="1040">Elenco parti (ANSI)</Name>
+    <Name Description="Based on ASME Y14.36M - 1989" Language="1041">Parts List (ANSI)</Name>
+    <Name Description="ASME Y14.36M - 1989 기준" Language="1042">부품 리스트 (ANSI)</Name>
+    <Name Description="Na podstawie ASME Y14.36M - 1989" Language="1045">Lista części (ANSI)</Name>
+    <Name Description="Baseado na ASME Y14.36M - 1989" Language="1046">Lista de peças (ANSI)</Name>
+    <Name Description="Согласно ASME Y14.36M - 1989" Language="1049">Список деталей (ANSI)</Name>
+    <Name Description="基于 ASME Y14.36M - 1989" Language="2052">明细栏 (ANSI)</Name>
+    <Name Description="Basado en ASME Y14.36M - 1989" Language="3082">Lista de piezas (ANSI)</Name>
+  </Style>
+
+  <Style Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="1" GroupingDisplayGroupedItemNumber="0" Heading="1" HeadingGap="0.09" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Parts List (DIN-AIP)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="55" Key1PropertyMemberID="" Key1PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key2PropertyID="55" Key2PropertyMemberID="" Key2PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key3PropertyID="55" Key3PropertyMemberID="" Key3PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.09" TitleGap="0.09">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (DIN)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (DIN)</SubStyle>
+    <Title>
+      <Item Language="1038" String="ALKATRÉSZLISTA"/>
+      <Item Language="1031" String="BAUTEILLISTE"/>
+      <Item Language="1040" String="ELENCO PARTI"/>
+      <Item Language="1029" String="KUSOVNÍK"/>
+      <Item Language="1045" String="LISTA CZĘŚCI"/>
+      <Item Language="1046" String="LISTA DE PEÇAS"/>
+      <Item Language="3082" String="LISTA DE PIEZAS"/>
+      <Item Language="1036" String="LISTE DE PIECES"/>
+      <Item Language="1033 1041" String="PARTS LIST"/>
+      <Item Language="1049" String="СПИСОК ДЕТАЛЕЙ"/>
+      <Item Language="2052" String="明细栏"/>
+      <Item Language="1028" String="零件表"/>
+      <Item Language="1042" String="부품 리스트"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1041 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1045" String="POZYCJA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ЭЛЕМЕНТ"/>
+          <Item Language="2052" String="序号"/>
+          <Item Language="1028" String="料件"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="1" SubstituteDecimalType="1" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="1" SubstituteMergeResult="1" SubstitutePrecision="2" SubstitutePropertyID="PL" SubstitutePropertyMemberID="" SubstitutePropertySet="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" SubstituteTrailingZeros="1" SubstituteUnitFormat="1" SubstituteUnitType="0" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033 1041" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ."/>
+          <Item Language="2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BAUTEILNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1038" String="AZONOSÍTÓ"/>
+          <Item Language="1031" String="BAUTEILNUMMER"/>
+          <Item Language="1045" String="NUMER CZĘŚCI"/>
+          <Item Language="1036" String="NUMERO DE PIECE"/>
+          <Item Language="1040" String="NUMERO PARTE"/>
+          <Item Language="3082" String="Nº DE PIEZA"/>
+          <Item Language="1046" String="NÚMERO DA PEÇA"/>
+          <Item Language="1033 1041" String="PART NUMBER"/>
+          <Item Language="1029" String="ČÍSLO SOUČÁSTI"/>
+          <Item Language="1049" String="ОБОЗНАЧЕНИЕ"/>
+          <Item Language="2052" String="零件代号"/>
+          <Item Language="1028" String="零件號碼"/>
+          <Item Language="1042" String="부품 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="7.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESTANDSNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="55" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESTANDSNUMMER"/>
+          <Item Language="1045" String="NUMER KATALOGOWY"/>
+          <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+          <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+          <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+          <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+          <Item Language="1038" String="RAKTÁRI SZÁM"/>
+          <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+          <Item Language="1033 1041" String="STOCK NUMBER"/>
+          <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+          <Item Language="2052" String="库存编号"/>
+          <Item Language="1028" String="庫存號碼"/>
+          <Item Language="1042" String="스톡 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="29" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036 1041" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName/>
+    <Key2PropertyExternalName/>
+    <Key3PropertyExternalName/>
+    <Name Description="" Language="1028">零件表 (DIN-AIP)</Name>
+    <Name Description="" Language="1029">Kusovník (DIN-AIP)</Name>
+    <Name Description="" Language="1031">Bauteilliste (DIN-AIP)</Name>
+    <Name Description="" Language="1033">Parts List (DIN-AIP)</Name>
+    <Name Description="" Language="1036">Liste de pièces (DIN-AIP)</Name>
+    <Name Description="" Language="1038">Alkatrészlista (DIN-AIP)</Name>
+    <Name Description="" Language="1040">Elenco parti (DIN-AIP)</Name>
+    <Name Description="" Language="1041">Parts List (DIN-AIP)</Name>
+    <Name Description="" Language="1042">부품 리스트 (DIN-AIP)</Name>
+    <Name Description="" Language="1045">Lista części (DIN-AIP)</Name>
+    <Name Description="" Language="1046">Lista de peças (DIN-AIP)</Name>
+    <Name Description="" Language="1049">Список деталей (DIN-AIP)</Name>
+    <Name Description="" Language="2052">明细栏 (DIN-AIP)</Name>
+    <Name Description="" Language="3082">Lista de piezas (DIN-AIP)</Name>
+  </Style>
+
+  <Style Direction="0" DisplayParticipants="1" DisplayTitle="1" EditFlag="0" Grouping="0" GroupingDisplayGroupedItemNumber="1" Heading="1" HeadingGap="0.09" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Parts List (DIN)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="55" Key1PropertyMemberID="" Key1PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key2PropertyID="55" Key2PropertyMemberID="" Key2PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key3PropertyID="55" Key3PropertyMemberID="" Key3PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.09" TitleGap="0.09">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (DIN)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (DIN)</SubStyle>
+    <Title>
+      <Item Language="1038" String="ALKATRÉSZLISTA"/>
+      <Item Language="1031" String="BAUTEILLISTE"/>
+      <Item Language="1040" String="ELENCO PARTI"/>
+      <Item Language="1029" String="KUSOVNÍK"/>
+      <Item Language="1045" String="LISTA CZĘŚCI"/>
+      <Item Language="1046" String="LISTA DE PEÇAS"/>
+      <Item Language="3082" String="LISTA DE PIEZAS"/>
+      <Item Language="1036" String="LISTE DE PIECES"/>
+      <Item Language="1033 1041" String="PARTS LIST"/>
+      <Item Language="1049" String="СПИСОК ДЕТАЛЕЙ"/>
+      <Item Language="2052" String="明细栏"/>
+      <Item Language="1028" String="零件表"/>
+      <Item Language="1042" String="부품 리스트"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1041 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1045" String="POZYCJA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ЭЛЕМЕНТ"/>
+          <Item Language="2052" String="序号"/>
+          <Item Language="1028" String="料件"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033 1041" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ."/>
+          <Item Language="2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BAUTEILNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1038" String="AZONOSÍTÓ"/>
+          <Item Language="1031" String="BAUTEILNUMMER"/>
+          <Item Language="1045" String="NUMER CZĘŚCI"/>
+          <Item Language="1036" String="NUMERO DE PIECE"/>
+          <Item Language="1040" String="NUMERO PARTE"/>
+          <Item Language="3082" String="Nº DE PIEZA"/>
+          <Item Language="1046" String="NÚMERO DA PEÇA"/>
+          <Item Language="1033 1041" String="PART NUMBER"/>
+          <Item Language="1029" String="ČÍSLO SOUČÁSTI"/>
+          <Item Language="1049" String="ОБОЗНАЧЕНИЕ"/>
+          <Item Language="2052" String="零件代号"/>
+          <Item Language="1028" String="零件號碼"/>
+          <Item Language="1042" String="부품 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="29" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036 1041" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName>
+      <Item Language="1031" String="BESTANDSNUMMER"/>
+      <Item Language="1045" String="NUMER KATALOGOWY"/>
+      <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+      <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+      <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+      <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+      <Item Language="1038" String="RAKTÁRI SZÁM"/>
+      <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+      <Item Language="1033" String="STOCK NUMBER"/>
+      <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+      <Item Language="1041" String="ストック番号"/>
+      <Item Language="2052" String="库存编号"/>
+      <Item Language="1028" String="庫存號碼"/>
+      <Item Language="1042" String="스톡 번호"/>
+    </Key1PropertyExternalName>
+    <Key2PropertyExternalName>
+      <Item Language="1031" String="BESTANDSNUMMER"/>
+      <Item Language="1045" String="NUMER KATALOGOWY"/>
+      <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+      <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+      <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+      <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+      <Item Language="1038" String="RAKTÁRI SZÁM"/>
+      <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+      <Item Language="1033" String="STOCK NUMBER"/>
+      <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+      <Item Language="1041" String="ストック番号"/>
+      <Item Language="2052" String="库存编号"/>
+      <Item Language="1028" String="庫存號碼"/>
+      <Item Language="1042" String="스톡 번호"/>
+    </Key2PropertyExternalName>
+    <Key3PropertyExternalName>
+      <Item Language="1031" String="BESTANDSNUMMER"/>
+      <Item Language="1045" String="NUMER KATALOGOWY"/>
+      <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+      <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+      <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+      <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+      <Item Language="1038" String="RAKTÁRI SZÁM"/>
+      <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+      <Item Language="1033" String="STOCK NUMBER"/>
+      <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+      <Item Language="1041" String="ストック番号"/>
+      <Item Language="2052" String="库存编号"/>
+      <Item Language="1028" String="庫存號碼"/>
+      <Item Language="1042" String="스톡 번호"/>
+    </Key3PropertyExternalName>
+    <Name Description="" Language="1028">零件表 (DIN)</Name>
+    <Name Description="" Language="1029">Kusovník (DIN)</Name>
+    <Name Description="" Language="1031">Bauteilliste (DIN)</Name>
+    <Name Description="" Language="1033">Parts List (DIN)</Name>
+    <Name Description="" Language="1036">Liste de pièces (DIN)</Name>
+    <Name Description="" Language="1038">Alkatrészlista (DIN)</Name>
+    <Name Description="" Language="1040">Elenco parti (DIN)</Name>
+    <Name Description="" Language="1041">Parts List (DIN)</Name>
+    <Name Description="" Language="1042">부품 리스트 (DIN)</Name>
+    <Name Description="" Language="1045">Lista części (DIN)</Name>
+    <Name Description="" Language="1046">Lista de peças (DIN)</Name>
+    <Name Description="" Language="1049">Список деталей (DIN)</Name>
+    <Name Description="" Language="2052">明细栏 (DIN)</Name>
+    <Name Description="" Language="3082">Lista de piezas (DIN)</Name>
+  </Style>
+
+  <Style Direction="1" DisplayParticipants="1" DisplayTitle="1" EditFlag="0" Grouping="0" GroupingDisplayGroupedItemNumber="1" Heading="2" HeadingGap="0.09" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Parts List (GB)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="55" Key1PropertyMemberID="" Key1PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key2PropertyID="55" Key2PropertyMemberID="" Key2PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key3PropertyID="55" Key3PropertyMemberID="" Key3PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.09" TitleGap="0.09">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (ISO)</SubStyle>
+    <Title>
+      <Item Language="1038" String="ALKATRÉSZLISTA"/>
+      <Item Language="1031" String="BAUTEILLISTE"/>
+      <Item Language="1040" String="ELENCO PARTI"/>
+      <Item Language="1029" String="KUSOVNÍK"/>
+      <Item Language="1045" String="LISTA CZĘŚCI"/>
+      <Item Language="1046" String="LISTA DE PEÇAS"/>
+      <Item Language="3082" String="LISTA DE PIEZAS"/>
+      <Item Language="1036" String="LISTE DE PIECES"/>
+      <Item Language="1033" String="PARTS LIST"/>
+      <Item Language="1049" String="СПИСОК ДЕТАЛЕЙ"/>
+      <Item Language="2052" String="明细栏"/>
+      <Item Language="1041" String="部品表"/>
+      <Item Language="1028" String="零件表"/>
+      <Item Language="1042" String="부품 리스트"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1045" String="POZYCJA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ЭЛЕМЕНТ"/>
+          <Item Language="2052" String="序号"/>
+          <Item Language="1028" String="料件"/>
+          <Item Language="1041" String="項目"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="NORM" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="37" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="NORM"/>
+          <Item Language="1029 3082" String="NORMA"/>
+          <Item Language="1036" String="NORME"/>
+          <Item Language="1046" String="PADRÃO"/>
+          <Item Language="1033 1040 1045" String="STANDARD"/>
+          <Item Language="1038" String="SZABVÁNY"/>
+          <Item Language="1049" String="СТАНДАРТ"/>
+          <Item Language="2052" String="标准"/>
+          <Item Language="1028" String="標準"/>
+          <Item Language="1041" String="規格"/>
+          <Item Language="1042" String="표준"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="Name" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="Name" PropertyMemberID="" PropertySet="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031 1033" String="Name"/>
+          <Item Language="1045" String="Nazwa"/>
+          <Item Language="1036" String="Nom"/>
+          <Item Language="3082" String="Nombre"/>
+          <Item Language="1040 1046" String="Nome"/>
+          <Item Language="1029" String="Název"/>
+          <Item Language="1038" String="Név"/>
+          <Item Language="1049" String="Наименование"/>
+          <Item Language="1041" String="名前"/>
+          <Item Language="2052" String="名称"/>
+          <Item Language="1028" String="名稱"/>
+          <Item Language="1042" String="이름"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ."/>
+          <Item Language="1041 2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="MATERIAL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1038" String="ANYAG"/>
+          <Item Language="1031 1033 1046 3082" String="MATERIAL"/>
+          <Item Language="1040" String="MATERIALE"/>
+          <Item Language="1045" String="MATERIAŁ"/>
+          <Item Language="1029" String="MATERIÁL"/>
+          <Item Language="1036" String="MATIERE"/>
+          <Item Language="1049" String="МАТЕРИАЛ"/>
+          <Item Language="1028 1041 2052" String="材料"/>
+          <Item Language="1042" String="재질"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="KOMMENTARE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="6" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="3082" String="COMENTARIOS"/>
+          <Item Language="1046" String="COMENTÁRIOS"/>
+          <Item Language="1036" String="COMMENTAIRES"/>
+          <Item Language="1040" String="COMMENTI"/>
+          <Item Language="1033 1041" String="COMMENTS"/>
+          <Item Language="1045" String="KOMENTARZE"/>
+          <Item Language="1029" String="KOMENTÁŘE"/>
+          <Item Language="1031" String="KOMMENTARE"/>
+          <Item Language="1038" String="MEGJEGYZÉSEK"/>
+          <Item Language="1049" String="КОММЕНТАРИИ"/>
+          <Item Language="2052" String="注释"/>
+          <Item Language="1028" String="註釋"/>
+          <Item Language="1042" String="주석"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName>
+      <Item Language="1031" String="BESTANDSNUMMER"/>
+      <Item Language="1045" String="NUMER KATALOGOWY"/>
+      <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+      <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+      <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+      <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+      <Item Language="1038" String="RAKTÁRI SZÁM"/>
+      <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+      <Item Language="1033" String="STOCK NUMBER"/>
+      <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+      <Item Language="1041" String="ストック番号"/>
+      <Item Language="2052" String="库存编号"/>
+      <Item Language="1028" String="庫存號碼"/>
+      <Item Language="1042" String="스톡 번호"/>
+    </Key1PropertyExternalName>
+    <Key2PropertyExternalName>
+      <Item Language="1031" String="BESTANDSNUMMER"/>
+      <Item Language="1045" String="NUMER KATALOGOWY"/>
+      <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+      <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+      <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+      <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+      <Item Language="1038" String="RAKTÁRI SZÁM"/>
+      <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+      <Item Language="1033" String="STOCK NUMBER"/>
+      <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+      <Item Language="1041" String="ストック番号"/>
+      <Item Language="2052" String="库存编号"/>
+      <Item Language="1028" String="庫存號碼"/>
+      <Item Language="1042" String="스톡 번호"/>
+    </Key2PropertyExternalName>
+    <Key3PropertyExternalName>
+      <Item Language="1031" String="BESTANDSNUMMER"/>
+      <Item Language="1045" String="NUMER KATALOGOWY"/>
+      <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+      <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+      <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+      <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+      <Item Language="1038" String="RAKTÁRI SZÁM"/>
+      <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+      <Item Language="1033" String="STOCK NUMBER"/>
+      <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+      <Item Language="1041" String="ストック番号"/>
+      <Item Language="2052" String="库存编号"/>
+      <Item Language="1028" String="庫存號碼"/>
+      <Item Language="1042" String="스톡 번호"/>
+    </Key3PropertyExternalName>
+    <Name Description="" Language="1028">零件表 (GB)</Name>
+    <Name Description="" Language="1029">Kusovník (GB)</Name>
+    <Name Description="" Language="1031">Bauteilliste (GB)</Name>
+    <Name Description="" Language="1033">Parts List (GB)</Name>
+    <Name Description="" Language="1036">Liste de pièces (GB)</Name>
+    <Name Description="" Language="1038">Alkatrészlista (GB)</Name>
+    <Name Description="" Language="1040">Elenco parti (GB)</Name>
+    <Name Description="" Language="1041">Parts List (GB)</Name>
+    <Name Description="" Language="1042">부품 리스트 (GB)</Name>
+    <Name Description="" Language="1045">Lista części (GB)</Name>
+    <Name Description="" Language="1046">Lista de peças (GB)</Name>
+    <Name Description="" Language="1049">Список деталей (GB)</Name>
+    <Name Description="" Language="2052">明细栏 (GB)</Name>
+    <Name Description="" Language="3082">Lista de piezas (GB)</Name>
+  </Style>
+
+  <Style Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="1" GroupingDisplayGroupedItemNumber="0" Heading="1" HeadingGap="0.09" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Parts List (GOST-AIP)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="55" Key1PropertyMemberID="" Key1PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key2PropertyID="55" Key2PropertyMemberID="" Key2PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key3PropertyID="55" Key3PropertyMemberID="" Key3PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.09" TitleGap="0.09">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Normale Textgröße (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Normale Textgröße (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Normale Textgröße (GOST)</SubStyle>
+    <Title>
+      <Item Language="1038" String="ALKATRÉSZLISTA"/>
+      <Item Language="1031" String="BAUTEILLISTE"/>
+      <Item Language="1040" String="ELENCO PARTI"/>
+      <Item Language="1029" String="KUSOVNÍK"/>
+      <Item Language="1045" String="LISTA CZĘŚCI"/>
+      <Item Language="1046" String="LISTA DE PEÇAS"/>
+      <Item Language="3082" String="LISTA DE PIEZAS"/>
+      <Item Language="1036" String="LISTE DE PIECES"/>
+      <Item Language="1033 1041" String="PARTS LIST"/>
+      <Item Language="1049" String="СПИСОК ДЕТАЛЕЙ"/>
+      <Item Language="2052" String="明细栏"/>
+      <Item Language="1028" String="零件表"/>
+      <Item Language="1042" String="부품 리스트"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1041 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1045" String="POZYCJA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ЭЛЕМЕНТ"/>
+          <Item Language="2052" String="序号"/>
+          <Item Language="1028" String="料件"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="1" SubstituteDecimalType="1" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="1" SubstituteMergeResult="1" SubstitutePrecision="2" SubstitutePropertyID="PL" SubstitutePropertyMemberID="" SubstitutePropertySet="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" SubstituteTrailingZeros="0" SubstituteUnitFormat="1" SubstituteUnitType="0" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033 1041" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ."/>
+          <Item Language="2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BAUTEILNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1038" String="AZONOSÍTÓ"/>
+          <Item Language="1031" String="BAUTEILNUMMER"/>
+          <Item Language="1045" String="NUMER CZĘŚCI"/>
+          <Item Language="1036" String="NUMERO DE PIECE"/>
+          <Item Language="1040" String="NUMERO PARTE"/>
+          <Item Language="3082" String="Nº DE PIEZA"/>
+          <Item Language="1046" String="NÚMERO DA PEÇA"/>
+          <Item Language="1033 1041" String="PART NUMBER"/>
+          <Item Language="1029" String="ČÍSLO SOUČÁSTI"/>
+          <Item Language="1049" String="ОБОЗНАЧЕНИЕ"/>
+          <Item Language="2052" String="零件代号"/>
+          <Item Language="1028" String="零件號碼"/>
+          <Item Language="1042" String="부품 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="7.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESTANDSNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="55" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESTANDSNUMMER"/>
+          <Item Language="1045" String="NUMER KATALOGOWY"/>
+          <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+          <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+          <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+          <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+          <Item Language="1038" String="RAKTÁRI SZÁM"/>
+          <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+          <Item Language="1033 1041" String="STOCK NUMBER"/>
+          <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+          <Item Language="2052" String="库存编号"/>
+          <Item Language="1028" String="庫存號碼"/>
+          <Item Language="1042" String="스톡 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="29" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036 1041" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName/>
+    <Key2PropertyExternalName/>
+    <Key3PropertyExternalName/>
+    <Name Description="" Language="1028">零件表 (GOST-AIP)</Name>
+    <Name Description="" Language="1029">Kusovník (GOST-AIP)</Name>
+    <Name Description="" Language="1031">Bauteilliste (GOST-AIP)</Name>
+    <Name Description="" Language="1033">Parts List (GOST-AIP)</Name>
+    <Name Description="" Language="1036">Liste de pièces (GOST-AIP)</Name>
+    <Name Description="" Language="1038">Alkatrészlista (GOST-AIP)</Name>
+    <Name Description="" Language="1040">Elenco parti (GOST-AIP)</Name>
+    <Name Description="" Language="1041">Parts List (GOST-AIP)</Name>
+    <Name Description="" Language="1042">부품 리스트 (GOST-AIP)</Name>
+    <Name Description="" Language="1045">Lista części (GOST-AIP)</Name>
+    <Name Description="" Language="1046">Lista de peças (GOST-AIP)</Name>
+    <Name Description="" Language="1049">Список деталей (ГОСТ-AIP)</Name>
+    <Name Description="" Language="2052">明细栏 (GOST-AIP)</Name>
+    <Name Description="" Language="3082">Lista de piezas (GOST-AIP)</Name>
+  </Style>
+
+  <Style Direction="0" DisplayParticipants="0" DisplayTitle="0" EditFlag="0" Grouping="0" GroupingDisplayGroupedItemNumber="0" Heading="1" HeadingGap="0.09" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Parts List (GOST)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="56111" Key1PropertyMemberID="" Key1PropertySet="{32853F0F-3444-11d1-9E93-0060B03C1CA6}" Key2PropertyID="56111" Key2PropertyMemberID="" Key2PropertySet="{32853F0F-3444-11d1-9E93-0060B03C1CA6}" Key3PropertyID="56111" Key3PropertyMemberID="" Key3PropertySet="{32853F0F-3444-11d1-9E93-0060B03C1CA6}" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.09" TitleGap="0.089">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Normale Textgröße (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Normale Textgröße (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Normale Textgröße (GOST)</SubStyle>
+    <Title>
+      <Item Language="1038" String="ALKATRÉSZLISTA"/>
+      <Item Language="1031" String="BAUTEILLISTE"/>
+      <Item Language="1040" String="ELENCO PARTI"/>
+      <Item Language="1029" String="KUSOVNÍK"/>
+      <Item Language="1045" String="LISTA CZĘŚCI"/>
+      <Item Language="1046" String="LISTA DE PEÇAS"/>
+      <Item Language="3082" String="LISTA DE PIEZAS"/>
+      <Item Language="1036" String="LISTE DE PIECES"/>
+      <Item Language="1033 1041" String="PARTS LIST"/>
+      <Item Language="1049" String="СПИСОК ДЕТАЛЕЙ"/>
+      <Item Language="2052" String="明细栏"/>
+      <Item Language="1028" String="零件表"/>
+      <Item Language="1042" String="부품 리스트"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="0.8" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="1" TrailingZeros="0" UnitFormat="0" UnitType="1" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1041 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1045" String="POZYCJA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ЭЛЕМЕНТ"/>
+          <Item Language="2052" String="序号"/>
+          <Item Language="1028" String="料件"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="7" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BAUTEILNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="1" TrailingZeros="0" UnitFormat="0" UnitType="1" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1038" String="AZONOSÍTÓ"/>
+          <Item Language="1031" String="BAUTEILNUMMER"/>
+          <Item Language="1045" String="NUMER CZĘŚCI"/>
+          <Item Language="1036" String="NUMERO DE PIECE"/>
+          <Item Language="1040" String="NUMERO PARTE"/>
+          <Item Language="3082" String="Nº DE PIEZA"/>
+          <Item Language="1046" String="NÚMERO DA PEÇA"/>
+          <Item Language="1033 1041" String="PART NUMBER"/>
+          <Item Language="1029" String="ČÍSLO SOUČÁSTI"/>
+          <Item Language="1049" String="ОБОЗНАЧЕНИЕ"/>
+          <Item Language="2052" String="零件代号"/>
+          <Item Language="1028" String="零件號碼"/>
+          <Item Language="1042" String="부품 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="6.3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="29" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="1" TrailingZeros="0" UnitFormat="0" UnitType="1" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036 1041" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="1" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="1" TrailingZeros="0" UnitFormat="0" UnitType="1" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033 1041" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ."/>
+          <Item Language="2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.2" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="KOMMENTARE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="6" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="3082" String="COMENTARIOS"/>
+          <Item Language="1046" String="COMENTÁRIOS"/>
+          <Item Language="1036" String="COMMENTAIRES"/>
+          <Item Language="1040" String="COMMENTI"/>
+          <Item Language="1033 1041" String="COMMENTS"/>
+          <Item Language="1045" String="KOMENTARZE"/>
+          <Item Language="1029" String="KOMENTÁŘE"/>
+          <Item Language="1031" String="KOMMENTARE"/>
+          <Item Language="1038" String="MEGJEGYZÉSEK"/>
+          <Item Language="1049" String="КОММЕНТАРИИ"/>
+          <Item Language="2052" String="注释"/>
+          <Item Language="1028" String="註釋"/>
+          <Item Language="1042" String="주석"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName/>
+    <Key2PropertyExternalName/>
+    <Key3PropertyExternalName/>
+    <Name Description="" Language="1028">零件表 (GOST)</Name>
+    <Name Description="" Language="1029">Kusovník (GOST)</Name>
+    <Name Description="" Language="1031">Bauteilliste (GOST)</Name>
+    <Name Description="" Language="1033">Parts List (GOST)</Name>
+    <Name Description="" Language="1036">Liste de pièces (GOST)</Name>
+    <Name Description="" Language="1038">Alkatrészlista (GOST)</Name>
+    <Name Description="" Language="1040">Elenco parti (GOST)</Name>
+    <Name Description="" Language="1041">Parts List (GOST)</Name>
+    <Name Description="" Language="1042">부품 리스트 (GOST)</Name>
+    <Name Description="" Language="1045">Lista części (GOST)</Name>
+    <Name Description="" Language="1046">Lista de peças (GOST)</Name>
+    <Name Description="" Language="1049">Список деталей (ГОСТ)</Name>
+    <Name Description="" Language="2052">明细栏 (GOST)</Name>
+    <Name Description="" Language="3082">Lista de piezas (GOST)</Name>
+  </Style>
+
+  <Style Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="1" GroupingDisplayGroupedItemNumber="0" Heading="1" HeadingGap="0.09" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Parts List (ISO-AIP)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="55" Key1PropertyMemberID="" Key1PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key2PropertyID="55" Key2PropertyMemberID="" Key2PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key3PropertyID="55" Key3PropertyMemberID="" Key3PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.09" TitleGap="0.09">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (ISO)</SubStyle>
+    <Title>
+      <Item Language="1038" String="ALKATRÉSZLISTA"/>
+      <Item Language="1031" String="BAUTEILLISTE"/>
+      <Item Language="1040" String="ELENCO PARTI"/>
+      <Item Language="1029" String="KUSOVNÍK"/>
+      <Item Language="1045" String="LISTA CZĘŚCI"/>
+      <Item Language="1046" String="LISTA DE PEÇAS"/>
+      <Item Language="3082" String="LISTA DE PIEZAS"/>
+      <Item Language="1036" String="LISTE DE PIECES"/>
+      <Item Language="1033 1041" String="PARTS LIST"/>
+      <Item Language="1049" String="СПИСОК ДЕТАЛЕЙ"/>
+      <Item Language="2052" String="明细栏"/>
+      <Item Language="1028" String="零件表"/>
+      <Item Language="1042" String="부품 리스트"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1041 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1045" String="POZYCJA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ЭЛЕМЕНТ"/>
+          <Item Language="2052" String="序号"/>
+          <Item Language="1028" String="料件"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="1" SubstituteDecimalType="1" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="1" SubstituteMergeResult="1" SubstitutePrecision="2" SubstitutePropertyID="PL" SubstitutePropertyMemberID="" SubstitutePropertySet="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" SubstituteTrailingZeros="0" SubstituteUnitFormat="1" SubstituteUnitType="0" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033 1041" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ."/>
+          <Item Language="2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BAUTEILNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1038" String="AZONOSÍTÓ"/>
+          <Item Language="1031" String="BAUTEILNUMMER"/>
+          <Item Language="1045" String="NUMER CZĘŚCI"/>
+          <Item Language="1036" String="NUMERO DE PIECE"/>
+          <Item Language="1040" String="NUMERO PARTE"/>
+          <Item Language="3082" String="Nº DE PIEZA"/>
+          <Item Language="1046" String="NÚMERO DA PEÇA"/>
+          <Item Language="1033 1041" String="PART NUMBER"/>
+          <Item Language="1029" String="ČÍSLO SOUČÁSTI"/>
+          <Item Language="1049" String="ОБОЗНАЧЕНИЕ"/>
+          <Item Language="2052" String="零件代号"/>
+          <Item Language="1028" String="零件號碼"/>
+          <Item Language="1042" String="부품 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="7.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESTANDSNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="55" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESTANDSNUMMER"/>
+          <Item Language="1045" String="NUMER KATALOGOWY"/>
+          <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+          <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+          <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+          <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+          <Item Language="1038" String="RAKTÁRI SZÁM"/>
+          <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+          <Item Language="1033 1041" String="STOCK NUMBER"/>
+          <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+          <Item Language="2052" String="库存编号"/>
+          <Item Language="1028" String="庫存號碼"/>
+          <Item Language="1042" String="스톡 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="29" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036 1041" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName/>
+    <Key2PropertyExternalName/>
+    <Key3PropertyExternalName/>
+    <Name Description="" Language="1028">零件表 (ISO-AIP)</Name>
+    <Name Description="" Language="1029">Kusovník (ISO-AIP)</Name>
+    <Name Description="" Language="1031">Bauteilliste (ISO-AIP)</Name>
+    <Name Description="" Language="1033">Parts List (ISO-AIP)</Name>
+    <Name Description="" Language="1036">Liste de pièces (ISO-AIP)</Name>
+    <Name Description="" Language="1038">Alkatrészlista (ISO-AIP)</Name>
+    <Name Description="" Language="1040">Elenco parti (ISO-AIP)</Name>
+    <Name Description="" Language="1041">Parts List (ISO-AIP)</Name>
+    <Name Description="" Language="1042">부품 리스트 (ISO-AIP)</Name>
+    <Name Description="" Language="1045">Lista części (ISO-AIP)</Name>
+    <Name Description="" Language="1046">Lista de peças (ISO-AIP)</Name>
+    <Name Description="" Language="1049">Список деталей (ISO-AIP)</Name>
+    <Name Description="" Language="2052">明细栏 (ISO-AIP)</Name>
+    <Name Description="" Language="3082">Lista de piezas (ISO-AIP)</Name>
+  </Style>
+
+  <Style Direction="0" DisplayParticipants="1" DisplayTitle="1" EditFlag="0" Grouping="0" GroupingDisplayGroupedItemNumber="1" Heading="1" HeadingGap="0.09" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Parts List (ISO)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="55" Key1PropertyMemberID="" Key1PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key2PropertyID="55" Key2PropertyMemberID="" Key2PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key3PropertyID="55" Key3PropertyMemberID="" Key3PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.09" TitleGap="0.09">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (ISO)</SubStyle>
+    <Title>
+      <Item Language="1038" String="ALKATRÉSZLISTA"/>
+      <Item Language="1031" String="BAUTEILLISTE"/>
+      <Item Language="1040" String="ELENCO PARTI"/>
+      <Item Language="1029" String="KUSOVNÍK"/>
+      <Item Language="1045" String="LISTA CZĘŚCI"/>
+      <Item Language="1046" String="LISTA DE PEÇAS"/>
+      <Item Language="3082" String="LISTA DE PIEZAS"/>
+      <Item Language="1036" String="LISTE DE PIECES"/>
+      <Item Language="1033 1041" String="PARTS LIST"/>
+      <Item Language="1049" String="СПИСОК ДЕТАЛЕЙ"/>
+      <Item Language="2052" String="明细栏"/>
+      <Item Language="1028" String="零件表"/>
+      <Item Language="1042" String="부품 리스트"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1041 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1045" String="POZYCJA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ЭЛЕМЕНТ"/>
+          <Item Language="2052" String="序号"/>
+          <Item Language="1028" String="料件"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033 1041" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ."/>
+          <Item Language="2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BAUTEILNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1038" String="AZONOSÍTÓ"/>
+          <Item Language="1031" String="BAUTEILNUMMER"/>
+          <Item Language="1045" String="NUMER CZĘŚCI"/>
+          <Item Language="1036" String="NUMERO DE PIECE"/>
+          <Item Language="1040" String="NUMERO PARTE"/>
+          <Item Language="3082" String="Nº DE PIEZA"/>
+          <Item Language="1046" String="NÚMERO DA PEÇA"/>
+          <Item Language="1033 1041" String="PART NUMBER"/>
+          <Item Language="1029" String="ČÍSLO SOUČÁSTI"/>
+          <Item Language="1049" String="ОБОЗНАЧЕНИЕ"/>
+          <Item Language="2052" String="零件代号"/>
+          <Item Language="1028" String="零件號碼"/>
+          <Item Language="1042" String="부품 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="29" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036 1041" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName>
+      <Item Language="1031" String="BESTANDSNUMMER"/>
+      <Item Language="1045" String="NUMER KATALOGOWY"/>
+      <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+      <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+      <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+      <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+      <Item Language="1038" String="RAKTÁRI SZÁM"/>
+      <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+      <Item Language="1033" String="STOCK NUMBER"/>
+      <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+      <Item Language="1041" String="ストック番号"/>
+      <Item Language="2052" String="库存编号"/>
+      <Item Language="1028" String="庫存號碼"/>
+      <Item Language="1042" String="스톡 번호"/>
+    </Key1PropertyExternalName>
+    <Key2PropertyExternalName>
+      <Item Language="1031" String="BESTANDSNUMMER"/>
+      <Item Language="1045" String="NUMER KATALOGOWY"/>
+      <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+      <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+      <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+      <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+      <Item Language="1038" String="RAKTÁRI SZÁM"/>
+      <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+      <Item Language="1033" String="STOCK NUMBER"/>
+      <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+      <Item Language="1041" String="ストック番号"/>
+      <Item Language="2052" String="库存编号"/>
+      <Item Language="1028" String="庫存號碼"/>
+      <Item Language="1042" String="스톡 번호"/>
+    </Key2PropertyExternalName>
+    <Key3PropertyExternalName>
+      <Item Language="1031" String="BESTANDSNUMMER"/>
+      <Item Language="1045" String="NUMER KATALOGOWY"/>
+      <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+      <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+      <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+      <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+      <Item Language="1038" String="RAKTÁRI SZÁM"/>
+      <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+      <Item Language="1033" String="STOCK NUMBER"/>
+      <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+      <Item Language="1041" String="ストック番号"/>
+      <Item Language="2052" String="库存编号"/>
+      <Item Language="1028" String="庫存號碼"/>
+      <Item Language="1042" String="스톡 번호"/>
+    </Key3PropertyExternalName>
+    <Name Description="根據 ISO 7573 - 1983" Language="1028">零件表 (ISO)</Name>
+    <Name Description="Podle normy ISO 7573 - 1983" Language="1029">Kusovník (ISO)</Name>
+    <Name Description="Basiert auf ISO 7573 - 1983" Language="1031">Bauteilliste (ISO)</Name>
+    <Name Description="Based on ISO 7573 - 1983" Language="1033">Parts List (ISO)</Name>
+    <Name Description="En fonction d'ISO 7573 - 1983" Language="1036">Liste de pièces (ISO)</Name>
+    <Name Description="Alapja: ISO 7573 - 1983" Language="1038">Alkatrészlista (ISO)</Name>
+    <Name Description="Basato su ISO 7573 - 1983" Language="1040">Elenco parti (ISO)</Name>
+    <Name Description="Based on ISO 7573 - 1983" Language="1041">Parts List (ISO)</Name>
+    <Name Description="ISO 7573 - 1983 기준" Language="1042">부품 리스트 (ISO)</Name>
+    <Name Description="Na podstawie ISO 7573 - 1983" Language="1045">Lista części (ISO)</Name>
+    <Name Description="Baseado na ISO 7573 - 1983" Language="1046">Lista de peças (ISO)</Name>
+    <Name Description="Согласно ISO 7573 - 1983" Language="1049">Список деталей (ISO)</Name>
+    <Name Description="基于 ISO 7573 - 1983" Language="2052">明细栏 (ISO)</Name>
+    <Name Description="Basado en ISO 7573 - 1983" Language="3082">Lista de piezas (ISO)</Name>
+  </Style>
+
+  <Style Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="1" GroupingDisplayGroupedItemNumber="0" Heading="1" HeadingGap="0.09" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Parts List (JIS-AIP)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="55" Key1PropertyMemberID="" Key1PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key2PropertyID="55" Key2PropertyMemberID="" Key2PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key3PropertyID="55" Key3PropertyMemberID="" Key3PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.09" TitleGap="0.09">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (JIS)</SubStyle>
+    <Title>
+      <Item Language="1038" String="ALKATRÉSZLISTA"/>
+      <Item Language="1031" String="BAUTEILLISTE"/>
+      <Item Language="1040" String="ELENCO PARTI"/>
+      <Item Language="1029" String="KUSOVNÍK"/>
+      <Item Language="1045" String="LISTA CZĘŚCI"/>
+      <Item Language="1046" String="LISTA DE PEÇAS"/>
+      <Item Language="3082" String="LISTA DE PIEZAS"/>
+      <Item Language="1036" String="LISTE DE PIECES"/>
+      <Item Language="1033" String="PARTS LIST"/>
+      <Item Language="1049" String="СПИСОК ДЕТАЛЕЙ"/>
+      <Item Language="2052" String="明细栏"/>
+      <Item Language="1041" String="部品表"/>
+      <Item Language="1028" String="零件表"/>
+      <Item Language="1042" String="부품 리스트"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1045" String="POZYCJA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ЭЛЕМЕНТ"/>
+          <Item Language="2052" String="序号"/>
+          <Item Language="1028" String="料件"/>
+          <Item Language="1041" String="項目"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="1" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="1" SubstituteMergeResult="1" SubstitutePrecision="2" SubstitutePropertyID="PL" SubstitutePropertyMemberID="" SubstitutePropertySet="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" SubstituteTrailingZeros="0" SubstituteUnitFormat="1" SubstituteUnitType="0" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ."/>
+          <Item Language="1041 2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BAUTEILNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1038" String="AZONOSÍTÓ"/>
+          <Item Language="1031" String="BAUTEILNUMMER"/>
+          <Item Language="1045" String="NUMER CZĘŚCI"/>
+          <Item Language="1036" String="NUMERO DE PIECE"/>
+          <Item Language="1040" String="NUMERO PARTE"/>
+          <Item Language="3082" String="Nº DE PIEZA"/>
+          <Item Language="1046" String="NÚMERO DA PEÇA"/>
+          <Item Language="1033" String="PART NUMBER"/>
+          <Item Language="1029" String="ČÍSLO SOUČÁSTI"/>
+          <Item Language="1049" String="ОБОЗНАЧЕНИЕ"/>
+          <Item Language="1041" String="部品番号"/>
+          <Item Language="2052" String="零件代号"/>
+          <Item Language="1028" String="零件號碼"/>
+          <Item Language="1042" String="부품 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="7.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESTANDSNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="55" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESTANDSNUMMER"/>
+          <Item Language="1045" String="NUMER KATALOGOWY"/>
+          <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+          <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+          <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+          <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+          <Item Language="1038" String="RAKTÁRI SZÁM"/>
+          <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+          <Item Language="1033" String="STOCK NUMBER"/>
+          <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+          <Item Language="1041" String="ストック番号"/>
+          <Item Language="2052" String="库存编号"/>
+          <Item Language="1028" String="庫存號碼"/>
+          <Item Language="1042" String="스톡 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="29" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1041" String="説明"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName/>
+    <Key2PropertyExternalName/>
+    <Key3PropertyExternalName/>
+    <Name Description="" Language="1028">零件表 (JIS-AIP)</Name>
+    <Name Description="" Language="1029">Kusovník (JIS-AIP)</Name>
+    <Name Description="" Language="1031">Bauteilliste (JIS-AIP)</Name>
+    <Name Description="" Language="1033">Parts List (JIS-AIP)</Name>
+    <Name Description="" Language="1036">Liste de pièces (JIS-AIP)</Name>
+    <Name Description="" Language="1038">Alkatrészlista (JIS-AIP)</Name>
+    <Name Description="" Language="1040">Elenco parti (JIS-AIP)</Name>
+    <Name Description="" Language="1041">Parts List (JIS-AIP)</Name>
+    <Name Description="" Language="1042">부품 리스트 (JIS-AIP)</Name>
+    <Name Description="" Language="1045">Lista części (JIS-AIP)</Name>
+    <Name Description="" Language="1046">Lista de peças (JIS-AIP)</Name>
+    <Name Description="" Language="1049">Список деталей (JIS-AIP)</Name>
+    <Name Description="" Language="2052">明细栏 (JIS-AIP)</Name>
+    <Name Description="" Language="3082">Lista de piezas (JIS-AIP)</Name>
+  </Style>
+
+  <Style Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="0" GroupingDisplayGroupedItemNumber="0" Heading="1" HeadingGap="0.09" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Parts List (JIS)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="" Key1PropertyMemberID="" Key1PropertySet="" Key2PropertyID="" Key2PropertyMemberID="" Key2PropertySet="" Key3PropertyID="" Key3PropertyMemberID="" Key3PropertySet="" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.09" TitleGap="0.09">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (JIS)</SubStyle>
+    <Title>
+      <Item Language="1038" String="ALKATRÉSZLISTA"/>
+      <Item Language="1031" String="BAUTEILLISTE"/>
+      <Item Language="1040" String="ELENCO PARTI"/>
+      <Item Language="1029" String="KUSOVNÍK"/>
+      <Item Language="1045" String="LISTA CZĘŚCI"/>
+      <Item Language="1046" String="LISTA DE PEÇAS"/>
+      <Item Language="3082" String="LISTA DE PIEZAS"/>
+      <Item Language="1036" String="LISTE DE PIECES"/>
+      <Item Language="1033" String="PARTS LIST"/>
+      <Item Language="1049" String="СПИСОК ДЕТАЛЕЙ"/>
+      <Item Language="2052" String="明细栏"/>
+      <Item Language="1041" String="部品表"/>
+      <Item Language="1028" String="零件表"/>
+      <Item Language="1042" String="부품 리스트"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1045" String="POZYCJA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ЭЛЕМЕНТ"/>
+          <Item Language="2052" String="序号"/>
+          <Item Language="1028" String="料件"/>
+          <Item Language="1041" String="項目"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ."/>
+          <Item Language="1041 2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BAUTEILNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1038" String="AZONOSÍTÓ"/>
+          <Item Language="1031" String="BAUTEILNUMMER"/>
+          <Item Language="1045" String="NUMER CZĘŚCI"/>
+          <Item Language="1036" String="NUMERO DE PIECE"/>
+          <Item Language="1040" String="NUMERO PARTE"/>
+          <Item Language="3082" String="Nº DE PIEZA"/>
+          <Item Language="1046" String="NÚMERO DA PEÇA"/>
+          <Item Language="1033" String="PART NUMBER"/>
+          <Item Language="1029" String="ČÍSLO SOUČÁSTI"/>
+          <Item Language="1049" String="ОБОЗНАЧЕНИЕ"/>
+          <Item Language="1041" String="部品番号"/>
+          <Item Language="2052" String="零件代号"/>
+          <Item Language="1028" String="零件號碼"/>
+          <Item Language="1042" String="부품 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="29" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1041" String="説明"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName>
+      <Item Language="1028 1029 1031 1033 1036 1038 1040 1041 1042 1045 1046 1049 2052 3082" String=""/>
+    </Key1PropertyExternalName>
+    <Key2PropertyExternalName>
+      <Item Language="1028 1029 1031 1033 1036 1038 1040 1041 1042 1045 1046 1049 2052 3082" String=""/>
+    </Key2PropertyExternalName>
+    <Key3PropertyExternalName>
+      <Item Language="1028 1029 1031 1033 1036 1038 1040 1041 1042 1045 1046 1049 2052 3082" String=""/>
+    </Key3PropertyExternalName>
+    <Name Description="根據 ISO 7573 - 1983" Language="1028">零件表 (JIS)</Name>
+    <Name Description="Podle normy ISO 7573 - 1983" Language="1029">Kusovník (JIS)</Name>
+    <Name Description="Basiert auf ISO 7573 - 1983" Language="1031">Bauteilliste (JIS)</Name>
+    <Name Description="Based on ISO 7573 - 1983" Language="1033">Parts List (JIS)</Name>
+    <Name Description="En fonction d'ISO 7573 - 1983" Language="1036">Liste de pièces (JIS)</Name>
+    <Name Description="Alapja: ISO 7573 - 1983" Language="1038">Alkatrészlista (JIS)</Name>
+    <Name Description="Basato su ISO 7573 - 1983" Language="1040">Elenco parti (JIS)</Name>
+    <Name Description="Based on ISO 7573 - 1983" Language="1041">Parts List (JIS)</Name>
+    <Name Description="ISO 7573 - 1983 기준" Language="1042">부품 리스트 (JIS)</Name>
+    <Name Description="Na podstawie ISO 7573 - 1983" Language="1045">Lista części (JIS)</Name>
+    <Name Description="Baseado na ISO 7573 - 1983" Language="1046">Lista de peças (JIS)</Name>
+    <Name Description="Согласно ISO 7573 - 1983" Language="1049">Список деталей (JIS)</Name>
+    <Name Description="基于 ISO 7573 - 1983" Language="2052">明细栏 (JIS)</Name>
+    <Name Description="Basado en ISO 7573 - 1983" Language="3082">Lista de piezas (JIS)</Name>
+  </Style>
+
+  <Style Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="1" GroupingDisplayGroupedItemNumber="1" Heading="1" HeadingGap="0.089" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Material List (ANSI)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="55" Key1PropertyMemberID="" Key1PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key2PropertyID="5" Key2PropertyMemberID="" Key2PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Key3PropertyID="5" Key3PropertyMemberID="" Key3PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.089" TitleGap="0.089">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (ANSI)</SubStyle>
+    <Title>
+      <Item Language="1038" String="ANYAGLISTA"/>
+      <Item Language="1040" String="ELENCO MATERIALI"/>
+      <Item Language="1046" String="LISTA DE MATERIAIS"/>
+      <Item Language="3082" String="LISTA DE MATERIALES"/>
+      <Item Language="1045" String="LISTA MATERIAŁÓW"/>
+      <Item Language="1036" String="LISTE DES MATIERES"/>
+      <Item Language="1033 1041" String="MATERIAL LIST"/>
+      <Item Language="1031" String="MATERIALLISTE"/>
+      <Item Language="1029" String="SEZNAM MATERIÁLŮ"/>
+      <Item Language="1049" String="СПИСОК МАТЕРИАЛОВ"/>
+      <Item Language="2052" String="材料列表"/>
+      <Item Language="1028" String="材料清單"/>
+      <Item Language="1042" String="재질 리스트"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="GESAMTMENGE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="1" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="1" SubstituteMergeResult="1" SubstitutePrecision="2" SubstitutePropertyID="PL" SubstitutePropertyMemberID="" SubstitutePropertySet="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" SubstituteTrailingZeros="1" SubstituteUnitFormat="1" SubstituteUnitType="1" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1045" String="CAŁKOWITA LICZBA"/>
+          <Item Language="1029" String="CELKOVÉ MNOŽSTVÍ"/>
+          <Item Language="3082" String="CTDAD TOTAL"/>
+          <Item Language="1031" String="GESAMTMENGE"/>
+          <Item Language="1040" String="Q.TÀ TOTALE"/>
+          <Item Language="1046" String="QTD TOTAL"/>
+          <Item Language="1036" String="QTE GLOBALE"/>
+          <Item Language="1038" String="TELJES MENNY"/>
+          <Item Language="1033 1041" String="TOTAL QTY"/>
+          <Item Language="1049" String="ОБЩЕЕ КОЛИЧЕСТВО"/>
+          <Item Language="2052" String="总数量"/>
+          <Item Language="1028" String="總數量"/>
+          <Item Language="1042" String="총 수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String="PL"/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="6.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESTANDSNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="55" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESTANDSNUMMER"/>
+          <Item Language="1045" String="NUMER KATALOGOWY"/>
+          <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+          <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+          <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+          <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+          <Item Language="1038" String="RAKTÁRI SZÁM"/>
+          <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+          <Item Language="1033 1041" String="STOCK NUMBER"/>
+          <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+          <Item Language="2052" String="库存编号"/>
+          <Item Language="1028" String="庫存號碼"/>
+          <Item Language="1042" String="스톡 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="6.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="29" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036 1041" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="6.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="MATERIAL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1038" String="ANYAG"/>
+          <Item Language="1031 1033 1041 1046 3082" String="MATERIAL"/>
+          <Item Language="1040" String="MATERIALE"/>
+          <Item Language="1045" String="MATERIAŁ"/>
+          <Item Language="1029" String="MATERIÁL"/>
+          <Item Language="1036" String="MATIERE"/>
+          <Item Language="1049" String="МАТЕРИАЛ"/>
+          <Item Language="1028 2052" String="材料"/>
+          <Item Language="1042" String="재질"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="FÜR OBJEKTE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1045" String="DLA ELEMENTÓW"/>
+          <Item Language="1033 1041" String="FOR ITEMS"/>
+          <Item Language="1031" String="FÜR OBJEKTE"/>
+          <Item Language="3082" String="PARA ELEMENTOS"/>
+          <Item Language="1046" String="PARA ITENS"/>
+          <Item Language="1040" String="PER ELEMENTI"/>
+          <Item Language="1036" String="POUR ARTICLES"/>
+          <Item Language="1029" String="PRO POLOŽKY"/>
+          <Item Language="1038" String="TÉTELEKHEZ"/>
+          <Item Language="1049" String="ДЛЯ ЭЛЕМЕНТОВ"/>
+          <Item Language="2052" String="用于项目"/>
+          <Item Language="1028" String="用於料件"/>
+          <Item Language="1042" String="항목용"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName>
+      <Item Language="1031" String="BESTANDSNUMMER"/>
+      <Item Language="1045" String="NUMER KATALOGOWY"/>
+      <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+      <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+      <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+      <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+      <Item Language="1038" String="RAKTÁRI SZÁM"/>
+      <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+      <Item Language="1033 1041" String="STOCK NUMBER"/>
+      <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+      <Item Language="2052" String="库存编号"/>
+      <Item Language="1028" String="庫存號碼"/>
+      <Item Language="1042" String="스톡 번호"/>
+    </Key1PropertyExternalName>
+    <Key2PropertyExternalName>
+      <Item Language="1038" String="ANYAG"/>
+      <Item Language="1031 1033 1041 1046 3082" String="MATERIAL"/>
+      <Item Language="1040" String="MATERIALE"/>
+      <Item Language="1045" String="MATERIAŁ"/>
+      <Item Language="1029" String="MATERIÁL"/>
+      <Item Language="1036" String="MATIERE"/>
+      <Item Language="1049" String="МАТЕРИАЛ"/>
+      <Item Language="1028 2052" String="材料"/>
+      <Item Language="1042" String="재질"/>
+    </Key2PropertyExternalName>
+    <Key3PropertyExternalName>
+      <Item Language="1038" String="ANYAG"/>
+      <Item Language="1031 1033 1041 1046 3082" String="MATERIAL"/>
+      <Item Language="1040" String="MATERIALE"/>
+      <Item Language="1045" String="MATERIAŁ"/>
+      <Item Language="1029" String="MATERIÁL"/>
+      <Item Language="1036" String="MATIERE"/>
+      <Item Language="1049" String="МАТЕРИАЛ"/>
+      <Item Language="1028 2052" String="材料"/>
+      <Item Language="1042" String="재질"/>
+    </Key3PropertyExternalName>
+    <Name Description="" Language="1028">材料清單 (ANSI)</Name>
+    <Name Description="" Language="1029">Seznam materiálů (ANSI)</Name>
+    <Name Description="" Language="1031">Materialliste (ANSI)</Name>
+    <Name Description="" Language="1033">Material List (ANSI)</Name>
+    <Name Description="" Language="1036">Liste des matières (ANSI)</Name>
+    <Name Description="" Language="1038">Anyaglista (ANSI)</Name>
+    <Name Description="" Language="1040">Elenco materiali (ANSI)</Name>
+    <Name Description="" Language="1041">Material List (ANSI)</Name>
+    <Name Description="" Language="1042">재질 리스트 (ANSI)</Name>
+    <Name Description="" Language="1045">Lista materiałów (ANSI)</Name>
+    <Name Description="" Language="1046">Lista de materiais (ANSI)</Name>
+    <Name Description="" Language="1049">Список материалов (ANSI)</Name>
+    <Name Description="" Language="2052">材料列表 (ANSI)</Name>
+    <Name Description="" Language="3082">Lista de materiales (ANSI)</Name>
+  </Style>
+
+  <Style Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="1" GroupingDisplayGroupedItemNumber="1" Heading="1" HeadingGap="0.09" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Material List (DIN)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="55" Key1PropertyMemberID="" Key1PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key2PropertyID="5" Key2PropertyMemberID="" Key2PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Key3PropertyID="5" Key3PropertyMemberID="" Key3PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.09" TitleGap="0.089">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (DIN)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (DIN)</SubStyle>
+    <Title>
+      <Item Language="1038" String="ANYAGLISTA"/>
+      <Item Language="1040" String="ELENCO MATERIALI"/>
+      <Item Language="1046" String="LISTA DE MATERIAIS"/>
+      <Item Language="3082" String="LISTA DE MATERIALES"/>
+      <Item Language="1045" String="LISTA MATERIAŁÓW"/>
+      <Item Language="1036" String="LISTE DES MATIERES"/>
+      <Item Language="1033 1041" String="MATERIAL LIST"/>
+      <Item Language="1031" String="Materialliste"/>
+      <Item Language="1029" String="SEZNAM MATERIÁLŮ"/>
+      <Item Language="1049" String="СПИСОК МАТЕРИАЛОВ"/>
+      <Item Language="2052" String="材料列表"/>
+      <Item Language="1028" String="材料清單"/>
+      <Item Language="1042" String="재질 리스트"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="GESAMTMENGE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="1" SubstituteDecimalType="1" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="1" SubstituteMergeResult="1" SubstitutePrecision="2" SubstitutePropertyID="PL" SubstitutePropertyMemberID="" SubstitutePropertySet="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" SubstituteTrailingZeros="1" SubstituteUnitFormat="1" SubstituteUnitType="1" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="GESAMTMENGE"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1031" String="PL"/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="6.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="Bestandsnummer" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="55" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="Bestandsnummer"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1031" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="6.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="29" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1031" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="6.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="MATERIAL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="MATERIAL"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1031" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="FÜR OBJEKTE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="FÜR OBJEKTE"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1031" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName>
+      <Item Language="1031" String="Bestandsnummer"/>
+    </Key1PropertyExternalName>
+    <Key2PropertyExternalName>
+      <Item Language="1031" String="MATERIAL"/>
+    </Key2PropertyExternalName>
+    <Key3PropertyExternalName>
+      <Item Language="1031" String="MATERIAL"/>
+    </Key3PropertyExternalName>
+    <Name Description="" Language="1028">材料清單 (DIN)</Name>
+    <Name Description="" Language="1029">Seznam materiálů (DIN)</Name>
+    <Name Description="" Language="1031">Materialliste (DIN)</Name>
+    <Name Description="" Language="1033">Material List (DIN)</Name>
+    <Name Description="" Language="1036">Liste des matières (DIN)</Name>
+    <Name Description="" Language="1038">Anyaglista (DIN)</Name>
+    <Name Description="" Language="1040">Elenco materiali (DIN)</Name>
+    <Name Description="" Language="1041">Material List (DIN)</Name>
+    <Name Description="" Language="1042">재질 리스트 (DIN)</Name>
+    <Name Description="" Language="1045">Lista materiałów (DIN)</Name>
+    <Name Description="" Language="1046">Lista de materiais (DIN)</Name>
+    <Name Description="" Language="1049">Список материалов (DIN)</Name>
+    <Name Description="" Language="2052">材料列表 (DIN)</Name>
+    <Name Description="" Language="3082">Lista de materiales (DIN)</Name>
+  </Style>
+
+  <Style Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="1" GroupingDisplayGroupedItemNumber="1" Heading="1" HeadingGap="0.09" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Material List (ISO)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="55" Key1PropertyMemberID="" Key1PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key2PropertyID="5" Key2PropertyMemberID="" Key2PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Key3PropertyID="5" Key3PropertyMemberID="" Key3PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.09" TitleGap="0.089">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (ISO)</SubStyle>
+    <Title>
+      <Item Language="1038" String="ANYAGLISTA"/>
+      <Item Language="1040" String="ELENCO MATERIALI"/>
+      <Item Language="1046" String="LISTA DE MATERIAIS"/>
+      <Item Language="3082" String="LISTA DE MATERIALES"/>
+      <Item Language="1045" String="LISTA MATERIAŁÓW"/>
+      <Item Language="1036" String="LISTE DES MATIERES"/>
+      <Item Language="1033 1041" String="MATERIAL LIST"/>
+      <Item Language="1031" String="MATERIALLISTE"/>
+      <Item Language="1029" String="SEZNAM MATERIÁLŮ"/>
+      <Item Language="1049" String="СПИСОК МАТЕРИАЛОВ"/>
+      <Item Language="2052" String="材料列表"/>
+      <Item Language="1028" String="材料清單"/>
+      <Item Language="1042" String="재질 리스트"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="GESAMTMENGE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="1" SubstituteDecimalType="1" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="1" SubstituteMergeResult="1" SubstitutePrecision="2" SubstitutePropertyID="PL" SubstitutePropertyMemberID="" SubstitutePropertySet="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" SubstituteTrailingZeros="1" SubstituteUnitFormat="1" SubstituteUnitType="1" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1045" String="CAŁKOWITA LICZBA"/>
+          <Item Language="1029" String="CELKOVÉ MNOŽSTVÍ"/>
+          <Item Language="3082" String="CTDAD TOTAL"/>
+          <Item Language="1031" String="GESAMTMENGE"/>
+          <Item Language="1040" String="Q.TÀ TOTALE"/>
+          <Item Language="1046" String="QTD TOTAL"/>
+          <Item Language="1036" String="QTE GLOBALE"/>
+          <Item Language="1038" String="TELJES MENNY"/>
+          <Item Language="1033 1041" String="TOTAL QTY"/>
+          <Item Language="1049" String="ОБЩЕЕ КОЛИЧЕСТВО"/>
+          <Item Language="2052" String="总数量"/>
+          <Item Language="1028" String="總數量"/>
+          <Item Language="1042" String="총 수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String="PL"/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="6.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESTANDSNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="55" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESTANDSNUMMER"/>
+          <Item Language="1045" String="NUMER KATALOGOWY"/>
+          <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+          <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+          <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+          <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+          <Item Language="1038" String="RAKTÁRI SZÁM"/>
+          <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+          <Item Language="1033 1041" String="STOCK NUMBER"/>
+          <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+          <Item Language="2052" String="库存编号"/>
+          <Item Language="1028" String="庫存號碼"/>
+          <Item Language="1042" String="스톡 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="6.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="29" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036 1041" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="6.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="MATERIAL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1038" String="ANYAG"/>
+          <Item Language="1031 1033 1041 1046 3082" String="MATERIAL"/>
+          <Item Language="1040" String="MATERIALE"/>
+          <Item Language="1045" String="MATERIAŁ"/>
+          <Item Language="1029" String="MATERIÁL"/>
+          <Item Language="1036" String="MATIERE"/>
+          <Item Language="1049" String="МАТЕРИАЛ"/>
+          <Item Language="1028 2052" String="材料"/>
+          <Item Language="1042" String="재질"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="FÜR OBJEKTE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1045" String="DLA ELEMENTÓW"/>
+          <Item Language="1033 1041" String="FOR ITEMS"/>
+          <Item Language="1031" String="FÜR OBJEKTE"/>
+          <Item Language="3082" String="PARA ELEMENTOS"/>
+          <Item Language="1046" String="PARA ITENS"/>
+          <Item Language="1040" String="PER ELEMENTI"/>
+          <Item Language="1036" String="POUR ARTICLES"/>
+          <Item Language="1029" String="PRO POLOŽKY"/>
+          <Item Language="1038" String="TÉTELEKHEZ"/>
+          <Item Language="1049" String="ДЛЯ ЭЛЕМЕНТОВ"/>
+          <Item Language="2052" String="用于项目"/>
+          <Item Language="1028" String="用於料件"/>
+          <Item Language="1042" String="항목용"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName>
+      <Item Language="1031" String="BESTANDSNUMMER"/>
+      <Item Language="1045" String="NUMER KATALOGOWY"/>
+      <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+      <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+      <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+      <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+      <Item Language="1038" String="RAKTÁRI SZÁM"/>
+      <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+      <Item Language="1033 1041" String="STOCK NUMBER"/>
+      <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+      <Item Language="2052" String="库存编号"/>
+      <Item Language="1028" String="庫存號碼"/>
+      <Item Language="1042" String="스톡 번호"/>
+    </Key1PropertyExternalName>
+    <Key2PropertyExternalName>
+      <Item Language="1038" String="ANYAG"/>
+      <Item Language="1031 1033 1041 1046 3082" String="MATERIAL"/>
+      <Item Language="1040" String="MATERIALE"/>
+      <Item Language="1045" String="MATERIAŁ"/>
+      <Item Language="1029" String="MATERIÁL"/>
+      <Item Language="1036" String="MATIERE"/>
+      <Item Language="1049" String="МАТЕРИАЛ"/>
+      <Item Language="1028 2052" String="材料"/>
+      <Item Language="1042" String="재질"/>
+    </Key2PropertyExternalName>
+    <Key3PropertyExternalName>
+      <Item Language="1038" String="ANYAG"/>
+      <Item Language="1031 1033 1041 1046 3082" String="MATERIAL"/>
+      <Item Language="1040" String="MATERIALE"/>
+      <Item Language="1045" String="MATERIAŁ"/>
+      <Item Language="1029" String="MATERIÁL"/>
+      <Item Language="1036" String="MATIERE"/>
+      <Item Language="1049" String="МАТЕРИАЛ"/>
+      <Item Language="1028 2052" String="材料"/>
+      <Item Language="1042" String="재질"/>
+    </Key3PropertyExternalName>
+    <Name Description="" Language="1028">材料清單 (ISO)</Name>
+    <Name Description="" Language="1029">Seznam materiálů (ISO)</Name>
+    <Name Description="" Language="1031">Materialliste (ISO)</Name>
+    <Name Description="" Language="1033">Material List (ISO)</Name>
+    <Name Description="" Language="1036">Liste des matières (ISO)</Name>
+    <Name Description="" Language="1038">Anyaglista (ISO)</Name>
+    <Name Description="" Language="1040">Elenco materiali (ISO)</Name>
+    <Name Description="" Language="1041">Material List (ISO)</Name>
+    <Name Description="" Language="1042">재질 리스트 (ISO)</Name>
+    <Name Description="" Language="1045">Lista materiałów (ISO)</Name>
+    <Name Description="" Language="1046">Lista de materiais (ISO)</Name>
+    <Name Description="" Language="1049">Список материалов (ISO)</Name>
+    <Name Description="" Language="2052">材料列表 (ISO)</Name>
+    <Name Description="" Language="3082">Lista de materiales (ISO)</Name>
+  </Style>
+
+  <Style Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="1" GroupingDisplayGroupedItemNumber="1" Heading="1" HeadingGap="0.09" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Material List (JIS)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="55" Key1PropertyMemberID="" Key1PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key2PropertyID="5" Key2PropertyMemberID="" Key2PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Key3PropertyID="5" Key3PropertyMemberID="" Key3PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.09" TitleGap="0.089">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (JIS)</SubStyle>
+    <Title>
+      <Item Language="1038" String="ANYAGLISTA"/>
+      <Item Language="1040" String="ELENCO MATERIALI"/>
+      <Item Language="1046" String="LISTA DE MATERIAIS"/>
+      <Item Language="3082" String="LISTA DE MATERIALES"/>
+      <Item Language="1045" String="LISTA MATERIAŁÓW"/>
+      <Item Language="1036" String="LISTE DES MATIERES"/>
+      <Item Language="1033" String="MATERIAL LIST"/>
+      <Item Language="1031" String="MATERIALLISTE"/>
+      <Item Language="1029" String="SEZNAM MATERIÁLŮ"/>
+      <Item Language="1049" String="СПИСОК МАТЕРИАЛОВ"/>
+      <Item Language="1041" String="材料一覧"/>
+      <Item Language="2052" String="材料列表"/>
+      <Item Language="1028" String="材料清單"/>
+      <Item Language="1042" String="재질 리스트"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="GESAMTMENGE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="1" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="1" SubstituteMergeResult="1" SubstitutePrecision="2" SubstitutePropertyID="PL" SubstitutePropertyMemberID="" SubstitutePropertySet="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" SubstituteTrailingZeros="0" SubstituteUnitFormat="1" SubstituteUnitType="1" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1045" String="CAŁKOWITA LICZBA"/>
+          <Item Language="1029" String="CELKOVÉ MNOŽSTVÍ"/>
+          <Item Language="3082" String="CTDAD TOTAL"/>
+          <Item Language="1031" String="GESAMTMENGE"/>
+          <Item Language="1040" String="Q.TÀ TOTALE"/>
+          <Item Language="1046" String="QTD TOTAL"/>
+          <Item Language="1036" String="QTE GLOBALE"/>
+          <Item Language="1038" String="TELJES MENNY"/>
+          <Item Language="1033" String="TOTAL QTY"/>
+          <Item Language="1049" String="ОБЩЕЕ КОЛИЧЕСТВО"/>
+          <Item Language="1041" String="合計数量"/>
+          <Item Language="2052" String="总数量"/>
+          <Item Language="1028" String="總數量"/>
+          <Item Language="1042" String="총 수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String="PL"/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="6.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESTANDSNUMMER" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="55" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESTANDSNUMMER"/>
+          <Item Language="1045" String="NUMER KATALOGOWY"/>
+          <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+          <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+          <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+          <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+          <Item Language="1038" String="RAKTÁRI SZÁM"/>
+          <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+          <Item Language="1033" String="STOCK NUMBER"/>
+          <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+          <Item Language="1041" String="ストック番号"/>
+          <Item Language="2052" String="库存编号"/>
+          <Item Language="1028" String="庫存號碼"/>
+          <Item Language="1042" String="스톡 번호"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="6.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="29" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1041" String="説明"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="6.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="MATERIAL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1038" String="ANYAG"/>
+          <Item Language="1031 1033 1046 3082" String="MATERIAL"/>
+          <Item Language="1040" String="MATERIALE"/>
+          <Item Language="1045" String="MATERIAŁ"/>
+          <Item Language="1029" String="MATERIÁL"/>
+          <Item Language="1036" String="MATIERE"/>
+          <Item Language="1049" String="МАТЕРИАЛ"/>
+          <Item Language="1028 1041 2052" String="材料"/>
+          <Item Language="1042" String="재질"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="FÜR OBJEKTE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1045" String="DLA ELEMENTÓW"/>
+          <Item Language="1033" String="FOR ITEMS"/>
+          <Item Language="1031" String="FÜR OBJEKTE"/>
+          <Item Language="3082" String="PARA ELEMENTOS"/>
+          <Item Language="1046" String="PARA ITENS"/>
+          <Item Language="1040" String="PER ELEMENTI"/>
+          <Item Language="1036" String="POUR ARTICLES"/>
+          <Item Language="1029" String="PRO POLOŽKY"/>
+          <Item Language="1038" String="TÉTELEKHEZ"/>
+          <Item Language="1049" String="ДЛЯ ЭЛЕМЕНТОВ"/>
+          <Item Language="2052" String="用于项目"/>
+          <Item Language="1028" String="用於料件"/>
+          <Item Language="1041" String="項目別"/>
+          <Item Language="1042" String="항목용"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1033" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName>
+      <Item Language="1031" String="BESTANDSNUMMER"/>
+      <Item Language="1045" String="NUMER KATALOGOWY"/>
+      <Item Language="1036" String="NUMERO D'APPROVISIONNEMENT"/>
+      <Item Language="1040" String="NUMERO DI MAGAZZINO"/>
+      <Item Language="3082" String="Nº ALMACENAMIENTO"/>
+      <Item Language="1046" String="NÚMERO DE ESTOQUE"/>
+      <Item Language="1038" String="RAKTÁRI SZÁM"/>
+      <Item Language="1029" String="SKLADOVÉ ČÍSLO"/>
+      <Item Language="1033" String="STOCK NUMBER"/>
+      <Item Language="1049" String="ИНВЕНТАРНЫЙ НОМЕР"/>
+      <Item Language="1041" String="ストック番号"/>
+      <Item Language="2052" String="库存编号"/>
+      <Item Language="1028" String="庫存號碼"/>
+      <Item Language="1042" String="스톡 번호"/>
+    </Key1PropertyExternalName>
+    <Key2PropertyExternalName>
+      <Item Language="1038" String="ANYAG"/>
+      <Item Language="1031 1033 1046 3082" String="MATERIAL"/>
+      <Item Language="1040" String="MATERIALE"/>
+      <Item Language="1045" String="MATERIAŁ"/>
+      <Item Language="1029" String="MATERIÁL"/>
+      <Item Language="1036" String="MATIERE"/>
+      <Item Language="1049" String="МАТЕРИАЛ"/>
+      <Item Language="1028 1041 2052" String="材料"/>
+      <Item Language="1042" String="재질"/>
+    </Key2PropertyExternalName>
+    <Key3PropertyExternalName>
+      <Item Language="1038" String="ANYAG"/>
+      <Item Language="1031 1033 1046 3082" String="MATERIAL"/>
+      <Item Language="1040" String="MATERIALE"/>
+      <Item Language="1045" String="MATERIAŁ"/>
+      <Item Language="1029" String="MATERIÁL"/>
+      <Item Language="1036" String="MATIERE"/>
+      <Item Language="1049" String="МАТЕРИАЛ"/>
+      <Item Language="1028 1041 2052" String="材料"/>
+      <Item Language="1042" String="재질"/>
+    </Key3PropertyExternalName>
+    <Name Description="" Language="1028">材料清單 (JIS)</Name>
+    <Name Description="" Language="1029">Seznam materiálů (JIS)</Name>
+    <Name Description="" Language="1031">Materialliste (JIS)</Name>
+    <Name Description="" Language="1033">Material List (JIS)</Name>
+    <Name Description="" Language="1036">Liste des matières (JIS)</Name>
+    <Name Description="" Language="1038">Anyaglista (JIS)</Name>
+    <Name Description="" Language="1040">Elenco materiali (JIS)</Name>
+    <Name Description="" Language="1041">Material List (JIS)</Name>
+    <Name Description="" Language="1042">재질 리스트 (JIS)</Name>
+    <Name Description="" Language="1045">Lista materiałów (JIS)</Name>
+    <Name Description="" Language="1046">Lista de materiais (JIS)</Name>
+    <Name Description="" Language="1049">Список материалов (JIS)</Name>
+    <Name Description="" Language="2052">材料列表 (JIS)</Name>
+    <Name Description="" Language="3082">Lista de materiales (JIS)</Name>
+  </Style>
+
+  <Style Direction="1" DisplayParticipants="1" DisplayTitle="0" EditFlag="0" Grouping="0" GroupingDisplayGroupedItemNumber="1" Heading="2" HeadingGap="0.09" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Parts List (DIN)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" Key1PropertyID="55" Key1PropertyMemberID="" Key1PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key2PropertyID="55" Key2PropertyMemberID="" Key2PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Key3PropertyID="55" Key3PropertyMemberID="" Key3PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" LinesOfText="0" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RecoverDefaultPrefix="1" RowGap="0.09" TitleGap="0.09">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (DIN)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (DIN)</SubStyle>
+    <Title>
+      <Item Language="1031" String="Teileliste"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="1" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="POS." HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="POS."/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1031" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="1.2" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="MENGE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="MENGE"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1031" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="4.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BAUTEIL-/ BESTELLNr." HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BAUTEIL-/ BESTELLNr."/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1031" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="5.5" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BEZEICHNUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="29" PropertyMemberID="" PropertySet="{32853F0F-3444-11D1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="BEZEICHNUNG"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1031" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="MATERIAL" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="MATERIAL"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1031" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="MASSE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="4" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="MASSE"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1031" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="FIRMA" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="15" PropertyMemberID="" PropertySet="{8CF58000-DA66-4ae6-8FF0-7B58406FB049}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="FIRMA"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1031" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="GESCHÄTZTE KOSTEN" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="36" PropertyMemberID="" PropertySet="{32853F0F-3444-11d1-9E93-0060B03C1CA6}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="GESCHÄTZTE KOSTEN"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1031" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <Key1PropertyExternalName>
+      <Item Language="1031" String="Bestandsnummer"/>
+    </Key1PropertyExternalName>
+    <Key2PropertyExternalName>
+      <Item Language="1031" String="Bestandsnummer"/>
+    </Key2PropertyExternalName>
+    <Key3PropertyExternalName>
+      <Item Language="1031" String="Bestandsnummer"/>
+    </Key3PropertyExternalName>
+    <Name Description="" Language="1031">Teileliste (DIN)</Name>
+  </Style>
+
+</PartsList>

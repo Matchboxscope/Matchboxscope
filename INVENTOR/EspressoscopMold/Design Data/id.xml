@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<Id Version="1">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style AllowHorizontal="0" AllowedHorizontalLanding="1" EditFlag="0" InternalName="1:Datum ID (ANSI)&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="2" Size="0.6096">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Bezug (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ANSI)</SubStyle>
+    <Name Description="根據 ASME Y14.5M - 1994&#xD;&#xA;注意: ANSI 不能定義特徵 ID。" Language="1028">基準識別字 (ANSI)</Name>
+    <Name Description="Podle normy ASME Y14.5M - 1994&#xD;&#xA; Poznámka: ANSI nedefinuje ID prvků." Language="1029">ID základny (ANSI)</Name>
+    <Name Description="Basiert auf ASME Y14.5M - 1994&#xD;&#xA; Anmerkung: ANSI definiert keine Element-IDs." Language="1031">Bezugssymbol (ANSI)</Name>
+    <Name Description="Based on ASME Y14.5M - 1994&#xD;&#xA; Note: ANSI does not define Feature IDs." Language="1033">Datum ID (ANSI)</Name>
+    <Name Description="En fonction d'ASME Y14.5M - 1994&#xD;&#xA; Remarque: ANSI ne définit pas les identifications de fonction." Language="1036">ID de référence (ANSI)</Name>
+    <Name Description="Alapja: ASME Y14.5M - 1994&#xD;&#xA; Megjegyzés: Az ANSI szabvány nem tartalmaz alakzatazonosítókat." Language="1038">Bázisjel (ANSI)</Name>
+    <Name Description="Basato su ASME Y14.5M - 1994&#xD;&#xA; Nota: ANSI non definisce gli ID delle lavorazioni." Language="1040">ID riferimento (ANSI)</Name>
+    <Name Description="Based on ASME Y14.5M - 1994&#xD;&#xA; Note: ANSI does not define Feature IDs." Language="1041">Datum ID (ANSI)</Name>
+    <Name Description="ASME Y14.5M - 1994 기준&#xD;&#xA; 참고: ANSI는 피쳐 ID를 정의하지 않습니다." Language="1042">데이텀 ID (ANSI)</Name>
+    <Name Description="Na podstawie ASME Y14.5M - 1994&#xD;&#xA; Uwaga: ANSI nie definiuje identyfikatorów elementów." Language="1045">Identyfikator odniesienia (ANSI)</Name>
+    <Name Description="Baseado na ASME Y14.5M - 1994&#xD;&#xA; Nota: ANSI não define IDs de recursos." Language="1046">ID de referência (ANSI)</Name>
+    <Name Description="Согласно ASME Y14.5M - 1994&#xD;&#xA; Замечание: В ANSI нет обозначений поверхностей." Language="1049">Обозначение базы (ANSI)</Name>
+    <Name Description="基于 ASME Y14.5M - 1994&#xD;&#xA; 注意: ANSI 中未定义特征标识符号。" Language="2052">基准标识符号 (ANSI)</Name>
+    <Name Description="Basado en ASME Y14.5M - 1994&#xD;&#xA; Nota: ANSI no define Id. de operaciones." Language="3082">ID de referencia (ANSI)</Name>
+  </Style>
+
+  <Style AllowHorizontal="1" AllowedHorizontalLanding="1" EditFlag="0" InternalName="1:Datum ID (ANSI) - 3DA&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="2" Size="0.9525">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ANSI) - 3DA</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ANSI) - 3DA</SubStyle>
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知。&#xD;&#xA;注意事項: ANSI 沒有定義特徵 ID。" Language="1028">基準識別字 (ANSI) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku.&#xD;&#xA; Poznámka: U kódování ANSI se nedefinují identifikátory prvku." Language="1029">ID základny (ANSI) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden.&#xD;&#xA; Anmerkung: ANSI definiert keine Elementensymbole." Language="1031">Bezugssymbol (ANSI) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation.&#xD;&#xA; Note: ANSI does not define Feature IDs." Language="1033">Datum ID (ANSI) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D.&#xD;&#xA; Remarque: les identificateurs de fonction ne sont pas définis par la norme ANSI." Language="1036">ID de référence (ANSI) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához.&#xD;&#xA; Megjegyzés: Az ANSI nem határozza meg a jellemzőazonosítókat." Language="1038">Bázisjel (ANSI) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D.&#xD;&#xA; Nota: ANSI non definisce ID lavorazione." Language="1040">ID riferimento (ANSI) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation.&#xD;&#xA; Note: ANSI does not define Feature IDs." Language="1041">Datum ID (ANSI) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다&#xD;&#xA; 주: ANSI에서는 피쳐 ID를 정의하지 않습니다." Language="1042">데이텀 ID (ANSI) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D.&#xD;&#xA; Uwaga: ANSI nie definiuje identyfikatorów elementów." Language="1045">Identyfikator odniesienia (ANSI) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D.&#xD;&#xA; Nota: ANSI não define IDs de operação." Language="1046">ID de referência (ANSI) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования.&#xD;&#xA; Примечание. Стандарты ANSI не определяют коды элементов." Language="1049">Обозначение базы (ANSI) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知。&#xD;&#xA; 注意: ANSI 不定义特征标识符号。" Language="2052">基准标识符号 (ANSI) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D.&#xD;&#xA; Nota: ANSI no define los ID de elemento." Language="3082">ID de referencia (ANSI) - 3DA</Name>
+  </Style>
+
+  <Style AllowHorizontal="1" AllowedHorizontalLanding="1" EditFlag="0" InternalName="1:Datum ID (BSI)&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="2" Size="0.7">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Bezug (BSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 BS 308 - 1990" Language="1028">基準識別字 (BSI)</Name>
+    <Name Description="Podle normy BS 308 - 1990" Language="1029">ID základny (BSI)</Name>
+    <Name Description="Basiert auf BS 308 - 1990" Language="1031">Bezugssymbol (BSI)</Name>
+    <Name Description="Based on BS 308 - 1990" Language="1033">Datum ID (BSI)</Name>
+    <Name Description="En fonction de BS 308 - 1990" Language="1036">ID de référence (BSI)</Name>
+    <Name Description="Alapja: BS 308 - 1990" Language="1038">Bázisjel (BSI)</Name>
+    <Name Description="Basato su BS 308 - 1990" Language="1040">ID riferimento (BSI)</Name>
+    <Name Description="Based on BS 308 - 1990" Language="1041">Datum ID (BSI)</Name>
+    <Name Description="BS 308 - 1990 기준" Language="1042">데이텀 ID (BSI)</Name>
+    <Name Description="Na podstawie BS 308 - 1990" Language="1045">Identyfikator odniesienia (BSI)</Name>
+    <Name Description="Baseado na BS 308 - 1990" Language="1046">ID de referência (BSI)</Name>
+    <Name Description="Согласно BS 308 - 1990" Language="1049">Обозначение базы (BSI)</Name>
+    <Name Description="基于 BS 308 - 1990" Language="2052">基准标识符号 (BSI)</Name>
+    <Name Description="Basado en BS 308 - 1990" Language="3082">ID de referencia (BSI)</Name>
+  </Style>
+
+  <Style AllowHorizontal="1" AllowedHorizontalLanding="1" EditFlag="0" InternalName="1:Datum ID (DIN)&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="2" Size="0.15">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Bezug (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN)</SubStyle>
+    <Name Description="根據 ISO 1101 - 1983" Language="1028">基準識別字 (DIN)</Name>
+    <Name Description="Podle normy ISO 1101 - 1983" Language="1029">ID základny (DIN)</Name>
+    <Name Description="Basiert auf ISO 1101 - 1983" Language="1031">Bezugssymbol (DIN)</Name>
+    <Name Description="Based on ISO 1101 - 1983" Language="1033">Datum ID (DIN)</Name>
+    <Name Description="En fonction d'ISO 1101 - 1983" Language="1036">ID de référence (DIN)</Name>
+    <Name Description="Alapja: ISO 1101 - 1983" Language="1038">Bázisjel (DIN)</Name>
+    <Name Description="Basato su ISO 1101 - 1983" Language="1040">ID riferimento (DIN)</Name>
+    <Name Description="Based on ISO 1101 - 1983" Language="1041">Datum ID (DIN)</Name>
+    <Name Description="ISO 1101 - 1983 기준" Language="1042">데이텀 ID (DIN)</Name>
+    <Name Description="Na podstawie ISO 1101 - 1983" Language="1045">Identyfikator odniesienia (DIN)</Name>
+    <Name Description="Baseado na ISO 1101 - 1983" Language="1046">ID de referência (DIN)</Name>
+    <Name Description="Согласно ISO 1101 - 1983" Language="1049">Обозначение базы (DIN)</Name>
+    <Name Description="基于 ISO 1101 - 1983" Language="2052">基准标识符号 (DIN)</Name>
+    <Name Description="Basado en ISO 1101 - 1983" Language="3082">ID de referencia (DIN)</Name>
+  </Style>
+
+  <Style AllowHorizontal="1" AllowedHorizontalLanding="1" EditFlag="0" InternalName="1:Datum ID (DIN) - 3DA&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="2" Size="0.9525">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO) - 3DA</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN) - 3DA</SubStyle>
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知。" Language="1028">基準識別字 (DIN) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku." Language="1029">ID základny (DIN) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden." Language="1031">Bezugssymbol (DIN) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1033">Datum ID (DIN) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">ID de référence (DIN) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához." Language="1038">Bázisjel (DIN) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">ID riferimento (DIN) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1041">Datum ID (DIN) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">데이텀 ID (DIN) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D." Language="1045">Identyfikator odniesienia (DIN) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D." Language="1046">ID de referência (DIN) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Обозначение базы (DIN) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知。" Language="2052">基准标识符号 (DIN) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">ID de referencia (DIN) - 3DA</Name>
+  </Style>
+
+  <Style AllowHorizontal="1" AllowedHorizontalLanding="1" EditFlag="0" InternalName="1:Datum ID (GB)&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="2" Size="0.775">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Bezug (GB)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 GB/T 1182-96" Language="1028">基準識別字 (GB)</Name>
+    <Name Description="Podle normy GB/T 1182-96" Language="1029">ID základny (GB)</Name>
+    <Name Description="Basiert auf GB/T 1182-96" Language="1031">Bezugssymbol (GB)</Name>
+    <Name Description="Based on GB/T 1182-96" Language="1033">Datum ID (GB)</Name>
+    <Name Description="En fonction de GB/T 1182-96" Language="1036">ID de référence (GB)</Name>
+    <Name Description="Alapja: GB/T 1182-96" Language="1038">Bázisjel (GB)</Name>
+    <Name Description="Basato su GB/T 1182-96" Language="1040">ID riferimento (GB)</Name>
+    <Name Description="Based on GB/T 1182-96" Language="1041">Datum ID (GB)</Name>
+    <Name Description="GB/T 1182-96 기준" Language="1042">데이텀 ID (GB)</Name>
+    <Name Description="Na podstawie GB/T 1182-96" Language="1045">Identyfikator odniesienia (GB)</Name>
+    <Name Description="Baseado na GB/T 1182-96" Language="1046">ID de referência (GB)</Name>
+    <Name Description="Согласно GB/T 1182-96" Language="1049">Обозначение базы (GB)</Name>
+    <Name Description="基于 GB/T 1182-96" Language="2052">基准标识符号 (GB)</Name>
+    <Name Description="Basado en GB/T 1182-96" Language="3082">ID de referencia (GB)</Name>
+  </Style>
+
+  <Style AllowHorizontal="1" AllowedHorizontalLanding="0" EditFlag="0" InternalName="1:Datum ID (GOST)&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="2" Size="0.7">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Bezug (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Normale Textgröße (GOST)</SubStyle>
+    <Name Description="" Language="1028">基準識別字 (GOST)</Name>
+    <Name Description="" Language="1029">ID základny (GOST)</Name>
+    <Name Description="" Language="1031">Bezugssymbol (GOST)</Name>
+    <Name Description="" Language="1033">Datum ID (GOST)</Name>
+    <Name Description="" Language="1036">ID de référence (GOST)</Name>
+    <Name Description="" Language="1038">Bázisjel (GOST)</Name>
+    <Name Description="" Language="1040">ID riferimento (GOST)</Name>
+    <Name Description="" Language="1041">Datum ID (GOST)</Name>
+    <Name Description="" Language="1042">데이텀 ID (GOST)</Name>
+    <Name Description="" Language="1045">Identyfikator odniesienia (GOST)</Name>
+    <Name Description="" Language="1046">ID de referência (GOST)</Name>
+    <Name Description="" Language="1049">Обозначение базы (ГОСТ)</Name>
+    <Name Description="" Language="2052">基准标识符号 (GOST)</Name>
+    <Name Description="" Language="3082">ID de referencia (GOST)</Name>
+  </Style>
+
+  <Style AllowHorizontal="1" AllowedHorizontalLanding="1" EditFlag="0" InternalName="1:Datum ID (ISO)&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="2" Size="0.7">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Bezug (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 ISO 1101 - 1983" Language="1028">基準識別字 (ISO)</Name>
+    <Name Description="Podle normy ISO 1101 - 1983" Language="1029">ID základny (ISO)</Name>
+    <Name Description="Basiert auf ISO 1101 - 1983" Language="1031">Bezugssymbol (ISO)</Name>
+    <Name Description="Based on ISO 1101 - 1983" Language="1033">Datum ID (ISO)</Name>
+    <Name Description="En fonction d'ISO 1101 - 1983" Language="1036">ID de référence (ISO)</Name>
+    <Name Description="Alapja: ISO 1101 - 1983" Language="1038">Bázisjel (ISO)</Name>
+    <Name Description="Basato su ISO 1101 - 1983" Language="1040">ID riferimento (ISO)</Name>
+    <Name Description="Based on ISO 1101 - 1983" Language="1041">Datum ID (ISO)</Name>
+    <Name Description="ISO 1101 - 1983 기준" Language="1042">데이텀 ID (ISO)</Name>
+    <Name Description="Na podstawie ISO 1101 - 1983" Language="1045">Identyfikator odniesienia (ISO)</Name>
+    <Name Description="Baseado na ISO 1101 - 1983" Language="1046">ID de referência (ISO)</Name>
+    <Name Description="Согласно ISO 1101 - 1983" Language="1049">Обозначение базы (ISO)</Name>
+    <Name Description="基于 ISO 1101 - 1983" Language="2052">基准标识符号 (ISO)</Name>
+    <Name Description="Basado en ISO 1101 - 1983" Language="3082">ID de referencia (ISO)</Name>
+  </Style>
+
+  <Style AllowHorizontal="1" AllowedHorizontalLanding="1" EditFlag="0" InternalName="1:Datum ID (ISO) - 3DA&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="2" Size="0.9525">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO) - 3DA</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO) - 3DA</SubStyle>
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知。" Language="1028">基準識別字 (ISO) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku." Language="1029">ID základny (ISO) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden." Language="1031">Bezugssymbol (ISO) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1033">Datum ID (ISO) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">ID de référence (ISO) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához." Language="1038">Bázisjel (ISO) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">ID riferimento (ISO) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1041">Datum ID (ISO) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">데이텀 ID (ISO) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D." Language="1045">Identyfikator odniesienia (ISO) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D." Language="1046">ID de referência (ISO) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Обозначение базы (ISO) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知。" Language="2052">基准标识符号 (ISO) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">ID de referencia (ISO) - 3DA</Name>
+  </Style>
+
+  <Style AllowHorizontal="1" AllowedHorizontalLanding="1" EditFlag="0" InternalName="1:Datum ID (JIS)&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="2" Size="0.9">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Bezug (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (JIS)</SubStyle>
+    <Name Description="根據 JIS B 0021 (1984)" Language="1028">基準識別字 (JIS)</Name>
+    <Name Description="Podle normy JIS B 0021 (1984)" Language="1029">ID základny (JIS)</Name>
+    <Name Description="Basiert auf JIS B 0021 (1984)" Language="1031">Bezugssymbol (JIS)</Name>
+    <Name Description="Based on JIS B 0021 (1984)" Language="1033">Datum ID (JIS)</Name>
+    <Name Description="En fonction de JIS B 0021 (1984)" Language="1036">ID de référence (JIS)</Name>
+    <Name Description="Alapja: JIS B 0021 (1984)" Language="1038">Bázisjel (JIS)</Name>
+    <Name Description="Basato su JIS B 0021 (1984)" Language="1040">ID riferimento (JIS)</Name>
+    <Name Description="Based on JIS B 0021 (1984)" Language="1041">Datum ID (JIS)</Name>
+    <Name Description="JIS B 0021 (1984) 기준" Language="1042">데이텀 ID (JIS)</Name>
+    <Name Description="Na podstawie JIS B 0021 (1984)" Language="1045">Identyfikator odniesienia (JIS)</Name>
+    <Name Description="Baseado na JIS B 0021 (1984)" Language="1046">ID de referência (JIS)</Name>
+    <Name Description="Согласно JIS B 0021 (1984)" Language="1049">Обозначение базы (JIS)</Name>
+    <Name Description="基于 JIS B 0021 (1984)" Language="2052">基准标识符号 (JIS)</Name>
+    <Name Description="Basado en JIS B 0021 (1984)" Language="3082">ID de referencia (JIS)</Name>
+  </Style>
+
+  <Style AllowHorizontal="1" AllowedHorizontalLanding="1" EditFlag="0" InternalName="1:Feature ID (BSI)&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="3" Size="0.7">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (BSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 BS 308 - 1990" Language="1028">特徵識別字 (BSI)</Name>
+    <Name Description="Podle normy BS 308 - 1990" Language="1029">ID prvku (BSI)</Name>
+    <Name Description="Basiert auf BS 308 - 1990" Language="1031">Elementensymbol (BSI)</Name>
+    <Name Description="Based on BS 308 - 1990" Language="1033">Feature ID (BSI)</Name>
+    <Name Description="En fonction de BS 308 - 1990" Language="1036">ID de fonction (BSI)</Name>
+    <Name Description="Alapja: BS 308 - 1990" Language="1038">Alakzatazonosító (BSI)</Name>
+    <Name Description="Basato su BS 308 - 1990" Language="1040">ID lavorazione (BSI)</Name>
+    <Name Description="Based on BS 308 - 1990" Language="1041">Feature ID (BSI)</Name>
+    <Name Description="BS 308 - 1990 기준" Language="1042">피쳐 ID (BSI)</Name>
+    <Name Description="Na podstawie BS 308 - 1990" Language="1045">Identyfikator elementu (BSI)</Name>
+    <Name Description="Baseado na BS 308 - 1990" Language="1046">ID do recurso (BSI)</Name>
+    <Name Description="Согласно BS 308 - 1990" Language="1049">Обозначение поверхности (BSI)</Name>
+    <Name Description="基于 BS 308 - 1990" Language="2052">特征标识符号 (BSI)</Name>
+    <Name Description="Basado en BS 308 - 1990" Language="3082">ID de elemento (BSI)</Name>
+  </Style>
+
+  <Style AllowHorizontal="1" AllowedHorizontalLanding="1" EditFlag="0" InternalName="1:Feature ID (DIN)&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="3" Size="0.7">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN)</SubStyle>
+    <Name Description="根據 ISO 1101 - 1983" Language="1028">特徵識別字 (DIN)</Name>
+    <Name Description="Podle normy ISO 1101 - 1983" Language="1029">ID prvku (DIN)</Name>
+    <Name Description="Basiert auf ISO 1101 - 1983" Language="1031">Elementensymbol (DIN)</Name>
+    <Name Description="Based on ISO 1101 - 1983" Language="1033">Feature ID (DIN)</Name>
+    <Name Description="En fonction d'ISO 1101 - 1983" Language="1036">ID de fonction (DIN)</Name>
+    <Name Description="Alapja: ISO 1101 - 1983" Language="1038">Alakzatazonosító (DIN)</Name>
+    <Name Description="Basato su ISO 1101 - 1983" Language="1040">ID lavorazione (DIN)</Name>
+    <Name Description="Based on ISO 1101 - 1983" Language="1041">Feature ID (DIN)</Name>
+    <Name Description="ISO 1101 - 1983 기준" Language="1042">피쳐 ID (DIN)</Name>
+    <Name Description="Na podstawie ISO 1101 - 1983" Language="1045">Identyfikator elementu (DIN)</Name>
+    <Name Description="Baseado na ISO 1101 - 1983" Language="1046">ID do recurso (DIN)</Name>
+    <Name Description="Согласно ISO 1101 - 1983" Language="1049">Обозначение поверхности (DIN)</Name>
+    <Name Description="基于 ISO 1101 - 1983" Language="2052">特征标识符号 (DIN)</Name>
+    <Name Description="Basado en ISO 1101 - 1983" Language="3082">ID de elemento (DIN)</Name>
+  </Style>
+
+  <Style AllowHorizontal="1" AllowedHorizontalLanding="1" EditFlag="0" InternalName="1:Feature ID (GB)&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="0" Size="0.7">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (GB)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 GB/T 1182-96" Language="1028">特徵識別字 (GB)</Name>
+    <Name Description="Podle normy GB/T 1182-96" Language="1029">ID prvku (GB)</Name>
+    <Name Description="Basiert auf GB/T 1182-96" Language="1031">Elementensymbol (GB)</Name>
+    <Name Description="Based on GB/T 1182-96" Language="1033">Feature ID (GB)</Name>
+    <Name Description="En fonction de GB/T 1182-96" Language="1036">ID de fonction (GB)</Name>
+    <Name Description="Alapja: GB/T 1182-96" Language="1038">Alakzatazonosító (GB)</Name>
+    <Name Description="Basato su GB/T 1182-96" Language="1040">ID lavorazione (GB)</Name>
+    <Name Description="Based on GB/T 1182-96" Language="1041">Feature ID (GB)</Name>
+    <Name Description="GB/T 1182-96 기준" Language="1042">피쳐 ID (GB)</Name>
+    <Name Description="Na podstawie GB/T 1182-96" Language="1045">Identyfikator elementu (GB)</Name>
+    <Name Description="Baseado na GB/T 1182-96" Language="1046">ID do recurso (GB)</Name>
+    <Name Description="Согласно GB/T 1182-96" Language="1049">Обозначение поверхности (GB)</Name>
+    <Name Description="基于 GB/T 1182-96" Language="2052">特征标识符号 (GB)</Name>
+    <Name Description="Basado en GB/T 1182-96" Language="3082">ID de elemento (GB)</Name>
+  </Style>
+
+  <Style AllowHorizontal="1" AllowedHorizontalLanding="1" EditFlag="0" InternalName="1:Feature ID (GOST)&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="3" Size="0.7">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Normale Textgröße (GOST)</SubStyle>
+    <Name Description="根據 ISO 1101 - 1983" Language="1028">特徵識別字 (GOST)</Name>
+    <Name Description="Podle normy ISO 1101 - 1983" Language="1029">ID prvku (GOST)</Name>
+    <Name Description="Basiert auf ISO 1101 - 1983" Language="1031">Elementensymbol (GOST)</Name>
+    <Name Description="Based on ISO 1101 - 1983" Language="1033">Feature ID (GOST)</Name>
+    <Name Description="En fonction d'ISO 1101 - 1983" Language="1036">ID de fonction (GOST)</Name>
+    <Name Description="Alapja: ISO 1101 - 1983" Language="1038">Alakzatazonosító (GOST)</Name>
+    <Name Description="Basato su ISO 1101 - 1983" Language="1040">ID lavorazione (GOST)</Name>
+    <Name Description="Based on ISO 1101 - 1983" Language="1041">Feature ID (GOST)</Name>
+    <Name Description="ISO 1101 - 1983 기준" Language="1042">피쳐 ID (GOST)</Name>
+    <Name Description="Na podstawie ISO 1101 - 1983" Language="1045">Identyfikator elementu (GOST)</Name>
+    <Name Description="Baseado na ISO 1101 - 1983" Language="1046">ID do recurso (GOST)</Name>
+    <Name Description="Согласно ISO 1101 - 1983" Language="1049">Обозначение поверхности (ГОСТ)</Name>
+    <Name Description="基于 ISO 1101 - 1983" Language="2052">特征标识符号 (GOST)</Name>
+    <Name Description="Basado en ISO 1101 - 1983" Language="3082">ID de elemento (GOST)</Name>
+  </Style>
+
+  <Style AllowHorizontal="1" AllowedHorizontalLanding="1" EditFlag="0" InternalName="1:Feature ID (ISO)&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="3" Size="0.7">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 ISO 1101 - 1983" Language="1028">特徵識別字 (ISO)</Name>
+    <Name Description="Podle normy ISO 1101 - 1983" Language="1029">ID prvku (ISO)</Name>
+    <Name Description="Basiert auf ISO 1101 - 1983" Language="1031">Elementensymbol (ISO)</Name>
+    <Name Description="Based on ISO 1101 - 1983" Language="1033">Feature ID (ISO)</Name>
+    <Name Description="En fonction d'ISO 1101 - 1983" Language="1036">ID de fonction (ISO)</Name>
+    <Name Description="Alapja: ISO 1101 - 1983" Language="1038">Alakzatazonosító (ISO)</Name>
+    <Name Description="Basato su ISO 1101 - 1983" Language="1040">ID lavorazione (ISO)</Name>
+    <Name Description="Based on ISO 1101 - 1983" Language="1041">Feature ID (ISO)</Name>
+    <Name Description="ISO 1101 - 1983 기준" Language="1042">피쳐 ID (ISO)</Name>
+    <Name Description="Na podstawie ISO 1101 - 1983" Language="1045">Identyfikator elementu (ISO)</Name>
+    <Name Description="Baseado na ISO 1101 - 1983" Language="1046">ID do recurso (ISO)</Name>
+    <Name Description="Согласно ISO 1101 - 1983" Language="1049">Обозначение поверхности (ISO)</Name>
+    <Name Description="基于 ISO 1101 - 1983" Language="2052">特征标识符号 (ISO)</Name>
+    <Name Description="Basado en ISO 1101 - 1983" Language="3082">ID de elemento (ISO)</Name>
+  </Style>
+
+  <Style AllowHorizontal="1" AllowedHorizontalLanding="1" EditFlag="0" InternalName="1:Feature ID (JIS)&#xA;" LeaderTree="1" ScaleToTextHeight="1" ShapeType="3" Size="0.9">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (JIS)</SubStyle>
+    <Name Description="根據 JIS B 0021 (1984)" Language="1028">特徵識別字 (JIS)</Name>
+    <Name Description="Podle normy JIS B 0021 (1984)" Language="1029">ID prvku (JIS)</Name>
+    <Name Description="Basiert auf JIS B 0021 (1984)" Language="1031">Elementensymbol (JIS)</Name>
+    <Name Description="Based on JIS B 0021 (1984)" Language="1033">Feature ID (JIS)</Name>
+    <Name Description="En fonction de JIS B 0021 (1984)" Language="1036">ID de fonction (JIS)</Name>
+    <Name Description="Alapja: JIS B 0021 (1984)" Language="1038">Alakzatazonosító (JIS)</Name>
+    <Name Description="Basato su JIS B 0021 (1984)" Language="1040">ID lavorazione (JIS)</Name>
+    <Name Description="Based on JIS B 0021 (1984)" Language="1041">Feature ID (JIS)</Name>
+    <Name Description="JIS B 0021 (1984) 기준" Language="1042">피쳐 ID (JIS)</Name>
+    <Name Description="Na podstawie JIS B 0021 (1984)" Language="1045">Identyfikator elementu (JIS)</Name>
+    <Name Description="Baseado na JIS B 0021 (1984)" Language="1046">ID do recurso (JIS)</Name>
+    <Name Description="Согласно JIS B 0021 (1984)" Language="1049">Обозначение поверхности (JIS)</Name>
+    <Name Description="基于 JIS B 0021 (1984)" Language="2052">特征标识符号 (JIS)</Name>
+    <Name Description="Basado en JIS B 0021 (1984)" Language="3082">ID de elemento (JIS)</Name>
+  </Style>
+
+</Id>

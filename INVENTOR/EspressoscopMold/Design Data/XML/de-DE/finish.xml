@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?><FinishFeatureDefinitions Version="1">
+	<Type Id="MaterialCoating"> <!-- DO NOT TRANSLATE -->
+		<Process Name="Zn8/An"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Zinc</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Zink Dicke 8 μm, Transparente Passivierung</Description>
+			<ShortDescription>Zn8/An</ShortDescription>
+			<Thickness>8 mikron</Thickness>
+			<Comment></Comment>
+		</Process>
+		<Process Name="Zn12/Cn/T2"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Turquoise</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Zink Dicke 12 μm, irisierende Chromatierung, mit Versiegelung</Description>
+			<ShortDescription>Zn12/Cn/T2</ShortDescription>
+			<Thickness>12 mikron</Thickness>
+			<Comment></Comment>
+		</Process>
+		<Process Name="ZnNi8/An"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Yellow</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Zink-Nickel-Legierung Dicke 8 μm, Schwarz-Passivierung</Description>
+			<ShortDescription>ZnNi8/An</ShortDescription>
+			<Thickness>8 mikron</Thickness>
+			<Comment></Comment>
+		</Process>
+	</Type>
+	<Type Id="HeatTreatment"> <!-- DO NOT TRANSLATE -->
+		<Process Name="Carburize .040 - .030"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Anodized - Black</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Aufkohlen 0.040 - 0.030, Temperatur min. 1 Std. bei min. 350 F, HRC 55-60</Description>
+			<ShortDescription>Aufkohlen 0.040 - 0.030</ShortDescription>
+			<Depth>30 mikron</Depth>
+			<Hardness>60 HRC</Hardness>
+			<Comment></Comment>
+		</Process>
+		<Process Name="Case Hardening 41-45HRC"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Dark Green</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Einsatzhärtung 3.00 mm, 41-45 HRC</Description>
+			<ShortDescription>Einsatzhärtung 41-45HRC</ShortDescription>
+			<Depth>3.00 mm</Depth>
+			<Hardness>45 HRC</Hardness>
+			<Comment></Comment>
+		</Process>
+		<Process Name="Soft Annealing 225HB"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Dark Olive</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Weichglühen 225HB</Description>
+			<ShortDescription>Weichglühen 225HB</ShortDescription>
+			<Depth>0 mm</Depth>
+			<Hardness>225 HB</Hardness>
+			<Comment></Comment>
+		</Process>
+		<Process Name="Case Hardening 55±5HRC"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Dark Red</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Einsatzhärtung 55±5HRC</Description>
+			<ShortDescription>Einsatzhärtung 55±5HRC</ShortDescription>
+			<Depth>3.00 mm</Depth>
+			<Hardness>55 HRC</Hardness>
+			<Comment></Comment>
+		</Process>
+	</Type>
+	<Type Id="SurfaceTexture"> <!-- DO NOT TRANSLATE -->
+		<Process Name="Barrel Finishing"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Blue - Wall Paint - Glossy</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Trommelpolieren</Description>
+			<ShortDescription>Trommelpolieren</ShortDescription>
+			<Comment></Comment>
+		</Process>
+		<Process Name="Grinding"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Smooth - Purple</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Schleifen</Description>
+			<ShortDescription>Schleifen</ShortDescription>
+			<Comment></Comment>
+		</Process>
+		<Process Name="Honing"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Smooth - White</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Honen</Description>
+			<ShortDescription>Honen</ShortDescription>
+			<Comment></Comment>
+		</Process>
+		<Process Name="Lapping"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Smooth - Yellow</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Läppen</Description>
+			<ShortDescription>Läppen</ShortDescription>
+			<Comment></Comment>
+		</Process>
+		<Process Name="Polishing"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Smooth - Dark Forest Green</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Polieren</Description>
+			<ShortDescription>Polieren</ShortDescription>
+			<Comment></Comment>
+		</Process>
+		<Process Name="Superfinishing"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Flaked Satin - Blue</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Superfinishing</Description>
+			<ShortDescription>Superfinishing</ShortDescription>
+			<Comment></Comment>
+		</Process>
+	</Type>
+	<Type Id="PaintColor"> <!-- DO NOT TRANSLATE -->
+		<Process Name="Prime/Paint RAL 3018"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Red</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Vorbereiten/Anstrich RAL 3018</Description>
+			<ShortDescription>RAL 3018</ShortDescription>
+			<Thickness>50 mikron</Thickness>
+			<Comment></Comment>
+		</Process>
+		<Process Name="Prime/Paint RAL 2008"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Orange</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Vorbereiten/Anstrich RAL 2008</Description>
+			<ShortDescription>RAL 2008</ShortDescription>
+			<Thickness>50 mikron</Thickness>
+			<Comment></Comment>
+		</Process>
+		<Process Name="Prime/Paint RAL 6003"> <!-- DO NOT TRANSLATE -->
+			<Appearance>Olive Green</Appearance> <!-- DO NOT TRANSLATE -->
+			<Description>Vorbereiten/Anstrich RAL 6003</Description>
+			<ShortDescription>RAL 6003</ShortDescription>
+			<Thickness>50 mikron</Thickness>
+			<Comment></Comment>
+		</Process>
+	</Type>
+</FinishFeatureDefinitions>

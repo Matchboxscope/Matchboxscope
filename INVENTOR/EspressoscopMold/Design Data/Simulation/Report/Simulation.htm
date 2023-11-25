@@ -1,0 +1,164 @@
+<hr />
+<h2 class="expanded">$$SimulationName$</h2>
+<blockquote>
+	<p><b>$$msg16015$</b></p>
+	<table class="ta">
+		<tr>
+			<td>$$msg16016$</td>
+			<td>$$DesignObjective$</td>
+		</tr>
+		<tr>
+			<td>$$msg16017$</td>
+			<td>$$SimulationType$</td>
+		</tr>
+		<tr>
+			<td>$$msg16013$</td>
+			<td>$$LastModifDate$</td>
+		</tr>
+		<tr>
+			<td>$$MSorIMEMBERmsg$</td>
+			<td>$$MSorIMEMBERName$</td>
+		</tr><!--iif(not PART)
+		<tr>
+			<td>$$msg16104$</td>
+			<td>$$DesignViewName$</td>
+		</tr>
+		<tr>
+			<td>$$msg16105$</td>
+			<td>$$PosRepName$</td>
+		</tr> iif--><!--iif(STATIC)
+		<tr>
+			<td>$$msg16076$</td>
+			<td>$$EliminateRigidBodyModes$</td>
+		</tr><!--iif(not PART)
+		<tr>
+			<td>$$msg16077$</td>
+			<td>$$SeparateStresses$</td>
+		</tr>
+		<tr>
+			<td>$$msg16079$</td>
+			<td>$$MotionLoadsAnalysis$</td>
+		</tr><!--iif(MOTION)
+		<tr>
+			<td>$$msg16045$</td>
+			<td>$$MotionLoadsAnalysisPart$</td>
+		</tr>
+		<tr>
+			<td>$$msg16091$</td>
+			<td>$$MotionLoadsAnalysisTimeStep$</td>
+		</tr> iif--> iif--> iif--><!--iif(not STATIC)
+		<tr>
+			<td>$$msg16052$</td>
+			<td>$$NumberOfModes$</td>
+		</tr>
+		<tr>
+			<td>$$msg16053$</td>
+			<td>$$FrequencyRange$</td>
+		</tr>
+		<tr>
+			<td>$$msg16054$</td>
+			<td>$$ComputePreloaded$</td>
+		</tr>
+		<tr>
+			<td>$$msg16055$</td>
+			<td>$$EnhancedAccuracy$</td>
+		</tr> iif-->
+	</table><!--iif(PROJECTINFO)
+	<h3 class="expanded">$$msg16014$</h3>
+	<blockquote><!--iif(SUMMARY)
+		<h4 class="expanded">$$msg15059$</h4>
+		<blockquote><table class="ta">
+			$$GroupSummary$
+		</table>
+		</blockquote> iif--><!--iif(PROJECT)
+		<h4 class="expanded">$$msg15068$</h4>
+		<blockquote><table class="ta">
+			$$GroupProject$
+		</table>
+		</blockquote> iif--><!--iif(STATUS)
+		<h4 class="expanded">$$msg15053$</h4>
+		<blockquote><table class="ta">
+			$$GroupStatus$
+		</table>
+		</blockquote> iif--><!--iif(CUSTOM)
+		<h4 class="expanded">$$msg15051$</h4>
+		<blockquote><table class="ta">
+			$$GroupCustom$
+		</table>
+		</blockquote> iif--><!--iif(PHYSICAL)
+		<h4 class="expanded">$$msg15082$</h4>
+		<blockquote><table class="ta">
+			$$GroupPhysical$
+		</table>
+		<p>$$msg16090$</p>
+		</blockquote> iif-->
+	</blockquote> iif-->
+	<p><br/><b>$$msg16018$</b></p>
+	<table class="ta">
+		<tr>
+			<td>$$msg16019$</td>
+			<td>$$AvgMeshSize$</td>
+		</tr>
+		<tr>
+			<td>$$msg16101$</td>
+			<td>$$AvgMeshSizeInShells$</td>
+		</tr>
+		<tr>
+			<td>$$msg16020$</td>
+			<td>$$MinSize$</td>
+		</tr>
+		<tr>
+			<td>$$msg16021$</td>
+			<td>$$GradingFactor$</td>
+		</tr>
+		<tr>
+			<td>$$msg16022$</td>
+			<td>$$MaxTurnAngle$</td>
+		</tr>
+		<tr>
+			<td>$$msg16023$</td>
+			<td>$$CurvedMesh$</td>
+		</tr><!--iif(not PART)
+		<tr>
+			<td>$$msg16051$</td>
+			<td>$$PartBasedMeasure$</td>
+		</tr> iif-->
+	</table><!--iif(DESIGNCONSTRAINTS)
+	<p><br/><b>$$msg16072$</b></p>
+	<table class="ta">
+		<tr>
+			<td><b>$$msg12046$</b></td>
+			<td><b>$$msg12047$</b></td>
+			<td><b>$$msg12049$</b></td>
+			<td><b>$$msg12050$</b></td>
+		</tr>
+$$GroupDesignConstraints$
+	</table> iif--><!--iif(PARAMETRIC)<!--iif(DESIGNPARAMETERS)
+	<p><br/><b>$$msg16073$</b></p>
+	<table class="ta">
+		<tr>
+			<td><b>$$msg12053$</b></td>
+			<td><b>$$msg12057$</b></td>
+			<td><b>$$msg12054$</b></td>
+			<td><b>$$msg12055$</b></td>
+			<td><b>$$msg12056$</b></td>
+			<td><b>$$msg12093$</b></td>
+		</tr>
+$$GroupDesignParameters$
+	</table> iif--> iif--><!--iif(MATERIALS)
+	<h3 class="expanded">$$msg16025$</h3>
+	<blockquote>
+$$GroupMaterial$
+	</blockquote> iif--><!--iif(LOADS,CONSTRAINTS,CONTACTS,SHELLS)
+	<h3 class="expanded">$$msg16026$</h3>
+	<blockquote>
+$$GroupLoad$
+$$GroupConstraint$
+$$GroupContact$
+$$GroupShell$
+	</blockquote> iif--><!--iif(RESULTS)
+	<h3 class="expanded">$$msg16027$</h3>
+	<blockquote>
+$$GroupConfiguration$
+	</blockquote> iif-->
+</blockquote>

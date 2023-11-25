@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<DatumTarget Version="1">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" BalloonRadiusMultiplier="1.75" BorderLine="28108" Color="63:63:63:255" ColorByLayer="1" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" FitPrimSuppressLeadZero="0" HatchAngle="0.785398" HatchDist="0.29972" HiddenLeaderLine="28101" InternalName="1:Datum Target (ANSI)&#xA;" OutsideUnderlined="0" PointSize="0.29972" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonSetting="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ANSI)</SubStyle>
+    <Name Description="根據 ASME Y14.5M - 1994" Language="1028">基準目標 (ANSI)</Name>
+    <Name Description="Podle normy ASME Y14.5M - 1994" Language="1029">Dílčí základna (ANSI)</Name>
+    <Name Description="Basiert auf ASME Y14.5M - 1994" Language="1031">Bezugsstelle (ANSI)</Name>
+    <Name Description="Based on ASME Y14.5M - 1994" Language="1033">Datum Target (ANSI)</Name>
+    <Name Description="En fonction d'ASME Y14.5M - 1994" Language="1036">Référence partielle (ANSI)</Name>
+    <Name Description="Alapja: ASME Y14.5M - 1994" Language="1038">Bázishely (ANSI)</Name>
+    <Name Description="Basato su ASME Y14.5M - 1994" Language="1040">Riferimento parziale (ANSI)</Name>
+    <Name Description="Based on ASME Y14.5M - 1994" Language="1041">Datum Target (ANSI)</Name>
+    <Name Description="ASME Y14.5M - 1994 기준" Language="1042">데이텀 대상 (ANSI)</Name>
+    <Name Description="Na podstawie ASME Y14.5M - 1994" Language="1045">Odniesienie cząstkowe (ANSI)</Name>
+    <Name Description="Baseado na ASME Y14.5M - 1994" Language="1046">Elemento de referência (ANSI)</Name>
+    <Name Description="Согласно ASME Y14.5M - 1994" Language="1049">Обозначение участка базы (ANSI)</Name>
+    <Name Description="基于 ASME Y14.5M - 1994" Language="2052">基准目标符号 (ANSI)</Name>
+    <Name Description="Basado en ASME Y14.5M - 1994" Language="3082">Referencia parcial (ANSI)</Name>
+  </Style>
+
+  <Style AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" BalloonRadiusMultiplier="1.75" BorderLine="28108" Color="63:63:63:255" ColorByLayer="1" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" FitPrimSuppressLeadZero="0" HatchAngle="0.785398" HatchDist="0.29972" HiddenLeaderLine="28101" InternalName="1:Datum Target (ANSI) - 3DA&#xA;" OutsideUnderlined="0" PointSize="0.29972" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonSetting="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ANSI) - 3DA</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ANSI) - 3DA</SubStyle>
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知。" Language="1028">基準目標 (ANSI) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku." Language="1029">Dílčí základna (ANSI) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden." Language="1031">Bezugsstelle (ANSI) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1033">Datum Target (ANSI) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">Référence partielle (ANSI) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához." Language="1038">Bázishely (ANSI) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">Riferimento parziale (ANSI) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1041">Datum Target (ANSI) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">데이텀 대상 (ANSI) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D." Language="1045">Odniesienie cząstkowe (ANSI) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D." Language="1046">Elemento de referência (ANSI) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Обозначение участка базы (ANSI) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知。" Language="2052">基准目标符号 (ANSI) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">Referencia parcial (ANSI) - 3DA</Name>
+  </Style>
+
+  <Style AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" BalloonRadiusMultiplier="2" BorderLine="28107" Color="38:38:88:255" ColorByLayer="1" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" FitPrimSuppressLeadZero="0" HatchAngle="0.785398" HatchDist="0.3" HiddenLeaderLine="28101" InternalName="1:Datum Target (BSI)&#xA;" OutsideUnderlined="0" PointSize="0.3" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonSetting="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (BSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 ISO 1101 - 1983，ISO 7083 - 1983" Language="1028">基準目標 (BSI)</Name>
+    <Name Description="Podle normy ISO 1101 - 1983, ISO 7083 - 1983" Language="1029">Dílčí základna (BSI)</Name>
+    <Name Description="Basiert auf ISO 1101 - 1983, ISO 7083 - 1983" Language="1031">Bezugsstelle (BSI)</Name>
+    <Name Description="Based on ISO 1101 - 1983, ISO 7083 - 1983" Language="1033">Datum Target (BSI)</Name>
+    <Name Description="En fonction d'ISO 1101 - 1983, ISO 7083 - 1983" Language="1036">Référence partielle (BSI)</Name>
+    <Name Description="Alapja: ISO 1101 - 1983, ISO 7083 - 1983" Language="1038">Bázishely (BSI)</Name>
+    <Name Description="Basato su ISO 1101 - 1983, ISO 7083 - 1983" Language="1040">Riferimento parziale (BSI)</Name>
+    <Name Description="Based on ISO 1101 - 1983, ISO 7083 - 1983" Language="1041">Datum Target (BSI)</Name>
+    <Name Description="ISO 1101 - 1983, ISO 7083 - 1983 기준" Language="1042">데이텀 대상 (BSI)</Name>
+    <Name Description="Na podstawie ISO 1101 - 1983, ISO 7083 - 1983" Language="1045">Odniesienie cząstkowe (BSI)</Name>
+    <Name Description="Baseado na ISO 1101 - 1983, ISO 7083 - 1983" Language="1046">Elemento de referência (BSI)</Name>
+    <Name Description="Согласно ISO 1101 - 1983, ISO 7083 - 1983" Language="1049">Обозначение участка базы (BSI)</Name>
+    <Name Description="基于 ISO 1101 - 1983、ISO 7083 - 1983" Language="2052">基准目标符号 (BSI)</Name>
+    <Name Description="Basado en ISO 1101 - 1983, ISO 7083 - 1983" Language="3082">Referencia parcial (BSI)</Name>
+  </Style>
+
+  <Style AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" BalloonRadiusMultiplier="2" BorderLine="28107" Color="38:38:88:255" ColorByLayer="1" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" FitPrimSuppressLeadZero="0" HatchAngle="0.785398" HatchDist="0.3" HiddenLeaderLine="28101" InternalName="1:Datum Target (DIN)&#xA;" OutsideUnderlined="1" PointSize="0.3" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonSetting="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN)</SubStyle>
+    <Name Description="根據 ISO 1101 - 1983，ISO 7083 - 1983" Language="1028">基準目標 (DIN)</Name>
+    <Name Description="Podle normy ISO 1101 - 1983, ISO 7083 - 1983" Language="1029">Dílčí základna (DIN)</Name>
+    <Name Description="Basiert auf ISO 1101 - 1983, ISO 7083 - 1983" Language="1031">Bezugsstelle (DIN)</Name>
+    <Name Description="Based on ISO 1101 - 1983, ISO 7083 - 1983" Language="1033">Datum Target (DIN)</Name>
+    <Name Description="En fonction d'ISO 1101 - 1983, ISO 7083 - 1983" Language="1036">Référence partielle (DIN)</Name>
+    <Name Description="Alapja: ISO 1101 - 1983, ISO 7083 - 1983" Language="1038">Bázishely (DIN)</Name>
+    <Name Description="Basato su ISO 1101 - 1983, ISO 7083 - 1983" Language="1040">Riferimento parziale (DIN)</Name>
+    <Name Description="Based on ISO 1101 - 1983, ISO 7083 - 1983" Language="1041">Datum Target (DIN)</Name>
+    <Name Description="ISO 1101 - 1983, ISO 7083 - 1983 기준" Language="1042">데이텀 대상 (DIN)</Name>
+    <Name Description="Na podstawie ISO 1101 - 1983, ISO 7083 - 1983" Language="1045">Odniesienie cząstkowe (DIN)</Name>
+    <Name Description="Baseado na ISO 1101 - 1983, ISO 7083 - 1983" Language="1046">Elemento de referência (DIN)</Name>
+    <Name Description="Согласно ISO 1101 - 1983, ISO 7083 - 1983" Language="1049">Обозначение участка базы (DIN)</Name>
+    <Name Description="基于 ISO 1101 - 1983、ISO 7083 - 1983" Language="2052">基准目标符号 (DIN)</Name>
+    <Name Description="Basado en ISO 1101 - 1983, ISO 7083 - 1983" Language="3082">Referencia parcial (DIN)</Name>
+  </Style>
+
+  <Style AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" BalloonRadiusMultiplier="2" BorderLine="28107" Color="38:38:88:255" ColorByLayer="1" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" FitPrimSuppressLeadZero="0" HatchAngle="0.785398" HatchDist="0.3" HiddenLeaderLine="28101" InternalName="1:Datum Target (DIN) - 3DA&#xA;" OutsideUnderlined="1" PointSize="0.3" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonSetting="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO) - 3DA</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN) - 3DA</SubStyle>
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知。" Language="1028">基準目標 (DIN) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku." Language="1029">Dílčí základna (DIN) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden." Language="1031">Bezugsstelle (DIN) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1033">Datum Target (DIN) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">Référence partielle (DIN) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához." Language="1038">Bázishely (DIN) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">Riferimento parziale (DIN) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1041">Datum Target (DIN) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">데이텀 대상 (DIN) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D." Language="1045">Odniesienie cząstkowe (DIN) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D." Language="1046">Elemento de referência (DIN) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Обозначение участка базы (DIN) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知。" Language="2052">基准目标符号 (DIN) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">Referencia parcial (DIN) - 3DA</Name>
+  </Style>
+
+  <Style AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" BalloonRadiusMultiplier="2" BorderLine="28107" Color="38:38:88:255" ColorByLayer="1" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" FitPrimSuppressLeadZero="0" HatchAngle="0.785398" HatchDist="0.3" HiddenLeaderLine="28101" InternalName="1:Datum Target (GB)&#xA;" OutsideUnderlined="1" PointSize="0.3" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonSetting="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (GB)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 ISO 1101 - 1983，ISO 7083 - 1983" Language="1028">基準目標 (GB)</Name>
+    <Name Description="Podle normy ISO 1101 - 1983, ISO 7083 - 1983" Language="1029">Dílčí základna (GB)</Name>
+    <Name Description="Basiert auf ISO 1101 - 1983, ISO 7083 - 1983" Language="1031">Bezugsstelle (GB)</Name>
+    <Name Description="Based on ISO 1101 - 1983, ISO 7083 - 1983" Language="1033">Datum Target (GB)</Name>
+    <Name Description="En fonction d'ISO 1101 - 1983, ISO 7083 - 1983" Language="1036">Référence partielle (GB)</Name>
+    <Name Description="Alapja: ISO 1101 - 1983, ISO 7083 - 1983" Language="1038">Bázishely (GB)</Name>
+    <Name Description="Basato su ISO 1101 - 1983, ISO 7083 - 1983" Language="1040">Riferimento parziale (GB)</Name>
+    <Name Description="Based on ISO 1101 - 1983, ISO 7083 - 1983" Language="1041">Datum Target (GB)</Name>
+    <Name Description="ISO 1101 - 1983, ISO 7083 - 1983 기준" Language="1042">데이텀 대상 (GB)</Name>
+    <Name Description="Na podstawie ISO 1101 - 1983, ISO 7083 - 1983" Language="1045">Odniesienie cząstkowe (GB)</Name>
+    <Name Description="Baseado na ISO 1101 - 1983, ISO 7083 - 1983" Language="1046">Elemento de referência (GB)</Name>
+    <Name Description="Согласно ISO 1101 - 1983, ISO 7083 - 1983" Language="1049">Обозначение участка базы (GB)</Name>
+    <Name Description="基于 ISO 1101 - 1983、ISO 7083 - 1983" Language="2052">基准目标符号 (GB)</Name>
+    <Name Description="Basado en ISO 1101 - 1983, ISO 7083 - 1983" Language="3082">Referencia parcial (GB)</Name>
+  </Style>
+
+  <Style AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" BalloonRadiusMultiplier="2" BorderLine="28107" Color="38:38:88:255" ColorByLayer="1" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" FitPrimSuppressLeadZero="0" HatchAngle="0.785398" HatchDist="0.3" HiddenLeaderLine="28101" InternalName="1:Datum Target (GOST)&#xA;" OutsideUnderlined="1" PointSize="0.3" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonSetting="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Normale Textgröße (GOST)</SubStyle>
+    <Name Description="根據 ISO 1101 - 1983，ISO 7083 - 1983" Language="1028">基準目標 (GOST)</Name>
+    <Name Description="Podle normy ISO 1101 - 1983, ISO 7083 - 1983" Language="1029">Dílčí základna (GOST)</Name>
+    <Name Description="Basiert auf ISO 1101 - 1983, ISO 7083 - 1983" Language="1031">Bezugsstelle (GOST)</Name>
+    <Name Description="Based on ISO 1101 - 1983, ISO 7083 - 1983" Language="1033">Datum Target (GOST)</Name>
+    <Name Description="En fonction d'ISO 1101 - 1983, ISO 7083 - 1983" Language="1036">Référence partielle (GOST)</Name>
+    <Name Description="Alapja: ISO 1101 - 1983, ISO 7083 - 1983" Language="1038">Bázishely (GOST)</Name>
+    <Name Description="Basato su ISO 1101 - 1983, ISO 7083 - 1983" Language="1040">Riferimento parziale (GOST)</Name>
+    <Name Description="Based on ISO 1101 - 1983, ISO 7083 - 1983" Language="1041">Datum Target (GOST)</Name>
+    <Name Description="ISO 1101 - 1983, ISO 7083 - 1983 기준" Language="1042">데이텀 대상 (GOST)</Name>
+    <Name Description="Na podstawie ISO 1101 - 1983, ISO 7083 - 1983" Language="1045">Odniesienie cząstkowe (GOST)</Name>
+    <Name Description="Baseado na ISO 1101 - 1983, ISO 7083 - 1983" Language="1046">Elemento de referência (GOST)</Name>
+    <Name Description="Согласно ISO 1101 - 1983, ISO 7083 - 1983" Language="1049">Обозначение участка базы (ГОСТ)</Name>
+    <Name Description="基于 ISO 1101 - 1983、ISO 7083 - 1983" Language="2052">基准目标符号 (GOST)</Name>
+    <Name Description="Basado en ISO 1101 - 1983, ISO 7083 - 1983" Language="3082">Referencia parcial (GOST)</Name>
+  </Style>
+
+  <Style AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" BalloonRadiusMultiplier="2" BorderLine="28107" Color="38:38:88:255" ColorByLayer="1" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" FitPrimSuppressLeadZero="0" HatchAngle="0.785398" HatchDist="0.3" HiddenLeaderLine="28101" InternalName="1:Datum Target (ISO)&#xA;" OutsideUnderlined="1" PointSize="0.3" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonSetting="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 ISO 1101 - 1983，ISO 7083 - 1983" Language="1028">基準目標 (ISO)</Name>
+    <Name Description="Podle normy ISO 1101 - 1983, ISO 7083 - 1983" Language="1029">Dílčí základna (ISO)</Name>
+    <Name Description="Basiert auf ISO 1101 - 1983, ISO 7083 - 1983" Language="1031">Bezugsstelle (ISO)</Name>
+    <Name Description="Based on ISO 1101 - 1983, ISO 7083 - 1983" Language="1033">Datum Target (ISO)</Name>
+    <Name Description="En fonction d'ISO 1101 - 1983, ISO 7083 - 1983" Language="1036">Référence partielle (ISO)</Name>
+    <Name Description="Alapja: ISO 1101 - 1983, ISO 7083 - 1983" Language="1038">Bázishely (ISO)</Name>
+    <Name Description="Basato su ISO 1101 - 1983, ISO 7083 - 1983" Language="1040">Riferimento parziale (ISO)</Name>
+    <Name Description="Based on ISO 1101 - 1983, ISO 7083 - 1983" Language="1041">Datum Target (ISO)</Name>
+    <Name Description="ISO 1101 - 1983, ISO 7083 - 1983 기준" Language="1042">데이텀 대상 (ISO)</Name>
+    <Name Description="Na podstawie ISO 1101 - 1983, ISO 7083 - 1983" Language="1045">Odniesienie cząstkowe (ISO)</Name>
+    <Name Description="Baseado na ISO 1101 - 1983, ISO 7083 - 1983" Language="1046">Elemento de referência (ISO)</Name>
+    <Name Description="Согласно ISO 1101 - 1983, ISO 7083 - 1983" Language="1049">Обозначение участка базы (ISO)</Name>
+    <Name Description="基于 ISO 1101 - 1983、ISO 7083 - 1983" Language="2052">基准目标符号 (ISO)</Name>
+    <Name Description="Basado en ISO 1101 - 1983, ISO 7083 - 1983" Language="3082">Referencia parcial (ISO)</Name>
+  </Style>
+
+  <Style AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" BalloonRadiusMultiplier="2" BorderLine="28107" Color="38:38:88:255" ColorByLayer="1" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" FitPrimSuppressLeadZero="0" HatchAngle="0.785398" HatchDist="0.3" HiddenLeaderLine="28101" InternalName="1:Datum Target (ISO) - 3DA&#xA;" OutsideUnderlined="1" PointSize="0.3" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonSetting="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO) - 3DA</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO) - 3DA</SubStyle>
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知。" Language="1028">基準目標 (ISO) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku." Language="1029">Dílčí základna (ISO) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden." Language="1031">Bezugsstelle (ISO) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1033">Datum Target (ISO) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">Référence partielle (ISO) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához." Language="1038">Bázishely (ISO) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">Riferimento parziale (ISO) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1041">Datum Target (ISO) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">데이텀 대상 (ISO) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D." Language="1045">Odniesienie cząstkowe (ISO) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D." Language="1046">Elemento de referência (ISO) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Обозначение участка базы (ISO) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知。" Language="2052">基准目标符号 (ISO) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">Referencia parcial (ISO) - 3DA</Name>
+  </Style>
+
+  <Style AltDecimalMarker="0" AltPrecision="3" AltSuppressLeadZero="0" AltSuppressTrailZero="0" AltUnitType="1" BalloonRadiusMultiplier="2" BorderLine="28107" Color="38:38:88:255" ColorByLayer="1" DisplayAltUnit="0" DisplayAltUnitStr="0" DisplayPrimUnitStr="0" DisplayType="2" EditFlag="0" FitPrimSuppressLeadZero="0" HatchAngle="0.785398" HatchDist="0.3" HiddenLeaderLine="28101" InternalName="1:Datum Target (JIS)&#xA;" OutsideUnderlined="1" PointSize="0.3" PrimDecimalMarker="0" PrimSuppressTrailZero="0" PrimUnitType="3" ScaleToTextHeight="1" Size="1" UseCommonSetting="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (JIS)</SubStyle>
+    <Name Description="根據 JIS B 0021 (1984)" Language="1028">基準目標 (JIS)</Name>
+    <Name Description="Podle normy JIS B 0021 (1984)" Language="1029">Dílčí základna (JIS)</Name>
+    <Name Description="Basiert auf JIS B 0021 (1984)" Language="1031">Bezugsstelle (JIS)</Name>
+    <Name Description="Based on JIS B 0021 (1984)" Language="1033">Datum Target (JIS)</Name>
+    <Name Description="En fonction de JIS B 0021 (1984)" Language="1036">Référence partielle (JIS)</Name>
+    <Name Description="Alapja: JIS B 0021 (1984)" Language="1038">Bázishely (JIS)</Name>
+    <Name Description="Basato su JIS B 0021 (1984)" Language="1040">Riferimento parziale (JIS)</Name>
+    <Name Description="Based on JIS B 0021 (1984)" Language="1041">Datum Target (JIS)</Name>
+    <Name Description="JIS B 0021 (1984) 기준" Language="1042">데이텀 대상 (JIS)</Name>
+    <Name Description="Na podstawie JIS B 0021 (1984)" Language="1045">Odniesienie cząstkowe (JIS)</Name>
+    <Name Description="Baseado na JIS B 0021 (1984)" Language="1046">Elemento de referência (JIS)</Name>
+    <Name Description="Согласно JIS B 0021 (1984)" Language="1049">Обозначение участка базы (JIS)</Name>
+    <Name Description="基于 JIS B 0021 (1984)" Language="2052">基准目标符号 (JIS)</Name>
+    <Name Description="Basado en JIS B 0021 (1984)" Language="3082">Referencia parcial (JIS)</Name>
+  </Style>
+
+</DatumTarget>

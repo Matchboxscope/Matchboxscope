@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<ViewAnnotation Version="1">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style AuxArrowHeadType="4" AuxDefInBaseView="0" AuxDefInBaseView_BrokenAlignment="1" AuxFormat="1" AuxTermTailLength="1" AuxTermXSize="0.5" AuxTermYHeight="0.2" DetailArrowHeadType="4" DetailFormat="1" DetailLeaderDrawTerminator="1" DetailLeaderLineType="28100" DetailLeaderTextAligned="0" DetailLeaderTextUnderlining="0" DetailTermXSize="0.5" DetailTermYHeight="0.2" EditFlag="3" InternalName="1:View Annotation (ANSI-mm)&#xA;" SectionArrowHeadType="4" SectionFormat="1" SectionShowEntireLine="1" SectionTermTailLength="1" SectionTermXSize="0.5" SectionTermYHeight="0.2">
+    <SubStyle Collection="Text" Language="1031" Type="SectionTextStyle">Bezeichnungstext (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="AuxTextStyle">Bezeichnungstext (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="DetailTextStyle">Bezeichnungstext (ANSI)</SubStyle>
+    <Name Description="" Language="1028">視圖註解 (ANSI-mm)</Name>
+    <Name Description="" Language="1029">Zobrazit poznámku (ANSI-mm)</Name>
+    <Name Description="" Language="1031">Ansichtsanmerkung (ANSI-mm)</Name>
+    <Name Description="" Language="1033">View Annotation (ANSI-mm)</Name>
+    <Name Description="" Language="1036">Annotation de la vue (ANSI-mm)</Name>
+    <Name Description="" Language="1038">Nézetfelirat (ANSI-mm)</Name>
+    <Name Description="" Language="1040">Annotazione vista (ANSI-mm)</Name>
+    <Name Description="" Language="1041">View Annotation (ANSI-mm)</Name>
+    <Name Description="" Language="1042">뷰 주석(ANSI-mm)</Name>
+    <Name Description="" Language="1045">Opis widoku (ANSI-mm)</Name>
+    <Name Description="" Language="1046">Anotação de vista (ANSI-mm)</Name>
+    <Name Description="" Language="1049">Аннотация вида (ANSI-мм)</Name>
+    <Name Description="" Language="2052">视图标注 (ANSI-mm)</Name>
+    <Name Description="" Language="3082">Anotación de vista (ANSI-mm)</Name>
+  </Style>
+
+  <Style AuxArrowHeadType="4" AuxDefInBaseView="0" AuxDefInBaseView_BrokenAlignment="1" AuxFormat="1" AuxTermTailLength="1" AuxTermXSize="0.5" AuxTermYHeight="0.2" DetailArrowHeadType="4" DetailFormat="1" DetailLeaderDrawTerminator="1" DetailLeaderLineType="28100" DetailLeaderTextAligned="0" DetailLeaderTextUnderlining="0" DetailTermXSize="0.5" DetailTermYHeight="0.2" EditFlag="3" InternalName="1:View Annotation (ANSI)&#xA;" SectionArrowHeadType="4" SectionFormat="1" SectionShowEntireLine="1" SectionTermTailLength="1" SectionTermXSize="0.5" SectionTermYHeight="0.2">
+    <SubStyle Collection="Text" Language="1031" Type="SectionTextStyle">Bezeichnungstext (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="AuxTextStyle">Bezeichnungstext (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="DetailTextStyle">Bezeichnungstext (ANSI)</SubStyle>
+    <Name Description="" Language="1028">視圖註解 (ANSI)</Name>
+    <Name Description="" Language="1029">Zobrazit poznámku (ANSI)</Name>
+    <Name Description="" Language="1031">Ansichtsanmerkung (ANSI)</Name>
+    <Name Description="" Language="1033">View Annotation (ANSI)</Name>
+    <Name Description="" Language="1036">Annotation de la vue (ANSI)</Name>
+    <Name Description="" Language="1038">Nézetfelirat (ANSI)</Name>
+    <Name Description="" Language="1040">Annotazione vista (ANSI)</Name>
+    <Name Description="" Language="1041">View Annotation (ANSI)</Name>
+    <Name Description="" Language="1042">뷰 주석(ANSI)</Name>
+    <Name Description="" Language="1045">Opis widoku (ANSI)</Name>
+    <Name Description="" Language="1046">Anotação de vista (ANSI)</Name>
+    <Name Description="" Language="1049">Аннотация вида (ANSI)</Name>
+    <Name Description="" Language="2052">视图标注 (ANSI)</Name>
+    <Name Description="" Language="3082">Anotación de vista (ANSI)</Name>
+  </Style>
+
+  <Style AuxArrowHeadType="4" AuxDefInBaseView="1" AuxDefInBaseView_BrokenAlignment="1" AuxFormat="2" AuxTermTailLength="1" AuxTermXSize="0.5" AuxTermYHeight="0.2" DetailArrowHeadType="4" DetailFormat="2" DetailLeaderDrawTerminator="0" DetailLeaderLineType="4294967295" DetailLeaderTextAligned="0" DetailLeaderTextUnderlining="3" DetailTermXSize="0.5" DetailTermYHeight="0.2" EditFlag="3" InternalName="1:View Annotation (BSI)&#xA;" SectionArrowHeadType="4" SectionFormat="2" SectionShowEntireLine="1" SectionTermTailLength="1" SectionTermXSize="0.5" SectionTermYHeight="0.2">
+    <SubStyle Collection="Text" Language="1031" Type="SectionTextStyle">Bezeichnungstext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="AuxTextStyle">Bezeichnungstext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="DetailTextStyle">Bezeichnungstext (ISO)</SubStyle>
+    <Name Description="" Language="1028">視圖註解 (BSI)</Name>
+    <Name Description="" Language="1029">Zobrazit poznámku (BSI)</Name>
+    <Name Description="" Language="1031">Ansichtsanmerkung (BSI)</Name>
+    <Name Description="" Language="1033">View Annotation (BSI)</Name>
+    <Name Description="" Language="1036">Annotation de la vue (BSI)</Name>
+    <Name Description="" Language="1038">Nézetfelirat (BSI)</Name>
+    <Name Description="" Language="1040">Annotazione vista (BSI)</Name>
+    <Name Description="" Language="1041">View Annotation (BSI)</Name>
+    <Name Description="" Language="1042">뷰 주석(BSI)</Name>
+    <Name Description="" Language="1045">Opis widoku (BSI)</Name>
+    <Name Description="" Language="1046">Anotação de vista (BSI)</Name>
+    <Name Description="" Language="1049">Аннотация вида (BSI)</Name>
+    <Name Description="" Language="2052">视图标注 (BSI)</Name>
+    <Name Description="" Language="3082">Anotación de vista (BSI)</Name>
+  </Style>
+
+  <Style AuxArrowHeadType="4" AuxDefInBaseView="1" AuxDefInBaseView_BrokenAlignment="1" AuxFormat="2" AuxTermTailLength="1" AuxTermXSize="0.5" AuxTermYHeight="0.2" DetailArrowHeadType="4" DetailFormat="2" DetailLeaderDrawTerminator="0" DetailLeaderLineType="4294967295" DetailLeaderTextAligned="0" DetailLeaderTextUnderlining="0" DetailTermXSize="0.5" DetailTermYHeight="0.2" EditFlag="3" InternalName="1:View Annotation (DIN)&#xA;" SectionArrowHeadType="4" SectionFormat="2" SectionShowEntireLine="1" SectionTermTailLength="1" SectionTermXSize="0.5" SectionTermYHeight="0.2">
+    <SubStyle Collection="Text" Language="1031" Type="SectionTextStyle">Bezeichnungstext (DIN)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="AuxTextStyle">Bezeichnungstext (DIN)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="DetailTextStyle">Bezeichnungstext (DIN)</SubStyle>
+    <Name Description="" Language="1028">視圖註解 (DIN)</Name>
+    <Name Description="" Language="1029">Zobrazit poznámku (DIN)</Name>
+    <Name Description="" Language="1031">Ansichtsanmerkung (DIN)</Name>
+    <Name Description="" Language="1033">View Annotation (DIN)</Name>
+    <Name Description="" Language="1036">Annotation de la vue (DIN)</Name>
+    <Name Description="" Language="1038">Nézetfelirat (DIN)</Name>
+    <Name Description="" Language="1040">Annotazione vista (DIN)</Name>
+    <Name Description="" Language="1041">View Annotation (DIN)</Name>
+    <Name Description="" Language="1042">뷰 주석(DIN)</Name>
+    <Name Description="" Language="1045">Opis widoku (DIN)</Name>
+    <Name Description="" Language="1046">Anotação de vista (DIN)</Name>
+    <Name Description="" Language="1049">Аннотация вида (DIN)</Name>
+    <Name Description="" Language="2052">视图标注 (DIN)</Name>
+    <Name Description="" Language="3082">Anotación de vista (DIN)</Name>
+  </Style>
+
+  <Style AuxArrowHeadType="4" AuxDefInBaseView="1" AuxDefInBaseView_BrokenAlignment="1" AuxFormat="2" AuxTermTailLength="2.6" AuxTermXSize="0.8" AuxTermYHeight="0.2" DetailArrowHeadType="4" DetailFormat="2" DetailLeaderDrawTerminator="0" DetailLeaderLineType="4294967295" DetailLeaderTextAligned="0" DetailLeaderTextUnderlining="2" DetailTermXSize="0.8" DetailTermYHeight="0.2" EditFlag="3" InternalName="1:View Annotation (GB)&#xA;" SectionArrowHeadType="4" SectionFormat="3" SectionShowEntireLine="0" SectionTermTailLength="1.6" SectionTermXSize="0.8" SectionTermYHeight="0.2">
+    <SubStyle Collection="Text" Language="1031" Type="SectionTextStyle">Bezeichnungstext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="AuxTextStyle">Bezeichnungstext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="DetailTextStyle">Bezeichnungstext (ISO)</SubStyle>
+    <Name Description="" Language="1028">視圖註解 (GB)</Name>
+    <Name Description="" Language="1029">Zobrazit poznámku (GB)</Name>
+    <Name Description="" Language="1031">Ansichtsanmerkung (GB)</Name>
+    <Name Description="" Language="1033">View Annotation (GB)</Name>
+    <Name Description="" Language="1036">Annotation de la vue (GB)</Name>
+    <Name Description="" Language="1038">Nézetfelirat (GB)</Name>
+    <Name Description="" Language="1040">Annotazione vista (GB)</Name>
+    <Name Description="" Language="1041">View Annotation (GB)</Name>
+    <Name Description="" Language="1042">뷰 주석(GB)</Name>
+    <Name Description="" Language="1045">Opis widoku (GB)</Name>
+    <Name Description="" Language="1046">Anotação de vista (GB)</Name>
+    <Name Description="" Language="1049">Аннотация вида (GB)</Name>
+    <Name Description="" Language="2052">视图标注 (GB)</Name>
+    <Name Description="" Language="3082">Anotación de vista (GB)</Name>
+  </Style>
+
+  <Style AuxArrowHeadType="4" AuxDefInBaseView="1" AuxDefInBaseView_BrokenAlignment="1" AuxFormat="2" AuxTermTailLength="1.5" AuxTermXSize="0.6" AuxTermYHeight="0.2" DetailArrowHeadType="4" DetailFormat="2" DetailLeaderDrawTerminator="0" DetailLeaderLineType="4294967295" DetailLeaderTextAligned="0" DetailLeaderTextUnderlining="2" DetailTermXSize="0.6" DetailTermYHeight="0.2" EditFlag="3" InternalName="1:View Annotation (GOST)&#xA;" SectionArrowHeadType="4" SectionFormat="4" SectionShowEntireLine="0" SectionTermTailLength="1.5" SectionTermXSize="0.6" SectionTermYHeight="0.2">
+    <SubStyle Collection="Text" Language="1031" Type="SectionTextStyle">Vergrößerter Text (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="AuxTextStyle">Vergrößerter Text (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="DetailTextStyle">Vergrößerter Text (GOST)</SubStyle>
+    <Name Description="" Language="1028">視圖註解 (GOST)</Name>
+    <Name Description="" Language="1029">Zobrazit poznámku (GOST)</Name>
+    <Name Description="" Language="1031">Ansichtsanmerkung (GOST)</Name>
+    <Name Description="" Language="1033">View Annotation (GOST)</Name>
+    <Name Description="" Language="1036">Annotation de la vue (GOST)</Name>
+    <Name Description="" Language="1038">Nézetfelirat (GOST)</Name>
+    <Name Description="" Language="1040">Annotazione vista (GOST)</Name>
+    <Name Description="" Language="1041">View Annotation (GOST)</Name>
+    <Name Description="" Language="1042">뷰 주석(GOST)</Name>
+    <Name Description="" Language="1045">Opis widoku (GOST)</Name>
+    <Name Description="" Language="1046">Anotação de vista (GOST)</Name>
+    <Name Description="" Language="1049">Аннотация вида (ГОСТ)</Name>
+    <Name Description="" Language="2052">视图标注 (GOST)</Name>
+    <Name Description="" Language="3082">Anotación de vista (GOST)</Name>
+  </Style>
+
+  <Style AuxArrowHeadType="4" AuxDefInBaseView="1" AuxDefInBaseView_BrokenAlignment="1" AuxFormat="2" AuxTermTailLength="0.5" AuxTermXSize="0.25" AuxTermYHeight="0.1" DetailArrowHeadType="4" DetailFormat="2" DetailLeaderDrawTerminator="0" DetailLeaderLineType="4294967295" DetailLeaderTextAligned="0" DetailLeaderTextUnderlining="3" DetailTermXSize="0.25" DetailTermYHeight="0.1" EditFlag="3" InternalName="1:View Annotation (ISO)&#xA;" SectionArrowHeadType="4" SectionFormat="2" SectionShowEntireLine="1" SectionTermTailLength="0.5" SectionTermXSize="0.25" SectionTermYHeight="0.1">
+    <SubStyle Collection="Text" Language="1031" Type="SectionTextStyle">Bezeichnungstext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="AuxTextStyle">Bezeichnungstext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="DetailTextStyle">Bezeichnungstext (ISO)</SubStyle>
+    <Name Description="" Language="1028">視圖註解 (ISO)</Name>
+    <Name Description="" Language="1029">Zobrazit poznámku (ISO)</Name>
+    <Name Description="" Language="1031">Ansichtsanmerkung (ISO)</Name>
+    <Name Description="" Language="1033">View Annotation (ISO)</Name>
+    <Name Description="" Language="1036">Annotation de la vue (ISO)</Name>
+    <Name Description="" Language="1038">Nézetfelirat (ISO)</Name>
+    <Name Description="" Language="1040">Annotazione vista (ISO)</Name>
+    <Name Description="" Language="1041">View Annotation (ISO)</Name>
+    <Name Description="" Language="1042">뷰 주석(ISO)</Name>
+    <Name Description="" Language="1045">Opis widoku (ISO)</Name>
+    <Name Description="" Language="1046">Anotação de vista (ISO)</Name>
+    <Name Description="" Language="1049">Аннотация вида (ISO)</Name>
+    <Name Description="" Language="2052">视图标注 (ISO)</Name>
+    <Name Description="" Language="3082">Anotación de vista (ISO)</Name>
+  </Style>
+
+  <Style AuxArrowHeadType="1" AuxDefInBaseView="1" AuxDefInBaseView_BrokenAlignment="1" AuxFormat="2" AuxTermTailLength="0.5" AuxTermXSize="0.25" AuxTermYHeight="0.1" DetailArrowHeadType="1" DetailFormat="2" DetailLeaderDrawTerminator="0" DetailLeaderLineType="4294967295" DetailLeaderTextAligned="0" DetailLeaderTextUnderlining="1" DetailTermXSize="0.25" DetailTermYHeight="0.1" EditFlag="3" InternalName="1:View Annotation (JIS)&#xA;" SectionArrowHeadType="1" SectionFormat="2" SectionShowEntireLine="1" SectionTermTailLength="0.5" SectionTermXSize="0.25" SectionTermYHeight="0.1">
+    <SubStyle Collection="Text" Language="1031" Type="SectionTextStyle">Bezeichnungstext (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="AuxTextStyle">Bezeichnungstext (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="DetailTextStyle">Bezeichnungstext (JIS)</SubStyle>
+    <Name Description="" Language="1028">視圖註解 (JIS)</Name>
+    <Name Description="" Language="1029">Zobrazit poznámku (JIS)</Name>
+    <Name Description="" Language="1031">Ansichtsanmerkung (JIS)</Name>
+    <Name Description="" Language="1033">View Annotation (JIS)</Name>
+    <Name Description="" Language="1036">Annotation de la vue (JIS)</Name>
+    <Name Description="" Language="1038">Nézetfelirat (JIS)</Name>
+    <Name Description="" Language="1040">Annotazione vista (JIS)</Name>
+    <Name Description="" Language="1041">View Annotation (JIS)</Name>
+    <Name Description="" Language="1042">뷰 주석(JIS)</Name>
+    <Name Description="" Language="1045">Opis widoku (JIS)</Name>
+    <Name Description="" Language="1046">Anotação de vista (JIS)</Name>
+    <Name Description="" Language="1049">Аннотация вида (JIS)</Name>
+    <Name Description="" Language="2052">视图标注 (JIS)</Name>
+    <Name Description="" Language="3082">Anotación de vista (JIS)</Name>
+  </Style>
+
+  <Style AuxArrowHeadType="4" AuxDefInBaseView="1" AuxDefInBaseView_BrokenAlignment="1" AuxFormat="2" AuxTermTailLength="0.5" AuxTermXSize="0.25" AuxTermYHeight="0.1" DetailArrowHeadType="4" DetailFormat="2" DetailLeaderDrawTerminator="0" DetailLeaderLineType="4294967295" DetailLeaderTextAligned="0" DetailLeaderTextUnderlining="0" DetailTermXSize="0.25" DetailTermYHeight="0.1" EditFlag="3" InternalName="1:Ansichtsanmerkung (Objektstandards (DIN))&#xA;" SectionArrowHeadType="4" SectionFormat="2" SectionShowEntireLine="0" SectionTermTailLength="0.5" SectionTermXSize="0.25" SectionTermYHeight="0.1">
+    <SubStyle Collection="Text" Language="1031" Type="SectionTextStyle">Bezeichnungstext (DIN)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="AuxTextStyle">Bezeichnungstext (DIN)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="DetailTextStyle">Bezeichnungstext (DIN)</SubStyle>
+    <Name Description="" Language="1031">Ansichtsanmerkung (Standardnorm (DIN))</Name>
+  </Style>
+
+</ViewAnnotation>

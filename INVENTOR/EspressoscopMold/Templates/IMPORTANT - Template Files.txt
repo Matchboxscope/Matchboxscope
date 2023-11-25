@@ -1,0 +1,11 @@
+WICHTIGE INFORMATIONEN FÜR BENUTZER VON MEHREREN LANGUAGE PACKS
+
+Gilt für:
+ - Alle Benutzer, die mehrere Language Packs installieren und den Vorgabe-Installationsspeicherort für Vorlagen beibehalten (C:\Users\Public\Documents\Autodesk\Inventor release year\Templates).
+ - Alle Benutzer, die benutzerdefinierte Vorlagen im Ordner C:\Users\Public\Documents\Autodesk\Inventor release year\Templates speichern und verwenden.
+
+Inventor unterstützt seit vielen Versionen Language Packs. Dies erlaubt die Installation von mehreren Sprachen unter einer einzigen Inventor-Installation und den Wechsel zwischen ihnen über das Startmenü (unter Verwendung eines /language-Parameters).  
+
+Obwohl die Language Packs lokalisierte Vorlagendateien installieren, wurde beim Starten verschiedener Sprachversionen von Inventor nicht angepasst, welche Vorlagen als Vorgabe verwendet werden. 
+
+Ab Inventor 2020 werden alle Sprachpakete installiert und gleich gehandhabt. Es ist nicht mehr erforderlich, die Vorlagen in den übergeordneten Ordner zu kopieren, da der Pfad zur Vorlagendatei aktualisiert wird, sobald Sie zu einer anderen Sprache wechseln. Dies vereinfacht die Verwendung und Pflege von sowohl vorgabemäßigen als auch benutzerdefinierten Vorlagen. 

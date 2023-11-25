@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<Balloon Version="4">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style DefaultType="2" EditFlag="0" InternalName="1:Balloon (ANSI)&#xA;" OffsetSpacing="0.4572" ScaleToTextHeight="1" Size="0.9144" StretchBallonToText="1" UDSName="">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ANSI)</SubStyle>
+    <SubStyle Collection="Leader" Language="1031" Type="AltLeaderStyle">Alternativ (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ANSI)</SubStyle>
+    <ColumnItems>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="0" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1045" String="ELEMENT"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1041 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="Поз."/>
+          <Item Language="1028" String="項目"/>
+          <Item Language="2052" String="项目"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="0" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033 1041" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="Кол."/>
+          <Item Language="2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+    </ColumnItems>
+    <Name Description="根據 ASME Y14.36M - 1989" Language="1028">件號 (ANSI)</Name>
+    <Name Description="Podle normy ASME Y14.36M - 1989" Language="1029">Pozice (ANSI)</Name>
+    <Name Description="Basiert auf ASME Y14.36M - 1989" Language="1031">Positionsnummer (ANSI)</Name>
+    <Name Description="Based on ASME Y14.36M - 1989" Language="1033">Balloon (ANSI)</Name>
+    <Name Description="En fonction d'ASME Y14.36M - 1989" Language="1036">Repère (ANSI)</Name>
+    <Name Description="Alapja: ASME Y14.36M - 1989" Language="1038">Tételszám (ANSI)</Name>
+    <Name Description="Basato su ASME Y14.36M - 1989" Language="1040">Numero di riferimento (ANSI)</Name>
+    <Name Description="Based on ASME Y14.36M - 1989" Language="1041">Balloon (ANSI)</Name>
+    <Name Description="ASME Y14.36M - 1989 기준" Language="1042">품번기호 (ANSI)</Name>
+    <Name Description="Na podstawie ASME Y14.36M - 1989" Language="1045">Numerator (ANSI)</Name>
+    <Name Description="Baseado na ASME Y14.36M - 1989" Language="1046">Balão de referência (ANSI)</Name>
+    <Name Description="Согласно ASME Y14.36M - 1989" Language="1049">Номер позиции (ANSI)</Name>
+    <Name Description="基于 ASME Y14.36M - 1989" Language="2052">引出序号 (ANSI)</Name>
+    <Name Description="Basado en ASME Y14.36M - 1989" Language="3082">Referencia numérica (ANSI)</Name>
+  </Style>
+
+  <Style DefaultType="2" EditFlag="0" InternalName="1:Balloon (BSI)&#xA;" OffsetSpacing="1.05" ScaleToTextHeight="1" Size="0.525" StretchBallonToText="1" UDSName="">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (BSI)</SubStyle>
+    <SubStyle Collection="Leader" Language="1031" Type="AltLeaderStyle">Alternativ (BSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <ColumnItems>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="0" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1045" String="ELEMENT"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1041 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ПОЗ"/>
+          <Item Language="1028" String="項目"/>
+          <Item Language="2052" String="项目"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="0" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033 1041" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ"/>
+          <Item Language="2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+    </ColumnItems>
+    <Name Description="根據 BS 142 - 1992" Language="1028">件號 (BSI)</Name>
+    <Name Description="Podle normy BS 142 - 1992" Language="1029">Pozice (BSI)</Name>
+    <Name Description="Basiert auf BS 142 - 1992" Language="1031">Positionsnummer (BSI)</Name>
+    <Name Description="Based on BS 142 - 1992" Language="1033">Balloon (BSI)</Name>
+    <Name Description="En fonction de BS 142 - 1992" Language="1036">Repère (BSI)</Name>
+    <Name Description="Alapja: BS 142 - 1992" Language="1038">Tételszám (BSI)</Name>
+    <Name Description="Basato su BS 142 - 1992" Language="1040">Numero di riferimento (BSI)</Name>
+    <Name Description="Based on BS 142 - 1992" Language="1041">Balloon (BSI)</Name>
+    <Name Description="BS 142 - 1992 기준" Language="1042">품번기호 (BSI)</Name>
+    <Name Description="Na podstawie BS 142 - 1992" Language="1045">Numerator (BSI)</Name>
+    <Name Description="Baseado na BS 142 - 1992" Language="1046">Balão de referência (BSI)</Name>
+    <Name Description="Согласно BS 142 - 1992" Language="1049">Номер позиции (BSI)</Name>
+    <Name Description="基于 BS 142 - 1992" Language="2052">引出序号 (BSI)</Name>
+    <Name Description="Basado en BS 142 - 1992" Language="3082">Referencia numérica (BSI)</Name>
+  </Style>
+
+  <Style DefaultType="2" EditFlag="0" InternalName="1:Balloon (DIN)&#xA;" OffsetSpacing="0.5" ScaleToTextHeight="1" Size="0.525" StretchBallonToText="1" UDSName="">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Leader" Language="1031" Type="AltLeaderStyle">Alternativ (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN)</SubStyle>
+    <ColumnItems>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="0" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="OBJEKT"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1031" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="0" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName>
+          <Item Language="1031" String=""/>
+        </SubstitutePropertyExternalName>
+      </ColumnItem>
+    </ColumnItems>
+    <Name Description="根據 DIN 6771 - 1987" Language="1028">件號 (DIN)</Name>
+    <Name Description="Podle normy DIN 6771 - 1987" Language="1029">Pozice (DIN)</Name>
+    <Name Description="Basiert auf DIN 6771 - 1987" Language="1031">Positionsnummer (DIN)</Name>
+    <Name Description="Based on DIN 6771 - 1987" Language="1033">Balloon (DIN)</Name>
+    <Name Description="En fonction de DIN 6771 - 1987" Language="1036">Repère (DIN)</Name>
+    <Name Description="Alapja: DIN 6771 - 1987" Language="1038">Tételszám (DIN)</Name>
+    <Name Description="Basato su DIN 6771 - 1987" Language="1040">Numero di riferimento (DIN)</Name>
+    <Name Description="Based on DIN 6771 - 1987" Language="1041">Balloon (DIN)</Name>
+    <Name Description="DIN 6771 - 1987 기준" Language="1042">품번기호 (DIN)</Name>
+    <Name Description="Na podstawie DIN 6771 - 1987" Language="1045">Numerator (DIN)</Name>
+    <Name Description="Baseado na DIN 6771 - 1987" Language="1046">Balão de referência (DIN)</Name>
+    <Name Description="Согласно DIN 6771 - 1987" Language="1049">Номер позиции (DIN)</Name>
+    <Name Description="基于 DIN 6771 - 1987" Language="2052">引出序号 (DIN)</Name>
+    <Name Description="Basado en DIN 6771 - 1987" Language="3082">Referencia numérica (DIN)</Name>
+  </Style>
+
+  <Style DefaultType="4" EditFlag="0" InternalName="1:Balloon (GB)&#xA;" OffsetSpacing="1.05" ScaleToTextHeight="1" Size="0.525" StretchBallonToText="1" UDSName="">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (GB)</SubStyle>
+    <SubStyle Collection="Leader" Language="1031" Type="AltLeaderStyle">Alternativ (GB)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <ColumnItems>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="0" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1045" String="ELEMENT"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1041 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ПОЗ"/>
+          <Item Language="1028" String="項目"/>
+          <Item Language="2052" String="项目"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="0" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033 1041" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ"/>
+          <Item Language="2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+    </ColumnItems>
+    <Name Description="根據 GB/T 4458.2-84" Language="1028">件號 (GB)</Name>
+    <Name Description="Podle normy GB/T 4458.2-84" Language="1029">Pozice (GB)</Name>
+    <Name Description="Basiert auf GB/T 4458.2-84" Language="1031">Positionsnummer (GB)</Name>
+    <Name Description="Based on GB/T 4458.2-84" Language="1033">Balloon (GB)</Name>
+    <Name Description="En fonction de GB/T 4458.2-84" Language="1036">Repère (GB)</Name>
+    <Name Description="Alapja: GB/T 4458.2-84" Language="1038">Tételszám (GB)</Name>
+    <Name Description="Basato su GB/T 4458.2-84" Language="1040">Numero di riferimento (GB)</Name>
+    <Name Description="Based on GB/T 4458.2-84" Language="1041">Balloon (GB)</Name>
+    <Name Description="GB/T 4458.2-84 기준" Language="1042">품번기호 (GB)</Name>
+    <Name Description="Na podstawie GB/T 4458.2-84" Language="1045">Numerator (GB)</Name>
+    <Name Description="Baseado na GB/T 4458.2-84" Language="1046">Balão de referência (GB)</Name>
+    <Name Description="Согласно GB/T 4458.2-84" Language="1049">Номер позиции (GB)</Name>
+    <Name Description="基于 GB/T 4458.2-84" Language="2052">引出序号 (GB)</Name>
+    <Name Description="Basado en GB/T 4458.2-84" Language="3082">Referencia numérica (GB)</Name>
+  </Style>
+
+  <Style DefaultType="4" EditFlag="0" InternalName="1:Balloon (GOST)&#xA;" OffsetSpacing="1" ScaleToTextHeight="1" Size="1.5875" StretchBallonToText="1" UDSName="">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (GOST)</SubStyle>
+    <SubStyle Collection="Leader" Language="1031" Type="AltLeaderStyle">Alternativ (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Vergrößerter Text (GOST)</SubStyle>
+    <ColumnItems>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="0" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1045" String="ELEMENT"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1041 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ПОЗ"/>
+          <Item Language="1028" String="項目"/>
+          <Item Language="2052" String="项目"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="0" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033 1041" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ"/>
+          <Item Language="2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+    </ColumnItems>
+    <Name Description="" Language="1028">件號 (GOST)</Name>
+    <Name Description="" Language="1029">Pozice (GOST)</Name>
+    <Name Description="" Language="1031">Positionsnummer (GOST)</Name>
+    <Name Description="" Language="1033">Balloon (GOST)</Name>
+    <Name Description="" Language="1036">Repère (GOST)</Name>
+    <Name Description="" Language="1038">Tételszám (GOST)</Name>
+    <Name Description="" Language="1040">Numero di riferimento (GOST)</Name>
+    <Name Description="" Language="1041">Balloon (GOST)</Name>
+    <Name Description="" Language="1042">품번기호 (GOST)</Name>
+    <Name Description="" Language="1045">Numerator (GOST)</Name>
+    <Name Description="" Language="1046">Balão de referência (GOST)</Name>
+    <Name Description="" Language="1049">Номер позиции (ГОСТ)</Name>
+    <Name Description="" Language="2052">引出序号 (GOST)</Name>
+    <Name Description="" Language="3082">Referencia numérica (GOST)</Name>
+  </Style>
+
+  <Style DefaultType="2" EditFlag="0" InternalName="1:Balloon (ISO)&#xA;" OffsetSpacing="1.05" ScaleToTextHeight="1" Size="0.525" StretchBallonToText="1" UDSName="">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Leader" Language="1031" Type="AltLeaderStyle">Alternativ (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <ColumnItems>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="0" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1045" String="ELEMENT"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1041 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ПОЗ"/>
+          <Item Language="1028" String="項目"/>
+          <Item Language="2052" String="项目"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="0" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033 1041" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ"/>
+          <Item Language="2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+    </ColumnItems>
+    <Name Description="根據 ISO 7573 - 1983" Language="1028">件號 (ISO)</Name>
+    <Name Description="Podle normy ISO 7573 - 1983" Language="1029">Pozice (ISO)</Name>
+    <Name Description="Basiert auf ISO 7573 - 1983" Language="1031">Positionsnummer (ISO)</Name>
+    <Name Description="Based on ISO 7573 - 1983" Language="1033">Balloon (ISO)</Name>
+    <Name Description="En fonction d'ISO 7573 - 1983" Language="1036">Repère (ISO)</Name>
+    <Name Description="Alapja: ISO 7573 - 1983" Language="1038">Tételszám (ISO)</Name>
+    <Name Description="Basato su ISO 7573 - 1983" Language="1040">Numero di riferimento (ISO)</Name>
+    <Name Description="Based on ISO 7573 - 1983" Language="1041">Balloon (ISO)</Name>
+    <Name Description="ISO 7573 - 1983 기준" Language="1042">품번기호 (ISO)</Name>
+    <Name Description="Na podstawie ISO 7573 - 1983" Language="1045">Numerator (ISO)</Name>
+    <Name Description="Baseado na ISO 7573 - 1983" Language="1046">Balão de referência (ISO)</Name>
+    <Name Description="Согласно ISO 7573 - 1983" Language="1049">Номер позиции (ISO)</Name>
+    <Name Description="基于 ISO 7573 - 1983" Language="2052">引出序号 (ISO)</Name>
+    <Name Description="Basado en ISO 7573 - 1983" Language="3082">Referencia numérica (ISO)</Name>
+  </Style>
+
+  <Style DefaultType="2" EditFlag="0" InternalName="1:Balloon (JIS)&#xA;" OffsetSpacing="1.35" ScaleToTextHeight="1" Size="0.7" StretchBallonToText="1" UDSName="">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (JIS)</SubStyle>
+    <SubStyle Collection="Leader" Language="1031" Type="AltLeaderStyle">Alternativ (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (JIS)</SubStyle>
+    <ColumnItems>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="OBJEKT" HeadingFromDataSource="0" HeadingJustification="0" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1036" String="ARTICLE"/>
+          <Item Language="1045" String="ELEMENT"/>
+          <Item Language="1040 3082" String="ELEMENTO"/>
+          <Item Language="1033 1041 1046" String="ITEM"/>
+          <Item Language="1031" String="OBJEKT"/>
+          <Item Language="1029" String="POLOŽKA"/>
+          <Item Language="1038" String="TÉTEL"/>
+          <Item Language="1049" String="ПОЗ"/>
+          <Item Language="1028" String="項目"/>
+          <Item Language="2052" String="项目"/>
+          <Item Language="1042" String="항목"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="2.54" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ANZAHL" HeadingFromDataSource="0" HeadingJustification="0" IsString="1" LeadingZeros="0" Precision="3" PropertyID="2" PropertyMemberID="" PropertySet="{BEB6B91C-AF44-4f9b-AD9E-1E0570A168F9}" Substitute="0" SubstituteDecimalType="0" SubstituteDisplayUnit="1" SubstituteFractionStackScale="0.7" SubstituteFractionStackStyle="-1" SubstituteFractionalFormat="0" SubstituteLeadingZeros="0" SubstituteMergeResult="0" SubstitutePrecision="3" SubstitutePropertyID="" SubstitutePropertyMemberID="" SubstitutePropertySet="" SubstituteTrailingZeros="0" SubstituteUnitFormat="0" SubstituteUnitType="5" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="0">
+        <PropertyExternalName>
+          <Item Language="1031" String="ANZAHL"/>
+          <Item Language="3082" String="CTDAD"/>
+          <Item Language="1038" String="DB"/>
+          <Item Language="1045" String="ILOŚĆ"/>
+          <Item Language="1029" String="KS"/>
+          <Item Language="1046" String="QTDE"/>
+          <Item Language="1036" String="QTE"/>
+          <Item Language="1033 1041" String="QTY"/>
+          <Item Language="1040" String="QTÀ"/>
+          <Item Language="1049" String="КОЛ"/>
+          <Item Language="2052" String="数量"/>
+          <Item Language="1028" String="數量"/>
+          <Item Language="1042" String="수량"/>
+        </PropertyExternalName>
+        <SubstitutePropertyExternalName/>
+      </ColumnItem>
+    </ColumnItems>
+    <Name Description="根據 ISO 7573 - 1983" Language="1028">件號 (JIS)</Name>
+    <Name Description="Podle normy ISO 7573 - 1983" Language="1029">Pozice (JIS)</Name>
+    <Name Description="Basiert auf ISO 7573 - 1983" Language="1031">Positionsnummer (JIS)</Name>
+    <Name Description="Based on ISO 7573 - 1983" Language="1033">Balloon (JIS)</Name>
+    <Name Description="En fonction d'ISO 7573 - 1983" Language="1036">Repère (JIS)</Name>
+    <Name Description="Alapja: ISO 7573 - 1983" Language="1038">Tételszám (JIS)</Name>
+    <Name Description="Basato su ISO 7573 - 1983" Language="1040">Numero di riferimento (JIS)</Name>
+    <Name Description="Based on ISO 7573 - 1983" Language="1041">Balloon (JIS)</Name>
+    <Name Description="ISO 7573 - 1983 기준" Language="1042">품번기호 (JIS)</Name>
+    <Name Description="Na podstawie ISO 7573 - 1983" Language="1045">Numerator (JIS)</Name>
+    <Name Description="Baseado na ISO 7573 - 1983" Language="1046">Balão de referência (JIS)</Name>
+    <Name Description="Согласно ISO 7573 - 1983" Language="1049">Номер позиции (JIS)</Name>
+    <Name Description="基于 ISO 7573 - 1983" Language="2052">引出序号 (JIS)</Name>
+    <Name Description="Basado en ISO 7573 - 1983" Language="3082">Referencia numérica (JIS)</Name>
+  </Style>
+
+</Balloon>

@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<SurfaceTexture Version="3">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style AllowAllAround="0" Direction="127" DraftingStandard="1" EditFlag="0" ForceTail="0" InternalName="1:Surface Texture (ANSI)&#xA;" MajorityAllowed="0" MajorityType="0" Multiline="0" Symbol="0">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ANSI)</SubStyle>
+    <Name Description="根據 ASME Y14.36M - 1996" Language="1028">表面加工 (ANSI)</Name>
+    <Name Description="Podle normy ASME Y14.36M - 1996" Language="1029">Drsnost (ANSI)</Name>
+    <Name Description="Basiert auf ASME Y14.36M - 1996" Language="1031">Oberflächenbeschaffenheit (ANSI)</Name>
+    <Name Description="Based on ASME Y14.36M - 1996" Language="1033">Surface Texture (ANSI)</Name>
+    <Name Description="En fonction d'ASME Y14.36M - 1996" Language="1036">Etat de surface (ANSI)</Name>
+    <Name Description="Alapja: ASME Y14.36M - 1996" Language="1038">Felületi minőség (ANSI)</Name>
+    <Name Description="Basato su ASME Y14.36M - 1996" Language="1040">Stato della superficie (ANSI)</Name>
+    <Name Description="Based on ASME Y14.36M - 1996" Language="1041">Surface Texture (ANSI)</Name>
+    <Name Description="ASME Y14.36M - 1996 기준" Language="1042">표면 텍스처 (ANSI)</Name>
+    <Name Description="Na podstawie ASME Y14.36M - 1996" Language="1045">Tekstura powierzchni (ANSI)</Name>
+    <Name Description="Baseado na ASME Y14.36M - 1996" Language="1046">Textura da superfície (ANSI)</Name>
+    <Name Description="Согласно ASME Y14.36M - 1996" Language="1049">Шероховатость (ANSI)</Name>
+    <Name Description="基于 ASME Y14.36M - 1996" Language="2052">表面粗糙度符号 (ANSI)</Name>
+    <Name Description="Basado en ASME Y14.36M - 1996" Language="3082">Acabado superficial (ANSI)</Name>
+  </Style>
+
+  <Style AllowAllAround="0" Direction="127" DraftingStandard="1" EditFlag="0" ForceTail="0" InternalName="1:Surface Texture (ANSI) - 3DA&#xA;" MajorityAllowed="0" MajorityType="0" Multiline="0" Symbol="0">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ANSI) - 3DA</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ANSI) - 3DA</SubStyle>
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知。" Language="1028">表面加工 (ANSI) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku." Language="1029">Drsnost (ANSI) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden." Language="1031">Oberflächenbeschaffenheit (ANSI) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1033">Surface Texture (ANSI) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">Etat de surface (ANSI) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához." Language="1038">Felületi minőség (ANSI) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">Stato della superficie (ANSI) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1041">Surface Texture (ANSI) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">표면 텍스처 (ANSI) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D." Language="1045">Tekstura powierzchni (ANSI) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D." Language="1046">Textura da superfície (ANSI) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Шероховатость (ANSI) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知。" Language="2052">表面粗糙度符号 (ANSI) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">Acabado superficial (ANSI) - 3DA</Name>
+  </Style>
+
+  <Style AllowAllAround="0" Direction="63" DraftingStandard="8" EditFlag="0" ForceTail="0" InternalName="1:Surface Texture (BSI)&#xA;" MajorityAllowed="0" MajorityType="0" Multiline="0" Symbol="0">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (BSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 BS EN ISO 1302-2002" Language="1028">表面加工 (BSI)</Name>
+    <Name Description="Podle normy BS EN ISO 1302-2002" Language="1029">Drsnost (BSI)</Name>
+    <Name Description="Basiert auf BS EN ISO 1302-2002" Language="1031">Oberflächenbeschaffenheit (BSI)</Name>
+    <Name Description="Based on BS EN ISO 1302-2002" Language="1033">Surface Texture (BSI)</Name>
+    <Name Description="En fonction de BS EN ISO 1302-2002" Language="1036">Etat de surface (BSI)</Name>
+    <Name Description="Alapja: BS EN ISO 1302-2002" Language="1038">Felületi minőség (BSI)</Name>
+    <Name Description="Basato su BS EN ISO 1302-2002" Language="1040">Stato della superficie (BSI)</Name>
+    <Name Description="Based on BS EN ISO 1302-2002" Language="1041">Surface Texture (BSI)</Name>
+    <Name Description="BS EN ISO 1302-2002 기준" Language="1042">표면 텍스처 (BSI)</Name>
+    <Name Description="Na podstawie BS EN ISO 1302-2002" Language="1045">Tekstura powierzchni (BSI)</Name>
+    <Name Description="Baseado na BS EN ISO 1302-2002" Language="1046">Textura da superfície (BSI)</Name>
+    <Name Description="Согласно BS EN ISO 1302-2002" Language="1049">Шероховатость (BSI)</Name>
+    <Name Description="基于 BS EN ISO 1302-2002" Language="2052">表面粗糙度符号 (BSI)</Name>
+    <Name Description="Basado en BS EN ISO 1302-2002" Language="3082">Acabado superficial (BSI)</Name>
+  </Style>
+
+  <Style AllowAllAround="0" Direction="127" DraftingStandard="9" EditFlag="0" ForceTail="0" InternalName="1:Surface Texture (DIN)&#xA;" MajorityAllowed="0" MajorityType="0" Multiline="0" Symbol="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN)</SubStyle>
+    <Name Description="根據 DIN ISO 1302 - 2002" Language="1028">表面加工 (DIN)</Name>
+    <Name Description="Podle normy DIN ISO 1302 - 2002" Language="1029">Drsnost (DIN)</Name>
+    <Name Description="Basiert auf DIN ISO 1302 - 2002" Language="1031">Oberflächenbeschaffenheit (DIN)</Name>
+    <Name Description="Based on DIN ISO 1302 - 2002" Language="1033">Surface Texture (DIN)</Name>
+    <Name Description="En fonction de DIN ISO 1302 - 2002" Language="1036">Etat de surface (DIN)</Name>
+    <Name Description="Alapja: DIN ISO 1302 - 2002" Language="1038">Felületi minőség (DIN)</Name>
+    <Name Description="Basato su DIN ISO 1302 - 2002" Language="1040">Stato della superficie (DIN)</Name>
+    <Name Description="Based on DIN ISO 1302 - 2002" Language="1041">Surface Texture (DIN)</Name>
+    <Name Description="DIN ISO 1302 - 2002 기준" Language="1042">표면 텍스처 (DIN)</Name>
+    <Name Description="Na podstawie DIN ISO 1302 - 2002" Language="1045">Tekstura powierzchni (DIN)</Name>
+    <Name Description="Baseado na DIN ISO 1302 - 2002" Language="1046">Textura da superfície (DIN)</Name>
+    <Name Description="Согласно DIN ISO 1302 - 2002" Language="1049">Шероховатость (DIN)</Name>
+    <Name Description="基于 DIN ISO 1302 - 2002" Language="2052">表面粗糙度符号 (DIN)</Name>
+    <Name Description="Basado en DIN ISO 1302 - 2002" Language="3082">Acabado superficial (DIN)</Name>
+  </Style>
+
+  <Style AllowAllAround="0" Direction="127" DraftingStandard="9" EditFlag="0" ForceTail="0" InternalName="1:Surface Texture (DIN) - 3DA&#xA;" MajorityAllowed="0" MajorityType="0" Multiline="0" Symbol="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO) - 3DA</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN) - 3DA</SubStyle>
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知。" Language="1028">表面加工 (DIN) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku." Language="1029">Drsnost (DIN) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden." Language="1031">Oberflächenbeschaffenheit (DIN) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1033">Surface Texture (DIN) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">Etat de surface (DIN) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához." Language="1038">Felületi minőség (DIN) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">Stato della superficie (DIN) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1041">Surface Texture (DIN) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">표면 텍스처 (DIN) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D." Language="1045">Tekstura powierzchni (DIN) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D." Language="1046">Textura da superfície (DIN) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Шероховатость (DIN) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知。" Language="2052">表面粗糙度符号 (DIN) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">Acabado superficial (DIN) - 3DA</Name>
+  </Style>
+
+  <Style AllowAllAround="0" Direction="127" DraftingStandard="10" EditFlag="0" ForceTail="0" InternalName="1:Surface Texture (GB)&#xA;" MajorityAllowed="0" MajorityType="0" Multiline="0" Symbol="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (GB)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 GB/T 131-2006" Language="1028">表面加工 (GB)</Name>
+    <Name Description="Podle normy GB/T 131-2006" Language="1029">Drsnost (GB)</Name>
+    <Name Description="Basiert auf GB/T 131-2006" Language="1031">Oberflächenbeschaffenheit (GB)</Name>
+    <Name Description="Based on GB/T 131-2006" Language="1033">Surface Texture (GB)</Name>
+    <Name Description="En fonction de GB/T 131-2006" Language="1036">Etat de surface (GB)</Name>
+    <Name Description="Alapja: GB/T 131-2006" Language="1038">Felületi minőség (GB)</Name>
+    <Name Description="Basato su GB/T 131-2006" Language="1040">Stato della superficie (GB)</Name>
+    <Name Description="Based on GB/T 131-2006" Language="1041">Surface Texture (GB)</Name>
+    <Name Description="GB/T 131-2006 기준" Language="1042">표면 텍스처 (GB)</Name>
+    <Name Description="Na podstawie GB/T 131-2006" Language="1045">Tekstura powierzchni (GB)</Name>
+    <Name Description="Baseado na GB/T 131-2006" Language="1046">Textura da superfície (GB)</Name>
+    <Name Description="Согласно GB/T 131-2006" Language="1049">Шероховатость (GB)</Name>
+    <Name Description="基于 GB/T 131-2006" Language="2052">表面粗糙度符号 (GB)</Name>
+    <Name Description="Basado en GB/T 131-2006" Language="3082">Acabado superficial (GB)</Name>
+  </Style>
+
+  <Style AllowAllAround="1" Direction="127" DraftingStandard="7" EditFlag="0" ForceTail="0" InternalName="1:Surface Texture (GOST)&#xA;" MajorityAllowed="1" MajorityType="0" Multiline="1" Symbol="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Normale Textgröße (GOST)</SubStyle>
+    <Name Description="根據 GOST 2.309-73 (Rev 3)" Language="1028">表面加工 (GOST)</Name>
+    <Name Description="Podle normy GOST 2.309-73 (Rev 3)" Language="1029">Drsnost (GOST)</Name>
+    <Name Description="Basiert auf GOST 2.309-73 (Rev 3)" Language="1031">Oberflächenbeschaffenheit (GOST)</Name>
+    <Name Description="Based on GOST 2.309-73 (Rev 3)" Language="1033">Surface Texture (GOST)</Name>
+    <Name Description="En fonction de GOST 2.309-73 (Rev 3)" Language="1036">Etat de surface (GOST)</Name>
+    <Name Description="Alapja: GOST 2.309-73 (Rev 3)" Language="1038">Felületi minőség (GOST)</Name>
+    <Name Description="Basato su GOST 2.309-73 (Rev 3)" Language="1040">Stato della superficie (GOST)</Name>
+    <Name Description="Based on GOST 2.309-73 (Rev 3)" Language="1041">Surface Texture (GOST)</Name>
+    <Name Description="GOST 2.309-73 (Rev 3) 기준" Language="1042">표면 텍스처 (GOST)</Name>
+    <Name Description="Na podstawie GOST 2.309-73 (Rev 3)" Language="1045">Tekstura powierzchni (GOST)</Name>
+    <Name Description="Baseado na GOST 2.309-73 (Rev 3)" Language="1046">Textura da superfície (GOST)</Name>
+    <Name Description="Согласно GOST 2.309-73 (Rev 3)" Language="1049">Шероховатость (ГОСТ)</Name>
+    <Name Description="基于 GOST 2.309-73 (Rev 3)" Language="2052">表面粗糙度符号 (GOST)</Name>
+    <Name Description="Basado en GOST 2.309-73 (Rev 3)" Language="3082">Acabado superficial (GOST)</Name>
+  </Style>
+
+  <Style AllowAllAround="0" Direction="127" DraftingStandard="11" EditFlag="0" ForceTail="0" InternalName="1:Surface Texture (ISO)&#xA;" MajorityAllowed="0" MajorityType="0" Multiline="0" Symbol="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="根據 ISO 1302 - 2002" Language="1028">表面加工 (ISO)</Name>
+    <Name Description="Podle normy ISO 1302 - 2002" Language="1029">Drsnost (ISO)</Name>
+    <Name Description="Basiert auf ISO 1302 - 2002" Language="1031">Oberflächenbeschaffenheit (ISO)</Name>
+    <Name Description="Based on ISO 1302 - 2002" Language="1033">Surface Texture (ISO)</Name>
+    <Name Description="En fonction d'ISO 1302 - 2002" Language="1036">Etat de surface (ISO)</Name>
+    <Name Description="Alapja: ISO 1302 - 2002" Language="1038">Felületi minőség (ISO)</Name>
+    <Name Description="Basato su ISO 1302 - 2002" Language="1040">Stato della superficie (ISO)</Name>
+    <Name Description="Based on ISO 1302 - 2002" Language="1041">Surface Texture (ISO)</Name>
+    <Name Description="ISO 1302 - 2002 기준" Language="1042">표면 텍스처 (ISO)</Name>
+    <Name Description="Na podstawie ISO 1302 - 2002" Language="1045">Tekstura powierzchni (ISO)</Name>
+    <Name Description="Baseado na ISO 1302 - 2002" Language="1046">Textura da superfície (ISO)</Name>
+    <Name Description="Согласно ISO 1302 - 2002" Language="1049">Шероховатость (ISO)</Name>
+    <Name Description="基于 ISO 1302 - 2002" Language="2052">表面粗糙度符号 (ISO)</Name>
+    <Name Description="Basado en ISO 1302 - 2002" Language="3082">Acabado superficial (ISO)</Name>
+  </Style>
+
+  <Style AllowAllAround="0" Direction="127" DraftingStandard="11" EditFlag="0" ForceTail="0" InternalName="1:Surface Texture (ISO) - 3DA&#xA;" MajorityAllowed="0" MajorityType="0" Multiline="0" Symbol="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO) - 3DA</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO) - 3DA</SubStyle>
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知。" Language="1028">表面加工 (ISO) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku." Language="1029">Drsnost (ISO) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden." Language="1031">Oberflächenbeschaffenheit (ISO) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1033">Surface Texture (ISO) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">Etat de surface (ISO) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához." Language="1038">Felületi minőség (ISO) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">Stato della superficie (ISO) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation." Language="1041">Surface Texture (ISO) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">표면 텍스처 (ISO) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D." Language="1045">Tekstura powierzchni (ISO) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D." Language="1046">Textura da superfície (ISO) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Шероховатость (ISO) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知。" Language="2052">表面粗糙度符号 (ISO) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">Acabado superficial (ISO) - 3DA</Name>
+  </Style>
+
+  <Style AllowAllAround="0" Direction="63" DraftingStandard="12" EditFlag="0" ForceTail="0" InternalName="1:Surface Texture (JIS)&#xA;" MajorityAllowed="0" MajorityType="0" Multiline="0" Symbol="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (JIS)</SubStyle>
+    <Name Description="根據 JIS B 0031 - 2003" Language="1028">表面加工 (JIS)</Name>
+    <Name Description="Podle normy JIS B 0031 - 2003" Language="1029">Drsnost (JIS)</Name>
+    <Name Description="Basiert auf JIS B 0031 - 2003" Language="1031">Oberflächenbeschaffenheit (JIS)</Name>
+    <Name Description="Based on JIS B 0031 - 2003" Language="1033">Surface Texture (JIS)</Name>
+    <Name Description="En fonction de JIS B 0031 - 2003" Language="1036">Etat de surface (JIS)</Name>
+    <Name Description="Alapja: JIS B 0031 - 2003" Language="1038">Felületi minőség (JIS)</Name>
+    <Name Description="Basato su JIS B 0031 - 2003" Language="1040">Stato della superficie (JIS)</Name>
+    <Name Description="Based on JIS B 0031 - 2003" Language="1041">Surface Texture (JIS)</Name>
+    <Name Description="JIS B 0031 - 2003 기준" Language="1042">표면 텍스처 (JIS)</Name>
+    <Name Description="Na podstawie JIS B 0031 - 2003" Language="1045">Tekstura powierzchni (JIS)</Name>
+    <Name Description="Baseado na JIS B 0031 - 2003" Language="1046">Textura da superfície (JIS)</Name>
+    <Name Description="Согласно JIS B 0031 - 2003" Language="1049">Шероховатость (JIS)</Name>
+    <Name Description="基于 JIS B 0031 - 2003" Language="2052">表面粗糙度符号 (JIS)</Name>
+    <Name Description="Basado en JIS B 0031 - 2003" Language="3082">Acabado superficial (JIS)</Name>
+  </Style>
+
+  <Style AllowAllAround="0" Direction="127" DraftingStandard="3" EditFlag="0" ForceTail="0" InternalName="1:Surface Texture (DIN)&#xA;" MajorityAllowed="0" MajorityType="0" Multiline="0" Symbol="1">
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN)</SubStyle>
+    <Name Description="Basiert auf DIN ISO 1302 - 1992" Language="1031">Oberflächensymbol (DIN)</Name>
+  </Style>
+
+</SurfaceTexture>

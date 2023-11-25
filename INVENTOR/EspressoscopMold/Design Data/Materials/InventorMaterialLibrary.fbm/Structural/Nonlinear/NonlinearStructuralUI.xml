@@ -1,0 +1,281 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Nonlinear
+    </Title>
+  </PageInfo>
+  <Fields>
+    <ChooseList id="structural_Model_Type"
+			  label="Material Model"
+			  isValueEnabled="true"
+			  nonlinearmodeltype="true">
+		<ChoiceDetail id="structural_Model_Isotropic"
+				value="0"
+				label="Isotropic">
+		   <ChooseList id="structural_Behavior_Type"
+					  label="Behavior"
+					  isValueEnabled="true">
+				<ChoiceDetail id="structural_Behavior_Linear"
+						value="0"
+						label="Linear">
+						<CustomControl id = "Isotropic_Linear_Message"
+							nolabel="true">
+						</CustomControl>
+				</ChoiceDetail>
+				<ChoiceDetail id="structural_Behavior_Temperature_Dependent"
+						value="1"
+						label="Temperature Dependent">
+					<StackPanel id="Temperature_Dependent_Data"
+								label="Temperature Dependent Properties"
+								orientation="Vertical"
+								expanded="true">
+						<CustomControl id="Temperature_Specific_Heat_Table"
+									 label="Specific Heat"
+									 tablecontrol="true">
+						</CustomControl>
+						<CustomControl id="Temperature_Thermal_Conductivity_Table"
+									 label="Thermal Conductivity"
+									 tablecontrol="true">
+						</CustomControl>
+						<CustomControl id="Temperature_Thermal_Expansion_Table"
+									 label="Thermal Expansion Coefficient"
+									 tablecontrol="true">
+						</CustomControl>
+						<CustomControl id="Temperature_Youngs_Modulus_Table"
+									 label="Young's Modulus"
+									 tablecontrol="true">
+						</CustomControl>
+						<CustomControl id="Temperature_Poissons_Ratio_Table"
+									 label="Poisson's Ratio"
+									 tablecontrol="true">
+						</CustomControl>
+						<CustomControl id="Temperature_Yield_Strength_Table"
+									 label="Yield Strength"
+									 tablecontrol="true">
+						</CustomControl>
+						<CustomControl id="Temperature_Ultimate_Strength_Table"
+									 label="Ultimate Tensile Strength"
+									 tablecontrol="true">
+						</CustomControl>						
+					</StackPanel>							
+				</ChoiceDetail> 
+				<ChoiceDetail id="structural_Behavior_Nonlinear"
+						value="2"
+						label="Nonlinear">
+					<ChooseList id="structural_Nonlinear_Type_Ex"
+							  label="Type"
+							  isValueEnabled="true">		  		
+						<ChoiceDetail id="structural_Nonlinear_Elastic"
+								value="0"
+								label="Elastic">
+								<StackPanel id="Elastic_Nonlinear_Table_Data"
+											label="Data"
+											orientation="Vertical"
+											expanded="true">
+									<CustomControl id="NonlinearTable_Elastic"
+												 label="">
+									</CustomControl>
+								</StackPanel>							
+						</ChoiceDetail>
+						<ChoiceDetail id="structural_Nonlinear_Plastic"
+								value="1"
+								label="Plastic">
+								<StackPanel id="Plastic_Nonlinear_Table_Data"
+											label="Data"
+											orientation="Vertical"
+											expanded="true">
+									<CustomControl id="NonlinearTable_Plastic"
+												 label="">
+									</CustomControl>
+								</StackPanel>
+								<StackPanel id="Plastic_Parameters"
+											label="Plastic Parameters"
+											expanded="true">							
+									<ChooseList id="structural_Nonlinear_Hardening_Rule"
+										 label="Hardening Rule"
+										 isValueEnabled="true" >
+										<Choice id="structural_Nonlinear_Isotropic"
+													 value="0"
+													 label="Isotropic">
+										</Choice>
+										<Choice id="structural_Nonlinear_Kinematic"
+													 value="1"
+													 label="Kinematic">
+										</Choice>
+										<Choice id="structural_Nonlinear_Isotropic+Kinematic"
+													 value="2"
+													 label="Isotropic+Kinematic">
+										</Choice>
+									</ChooseList>											
+								</StackPanel>
+								<StackPanel id="Plastic_Yield_Function"
+											label="Yield Function"
+											expanded="true">
+									<ChooseList id="structural_Nonlinear_Yield_Criterion"
+									  label="Yield Criterion"
+									  isValueEnabled="true" >
+										<Choice id="structural_Nonlinear_Yield_Criterion_Von_Mises"
+												   value="0"
+												   label="von Mises">
+										</Choice>
+										<Choice id="structural_Nonlinear_Tresca"
+												   value="1"
+												   label="Tresca">
+										</Choice>
+										<Choice id="structural_Nonlinear_Mohr_Coulomb"
+												   value="2"
+												   label="Mohr-Coulomb">
+										</Choice>
+										<Choice id="structural_Nonlinear_Drucker_Prager"
+													 value="3"
+													 label="Drucker-Prager">
+										</Choice>
+									</ChooseList>
+									<Float id="structural_Nonlinear_Yield_Stress"
+										   label="Initial Yield Stress">
+									</Float>											
+								</StackPanel>								
+						</ChoiceDetail> 
+						<ChoiceDetail id="structural_Nonlinear_Elasto-plastic"
+								value="2"
+								label="Elasto-plastic(Bi-linear)">
+								<StackPanel id="Elasto_Plastic_Parameters"
+											label="Plastic Parameters"
+											expanded="true">
+									<Float id="structural_Nonlinear_Tangent_modulus"
+												label="Tangent Modulus"
+												min="0">						
+									</Float>									
+									<ChooseList id="structural_Nonlinear_Hardening_Rule"
+										 label="Hardening Rule"
+										 isValueEnabled="true" >
+										<Choice id="structural_Nonlinear_Isotropic"
+													 value="0"
+													 label="Isotropic">
+										</Choice>
+										<Choice id="structural_Nonlinear_Kinematic"
+													 value="1"
+													 label="Kinematic">
+										</Choice>
+										<Choice id="structural_Nonlinear_Isotropic+Kinematic"
+													 value="2"
+													 label="Isotropic+Kinematic">
+										</Choice>
+									</ChooseList>											
+								</StackPanel>
+								<StackPanel id="Elasto_Plastic_Yield_Function"
+											label="Yield Function"
+											expanded="true">
+									<ChooseList id="structural_Nonlinear_Yield_Criterion"
+									  label="Yield Criterion"
+									  isValueEnabled="true" >
+										<Choice id="structural_Nonlinear_Yield_Criterion_Von_Mises"
+												   value="0"
+												   label="von Mises">
+										</Choice>
+										<Choice id="structural_Nonlinear_Tresca"
+												   value="1"
+												   label="Tresca">
+										</Choice>
+										<Choice id="structural_Nonlinear_Mohr_Coulomb"
+												   value="2"
+												   label="Mohr-Coulomb">
+										</Choice>
+										<Choice id="structural_Nonlinear_Drucker_Prager"
+													 value="3"
+													 label="Drucker-Prager">
+										</Choice>
+									</ChooseList>
+									<Float id="structural_Nonlinear_Yield_Stress"
+										   label="Initial Yield Stress"
+										   min="0">
+									</Float>											
+								</StackPanel>								
+						</ChoiceDetail>								
+					</ChooseList>	
+				</ChoiceDetail>
+			</ChooseList>				
+		</ChoiceDetail>
+		<ChoiceDetail id="structural_Model_Hyperelastic"
+				value="1"
+				label="Hyperelastic">
+		   <ChooseList id="structural_Behavior_Type"
+					  label="Behavior"
+					  useactivechoicelabel="true"
+					  isValueEnabled="true">
+				<Choice id="structural_Behavior_Linear"
+						value="0"
+						label="Linear">
+				</Choice>
+				<Choice id="structural_Behavior_Temperature_Dependent"
+						value="1"
+						label="Temperature Dependent">							
+				</Choice> 
+				<Choice id="structural_Behavior_Nonlinear"
+						value="2"
+						label="Nonlinear">	
+				</Choice>
+				<Choice id="structural_Behavior_Mooney_Rivlin"
+						value="3"
+						label="Mooney Rivlin">
+				</Choice>
+			</ChooseList>
+<!-- 			<StackPanel id="structural_Mooney_Rivlin_Damping_Coefficient"
+						label="General"
+						expanded="true">
+				<Float id="structural_Mooney_Rivlin_Volumetric_Expansion"
+							label="Volumetric Expansion">						
+				</Float>				
+			</StackPanel> -->			
+			<StackPanel id="structural_Mooney_Rivlin_Data_Type"
+						label="Experimental Data"
+						expanded="true">									
+				<ChooseList id="structural_Mooney_Rivlin_Data_Type"
+						  label="Data Type"
+						  isValueEnabled="true">
+					<ChoiceDetail id="structural_Mooney_Rivlin_Constants"
+							value="0"
+							label="Constants">
+						<Float id="structural_Mooney_Rivlin_Constant_A01"
+									label="A01">						
+						</Float>
+						<Float id="structural_Mooney_Rivlin_Constant_A10"
+									label="A10">						
+						</Float>
+						<Float id="structural_Mooney_Rivlin_Constant_D1"
+									label="D1"
+									min="0">						
+						</Float>						
+					</ChoiceDetail>	
+					<ChoiceDetail id="structural_Mooney_Rivlin_Curves"
+							value="1"
+							label="Curves">
+						<CustomControl id="Simple_Tension_Compression_Table"
+									 label="Simple Tension/Compression"
+									 tablecontrol="true">
+						</CustomControl>						
+						<CustomControl id="Pure_Volumetric_Compression_Table"
+								   label="Pure Volumetric Compression"
+								   tablecontrol="true">
+						</CustomControl>								   
+						 <CustomControl id="Simple_Shear_Table"
+								   label="Simple Shear"
+								   tablecontrol="true">
+						</CustomControl>							   
+						 <CustomControl id="Pure_Shear_Table"
+								   label="Pure Shear"
+								   tablecontrol="true">
+						</CustomControl>					   
+						 <CustomControl id="Equibiaxial_Tension_Table"
+								   label="Equibiaxial Tension"
+								   tablecontrol="true">
+						</CustomControl>								   
+					</ChoiceDetail>					
+				</ChooseList>															
+			</StackPanel>			
+		</ChoiceDetail> 
+    </ChooseList>
+  </Fields>
+</adsui>

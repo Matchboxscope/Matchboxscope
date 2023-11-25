@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<RevisionTable Version="1">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style AllowLanding="1" DefaultType="8" Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="0" Heading="1" HeadingGap="0.089" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Revision Table (ANSI)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" LinesOfText="0" OffsetSpacing="2.54" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RowGap="0.089" ScaleToTextHeight="1" Size="1.5875" StretchBallonToText="1" TitleGap="0.089">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (ANSI)</SubStyle>
+    <Title>
+      <Item Language="1040" String="CRONOLOGIA REVISIONI"/>
+      <Item Language="1045" String="HISTORIA ZMIAN"/>
+      <Item Language="3082" String="HISTORIAL DE REVISIONES"/>
+      <Item Language="1029" String="HISTORIE REVIZÍ"/>
+      <Item Language="1036" String="HISTORIQUE DE REVISION"/>
+      <Item Language="1046" String="HISTÓRICO DE REVISÃO"/>
+      <Item Language="1033 1041" String="REVISION HISTORY"/>
+      <Item Language="1031" String="REVISIONSVERLAUF"/>
+      <Item Language="1038" String="REVÍZIÓ TÖRTÉNET"/>
+      <Item Language="1049" String="ЖУРНАЛ ИЗМЕНЕНИЙ"/>
+      <Item Language="1028" String="修訂歷程"/>
+      <Item Language="2052" String="修订历史记录"/>
+      <Item Language="1042" String="개정 내역"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ZONE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{E68C5C9C-7632-4a13-8A2D-9D3623A8A576}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1045" String="PAS"/>
+          <Item Language="1040 1046 3082" String="ZONA"/>
+          <Item Language="1031 1033 1036 1041" String="ZONE"/>
+          <Item Language="1029 1038" String="ZÓNA"/>
+          <Item Language="1049" String="ЗОНА"/>
+          <Item Language="2052" String="区域"/>
+          <Item Language="1028" String="區域"/>
+          <Item Language="1042" String="영역"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="REV." HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="9" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1033 1036 1038 1040 1041 1046 3082" String="REV"/>
+          <Item Language="1031" String="REV."/>
+          <Item Language="1029" String="REVIZE"/>
+          <Item Language="1045" String="WER"/>
+          <Item Language="1049" String="ИЗМ"/>
+          <Item Language="1028" String="修訂"/>
+          <Item Language="2052" String="修订"/>
+          <Item Language="1042" String="개정"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="6" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036 1041" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="DATUM" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{E68C5C9C-7632-4a13-8A2D-9D3623A8A576}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1040 1045 1046" String="DATA"/>
+          <Item Language="1033 1036 1041" String="DATE"/>
+          <Item Language="1029 1031" String="DATUM"/>
+          <Item Language="1038" String="DÁTUM"/>
+          <Item Language="3082" String="FECHA"/>
+          <Item Language="1049" String="ДАТА"/>
+          <Item Language="1028 2052" String="日期"/>
+          <Item Language="1042" String="날짜"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="GENEHMIGT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="12" PropertyMemberID="" PropertySet="{32853F0F-3444-11d1-9E93-0060B03C1CA6}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="APPROUVE"/>
+          <Item Language="1040" String="APPROVATO"/>
+          <Item Language="1033 1041" String="APPROVED"/>
+          <Item Language="3082" String="APROBADA"/>
+          <Item Language="1046" String="APROVADO"/>
+          <Item Language="1031" String="GENEHMIGT"/>
+          <Item Language="1038" String="JÓVÁHAGYTA"/>
+          <Item Language="1029" String="SCHVÁLENO"/>
+          <Item Language="1045" String="ZATWIERDZONY"/>
+          <Item Language="1049" String="УТВЕРЖДЕНО"/>
+          <Item Language="2052" String="已批准"/>
+          <Item Language="1028" String="核准"/>
+          <Item Language="1042" String="승인"/>
+        </PropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ANSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TagTextStyle">Notiztext (ANSI)</SubStyle>
+    <Name Description="" Language="1028">修訂表格 (ANSI)</Name>
+    <Name Description="" Language="1029">Tabulka revizí (ANSI)</Name>
+    <Name Description="" Language="1031">Revisionstabelle (ANSI)</Name>
+    <Name Description="" Language="1033">Revision Table (ANSI)</Name>
+    <Name Description="" Language="1036">Table de révision (ANSI)</Name>
+    <Name Description="" Language="1038">Revíziótáblázat (ANSI)</Name>
+    <Name Description="" Language="1040">Tabella revisioni (ANSI)</Name>
+    <Name Description="" Language="1041">Revision Table (ANSI)</Name>
+    <Name Description="" Language="1042">리비전 테이블 (ANSI)</Name>
+    <Name Description="" Language="1045">Tabelka zmian (ANSI)</Name>
+    <Name Description="" Language="1046">Tabela de revisão (ANSI)</Name>
+    <Name Description="" Language="1049">Таблица редакций (ANSI)</Name>
+    <Name Description="" Language="2052">修订表 (ANSI)</Name>
+    <Name Description="" Language="3082">Tabla de revisiones (ANSI)</Name>
+  </Style>
+
+  <Style AllowLanding="1" DefaultType="8" Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="0" Heading="1" HeadingGap="0.089" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Revision Table (BSI)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" LinesOfText="0" OffsetSpacing="2.54" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RowGap="0.089" ScaleToTextHeight="1" Size="1.5875" StretchBallonToText="1" TitleGap="0.089">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (ISO)</SubStyle>
+    <Title>
+      <Item Language="1040" String="CRONOLOGIA REVISIONI"/>
+      <Item Language="1045" String="HISTORIA ZMIAN"/>
+      <Item Language="3082" String="HISTORIAL DE REVISIONES"/>
+      <Item Language="1029" String="HISTORIE REVIZÍ"/>
+      <Item Language="1036" String="HISTORIQUE DE REVISION"/>
+      <Item Language="1046" String="HISTÓRICO DE REVISÃO"/>
+      <Item Language="1033 1041" String="REVISION HISTORY"/>
+      <Item Language="1031" String="REVISIONSVERLAUF"/>
+      <Item Language="1038" String="REVÍZIÓ TÖRTÉNET"/>
+      <Item Language="1049" String="ЖУРНАЛ ИЗМЕНЕНИЙ"/>
+      <Item Language="1028" String="修訂歷程"/>
+      <Item Language="2052" String="修订历史记录"/>
+      <Item Language="1042" String="개정 내역"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ZONE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{E68C5C9C-7632-4a13-8A2D-9D3623A8A576}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1045" String="PAS"/>
+          <Item Language="1040 1046 3082" String="ZONA"/>
+          <Item Language="1031 1033 1036 1041" String="ZONE"/>
+          <Item Language="1029 1038" String="ZÓNA"/>
+          <Item Language="1049" String="ЗОНА"/>
+          <Item Language="2052" String="区域"/>
+          <Item Language="1028" String="區域"/>
+          <Item Language="1042" String="영역"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="REV." HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="9" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1033 1036 1038 1040 1041 1046 3082" String="REV"/>
+          <Item Language="1031" String="REV."/>
+          <Item Language="1029" String="REVIZE"/>
+          <Item Language="1045" String="WER"/>
+          <Item Language="1049" String="ИЗМ"/>
+          <Item Language="1028" String="修訂"/>
+          <Item Language="2052" String="修订"/>
+          <Item Language="1042" String="개정"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="6" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036 1041" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="DATUM" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{E68C5C9C-7632-4a13-8A2D-9D3623A8A576}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1040 1045 1046" String="DATA"/>
+          <Item Language="1033 1036 1041" String="DATE"/>
+          <Item Language="1029 1031" String="DATUM"/>
+          <Item Language="1038" String="DÁTUM"/>
+          <Item Language="3082" String="FECHA"/>
+          <Item Language="1049" String="ДАТА"/>
+          <Item Language="1028 2052" String="日期"/>
+          <Item Language="1042" String="날짜"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="GENEHMIGT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="12" PropertyMemberID="" PropertySet="{32853F0F-3444-11d1-9E93-0060B03C1CA6}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="APPROUVE"/>
+          <Item Language="1040" String="APPROVATO"/>
+          <Item Language="1033 1041" String="APPROVED"/>
+          <Item Language="3082" String="APROBADA"/>
+          <Item Language="1046" String="APROVADO"/>
+          <Item Language="1031" String="GENEHMIGT"/>
+          <Item Language="1038" String="JÓVÁHAGYTA"/>
+          <Item Language="1029" String="SCHVÁLENO"/>
+          <Item Language="1045" String="ZATWIERDZONY"/>
+          <Item Language="1049" String="УТВЕРЖДЕНО"/>
+          <Item Language="2052" String="已批准"/>
+          <Item Language="1028" String="核准"/>
+          <Item Language="1042" String="승인"/>
+        </PropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (BSI)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TagTextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="" Language="1028">修訂表格 (BSI)</Name>
+    <Name Description="" Language="1029">Tabulka revizí (BSI)</Name>
+    <Name Description="" Language="1031">Revisionstabelle (BSI)</Name>
+    <Name Description="" Language="1033">Revision Table (BSI)</Name>
+    <Name Description="" Language="1036">Table de révision (BSI)</Name>
+    <Name Description="" Language="1038">Revíziótáblázat (BSI)</Name>
+    <Name Description="" Language="1040">Tabella revisioni (BSI)</Name>
+    <Name Description="" Language="1041">Revision Table (BSI)</Name>
+    <Name Description="" Language="1042">리비전 테이블 (BSI)</Name>
+    <Name Description="" Language="1045">Tabelka zmian (BSI)</Name>
+    <Name Description="" Language="1046">Tabela de revisão (BSI)</Name>
+    <Name Description="" Language="1049">Таблица редакций (BSI)</Name>
+    <Name Description="" Language="2052">修订表 (BSI)</Name>
+    <Name Description="" Language="3082">Tabla de revisiones (BSI)</Name>
+  </Style>
+
+  <Style AllowLanding="1" DefaultType="8" Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="0" Heading="1" HeadingGap="0.089" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Revision Table (DIN)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" LinesOfText="0" OffsetSpacing="2.54" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RowGap="0.089" ScaleToTextHeight="1" Size="1.5875" StretchBallonToText="1" TitleGap="0.089">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (DIN)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (DIN)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (DIN)</SubStyle>
+    <Title>
+      <Item Language="1040" String="CRONOLOGIA REVISIONI"/>
+      <Item Language="1045" String="HISTORIA ZMIAN"/>
+      <Item Language="3082" String="HISTORIAL DE REVISIONES"/>
+      <Item Language="1029" String="HISTORIE REVIZÍ"/>
+      <Item Language="1036" String="HISTORIQUE DE REVISION"/>
+      <Item Language="1046" String="HISTÓRICO DE REVISÃO"/>
+      <Item Language="1033 1041" String="REVISION HISTORY"/>
+      <Item Language="1031" String="REVISIONSVERLAUF"/>
+      <Item Language="1038" String="REVÍZIÓ TÖRTÉNET"/>
+      <Item Language="1049" String="ЖУРНАЛ ИЗМЕНЕНИЙ"/>
+      <Item Language="1028" String="修訂歷程"/>
+      <Item Language="2052" String="修订历史记录"/>
+      <Item Language="1042" String="개정 내역"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ZONE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{E68C5C9C-7632-4a13-8A2D-9D3623A8A576}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="ZONE"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="REV." HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="9" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="REV."/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="6" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="DATUM" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="13" PropertyMemberID="" PropertySet="{32853F0F-3444-11d1-9E93-0060B03C1CA6}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="DATUM"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="GENEHMIGT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="12" PropertyMemberID="" PropertySet="{32853F0F-3444-11d1-9E93-0060B03C1CA6}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="GENEHMIGT"/>
+        </PropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TagTextStyle">Notiztext (DIN)</SubStyle>
+    <Name Description="" Language="1028">修訂表格 (DIN)</Name>
+    <Name Description="" Language="1029">Tabulka revizí (DIN)</Name>
+    <Name Description="" Language="1031">Revisionstabelle (DIN)</Name>
+    <Name Description="" Language="1033">Revision Table (DIN)</Name>
+    <Name Description="" Language="1036">Table de révision (DIN)</Name>
+    <Name Description="" Language="1038">Revíziótáblázat (DIN)</Name>
+    <Name Description="" Language="1040">Tabella revisioni (DIN)</Name>
+    <Name Description="" Language="1041">Revision Table (DIN)</Name>
+    <Name Description="" Language="1042">리비전 테이블 (DIN)</Name>
+    <Name Description="" Language="1045">Tabelka zmian (DIN)</Name>
+    <Name Description="" Language="1046">Tabela de revisão (DIN)</Name>
+    <Name Description="" Language="1049">Таблица редакций (DIN)</Name>
+    <Name Description="" Language="2052">修订表 (DIN)</Name>
+    <Name Description="" Language="3082">Tabla de revisiones (DIN)</Name>
+  </Style>
+
+  <Style AllowLanding="1" DefaultType="8" Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="0" Heading="1" HeadingGap="0.089" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Revision Table (GB)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" LinesOfText="0" OffsetSpacing="2.54" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RowGap="0.089" ScaleToTextHeight="1" Size="1.5875" StretchBallonToText="1" TitleGap="0.089">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (ISO)</SubStyle>
+    <Title>
+      <Item Language="1040" String="CRONOLOGIA REVISIONI"/>
+      <Item Language="1045" String="HISTORIA ZMIAN"/>
+      <Item Language="3082" String="HISTORIAL DE REVISIONES"/>
+      <Item Language="1029" String="HISTORIE REVIZÍ"/>
+      <Item Language="1036" String="HISTORIQUE DE REVISION"/>
+      <Item Language="1046" String="HISTÓRICO DE REVISÃO"/>
+      <Item Language="1033 1041" String="REVISION HISTORY"/>
+      <Item Language="1031" String="REVISIONSVERLAUF"/>
+      <Item Language="1038" String="REVÍZIÓ TÖRTÉNET"/>
+      <Item Language="1049" String="ЖУРНАЛ ИЗМЕНЕНИЙ"/>
+      <Item Language="1028" String="修訂歷程"/>
+      <Item Language="2052" String="修订历史记录"/>
+      <Item Language="1042" String="개정 내역"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ZONE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{E68C5C9C-7632-4a13-8A2D-9D3623A8A576}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1045" String="PAS"/>
+          <Item Language="1040 1046 3082" String="ZONA"/>
+          <Item Language="1031 1033 1036 1041" String="ZONE"/>
+          <Item Language="1029 1038" String="ZÓNA"/>
+          <Item Language="1049" String="ЗОНА"/>
+          <Item Language="2052" String="区域"/>
+          <Item Language="1028" String="區域"/>
+          <Item Language="1042" String="영역"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="REV." HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="9" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1033 1036 1038 1040 1041 1046 3082" String="REV"/>
+          <Item Language="1031" String="REV."/>
+          <Item Language="1029" String="REVIZE"/>
+          <Item Language="1045" String="WER"/>
+          <Item Language="1049" String="ИЗМ"/>
+          <Item Language="1028" String="修訂"/>
+          <Item Language="2052" String="修订"/>
+          <Item Language="1042" String="개정"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="6" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036 1041" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="DATUM" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{E68C5C9C-7632-4a13-8A2D-9D3623A8A576}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1040 1045 1046" String="DATA"/>
+          <Item Language="1033 1036 1041" String="DATE"/>
+          <Item Language="1029 1031" String="DATUM"/>
+          <Item Language="1038" String="DÁTUM"/>
+          <Item Language="3082" String="FECHA"/>
+          <Item Language="1049" String="ДАТА"/>
+          <Item Language="1028 2052" String="日期"/>
+          <Item Language="1042" String="날짜"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="GENEHMIGT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="12" PropertyMemberID="" PropertySet="{32853F0F-3444-11d1-9E93-0060B03C1CA6}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="APPROUVE"/>
+          <Item Language="1040" String="APPROVATO"/>
+          <Item Language="1033 1041" String="APPROVED"/>
+          <Item Language="3082" String="APROBADA"/>
+          <Item Language="1046" String="APROVADO"/>
+          <Item Language="1031" String="GENEHMIGT"/>
+          <Item Language="1038" String="JÓVÁHAGYTA"/>
+          <Item Language="1029" String="SCHVÁLENO"/>
+          <Item Language="1045" String="ZATWIERDZONY"/>
+          <Item Language="1049" String="УТВЕРЖДЕНО"/>
+          <Item Language="2052" String="已批准"/>
+          <Item Language="1028" String="核准"/>
+          <Item Language="1042" String="승인"/>
+        </PropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (GB)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TagTextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="" Language="1028">修訂表格 (GB)</Name>
+    <Name Description="" Language="1029">Tabulka revizí (GB)</Name>
+    <Name Description="" Language="1031">Revisionstabelle (GB)</Name>
+    <Name Description="" Language="1033">Revision Table (GB)</Name>
+    <Name Description="" Language="1036">Table de révision (GB)</Name>
+    <Name Description="" Language="1038">Revíziótáblázat (GB)</Name>
+    <Name Description="" Language="1040">Tabella revisioni (GB)</Name>
+    <Name Description="" Language="1041">Revision Table (GB)</Name>
+    <Name Description="" Language="1042">리비전 테이블 (GB)</Name>
+    <Name Description="" Language="1045">Tabelka zmian (GB)</Name>
+    <Name Description="" Language="1046">Tabela de revisão (GB)</Name>
+    <Name Description="" Language="1049">Таблица редакций (GB)</Name>
+    <Name Description="" Language="2052">修订表 (GB)</Name>
+    <Name Description="" Language="3082">Tabla de revisiones (GB)</Name>
+  </Style>
+
+  <Style AllowLanding="1" DefaultType="8" Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="0" Heading="1" HeadingGap="0.089" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Revision Table (GOST)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" LinesOfText="0" OffsetSpacing="2.54" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RowGap="0.089" ScaleToTextHeight="1" Size="1.5875" StretchBallonToText="1" TitleGap="0.089">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Normale Textgröße (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Normale Textgröße (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Normale Textgröße (GOST)</SubStyle>
+    <Title>
+      <Item Language="1040" String="CRONOLOGIA REVISIONI"/>
+      <Item Language="1045" String="HISTORIA ZMIAN"/>
+      <Item Language="3082" String="HISTORIAL DE REVISIONES"/>
+      <Item Language="1029" String="HISTORIE REVIZÍ"/>
+      <Item Language="1036" String="HISTORIQUE DE REVISION"/>
+      <Item Language="1046" String="HISTÓRICO DE REVISÃO"/>
+      <Item Language="1033 1041" String="REVISION HISTORY"/>
+      <Item Language="1031" String="REVISIONSVERLAUF"/>
+      <Item Language="1038" String="REVÍZIÓ TÖRTÉNET"/>
+      <Item Language="1049" String="ЖУРНАЛ ИЗМЕНЕНИЙ"/>
+      <Item Language="1028" String="修訂歷程"/>
+      <Item Language="2052" String="修订历史记录"/>
+      <Item Language="1042" String="개정 내역"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ZONE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{E68C5C9C-7632-4a13-8A2D-9D3623A8A576}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1045" String="PAS"/>
+          <Item Language="1040 1046 3082" String="ZONA"/>
+          <Item Language="1031 1033 1036 1041" String="ZONE"/>
+          <Item Language="1029 1038" String="ZÓNA"/>
+          <Item Language="1049" String="ЗОНА"/>
+          <Item Language="2052" String="区域"/>
+          <Item Language="1028" String="區域"/>
+          <Item Language="1042" String="영역"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="REV." HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="9" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1033 1036 1038 1040 1041 1046 3082" String="REV"/>
+          <Item Language="1031" String="REV."/>
+          <Item Language="1029" String="REVIZE"/>
+          <Item Language="1045" String="WER"/>
+          <Item Language="1049" String="ИЗМ"/>
+          <Item Language="1028" String="修訂"/>
+          <Item Language="2052" String="修订"/>
+          <Item Language="1042" String="개정"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="6" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036 1041" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="DATUM" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{E68C5C9C-7632-4a13-8A2D-9D3623A8A576}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1040 1045 1046" String="DATA"/>
+          <Item Language="1033 1036 1041" String="DATE"/>
+          <Item Language="1029 1031" String="DATUM"/>
+          <Item Language="1038" String="DÁTUM"/>
+          <Item Language="3082" String="FECHA"/>
+          <Item Language="1049" String="ДАТА"/>
+          <Item Language="1028 2052" String="日期"/>
+          <Item Language="1042" String="날짜"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="GENEHMIGT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="12" PropertyMemberID="" PropertySet="{32853F0F-3444-11d1-9E93-0060B03C1CA6}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="APPROUVE"/>
+          <Item Language="1040" String="APPROVATO"/>
+          <Item Language="1033 1041" String="APPROVED"/>
+          <Item Language="3082" String="APROBADA"/>
+          <Item Language="1046" String="APROVADO"/>
+          <Item Language="1031" String="GENEHMIGT"/>
+          <Item Language="1038" String="JÓVÁHAGYTA"/>
+          <Item Language="1029" String="SCHVÁLENO"/>
+          <Item Language="1045" String="ZATWIERDZONY"/>
+          <Item Language="1049" String="УТВЕРЖДЕНО"/>
+          <Item Language="2052" String="已批准"/>
+          <Item Language="1028" String="核准"/>
+          <Item Language="1042" String="승인"/>
+        </PropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (GOST)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TagTextStyle">Normale Textgröße (GOST)</SubStyle>
+    <Name Description="" Language="1028">修訂表格 (GOST)</Name>
+    <Name Description="" Language="1029">Tabulka revizí (GOST)</Name>
+    <Name Description="" Language="1031">Revisionstabelle (GOST)</Name>
+    <Name Description="" Language="1033">Revision Table (GOST)</Name>
+    <Name Description="" Language="1036">Table de révision (GOST)</Name>
+    <Name Description="" Language="1038">Revíziótáblázat (GOST)</Name>
+    <Name Description="" Language="1040">Tabella revisioni (GOST)</Name>
+    <Name Description="" Language="1041">Revision Table (GOST)</Name>
+    <Name Description="" Language="1042">리비전 테이블 (GOST)</Name>
+    <Name Description="" Language="1045">Tabelka zmian (GOST)</Name>
+    <Name Description="" Language="1046">Tabela de revisão (GOST)</Name>
+    <Name Description="" Language="1049">Таблица редакций (ГОСТ)</Name>
+    <Name Description="" Language="2052">修订表 (GOST)</Name>
+    <Name Description="" Language="3082">Tabla de revisiones (GOST)</Name>
+  </Style>
+
+  <Style AllowLanding="1" DefaultType="8" Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="0" Heading="1" HeadingGap="0.089" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Revision Table (ISO)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" LinesOfText="0" OffsetSpacing="2.54" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RowGap="0.089" ScaleToTextHeight="1" Size="1.5875" StretchBallonToText="1" TitleGap="0.089">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (ISO)</SubStyle>
+    <Title>
+      <Item Language="1040" String="CRONOLOGIA REVISIONI"/>
+      <Item Language="1045" String="HISTORIA ZMIAN"/>
+      <Item Language="3082" String="HISTORIAL DE REVISIONES"/>
+      <Item Language="1029" String="HISTORIE REVIZÍ"/>
+      <Item Language="1036" String="HISTORIQUE DE REVISION"/>
+      <Item Language="1046" String="HISTÓRICO DE REVISÃO"/>
+      <Item Language="1033 1041" String="REVISION HISTORY"/>
+      <Item Language="1031" String="REVISIONSVERLAUF"/>
+      <Item Language="1038" String="REVÍZIÓ TÖRTÉNET"/>
+      <Item Language="1049" String="ЖУРНАЛ ИЗМЕНЕНИЙ"/>
+      <Item Language="1028" String="修訂歷程"/>
+      <Item Language="2052" String="修订历史记录"/>
+      <Item Language="1042" String="개정 내역"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ZONE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{E68C5C9C-7632-4a13-8A2D-9D3623A8A576}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1045" String="PAS"/>
+          <Item Language="1040 1046 3082" String="ZONA"/>
+          <Item Language="1031 1033 1036 1041" String="ZONE"/>
+          <Item Language="1029 1038" String="ZÓNA"/>
+          <Item Language="1049" String="ЗОНА"/>
+          <Item Language="2052" String="区域"/>
+          <Item Language="1028" String="區域"/>
+          <Item Language="1042" String="영역"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="REV." HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="9" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1033 1036 1038 1040 1041 1046 3082" String="REV"/>
+          <Item Language="1031" String="REV."/>
+          <Item Language="1029" String="REVIZE"/>
+          <Item Language="1045" String="WER"/>
+          <Item Language="1049" String="ИЗМ"/>
+          <Item Language="1028" String="修訂"/>
+          <Item Language="2052" String="修订"/>
+          <Item Language="1042" String="개정"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="6" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036 1041" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="DATUM" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{E68C5C9C-7632-4a13-8A2D-9D3623A8A576}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1040 1045 1046" String="DATA"/>
+          <Item Language="1033 1036 1041" String="DATE"/>
+          <Item Language="1029 1031" String="DATUM"/>
+          <Item Language="1038" String="DÁTUM"/>
+          <Item Language="3082" String="FECHA"/>
+          <Item Language="1049" String="ДАТА"/>
+          <Item Language="1028 2052" String="日期"/>
+          <Item Language="1042" String="날짜"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="GENEHMIGT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="12" PropertyMemberID="" PropertySet="{32853F0F-3444-11d1-9E93-0060B03C1CA6}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="APPROUVE"/>
+          <Item Language="1040" String="APPROVATO"/>
+          <Item Language="1033 1041" String="APPROVED"/>
+          <Item Language="3082" String="APROBADA"/>
+          <Item Language="1046" String="APROVADO"/>
+          <Item Language="1031" String="GENEHMIGT"/>
+          <Item Language="1038" String="JÓVÁHAGYTA"/>
+          <Item Language="1029" String="SCHVÁLENO"/>
+          <Item Language="1045" String="ZATWIERDZONY"/>
+          <Item Language="1049" String="УТВЕРЖДЕНО"/>
+          <Item Language="2052" String="已批准"/>
+          <Item Language="1028" String="核准"/>
+          <Item Language="1042" String="승인"/>
+        </PropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (ISO)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TagTextStyle">Notiztext (ISO)</SubStyle>
+    <Name Description="" Language="1028">修訂表格 (ISO)</Name>
+    <Name Description="" Language="1029">Tabulka revizí (ISO)</Name>
+    <Name Description="" Language="1031">Revisionstabelle (ISO)</Name>
+    <Name Description="" Language="1033">Revision Table (ISO)</Name>
+    <Name Description="" Language="1036">Table de révision (ISO)</Name>
+    <Name Description="" Language="1038">Revíziótáblázat (ISO)</Name>
+    <Name Description="" Language="1040">Tabella revisioni (ISO)</Name>
+    <Name Description="" Language="1041">Revision Table (ISO)</Name>
+    <Name Description="" Language="1042">리비전 테이블 (ISO)</Name>
+    <Name Description="" Language="1045">Tabelka zmian (ISO)</Name>
+    <Name Description="" Language="1046">Tabela de revisão (ISO)</Name>
+    <Name Description="" Language="1049">Таблица редакций (ISO)</Name>
+    <Name Description="" Language="2052">修订表 (ISO)</Name>
+    <Name Description="" Language="3082">Tabla de revisiones (ISO)</Name>
+  </Style>
+
+  <Style AllowLanding="1" DefaultType="8" Direction="0" DisplayParticipants="0" DisplayTitle="1" EditFlag="0" Grouping="0" Heading="1" HeadingGap="0.089" InsideLineColor="0:0:0:255" InsideLineWeight="1" InternalName="1:Revision Table (JIS)&#xA;" IsInsideLineColorByLayer="1" IsInsideLineWeightByLayer="1" IsOutsideLineColorByLayer="1" IsOutsideLineWeightByLayer="1" LinesOfText="0" OffsetSpacing="2.54" OutsideLineColor="0:0:0:255" OutsideLineWeight="1" RowGap="0.089" ScaleToTextHeight="1" Size="1.5875" StretchBallonToText="1" TitleGap="0.089">
+    <SubStyle Collection="Text" Language="1031" Type="TextStyle">Notiztext (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="HeadingTextStyle">Notiztext (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TitleTextStyle">Notiztext (JIS)</SubStyle>
+    <Title>
+      <Item Language="1040" String="CRONOLOGIA REVISIONI"/>
+      <Item Language="1045" String="HISTORIA ZMIAN"/>
+      <Item Language="3082" String="HISTORIAL DE REVISIONES"/>
+      <Item Language="1029" String="HISTORIE REVIZÍ"/>
+      <Item Language="1036" String="HISTORIQUE DE REVISION"/>
+      <Item Language="1046" String="HISTÓRICO DE REVISÃO"/>
+      <Item Language="1033" String="REVISION HISTORY"/>
+      <Item Language="1031" String="REVISIONSVERLAUF"/>
+      <Item Language="1038" String="REVÍZIÓ TÖRTÉNET"/>
+      <Item Language="1049" String="ЖУРНАЛ ИЗМЕНЕНИЙ"/>
+      <Item Language="1028" String="修訂歷程"/>
+      <Item Language="2052" String="修订历史记录"/>
+      <Item Language="1041" String="変更履歴"/>
+      <Item Language="1042" String="개정 내역"/>
+    </Title>
+    <Columns>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="ZONE" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="1" PropertyMemberID="" PropertySet="{E68C5C9C-7632-4a13-8A2D-9D3623A8A576}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1045" String="PAS"/>
+          <Item Language="1040 1046 3082" String="ZONA"/>
+          <Item Language="1031 1033 1036" String="ZONE"/>
+          <Item Language="1029 1038" String="ZÓNA"/>
+          <Item Language="1049" String="ЗОНА"/>
+          <Item Language="1041" String="ゾーン"/>
+          <Item Language="2052" String="区域"/>
+          <Item Language="1028" String="區域"/>
+          <Item Language="1042" String="영역"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="REV." HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="9" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1033 1036 1038 1040 1046 3082" String="REV"/>
+          <Item Language="1031" String="REV."/>
+          <Item Language="1029" String="REVIZE"/>
+          <Item Language="1045" String="WER"/>
+          <Item Language="1049" String="ИЗМ"/>
+          <Item Language="1028" String="修訂"/>
+          <Item Language="2052" String="修订"/>
+          <Item Language="1041" String="履歴"/>
+          <Item Language="1042" String="개정"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="BESCHREIBUNG" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="6" PropertyMemberID="" PropertySet="{3D38DE39-0588-4c14-BB37-18F4D5DD31C7}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1031" String="BESCHREIBUNG"/>
+          <Item Language="3082" String="DESCRIPCIÓN"/>
+          <Item Language="1033 1036" String="DESCRIPTION"/>
+          <Item Language="1040" String="DESCRIZIONE"/>
+          <Item Language="1046" String="DESCRIÇÃO"/>
+          <Item Language="1038" String="LEÍRÁS"/>
+          <Item Language="1045" String="OPIS"/>
+          <Item Language="1029" String="POPIS"/>
+          <Item Language="1049" String="ОПИСАНИЕ"/>
+          <Item Language="1028 2052" String="描述"/>
+          <Item Language="1041" String="説明"/>
+          <Item Language="1042" String="설명"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="DATUM" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="5" PropertyMemberID="" PropertySet="{E68C5C9C-7632-4a13-8A2D-9D3623A8A576}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1040 1045 1046" String="DATA"/>
+          <Item Language="1033 1036" String="DATE"/>
+          <Item Language="1029 1031" String="DATUM"/>
+          <Item Language="1038" String="DÁTUM"/>
+          <Item Language="3082" String="FECHA"/>
+          <Item Language="1049" String="ДАТА"/>
+          <Item Language="1041" String="日付"/>
+          <Item Language="1028 2052" String="日期"/>
+          <Item Language="1042" String="날짜"/>
+        </PropertyExternalName>
+      </ColumnItem>
+      <ColumnItem ColumnWidth="3" ColumnWidthScale="1" DecimalType="0" DisplayUnit="1" FractionStackScale="0.7" FractionStackStyle="-1" FractionalFormat="0" Heading="GENEHMIGT" HeadingFromDataSource="0" HeadingJustification="1" IsString="1" LeadingZeros="0" Precision="3" PropertyID="12" PropertyMemberID="" PropertySet="{32853F0F-3444-11d1-9E93-0060B03C1CA6}" TrailingZeros="0" UnitFormat="0" UnitType="5" ValueJustification="1">
+        <PropertyExternalName>
+          <Item Language="1036" String="APPROUVE"/>
+          <Item Language="1040" String="APPROVATO"/>
+          <Item Language="1033" String="APPROVED"/>
+          <Item Language="3082" String="APROBADA"/>
+          <Item Language="1046" String="APROVADO"/>
+          <Item Language="1031" String="GENEHMIGT"/>
+          <Item Language="1038" String="JÓVÁHAGYTA"/>
+          <Item Language="1029" String="SCHVÁLENO"/>
+          <Item Language="1045" String="ZATWIERDZONY"/>
+          <Item Language="1049" String="УТВЕРЖДЕНО"/>
+          <Item Language="2052" String="批准人"/>
+          <Item Language="1028" String="核准"/>
+          <Item Language="1041" String="認可"/>
+          <Item Language="1042" String="승인"/>
+        </PropertyExternalName>
+      </ColumnItem>
+    </Columns>
+    <FilterList/>
+    <SubStyle Collection="Leader" Language="1031" Type="LeaderStyle">Allgemein (JIS)</SubStyle>
+    <SubStyle Collection="Text" Language="1031" Type="TagTextStyle">Notiztext (JIS)</SubStyle>
+    <Name Description="" Language="1028">修訂表格 (JIS)</Name>
+    <Name Description="" Language="1029">Tabulka revizí (JIS)</Name>
+    <Name Description="" Language="1031">Revisionstabelle (JIS)</Name>
+    <Name Description="" Language="1033">Revision Table (JIS)</Name>
+    <Name Description="" Language="1036">Table de révision (JIS)</Name>
+    <Name Description="" Language="1038">Revíziótáblázat (JIS)</Name>
+    <Name Description="" Language="1040">Tabella revisioni (JIS)</Name>
+    <Name Description="" Language="1041">Revision Table (JIS)</Name>
+    <Name Description="" Language="1042">리비전 테이블 (JIS)</Name>
+    <Name Description="" Language="1045">Tabelka zmian (JIS)</Name>
+    <Name Description="" Language="1046">Tabela de revisão (JIS)</Name>
+    <Name Description="" Language="1049">Таблица редакций (JIS)</Name>
+    <Name Description="" Language="2052">修订表 (JIS)</Name>
+    <Name Description="" Language="3082">Tabla de revisiones (JIS)</Name>
+  </Style>
+
+</RevisionTable>

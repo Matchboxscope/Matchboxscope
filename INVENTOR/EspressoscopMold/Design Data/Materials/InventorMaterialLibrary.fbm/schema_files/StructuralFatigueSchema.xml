@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="CommonSchema"
+        file="../../../Common/CommonSchema.xml" />
+
+  <UID  val="StructuralFatigueSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="5"
+           public="false"
+           readonly="true" />
+
+  <type val="Fatigue" />
+
+  <localtype val="Fatigue" />
+  <localname val="Fatigue" />
+
+  <!--Meta-data properties-->
+
+  <Choice id="common_Shared_Asset"
+          val="common_shared"
+          label="Sharing" >
+    <ChoiceValue id="common_shared"
+                 val="0"
+                 label="Shared" />
+    <ChoiceValue id="common_independent"
+                 val="1"
+                 label="Independent" />
+  </Choice>
+
+  <String id="structural_subclass"
+          val=""
+          label="Subclass"
+		  local="true"/>
+
+  <String id="structural_source"
+          val=""
+          label="Source" />
+  <String id="structural_sourceURL"
+          val=""
+          label="Source URL" />
+
+  <String id="structural_ExternalMaterialID"
+          val=""
+          label="External Material ID" />
+
+ <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Structural/Fatigue/FatigueStructuralUI.xml"/>
+  
+
+  <!--Data properties-->
+
+  <!--E-N Data: Fatigue strength coefficient (SF)-->
+  <Float id="structural_Fatigue_strength_coefficient"
+         val="1.00"
+         unit="Kilopascal"
+         label="Fatigue Strength Coefficient"  >
+    <Bounds minimum="0.01"
+            maximum="1.3e+9" />
+  </Float>
+
+  <!--E-N Data: Fatigue strength exponent (B)-->
+  <Float id="structural_Fatigue_strength_exponent"
+         val="-0.10"
+         unit="Unitless"
+         label="Fatigue Strength Exponent"  >
+    <Bounds minimum="-100"
+            maximum="0" />
+  </Float>
+
+  <!--E-N Data: Fatigue ductility coefficient (EF)-->
+  <Float id="structural_Fatigue_ductility_coefficient"
+         val="1.00"
+         unit="Unitless"
+         label="Fatigue Ductility Coefficient"  >
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+
+  <!--E-N Data: Fatigue ductility exponent (C)-->
+  <Float id="structural_Fatigue_ductility_exponent"
+         val="-0.10"
+         unit="Unitless"
+         label="Fatigue Ductility Exponent"  >
+    <Bounds minimum="-100"
+            maximum="0" />
+  </Float>
+
+  <!--Cyclic strain hardening coefficient-->
+  <Float id="structural_Cyclic_strain_hardening_coefficient"
+         val="1.0e+6"
+         unit="Kilopascal"
+         label="Cyclic Strain Hardening Coefficient"  >
+    <Bounds minimum="0.01"
+            maximum="1.3e+9" />
+  </Float>
+
+  <!--Cyclic strain hardening exponent-->
+  <Float id="structural_Cyclic_strain_hardening_exponent"
+         val="0.10"
+         unit="Unitless"
+         label="Cyclic Strain Hardening Exponent"  >
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+
+  <!--Stress-Life Behaviour-->
+  <Choice id="fatigue_SN_Behavior"
+          val="sn_Constant"
+          label="Behavior" >
+    <ChoiceValue id="sn_Constant"
+                 val="0"
+                 label="Constant" />
+    <ChoiceValue id="sn_Curve"
+                 val="1"
+                 label="S-N Curve" />
+  </Choice>
+  <!--Endurance limit stress-->
+  <Float id="structural_Endurance_limit_stress"
+         val="1.0e+5"
+         unit="Kilopascal"
+         label="Endurance Limit Stress"  >
+    <Bounds minimum="0.01"
+            maximum="1.3e+9" />
+  </Float>
+
+  <!--S-N Data: Endurance limit cycles (Se)-->
+  <Float id="structural_Endurance_limit_cycles"
+         val="1.0e+7"
+         unit="Unitless"
+         label="Endurance Limit Number of Cycles"  >
+    <Bounds minimum="1.0e+5"
+            maximum="1.0e+12" />
+  </Float>
+
+  <!--Stress-Life Curve Data - Stress-->
+  <!--stress_curve_data unit="Kilopascal"-->
+  <Float id="stress_curve_data"
+          val="1.0e+5"
+          label="Stress"
+          allowmultiplevalues="true" >
+  </Float>
+
+  <!--Stress-Life Curve Data - Number of Cycles-->
+  <!--number_of_cycles_curve_data unit="Unitless"-->  
+  <Float id="number_of_cycles_curve_data"
+           val="1"
+           label="Number of Cycles"
+           allowmultiplevalues="true" >
+  </Float>
+
+  <!--Yield Compressive Strength-->
+  <Float id="compressive_stress_yield" 
+         val="0.01"
+         unit="Kilopascal"
+         label="Yield Compressive Strength"  >
+    <Bounds minimum="0"
+            maximum="1e+8" />
+  </Float>
+
+  <!--S-N Data: Ultimate Compressive Strength (Su)-->
+  <Float id="compressive_strength_ultimate" 
+         val="0.01"
+         unit="Kilopascal"
+         label="Ultimate Compressive Strength"  >
+    <Bounds minimum="0"
+            maximum="1e+8" />
+  </Float>
+
+  <!--S-N Data: Curve Slope (B)-->
+ <Float id="structural_Fatigue_Curve_Slope"
+		  val="1.0"
+		  label="S-N Curve Slope B" />
+ 
+  <!--S-N Data: Intercept Cycles (No)-->
+ <Float id="structural_Fatigue_Intercept_Cycles"
+		  val="460.0"
+		  label="Intercept Cycles No" />
+		  <Bounds minimum="1.0"
+		  maximum="1.0e+12" />
+
+ <!--S-N Data: Life Reduction Effects (KF)-->
+ <Float id="structural_Fatigue_Factor_Life_Reduction_Effects"
+		  val=""
+		  label="Endurance Limit Factor KF" />
+
+<!--S-N Data: Slope After Endurance Limit (Be)-->
+ <Float id="structural_Fatigue_Slope_After_Endurance_Limit"
+		  val=""
+		  label="Slope after Endurance Limit Be" />
+
+</AssetSchema>
+
+

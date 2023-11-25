@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StudioImageBasedLighting Version="1">
+	<Style InternalName="1:Shop Lighting (24'x24')" IBLSourceId="DesertDawnRoad" Exposure="0.96" IBLRotation="95" IBLScale="1">
+		<Name Language="1033" Description="">Desert Dawn Road</Name>
+		<Name Language="1028" Description="">黎明時分的沙漠公路</Name>
+		<Name Language="1029" Description="">Cesta, pouštní úsvit</Name>
+		<Name Language="1031" Description="">Wüstenstraße bei Dämmerung</Name>
+		<Name Language="1036" Description="">Route désertique à l'aube</Name>
+		<Name Language="1038" Description="">Hajnali sivatagi út</Name>
+		<Name Language="1040" Description="">Strada deserta all'alba</Name>
+		<Name Language="1041" Description="">Desert Dawn Road</Name>
+		<Name Language="1042" Description="">사막 새벽길</Name>
+		<Name Language="1045" Description="">Opustoszała droga o świcie</Name>
+		<Name Language="1046" Description="">Poente na estrada do deserto</Name>
+		<Name Language="1049" Description="">Дорога в пустыне</Name>
+		<Name Language="2052" Description="">沙漠黎明道路</Name>
+		<Name Language="3082" Description="">Carretera amanecer desierto</Name>
+	</Style>
+	<Style InternalName="CountryRoadSpheronVR" IBLSourceId="CountryRoadSpheronVR" Exposure="0.71" IBLRotation="0" IBLScale="1">
+		<Name Language="1033" Description="">Country Road - SpheronVR</Name>
+		<Name Language="1028" Description="">鄉村路 - SpheronVR</Name>
+		<Name Language="1029" Description="">Venkovská cesta - SpheronVR</Name>
+		<Name Language="1031" Description="">Landstraße - SpheronVR</Name>
+		<Name Language="1036" Description="">Route rurale - SpheronVR</Name>
+		<Name Language="1038" Description="">Országút - SpheronVR</Name>
+		<Name Language="1040" Description="">Strada di campagna - Spheron VR</Name>
+		<Name Language="1041" Description="">Country Road - SpheronVR</Name>
+		<Name Language="1042" Description="">시골길 - SpheronVR</Name>
+		<Name Language="1045" Description="">Wiejska droga — SpheronVR</Name>
+		<Name Language="1046" Description="">Estrada campestre - SpheronVR</Name>
+		<Name Language="1049" Description="">Проселочная дорога — SpheronVR</Name>
+		<Name Language="2052" Description="">乡村道路 - SpheronVR</Name>
+		<Name Language="3082" Description="">Carretera rural - SpheronVR</Name>
+	</Style>
+	<Style InternalName="StuttgartCourtyard" IBLSourceId="StuttgartCourtyard" Exposure="0.5" IBLRotation="0" IBLScale="1">
+		<Name Language="1033" Description="">Stuttgart Courtyard</Name>
+		<Name Language="1028" Description="">斯圖加特庭院</Name>
+		<Name Language="1029" Description="">Stuttgartský dvůr</Name>
+		<Name Language="1031" Description="">Stuttgart - Hof</Name>
+		<Name Language="1036" Description="">Cour Stuttgart</Name>
+		<Name Language="1038" Description="">Stuttgart udvar</Name>
+		<Name Language="1040" Description="">Cortile di Stoccarda</Name>
+		<Name Language="1041" Description="">Stuttgart Courtyard</Name>
+		<Name Language="1042" Description="">슈투트가르트 안뜰</Name>
+		<Name Language="1045" Description="">Dwór stuttgarcki</Name>
+		<Name Language="1046" Description="">Pátio de Stuttgart</Name>
+		<Name Language="1049" Description="">Штуттгартский двор</Name>
+		<Name Language="2052" Description="">斯图加特庭院</Name>
+		<Name Language="3082" Description="">Patio de Stuttgart</Name>
+	</Style>
+	<Style InternalName="DrySaltBed" IBLSourceId="DrySaltBed" Exposure="0.75" IBLRotation="0" IBLScale="1">
+		<Name Language="1033" Description="">Dry Salt Bed</Name>
+		<Name Language="1028" Description="">乾鹽層</Name>
+		<Name Language="1029" Description="">Ložisko suché soli</Name>
+		<Name Language="1031" Description="">Trockene Salzschicht</Name>
+		<Name Language="1036" Description="">Lac salé asséché</Name>
+		<Name Language="1038" Description="">Száraz sótelep</Name>
+		<Name Language="1040" Description="">Letto salino asciutto</Name>
+		<Name Language="1041" Description="">Dry Salt Bed</Name>
+		<Name Language="1042" Description="">건조한 염전</Name>
+		<Name Language="1045" Description="">Pokłady solne</Name>
+		<Name Language="1046" Description="">Leito seco salgado</Name>
+		<Name Language="1049" Description="">Сухой соляной пласт</Name>
+		<Name Language="2052" Description="">干盐层</Name>
+		<Name Language="3082" Description="">Lecho de salar seco</Name>
+	</Style>
+	<Style InternalName="EmptyLab" IBLSourceId="EmptyLab" Exposure="1" IBLRotation="0" IBLScale="1">
+		<Name Language="1033" Description="">Empty Lab</Name>
+		<Name Language="1028" Description="">空實驗室</Name>
+		<Name Language="1029" Description="">Prázdná laboratoř</Name>
+		<Name Language="1031" Description="">Leeres Labor</Name>
+		<Name Language="1036" Description="">Laboratoire vide</Name>
+		<Name Language="1038" Description="">Üres laboratórium</Name>
+		<Name Language="1040" Description="">Laboratorio vuoto</Name>
+		<Name Language="1041" Description="">Empty Lab</Name>
+		<Name Language="1042" Description="">빈 실험실</Name>
+		<Name Language="1045" Description="">Puste laboratorium</Name>
+		<Name Language="1046" Description="">Laboratório vazio</Name>
+		<Name Language="1049" Description="">Пустая лаборатория</Name>
+		<Name Language="2052" Description="">空实验室</Name>
+		<Name Language="3082" Description="">Laboratorio vacío</Name>
+	</Style>
+	<Style InternalName="OldWarehouse" IBLSourceId="OldWarehouse" Exposure="1" IBLRotation="180" IBLScale="1">
+		<Name Language="1033" Description="">Old Warehouse</Name>
+		<Name Language="1028" Description="">舊倉庫</Name>
+		<Name Language="1029" Description="">Starý sklad</Name>
+		<Name Language="1031" Description="">Altes Lager</Name>
+		<Name Language="1036" Description="">Vieil entrepôt</Name>
+		<Name Language="1038" Description="">Öreg raktárépület</Name>
+		<Name Language="1040" Description="">Vecchio magazzino</Name>
+		<Name Language="1041" Description="">Old Warehouse</Name>
+		<Name Language="1042" Description="">낡은 창고</Name>
+		<Name Language="1045" Description="">Stary magazyn</Name>
+		<Name Language="1046" Description="">Depósito antigo</Name>
+		<Name Language="1049" Description="">Старый склад</Name>
+		<Name Language="2052" Description="">旧仓库</Name>
+		<Name Language="3082" Description="">Almacén antiguo</Name>
+	</Style>
+	<Style InternalName="PlainRoom" IBLSourceId="PlainRoom" Exposure="0.71" IBLRotation="0" IBLScale="1">
+		<Name Language="1033" Description="">Plain Room</Name>
+		<Name Language="1028" Description="">簡單的房間</Name>
+		<Name Language="1029" Description="">Jednoduchá místnost</Name>
+		<Name Language="1031" Description="">Einfacher Raum</Name>
+		<Name Language="1036" Description="">Salle ordinaire</Name>
+		<Name Language="1038" Description="">Üres szoba</Name>
+		<Name Language="1040" Description="">Stanza semplice</Name>
+		<Name Language="1041" Description="">シンプルな部屋</Name>
+		<Name Language="1042" Description="">일반 공간</Name>
+		<Name Language="1045" Description="">Zwykły pokój</Name>
+		<Name Language="1046" Description="">Ambiente simples</Name>
+		<Name Language="1049" Description="">Обычная комната</Name>
+		<Name Language="2052" Description="">简易房</Name>
+		<Name Language="3082" Description="">Habitación normal</Name>
+	</Style>
+</StudioImageBasedLighting>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StudioLighting Version="4">
+
+
+<Style InternalName="1:Default IBL" ShadowsType="2" ShadowsQuality="2" Ambience="50" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+    <Name Description="" Language="1028">預設 IBL</Name>
+    <Name Description="" Language="1029">Výchozí IBL</Name>
+    <Name Description="" Language="1031">IBL-Vorgabe</Name>
+    <Name Description="" Language="1033">Default IBL</Name>
+    <Name Description="" Language="1036">IBL par défaut</Name>
+    <Name Description="" Language="1038">Alapértelmezett IBL</Name>
+    <Name Description="" Language="1040">IBL di default</Name>
+    <Name Description="" Language="1041">Default IBL</Name>
+    <Name Description="" Language="1042">기본 IBL</Name>
+    <Name Description="" Language="1045">Domyślny IBL</Name>
+    <Name Description="" Language="1046">IBL padrão</Name>
+    <Name Description="" Language="1049">IBL по умолчанию</Name>
+    <Name Description="" Language="2052">默认 IBL</Name>
+    <Name Description="" Language="3082">IBL Por defecto</Name>
+  <IBL Source="RimHighlights" Exposure="0.0" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+  
+<Style InternalName="1:Country Road - SpheronVR" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+	<Name Description="" Language="1033">Country Road - SpheronVR</Name>
+	<Name Description="" Language="1028">鄉村路 - SpheronVR</Name>
+	<Name Description="" Language="1029">Venkovská cesta - SpheronVR</Name>
+	<Name Description="" Language="1031">Landstraße - SpheronVR</Name>
+	<Name Description="" Language="1036">Route rurale - SpheronVR</Name>
+	<Name Description="" Language="1038">Országút - SpheronVR</Name>
+	<Name Description="" Language="1040">Strada di campagna - Spheron VR</Name>
+	<Name Description="" Language="1041">Country Road - SpheronVR</Name>
+	<Name Description="" Language="1042">시골길 - SpheronVR</Name>
+	<Name Description="" Language="1045">Wiejska droga - SpheronVR</Name>
+	<Name Description="" Language="1046">Estrada campestre - SpheronVR</Name>
+	<Name Description="" Language="1049">Проселочная дорога - SpheronVR</Name>
+	<Name Description="" Language="2052">乡村道路 - SpheronVR</Name>
+	<Name Description="" Language="3082">Carretera rural - SpheronVR</Name>
+	<IBL Source="CountryRoadSpheronVR" Exposure="0.0" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Desert Dawn Road" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+	<Name Description="" Language="1033">Desert Dawn Road</Name>
+	<Name Description="" Language="1028">黎明時分的沙漠公路</Name>
+	<Name Description="" Language="1029">Cesta, pouštní úsvit</Name>
+	<Name Description="" Language="1031">Wüstenstraße bei Dämmerung</Name>
+	<Name Description="" Language="1036">Route désertique à l'aube</Name>
+	<Name Description="" Language="1038">Hajnali sivatagi út</Name>
+	<Name Description="" Language="1040">Strada deserta all'alba</Name>
+	<Name Description="" Language="1041">Desert Dawn Road</Name>
+	<Name Description="" Language="1042">사막 새벽길</Name>
+	<Name Description="" Language="1045">Opustoszała droga o świcie</Name>
+	<Name Description="" Language="1046">Poente na estrada do deserto</Name>
+	<Name Description="" Language="1049">Дорога в пустыне</Name>
+	<Name Description="" Language="2052">沙漠黎明道路</Name>
+	<Name Description="" Language="3082">Carretera amanecer desierto</Name>
+	<IBL Source="DesertDawnRoad" Exposure="-0.25" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Dry Salt Bed" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+	<Name Description="" Language="1033">Dry Salt Bed</Name>
+	<Name Description="" Language="1028">乾鹽層</Name>
+	<Name Description="" Language="1029">Ložisko suché soli</Name>
+	<Name Description="" Language="1031">Trockene Salzschicht</Name>
+	<Name Description="" Language="1036">Lac salé asséché</Name>
+	<Name Description="" Language="1038">Száraz sótelep</Name>
+	<Name Description="" Language="1040">Letto salino asciutto</Name>
+	<Name Description="" Language="1041">Dry Salt Bed</Name>
+	<Name Description="" Language="1042">건조한 염전</Name>
+	<Name Description="" Language="1045">Pokłady solne</Name>
+	<Name Description="" Language="1046">Leito seco salgado</Name>
+	<Name Description="" Language="1049">Сухой соляной пласт</Name>
+	<Name Description="" Language="2052">干盐层</Name>
+	<Name Description="" Language="3082">Lecho de salar seco</Name>
+	<IBL Source="DrySaltBed" Exposure="0.0" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Empty Lab" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+	<Name Description="" Language="1033">Empty Lab</Name>
+	<Name Description="" Language="1028">空實驗室</Name>
+	<Name Description="" Language="1029">Prázdná laboratoř</Name>
+	<Name Description="" Language="1031">Leeres Labor</Name>
+	<Name Description="" Language="1036">Laboratoire vide</Name>
+	<Name Description="" Language="1038">Üres laboratórium</Name>
+	<Name Description="" Language="1040">Laboratorio vuoto</Name>
+	<Name Description="" Language="1041">Empty Lab</Name>
+	<Name Description="" Language="1042">빈 실험실</Name>
+	<Name Description="" Language="1045">Puste laboratorium</Name>
+	<Name Description="" Language="1046">Laboratório vazio</Name>
+	<Name Description="" Language="1049">Пустая лаборатория</Name>
+	<Name Description="" Language="2052">空实验室</Name>
+	<Name Description="" Language="3082">Laboratorio vacío</Name>
+	<IBL Source="EmptyLab" Exposure="-0.5" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Old Warehouse" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+	<Name Description="" Language="1033">Old Warehouse</Name>
+	<Name Description="" Language="1028">舊倉庫</Name>
+	<Name Description="" Language="1029">Starý sklad</Name>
+	<Name Description="" Language="1031">Altes Lager</Name>
+	<Name Description="" Language="1036">Vieil entrepôt</Name>
+	<Name Description="" Language="1038">Öreg raktárépület</Name>
+	<Name Description="" Language="1040">Vecchio magazzino</Name>
+	<Name Description="" Language="1041">Old Warehouse</Name>
+	<Name Description="" Language="1042">낡은 창고</Name>
+	<Name Description="" Language="1045">Stary magazyn</Name>
+	<Name Description="" Language="1046">Depósito antigo</Name>
+	<Name Description="" Language="1049">Старый склад</Name>
+	<Name Description="" Language="2052">旧仓库</Name>
+	<Name Description="" Language="3082">Almacén antiguo</Name>
+	<IBL Source="OldWarehouse" Exposure="0.0" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Plain Room" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+	<Name Description="" Language="1033">Plain Room</Name>
+	<Name Description="" Language="1028">簡單的房間</Name>
+	<Name Description="" Language="1029">Jednoduchá místnost</Name>
+	<Name Description="" Language="1031">Einfacher Raum</Name>
+	<Name Description="" Language="1036">Salle ordinaire</Name>
+	<Name Description="" Language="1038">Üres szoba</Name>
+	<Name Description="" Language="1040">Stanza semplice</Name>
+	<Name Description="" Language="1041">Plain Room</Name>
+	<Name Description="" Language="1042">일반 공간</Name>
+	<Name Description="" Language="1045">Zwykły pokój</Name>
+	<Name Description="" Language="1046">Ambiente simples</Name>
+	<Name Description="" Language="1049">Обычная комната</Name>
+	<Name Description="" Language="2052">简易房</Name>
+	<Name Description="" Language="3082">Habitación normal</Name>
+	<IBL Source="PlainRoom" Exposure="0.25" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Stuttgart Courtyard" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+	<Name Description="" Language="1033">Stuttgart Courtyard</Name>
+	<Name Description="" Language="1028">司徒加庭院</Name>
+	<Name Description="" Language="1029">Stuttgartský dvůr</Name>
+	<Name Description="" Language="1031">Stuttgart - Hof</Name>
+	<Name Description="" Language="1036">Cour Stuttgart</Name>
+	<Name Description="" Language="1038">Stuttgart udvar</Name>
+	<Name Description="" Language="1040">Cortile di Stoccarda</Name>
+	<Name Description="" Language="1041">Stuttgart Courtyard</Name>
+	<Name Description="" Language="1042">슈투트가르트 안뜰</Name>
+	<Name Description="" Language="1045">Dwór stuttgarcki</Name>
+	<Name Description="" Language="1046">Pátio de Stuttgart</Name>
+	<Name Description="" Language="1049">Штуттгартский двор</Name>
+	<Name Description="" Language="2052">斯图加特庭院</Name>
+	<Name Description="" Language="3082">Patio de Stuttgart</Name>
+	<IBL Source="StuttgartCourtyard" Exposure="0.25" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:The Alps" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+	<Name Description="" Language="1033">The Alps</Name>
+	<Name Description="" Language="1028">阿爾卑斯山</Name>
+	<Name Description="" Language="1029">Alpy</Name>
+	<Name Description="" Language="1031">Die Alpen</Name>
+	<Name Description="" Language="1036">Alpes</Name>
+	<Name Description="" Language="1038">Alpok</Name>
+	<Name Description="" Language="1040">Le Alpi</Name>
+	<Name Description="" Language="1041">The Alps</Name>
+	<Name Description="" Language="1042">알프스</Name>
+	<Name Description="" Language="1045">Alpy</Name>
+	<Name Description="" Language="1046">Alpes</Name>
+	<Name Description="" Language="1049">Альпы</Name>
+	<Name Description="" Language="2052">阿尔卑斯山脉</Name>
+	<Name Description="" Language="3082">Los Alpes</Name>
+	<IBL Source="TheAlps" Exposure="0.0" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Dark Sky" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+	<Name Description="" Language="1028">黑暗天空</Name>
+    <Name Description="" Language="1029">Tmavá obloha</Name>
+    <Name Description="" Language="1031">Dunkler Himmel</Name>
+    <Name Description="" Language="1033">Dark Sky</Name>
+    <Name Description="" Language="1036">Ciel sombre</Name>
+    <Name Description="" Language="1038">Sötét ég</Name>
+    <Name Description="" Language="1040">Cielo scuro</Name>
+    <Name Description="" Language="1041">Dark Sky</Name>
+    <Name Description="" Language="1042">어두운 하늘</Name>
+    <Name Description="" Language="1045">Ciemne niebo</Name>
+    <Name Description="" Language="1046">Céu escuro</Name>
+    <Name Description="" Language="1049">Ночное небо</Name>
+    <Name Description="" Language="2052">昏暗的天空</Name>
+    <Name Description="" Language="3082">Cielo oscuro</Name>
+	<IBL Source="DarkSky" Exposure="0.25" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Grey Room" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+    <Name Description="" Language="1028">灰色房間</Name>
+    <Name Description="" Language="1029">Šedá místnost</Name>
+    <Name Description="" Language="1031">Grauer Raum</Name>
+    <Name Description="" Language="1033">Grey Room</Name>
+    <Name Description="" Language="1036">Pièce grise</Name>
+    <Name Description="" Language="1038">Szürke szoba</Name>
+    <Name Description="" Language="1040">Stanza grigia</Name>
+    <Name Description="" Language="1041">Grey Room</Name>
+    <Name Description="" Language="1042">회색 공간</Name>
+    <Name Description="" Language="1045">Szare pomieszczenie</Name>
+    <Name Description="" Language="1046">Quarto cinza</Name>
+    <Name Description="" Language="1049">Серое помещение</Name>
+    <Name Description="" Language="2052">灰色房间</Name>
+    <Name Description="" Language="3082">Habitación gris</Name>
+	<IBL Source="GreyRoom" Exposure="0.25" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Infinity Pool" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+    <Name Description="" Language="1028">無限池</Name>
+    <Name Description="" Language="1029">Nevyčerpatelný fond</Name>
+    <Name Description="" Language="1031">Unendlichkeits-Pool</Name>
+    <Name Description="" Language="1033">Infinity Pool</Name>
+    <Name Description="" Language="1036">Pool infini</Name>
+    <Name Description="" Language="1038">Végtelen medence</Name>
+    <Name Description="" Language="1040">Piscina a sfioro</Name>
+    <Name Description="" Language="1041">Infinity Pool</Name>
+    <Name Description="" Language="1042">무한대 풀</Name>
+    <Name Description="" Language="1045">Basen z niewidoczną krawędzią</Name>
+    <Name Description="" Language="1046">Piscina infinita</Name>
+    <Name Description="" Language="1049">Бесконечный бассейн</Name>
+    <Name Description="" Language="2052">无边水池</Name>
+    <Name Description="" Language="3082">Piscina desbordante</Name>
+    <IBL Source="InfinityPool" Exposure="0.25" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Photo Booth" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+    <Name Description="" Language="1028">大頭貼</Name>
+    <Name Description="" Language="1029">Fotokabina</Name>
+    <Name Description="" Language="1031">Fotoautomat</Name>
+    <Name Description="" Language="1033">Photo Booth</Name>
+    <Name Description="" Language="1036">Photomaton</Name>
+    <Name Description="" Language="1038">Photo Booth</Name>
+    <Name Description="" Language="1040">Cabina per fototessere</Name>
+    <Name Description="" Language="1041">Photo Booth</Name>
+    <Name Description="" Language="1042">사진 부스</Name>
+    <Name Description="" Language="1045">Budka fotograficzna</Name>
+    <Name Description="" Language="1046">Cabine de fotos</Name>
+    <Name Description="" Language="1049">Фотокабина</Name>
+    <Name Description="" Language="2052">照相亭</Name>
+    <Name Description="" Language="3082">Fotomatón</Name>
+    <IBL Source="PhotoBooth" Exposure="0.25" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Tranquility Blue" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+    <Name Description="" Language="1028">寧靜藍</Name>
+    <Name Description="" Language="1029">Bledě modrá</Name>
+    <Name Description="" Language="1031">Ruhiges Blau</Name>
+    <Name Description="" Language="1033">Tranquility Blue</Name>
+    <Name Description="" Language="1036">Bleu pâle</Name>
+    <Name Description="" Language="1038">Nyugodt kék</Name>
+    <Name Description="" Language="1040">Blu Tranquility</Name>
+    <Name Description="" Language="1041">Tranquility Blue</Name>
+    <Name Description="" Language="1042">Tranquility 파란색</Name>
+    <Name Description="" Language="1045">Spokojny niebieski</Name>
+    <Name Description="" Language="1046">Azul sereno</Name>
+    <Name Description="" Language="1049">Спокойный синий</Name>
+    <Name Description="" Language="2052">宁静蓝</Name>
+    <Name Description="" Language="3082">Azul tranquilidad</Name>
+    <IBL Source="TranquilityBlue" Exposure="0.25" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Sharp Highlights" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+    <Name Description="" Language="1028">銳利亮顯</Name>
+    <Name Description="" Language="1029">Ostrá zvýraznění</Name>
+    <Name Description="" Language="1031">Scharfe Glanzlichter</Name>
+    <Name Description="" Language="1033">Sharp Highlights</Name>
+    <Name Description="" Language="1036">Reflets nets</Name>
+    <Name Description="" Language="1038">Éles kiemelése</Name>
+    <Name Description="" Language="1040">Luci intense</Name>
+    <Name Description="" Language="1041">Sharp Highlights</Name>
+    <Name Description="" Language="1042">선명한 강조 표시</Name>
+    <Name Description="" Language="1045">Wyraźne podświetlenie</Name>
+    <Name Description="" Language="1046">Realces acentuados</Name>
+    <Name Description="" Language="1049">Резкое выделение</Name>
+    <Name Description="" Language="2052">锐化高光</Name>
+    <Name Description="" Language="3082">Resaltos nítidos</Name>
+    <IBL Source="SharpHighlights" Exposure="0.0" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Rim Highlights" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+    <Name Description="" Language="1028">邊緣亮顯</Name>
+    <Name Description="" Language="1029">Zvýraznění okrajů</Name>
+    <Name Description="" Language="1031">Randglanzlichter</Name>
+    <Name Description="" Language="1033">Rim Highlights</Name>
+    <Name Description="" Language="1036">Reflets en contour</Name>
+    <Name Description="" Language="1038">Fedlap kiemelése</Name>
+    <Name Description="" Language="1040">Luci bordo</Name>
+    <Name Description="" Language="1041">Rim Highlights</Name>
+    <Name Description="" Language="1042">림 강조 표시</Name>
+    <Name Description="" Language="1045">Podświetlenie obrzeża</Name>
+    <Name Description="" Language="1046">Realces de contorno</Name>
+    <Name Description="" Language="1049">Выделение кромки</Name>
+    <Name Description="" Language="2052">边缘高光</Name>
+    <Name Description="" Language="3082">Resaltos de borde</Name>
+    <IBL Source="RimHighlights" Exposure="0.0" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Cool Light" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+    <Name Description="" Language="1028">冷光</Name>
+    <Name Description="" Language="1029">Studené světlo</Name>
+    <Name Description="" Language="1031">Kühles Licht</Name>
+    <Name Description="" Language="1033">Cool Light</Name>
+    <Name Description="" Language="1036">Lumière froide</Name>
+    <Name Description="" Language="1038">Hideg fény</Name>
+    <Name Description="" Language="1040">Luce fredda</Name>
+    <Name Description="" Language="1041">Cool Light</Name>
+    <Name Description="" Language="1042">냉각 라이트</Name>
+    <Name Description="" Language="1045">Zimne światło</Name>
+    <Name Description="" Language="1046">Luz fria</Name>
+    <Name Description="" Language="1049">Холодный свет</Name>
+    <Name Description="" Language="2052">冷光光源</Name>
+    <Name Description="" Language="3082">Luz fría</Name>
+    <IBL Source="CoolLight" Exposure="0.0" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Warm Light" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+    <Name Description="" Language="1028">暖光</Name>
+    <Name Description="" Language="1029">Teplé světlo</Name>
+    <Name Description="" Language="1031">Warmes Licht</Name>
+    <Name Description="" Language="1033">Warm Light</Name>
+    <Name Description="" Language="1036">Lumière chaude</Name>
+    <Name Description="" Language="1038">Meleg fény</Name>
+    <Name Description="" Language="1040">Luce calda</Name>
+    <Name Description="" Language="1041">Warm Light</Name>
+    <Name Description="" Language="1042">따뜻한 라이트</Name>
+    <Name Description="" Language="1045">Ciepłe światło</Name>
+    <Name Description="" Language="1046">Luz quente</Name>
+    <Name Description="" Language="1049">Теплый свет</Name>
+    <Name Description="" Language="2052">暖光光源</Name>
+    <Name Description="" Language="3082">Luz cálida</Name>
+    <IBL Source="WarmLight" Exposure="0.0" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Soft Light" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+    <Name Description="" Language="1028">柔光</Name>
+    <Name Description="" Language="1029">Měkké světlo</Name>
+    <Name Description="" Language="1031">Weiches Licht</Name>
+    <Name Description="" Language="1033">Soft Light</Name>
+    <Name Description="" Language="1036">Lumière douce</Name>
+    <Name Description="" Language="1038">Lágy fény</Name>
+    <Name Description="" Language="1040">Luce tenue</Name>
+    <Name Description="" Language="1041">Soft Light</Name>
+    <Name Description="" Language="1042">부드러운 라이트</Name>
+    <Name Description="" Language="1045">Miękkie światło</Name>
+    <Name Description="" Language="1046">Luz suave</Name>
+    <Name Description="" Language="1049">Мягкий свет</Name>
+    <Name Description="" Language="2052">柔光光源</Name>
+    <Name Description="" Language="3082">Luz suave</Name>
+    <IBL Source="SoftLight" Exposure="0.0" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+<Style InternalName="1:Grid Light" ShadowsType="2" ShadowsQuality="2" Ambience="10" Density="50" Brightness="100" Scale="1.000000" OrientGP="OrientDefaultXZ" OrientFlip="0" OrientNormalX="1.000000" OrientNormalY="0.000000" OrientNormalZ="0.000000" SkyLight="0" Intensity="20" ImageType="1" ColorRed="255" ColorGreen="255" ColorBlue="255" ImageFile="" ImagePath="0" BouncedLight="0" QualityType="2" Quality="100" Diameter="-1.000000" Softness="50">
+    <Name Description="" Language="1028">格線光源</Name>
+    <Name Description="" Language="1029">Mřížkované světlo</Name>
+    <Name Description="" Language="1031">Rasterlicht</Name>
+    <Name Description="" Language="1033">Grid Light</Name>
+    <Name Description="" Language="1036">Grille de lumière</Name>
+    <Name Description="" Language="1038">Rácsos fény</Name>
+    <Name Description="" Language="1040">Luce griglia</Name>
+    <Name Description="" Language="1041">Grid Light</Name>
+    <Name Description="" Language="1042">그리드 라이트</Name>
+    <Name Description="" Language="1045">Światło matrycowe</Name>
+    <Name Description="" Language="1046">Luz de grade</Name>
+    <Name Description="" Language="1049">Сетка источника света</Name>
+    <Name Description="" Language="2052">栅格光源</Name>
+    <Name Description="" Language="3082">Luz de rejilla</Name>
+    <IBL Source="GridLight" Exposure="0.0" Rotation="0" Scale="1" DisplayImage="0"/>
+</Style>
+
+</StudioLighting>

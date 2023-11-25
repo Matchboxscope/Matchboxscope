@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<WeldBead Version="6">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style AngleF="1.5708" CatArcF="75" CatSpacingF="0.15748" CatType="0" CatWidthF="0.15748" Color="0:0:0:255" ColorByLayer="1" Depth="0.449" DepthSelected="0" EditFlag="0" InternalName="1:Weld Bead Recovery (ANSI)&#xA;" Leg1="0.635" Leg2="0.635" LengthF="1.27" LineWeight="0" LineWeightByLayer="1" Scale="1" SeamVisF="1" StitchOffsetF="1.27">
+    <HatchPatternRawData>
+      <PatternLine>*SOLID, Solid/Fill pattern</PatternLine>
+    </HatchPatternRawData>
+    <Name Description="根據 AWS/ANSI A2.4-93" Language="1028">焊道恢復 (ANSI)</Name>
+    <Name Description="Podle normy AWS/ANSI A2.4-93" Language="1029">Obnovení svarové housenky (ANSI)</Name>
+    <Name Description="Basiert auf AWS/ANSI A2.4-93" Language="1031">Schweißnahtwiederherstellung (ANSI)</Name>
+    <Name Description="Based on AWS/ANSI A2.4-93" Language="1033">Weld Bead Recovery (ANSI)</Name>
+    <Name Description="En fonction d'AWS/ANSI A2.4-93" Language="1036">Récupération du cordon de soudure (ANSI)</Name>
+    <Name Description="Alapja: AWS/ANSI A2.4-93" Language="1038">Varratjelölés (ANSI)</Name>
+    <Name Description="Basato su AWS/ANSI A2.4-93" Language="1040">Ripristino cordone di saldatura (ANSI)</Name>
+    <Name Description="Based on AWS/ANSI A2.4-93" Language="1041">Weld Bead Recovery (ANSI)</Name>
+    <Name Description="AWS/ANSI A2.4-93 기준" Language="1042">용접 비드 복구 (ANSI)</Name>
+    <Name Description="Na podstawie AWS/ANSI A2.4-93" Language="1045">Regeneracja ściegu spoiny (ANSI)</Name>
+    <Name Description="Baseado na AWS/ANSI A2.4-93" Language="1046">Recuperação de cordão de solda (ANSI)</Name>
+    <Name Description="Согласно AWS/ANSI A2.4-93" Language="1049">Валик сварного шва (ANSI)</Name>
+    <Name Description="基于 AWS/ANSI A2.4-93" Language="2052">焊道恢复 (ANSI)</Name>
+    <Name Description="Basado en AWS/ANSI A2.4-93" Language="3082">Recuperación de cordón de soldadura (ANSI)</Name>
+  </Style>
+
+  <Style AngleF="1.5708" CatArcF="75" CatSpacingF="0.15748" CatType="0" CatWidthF="0.15748" Color="0:0:0:255" ColorByLayer="1" Depth="0.449" DepthSelected="0" EditFlag="0" InternalName="1:Weld Bead Recovery (GOST)&#xA;" Leg1="0.635" Leg2="0.635" LengthF="1.27" LineWeight="0" LineWeightByLayer="1" Scale="1" SeamVisF="1" StitchOffsetF="1.27">
+    <HatchPatternRawData>
+      <PatternLine>*SOLID, Solid/Fill pattern</PatternLine>
+    </HatchPatternRawData>
+    <Name Description="根據 ISO 2553 - 1984" Language="1028">焊道恢復 (GOST)</Name>
+    <Name Description="Podle normy ISO 2553 - 1984" Language="1029">Obnovení svarové housenky (GOST)</Name>
+    <Name Description="Basiert auf ISO 2553 - 1984" Language="1031">Schweißnahtwiederherstellung (GOST)</Name>
+    <Name Description="Based on ISO 2553 - 1984" Language="1033">Weld Bead Recovery (GOST)</Name>
+    <Name Description="En fonction d'ISO 2553 - 1984" Language="1036">Récupération du cordon de soudure (GOST)</Name>
+    <Name Description="Alapja: ISO 2553 - 1984" Language="1038">Varratjelölés (GOST)</Name>
+    <Name Description="Basato su ISO 2553 - 1984" Language="1040">Ripristino cordone di saldatura (GOST)</Name>
+    <Name Description="Based on ISO 2553 - 1984" Language="1041">Weld Bead Recovery (GOST)</Name>
+    <Name Description="ISO 2553 - 1984 기준" Language="1042">용접 비드 복구(GOST)</Name>
+    <Name Description="Na podstawie ISO 2553 - 1984" Language="1045">Regeneracja ściegu spoiny (GOST)</Name>
+    <Name Description="Baseado na ISO 2553 - 1984" Language="1046">Recuperação de cordão de solda (GOST)</Name>
+    <Name Description="Согласно ISO 2553 - 1984" Language="1049">Валик сварного шва (ГОСТ)</Name>
+    <Name Description="基于 ISO 2553 - 1984" Language="2052">焊道恢复 (GOST)</Name>
+    <Name Description="Basado en ISO 2553 - 1984" Language="3082">Recuperación de cordón de soldadura (GOST)</Name>
+  </Style>
+
+  <Style AngleF="1.5708" CatArcF="75" CatSpacingF="0.15748" CatType="0" CatWidthF="0.15748" Color="0:0:0:255" ColorByLayer="1" Depth="0.449" DepthSelected="0" EditFlag="0" InternalName="1:Weld Bead Recovery (ISO)&#xA;" Leg1="0.635" Leg2="0.635" LengthF="1.27" LineWeight="0" LineWeightByLayer="1" Scale="1" SeamVisF="1" StitchOffsetF="1.27">
+    <HatchPatternRawData>
+      <PatternLine>*SOLID, Solid/Fill pattern</PatternLine>
+    </HatchPatternRawData>
+    <Name Description="根據 ISO 2553 - 1984" Language="1028">焊道恢復 (ISO)</Name>
+    <Name Description="Podle normy ISO 2553 - 1984" Language="1029">Obnovení svarové housenky (ISO)</Name>
+    <Name Description="Basiert auf ISO 2553 - 1984" Language="1031">Schweißnahtwiederherstellung (ISO)</Name>
+    <Name Description="Based on ISO 2553 - 1984" Language="1033">Weld Bead Recovery (ISO)</Name>
+    <Name Description="En fonction d'ISO 2553 - 1984" Language="1036">Récupération du cordon de soudure (ISO)</Name>
+    <Name Description="Alapja: ISO 2553 - 1984" Language="1038">Varratjelölés (ISO)</Name>
+    <Name Description="Basato su ISO 2553 - 1984" Language="1040">Ripristino cordone di saldatura (ISO)</Name>
+    <Name Description="Based on ISO 2553 - 1984" Language="1041">Weld Bead Recovery (ISO)</Name>
+    <Name Description="ISO 2553 - 1984 기준" Language="1042">용접 비드 복구 (ISO)</Name>
+    <Name Description="Na podstawie ISO 2553 - 1984" Language="1045">Regeneracja ściegu spoiny (ISO)</Name>
+    <Name Description="Baseado na ISO 2553 - 1984" Language="1046">Recuperação de cordão de solda (ISO)</Name>
+    <Name Description="Согласно ISO 2553 - 1984" Language="1049">Валик сварного шва (ISO)</Name>
+    <Name Description="基于 ISO 2553 - 1984" Language="2052">焊道恢复 (ISO)</Name>
+    <Name Description="Basado en ISO 2553 - 1984" Language="3082">Recuperación de cordón de soldadura (ISO)</Name>
+  </Style>
+
+  <Style AngleF="1.5708" CatArcF="75" CatSpacingF="0.2" CatType="0" CatWidthF="0.3" Color="0:0:0:255" ColorByLayer="1" Depth="0.4243" DepthSelected="0" EditFlag="0" InternalName="1:Weld Bead Recovery (JIS)&#xA;" Leg1="0.6" Leg2="0.6" LengthF="2" LineWeight="0" LineWeightByLayer="1" Scale="1" SeamVisF="1" StitchOffsetF="5">
+    <HatchPatternRawData>
+      <PatternLine>*SOLID, Solid/Fill pattern</PatternLine>
+    </HatchPatternRawData>
+    <Name Description="" Language="1028">焊道恢復 (JIS)</Name>
+    <Name Description="" Language="1029">Obnovení svarové housenky (JIS)</Name>
+    <Name Description="" Language="1031">Schweißnahtwiederherstellung (JIS)</Name>
+    <Name Description="" Language="1033">Weld Bead Recovery (JIS)</Name>
+    <Name Description="" Language="1036">Récupération du cordon de soudure (JIS)</Name>
+    <Name Description="" Language="1038">Varratjelölés (JIS)</Name>
+    <Name Description="" Language="1040">Ripristino cordone di saldatura (JIS)</Name>
+    <Name Description="" Language="1041">Weld Bead Recovery (JIS)</Name>
+    <Name Description="" Language="1042">용접 비드 복구 (JIS)</Name>
+    <Name Description="" Language="1045">Regeneracja ściegu spoiny (JIS)</Name>
+    <Name Description="" Language="1046">Recuperação de cordão de solda (JIS)</Name>
+    <Name Description="" Language="1049">Валик сварного шва (JIS)</Name>
+    <Name Description="" Language="2052">焊道恢复 (JIS)</Name>
+    <Name Description="" Language="3082">Recuperación de cordón de soldadura (JIS)</Name>
+  </Style>
+
+</WeldBead>

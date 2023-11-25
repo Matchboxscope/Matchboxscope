@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Commands Version="15">
+  <!--Created by Autodesk Inventor Version 15.0 Production Candidate-->
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+  <!-- The status tag gives the status of the mapping: -->
+  <!-- This tag is obsolete and could be taken over for another purpose -->
+
+  <Style CommandId="AppFileNewCmd) ">
+  </Style>
+  
+ 				<!-- File -> Menu-->
+				<Style CommandId="AppFileNewCmd"> </Style> 
+				<Style CommandId="AppFileOpenCmd"> </Style> 
+				<Style CommandId="AppFileSaveCmd"> </Style> 
+				<Style CommandId="AppFileSaveCopyAsCmd"> </Style> 
+				<Style CommandId="AppFileSaveAsCmd"> </Style>
+				<Style CommandId="AppFileExportImageCmd"> </Style>
+				<Style CommandId="AppSaveAllCmd"> </Style> 
+				<Style CommandId="AppFileCloseCmd"> </Style> 
+				<Style CommandId="AppCloseAllCmd"> </Style> 
+				<Style CommandId="AppFilePublishCmd"> </Style>
+				<Style CommandId="AppProjectsCmd"> </Style> 
+				<Style CommandId="AppGettingStartedCmd"> </Style> 
+				<Style CommandId="AppFilePrifixntCmd"> </Style> 
+				<Style CommandId="AppFilePrintPreviewCmd"> </Style> 
+				<Style CommandId="AppFilePrintSetupCmd"> </Style>
+				<Style CommandId="AppiPropertiesWrapperCmd">  </Style> 
+				<Style CommandId="AssemblyiPropertiesCmd"> </Style> 
+				<Style CommandId="PartiPropertiesCmd"> </Style>  
+				<Style CommandId="AppFilePrintCmd"> </Style>
+				<Style CommandId="AppDesignAssistantCmd"> </Style> 
+				<Style CommandId="AppExitCmd"> </Style>
+				<Style CommandId="AppSendEmailCmd"> </Style>
+				<Style CommandId="Separator"> </Style>
+				<!-- Edit -> Menu-->
+				<Style CommandId="AppRedoCmd"> </Style> 
+				<Style CommandId="AppUndoCmd"> </Style> 
+				<Style CommandId="AppCopyCmd"> </Style>
+				<!-- View -> Menu -->
+				<Style CommandId="AppPreviousViewCmd"> </Style> 
+				<Style CommandId="AppNextViewCmd"> </Style> 
+				<Style CommandId="AppRotateViewCmd"> </Style> 
+				<Style CommandId="AppPanViewCmd"> </Style> 
+				<Style CommandId="AppCleanScreenCmd"> </Style>
+				<Style CommandId="AppZoomCmd"> </Style>   
+				<Style CommandId="AppZoomWindowCmd"> </Style> 
+				<Style CommandId="AppZoomSelectCmd"> </Style> 
+				<Style CommandId="AppZoomAllCmd"> </Style>
+				<Style CommandId="AppLookAtCmd"> </Style> 
+				<Style CommandId="AppIsometricViewCmd"> </Style> 
+				<Style CommandId="AppRefreshCmd"> </Style>
+				<Style CommandId="AssemblyDesignViewsCmd"> </Style>				 
+				<Style CommandId="AssemblyDegreesOfFreedomCmd"> </Style>
+				<Style CommandId="AppSetPivotPointCmd"> </Style>
+				<!--<Style CommandId="AppCenterOfGravityCmd"> </Style> -->
+				<Style CommandId="AppiMateGlyphVisibilityCmd"> </Style> 
+				<Style CommandId="AppViewStatusBarCmd"> </Style>
+				<Style CommandId="AppViewDoctabCmd"> </Style> 
+				<Style CommandId="AppNavigationBarCmd"> </Style> 
+				<Style CommandId="AppBrowserVisibilityCmd"> </Style>
+				<Style CommandId="AppAllWorkfeaturesCmd"> </Style> 
+				<Style CommandId="AppOriginAxesVisibilityCmd"> </Style> 
+				<Style CommandId="AppOriginPlanesVisibilityCmd"> </Style> 
+				<Style CommandId="AppOriginPointsVisibilityCmd"> </Style>
+				<Style CommandId="AppUserWorkAxesVisibilityCmd"> </Style> 
+				<Style CommandId="AppUserWorkPlanesVisibilityCmd"> </Style> 
+				<Style CommandId="AppUserWorkPointsVisibilityCmd"> </Style> 
+				<Style CommandId="AppSketchesVisibilityCmd"> </Style>
+				<Style CommandId="App3DSketchesVisibilityCmd"> </Style> 
+				<Style CommandId="WeldmentGlobalVisibilityCmd"> </Style> 
+				<Style CommandId="WeldmentSymbolsCmd"> </Style> 
+				<Style CommandId="FWxToolbarVisibility1"> </Style>
+				<Style CommandId="AppFreeRotateViewCmd"> </Style>
+				<Style CommandId="AppConstrainedRotateViewCmd"> </Style>
+				<Style CommandId="EditLightingStylesCmd"></Style>
+				<Style CommandId="AppShadowSettingCmd"> </Style>
+				<!-- Formate -> Menu-->
+				<Style CommandId="PurgeStylesCmd"> </Style> 
+				<Style CommandId="SaveStylesCmd"> </Style> 
+				<Style CommandId="UpdateStylesCmd"> </Style> 
+				<Style CommandId="AppDefaultStandardsCmd"> 
+				</Style>
+				<!-- Tools -> Menu-->
+				<Style CommandId="MaterialCmd"></Style>
+				<Style CommandId="AppearanceCmd"></Style>
+				<Style CommandId="AdjustAppearanceCmd"></Style>
+  <!-- <Style CommandId="AppMeasureAngleCmd"> </Style> 
+				<Style CommandId="AppMeasureAreaCmd"> </Style> -->
+				<Style CommandId="AppMeasureDistanceCmd"> </Style>
+  <!--			<Style CommandId="AppMeasureLoopCmd"> </Style> -->
+				<Style CommandId="AppApplicationOptionsCmd"> </Style>  
+				<Style CommandId="AppDocumentSettingsCmd"> </Style> 
+				<Style CommandId="AppCustomizeCmd"> </Style> 
+				<Style CommandId="AppCollaborationAddParticipantCmd"> </Style>
+				<!-- Manage -> Menu-->
+				<Style CommandId="EditStylesCmd"></Style>
+				<!-- Maybe we need make the Macors/VBAEditor disabled-->
+				<Style CommandId="AppMacrosCmd"> </Style> 
+				<Style CommandId="AppVBAEditorCmd"> </Style> 
+				<Style CommandId="AppAddInManagerCmd"> </Style>
+				<!-- Content-Center...Editor-->
+				<Style CommandId="CCV2EditorButton"> </Style> 
+				<Style CommandId="CCV2BatchPublishButton"> </Style>
+				<!-- Application->Menu-->
+				<Style CommandId="AppApplicationsMenuCmd"> </Style>
+				<Style CommandId="DynamicSimulationEnvironmentInternalName"> </Style>
+				<Style CommandId="AEC_Exchange:Environment"> </Style>
+				<Style CommandId="Archon:Env"> </Style>
+				<Style CommandId="PMxPartEnvironment"> </Style>
+				<Style CommandId="AMxAssemblyEnvironment"> </Style>
+				<Style CommandId="AMxWeldmentEnvironment"> </Style>
+				<!-- Window ->Menu-->
+				<Style CommandId="AppArrangeAllWindowsCmd"> </Style> 
+				<Style CommandId="AppAssembleWindowsCmd"> </Style> 
+				<Style CommandId="AppNewWindowCmd"> </Style>
+				<Style CommandId="AppHorizontalWindowsCmd"> </Style> 
+				<Style CommandId="AppVerticalWindowsCmd"> </Style>
+				<Style CommandId="AppRestoreAllCmd"> </Style>
+				<!-- Web -> Menu-->
+				<Style CommandId="FWxInventorHomeCmd"> </Style> 
+				<Style CommandId="AppAccessStreamlineCmd"> </Style> 
+				<Style CommandId="AppTeamWebCmd"> </Style>
+				<!-- Help -> Menu-->
+				<Style CommandId="AppHelpForAutoCADUsersCmd"> </Style> 
+				<Style CommandId="AppHelpTopicsCmd"> </Style> 
+				<Style CommandId="AppWhatsNewCmd"> </Style>
+				<Style CommandId="AppTutorialsCmd"> </Style>
+				<Style CommandId="AppHowToCmd"> </Style>
+				<Style CommandId="AppMenuHelpTopicsCmd"> </Style>
+				<Style CommandId="AppProgrammingHelpCmd"> </Style> 
+				<Style CommandId="AppAutodeskOnlineCmd"> </Style> 
+				<Style CommandId="AppGraphicsDriversHelpCmd"> </Style>
+				<Style CommandId="AppAboutInventorCmd"> </Style>
+				<Style CommandId="AppELearningCatalogCmd"> </Style>
+				<Style CommandId="AppShowGettingStartedCmd"> </Style>
+				<Style CommandId="AppRibbonIntroVideoCmd"> </Style>
+				<Style CommandId="AppRibbonTutorialCmd"> </Style>
+				<Style CommandId="AppRibbonInteractiveGuideCmd"> </Style>
+				<Style CommandId="AppCustomerInvolvementHelpCmd"> </Style>
+				<Style CommandId="AppAutodeskLabs"> </Style>
+        <style CommandId="AppAutodeskAccountCmd"> </style>
+				<!-- Menu-Bar-->
+				<Style CommandId="AppVisualSyllabusCmd"> </Style>
+				<!-- Standard-Tools-->
+				<Style CommandId="AppRenderStyleComboCmd"> </Style> 
+				<!--  L.C.: renamed new analysis visibility command and Zebra command as the old-->
+				<!--  analysis visibility and analysis creation command, to preserve user's customizations-->
+				<!-- Analysis tools...-->
+				<Style CommandId="AssemblyComponentSelectionPriorityCmd"> </Style>
+				<Style CommandId="AssemblyLeafPriorityCmd"> </Style>
+				<Style CommandId="PartSelectSketchElementsPriorityCmd"> </Style>
+				<Style CommandId="AssemblyEnhSelInvertCmd"> </Style>
+				<Style CommandId="AssemblyEnhSelUndoCmd"> </Style>
+				<Style CommandId="AssemblyVisibilityCheckerCmdAllInCamera"> </Style>
+				<Style CommandId="AssemblyEnhSelComponentBBCmd"> </Style>
+				<Style CommandId="AssemblyEnhSelConstrainedCmd"> </Style>
+				<Style CommandId="AssemblyEnhSelSelectByPlaneCmd"> </Style>
+				<Style CommandId="AssemblyEnhSelSizeCmd"> </Style>
+				<Style CommandId="AssemblyEnhSelSphereCmd"> </Style>
+				<Style CommandId="AssemblyEnhSelVisibleOnlyCmd"> </Style>
+				<Style CommandId="AssemblyVisibilityCheckerCmdExternal"> </Style>
+				<Style CommandId="AssemblyVisibilityCheckerCmdInternal"> </Style>
+
+				<Style CommandId="AppComponentPriorityWrapperCmd"> </Style>
+				<Style CommandId="AppComponentPriorityWrapperCmd"> </Style>
+				<Style CommandId="AppLeafPriorityWrapperCmd"> </Style>
+				<Style CommandId="AppFeaturePriorityWrapperCmd"> </Style>
+				<!--      <Style CommandId="AppGlobalUpdateWrapperCmd"> </Style>-->
+				<Style CommandId="AppLocalUpdateCmd"> </Style>
+
+				<Style CommandId="PartSelectFacesAndEdgePriorityCmd"> </Style>
+				<Style CommandId="PartSelectFeaturesPriorityCmd"> </Style>
+                <Style CommandId="PartSelectAnnotationsPriorityCmd"> </Style>
+				<Style CommandId="PartSelectGroupsPriorityCmd"> </Style>
+				<Style CommandId="AppGroundShadowCmd"> </Style>
+				<Style CommandId="AppXRayGroundShadowCmd"> </Style>
+				<Style CommandId="AppOrthographicCameraCmd"> </Style>
+				<Style CommandId="AppPerspectiveCameraCmd"> </Style>
+				<Style CommandId="AppNoGroundShadowCmd"> </Style>
+				<Style CommandId="AppComponentOpacityOffCmd"> </Style>      
+				<Style CommandId="AppComponentOpacityOnCmd"> </Style>
+				<Style CommandId="AppShadedDisplayCmd"> </Style>
+				<Style CommandId="AppShadedDisplayPopUpCmd"> </Style>
+				<Style CommandId="AppWireframeDisplayCmd"> </Style>
+				<Style CommandId="AppHiddenEdgeDisplayCmd"> </Style>
+				<Style CommandId="AppDynamicDropDownCmd"> </Style>  <!--needs to be here to make tools update-->
+
+				<!--some Sikorsky commands under view tab need to be enabled-->
+				<!--Visual Styles-->
+				<Style CommandId="AppRealisticShadingDisplayCmd"> </Style> 
+				<Style CommandId="AppShadedWithEdgesDisplayCmd"> </Style>  
+				<Style CommandId="AppWireframeWithHiddenEdgesDisplayCmd"> </Style>
+				<Style CommandId="AppWireframeNoHiddenEdgesDisplayCmd"> </Style>  
+				<Style CommandId="AppMonochromeDisplayCmd"> </Style>  
+				<Style CommandId="AppWatercolorDisplayCmd"> </Style>  
+				<Style CommandId="AppIllustrationDisplayCmd"> </Style>
+				<!--Shadows-->
+				<Style CommandId="AppALLShadowCmd"> </Style>  
+				<Style CommandId="AppObjectShadowCmd"> </Style>  
+				<Style CommandId="AppAmbientShadowCmd"> </Style>  
+				<!--Reflections-->
+				 <Style CommandId="AppGroundReflectionsToggleCmd"> </Style>
+				<!--Lighting styles-->
+				 <Style CommandId="AppLightingStyleCmd"> </Style>
+				<!--Ground Plane-->
+				<Style CommandId="AppGroundPlaneToggleCmd"> </Style>  
+				<Style CommandId="AppGroundPlaneSettingCmd"> </Style>
+				<!--File > Print-->
+				<Style CommandId="AppFileSendTo3DPrintServiceCmd"> </Style>  
+				<Style CommandId="AppFile3DPrintPreviewCmd"> </Style>
+				<!--Sikorsky End-->
+
+				<!-- ViewCube commands-->
+				<Style CommandId="AppViewCubeCmd"> </Style>
+				<Style CommandId="AppViewCubeHomeCmd"> </Style>
+				<Style CommandId="AppViewCubeOrthographicCmd"> </Style>
+				<Style CommandId="AppViewCubePerspectiveCmd"> </Style>
+				<Style CommandId="AppViewCubePerspectiveOrthoCmd"> </Style>
+				<Style CommandId="AppViewCubeViewLockCurrentSelectionCmd"> </Style>
+				<Style CommandId="AppViewCubeViewHomeCmd"> </Style>
+				<Style CommandId="AppViewCubeViewFrontCmd"> </Style>
+				<Style CommandId="AppViewCubeViewResetToFrontCmd"> </Style>
+				<Style CommandId="AppViewCubePropertiesCmd"> </Style>
+				<!-- Steering Wheel commands-->
+				<Style CommandId="AppSteeringWheelCmd"> </Style>
+				<Style CommandId="AppSteeringWheelMiniObjectCmd"> </Style>
+				<Style CommandId="AppSteeringWheelMiniBuildingCmd"> </Style>
+				<Style CommandId="AppSteeringWheelMiniNavCmd"> </Style>
+				<Style CommandId="AppSteeringWheelFullNavCmd"> </Style>
+				<Style CommandId="AppSteeringWheelBasicObjectCmd"> </Style>
+				<Style CommandId="AppSteeringWheelBasicBuildingCmd"> </Style>
+				<Style CommandId="AppSteeringWheelHomeCmd"> </Style>
+				<Style CommandId="AppSteeringWheelFitWindowCmd"> </Style>
+				<Style CommandId="AppSteeringWheelOrgCenterCmd"> </Style>
+				<Style CommandId="AppSteeringWheelOptionsCmd"> </Style>
+				<Style CommandId="AppSteeringWheelCloseCmd"> </Style>
+
+				<Style CommandId="AssemblyIsolateCmd"> </Style>                       <!--Isolate-->
+				<Style CommandId="AssemblyIsolateUndoCmd"> </Style>             <!--Undo Isolate-->
+				<Style CommandId="AppFacePropertiesCmd"> </Style> <!--for Part file, Face-Properties...-->
+				<!--Browser-Pane ->ContextMenu-->
+				<Style CommandId="AppBrowserCollapseAllCmd"> </Style>
+				<Style CommandId="AppBrowserCollapseChildrenCmd"> </Style>
+				<Style CommandId="AppBrowserExpandAllCmd"> </Style>
+				<Style CommandId="AppBrowserExpandChildrenCmd"> </Style>
+				<!--View ->ContextMenu-->
+				<Style CommandId="UnknownUCxFinishActiveCommand"> </Style>
+				<Style CommandId="AppCommonViewCtxCmd"> </Style>
+				<Style CommandId="AssemblyVisibilityCtxCmd"> </Style>
+				<Style CommandId="AssemblyOpenComponentCmd"> </Style>
+				<Style CommandId="PartVisibilityCtxCmd"> </Style>
+				<!--Dimension ->ContxtMenu-->
+				<Style CommandId="DimensionDisplayEqn"> </Style>
+				<Style CommandId="DimensionDisplayName"> </Style>
+				<Style CommandId="DimensionDisplayPrecise"> </Style>       
+				<Style CommandId="DimensionDisplayTolerance"> </Style>
+				<Style CommandId="DimensionDisplayValue"> </Style>
+				<!--Sketch command-->
+				<Style CommandId="SketchEditSketchCtxCmd"> </Style>
+				<Style CommandId="Sketch3DEditSketchCtxCmd"> </Style>
+				<!--Representation-Context-Menu-->
+				<!-- <Style CommandId="ActivateConfigurationCtxCmd"> </Style>-->
+				<Style CommandId="GenerateNewConfigurationCtxCmd"> </Style>
+				<Style CommandId="NewPosConfigCmd"> </Style>
+				<Style CommandId="DuplicateConfigurationCtxCmd"> </Style>
+				<Style CommandId="AppSelectOtherCmd"> </Style>
+				<!--3D Connexion add-in-->
+				<Style CommandId="{0529B8CD-66EB-4914-AB52-86871A468C78}"> </Style>
+				<Style CommandId="{10C0299F-4AAC-44f2-9CAA-0EB815C9AD98}"> </Style>
+				<Style CommandId="{3421AEB5-C0AD-4db6-B517-F0D352D1FC58}"> </Style>  
+				<Style CommandId="{7FA4BFDB-BAAD-443c-BE9A-FC23AE522044}"> </Style>
+				<Style CommandId="{974457F7-306E-4531-A941-E6F7B9DE8032}"> </Style>
+				<!--Debug Commands-->>
+				<Style CommandId="AppDebugStartPerformanceMonitoringCmd"></Style>
+				<Style CommandId="AppDebugGraphicsDebuggingOptionsCmd"></Style>
+				<Style CommandId="AppDebugFrameRatePerformanceTestCmd"></Style>
+				<Style CommandId="AppPerformanceTranscriptingCmd"></Style>
+</Commands>

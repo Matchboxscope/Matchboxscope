@@ -1,0 +1,578 @@
+	<!--iif(PARAMETRIC)<h3 class="expanded">$$ConfName$</h3>
+	<blockquote><!--iif(DESIGNPARAMETERS)
+		<h4 class="expanded">$$msg16074$</h4>
+		<blockquote>
+		<table class="ta">
+			<tr>
+				<td><b>$$msg12053$</b></td>
+				<td><b>$$msg12057$</b></td>
+				<td><b>$$msg12054$</b></td>
+				<td><b>$$msg12056$</b></td>
+				<td><b>$$msg12093$</b></td>
+			</tr>
+			$$GroupDesignParameters$
+		</table>
+		</blockquote> iif--> iif--><!--iif(STATIC) <!--iif(REACTIONS)
+		<h4 class="expanded">$$msg16064$</h4>
+		<blockquote>
+		<table class="ta">
+			<tr>
+				<td rowspan="2"><b>$$msg12046$</b></td>
+				<td colspan="2"><b>$$msg16065$</b></td>
+				<td colspan="2"><b>$$msg16066$</b></td>
+			</tr>
+			<tr>
+				<td><b>$$msg16028$</b></td>
+				<td><b>$$msg16067$</b></td>
+				<td><b>$$msg16028$</b></td>
+				<td><b>$$msg16067$</b></td>
+			</tr>
+			$$GroupReactionForces$
+		</table>
+		</blockquote> iif-->
+		<h4 class="expanded">$$msg16071$</h4>
+		<blockquote>
+		<table class="ta">
+			<tr>
+				<td><b>$$msg16032$</b></td>
+				<td><b>$$msg16080$</b></td>
+				<td><b>$$msg16081$</b></td>
+			</tr>
+			<tr>
+				<td>$$msg12197$</td>
+				<td colspan="2">$$valueMax92$</td>
+			</tr>
+			<tr>
+				<td>$$msg12196$</td>
+				<td colspan="2">$$valueMax93$</td>
+			</tr><!--iif(VON_MISES)
+			<tr>
+				<td>$$msg12170$</td>
+				<td>$$valueMin1$</td>
+				<td>$$valueMax1$</td>
+			</tr> iif--><!--iif(STRESS1)
+			<tr>
+				<td>$$msg12171$</td>
+				<td>$$valueMin6$</td>
+				<td>$$valueMax6$</td>
+			</tr> iif--><!--iif(STRESS3)
+			<tr>
+				<td>$$msg12172$</td>
+				<td>$$valueMin8$</td>
+				<td>$$valueMax8$</td>
+			</tr> iif--><!--iif(DISPLACEMENTXYZ)
+			<tr>
+				<td>$$msg12179$</td>
+				<td>$$valueMin2$</td>
+				<td>$$valueMax2$</td>
+			</tr> iif--><!--iif(SAFETYFACTOR)
+			<tr>
+				<td>$$msg12378$</td>
+				<td>$$valueMin57$</td>
+				<td>$$valueMax57$</td>
+			</tr> iif--><!--iif(SIGMAXX)
+			<tr>
+				<td>$$msg12173$</td>
+				<td>$$valueMin9$</td>
+				<td>$$valueMax9$</td>
+			</tr> iif--><!--iif(SIGMAXY)
+			<tr>
+				<td>$$msg12174$</td>
+				<td>$$valueMin10$</td>
+				<td>$$valueMax10$</td>
+			</tr> iif--><!--iif(SIGMAXZ)
+			<tr>
+				<td>$$msg12175$</td>
+				<td>$$valueMin11$</td>
+				<td>$$valueMax11$</td>
+			</tr> iif--><!--iif(SIGMAYY)
+			<tr>
+				<td>$$msg12176$</td>
+				<td>$$valueMin12$</td>
+				<td>$$valueMax12$</td>
+			</tr> iif--><!--iif(SIGMAYZ)
+			<tr>
+				<td>$$msg12177$</td>
+				<td>$$valueMin13$</td>
+				<td>$$valueMax13$</td>
+			</tr> iif--><!--iif(SIGMAZZ)
+			<tr>
+				<td>$$msg12178$</td>
+				<td>$$valueMin14$</td>
+				<td>$$valueMax14$</td>
+			</tr> iif--><!--iif(DISPLACEMENTX)
+			<tr>
+				<td>$$msg12180$</td>
+				<td>$$valueMin3$</td>
+				<td>$$valueMax3$</td>
+			</tr> iif--><!--iif(DISPLACEMENTY)
+			<tr>
+				<td>$$msg12181$</td>
+				<td>$$valueMin4$</td>
+				<td>$$valueMax4$</td>
+			</tr> iif--><!--iif(DISPLACEMENTZ)
+			<tr>
+				<td>$$msg12182$</td>
+				<td>$$valueMin5$</td>
+				<td>$$valueMax5$</td>
+			</tr> iif--><!--iif(STRAINEQ)
+			<tr>
+				<td>$$msg12213$</td>
+				<td>$$valueMin80$</td>
+				<td>$$valueMax80$</td>
+			</tr> iif--><!--iif(STRAIN1)
+			<tr>
+				<td>$$msg12214$</td>
+				<td>$$valueMin81$</td>
+				<td>$$valueMax81$</td>
+			</tr> iif--><!--iif(STRAIN3)
+			<tr>
+				<td>$$msg12216$</td>
+				<td>$$valueMin83$</td>
+				<td>$$valueMax83$</td>
+			</tr> iif--><!--iif(STRAINXX)
+			<tr>
+				<td>$$msg12186$</td>
+				<td>$$valueMin58$</td>
+				<td>$$valueMax58$</td>
+			</tr> iif--><!--iif(STRAINXY)
+			<tr>
+				<td>$$msg12187$</td>
+				<td>$$valueMin59$</td>
+				<td>$$valueMax59$</td>
+			</tr> iif--><!--iif(STRAINXZ)
+			<tr>
+				<td>$$msg12188$</td>
+				<td>$$valueMin60$</td>
+				<td>$$valueMax60$</td>
+			</tr> iif--><!--iif(STRAINYY)
+			<tr>
+				<td>$$msg12189$</td>
+				<td>$$valueMin61$</td>
+				<td>$$valueMax61$</td>
+			</tr> iif--><!--iif(STRAINYZ)
+			<tr>
+				<td>$$msg12190$</td>
+				<td>$$valueMin62$</td>
+				<td>$$valueMax62$</td>
+			</tr> iif--><!--iif(STRAINZZ)
+			<tr>
+				<td>$$msg12191$</td>
+				<td>$$valueMin63$</td>
+				<td>$$valueMax63$</td>
+			</tr> iif--><!--iif(PRESSUREXYZ)
+			<tr>
+				<td>$$msg12192$</td>
+				<td>$$valueMin76$</td>
+				<td>$$valueMax76$</td>
+			</tr> iif--><!--iif(PRESSUREX)
+			<tr>
+				<td>$$msg12193$</td>
+				<td>$$valueMin77$</td>
+				<td>$$valueMax77$</td>
+			</tr> iif--><!--iif(PRESSUREY)
+			<tr>
+				<td>$$msg12194$</td>
+				<td>$$valueMin78$</td>
+				<td>$$valueMax78$</td>
+			</tr> iif--><!--iif(PRESSUREZ)
+			<tr>
+				<td>$$msg12195$</td>
+				<td>$$valueMin79$</td>
+				<td>$$valueMax79$</td>
+			</tr> iif--><!--iif(VON_MISES_TOP)
+			<tr>
+				<td>$$msg12170$</td>
+				<td>$$valueMin29$</td>
+				<td>$$valueMax29$</td>
+			</tr> iif--><!--iif(ROTATIONXYZ)
+			<tr>
+				<td>$$msg12446$</td>
+				<td>$$valueMin49$</td>
+				<td>$$valueMax49$</td>
+			</tr> iif--><!--iif(ROTATIONX)
+			<tr>
+				<td>$$msg12447$</td>
+				<td>$$valueMin50$</td>
+				<td>$$valueMax50$</td>
+			</tr> iif--><!--iif(ROTATIONY)
+			<tr>
+				<td>$$msg12448$</td>
+				<td>$$valueMin51$</td>
+				<td>$$valueMax51$</td>
+			</tr> iif--><!--iif(ROTATIONZ)
+			<tr>
+				<td>$$msg12449$</td>
+				<td>$$valueMin52$</td>
+				<td>$$valueMax52$</td>
+			</tr> iif--><!--iif(STRESS1_TOP)
+			<tr>
+				<td>$$msg12171$</td>
+				<td>$$valueMin30$</td>
+				<td>$$valueMax30$</td>
+			</tr> iif--><!--iif(STRESS3_TOP)
+			<tr>
+				<td>$$msg12172$</td>
+				<td>$$valueMin32$</td>
+				<td>$$valueMax32$</td>
+			</tr> iif--><!--iif(SAFETYFACTOR_TOP)
+			<tr>
+				<td>$$msg12378$</td>
+				<td>$$valueMin98$</td>
+				<td>$$valueMax98$</td>
+			</tr> iif--><!--iif(SIGMAXX_TOP)
+			<tr>
+				<td>$$msg12173$</td>
+				<td>$$valueMin33$</td>
+				<td>$$valueMax33$</td>
+			</tr> iif--><!--iif(SIGMAXY_TOP)
+			<tr>
+				<td>$$msg12174$</td>
+				<td>$$valueMin34$</td>
+				<td>$$valueMax34$</td>
+			</tr> iif--><!--iif(SIGMAXZ_TOP)
+			<tr>
+				<td>$$msg12175$</td>
+				<td>$$valueMin35$</td>
+				<td>$$valueMax35$</td>
+			</tr> iif--><!--iif(SIGMAYY_TOP)
+			<tr>
+				<td>$$msg12176$</td>
+				<td>$$valueMin36$</td>
+				<td>$$valueMax36$</td>
+			</tr> iif--><!--iif(SIGMAYZ_TOP)
+			<tr>
+				<td>$$msg12177$</td>
+				<td>$$valueMin37$</td>
+				<td>$$valueMax37$</td>
+			</tr> iif--><!--iif(SIGMAZZ_TOP)
+			<tr>
+				<td>$$msg12178$</td>
+				<td>$$valueMin38$</td>
+				<td>$$valueMax38$</td>
+			</tr> iif--><!--iif(STRAINXX_TOP)
+			<tr>
+				<td>$$msg12186$</td>
+				<td>$$valueMin64$</td>
+				<td>$$valueMax64$</td>
+			</tr> iif--><!--iif(STRAINXY_TOP)
+			<tr>
+				<td>$$msg12187$</td>
+				<td>$$valueMin65$</td>
+				<td>$$valueMax65$</td>
+			</tr> iif--><!--iif(STRAINXZ_TOP)
+			<tr>
+				<td>$$msg12188$</td>
+				<td>$$valueMin66$</td>
+				<td>$$valueMax66$</td>
+			</tr> iif--><!--iif(STRAINYY_TOP)
+			<tr>
+				<td>$$msg12189$</td>
+				<td>$$valueMin67$</td>
+				<td>$$valueMax67$</td>
+			</tr> iif--><!--iif(STRAINYZ_TOP)
+			<tr>
+				<td>$$msg12190$</td>
+				<td>$$valueMin68$</td>
+				<td>$$valueMax68$</td>
+			</tr> iif--><!--iif(STRAINZZ_TOP)
+			<tr>
+				<td>$$msg12191$</td>
+				<td>$$valueMin69$</td>
+				<td>$$valueMax69$</td>
+			</tr> iif--><!--iif(STRAINEQ_TOP)
+			<tr>
+				<td>$$msg12213$</td>
+				<td>$$valueMin84$</td>
+				<td>$$valueMax84$</td>
+			</tr> iif--><!--iif(STRAIN1_TOP)
+			<tr>
+				<td>$$msg12214$</td>
+				<td>$$valueMin85$</td>
+				<td>$$valueMax85$</td>
+			</tr> iif--><!--iif(STRAIN3_TOP)
+			<tr>
+				<td>$$msg12216$</td>
+				<td>$$valueMin87$</td>
+				<td>$$valueMax87$</td>
+			</tr> iif-->
+		</table>
+		</blockquote> iif--><!--iif(not STATIC)
+		<h4 class="expanded">$$msg16075$</h4>
+		<blockquote>
+		<table class="ta">
+			$$GroupModalFrequency$
+		</table>
+		</blockquote>
+		<h4 class="expanded">$$msg16071$</h4>
+		<blockquote>
+		<table class="ta">
+			<tr>
+				<td><b>$$msg16032$</b></td>
+				<td><b>$$msg12052$</b></td>
+			</tr>
+			<tr>
+				<td>$$msg12197$</td>
+				<td>$$valueMax92$</td>
+			</tr>
+			<tr>
+				<td>$$msg12196$</td>
+				<td>$$valueMax93$</td>
+			</tr>
+		</table>
+		</blockquote> iif--><!--iif(RESULTS)
+		<h4 class="expanded">$$msg16062$</h4>
+		<blockquote><!--iif(STATIC)<!--iif(VON_MISES)
+			<h5 class="expanded">$$msg12170$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img1$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img1r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRESS1)
+			<h5 class="expanded">$$msg12171$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img6$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img6r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRESS3)
+			<h5 class="expanded">$$msg12172$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img8$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img8r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(DISPLACEMENTXYZ)
+			<h5 class="expanded">$$msg12179$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img2$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img2r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(SAFETYFACTOR)
+			<h5 class="expanded">$$msg12378$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img57$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img57r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(SIGMAXX)
+			<h5 class="expanded">$$msg12173$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img9$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img9r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(SIGMAXY)
+			<h5 class="expanded">$$msg12174$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img10$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img10r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(SIGMAXZ)
+			<h5 class="expanded">$$msg12175$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img11$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img11r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(SIGMAYY)
+			<h5 class="expanded">$$msg12176$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img12$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img12r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(SIGMAYZ)
+			<h5 class="expanded">$$msg12177$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img13$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img13r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(SIGMAZZ)
+			<h5 class="expanded">$$msg12178$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img14$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img14r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(DISPLACEMENTX)
+			<h5 class="expanded">$$msg12180$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img3$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img3r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(DISPLACEMENTY)
+			<h5 class="expanded">$$msg12181$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img4$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img4r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(DISPLACEMENTZ)
+			<h5 class="expanded">$$msg12182$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img5$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img5r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAINEQ)
+			<h5 class="expanded">$$msg12213$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img80$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img80r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAIN1)
+			<h5 class="expanded">$$msg12214$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img81$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img81r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAIN3)
+			<h5 class="expanded">$$msg12216$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img83$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img83r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAINXX)
+			<h5 class="expanded">$$msg12186$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img58$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img58r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAINXY)
+			<h5 class="expanded">$$msg12187$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img59$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img59r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAINXZ)
+			<h5 class="expanded">$$msg12188$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img60$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img60r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAINYY)
+			<h5 class="expanded">$$msg12189$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img61$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img61r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAINYZ)
+			<h5 class="expanded">$$msg12190$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img62$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img62r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAINZZ)
+			<h5 class="expanded">$$msg12191$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img63$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img63r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(PRESSUREXYZ)
+			<h5 class="expanded">$$msg12192$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img76$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img76r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(PRESSUREX)
+			<h5 class="expanded">$$msg12193$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img77$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img77r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(PRESSUREY)
+			<h5 class="expanded">$$msg12194$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img78$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img78r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(PRESSUREZ)
+			<h5 class="expanded">$$msg12195$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img79$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img79r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(VON_MISES_TOP)
+			<h5 class="expanded">$$msg12170$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img29$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img29r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(ROTATIONXYZ)
+			<h5 class="expanded">$$msg12446$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img49$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img49r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(ROTATIONX)
+			<h5 class="expanded">$$msg12447$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img50$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img50r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(ROTATIONY)
+			<h5 class="expanded">$$msg12448$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img51$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img51r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(ROTATIONZ)
+			<h5 class="expanded">$$msg12449$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img52$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img52r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRESS1_TOP)
+			<h5 class="expanded">$$msg12171$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img30$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img30r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRESS3_TOP)
+			<h5 class="expanded">$$msg12172$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img32$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img32r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(SAFETYFACTOR_TOP)
+			<h5 class="expanded">$$msg12378$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img98$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img98r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(SIGMAXX_TOP)
+			<h5 class="expanded">$$msg12173$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img33$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img33r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(SIGMAXY_TOP)
+			<h5 class="expanded">$$msg12174$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img34$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img34r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(SIGMAXZ_TOP)
+			<h5 class="expanded">$$msg12175$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img35$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img35r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(SIGMAYY_TOP)
+			<h5 class="expanded">$$msg12176$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img36$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img36r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(SIGMAYZ_TOP)
+			<h5 class="expanded">$$msg12177$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img37$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img37r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(SIGMAZZ_TOP)
+			<h5 class="expanded">$$msg12178$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img38$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img38r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAINXX_TOP)
+			<h5 class="expanded">$$msg12186$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img64$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img64r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAINXY_TOP)
+			<h5 class="expanded">$$msg12187$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img65$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img65r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAINXZ_TOP)
+			<h5 class="expanded">$$msg12188$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img66$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img66r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAINYY_TOP)
+			<h5 class="expanded">$$msg12189$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img67$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img67r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAINYZ_TOP)
+			<h5 class="expanded">$$msg12190$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img68$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img68r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAINZZ_TOP)
+			<h5 class="expanded">$$msg12191$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img69$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img69r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAINEQ_TOP)
+			<h5 class="expanded">$$msg12213$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img84$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img84r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAIN1_TOP)
+			<h5 class="expanded">$$msg12214$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img85$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img85r$" alt="" /></p> iif-->
+			</blockquote> iif--><!--iif(STRAIN3_TOP)
+			<h5 class="expanded">$$msg12216$</h5>
+			<blockquote>
+				<p><img class="z" src="$$img87$" alt="" /></p><!--iif(OPPOSITE)
+				<p><img class="z" src="$$img87r$" alt="" /></p> iif-->
+			</blockquote> iif--> iif--><!--iif(not STATIC)
+			$$FiguresModalFrequency$ iif-->
+		</blockquote> iif--><!--iif(PARAMETRIC)
+	</blockquote> iif-->

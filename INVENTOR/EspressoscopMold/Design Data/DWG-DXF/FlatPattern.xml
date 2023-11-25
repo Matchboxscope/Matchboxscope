@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- 
+===========================================================
+This file contains the instructions for editing a DWG/DXF
+file.
+
+The format of these instructions as follows.   Within a
+given pair of <editLayer> tags, the <name> tag specifies
+the name of the layer to edit while the <setName> tag
+specifies the new name for the layer.
+
+
+Within a given pair of <addLayer> tags, the <name> tag 
+specifies the name of the layer to add.
+
+Within a given pair of <deleteLayer> tags, the <name> tag 
+specifies the name of the layer to delete.
+
+
+New <addLayer>, <deleteLayer>, <editLayer> tags can be added 
+in this exact sequence as needed by mimicking the structure 
+below.  The tags are processed in the same sequence:
+<addLayer>, <deleteLayer>, <editLayer>
+
+
+Layer 0 cannot be deleted.  Using <deleteLayer> on layer 0
+only deletes the entities on the layer.
+===========================================================
+-->
+<!--
+===========================================================
+                     BEGIN DTD SECTION
+Do not modify the DTD section of this file.  It is used to
+verify that the content of the file is valid.
+===========================================================
+-->
+<!DOCTYPE dwgEdits [
+	<!ELEMENT dwgEdits		(layers)>
+	<!ELEMENT layers		(addLayer*, deleteLayer*, editLayer*)>
+	<!ELEMENT editLayer		(criteria, actions)>
+	<!ELEMENT addLayer		(criteria)>
+	<!ELEMENT deleteLayer		(criteria)>
+	<!ELEMENT criteria		(name)>
+	<!ELEMENT actions		(setName)>
+	<!ELEMENT name			(#PCDATA)>
+	<!ELEMENT setName		(#PCDATA)>
+
+	<!ATTLIST dwgEdits version CDATA #REQUIRED>
+]>
+<!--
+===========================================================
+                      END DTD SECTION
+===========================================================
+-->
+
+<dwgEdits version='1.0'>
+	<layers>
+
+<!--
+		<addLayer>
+			<criteria>
+				<name>MyExtraLayer</name>
+			</criteria>
+		</addLayer>
+-->
+
+<!--
+		<deleteLayer>
+			<criteria>
+				<name>MyExtraLayer</name>
+			</criteria>
+		</deleteLayer>
+-->
+
+		<editLayer>
+			<criteria>
+				<name>IV_TANGENT</name>
+			</criteria>
+			<actions>
+				<setName>FlatPattern_Tangent Lines</setName>
+			</actions>
+		</editLayer>
+		<editLayer>
+			<criteria>
+				<name>IV_BEND</name>
+			</criteria>
+			<actions>
+				<setName>FlatPattern_Bend Lines</setName>
+			</actions>
+		</editLayer>
+		<editLayer>
+			<criteria>
+				<name>IV_BEND_DOWN</name>
+			</criteria>
+			<actions>
+				<setName>FlatPattern_Bend Lines backside</setName>
+			</actions>
+		</editLayer>
+		<editLayer>
+			<criteria>
+				<name>IV_TOOL_CENTER</name>
+			</criteria>
+			<actions>
+				<setName>FlatPattern_Tool Centers</setName>
+			</actions>
+		</editLayer>
+		<editLayer>
+			<criteria>
+				<name>IV_TOOL_CENTER_DOWN</name>
+			</criteria>
+			<actions>
+				<setName>FlatPattern_Tool Centers backside</setName>
+			</actions>
+		</editLayer>
+		<editLayer>
+			<criteria>
+				<name>IV_ARC_CENTERS</name>
+			</criteria>
+			<actions>
+				<setName>FlatPattern_Arc Centers</setName>
+			</actions>
+		</editLayer>
+		<editLayer>
+			<criteria>
+				<name>IV_OUTER_PROFILE</name>
+			</criteria>
+			<actions>
+				<setName>FlatPattern_Outer Profile</setName>
+			</actions>
+		</editLayer>
+		<editLayer>
+			<criteria>
+				<name>IV_FEATURE_PROFILES</name>
+			</criteria>
+			<actions>
+				<setName>FlatPattern_Feature Profile</setName>
+			</actions>
+		</editLayer>
+		<editLayer>
+			<criteria>
+				<name>IV_FEATURE_PROFILES_DOWN</name>
+			</criteria>
+			<actions>
+				<setName>FlatPattern_Feature Profile backside</setName>
+			</actions>
+		</editLayer>
+		<editLayer>
+			<criteria>
+				<name>IV_INTERIOR_PROFILES</name>
+			</criteria>
+			<actions>
+				<setName>FlatPattern_Interior Profile</setName>
+			</actions>
+		</editLayer>
+	</layers>
+</dwgEdits>

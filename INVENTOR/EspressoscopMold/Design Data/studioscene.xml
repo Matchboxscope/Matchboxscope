@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StudioScene Version="2">
+	<Style InternalName="1:Forest (Gradient)" UseAppOptions="0" BackgroundType="1" BackgroundCommonColor="4605440" BackgroundGradientColor="9868800" ImageFile="" ImagePath="0" PositionType="0" Horizontal="1" HorizontalTileCount="2" Vertical="1" VerticalTileCount="2" PlaneType="3" Offset="0" ShowShadows="1" ShadowsIntensity="80" ShowReflections="0" ReflectionsIntensity="100" ReflectionImage="" ReflectionImagePath="0">
+		<Name Description="" Language="1033">Forest (Gradient)</Name>
+		<Name Description="" Language="1028">森林 (斜坡)</Name>
+		<Name Description="" Language="1029">Les (přechod)</Name>
+		<Name Description="" Language="1031">Wald (Übergang)</Name>
+		<Name Description="" Language="1036">Forêt (dégradé)</Name>
+		<Name Description="" Language="1038">Erdő (átmenet)</Name>
+		<Name Description="" Language="1040">Bosco (sfumato)</Name>
+		<Name Description="" Language="1041">Forest (Gradient)</Name>
+		<Name Description="" Language="1042">숲(경사)</Name>
+		<Name Description="" Language="1045">Las (gradient)</Name>
+		<Name Description="" Language="1046">Floresta (gradiente)</Name>
+		<Name Description="" Language="1049">Лес (уклон)</Name>
+		<Name Description="" Language="2052">森林 (渐变)</Name>
+		<Name Description="" Language="3082">Bosque (gradiente)</Name>
+	</Style>
+	<Style InternalName="1:Galaxy" UseAppOptions="0" BackgroundType="2" BackgroundCommonColor="16711680" BackgroundGradientColor="16777215" ImageFile="Galaxy.png" ImagePath="1" PositionType="2" Horizontal="1" HorizontalTileCount="2" Vertical="1" VerticalTileCount="2" PlaneType="3" Offset="0" ShowShadows="0" ShadowsIntensity="100" ShowReflections="0" ReflectionsIntensity="100" ReflectionImage="" ReflectionImagePath="0">
+		<Name Description="" Language="1033">Galaxy</Name>
+		<Name Description="" Language="1028">銀河</Name>
+		<Name Description="" Language="1029">Galaxie</Name>
+		<Name Description="" Language="1031">Galaxie</Name>
+		<Name Description="" Language="1036">Galaxie</Name>
+		<Name Description="" Language="1038">Galaxis</Name>
+		<Name Description="" Language="1040">Galassia</Name>
+		<Name Description="" Language="1041">Galaxy</Name>
+		<Name Description="" Language="1042">은하수</Name>
+		<Name Description="" Language="1045">Galaktyka</Name>
+		<Name Description="" Language="1046">Galáxia</Name>
+		<Name Description="" Language="1049">Галактика</Name>
+		<Name Description="" Language="2052">星系</Name>
+		<Name Description="" Language="3082">Galaxia</Name>
+	</Style>
+	<Style InternalName="1:Starfield" UseAppOptions="0" BackgroundType="2" BackgroundCommonColor="16711680" BackgroundGradientColor="16777215" ImageFile="Stars.png" ImagePath="1" PositionType="1" Horizontal="1" HorizontalTileCount="2" Vertical="1" VerticalTileCount="2" PlaneType="3" Offset="0" ShowShadows="0" ShadowsIntensity="100" ShowReflections="0" ReflectionsIntensity="100" ReflectionImage="" ReflectionImagePath="0">
+		<Name Description="" Language="1033">Starfield</Name>
+		<Name Description="" Language="1028">星空</Name>
+		<Name Description="" Language="1029">Hvězdná obloha</Name>
+		<Name Description="" Language="1031">Sternenfeld</Name>
+		<Name Description="" Language="1036">Champ d'étoiles</Name>
+		<Name Description="" Language="1038">Csillagmező</Name>
+		<Name Description="" Language="1040">Campo stellato</Name>
+		<Name Description="" Language="1041">Starfield</Name>
+		<Name Description="" Language="1042">별무리</Name>
+		<Name Description="" Language="1045">Gwiazdy</Name>
+		<Name Description="" Language="1046">Campo estelar</Name>
+		<Name Description="" Language="1049">Звездный фон</Name>
+		<Name Description="" Language="2052">星空</Name>
+		<Name Description="" Language="3082">Campo de estrellas</Name>
+	</Style>
+	<Style InternalName="1:XY Ground Plane" UseAppOptions="0" BackgroundType="1" BackgroundCommonColor="0" BackgroundGradientColor="16777215" ImageFile="" ImagePath="0" PositionType="0" Horizontal="1" HorizontalTileCount="2" Vertical="1" VerticalTileCount="2" PlaneType="0" Offset="0" ShowShadows="1" ShadowsIntensity="80" ShowReflections="0" ReflectionsIntensity="0" ReflectionImage="" ReflectionImagePath="0">
+		<Name Description="" Language="1033">XY Ground Plane</Name>
+		<Name Description="" Language="1028">XY 地平面</Name>
+		<Name Description="" Language="1029">XY - základní rovina</Name>
+		<Name Description="" Language="1031">XY-Grundebene</Name>
+		<Name Description="" Language="1036">Plan de sol XY</Name>
+		<Name Description="" Language="1038">XY talajsík</Name>
+		<Name Description="" Language="1040">Piano terrestre XY</Name>
+		<Name Description="" Language="1041">XY Ground Plane</Name>
+		<Name Description="" Language="1042">XY 기준 평면</Name>
+		<Name Description="" Language="1045">Płaszczyzna podłoża XY</Name>
+		<Name Description="" Language="1046">Plano XY do piso</Name>
+		<Name Description="" Language="1049">плоскость отражения XY</Name>
+		<Name Description="" Language="2052">XY 地平面</Name>
+		<Name Description="" Language="3082">Plano de suelo XY</Name>
+	</Style>
+	<Style InternalName="1:XY Reflective GP" UseAppOptions="0" BackgroundType="1" BackgroundCommonColor="0" BackgroundGradientColor="16777215" ImageFile="" ImagePath="0" PositionType="0" Horizontal="1" HorizontalTileCount="2" Vertical="1" VerticalTileCount="2" PlaneType="0" Offset="0" ShowShadows="1" ShadowsIntensity="20" ShowReflections="1" ReflectionsIntensity="20" ReflectionImage="" ReflectionImagePath="0">
+		<Name Description="" Language="1033">XY Reflective GP</Name>
+		<Name Description="" Language="1028">XY 反射地平面</Name>
+		<Name Description="" Language="1029">XY - odrazivá základní rovina</Name>
+		<Name Description="" Language="1031">XY-Grundebene reflektierend</Name>
+		<Name Description="" Language="1036">Plan de sol réfléchissant XY</Name>
+		<Name Description="" Language="1038">XY tükröződő talajsík</Name>
+		<Name Description="" Language="1040">Piano terrestre riflettente XY</Name>
+		<Name Description="" Language="1041">XY Reflective GP</Name>
+		<Name Description="" Language="1042">XY 반사 GP</Name>
+		<Name Description="" Language="1045">Odblaskowa PP XY</Name>
+		<Name Description="" Language="1046">GP refletor XY</Name>
+		<Name Description="" Language="1049">Отражательная XY GP</Name>
+		<Name Description="" Language="2052">XY 反射地平面</Name>
+		<Name Description="" Language="3082">Plano de suelo reflectante XY</Name>
+	</Style>
+	<Style InternalName="1:XZ Ground Plane" UseAppOptions="0" BackgroundType="1" BackgroundCommonColor="0" BackgroundGradientColor="16777215" ImageFile="" ImagePath="0" PositionType="0" Horizontal="1" HorizontalTileCount="2" Vertical="1" VerticalTileCount="2" PlaneType="1" Offset="0" ShowShadows="1" ShadowsIntensity="85" ShowReflections="0" ReflectionsIntensity="20" ReflectionImage="" ReflectionImagePath="0">
+		<Name Description="" Language="1033">XZ Ground Plane</Name>
+		<Name Description="" Language="1028">XZ 地平面</Name>
+		<Name Description="" Language="1029">XZ - základní rovina</Name>
+		<Name Description="" Language="1031">XZ-Grundebene</Name>
+		<Name Description="" Language="1036">Plan de sol XZ</Name>
+		<Name Description="" Language="1038">XZ talajsík</Name>
+		<Name Description="" Language="1040">Piano terrestre XZ</Name>
+		<Name Description="" Language="1041">XZ Ground Plane</Name>
+		<Name Description="" Language="1042">XZ 기준 평면</Name>
+		<Name Description="" Language="1045">Płaszczyzna podłoża XZ</Name>
+		<Name Description="" Language="1046">Plano XZ do piso</Name>
+		<Name Description="" Language="1049">плоскость отражения XZ</Name>
+		<Name Description="" Language="2052">XZ 地平面</Name>
+		<Name Description="" Language="3082">Plano de suelo XZ</Name>
+	</Style>
+	<Style InternalName="1:XZ Reflective GP" UseAppOptions="0" BackgroundType="1" BackgroundCommonColor="0" BackgroundGradientColor="16777215" ImageFile="" ImagePath="0" PositionType="0" Horizontal="1" HorizontalTileCount="2" Vertical="1" VerticalTileCount="2" PlaneType="1" Offset="0" ShowShadows="1" ShadowsIntensity="20" ShowReflections="1" ReflectionsIntensity="20" ReflectionImage="" ReflectionImagePath="0">
+		<Name Description="" Language="1033">XZ Reflective GP</Name>
+		<Name Description="" Language="1028">XZ 反射地平面</Name>
+		<Name Description="" Language="1029">XZ - odrazivá základní rovina</Name>
+		<Name Description="" Language="1031">XZ-Grundebene reflektierend</Name>
+		<Name Description="" Language="1036">Plan de sol réfléchissant XZ</Name>
+		<Name Description="" Language="1038">XZ tükröződő talajsík</Name>
+		<Name Description="" Language="1040">Piano terrestre riflettente XZ</Name>
+		<Name Description="" Language="1041">XZ Reflective GP</Name>
+		<Name Description="" Language="1042">XZ 반사 GP</Name>
+		<Name Description="" Language="1045">Odblaskowa PP XZ</Name>
+		<Name Description="" Language="1046">GP refletor XZ</Name>
+		<Name Description="" Language="1049">Отражательная XZ GP</Name>
+		<Name Description="" Language="2052">XZ 反射地平面</Name>
+		<Name Description="" Language="3082">Plano de suelo reflectante XZ</Name>
+	</Style>
+	<Style InternalName="1:YZ Ground Plane" UseAppOptions="0" BackgroundType="1" BackgroundCommonColor="0" BackgroundGradientColor="16777215" ImageFile="" ImagePath="0" PositionType="0" Horizontal="1" HorizontalTileCount="2" Vertical="1" VerticalTileCount="2" PlaneType="2" Offset="0" ShowShadows="1" ShadowsIntensity="80" ShowReflections="0" ReflectionsIntensity="20" ReflectionImage="" ReflectionImagePath="0">
+		<Name Description="" Language="1033">YZ Ground Plane</Name>
+		<Name Description="" Language="1028">YZ 地平面</Name>
+		<Name Description="" Language="1029">YZ - základní rovina</Name>
+		<Name Description="" Language="1031">YZ-Grundebene</Name>
+		<Name Description="" Language="1036">Plan de sol YZ</Name>
+		<Name Description="" Language="1038">YZ talajsík</Name>
+		<Name Description="" Language="1040">Piano terrestre YZ</Name>
+		<Name Description="" Language="1041">YZ Ground Plane</Name>
+		<Name Description="" Language="1042">YZ 기준 평면</Name>
+		<Name Description="" Language="1045">Płaszczyzna podłoża YZ</Name>
+		<Name Description="" Language="1046">Plano YZ do piso</Name>
+		<Name Description="" Language="1049">плоскость отражения YZ</Name>
+		<Name Description="" Language="2052">YZ 地平面</Name>
+		<Name Description="" Language="3082">Plano de suelo YZ</Name>
+	</Style>
+	<Style InternalName="1:YZ Reflective GP" UseAppOptions="0" BackgroundType="1" BackgroundCommonColor="0" BackgroundGradientColor="16777215" ImageFile="" ImagePath="0" PositionType="0" Horizontal="1" HorizontalTileCount="2" Vertical="1" VerticalTileCount="2" PlaneType="2" Offset="0" ShowShadows="1" ShadowsIntensity="20" ShowReflections="1" ReflectionsIntensity="20" ReflectionImage="" ReflectionImagePath="0">
+		<Name Description="" Language="1033">YZ Reflective GP</Name>
+		<Name Description="" Language="1028">YZ 反射地平面</Name>
+		<Name Description="" Language="1029">YZ - odrazivá základní rovina</Name>
+		<Name Description="" Language="1031">YZ-Grundebene reflektierend</Name>
+		<Name Description="" Language="1036">Plan de sol réfléchissant YZ</Name>
+		<Name Description="" Language="1038">YZ tükröződő talajsík</Name>
+		<Name Description="" Language="1040">Piano terrestre riflettente YZ</Name>
+		<Name Description="" Language="1041">YZ Reflective GP</Name>
+		<Name Description="" Language="1042">YZ 반사 GP</Name>
+		<Name Description="" Language="1045">Odblaskowa PP YZ</Name>
+		<Name Description="" Language="1046">GP refletor YZ</Name>
+		<Name Description="" Language="1049">Отражательная YZ GP</Name>
+		<Name Description="" Language="2052">YZ 反射地平面</Name>
+		<Name Description="" Language="3082">Plano de suelo reflectante YZ</Name>
+	</Style>
+</StudioScene>

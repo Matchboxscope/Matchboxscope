@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<Materials Version="5">
+  <!--Created by Autodesk Inventor Version 16.0 Production Candidate-->
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+ 
+  <Style MaterialStyleId="1:ABS Plastic " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:85087E0D-D221-475D-ABB3-22B9D6A96369:82BEAFC6-1AC0-4E4C-BDA9-C5733B45AE03:0">
+  </Style>
+  <Style MaterialStyleId="1:Acetal Resin, Black " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:C42DC4D3-96C3-47C3-8125-2EAAEA2F265E:60D08237-F7AD-41E5-82CC-4B5B4EC0EF7B:0">
+  </Style>
+  <Style MaterialStyleId="1:Acetal Resin, White " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:C42DC4D3-96C3-47C3-8125-2EAAEA2F265E:60D08237-F7AD-41E5-82CC-4B5B4EC0EF7B:0">
+  </Style>
+  <Style MaterialStyleId="1:Alloy Steel " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:E43E0023-69AF-411B-9421-EE6B08AEDD55:2D53177F-10AD-4E66-B93D-E1467F4583DE:0">
+  </Style>
+  <Style MaterialStyleId="1:Aluminum-6061 " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:4B6DBD91-43C6-4D25-8DF6-8066300DF3C8:032A8753-4C73-4F67-A4CF-066E33C4A0C3:0">
+  </Style>
+  <Style MaterialStyleId="1:Aluminum-6061-AHC " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:4B6DBD91-43C6-4D25-8DF6-8066300DF3C8:032A8753-4C73-4F67-A4CF-066E33C4A0C3:0">
+  </Style>
+  <Style MaterialStyleId="1:Brass, Soft Yellow " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:FAAD7CFC-DB1E-497E-9256-0CE07CCBF18F:04823EFC-3717-4206-B95C-6B0386A71B98:0">
+  </Style>
+  <Style MaterialStyleId="1:Bronze, Soft Tin " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:419E87C7-A64F-4221-B661-41A57132CD18:06F4004B-A656-4CC1-A860-4AC76290CEAA:0">
+  </Style>
+  <Style MaterialStyleId="1:Carbon Steel " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:8EC65223-7622-4B08-8C5B-B9A215D9F642:B4672BC1-6D3C-4AAA-8215-76A260C7F664:0">
+  </Style>
+  <Style MaterialStyleId="1:Cast Bronze " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:419E87C7-A64F-4221-B661-41A57132CD18:06F4004B-A656-4CC1-A860-4AC76290CEAA:0">
+  </Style>
+  <Style MaterialStyleId="1:Cast Copper " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:19837252-5CBC-435C-9DD0-B10457C2D292:814ACAD3-C2CC-4BEA-BFD0-77B066A9A011:0">
+  </Style>
+  <Style MaterialStyleId="1:Cast Iron " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:A264F0DC-3818-4FC3-8507-21F8269D1952:F00B46E9-EC4E-491C-8FAC-2DD2298C65D9:0">
+  </Style>
+  <Style MaterialStyleId="1:Cast Steel " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:443FF4C0-B220-406B-A03C-AE1602BB69A3:48745BB7-BE14-4E5F-B4E0-4C3D4A7AE7A5:0">
+  </Style>
+  <Style MaterialStyleId="1:Copper " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:B5C15342-D95B-46BD-BB6F-85B6CDD3AABD:D3A96026-3297-45F7-8BFB-BB4FAFFD88BD:0">
+  </Style>
+  <Style MaterialStyleId="1:Copper Alloy " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:B339023C-C8BC-49D2-8AEF-37B8E4C42AA8:4D828E3E-30FD-4B10-8AA4-0E2A1A849EA9:0">
+  </Style>
+  <Style MaterialStyleId="1:Default " ExternalMaterialId="">
+  </Style>
+  <Style MaterialStyleId="1:Ductile Iron " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:89D802D4-AB70-4F28-9BEB-2D1BE0BF29F3:AF947D2D-00BC-4DCC-9D88-3A27A229C5A3:0">
+  </Style>
+  <Style MaterialStyleId="1:Galvanized Steel " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:08BE597F-84C2-4946-8463-E3097DDF5D10:80648625-3615-402D-92E5-B632C5115B0D:0">
+  </Style>
+  <Style MaterialStyleId="1:GFRC (Glass Fiber Reinforced Concrete) " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:D2E1098A-B427-4989-A20F-5B096C652DC7:73E7CBA7-5DDB-452E-82D8-B5BBDCC2B7A0:0">
+  </Style>
+  <Style MaterialStyleId="1:Glass " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:08633145-F3FA-4E2E-B028-769BA9CD6FB6:2AF3F00E-3425-40C2-92D6-021A961B2B92:0">
+  </Style>
+  <Style MaterialStyleId="1:Gold " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:643AAEF7-DB08-4A51-B147-DD0E9602D246:3D4D8977-AE63-4DD2-8F90-ACDB200CF2BC:0">
+  </Style>
+  <Style MaterialStyleId="1:Gray Iron " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:A264F0DC-3818-4FC3-8507-21F8269D1952:F00B46E9-EC4E-491C-8FAC-2DD2298C65D9:0">
+  </Style>
+  <Style MaterialStyleId="1:Lead " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:2772EA82-20ED-425C-B220-625D105AF51B:2929EFA7-92DC-4F07-8D95-70B2A9881778:0">
+  </Style>
+  <Style MaterialStyleId="1:Malleable Iron " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:9E57FC45-C4D4-4968-9DBA-DF7371FEEC03:A6743114-A2B0-42C6-B5B0-F0E893AD0010:0">
+  </Style>
+  <Style MaterialStyleId="1:Nickel-Copper Alloy 400 " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:D1C9AF7D-D930-4CF1-9959-89A485DC4204:C6DF2DE0-8349-4598-828D-8645452F2CA5:0">
+  </Style>
+  <Style MaterialStyleId="1:Non-Alloy Steel " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:443FF4C0-B220-406B-A03C-AE1602BB69A3:48745BB7-BE14-4E5F-B4E0-4C3D4A7AE7A5:0">
+  </Style>
+  <Style MaterialStyleId="1:Nylon-6/6 " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:D710D7D9-CC85-4A8D-9EB9-2F2571ABD85B:9F820AF7-C439-43CA-957E-C891831DB49A:0">
+  </Style>
+  <Style MaterialStyleId="1:Nylon Composite (Nylon, molybdenum disulphide) " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:D710D7D9-CC85-4A8D-9EB9-2F2571ABD85B:9F820AF7-C439-43CA-957E-C891831DB49A:0">
+  </Style>
+  <Style MaterialStyleId="1:Phenolic " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:A3C1F6AF-B84E-44C4-A275-DC40344AAFBA:781EE60E-21B4-4312-A406-471610EB0C25:0">
+  </Style>
+  <Style MaterialStyleId="1:Polyaryletherketone Resin " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:2B14F9B9-DC6E-4650-BF3B-84970186A5DE:CF2EA7BB-3489-4672-9056-F303F6CEDC2D:0">
+  </Style>
+  <Style MaterialStyleId="1:Polycarbonate, Clear " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:E70314B2-4EE9-4DF9-AAF0-62D045EDD8F4:EBE80FE8-0503-48AB-A974-2A434C77368C:0">
+  </Style>
+  <Style MaterialStyleId="1:Polycarbonate, Smoke " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:E70314B2-4EE9-4DF9-AAF0-62D045EDD8F4:EBE80FE8-0503-48AB-A974-2A434C77368C:0">
+  </Style>
+  <Style MaterialStyleId="1:Portland Cement Concrete " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:25277663-90B1-411B-8DC4-15987B1842B8:0BC5439C-A1AC-4700-B9A3-DEFD3B0C9350:0">
+  </Style>
+  <Style MaterialStyleId="1:PVC-Piping " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:16196A76-8F29-43BB-ABAA-79FC30547E7A:DE368321-2CB0-4C4D-8170-02D092724A7D:0">
+  </Style>
+  <Style MaterialStyleId="1:PVC-U " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:16196A76-8F29-43BB-ABAA-79FC30547E7A:DE368321-2CB0-4C4D-8170-02D092724A7D:0">
+  </Style>
+  <Style MaterialStyleId="1:Rubber " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:781199BA-200C-4B6B-BD14-80CD4C1C23AA:7B7C1432-436E-46BE-8B52-08FB25FD88AA:0">
+  </Style>
+  <Style MaterialStyleId="1:Silicon Nitride " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:744A58FD-F721-42E3-8105-61F6649E0E53:198377D2-55D5-4F54-BCC5-7BB74172711C:0">
+  </Style>
+  <Style MaterialStyleId="1:Silicone " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:8CC0C1A4-5319-47DB-9238-A5EAAEBBE0AD:6EAF14F4-978D-4632-862D-577E5EC60BCE:0">
+  </Style>
+  <Style MaterialStyleId="1:Silver " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:CBACEDCE-0850-4304-9270-D0512AA24496:19BEA74D-8004-4EF1-B8EA-27A066969D6F:0">
+  </Style>
+  <Style MaterialStyleId="1:Stainless Steel " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:46EF4DD7-2D17-4D2C-B5A0-BD890EBB0F27:37746F5C-8216-4078-954A-0573E8ED82E4:0">
+  </Style>
+  <Style MaterialStyleId="1:Stainless Steel, 440C " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:B4E11081-8547-46B6-8E48-63435818884A:36763963-34A7-4032-A6F5-414766F6E49A:0">
+  </Style>
+  <Style MaterialStyleId="1:Stainless Steel, Austenitic " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:46EF4DD7-2D17-4D2C-B5A0-BD890EBB0F27:37746F5C-8216-4078-954A-0573E8ED82E4:0">
+  </Style>
+  <Style MaterialStyleId="1:Steel " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:443FF4C0-B220-406B-A03C-AE1602BB69A3:48745BB7-BE14-4E5F-B4E0-4C3D4A7AE7A5:0">
+  </Style>
+  <Style MaterialStyleId="1:Steel, High Strength Low Alloy " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:38365331-F8C4-4CB8-A340-8972007108B5:D0ED92F8-268C-4E23-8193-ED2D785B0988:0">
+  </Style>
+  <Style MaterialStyleId="1:Steel, Mild " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:443FF4C0-B220-406B-A03C-AE1602BB69A3:48745BB7-BE14-4E5F-B4E0-4C3D4A7AE7A5:0">
+  </Style>
+  <Style MaterialStyleId="1:Thermoplastic Resin " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:D710D7D9-CC85-4A8D-9EB9-2F2571ABD85B:9F820AF7-C439-43CA-957E-C891831DB49A:0">
+  </Style>
+  <Style MaterialStyleId="1:Titanium " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:3B22C367-E109-4BC1-93B3-CE51C5649B90:E1B2FD39-63B9-4B31-B5E6-D9380C048A4E:0">
+  </Style>
+  <Style MaterialStyleId="1:UHMW, Black " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:A8BE3DD3-CF3F-4705-8E03-B6A9799C5360:AA7ACDEB-39D5-400C-BA87-A7E70B35B8C2:0">
+  </Style>
+  <Style MaterialStyleId="1:UHMW, White " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:A8BE3DD3-CF3F-4705-8E03-B6A9799C5360:AA7ACDEB-39D5-400C-BA87-A7E70B35B8C2:0">
+  </Style>
+  <Style MaterialStyleId="1:Welded Aluminum-6061 " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:4B6DBD91-43C6-4D25-8DF6-8066300DF3C8:032A8753-4C73-4F67-A4CF-066E33C4A0C3:0">
+  </Style>
+  <Style MaterialStyleId="1:Welded Brass, Soft Yellow " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:FAAD7CFC-DB1E-497E-9256-0CE07CCBF18F:04823EFC-3717-4206-B95C-6B0386A71B98:0">
+  </Style>
+  <Style MaterialStyleId="1:Welded Stainless Steel, 440C " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:B4E11081-8547-46B6-8E48-63435818884A:36763963-34A7-4032-A6F5-414766F6E49A:0">
+  </Style>
+  <Style MaterialStyleId="1:Welded Steel Mild " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:443FF4C0-B220-406B-A03C-AE1602BB69A3:48745BB7-BE14-4E5F-B4E0-4C3D4A7AE7A5:0">
+  </Style>
+  <Style MaterialStyleId="1:Wood (Birch) " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:578C5565-19A3-4B87-94E5-2FC5DD96E36B:BD37C431-8175-4396-BC56-0532A7B467EF:0">
+  </Style>
+  <Style MaterialStyleId="1:Wood (Cherry) " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:F5BAD8E7-A593-4851-944B-C9EE2740032B:6E6E40AC-4081-41D9-9050-0F7267D138A8:0">
+  </Style>
+  <Style MaterialStyleId="1:Wood (Maple) " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:E4FF557A-5BA7-4EDF-98E1-8CE34C71C730:60A89968-BAFB-4EAC-8340-8D008E3FC6D4:0">
+  </Style>
+  <Style MaterialStyleId="1:Wood (Oak) " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:3AD50617-D51A-4289-8267-E073A56B0BB5:02C545A6-AACA-4BD3-A9B0-3EDBB9B18926:0">
+  </Style>
+  <Style MaterialStyleId="1:Wood (Walnut) " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:A74DDBBF-A01C-41DF-88DF-164FDA7D4013:D28CD648-4E5A-4C7A-9776-81F7561C2428:0">
+  </Style>
+  <Style MaterialStyleId="1:Wrought Copper " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:B5C15342-D95B-46BD-BB6F-85B6CDD3AABD:D3A96026-3297-45F7-8BFB-BB4FAFFD88BD:0">
+  </Style>
+  <Style MaterialStyleId="1:Wrought Steel " ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:443FF4C0-B220-406B-A03C-AE1602BB69A3:48745BB7-BE14-4E5F-B4E0-4C3D4A7AE7A5:0">
+  </Style>
+</Materials>

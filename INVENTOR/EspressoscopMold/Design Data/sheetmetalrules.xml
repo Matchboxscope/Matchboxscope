@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<SheetMetalRules Version="4">
+
+  <!--Created by Autodesk Inventor Version 19.0 Internal-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style BendAngleRepType="1" BendRadius="#Thickness#" BendReliefType="2" BendTransitionType="1" EditFlag="3" GapSize="#Thickness#" InternalName="1:Default&#xA;" MinimumRemnant="#Thickness# * 2.0 ul" PunchRepStatus="1" ReliefDepth="#Thickness# * 0.5 ul" ReliefWidth="#Thickness#" Thickness="0.120 in" ThreeBendIntersectionSize="#BendRadius#" ThreeBendIntersectionType="4" TransitionRadius="#BendRadius#" TwoBendIntersectionSize="#Thickness# * 4 ul" TwoBendIntersectionType="4">
+    <SubStyle Collection="SheetMetalUnfold" Language="1033" Type="UnfoldStyle">Default_KFactor</SubStyle>
+    <SubStyle Collection="Materials" Language="1033" LibId="AFEFC330-5E61-4E24-814F-AE810148B79D" Type="MaterialStyle">Generic</SubStyle>
+    <Name Description="" Language="1028">預設</Name>
+    <Name Description="" Language="1029">Výchozí</Name>
+    <Name Description="" Language="1031">Standard</Name>
+    <Name Description="" Language="1033">Default</Name>
+    <Name Description="" Language="1036">Par défaut</Name>
+    <Name Description="" Language="1038">Alapértelmezett</Name>
+    <Name Description="" Language="1040">Default</Name>
+    <Name Description="" Language="1041">Default</Name>
+    <Name Description="" Language="1042">기본값</Name>
+    <Name Description="" Language="1045">Domyślny</Name>
+    <Name Description="" Language="1046">Padrão</Name>
+    <Name Description="" Language="1049">По умолчанию</Name>
+    <Name Description="" Language="2052">默认</Name>
+    <Name Description="" Language="3082">Por defecto</Name>
+  </Style>
+
+  <Style BendAngleRepType="1" BendRadius="#Thickness#" BendReliefType="2" BendTransitionType="1" EditFlag="3" GapSize="#Thickness#" InternalName="1:Default_mm&#xA;" MinimumRemnant="#Thickness# * 2.0 ul" PunchRepStatus="1" ReliefDepth="#Thickness# * 0.5 ul" ReliefWidth="#Thickness#" Thickness="0.500 mm" ThreeBendIntersectionSize="#BendRadius#" ThreeBendIntersectionType="4" TransitionRadius="#BendRadius#" TwoBendIntersectionSize="#Thickness# * 4 ul" TwoBendIntersectionType="4">
+    <SubStyle Collection="SheetMetalUnfold" Language="1033" Type="UnfoldStyle">Default_KFactor</SubStyle>
+    <SubStyle Collection="Materials" Language="1033" LibId="AFEFC330-5E61-4E24-814F-AE810148B79D" Type="MaterialStyle">Generic</SubStyle>
+    <Name Description="" Language="1028">預設 mm (_M)</Name>
+    <Name Description="" Language="1029">Výchozí_mm</Name>
+    <Name Description="" Language="1031">Standard_mm</Name>
+    <Name Description="" Language="1033">Default_mm</Name>
+    <Name Description="" Language="1036">Par défaut_mm</Name>
+    <Name Description="" Language="1038">Alapértelmezett_mm</Name>
+    <Name Description="" Language="1040">Default_mm</Name>
+    <Name Description="" Language="1041">Default_mm</Name>
+    <Name Description="" Language="1042">기본값_mm</Name>
+    <Name Description="" Language="1045">Domyślny_mm</Name>
+    <Name Description="" Language="1046">Padrão_mm</Name>
+    <Name Description="" Language="1049">По умолчанию_мм</Name>
+    <Name Description="" Language="2052">默认_mm</Name>
+    <Name Description="" Language="3082">Por defecto_mm</Name>
+  </Style>
+
+</SheetMetalRules>

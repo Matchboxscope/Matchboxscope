@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<Text Version="6">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style Angle="0" AspectRatio="0.8" Color="0 0 0 1" EditFlag="0" FontFace="Arial" FontSize="0.317" HorizontalJustification="0" InternalName="1:Alternative Text (GOST)&#xA;" IsBold="0" IsColorByLayer="1" IsItalic="1" IsItalicizeSymbols="0" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">替用文字 (GOST)</Name>
+    <Name Description="" Language="1029">Alternativní text (GOST)</Name>
+    <Name Description="" Language="1031">Alternativer Text (GOST)</Name>
+    <Name Description="" Language="1033">Alternative Text (GOST)</Name>
+    <Name Description="" Language="1036">Texte secondaire (GOST)</Name>
+    <Name Description="" Language="1038">Alternatív szöveg (GOST)</Name>
+    <Name Description="" Language="1040">Testo alternativo (GOST)</Name>
+    <Name Description="" Language="1041">Alternative Text (GOST)</Name>
+    <Name Description="" Language="1042">대체 텍스트(GOST)</Name>
+    <Name Description="" Language="1045">Tekst dodatkowy (GOST)</Name>
+    <Name Description="" Language="1046">Texto alternativo (GOST)</Name>
+    <Name Description="" Language="1049">Альтернативный текст (ГОСТ)</Name>
+    <Name Description="" Language="2052">替代文本 (GOST)</Name>
+    <Name Description="" Language="3082">Texto alternativo (GOST)</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="1" Color="0 0 0 1" EditFlag="0" FontFace="Tahoma" FontSize="0.4572" HorizontalJustification="1" InternalName="1:Label Text (ANSI)&#xA;" IsBold="0" IsColorByLayer="1" IsItalic="0" IsItalicizeSymbols="1" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">標示文字 (ANSI)</Name>
+    <Name Description="" Language="1029">Text popisku (ANSI)</Name>
+    <Name Description="" Language="1031">Bezeichnungstext (ANSI)</Name>
+    <Name Description="" Language="1033">Label Text (ANSI)</Name>
+    <Name Description="" Language="1036">Texte de libellé (ANSI)</Name>
+    <Name Description="" Language="1038">Címkeszöveg (ANSI)</Name>
+    <Name Description="" Language="1040">Etichetta testo (ANSI)</Name>
+    <Name Description="" Language="1041">Label Text (ANSI)</Name>
+    <Name Description="" Language="1042">레이블 텍스트 (ANSI)</Name>
+    <Name Description="" Language="1045">Tekst etykiety (ANSI)</Name>
+    <Name Description="" Language="1046">Texto do rótulo (ANSI)</Name>
+    <Name Description="" Language="1049">Текст наименования (ANSI)</Name>
+    <Name Description="" Language="2052">标签文本 (ANSI)</Name>
+    <Name Description="" Language="3082">Texto de identificador (ANSI)</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="1" Color="0 0 0 1" EditFlag="0" FontFace="ISOCPEUR" FontSize="0.268" HorizontalJustification="1" InternalName="1:Label Text (DIN)&#xA;" IsBold="0" IsColorByLayer="1" IsItalic="0" IsItalicizeSymbols="1" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">標示文字 (DIN)</Name>
+    <Name Description="" Language="1029">Text popisku (DIN)</Name>
+    <Name Description="" Language="1031">Bezeichnungstext (DIN)</Name>
+    <Name Description="" Language="1033">Label Text (DIN)</Name>
+    <Name Description="" Language="1036">Texte de libellé (DIN)</Name>
+    <Name Description="" Language="1038">Címkeszöveg (DIN)</Name>
+    <Name Description="" Language="1040">Etichetta testo (DIN)</Name>
+    <Name Description="" Language="1041">Label Text (DIN)</Name>
+    <Name Description="" Language="1042">레이블 텍스트 (DIN)</Name>
+    <Name Description="" Language="1045">Tekst etykiety (DIN)</Name>
+    <Name Description="" Language="1046">Texto do rótulo (DIN)</Name>
+    <Name Description="" Language="1049">Текст наименования (DIN)</Name>
+    <Name Description="" Language="2052">标签文本 (DIN)</Name>
+    <Name Description="" Language="3082">Texto de identificador (DIN)</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="1" Color="0 0 0 1" EditFlag="0" FontFace="Tahoma" FontSize="0.525" HorizontalJustification="1" InternalName="1:Label Text (ISO)&#xA;" IsBold="0" IsColorByLayer="1" IsItalic="0" IsItalicizeSymbols="1" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">標示文字 (ISO)</Name>
+    <Name Description="" Language="1029">Text popisku (ISO)</Name>
+    <Name Description="" Language="1031">Bezeichnungstext (ISO)</Name>
+    <Name Description="" Language="1033">Label Text (ISO)</Name>
+    <Name Description="" Language="1036">Texte de libellé (ISO)</Name>
+    <Name Description="" Language="1038">Címkeszöveg (ISO)</Name>
+    <Name Description="" Language="1040">Etichetta testo (ISO)</Name>
+    <Name Description="" Language="1041">Label Text (ISO)</Name>
+    <Name Description="" Language="1042">레이블 텍스트 (ISO)</Name>
+    <Name Description="" Language="1045">Tekst etykiety (ISO)</Name>
+    <Name Description="" Language="1046">Texto do rótulo (ISO)</Name>
+    <Name Description="" Language="1049">Текст наименования (ISO)</Name>
+    <Name Description="" Language="2052">标签文本 (ISO)</Name>
+    <Name Description="" Language="3082">Texto de identificador (ISO)</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="1" Color="0 0 0 1" EditFlag="0" FontFace="Tahoma" FontSize="0.675" HorizontalJustification="1" InternalName="1:Label Text (JIS)&#xA;" IsBold="0" IsColorByLayer="1" IsItalic="0" IsItalicizeSymbols="1" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">標示文字 (JIS)</Name>
+    <Name Description="" Language="1029">Text popisku (JIS)</Name>
+    <Name Description="" Language="1031">Bezeichnungstext (JIS)</Name>
+    <Name Description="" Language="1033">Label Text (JIS)</Name>
+    <Name Description="" Language="1036">Texte de libellé (JIS)</Name>
+    <Name Description="" Language="1038">Címkeszöveg (JIS)</Name>
+    <Name Description="" Language="1040">Etichetta testo (JIS)</Name>
+    <Name Description="" Language="1041">Label Text (JIS)</Name>
+    <Name Description="" Language="1042">레이블 텍스트 (JIS)</Name>
+    <Name Description="" Language="1045">Tekst etykiety (JIS)</Name>
+    <Name Description="" Language="1046">Texto do rótulo (JIS)</Name>
+    <Name Description="" Language="1049">Текст наименования (JIS)</Name>
+    <Name Description="" Language="2052">标签文本 (JIS)</Name>
+    <Name Description="" Language="3082">Texto de identificador (JIS)</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="1" Color="0 0 0 1" EditFlag="0" FontFace="GOST Common" FontSize="0.35" HorizontalJustification="0" InternalName="1:GOST_TEXT&#xA;" IsBold="0" IsColorByLayer="1" IsItalic="1" IsItalicizeSymbols="0" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">一般文字 (GOST)</Name>
+    <Name Description="" Language="1029">Běžný text (GOST)</Name>
+    <Name Description="" Language="1031">Normale Textgröße (GOST)</Name>
+    <Name Description="" Language="1033">Regular Text (GOST)</Name>
+    <Name Description="" Language="1036">Texte normal (GOST)</Name>
+    <Name Description="" Language="1038">Szokványos szöveg (GOST)</Name>
+    <Name Description="" Language="1040">Testo normale (GOST)</Name>
+    <Name Description="" Language="1041">Regular Text (GOST)</Name>
+    <Name Description="" Language="1042">일반 텍스트(GOST)</Name>
+    <Name Description="" Language="1045">Tekst zwykły (GOST)</Name>
+    <Name Description="" Language="1046">Texto regular (GOST)</Name>
+    <Name Description="" Language="1049">Обычный текст (ГОСТ)</Name>
+    <Name Description="" Language="2052">普通文本 (GOST)</Name>
+    <Name Description="" Language="3082">Texto regular (GOST)</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="1" Color="0 0 0 1" EditFlag="0" FontFace="Tahoma" FontSize="0.3048" HorizontalJustification="0" InternalName="1:Note Text (ANSI)&#xA;" IsBold="0" IsColorByLayer="1" IsItalic="0" IsItalicizeSymbols="1" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">註記文字 (ANSI)</Name>
+    <Name Description="" Language="1029">Text poznámky (ANSI)</Name>
+    <Name Description="" Language="1031">Notiztext (ANSI)</Name>
+    <Name Description="" Language="1033">Note Text (ANSI)</Name>
+    <Name Description="" Language="1036">Texte de note (ANSI)</Name>
+    <Name Description="" Language="1038">Megjegyzésszöveg (ANSI)</Name>
+    <Name Description="" Language="1040">Testo nota (ANSI)</Name>
+    <Name Description="" Language="1041">Note Text (ANSI)</Name>
+    <Name Description="" Language="1042">주 텍스트 (ANSI)</Name>
+    <Name Description="" Language="1045">Tekst notatki (ANSI)</Name>
+    <Name Description="" Language="1046">Texto da nota (ANSI)</Name>
+    <Name Description="" Language="1049">Пояснительный текст (ANSI)</Name>
+    <Name Description="" Language="2052">注释文本 (ANSI)</Name>
+    <Name Description="" Language="3082">Texto de nota (ANSI)</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="1" Color="0 0 0 1" EditFlag="0" FontFace="Tahoma" FontSize="0.3048" HorizontalJustification="0" InternalName="1:Note Text (ANSI) - 3DA&#xA;" IsBold="0" IsColorByLayer="1" IsItalic="0" IsItalicizeSymbols="1" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">註記文字 (ANSI) - 3DA</Name>
+    <Name Description="" Language="1029">Text poznámky (ANSI) - 3DA</Name>
+    <Name Description="" Language="1031">Notiztext (ANSI) - 3DA</Name>
+    <Name Description="" Language="1033">Note Text (ANSI) - 3DA</Name>
+    <Name Description="" Language="1036">Texte de note (ANSI) - 3DA</Name>
+    <Name Description="" Language="1038">Megjegyzésszöveg (ANSI) - 3DA</Name>
+    <Name Description="" Language="1040">Testo nota (ANSI) - 3DA</Name>
+    <Name Description="" Language="1041">Note Text (ANSI) - 3DA</Name>
+    <Name Description="" Language="1042">주 텍스트 (ANSI) - 3DA</Name>
+    <Name Description="" Language="1045">Tekst notatki (ANSI) - 3DA</Name>
+    <Name Description="" Language="1046">Texto da nota (ANSI) - 3DA</Name>
+    <Name Description="" Language="1049">Пояснительный текст (ANSI) - 3DA</Name>
+    <Name Description="" Language="2052">注释文本 (ANSI) - 3DA</Name>
+    <Name Description="" Language="3082">Texto de nota (ANSI) - 3DA</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="1" Color="0 0 0 1" EditFlag="0" FontFace="ISOCPEUR" FontSize="0.175" HorizontalJustification="0" InternalName="1:Note Text (DIN)&#xA;" IsBold="0" IsColorByLayer="1" IsItalic="0" IsItalicizeSymbols="1" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">註記文字 (DIN)</Name>
+    <Name Description="" Language="1029">Text poznámky (DIN)</Name>
+    <Name Description="" Language="1031">Notiztext (DIN)</Name>
+    <Name Description="" Language="1033">Note Text (DIN)</Name>
+    <Name Description="" Language="1036">Texte de note (DIN)</Name>
+    <Name Description="" Language="1038">Megjegyzésszöveg (DIN)</Name>
+    <Name Description="" Language="1040">Testo nota (DIN)</Name>
+    <Name Description="" Language="1041">Note Text (DIN)</Name>
+    <Name Description="" Language="1042">주 텍스트 (DIN)</Name>
+    <Name Description="" Language="1045">Tekst notatki (DIN)</Name>
+    <Name Description="" Language="1046">Texto da nota (DIN)</Name>
+    <Name Description="" Language="1049">Пояснительный текст (DIN)</Name>
+    <Name Description="" Language="2052">注释文本 (DIN)</Name>
+    <Name Description="" Language="3082">Texto de nota (DIN)</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="1" Color="0 0 0 1" EditFlag="0" FontFace="ISOCPEUR" FontSize="0.35" HorizontalJustification="0" InternalName="1:Note Text (DIN) - 3DA&#xA;" IsBold="0" IsColorByLayer="1" IsItalic="0" IsItalicizeSymbols="1" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">註記文字 (DIN) - 3DA</Name>
+    <Name Description="" Language="1029">Text poznámky (DIN) - 3DA</Name>
+    <Name Description="" Language="1031">Notiztext (DIN) - 3DA</Name>
+    <Name Description="" Language="1033">Note Text (DIN) - 3DA</Name>
+    <Name Description="" Language="1036">Texte de note (DIN) - 3DA</Name>
+    <Name Description="" Language="1038">Megjegyzésszöveg (DIN) - 3DA</Name>
+    <Name Description="" Language="1040">Testo nota (DIN) - 3DA</Name>
+    <Name Description="" Language="1041">Note Text (DIN) - 3DA</Name>
+    <Name Description="" Language="1042">주 텍스트 (DIN) - 3DA</Name>
+    <Name Description="" Language="1045">Tekst notatki (DIN) - 3DA</Name>
+    <Name Description="" Language="1046">Texto da nota (DIN) - 3DA</Name>
+    <Name Description="" Language="1049">Пояснительный текст (DIN) - 3DA</Name>
+    <Name Description="" Language="2052">注释文本 (DIN) - 3DA</Name>
+    <Name Description="" Language="3082">Texto de nota (DIN) - 3DA</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="1" Color="0 0 0 1" EditFlag="0" FontFace="Tahoma" FontSize="0.35" HorizontalJustification="0" InternalName="1:Note Text (ISO)&#xA;" IsBold="0" IsColorByLayer="1" IsItalic="0" IsItalicizeSymbols="1" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">註記文字 (ISO)</Name>
+    <Name Description="" Language="1029">Text poznámky (ISO)</Name>
+    <Name Description="" Language="1031">Notiztext (ISO)</Name>
+    <Name Description="" Language="1033">Note Text (ISO)</Name>
+    <Name Description="" Language="1036">Texte de note (ISO)</Name>
+    <Name Description="" Language="1038">Megjegyzésszöveg (ISO)</Name>
+    <Name Description="" Language="1040">Testo nota (ISO)</Name>
+    <Name Description="" Language="1041">Note Text (ISO)</Name>
+    <Name Description="" Language="1042">주 텍스트 (ISO)</Name>
+    <Name Description="" Language="1045">Tekst notatki (ISO)</Name>
+    <Name Description="" Language="1046">Texto da nota (ISO)</Name>
+    <Name Description="" Language="1049">Пояснительный текст (ISO)</Name>
+    <Name Description="" Language="2052">注释文本 (ISO)</Name>
+    <Name Description="" Language="3082">Texto de nota (ISO)</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="1" Color="0 0 0 1" EditFlag="0" FontFace="Tahoma" FontSize="0.35" HorizontalJustification="0" InternalName="1:Note Text (ISO) - 3DA&#xA;" IsBold="0" IsColorByLayer="1" IsItalic="0" IsItalicizeSymbols="1" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">註記文字 (ISO) - 3DA</Name>
+    <Name Description="" Language="1029">Text poznámky (ISO) - 3DA</Name>
+    <Name Description="" Language="1031">Notiztext (ISO) - 3DA</Name>
+    <Name Description="" Language="1033">Note Text (ISO) - 3DA</Name>
+    <Name Description="" Language="1036">Texte de note (ISO) - 3DA</Name>
+    <Name Description="" Language="1038">Megjegyzésszöveg (ISO) - 3DA</Name>
+    <Name Description="" Language="1040">Testo nota (ISO) - 3DA</Name>
+    <Name Description="" Language="1041">Note Text (ISO) - 3DA</Name>
+    <Name Description="" Language="1042">주 텍스트 (ISO) - 3DA</Name>
+    <Name Description="" Language="1045">Tekst notatki (ISO) - 3DA</Name>
+    <Name Description="" Language="1046">Texto da nota (ISO) - 3DA</Name>
+    <Name Description="" Language="1049">Пояснительный текст (ISO) - 3DA</Name>
+    <Name Description="" Language="2052">注释文本 (ISO) - 3DA</Name>
+    <Name Description="" Language="3082">Texto de nota (ISO) - 3DA</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="1" Color="0 0 0 1" EditFlag="0" FontFace="Tahoma" FontSize="0.45" HorizontalJustification="0" InternalName="1:Note Text (JIS)&#xA;" IsBold="0" IsColorByLayer="1" IsItalic="0" IsItalicizeSymbols="1" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">註記文字 (JIS)</Name>
+    <Name Description="" Language="1029">Text poznámky (JIS)</Name>
+    <Name Description="" Language="1031">Notiztext (JIS)</Name>
+    <Name Description="" Language="1033">Note Text (JIS)</Name>
+    <Name Description="" Language="1036">Texte de note (JIS)</Name>
+    <Name Description="" Language="1038">Megjegyzésszöveg (JIS)</Name>
+    <Name Description="" Language="1040">Testo nota (JIS)</Name>
+    <Name Description="" Language="1041">Note Text (JIS)</Name>
+    <Name Description="" Language="1042">주 텍스트 (JIS)</Name>
+    <Name Description="" Language="1045">Tekst notatki (JIS)</Name>
+    <Name Description="" Language="1046">Texto da nota (JIS)</Name>
+    <Name Description="" Language="1049">Пояснительный текст (JIS)</Name>
+    <Name Description="" Language="2052">注释文本 (JIS)</Name>
+    <Name Description="" Language="3082">Texto de nota (JIS)</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="1" Color="0 0 0 1" EditFlag="0" FontFace="Tahoma" FontSize="0.3048" HorizontalJustification="0" InternalName="1:Sketch Text (ANSI) - 3DA&#xA;" IsBold="0" IsColorByLayer="0" IsItalic="0" IsItalicizeSymbols="1" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">草圖文字 (ANSI) - 3DA</Name>
+    <Name Description="" Language="1029">Text náčrtu (ANSI) - 3DA</Name>
+    <Name Description="" Language="1031">Skizzentext (ANSI) - 3DA</Name>
+    <Name Description="" Language="1033">Sketch Text (ANSI) - 3DA</Name>
+    <Name Description="" Language="1036">Texte d'esquisse (ANSI) - 3DA</Name>
+    <Name Description="" Language="1038">Vázlatszöveg (ANSI) - 3DA</Name>
+    <Name Description="" Language="1040">Testo di schizzo (ANSI) - 3DA</Name>
+    <Name Description="" Language="1041">Sketch Text (ANSI) - 3DA</Name>
+    <Name Description="" Language="1042">스케치 텍스트 (ANSI) - 3DA</Name>
+    <Name Description="" Language="1045">Tekst szkicu (ANSI) - 3DA</Name>
+    <Name Description="" Language="1046">Texto do esboço (ANSI) - 3DA</Name>
+    <Name Description="" Language="1049">Эскизный текст (ANSI) - 3DA</Name>
+    <Name Description="" Language="2052">草图文本 (ANSI) - 3DA</Name>
+    <Name Description="" Language="3082">Texto de boceto (ANSI) - 3DA</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="1" Color="0 0 0 1" EditFlag="0" FontFace="Tahoma" FontSize="0.35" HorizontalJustification="0" InternalName="1:Sketch Text (ISO) - 3DA&#xA;" IsBold="0" IsColorByLayer="0" IsItalic="0" IsItalicizeSymbols="1" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">草圖文字 (ISO) - 3DA</Name>
+    <Name Description="" Language="1029">Text náčrtu (ISO) - 3DA</Name>
+    <Name Description="" Language="1031">Skizzentext (ISO) - 3DA</Name>
+    <Name Description="" Language="1033">Sketch Text (ISO) - 3DA</Name>
+    <Name Description="" Language="1036">Texte d'esquisse (ISO) - 3DA</Name>
+    <Name Description="" Language="1038">Vázlatszöveg (ISO) - 3DA</Name>
+    <Name Description="" Language="1040">Testo di schizzo (ISO) - 3DA</Name>
+    <Name Description="" Language="1041">Sketch Text (ISO) - 3DA</Name>
+    <Name Description="" Language="1042">스케치 텍스트 (ISO) - 3DA</Name>
+    <Name Description="" Language="1045">Tekst szkicu (ISO) - 3DA</Name>
+    <Name Description="" Language="1046">Texto do esboço (ISO) - 3DA</Name>
+    <Name Description="" Language="1049">Эскизный текст (ISO) - 3DA</Name>
+    <Name Description="" Language="2052">草图文本 (ISO) - 3DA</Name>
+    <Name Description="" Language="3082">Texto de boceto (ISO) - 3DA</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="1" Color="0 0 0 1" EditFlag="0" FontFace="GOST Common" FontSize="0.5" HorizontalJustification="0" InternalName="1:Enlarged Text (GOST)&#xA;" IsBold="0" IsColorByLayer="1" IsItalic="1" IsItalicizeSymbols="0" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">放大文字 (GOST)</Name>
+    <Name Description="" Language="1029">Zvětšený text (GOST)</Name>
+    <Name Description="" Language="1031">Vergrößerter Text (GOST)</Name>
+    <Name Description="" Language="1033">Enlarged Text (GOST)</Name>
+    <Name Description="" Language="1036">Texte agrandi (GOST)</Name>
+    <Name Description="" Language="1038">Nagyított szöveg (GOST)</Name>
+    <Name Description="" Language="1040">Testo ingrandito (GOST)</Name>
+    <Name Description="" Language="1041">Enlarged Text (GOST)</Name>
+    <Name Description="" Language="1042">넓은 텍스트(GOST)</Name>
+    <Name Description="" Language="1045">Tekst powiększony (GOST)</Name>
+    <Name Description="" Language="1046">Texto ampliado (GOST)</Name>
+    <Name Description="" Language="1049">Увеличенный текст (ГОСТ)</Name>
+    <Name Description="" Language="2052">扩展文本 (GOST)</Name>
+    <Name Description="" Language="3082">Texto ampliado (GOST)</Name>
+  </Style>
+
+  <Style Angle="0" AspectRatio="0.8" Color="0 0 0 1" EditFlag="0" FontFace="GOST Common" FontSize="0.35" HorizontalJustification="0" InternalName="1:Condensed Text (GOST)&#xA;" IsBold="0" IsColorByLayer="1" IsItalic="1" IsItalicizeSymbols="0" IsUnderline="0" LineSpacingType="0" LineSpacingValue="1" VerticalJustification="0">
+    <Name Description="" Language="1028">壓縮文字 (GOST)</Name>
+    <Name Description="" Language="1029">Zhuštěný text (GOST)</Name>
+    <Name Description="" Language="1031">Verkleinerter Text (GOST)</Name>
+    <Name Description="" Language="1033">Condensed Text (GOST)</Name>
+    <Name Description="" Language="1036">Texte condensé (GOST)</Name>
+    <Name Description="" Language="1038">Keskeny szöveg (GOST)</Name>
+    <Name Description="" Language="1040">Testo ridotto (GOST)</Name>
+    <Name Description="" Language="1041">Condensed Text (GOST)</Name>
+    <Name Description="" Language="1042">좁은 텍스트(GOST)</Name>
+    <Name Description="" Language="1045">Tekst zagęszczony (GOST)</Name>
+    <Name Description="" Language="1046">Texto reduzido (GOST)</Name>
+    <Name Description="" Language="1049">Сжатый текст (ГОСТ)</Name>
+    <Name Description="" Language="2052">减缩文本 (GOST)</Name>
+    <Name Description="" Language="3082">Texto comprimido (GOST)</Name>
+  </Style>
+
+</Text>

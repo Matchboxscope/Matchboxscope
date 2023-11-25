@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<Leader Version="3">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style AllAroundDiameter="0.3048" AllAroundScaleToTextHeight="1" ArrowHead="4" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0.15875" ExtensionLineOvershoot="0.3175" Height_Y="0.1" InternalName="1:General (ANSI)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="1" LineWeightByLayer="1" Size_X="0.25">
+    <Name Description="" Language="1028">一般 (ANSI)</Name>
+    <Name Description="" Language="1029">Obecné (ANSI)</Name>
+    <Name Description="" Language="1031">Allgemein (ANSI)</Name>
+    <Name Description="" Language="1033">General (ANSI)</Name>
+    <Name Description="" Language="1036">Général (ANSI)</Name>
+    <Name Description="" Language="1038">Általános (ANSI)</Name>
+    <Name Description="" Language="1040">Generale (ANSI)</Name>
+    <Name Description="" Language="1041">General (ANSI)</Name>
+    <Name Description="" Language="1042">일반 (ANSI)</Name>
+    <Name Description="" Language="1045">Ogólny (ANSI)</Name>
+    <Name Description="" Language="1046">Geral (ANSI)</Name>
+    <Name Description="" Language="1049">Общие (ANSI)</Name>
+    <Name Description="" Language="2052">常规 (ANSI)</Name>
+    <Name Description="" Language="3082">General (ANSI)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.3048" AllAroundScaleToTextHeight="1" ArrowHead="4" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="0" EditFlag="0" ExtensionLineOffset="0.15875" ExtensionLineOvershoot="0.3175" Height_Y="0.1" InternalName="1:General (ANSI) - 3DA&#xA;" LineType="28100" LineTypeByLayer="0" LineWeight="0.025" LineWeightByLayer="0" Size_X="0.25">
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知" Language="1028">一般 (ANSI) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku." Language="1029">Obecné (ANSI) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden" Language="1031">Allgemein (ANSI) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation" Language="1033">General (ANSI) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">Général (ANSI) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához" Language="1038">Általános (ANSI) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">Generale (ANSI) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation" Language="1041">General (ANSI) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">일반 (ANSI) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D" Language="1045">Ogólny (ANSI) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D" Language="1046">Geral (ANSI) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Общие (ANSI) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知" Language="2052">常规 (ANSI) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">General (ANSI) - 3DA</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.35" AllAroundScaleToTextHeight="1" ArrowHead="4" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0.05" ExtensionLineOvershoot="0.3" Height_Y="0.1" InternalName="1:General (BSI)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="1" Size_X="0.25">
+    <Name Description="" Language="1028">一般 (BSI)</Name>
+    <Name Description="" Language="1029">Obecné (BSI)</Name>
+    <Name Description="" Language="1031">Allgemein (BSI)</Name>
+    <Name Description="" Language="1033">General (BSI)</Name>
+    <Name Description="" Language="1036">Général (BSI)</Name>
+    <Name Description="" Language="1038">Általános (BSI)</Name>
+    <Name Description="" Language="1040">Generale (BSI)</Name>
+    <Name Description="" Language="1041">General (BSI)</Name>
+    <Name Description="" Language="1042">일반 (BSI)</Name>
+    <Name Description="" Language="1045">Ogólny (BSI)</Name>
+    <Name Description="" Language="1046">Geral (BSI)</Name>
+    <Name Description="" Language="1049">Общие (BSI)</Name>
+    <Name Description="" Language="2052">常规 (BSI)</Name>
+    <Name Description="" Language="3082">General (BSI)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.35" AllAroundScaleToTextHeight="1" ArrowHead="4" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0" ExtensionLineOvershoot="0.5" Height_Y="0.1" InternalName="1:General (GB)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="1" Size_X="0.4">
+    <Name Description="" Language="1028">一般 (GB)</Name>
+    <Name Description="" Language="1029">Obecné (GB)</Name>
+    <Name Description="" Language="1031">Allgemein (GB)</Name>
+    <Name Description="" Language="1033">General (GB)</Name>
+    <Name Description="" Language="1036">Général (GB)</Name>
+    <Name Description="" Language="1038">Általános (GB)</Name>
+    <Name Description="" Language="1040">Generale (GB)</Name>
+    <Name Description="" Language="1041">General (GB)</Name>
+    <Name Description="" Language="1042">일반 (GB)</Name>
+    <Name Description="" Language="1045">Ogólny (GB)</Name>
+    <Name Description="" Language="1046">Geral (GB)</Name>
+    <Name Description="" Language="1049">Общие (GB)</Name>
+    <Name Description="" Language="2052">常规 (GB)</Name>
+    <Name Description="" Language="3082">General (GB)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.3048" AllAroundScaleToTextHeight="1" ArrowHead="4" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0" ExtensionLineOvershoot="0.3175" Height_Y="0.14" InternalName="1:Gost&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="1" Size_X="0.35">
+    <Name Description="" Language="1028">一般 (GOST)</Name>
+    <Name Description="" Language="1029">Obecné (GOST)</Name>
+    <Name Description="" Language="1031">Allgemein (GOST)</Name>
+    <Name Description="" Language="1033">General (GOST)</Name>
+    <Name Description="" Language="1036">Général (GOST)</Name>
+    <Name Description="" Language="1038">Általános (GOST)</Name>
+    <Name Description="" Language="1040">Generale (GOST)</Name>
+    <Name Description="" Language="1041">General (GOST)</Name>
+    <Name Description="" Language="1042">일반 (GOST)</Name>
+    <Name Description="" Language="1045">Ogólny (GOST)</Name>
+    <Name Description="" Language="1046">Geral (GOST)</Name>
+    <Name Description="" Language="1049">Общие (ГОСТ)</Name>
+    <Name Description="" Language="2052">常规 (GOST)</Name>
+    <Name Description="" Language="3082">General (GOST)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.35" AllAroundScaleToTextHeight="1" ArrowHead="4" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0" ExtensionLineOvershoot="0.3175" Height_Y="0.1" InternalName="1:General (ISO)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="1" Size_X="0.25">
+    <Name Description="" Language="1028">一般 (ISO)</Name>
+    <Name Description="" Language="1029">Obecné (ISO)</Name>
+    <Name Description="" Language="1031">Allgemein (ISO)</Name>
+    <Name Description="" Language="1033">General (ISO)</Name>
+    <Name Description="" Language="1036">Général (ISO)</Name>
+    <Name Description="" Language="1038">Általános (ISO)</Name>
+    <Name Description="" Language="1040">Generale (ISO)</Name>
+    <Name Description="" Language="1041">General (ISO)</Name>
+    <Name Description="" Language="1042">일반 (ISO)</Name>
+    <Name Description="" Language="1045">Ogólny (ISO)</Name>
+    <Name Description="" Language="1046">Geral (ISO)</Name>
+    <Name Description="" Language="1049">Общие (ISO)</Name>
+    <Name Description="" Language="2052">常规 (ISO)</Name>
+    <Name Description="" Language="3082">General (ISO)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.3048" AllAroundScaleToTextHeight="1" ArrowHead="4" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="0" EditFlag="0" ExtensionLineOffset="0" ExtensionLineOvershoot="0.3175" Height_Y="0.1" InternalName="1:General (ISO) - 3DA&#xA;" LineType="28100" LineTypeByLayer="0" LineWeight="0.025" LineWeightByLayer="0" Size_X="0.25">
+    <Name Description="此型式僅供在塑型環境中使用，以設定 3D 註解的格式。修改此型式您需自擔風險，因為並非所有設定都已經過測試，其對 3D 註解的影響尚不可知" Language="1028">一般 (ISO) - 3DA</Name>
+    <Name Description="Tento styl je určen k použití v prostředí modelování pouze za účelem formátování 3D poznámky.  Styl lze upravit jen na vlastní nebezpečí, protože nebyla otestována všechna nastavení a jejich vliv na 3D poznámku." Language="1029">Obecné (ISO) - 3DA</Name>
+    <Name Description="Dieser Stil wird in der Konstruktionsumgebung nur zum Formatieren von 3D-Anmerkungen verwendet. Eine Änderung dieses Stils erfolgt auf eigenes Risiko, da die Auswirkungen auf 3D-Anmerkungen nicht für alle Einstellungen geprüft wurden" Language="1031">Allgemein (ISO) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation" Language="1033">General (ISO) - 3DA</Name>
+    <Name Description="Ce style est destiné à être utilisé dans l'environnement de modélisation uniquement pour mettre en forme les annotations 3D. Modifiez ce style à vos risques et périls, car certains paramètres n'ont pas encore été testés pour déterminer l'impact sur les annotations 3D." Language="1036">Général (ISO) - 3DA</Name>
+    <Name Description="Ez a stílus a modellezési környezetben kizárólag a 3D megjegyzés formázására szolgál. A stílust saját felelősségére módosíthatja, mivel nem minden beállítás lett tesztelve a 3D megjegyzésre gyakorolt hatás meghatározásához" Language="1038">Általános (ISO) - 3DA</Name>
+    <Name Description="Questo stile viene utilizzato nell'ambiente di modellazione solo per formattare un'annotazione 3D. Modificare questo stile a proprio rischio perché non tutte le impostazioni sono state testate per determinare un effetto sull'annotazione 3D." Language="1040">Generale (ISO) - 3DA</Name>
+    <Name Description="This style is intended for use in the modeling environment only to format 3D annotation.  Modify this style at your own risk as not all  settings have been tested to determine effect to 3D annotation" Language="1041">General (ISO) - 3DA</Name>
+    <Name Description="이 스타일은 모델링 환경에서 3D 주석의 형식을 지정하는 데에만 사용됩니다. 3D 주석에 대한 효과를 확인하는 테스트가 수행되지 않은 설정도 있으므로 이 스타일을 수정할 때 발생하는 위험은 사용자가 감수해야 합니다." Language="1042">일반 (ISO) - 3DA</Name>
+    <Name Description="Ten styl jest przeznaczony do użycia w środowisku modelowania tylko do formatowania opisu 3D. Modyfikowanie tego stylu jest przeprowadzane na własne ryzyko, ponieważ nie wszystkie ustawienia zostały przetestowane w celu określenia wpływu na opis 3D" Language="1045">Ogólny (ISO) - 3DA</Name>
+    <Name Description="Este estilo foi criado para ser usado no ambiente de modelagem somente para formatar anotações 3D. Se você modificar o estilo, será por sua própria conta e risco, pois nem todas as configurações foram testadas para determinar o efeito na anotação 3D" Language="1046">Geral (ISO) - 3DA</Name>
+    <Name Description="Этот стиль предназначен только для форматирования 3D-аннотаций в среде моделирования. Внося изменения в этот стиль, вы принимаете на себя все возможные риски ввиду того, что воздействие некоторых параметров на 3D-аннотации не было определено в ходе тестирования." Language="1049">Общие (ISO) - 3DA</Name>
+    <Name Description="此样式仅供在建模环境中使用，以设定三维标注的格式。修改此样式您需自担风险，因为并非所有设置均已经过测试，其对三维标注的影响尚不可知" Language="2052">常规 (ISO) - 3DA</Name>
+    <Name Description="Este estilo está diseñado para uso exclusivo en el entorno de modelado para dar formato a anotaciones 3D. La modificación de este estilo será bajo su propia responsabilidad, ya que no se han probado todos los parámetros para determinar el efecto que tienen en la anotación 3D." Language="3082">General (ISO) - 3DA</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.3" AllAroundScaleToTextHeight="0" ArrowHead="1" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0" ExtensionLineOvershoot="0.1" Height_Y="0.1" InternalName="1:General (JIS)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="1" Size_X="0.25">
+    <Name Description="" Language="1028">一般 (JIS)</Name>
+    <Name Description="" Language="1029">Obecné (JIS)</Name>
+    <Name Description="" Language="1031">Allgemein (JIS)</Name>
+    <Name Description="" Language="1033">General (JIS)</Name>
+    <Name Description="" Language="1036">Général (JIS)</Name>
+    <Name Description="" Language="1038">Általános (JIS)</Name>
+    <Name Description="" Language="1040">Generale (JIS)</Name>
+    <Name Description="" Language="1041">General (JIS)</Name>
+    <Name Description="" Language="1042">일반 (JIS)</Name>
+    <Name Description="" Language="1045">Ogólny (JIS)</Name>
+    <Name Description="" Language="1046">Geral (JIS)</Name>
+    <Name Description="" Language="1049">Общие (JIS)</Name>
+    <Name Description="" Language="2052">常规 (JIS)</Name>
+    <Name Description="" Language="3082">General (JIS)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.3048" AllAroundScaleToTextHeight="1" ArrowHead="11" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0.16002" ExtensionLineOvershoot="0.3175" Height_Y="0.09906" InternalName="1:Alternate (ANSI)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="1" LineWeightByLayer="1" Size_X="0.24892">
+    <Name Description="" Language="1028">替用 (ANSI)</Name>
+    <Name Description="" Language="1029">Alternativní (ANSI)</Name>
+    <Name Description="" Language="1031">Alternativ (ANSI)</Name>
+    <Name Description="" Language="1033">Alternate (ANSI)</Name>
+    <Name Description="" Language="1036">Secondaire (ANSI)</Name>
+    <Name Description="" Language="1038">Alternatív (ANSI)</Name>
+    <Name Description="" Language="1040">Alternativa (ANSI)</Name>
+    <Name Description="" Language="1041">Alternate (ANSI)</Name>
+    <Name Description="" Language="1042">대체 (ANSI)</Name>
+    <Name Description="" Language="1045">Dodatkowy (ANSI)</Name>
+    <Name Description="" Language="1046">Alternativo (ANSI)</Name>
+    <Name Description="" Language="1049">Альтернатива (ANSI)</Name>
+    <Name Description="" Language="2052">替代 (ANSI)</Name>
+    <Name Description="" Language="3082">Alternativo (ANSI)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.35" AllAroundScaleToTextHeight="1" ArrowHead="11" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0.15" ExtensionLineOvershoot="0.3" Height_Y="0.1" InternalName="1:Alternate (BSI)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="1" Size_X="0.25">
+    <Name Description="" Language="1028">替用 (BSI)</Name>
+    <Name Description="" Language="1029">Alternativní (BSI)</Name>
+    <Name Description="" Language="1031">Alternativ (BSI)</Name>
+    <Name Description="" Language="1033">Alternate (BSI)</Name>
+    <Name Description="" Language="1036">Secondaire (BSI)</Name>
+    <Name Description="" Language="1038">Alternatív (BSI)</Name>
+    <Name Description="" Language="1040">Alternativa (BSI)</Name>
+    <Name Description="" Language="1041">Alternate (BSI)</Name>
+    <Name Description="" Language="1042">대체 (BSI)</Name>
+    <Name Description="" Language="1045">Dodatkowy (BSI)</Name>
+    <Name Description="" Language="1046">Alternativo (BSI)</Name>
+    <Name Description="" Language="1049">Альтернатива (BSI)</Name>
+    <Name Description="" Language="2052">替代 (BSI)</Name>
+    <Name Description="" Language="3082">Alternativo (BSI)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.35" AllAroundScaleToTextHeight="1" ArrowHead="11" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0" ExtensionLineOvershoot="0.5" Height_Y="0.1" InternalName="1:Alternate (GB)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="1" Size_X="0.4">
+    <Name Description="" Language="1028">替用 (GB)</Name>
+    <Name Description="" Language="1029">Alternativní (GB)</Name>
+    <Name Description="" Language="1031">Alternativ (GB)</Name>
+    <Name Description="" Language="1033">Alternate (GB)</Name>
+    <Name Description="" Language="1036">Secondaire (GB)</Name>
+    <Name Description="" Language="1038">Alternatív (GB)</Name>
+    <Name Description="" Language="1040">Alternativa (GB)</Name>
+    <Name Description="" Language="1041">Alternate (GB)</Name>
+    <Name Description="" Language="1042">대체 (GB)</Name>
+    <Name Description="" Language="1045">Dodatkowy (GB)</Name>
+    <Name Description="" Language="1046">Alternativo (GB)</Name>
+    <Name Description="" Language="1049">Альтернатива (GB)</Name>
+    <Name Description="" Language="2052">替代 (GB)</Name>
+    <Name Description="" Language="3082">Alternativo (GB)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.3048" AllAroundScaleToTextHeight="1" ArrowHead="19" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0" ExtensionLineOvershoot="0.3175" Height_Y="0.1" InternalName="1:Leader-Dot(ISO)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="1" Size_X="0.25">
+    <Name Description="" Language="1028">替用 (GOST)</Name>
+    <Name Description="" Language="1029">Alternativní (GOST)</Name>
+    <Name Description="" Language="1031">Alternativ (GOST)</Name>
+    <Name Description="" Language="1033">Alternate (GOST)</Name>
+    <Name Description="" Language="1036">Secondaire (GOST)</Name>
+    <Name Description="" Language="1038">Alternatív (GOST)</Name>
+    <Name Description="" Language="1040">Alternativa (GOST)</Name>
+    <Name Description="" Language="1041">Alternate (GOST)</Name>
+    <Name Description="" Language="1042">대체(GOST)</Name>
+    <Name Description="" Language="1045">Dodatkowy (GOST)</Name>
+    <Name Description="" Language="1046">Alternativo (GOST)</Name>
+    <Name Description="" Language="1049">Альтернатива (ГОСТ)</Name>
+    <Name Description="" Language="2052">替代 (GOST)</Name>
+    <Name Description="" Language="3082">Alternativo (GOST)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.35" AllAroundScaleToTextHeight="1" ArrowHead="11" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0" ExtensionLineOvershoot="0.3175" Height_Y="0.1" InternalName="1:Alternate (ISO)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="1" Size_X="0.25">
+    <Name Description="" Language="1028">替用 (ISO)</Name>
+    <Name Description="" Language="1029">Alternativní (ISO)</Name>
+    <Name Description="" Language="1031">Alternativ (ISO)</Name>
+    <Name Description="" Language="1033">Alternate (ISO)</Name>
+    <Name Description="" Language="1036">Secondaire (ISO)</Name>
+    <Name Description="" Language="1038">Alternatív (ISO)</Name>
+    <Name Description="" Language="1040">Alternativa (ISO)</Name>
+    <Name Description="" Language="1041">Alternate (ISO)</Name>
+    <Name Description="" Language="1042">대체 (ISO)</Name>
+    <Name Description="" Language="1045">Dodatkowy (ISO)</Name>
+    <Name Description="" Language="1046">Alternativo (ISO)</Name>
+    <Name Description="" Language="1049">Альтернатива (ISO)</Name>
+    <Name Description="" Language="2052">替代 (ISO)</Name>
+    <Name Description="" Language="3082">Alternativo (ISO)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.3048" AllAroundScaleToTextHeight="1" ArrowHead="8" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0.16002" ExtensionLineOvershoot="0.4675" Height_Y="0.24892" InternalName="1:Datum (ANSI)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="1" LineWeightByLayer="1" Size_X="0.24892">
+    <Name Description="" Language="1028">基準 (ANSI)</Name>
+    <Name Description="" Language="1029">Základny (ANSI)</Name>
+    <Name Description="" Language="1031">Bezug (ANSI)</Name>
+    <Name Description="" Language="1033">Datum (ANSI)</Name>
+    <Name Description="" Language="1036">Référence (ANSI)</Name>
+    <Name Description="" Language="1038">Bázis (ANSI)</Name>
+    <Name Description="" Language="1040">Riferimento (ANSI)</Name>
+    <Name Description="" Language="1041">Datum (ANSI)</Name>
+    <Name Description="" Language="1042">데이텀 (ANSI)</Name>
+    <Name Description="" Language="1045">Odniesienie (ANSI)</Name>
+    <Name Description="" Language="1046">Referência (ANSI)</Name>
+    <Name Description="" Language="1049">База (ANSI)</Name>
+    <Name Description="" Language="2052">基准 (ANSI)</Name>
+    <Name Description="" Language="3082">Referencia (ANSI)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.35" AllAroundScaleToTextHeight="1" ArrowHead="8" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0.05" ExtensionLineOvershoot="0.45" Height_Y="0.1" InternalName="1:Datum (BSI)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="1" Size_X="0.25">
+    <Name Description="" Language="1028">基準 (BSI)</Name>
+    <Name Description="" Language="1029">Základny (BSI)</Name>
+    <Name Description="" Language="1031">Bezug (BSI)</Name>
+    <Name Description="" Language="1033">Datum (BSI)</Name>
+    <Name Description="" Language="1036">Référence (BSI)</Name>
+    <Name Description="" Language="1038">Bázis (BSI)</Name>
+    <Name Description="" Language="1040">Riferimento (BSI)</Name>
+    <Name Description="" Language="1041">Datum (BSI)</Name>
+    <Name Description="" Language="1042">데이텀 (BSI)</Name>
+    <Name Description="" Language="1045">Odniesienie (BSI)</Name>
+    <Name Description="" Language="1046">Referência (BSI)</Name>
+    <Name Description="" Language="1049">База (BSI)</Name>
+    <Name Description="" Language="2052">基准 (BSI)</Name>
+    <Name Description="" Language="3082">Referencia (BSI)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.35" AllAroundScaleToTextHeight="1" ArrowHead="17" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0.0001" ExtensionLineOvershoot="0.65" Height_Y="0.1" InternalName="1:Datum (GB)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="0" Size_X="0.4">
+    <Name Description="" Language="1028">基準 (GB)</Name>
+    <Name Description="" Language="1029">Základny (GB)</Name>
+    <Name Description="" Language="1031">Bezug (GB)</Name>
+    <Name Description="" Language="1033">Datum (GB)</Name>
+    <Name Description="" Language="1036">Référence (GB)</Name>
+    <Name Description="" Language="1038">Bázis (GB)</Name>
+    <Name Description="" Language="1040">Riferimento (GB)</Name>
+    <Name Description="" Language="1041">Datum (GB)</Name>
+    <Name Description="" Language="1042">데이텀 (GB)</Name>
+    <Name Description="" Language="1045">Odniesienie (GB)</Name>
+    <Name Description="" Language="1046">Referência (GB)</Name>
+    <Name Description="" Language="1049">База (GB)</Name>
+    <Name Description="" Language="2052">基准 (GB)</Name>
+    <Name Description="" Language="3082">Referencia (GB)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.35" AllAroundScaleToTextHeight="1" ArrowHead="10" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0" ExtensionLineOvershoot="0.4675" Height_Y="0.14" InternalName="1:Datum (GOST)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="1" Size_X="0.35">
+    <Name Description="" Language="1028">基準 (GOST)</Name>
+    <Name Description="" Language="1029">Základny (GOST)</Name>
+    <Name Description="" Language="1031">Bezug (GOST)</Name>
+    <Name Description="" Language="1033">Datum (GOST)</Name>
+    <Name Description="" Language="1036">Référence (GOST)</Name>
+    <Name Description="" Language="1038">Bázis (GOST)</Name>
+    <Name Description="" Language="1040">Riferimento (GOST)</Name>
+    <Name Description="" Language="1041">Datum (GOST)</Name>
+    <Name Description="" Language="1042">데이텀 (GOST)</Name>
+    <Name Description="" Language="1045">Odniesienie (GOST)</Name>
+    <Name Description="" Language="1046">Referência (GOST)</Name>
+    <Name Description="" Language="1049">База (ГОСТ)</Name>
+    <Name Description="" Language="2052">基准 (GOST)</Name>
+    <Name Description="" Language="3082">Referencia (GOST)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.35" AllAroundScaleToTextHeight="1" ArrowHead="8" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0" ExtensionLineOvershoot="0.4675" Height_Y="0.1" InternalName="1:Datum (ISO)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="1" Size_X="0.25">
+    <Name Description="" Language="1028">基準 (ISO)</Name>
+    <Name Description="" Language="1029">Základny (ISO)</Name>
+    <Name Description="" Language="1031">Bezug (ISO)</Name>
+    <Name Description="" Language="1033">Datum (ISO)</Name>
+    <Name Description="" Language="1036">Référence (ISO)</Name>
+    <Name Description="" Language="1038">Bázis (ISO)</Name>
+    <Name Description="" Language="1040">Riferimento (ISO)</Name>
+    <Name Description="" Language="1041">Datum (ISO)</Name>
+    <Name Description="" Language="1042">데이텀 (ISO)</Name>
+    <Name Description="" Language="1045">Odniesienie (ISO)</Name>
+    <Name Description="" Language="1046">Referência (ISO)</Name>
+    <Name Description="" Language="1049">База (ISO)</Name>
+    <Name Description="" Language="2052">基准 (ISO)</Name>
+    <Name Description="" Language="3082">Referencia (ISO)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.3048" AllAroundScaleToTextHeight="1" ArrowHead="4" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0.16002" ExtensionLineOvershoot="0.3175" Height_Y="0.09906" InternalName="1:Large (ANSI)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="1" LineWeightByLayer="1" Size_X="0.49784">
+    <Name Description="" Language="1028">大型 (ANSI)</Name>
+    <Name Description="" Language="1029">Velké (ANSI)</Name>
+    <Name Description="" Language="1031">Groß (ANSI)</Name>
+    <Name Description="" Language="1033">Large (ANSI)</Name>
+    <Name Description="" Language="1036">Grand (ANSI)</Name>
+    <Name Description="" Language="1038">Nagy (ANSI)</Name>
+    <Name Description="" Language="1040">Grande (ANSI)</Name>
+    <Name Description="" Language="1041">Large (ANSI)</Name>
+    <Name Description="" Language="1042">대형 (ANSI)</Name>
+    <Name Description="" Language="1045">Duży (ANSI)</Name>
+    <Name Description="" Language="1046">Grande (ANSI)</Name>
+    <Name Description="" Language="1049">Крупные (ANSI)</Name>
+    <Name Description="" Language="2052">大型 (ANSI)</Name>
+    <Name Description="" Language="3082">Grande (ANSI)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.35" AllAroundScaleToTextHeight="1" ArrowHead="4" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0.1" ExtensionLineOvershoot="0.3" Height_Y="0.1" InternalName="1:Large (BSI)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="1" Size_X="0.5">
+    <Name Description="" Language="1028">大型 (BSI)</Name>
+    <Name Description="" Language="1029">Velké (BSI)</Name>
+    <Name Description="" Language="1031">Groß (BSI)</Name>
+    <Name Description="" Language="1033">Large (BSI)</Name>
+    <Name Description="" Language="1036">Grand (BSI)</Name>
+    <Name Description="" Language="1038">Nagy (BSI)</Name>
+    <Name Description="" Language="1040">Grande (BSI)</Name>
+    <Name Description="" Language="1041">Large (BSI)</Name>
+    <Name Description="" Language="1042">대형 (BSI)</Name>
+    <Name Description="" Language="1045">Duży (BSI)</Name>
+    <Name Description="" Language="1046">Grande (BSI)</Name>
+    <Name Description="" Language="1049">Крупные (BSI)</Name>
+    <Name Description="" Language="2052">大型 (BSI)</Name>
+    <Name Description="" Language="3082">Grande (BSI)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.35" AllAroundScaleToTextHeight="1" ArrowHead="4" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0" ExtensionLineOvershoot="0.5" Height_Y="0.1" InternalName="1:Large (GB)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="1" Size_X="0.8">
+    <Name Description="" Language="1028">大型 (GB)</Name>
+    <Name Description="" Language="1029">Velké (GB)</Name>
+    <Name Description="" Language="1031">Groß (GB)</Name>
+    <Name Description="" Language="1033">Large (GB)</Name>
+    <Name Description="" Language="1036">Grand (GB)</Name>
+    <Name Description="" Language="1038">Nagy (GB)</Name>
+    <Name Description="" Language="1040">Grande (GB)</Name>
+    <Name Description="" Language="1041">Large (GB)</Name>
+    <Name Description="" Language="1042">대형 (GB)</Name>
+    <Name Description="" Language="1045">Duży (GB)</Name>
+    <Name Description="" Language="1046">Grande (GB)</Name>
+    <Name Description="" Language="1049">Крупные (GB)</Name>
+    <Name Description="" Language="2052">大型 (GB)</Name>
+    <Name Description="" Language="3082">Grande (GB)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.3048" AllAroundScaleToTextHeight="1" ArrowHead="4" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0" ExtensionLineOvershoot="0.3175" Height_Y="0.2" InternalName="1:Leader-Large(ISO)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="1" Size_X="0.5">
+    <Name Description="" Language="1028">大型 (GOST)</Name>
+    <Name Description="" Language="1029">Velké (GOST)</Name>
+    <Name Description="" Language="1031">Groß (GOST)</Name>
+    <Name Description="" Language="1033">Large (GOST)</Name>
+    <Name Description="" Language="1036">Grand (GOST)</Name>
+    <Name Description="" Language="1038">Nagy (GOST)</Name>
+    <Name Description="" Language="1040">Grande (GOST)</Name>
+    <Name Description="" Language="1041">Large (GOST)</Name>
+    <Name Description="" Language="1042">대형 (GOST)</Name>
+    <Name Description="" Language="1045">Duży (GOST)</Name>
+    <Name Description="" Language="1046">Grande (GOST)</Name>
+    <Name Description="" Language="1049">Крупные (ГОСТ)</Name>
+    <Name Description="" Language="2052">大型 (GOST)</Name>
+    <Name Description="" Language="3082">Grande (GOST)</Name>
+  </Style>
+
+  <Style AllAroundDiameter="0.35" AllAroundScaleToTextHeight="1" ArrowHead="4" AttachTextPosition="0" Color="0:0:0:255" ColorByLayer="1" EditFlag="0" ExtensionLineOffset="0" ExtensionLineOvershoot="0.3175" Height_Y="0.1" InternalName="1:Large (ISO)&#xA;" LineType="28100" LineTypeByLayer="1" LineWeight="0.025" LineWeightByLayer="0" Size_X="0.5">
+    <Name Description="" Language="1028">大型 (ISO)</Name>
+    <Name Description="" Language="1029">Velké (ISO)</Name>
+    <Name Description="" Language="1031">Groß (ISO)</Name>
+    <Name Description="" Language="1033">Large (ISO)</Name>
+    <Name Description="" Language="1036">Grand (ISO)</Name>
+    <Name Description="" Language="1038">Nagy (ISO)</Name>
+    <Name Description="" Language="1040">Grande (ISO)</Name>
+    <Name Description="" Language="1041">Large (ISO)</Name>
+    <Name Description="" Language="1042">대형 (ISO)</Name>
+    <Name Description="" Language="1045">Duży (ISO)</Name>
+    <Name Description="" Language="1046">Grande (ISO)</Name>
+    <Name Description="" Language="1049">Крупные (ISO)</Name>
+    <Name Description="" Language="2052">大型 (ISO)</Name>
+    <Name Description="" Language="3082">Grande (ISO)</Name>
+  </Style>
+
+</Leader>

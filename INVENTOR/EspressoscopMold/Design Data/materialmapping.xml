@@ -1,0 +1,1229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Materials Version="5">
+  <!--Created by Autodesk Inventor Version 16.0 Production Candidate-->
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+  <Style InternalName="1:ABS Plastic " EditFlag="1" Density="1.06" YoungsModulus="2.89" PoissonsRatio="0.38" YieldStrength="40.33" UltimateTensileStrength="40" ThermalConductivity="0.299" LinearExpansion="85.7" SpecificHeat="1.5" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:85087E0D-D221-475D-ABB3-22B9D6A96369:82BEAFC6-1AC0-4E4C-BDA9-C5733B45AE03:0" MappingProteinMaterialId="MaterialInv_037">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (White)</SubStyle>
+    <Name Language="1028" Description="">ABS 塑膠</Name>
+    <Name Language="1029" Description="">Plast ABS</Name>
+    <Name Language="1031" Description="">ABS Plastik</Name>
+    <Name Language="1033" Description="">ABS Plastic</Name>
+    <Name Language="1036" Description="">ABS (plastique)</Name>
+    <Name Language="1038" Description="">ABS (műanyag)</Name>
+    <Name Language="1040" Description="">Plastica ABS</Name>
+    <Name Language="1041" Description="">ABS Plastic</Name>
+    <Name Language="1042" Description="">ABS 플라스틱</Name>
+    <Name Language="1045" Description="">Tworzywo sztuczne ABS</Name>
+    <Name Language="1046" Description="">Plástico ABS</Name>
+    <Name Language="1049" Description="">Пластмасса ABS</Name>
+    <Name Language="2052" Description="">ABS 塑料</Name>
+    <Name Language="3082" Description="">Plástico ABS</Name>
+  </Style>
+  <Style InternalName="1:Acetal Resin, Black " EditFlag="0" Density="1.425" YoungsModulus="3.585" PoissonsRatio="0.35" YieldStrength="68.21" UltimateTensileStrength="67.52" ThermalConductivity="0.24" LinearExpansion="85" SpecificHeat="1.46545" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:C42DC4D3-96C3-47C3-8125-2EAAEA2F265E:60D08237-F7AD-41E5-82CC-4B5B4EC0EF7B:0" MappingProteinMaterialId="MaterialInv_038">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (Black)</SubStyle>
+    <Name Language="1028" Description="">縮醛樹脂，黑色</Name>
+    <Name Language="1029" Description="">Polyacetátová pryskyřice, černá</Name>
+    <Name Language="1031" Description="">Acetal-Kunststoff, schwarz</Name>
+    <Name Language="1033" Description="">Acetal Resin, Black</Name>
+    <Name Language="1036" Description="">Résine à l'acétal (noire)</Name>
+    <Name Language="1038" Description="">Acetálgyanta, fekete</Name>
+    <Name Language="1040" Description="">Resina acetalica, nera</Name>
+    <Name Language="1041" Description="">Acetal Resin, Black</Name>
+    <Name Language="1042" Description="">아세탈 수지, 검은색</Name>
+    <Name Language="1045" Description="">Żywica acetalowa, czarna</Name>
+    <Name Language="1046" Description="">Resina de acetal, preto</Name>
+    <Name Language="1049" Description="">Полиацеталь, черный</Name>
+    <Name Language="2052" Description="">缩醛树脂，黑色</Name>
+    <Name Language="3082" Description="">Resina acetálica, negra</Name>
+  </Style>
+  <Style InternalName="1:Acetal Resin, White " EditFlag="0" Density="1.42" YoungsModulus="3.585" PoissonsRatio="0.35" YieldStrength="68.21" UltimateTensileStrength="67.52" ThermalConductivity="0.24" LinearExpansion="85" SpecificHeat="1.46545" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:C42DC4D3-96C3-47C3-8125-2EAAEA2F265E:60D08237-F7AD-41E5-82CC-4B5B4EC0EF7B:0" MappingProteinMaterialId="MaterialInv_039">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (White)</SubStyle>
+    <Name Language="1028" Description="">縮醛樹脂，白色</Name>
+    <Name Language="1029" Description="">Polyacetátová pryskyřice, bílá</Name>
+    <Name Language="1031" Description="">Acetal-Kunststoff, weiß</Name>
+    <Name Language="1033" Description="">Acetal Resin, White</Name>
+    <Name Language="1036" Description="">Résine à l'acétal (blanche)</Name>
+    <Name Language="1038" Description="">Acetálgyanta, fehér</Name>
+    <Name Language="1040" Description="">Resina acetalica, bianca</Name>
+    <Name Language="1041" Description="">Acetal Resin, White</Name>
+    <Name Language="1042" Description="">아세탈 수지, 흰색</Name>
+    <Name Language="1045" Description="">Żywica acetalowa, biała</Name>
+    <Name Language="1046" Description="">Resina de acetal, branco</Name>
+    <Name Language="1049" Description="">Полиацеталь, белый</Name>
+    <Name Language="2052" Description="">缩醛树脂，白色</Name>
+    <Name Language="3082" Description="">Resina acetálica, blanca</Name>
+  </Style>
+  <Style InternalName="1:Alloy Steel " EditFlag="0" Density="7.85" YoungsModulus="205" PoissonsRatio="0.3" YieldStrength="250" UltimateTensileStrength="0" ThermalConductivity="44.5" LinearExpansion="12" SpecificHeat="0.475" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:E43E0023-69AF-411B-9421-EE6B08AEDD55:2D53177F-10AD-4E66-B93D-E1467F4583DE:0" MappingProteinMaterialId="MaterialInv_003">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel</SubStyle>
+    <Name Language="1028" Description="">合金鋼</Name>
+    <Name Language="1029" Description="">Legovaná ocel</Name>
+    <Name Language="1031" Description="">Stahllegierung</Name>
+    <Name Language="1033" Description="">Alloy Steel</Name>
+    <Name Language="1036" Description="">Acier allié</Name>
+    <Name Language="1038" Description="">Ötvözött acél</Name>
+    <Name Language="1040" Description="">Acciaio legato</Name>
+    <Name Language="1041" Description="">Alloy Steel</Name>
+    <Name Language="1042" Description="">합금강</Name>
+    <Name Language="1045" Description="">Stal stopowa</Name>
+    <Name Language="1046" Description="">Aço liga</Name>
+    <Name Language="1049" Description="">Легированная сталь</Name>
+    <Name Language="2052" Description="">合金钢</Name>
+    <Name Language="3082" Description="">Acero aleado</Name>
+  </Style>
+  <Style InternalName="1:Aluminum-6061 " EditFlag="0" Density="2.71" YoungsModulus="68.9" PoissonsRatio="0.33" YieldStrength="275" UltimateTensileStrength="310" ThermalConductivity="167" LinearExpansion="23.6" SpecificHeat="1.2561" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:4B6DBD91-43C6-4D25-8DF6-8066300DF3C8:032A8753-4C73-4F67-A4CF-066E33C4A0C3:0" MappingProteinMaterialId="MaterialInv_004">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-AL-6061 (Flat)</SubStyle>
+    <Name Language="1028" Description="">鋁 - 6061</Name>
+    <Name Language="1029" Description="">Hliník - 6061</Name>
+    <Name Language="1031" Description="">Aluminium - 6061</Name>
+    <Name Language="1033" Description="">Aluminum-6061</Name>
+    <Name Language="1036" Description="">Aluminium-6061</Name>
+    <Name Language="1038" Description="">Alumínium - 6061</Name>
+    <Name Language="1040" Description="">Alluminio - 6061</Name>
+    <Name Language="1041" Description="">Aluminum-6061</Name>
+    <Name Language="1042" Description="">알루미늄-6061</Name>
+    <Name Language="1045" Description="">Aluminium-6061</Name>
+    <Name Language="1046" Description="">Alumínio-6061</Name>
+    <Name Language="1049" Description="">Алюминий - 6061</Name>
+    <Name Language="2052" Description="">铝 - 6061</Name>
+    <Name Language="3082" Description="">Aluminio-6061</Name>
+  </Style>
+  <Style InternalName="1:Aluminum-6061-AHC " EditFlag="0" Density="2.71" YoungsModulus="68.9" PoissonsRatio="0.33" YieldStrength="275" UltimateTensileStrength="310" ThermalConductivity="167" LinearExpansion="23.6" SpecificHeat="1.2561" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:4B6DBD91-43C6-4D25-8DF6-8066300DF3C8:032A8753-4C73-4F67-A4CF-066E33C4A0C3:0" MappingProteinMaterialId="MaterialInv_005">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-AL-6061 (AHC)</SubStyle>
+    <Name Language="1028" Description="">鋁 - 6061 - AHC</Name>
+    <Name Language="1029" Description="">Hliník - 6061-AHC</Name>
+    <Name Language="1031" Description="">Aluminium - 6061 - AHC</Name>
+    <Name Language="1033" Description="">Aluminum-6061-AHC</Name>
+    <Name Language="1036" Description="">Aluminium-6061-AHC</Name>
+    <Name Language="1038" Description="">Alumínium - 6061 - AHC</Name>
+    <Name Language="1040" Description="">Alluminio - 6061 - AHC</Name>
+    <Name Language="1041" Description="">Aluminum-6061-AHC</Name>
+    <Name Language="1042" Description="">알루미늄-6061-AHC</Name>
+    <Name Language="1045" Description="">Aluminium-6061-AHC</Name>
+    <Name Language="1046" Description="">Alumínio-6061-AHC</Name>
+    <Name Language="1049" Description="">Алюминий - 6061- AHC</Name>
+    <Name Language="2052" Description="">铝 - 6061 (AHC)</Name>
+    <Name Language="3082" Description="">Aluminio-6061-AHC</Name>
+  </Style>
+  <Style InternalName="1:Brass, Soft Yellow " EditFlag="0" Density="8.47" YoungsModulus="109.6" PoissonsRatio="0.331" YieldStrength="103.4" UltimateTensileStrength="275" ThermalConductivity="116" LinearExpansion="20.5" SpecificHeat="0.369" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:FAAD7CFC-DB1E-497E-9256-0CE07CCBF18F:04823EFC-3717-4206-B95C-6B0386A71B98:0" MappingProteinMaterialId="MaterialInv_006">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Brass</SubStyle>
+    <Name Language="1028" Description="">黃銅，淡黃</Name>
+    <Name Language="1029" Description="">Mosaz (leskle žlutá)</Name>
+    <Name Language="1031" Description="">Messing (gelb, weich)</Name>
+    <Name Language="1033" Description="">Brass, Soft Yellow</Name>
+    <Name Language="1036" Description="">Laiton (jaune doux)</Name>
+    <Name Language="1038" Description="">Sárgaréz (lágy)</Name>
+    <Name Language="1040" Description="">Ottone, Ottone giallo dolce</Name>
+    <Name Language="1041" Description="">Brass, Soft Yellow</Name>
+    <Name Language="1042" Description="">황동, 연질 노란색</Name>
+    <Name Language="1045" Description="">Mosiądz, jasnożółty</Name>
+    <Name Language="1046" Description="">Latão, amarelo macio</Name>
+    <Name Language="1049" Description="">Латунь светло-желтая</Name>
+    <Name Language="2052" Description="">黄铜，柔和的黄色</Name>
+    <Name Language="3082" Description="">Latón, amarillo suave</Name>
+  </Style>
+  <Style InternalName="1:Bronze, Soft Tin " EditFlag="0" Density="8.874" YoungsModulus="109.6" PoissonsRatio="0.335" YieldStrength="128" UltimateTensileStrength="275" ThermalConductivity="62" LinearExpansion="18.3" SpecificHeat="0.436" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:419E87C7-A64F-4221-B661-41A57132CD18:06F4004B-A656-4CC1-A860-4AC76290CEAA:0" MappingProteinMaterialId="MaterialInv_007">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Bronze</SubStyle>
+    <Name Language="1028" Description="">青銅，軟錫</Name>
+    <Name Language="1029" Description="">Bronz (leskle pocínovaný)</Name>
+    <Name Language="1031" Description="">Bronze (weiche Zinnbronze)</Name>
+    <Name Language="1033" Description="">Bronze, Soft Tin</Name>
+    <Name Language="1036" Description="">Bronze (étain doux)</Name>
+    <Name Language="1038" Description="">Bronz (lágy cinkbronz)</Name>
+    <Name Language="1040" Description="">Bronzo, Bronzo fine dolce</Name>
+    <Name Language="1041" Description="">Bronze, Soft Tin</Name>
+    <Name Language="1042" Description="">청동, 연질 주석</Name>
+    <Name Language="1045" Description="">Brąz, jasnocynowy</Name>
+    <Name Language="1046" Description="">Bronze, estanho macio</Name>
+    <Name Language="1049" Description="">Бронза луженая</Name>
+    <Name Language="2052" Description="">青铜，软锡青铜</Name>
+    <Name Language="3082" Description="">Bronce, estaño suave</Name>
+  </Style>
+  <Style InternalName="1:Carbon Steel " EditFlag="0" Density="7.87" YoungsModulus="200" PoissonsRatio="0.29" YieldStrength="350" UltimateTensileStrength="420" ThermalConductivity="52" LinearExpansion="12" SpecificHeat="0.486" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:8EC65223-7622-4B08-8C5B-B9A215D9F642:B4672BC1-6D3C-4AAA-8215-76A260C7F664:0" MappingProteinMaterialId="MaterialInv_008">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel</SubStyle>
+    <Name Language="1028" Description="">碳鋼</Name>
+    <Name Language="1029" Description="">Uhlíková ocel</Name>
+    <Name Language="1031" Description="">Kohlenstoffstahl</Name>
+    <Name Language="1033" Description="">Carbon Steel</Name>
+    <Name Language="1036" Description="">Acier au carbone</Name>
+    <Name Language="1038" Description="">Szénacél</Name>
+    <Name Language="1040" Description="">Acciaio al carbonio</Name>
+    <Name Language="1041" Description="">Carbon Steel</Name>
+    <Name Language="1042" Description="">탄소강</Name>
+    <Name Language="1045" Description="">Stal węglowa</Name>
+    <Name Language="1046" Description="">Aço carbono</Name>
+    <Name Language="1049" Description="">Углеродистая сталь</Name>
+    <Name Language="2052" Description="">炭钢</Name>
+    <Name Language="3082" Description="">Acero semiduro</Name>
+  </Style>
+  <Style InternalName="1:Cast Bronze " EditFlag="0" Density="8.87" YoungsModulus="109.6" PoissonsRatio="0.335" YieldStrength="128" UltimateTensileStrength="275" ThermalConductivity="62" LinearExpansion="18.3" SpecificHeat="0.436" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:419E87C7-A64F-4221-B661-41A57132CD18:06F4004B-A656-4CC1-A860-4AC76290CEAA:0" MappingProteinMaterialId="MaterialInv_009">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Bronze</SubStyle>
+    <Name Language="1028" Description="">鑄製青銅</Name>
+    <Name Language="1029" Description="">Litý bronz</Name>
+    <Name Language="1031" Description="">Gussbronze</Name>
+    <Name Language="1033" Description="">Cast Bronze</Name>
+    <Name Language="1036" Description="">Bronze moulé</Name>
+    <Name Language="1038" Description="">Bronzöntvény</Name>
+    <Name Language="1040" Description="">Fusione di bronzo</Name>
+    <Name Language="1041" Description="">Cast Bronze</Name>
+    <Name Language="1042" Description="">주조청동</Name>
+    <Name Language="1045" Description="">Brąz odlewniczy</Name>
+    <Name Language="1046" Description="">Bronze fundido</Name>
+    <Name Language="1049" Description="">Литейная бронза</Name>
+    <Name Language="2052" Description="">铸造青铜</Name>
+    <Name Language="3082" Description="">Bronce fundido</Name>
+  </Style>
+  <Style InternalName="1:Cast Copper " EditFlag="0" Density="8.94" YoungsModulus="117.5" PoissonsRatio="0.345" YieldStrength="330" UltimateTensileStrength="380" ThermalConductivity="386" LinearExpansion="16.7" SpecificHeat="0.383" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:19837252-5CBC-435C-9DD0-B10457C2D292:814ACAD3-C2CC-4BEA-BFD0-77B066A9A011:0" MappingProteinMaterialId="MaterialInv_010">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Copper</SubStyle>
+    <Name Language="1028" Description="">鑄製純銅</Name>
+    <Name Language="1029" Description="">Litá měď</Name>
+    <Name Language="1031" Description="">Gusskupfer</Name>
+    <Name Language="1033" Description="">Cast Copper</Name>
+    <Name Language="1036" Description="">Cuivre moulé</Name>
+    <Name Language="1038" Description="">Rézöntvény</Name>
+    <Name Language="1040" Description="">Rame fuso</Name>
+    <Name Language="1041" Description="">Cast Copper</Name>
+    <Name Language="1042" Description="">주조동</Name>
+    <Name Language="1045" Description="">Miedź odlewnicza</Name>
+    <Name Language="1046" Description="">Cobre fundido</Name>
+    <Name Language="1049" Description="">Литейная медь</Name>
+    <Name Language="2052" Description="">铸铜</Name>
+    <Name Language="3082" Description="">Cobre fundido</Name>
+  </Style>
+  <Style InternalName="1:Cast Iron " EditFlag="0" Density="7.25" YoungsModulus="120.5" PoissonsRatio="0.3" YieldStrength="200" UltimateTensileStrength="276" ThermalConductivity="50" LinearExpansion="12" SpecificHeat="0.54" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:A264F0DC-3818-4FC3-8507-21F8269D1952:F00B46E9-EC4E-491C-8FAC-2DD2298C65D9:0" MappingProteinMaterialId="MaterialInv_011">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel</SubStyle>
+    <Name Language="1028" Description="">鑄鐵</Name>
+    <Name Language="1029" Description="">Litina</Name>
+    <Name Language="1031" Description="">Eisen (Guss)</Name>
+    <Name Language="1033" Description="">Cast Iron</Name>
+    <Name Language="1036" Description="">Fonte</Name>
+    <Name Language="1038" Description="">Öntöttvas</Name>
+    <Name Language="1040" Description="">Ghisa fusa</Name>
+    <Name Language="1041" Description="">Cast Iron</Name>
+    <Name Language="1042" Description="">주철</Name>
+    <Name Language="1045" Description="">Żeliwo</Name>
+    <Name Language="1046" Description="">Ferro fundido</Name>
+    <Name Language="1049" Description="">Чугун</Name>
+    <Name Language="2052" Description="">铸铁</Name>
+    <Name Language="3082" Description="">Hierro fundido</Name>
+  </Style>
+  <Style InternalName="1:Cast Steel " EditFlag="0" Density="7.85" YoungsModulus="210" PoissonsRatio="0.3" YieldStrength="250" UltimateTensileStrength="300" ThermalConductivity="50" LinearExpansion="12" SpecificHeat="0.46" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:443FF4C0-B220-406B-A03C-AE1602BB69A3:48745BB7-BE14-4E5F-B4E0-4C3D4A7AE7A5:0" MappingProteinMaterialId="MaterialInv_012">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel</SubStyle>
+    <Name Language="1028" Description="">鑄鋼</Name>
+    <Name Language="1029" Description="">Litá ocel</Name>
+    <Name Language="1031" Description="">Gussstahl</Name>
+    <Name Language="1033" Description="">Cast Steel</Name>
+    <Name Language="1036" Description="">Acier coulé</Name>
+    <Name Language="1038" Description="">Acélöntvény</Name>
+    <Name Language="1040" Description="">Acciaio fuso</Name>
+    <Name Language="1041" Description="">Cast Steel</Name>
+    <Name Language="1042" Description="">주조강</Name>
+    <Name Language="1045" Description="">Staliwo</Name>
+    <Name Language="1046" Description="">Aço fundido</Name>
+    <Name Language="1049" Description="">Литая сталь</Name>
+    <Name Language="2052" Description="">铸钢</Name>
+    <Name Language="3082" Description="">Acero fundido</Name>
+  </Style>
+  <Style InternalName="1:Copper " EditFlag="0" Density="8.94" YoungsModulus="117.5" PoissonsRatio="0.345" YieldStrength="330" UltimateTensileStrength="380" ThermalConductivity="386" LinearExpansion="16.7" SpecificHeat="0.383" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:B5C15342-D95B-46BD-BB6F-85B6CDD3AABD:D3A96026-3297-45F7-8BFB-BB4FAFFD88BD:0" MappingProteinMaterialId="MaterialInv_013">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Copper</SubStyle>
+    <Name Language="1028" Description="">銅</Name>
+    <Name Language="1029" Description="">Měď</Name>
+    <Name Language="1031" Description="">Kupfer</Name>
+    <Name Language="1033" Description="">Copper</Name>
+    <Name Language="1036" Description="">Cuivre</Name>
+    <Name Language="1038" Description="">Réz</Name>
+    <Name Language="1040" Description="">Rame</Name>
+    <Name Language="1041" Description="">Copper</Name>
+    <Name Language="1042" Description="">구리색</Name>
+    <Name Language="1045" Description="">Miedziany</Name>
+    <Name Language="1046" Description="">Cobre</Name>
+    <Name Language="1049" Description="">Медь</Name>
+    <Name Language="2052" Description="">铜</Name>
+    <Name Language="3082" Description="">Cobre</Name>
+  </Style>
+  <Style InternalName="1:Copper Alloy " EditFlag="0" Density="7.58" YoungsModulus="115" PoissonsRatio="0.33" YieldStrength="345" UltimateTensileStrength="621" ThermalConductivity="38" LinearExpansion="16" SpecificHeat="0.385" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:B339023C-C8BC-49D2-8AEF-37B8E4C42AA8:4D828E3E-30FD-4B10-8AA4-0E2A1A849EA9:0" MappingProteinMaterialId="MaterialInv_014">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Copper</SubStyle>
+    <Name Language="1028" Description="">銅合金</Name>
+    <Name Language="1029" Description="">Slitina mědi</Name>
+    <Name Language="1031" Description="">Kupferlegierung</Name>
+    <Name Language="1033" Description="">Copper Alloy</Name>
+    <Name Language="1036" Description="">Alliage de cuivre</Name>
+    <Name Language="1038" Description="">Rézötvözet</Name>
+    <Name Language="1040" Description="">Lega di rame</Name>
+    <Name Language="1041" Description="">Copper Alloy</Name>
+    <Name Language="1042" Description="">동합금</Name>
+    <Name Language="1045" Description="">Stop miedzi</Name>
+    <Name Language="1046" Description="">Liga de cobre</Name>
+    <Name Language="1049" Description="">Медный сплав</Name>
+    <Name Language="2052" Description="">铜合金</Name>
+    <Name Language="3082" Description="">Aleación de cobre</Name>
+  </Style>
+  <Style InternalName="1:Default " EditFlag="2" Density="1" YoungsModulus="0" PoissonsRatio="0" YieldStrength="0" UltimateTensileStrength="0" ThermalConductivity="0" LinearExpansion="0" SpecificHeat="0" WeldmentMaterial="1" ExternalMaterialId="" MappingProteinMaterialId="MaterialInv_072">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Default</SubStyle>
+    <Name Language="1028" Description="">預設</Name>
+    <Name Language="1029" Description="">Výchozí</Name>
+    <Name Language="1031" Description="">Standard</Name>
+    <Name Language="1033" Description="">Default</Name>
+    <Name Language="1036" Description="">Par défaut</Name>
+    <Name Language="1038" Description="">Alapértelmezett</Name>
+    <Name Language="1040" Description="">Default</Name>
+    <Name Language="1041" Description="">Default</Name>
+    <Name Language="1042" Description="">기본값</Name>
+    <Name Language="1045" Description="">Domyślny</Name>
+    <Name Language="1046" Description="">Padrão</Name>
+    <Name Language="1049" Description="">По умолчанию</Name>
+    <Name Language="2052" Description="">默认</Name>
+    <Name Language="3082" Description="">Por defecto</Name>
+  </Style>
+  <Style InternalName="1:Ductile Iron " EditFlag="0" Density="7.1" YoungsModulus="168" PoissonsRatio="0.29" YieldStrength="332" UltimateTensileStrength="464" ThermalConductivity="21" LinearExpansion="14" SpecificHeat="0.54" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:89D802D4-AB70-4F28-9BEB-2D1BE0BF29F3:AF947D2D-00BC-4DCC-9D88-3A27A229C5A3:0" MappingProteinMaterialId="Material-071">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel</SubStyle>
+    <Name Language="1028" Description="">延性鑄鐵</Name>
+    <Name Language="1029" Description="">Tvárná litina</Name>
+    <Name Language="1031" Description="">Gusseisen mit Kugelgraphit</Name>
+    <Name Language="1033" Description="">Ductile Iron</Name>
+    <Name Language="1036" Description="">Fonte ductile</Name>
+    <Name Language="1038" Description="">Lágyvas</Name>
+    <Name Language="1040" Description="">Ferro duttile</Name>
+    <Name Language="1041" Description="">Ductile Iron</Name>
+    <Name Language="1042" Description="">연성철</Name>
+    <Name Language="1045" Description="">Żeliwo sferoidalne</Name>
+    <Name Language="1046" Description="">Ferro dúctil</Name>
+    <Name Language="1049" Description="">Ковкое железо</Name>
+    <Name Language="2052" Description="">球墨铸铁</Name>
+    <Name Language="3082" Description="">Hierro dúctil</Name>
+  </Style>
+  <Style InternalName="1:Galvanized Steel " EditFlag="0" Density="7.85" YoungsModulus="200" PoissonsRatio="0.3" YieldStrength="207" UltimateTensileStrength="345" ThermalConductivity="53" LinearExpansion="12" SpecificHeat="0.45" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:08BE597F-84C2-4946-8463-E3097DDF5D10:80648625-3615-402D-92E5-B632C5115B0D:0" MappingProteinMaterialId="Material-079">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel</SubStyle>
+    <Name Language="1028" Description="">鍍過鋅的鋼</Name>
+    <Name Language="1029" Description="">Ocel pozinkovaná</Name>
+    <Name Language="1031" Description="">Galvanisierter Stahl</Name>
+    <Name Language="1033" Description="">Galvanized Steel</Name>
+    <Name Language="1036" Description="">Acier galvanisé</Name>
+    <Name Language="1038" Description="">Galvanizált acél</Name>
+    <Name Language="1040" Description="">Acciaio zincato</Name>
+    <Name Language="1041" Description="">Galvanized Steel</Name>
+    <Name Language="1042" Description="">아연도금강</Name>
+    <Name Language="1045" Description="">Stal cynkowana</Name>
+    <Name Language="1046" Description="">Ferro galvanizado</Name>
+    <Name Language="1049" Description="">Оцинкованная сталь</Name>
+    <Name Language="2052" Description="">镀锌钢</Name>
+    <Name Language="3082" Description="">Acero galvanizado</Name>
+  </Style>
+  <Style InternalName="1:GFRC (Glass Fiber Reinforced Concrete) " EditFlag="0" Density="1.7" YoungsModulus="10.5" PoissonsRatio="0.24" YieldStrength="49.6" UltimateTensileStrength="6.89" ThermalConductivity="0.3" LinearExpansion="5" SpecificHeat="0.75" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:D2E1098A-B427-4989-A20F-5B096C652DC7:73E7CBA7-5DDB-452E-82D8-B5BBDCC2B7A0:0" MappingProteinMaterialId="Material-010">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">GFRC -  Glass Fiber Reinforced Concrete</SubStyle>
+    <Name Language="1028" Description="">GFRC (玻璃纖維增強混凝土)</Name>
+    <Name Language="1029" Description="">GFRC (beton vyztužený skleněnými vlákny)</Name>
+    <Name Language="1031" Description="">GFRC (Glassfaserverstärkter Stahlbeton)</Name>
+    <Name Language="1033" Description="">GFRC (Glass Fiber Reinforced Concrete)</Name>
+    <Name Language="1036" Description="">BRFV (Béton renforcé aux fibres de verre)</Name>
+    <Name Language="1038" Description="">GFRC (üvegszálas beton)</Name>
+    <Name Language="1040" Description="">Cemento rinforzato in fibra di vetro (GFRC)</Name>
+    <Name Language="1041" Description="">GFRC (Glass Fiber Reinforced Concrete)</Name>
+    <Name Language="1042" Description="">GFRC(유리 섬유 강화 콘크리트)</Name>
+    <Name Language="1045" Description="">Beton wzmacniany włóknem szklanym</Name>
+    <Name Language="1046" Description="">GFRC (Concreto reforçado com fibra de vidro)</Name>
+    <Name Language="1049" Description="">GFRC (стеклофибробетон)</Name>
+    <Name Language="2052" Description="">GFRC (玻璃纤维增强混凝土)</Name>
+    <Name Language="3082" Description="">HRFV (hormigón reforzado con fibra de vidrio)</Name>
+  </Style>
+  <Style InternalName="1:Glass " EditFlag="0" Density="2.18" YoungsModulus="68" PoissonsRatio="0.19" YieldStrength="0" UltimateTensileStrength="0" ThermalConductivity="1.38" LinearExpansion="7.5" SpecificHeat="0.00075" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:08633145-F3FA-4E2E-B028-769BA9CD6FB6:2AF3F00E-3425-40C2-92D6-021A961B2B92:0" MappingProteinMaterialId="MaterialInv_002">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Glass</SubStyle>
+    <Name Language="1028" Description="">玻璃</Name>
+    <Name Language="1029" Description="">Sklo</Name>
+    <Name Language="1031" Description="">Glas</Name>
+    <Name Language="1033" Description="">Glass</Name>
+    <Name Language="1036" Description="">Vitre</Name>
+    <Name Language="1038" Description="">Üveg</Name>
+    <Name Language="1040" Description="">Vetro</Name>
+    <Name Language="1041" Description="">Glass</Name>
+    <Name Language="1042" Description="">유리색</Name>
+    <Name Language="1045" Description="">Szkło</Name>
+    <Name Language="1046" Description="">Vidro</Name>
+    <Name Language="1049" Description="">Стекло</Name>
+    <Name Language="2052" Description="">玻璃</Name>
+    <Name Language="3082" Description="">Vidrio</Name>
+  </Style>
+  <Style InternalName="1:Gold " EditFlag="0" Density="19.3" YoungsModulus="82.73" PoissonsRatio="0.42" YieldStrength="206" UltimateTensileStrength="220.6" ThermalConductivity="318" LinearExpansion="14.2" SpecificHeat="0.128" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:643AAEF7-DB08-4A51-B147-DD0E9602D246:3D4D8977-AE63-4DD2-8F90-ACDB200CF2BC:0" MappingProteinMaterialId="Material-068">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Gold</SubStyle>
+    <Name Language="1028" Description="">金</Name>
+    <Name Language="1029" Description="">Zlato</Name>
+    <Name Language="1031" Description="">Gold</Name>
+    <Name Language="1033" Description="">Gold</Name>
+    <Name Language="1036" Description="">Or</Name>
+    <Name Language="1038" Description="">Arany</Name>
+    <Name Language="1040" Description="">Oro</Name>
+    <Name Language="1041" Description="">Gold</Name>
+    <Name Language="1042" Description="">금</Name>
+    <Name Language="1045" Description="">Złoto</Name>
+    <Name Language="1046" Description="">Ouro</Name>
+    <Name Language="1049" Description="">Золото</Name>
+    <Name Language="2052" Description="">金</Name>
+    <Name Language="3082" Description="">Oro</Name>
+  </Style>
+  <Style InternalName="1:Gray Iron " EditFlag="0" Density="7.15" YoungsModulus="90" PoissonsRatio="0.3" YieldStrength="200" UltimateTensileStrength="276" ThermalConductivity="50" LinearExpansion="12" SpecificHeat="0.54" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:A264F0DC-3818-4FC3-8507-21F8269D1952:F00B46E9-EC4E-491C-8FAC-2DD2298C65D9:0" MappingProteinMaterialId="MaterialInv_018">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel</SubStyle>
+    <Name Language="1028" Description="">灰口鐵</Name>
+    <Name Language="1029" Description="">Šedá litina</Name>
+    <Name Language="1031" Description="">Graues Eisen</Name>
+    <Name Language="1033" Description="">Gray Iron</Name>
+    <Name Language="1036" Description="">Fer gris</Name>
+    <Name Language="1038" Description="">Lemezgrafitos öntöttvas</Name>
+    <Name Language="1040" Description="">Ferro grigio</Name>
+    <Name Language="1041" Description="">Gray Iron</Name>
+    <Name Language="1042" Description="">회색철</Name>
+    <Name Language="1045" Description="">Żeliwo szare</Name>
+    <Name Language="1046" Description="">Cinza ferro</Name>
+    <Name Language="1049" Description="">Серый чугун</Name>
+    <Name Language="2052" Description="">灰铁</Name>
+    <Name Language="3082" Description="">Gris hierro</Name>
+  </Style>
+  <Style InternalName="1:High Density Polyethylene " EditFlag="0" Density="0.952" YoungsModulus="0.911" PoissonsRatio="0.392" YieldStrength="20.67" UltimateTensileStrength="13.78" ThermalConductivity="0.211" LinearExpansion="150" SpecificHeat="2.859" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:B5BDB383-BE44-4AAD-B4F0-59E8208FD335:4280B856-3FF7-4024-87D6-9E1E91F30952:0" MappingProteinMaterialId="Material-124">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (White)</SubStyle>
+    <Name Language="1028" Description="">高密度聚乙烯</Name>
+    <Name Language="1029" Description="">Polyethylen s vysokou hustotou (HDPE)</Name>
+    <Name Language="1031" Description="">Niederdruck-Polyethylen</Name>
+    <Name Language="1033" Description="">High Density Polyethylene</Name>
+    <Name Language="1036" Description="">Polyéthylène haute densité</Name>
+    <Name Language="1038" Description="">Unnamed Style</Name>
+    <Name Language="1040" Description="">Polietilene ad alta densità</Name>
+    <Name Language="1041" Description="">High Density Polyethylene</Name>
+    <Name Language="1042" Description="">고밀도 폴리에틸렌</Name>
+    <Name Language="1045" Description="">Polietylen o dużej gęstości</Name>
+    <Name Language="1046" Description="">Polietileno de alta densidade</Name>
+    <Name Language="1049" Description="">Полиэтилен высокой плотности</Name>
+    <Name Language="2052" Description="">高密度聚乙烯</Name>
+    <Name Language="3082" Description="">Polietileno de alta densidad</Name>
+  </Style>
+  <Style InternalName="1:High Impact Polystyrene " EditFlag="0" Density="1.022" YoungsModulus="1.9" PoissonsRatio="0.38" YieldStrength="26.5" UltimateTensileStrength="25.5" ThermalConductivity="0.116" LinearExpansion="84" SpecificHeat="1.755" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:DE62A413-0B09-40DB-AF3A-076323414ACE:F71A3CC4-44A4-45CE-B8F2-8256BBD6D0B2:0" MappingProteinMaterialId="Material-128">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (White)</SubStyle>
+    <Name Language="1028" Description="">耐衝擊聚苯乙烯</Name>
+    <Name Language="1029" Description="">Houževnatý polystyren (HIPS)</Name>
+    <Name Language="1031" Description="">Hochschlagfestes Polystyrol</Name>
+    <Name Language="1033" Description="">High Impact Polystyrene</Name>
+    <Name Language="1036" Description="">Polystyrène choc</Name>
+    <Name Language="1038" Description="">Unnamed Style</Name>
+    <Name Language="1040" Description="">Polistirene antiurto</Name>
+    <Name Language="1041" Description="">High Impact Polystyrene</Name>
+    <Name Language="1042" Description="">내충격성 폴리스티렌</Name>
+    <Name Language="1045" Description="">Polistyren wysokoudarowy</Name>
+    <Name Language="1046" Description="">Poliestireno de alto impacto</Name>
+    <Name Language="1049" Description="">Полистирол высокой прочности</Name>
+    <Name Language="2052" Description="">高抗冲聚苯乙烯</Name>
+    <Name Language="3082" Description="">Poliestireno de alto impacto</Name>
+  </Style>
+  <Style InternalName="1:LCP Plastic " EditFlag="0" Density="1.626" YoungsModulus="14.25" PoissonsRatio="0.46" YieldStrength="115" UltimateTensileStrength="130" ThermalConductivity="0.406" LinearExpansion="9.5" SpecificHeat="1.106" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:86A96F55-5084-4758-8B7C-4851E390EC13:F5C30EEE-5B2C-4D43-8E77-E1E3E325FF5F:0" MappingProteinMaterialId="MaterialInv_042">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (White)</SubStyle>
+    <Name Language="1028" Description="">LCP 塑膠</Name>
+    <Name Language="1029" Description="">Plast LCP</Name>
+    <Name Language="1031" Description="">LCP (Kunststoff)</Name>
+    <Name Language="1033" Description="">LCP Plastic</Name>
+    <Name Language="1036" Description="">Polymère à cristaux liquides</Name>
+    <Name Language="1038" Description="">Unnamed Style</Name>
+    <Name Language="1040" Description="">Plastica LCP</Name>
+    <Name Language="1041" Description="">LCP Plastic</Name>
+    <Name Language="1042" Description="">LCP 플라스틱</Name>
+    <Name Language="1045" Description="">Tworzywo sztuczne LCP</Name>
+    <Name Language="1046" Description="">Plástico LCP (Polímero de Cristal Líquido)</Name>
+    <Name Language="1049" Description="">Пластик LCP</Name>
+    <Name Language="2052" Description="">LCP 塑料</Name>
+    <Name Language="3082" Description="">Plástico de LCP</Name>
+  </Style>
+  <Style InternalName="1:Lead " EditFlag="0" Density="11.37" YoungsModulus="14" PoissonsRatio="0.43" YieldStrength="8.96" UltimateTensileStrength="18" ThermalConductivity="37" LinearExpansion="53.2" SpecificHeat="0.13" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:2772EA82-20ED-425C-B220-625D105AF51B:2929EFA7-92DC-4F07-8D95-70B2A9881778:0" MappingProteinMaterialId="Material-072">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Lead</SubStyle>
+    <Name Language="1028" Description="">鉛</Name>
+    <Name Language="1029" Description="">Olovo</Name>
+    <Name Language="1031" Description="">Blei</Name>
+    <Name Language="1033" Description="">Lead</Name>
+    <Name Language="1036" Description="">Plomb</Name>
+    <Name Language="1038" Description="">Ólom</Name>
+    <Name Language="1040" Description="">Piombo</Name>
+    <Name Language="1041" Description="">Lead</Name>
+    <Name Language="1042" Description="">납</Name>
+    <Name Language="1045" Description="">Ołów</Name>
+    <Name Language="1046" Description="">Chumbo</Name>
+    <Name Language="1049" Description="">Свинец</Name>
+    <Name Language="2052" Description="">铅</Name>
+    <Name Language="3082" Description="">Plomo</Name>
+  </Style>
+  <Style InternalName="1:Low Density Polyethylene " EditFlag="0" Density="0.894" YoungsModulus="0.124" PoissonsRatio="0.41" YieldStrength="10.8" UltimateTensileStrength="11" ThermalConductivity="0.225" LinearExpansion="180" SpecificHeat="3.182" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:3FFC0ECB-4454-4D99-AF4C-4C735DFF5A60:C302A39A-BC41-44E8-A02B-65D56F7762BE:0" MappingProteinMaterialId="Material-123">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (White)</SubStyle>
+    <Name Language="1028" Description="">低密度聚乙烯</Name>
+    <Name Language="1029" Description="">Polyethylen s nízkou hustotou (LDPE)</Name>
+    <Name Language="1031" Description="">Hochdruck-Polyethylen</Name>
+    <Name Language="1033" Description="">Low Density Polyethylene</Name>
+    <Name Language="1036" Description="">Polyéthylène faible densité</Name>
+    <Name Language="1038" Description="">Unnamed Style</Name>
+    <Name Language="1040" Description="">Polietilene a bassa densità</Name>
+    <Name Language="1041" Description="">Low Density Polyethylene</Name>
+    <Name Language="1042" Description="">저밀도 폴리에틸렌</Name>
+    <Name Language="1045" Description="">Polietylen o małej gęstości</Name>
+    <Name Language="1046" Description="">Polietileno de baixa densidade</Name>
+    <Name Language="1049" Description="">Полиэтилен низкой плотности</Name>
+    <Name Language="2052" Description="">低密度聚乙烯</Name>
+    <Name Language="3082" Description="">Polietileno de baja densidad</Name>
+  </Style>
+  <Style InternalName="1:Malleable Iron " EditFlag="0" Density="7.1" YoungsModulus="110" PoissonsRatio="0.3" YieldStrength="207" UltimateTensileStrength="276" ThermalConductivity="50" LinearExpansion="12" SpecificHeat="0.54" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:9E57FC45-C4D4-4968-9DBA-DF7371FEEC03:A6743114-A2B0-42C6-B5B0-F0E893AD0010:0" MappingProteinMaterialId="MaterialInv_020">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel</SubStyle>
+    <Name Language="1028" Description="">展性鑄鐵</Name>
+    <Name Language="1029" Description="">Kujná ocel</Name>
+    <Name Language="1031" Description="">Schmiedbares Eisen</Name>
+    <Name Language="1033" Description="">Malleable Iron</Name>
+    <Name Language="1036" Description="">Fer malléable</Name>
+    <Name Language="1038" Description="">Temperöntvény</Name>
+    <Name Language="1040" Description="">Ferro malleabile</Name>
+    <Name Language="1041" Description="">Malleable Iron</Name>
+    <Name Language="1042" Description="">가단철</Name>
+    <Name Language="1045" Description="">Żeliwo ciągliwe</Name>
+    <Name Language="1046" Description="">Ferro maleável</Name>
+    <Name Language="1049" Description="">Ковкий чугун</Name>
+    <Name Language="2052" Description="">锻铁</Name>
+    <Name Language="3082" Description="">Hierro maleable</Name>
+  </Style>
+  <Style InternalName="1:Nickel-Copper Alloy 400 " EditFlag="0" Density="8.83" YoungsModulus="179.3" PoissonsRatio="0.315" YieldStrength="220" UltimateTensileStrength="558" ThermalConductivity="21.8" LinearExpansion="10.9" SpecificHeat="0.428" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:D1C9AF7D-D930-4CF1-9959-89A485DC4204:C6DF2DE0-8349-4598-828D-8645452F2CA5:0" MappingProteinMaterialId="MaterialInv_021">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Chrome</SubStyle>
+    <Name Language="1028" Description="">鎳銅合金 400</Name>
+    <Name Language="1029" Description="">Slitina niklu a mědi 400</Name>
+    <Name Language="1031" Description="">Nickel-Kupfer-Legierung 400</Name>
+    <Name Language="1033" Description="">Nickel-Copper Alloy 400</Name>
+    <Name Language="1036" Description="">Alliage nickel-cuivre 400</Name>
+    <Name Language="1038" Description="">Nikkel-réz ötvözet 400</Name>
+    <Name Language="1040" Description="">Lega nickel-rame 400</Name>
+    <Name Language="1041" Description="">Nickel-Copper Alloy 400</Name>
+    <Name Language="1042" Description="">니켈-구리 합금 400</Name>
+    <Name Language="1045" Description="">Stop nikiel-miedź 400</Name>
+    <Name Language="1046" Description="">Liga de níquel-cobre 400</Name>
+    <Name Language="1049" Description="">Медно-никелевый сплав 400</Name>
+    <Name Language="2052" Description="">镍铜合金 400</Name>
+    <Name Language="3082" Description="">Aleación níquel-cobre 400</Name>
+  </Style>
+  <Style InternalName="1:Non-Alloy Steel " EditFlag="0" Density="7.85" YoungsModulus="210" PoissonsRatio="0.3" YieldStrength="207" UltimateTensileStrength="345" ThermalConductivity="50" LinearExpansion="12" SpecificHeat="0.46" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:443FF4C0-B220-406B-A03C-AE1602BB69A3:48745BB7-BE14-4E5F-B4E0-4C3D4A7AE7A5:0" MappingProteinMaterialId="MaterialInv_022">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel</SubStyle>
+    <Name Language="1028" Description="">非合金鋼</Name>
+    <Name Language="1029" Description="">Neslitinová ocel</Name>
+    <Name Language="1031" Description="">Nicht legierter Stahl</Name>
+    <Name Language="1033" Description="">Non-Alloy Steel</Name>
+    <Name Language="1036" Description="">Acier non allié</Name>
+    <Name Language="1038" Description="">Ötvözetlen acél</Name>
+    <Name Language="1040" Description="">Acciaio non legato</Name>
+    <Name Language="1041" Description="">Non-Alloy Steel</Name>
+    <Name Language="1042" Description="">비합금강</Name>
+    <Name Language="1045" Description="">Stal niestopowa</Name>
+    <Name Language="1046" Description="">Aço não ligado</Name>
+    <Name Language="1049" Description="">Нелегированная сталь</Name>
+    <Name Language="2052" Description="">非合金钢</Name>
+    <Name Language="3082" Description="">Acero no aleado</Name>
+  </Style>
+  <Style InternalName="1:Nylon-6/6 " EditFlag="0" Density="1.13" YoungsModulus="2.93" PoissonsRatio="0.35" YieldStrength="82.75" UltimateTensileStrength="82.68" ThermalConductivity="0.24" LinearExpansion="55.8" SpecificHeat="1.33984" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:D710D7D9-CC85-4A8D-9EB9-2F2571ABD85B:9F820AF7-C439-43CA-957E-C891831DB49A:0" MappingProteinMaterialId="MaterialInv_045">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Popcorn</SubStyle>
+    <Name Language="1028" Description="">尼龍 - 6/6</Name>
+    <Name Language="1029" Description="">Nylon - 6/6</Name>
+    <Name Language="1031" Description="">Nylon - 6/6</Name>
+    <Name Language="1033" Description="">Nylon-6/6</Name>
+    <Name Language="1036" Description="">Nylon - 6/6</Name>
+    <Name Language="1038" Description="">Nylon - 6/6</Name>
+    <Name Language="1040" Description="">Nylon - 6/6</Name>
+    <Name Language="1041" Description="">Nylon-6/6</Name>
+    <Name Language="1042" Description="">나일론-6/6</Name>
+    <Name Language="1045" Description="">Nylon-6/6</Name>
+    <Name Language="1046" Description="">Náilon-/6</Name>
+    <Name Language="1049" Description="">Нейлон - 6/6</Name>
+    <Name Language="2052" Description="">尼龙 - 6/6</Name>
+    <Name Language="3082" Description="">Nylon-6/6</Name>
+  </Style>
+  <Style InternalName="1:Nylon Composite (Nylon, molybdenum disulphide) " EditFlag="0" Density="1.13" YoungsModulus="2.93" PoissonsRatio="0.35" YieldStrength="82.75" UltimateTensileStrength="82.68" ThermalConductivity="0.24" LinearExpansion="55.8" SpecificHeat="1.33984" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:D710D7D9-CC85-4A8D-9EB9-2F2571ABD85B:9F820AF7-C439-43CA-957E-C891831DB49A:0" MappingProteinMaterialId="MaterialInv_044">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (Gray)</SubStyle>
+    <Name Language="1028" Description="">尼龍複合材料 (尼龍、二硫化鉬)</Name>
+    <Name Language="1029" Description="">Nylonový kompozit (nylon, sulfid molybdeničitý)</Name>
+    <Name Language="1031" Description="">Nylongemisch (Nylon, Molybdändisulfit)</Name>
+    <Name Language="1033" Description="">Nylon Composite (Nylon, molybdenum disulphide)</Name>
+    <Name Language="1036" Description="">Composite nylon (nylon, bisulfure de molybdène)</Name>
+    <Name Language="1038" Description="">Poliamid kompozit (poliamid, molibdén-diszulfid)</Name>
+    <Name Language="1040" Description="">Nylon composito (nylon, bisolfuro di molibdeno)</Name>
+    <Name Language="1041" Description="">Nylon Composite (Nylon, molybdenum disulphide)</Name>
+    <Name Language="1042" Description="">합성 나일론(나일론, 이류화몰리브덴)</Name>
+    <Name Language="1045" Description="">Kompozyt nylonowy (nylon, dwusiarczek molibdenu)</Name>
+    <Name Language="1046" Description="">Composto de náilon (náilon, dissulfeto de molibdênio)</Name>
+    <Name Language="1049" Description="">Композитный нейлоновый материал (нейлон, двусернистый молибден)</Name>
+    <Name Language="2052" Description="">复合尼龙 (尼龙、二硫化钼)</Name>
+    <Name Language="3082" Description="">Compuesto de nylon (Nylon, bisulfuro de molibdeno)</Name>
+  </Style>
+  <Style InternalName="1:PBT Plastic " EditFlag="0" Density="1.259" YoungsModulus="2.6" PoissonsRatio="0.437" YieldStrength="55.1" UltimateTensileStrength="51.7" ThermalConductivity="0.226" LinearExpansion="77.5" SpecificHeat="2.358" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:67509784-B415-41D6-9098-3DE483287E52:5DB332FF-5485-419E-80CF-A8E16C343213:0" MappingProteinMaterialId="MaterialInv_046">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (White)</SubStyle>
+    <Name Language="1028" Description="">PBT 塑膠</Name>
+    <Name Language="1029" Description="">Plast PBT</Name>
+    <Name Language="1031" Description="">PBT (Kunststoff)</Name>
+    <Name Language="1033" Description="">PBT Plastic</Name>
+    <Name Language="1036" Description="">Polytéréphtalate de butylène</Name>
+    <Name Language="1038" Description="">Unnamed Style</Name>
+    <Name Language="1040" Description="">Plastica PBT</Name>
+    <Name Language="1041" Description="">PBT Plastic</Name>
+    <Name Language="1042" Description="">PBT 플라스틱</Name>
+    <Name Language="1045" Description="">Tworzywo sztuczne PBT</Name>
+    <Name Language="1046" Description="">Plástico PBT (Polibutileno Tereftalato)</Name>
+    <Name Language="1049" Description="">Пластик PBT</Name>
+    <Name Language="2052" Description="">PBT 塑料</Name>
+    <Name Language="3082" Description="">Plástico de PBT</Name>
+  </Style>
+  <Style InternalName="1:PC_ABS Plastic " EditFlag="0" Density="1.493" YoungsModulus="2.78" PoissonsRatio="0.4" YieldStrength="54.4" UltimateTensileStrength="54.1" ThermalConductivity="0.24" LinearExpansion="67" SpecificHeat="2.133" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:D3943FA4-BDF3-4EDD-A916-564A7D6C1B98:8257F1A9-9D8F-4BDA-95C6-AC776D7488BA:0" MappingProteinMaterialId="MaterialInv_047">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (White)</SubStyle>
+    <Name Language="1028" Description="">PC_ABS 塑膠</Name>
+    <Name Language="1029" Description="">Plast PC_ABS</Name>
+    <Name Language="1031" Description="">PC_ABS (Kunststoff)</Name>
+    <Name Language="1033" Description="">PC_ABS Plastic</Name>
+    <Name Language="1036" Description="">Polycarbonate/Acrylonitrile butadiène styrène</Name>
+    <Name Language="1038" Description="">Unnamed Style</Name>
+    <Name Language="1040" Description="">Plastica PC_ABS</Name>
+    <Name Language="1041" Description="">PC_ABS Plastic</Name>
+    <Name Language="1042" Description="">PC_ABS 플라스틱</Name>
+    <Name Language="1045" Description="">Tworzywo sztuczne PC_ABS</Name>
+    <Name Language="1046" Description="">Plástico PC-ABS</Name>
+    <Name Language="1049" Description="">Пластик PC_ABS</Name>
+    <Name Language="2052" Description="">PC_ABS 塑料</Name>
+    <Name Language="3082" Description="">Plástico de PC_ABS</Name>
+  </Style>
+  <Style InternalName="1:PET Plastic " EditFlag="0" Density="1.541" YoungsModulus="10.367" PoissonsRatio="0.417" YieldStrength="54.4" UltimateTensileStrength="55.1" ThermalConductivity="0.3" LinearExpansion="25.3" SpecificHeat="2.287" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:66EE0B02-9C66-4FA9-B1CF-63B81A38DE3B:8833FAB7-0471-489C-835F-07D54FA14D75:0" MappingProteinMaterialId="MaterialInv_048">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Polycarbonate (Clear)</SubStyle>
+    <Name Language="1028" Description="">PET 塑膠</Name>
+    <Name Language="1029" Description="">Plast PET</Name>
+    <Name Language="1031" Description="">PET (Kunststoff)</Name>
+    <Name Language="1033" Description="">PET Plastic</Name>
+    <Name Language="1036" Description="">Polyéthylène téréphtalate</Name>
+    <Name Language="1038" Description="">Unnamed Style</Name>
+    <Name Language="1040" Description="">Plastica PET</Name>
+    <Name Language="1041" Description="">PET Plastic</Name>
+    <Name Language="1042" Description="">PET 플라스틱</Name>
+    <Name Language="1045" Description="">Tworzywo sztuczne PET</Name>
+    <Name Language="1046" Description="">Plástico PET</Name>
+    <Name Language="1049" Description="">Пластик PET</Name>
+    <Name Language="2052" Description="">PET 塑料</Name>
+    <Name Language="3082" Description="">Plástico de PET</Name>
+  </Style>
+  <Style InternalName="1:Phenolic " EditFlag="0" Density="1.38" YoungsModulus="6.89" PoissonsRatio="0" YieldStrength="51.71" UltimateTensileStrength="51" ThermalConductivity="0.17" LinearExpansion="27.5" SpecificHeat="0" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:A3C1F6AF-B84E-44C4-A275-DC40344AAFBA:781EE60E-21B4-4312-A406-471610EB0C25:0" MappingProteinMaterialId="Material-121">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Coffee (Flat)</SubStyle>
+    <Name Language="1028" Description="">酚</Name>
+    <Name Language="1029" Description="">Fenol</Name>
+    <Name Language="1031" Description="">Phenol</Name>
+    <Name Language="1033" Description="">Phenolic</Name>
+    <Name Language="1036" Description="">Phénolique</Name>
+    <Name Language="1038" Description="">Fenol</Name>
+    <Name Language="1040" Description="">Fenolo</Name>
+    <Name Language="1041" Description="">Phenolic</Name>
+    <Name Language="1042" Description="">페놀</Name>
+    <Name Language="1045" Description="">Fenoplast</Name>
+    <Name Language="1046" Description="">Fenólico</Name>
+    <Name Language="1049" Description="">Фенол</Name>
+    <Name Language="2052" Description="">酚醛塑料</Name>
+    <Name Language="3082" Description="">Fenol</Name>
+  </Style>
+  <Style InternalName="1:PMMA Plastic " EditFlag="0" Density="1.188" YoungsModulus="2.74" PoissonsRatio="0.355" YieldStrength="48.9" UltimateTensileStrength="79.8" ThermalConductivity="0.24" LinearExpansion="70" SpecificHeat="2.437" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:E11E8E10-D6E6-436E-82D4-F45AE91BB1CA:EB8A0567-8C01-43E9-AC5D-36663FA5F1E5:0" MappingProteinMaterialId="MaterialInv_049">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Polycarbonate (Clear)</SubStyle>
+    <Name Language="1028" Description="">PMMA 塑膠</Name>
+    <Name Language="1029" Description="">Plast PMMA</Name>
+    <Name Language="1031" Description="">PMMA (Kunststoff)</Name>
+    <Name Language="1033" Description="">PMMA Plastic</Name>
+    <Name Language="1036" Description="">Polyméthacrylate de méthyle</Name>
+    <Name Language="1038" Description="">Unnamed Style</Name>
+    <Name Language="1040" Description="">Plastica PMMA</Name>
+    <Name Language="1041" Description="">PMMA Plastic</Name>
+    <Name Language="1042" Description="">PMMA 플라스틱</Name>
+    <Name Language="1045" Description="">Tworzywo sztuczne PMMA</Name>
+    <Name Language="1046" Description="">Plástico de PMMA (Polimetacrilato de Metila-Acrílico)</Name>
+    <Name Language="1049" Description="">Пластик PMMA</Name>
+    <Name Language="2052" Description="">PMMA 塑料</Name>
+    <Name Language="3082" Description="">Plástico de PMMA</Name>
+  </Style>
+  <Style InternalName="1:Polyaryletherketone Resin " EditFlag="0" Density="1.32" YoungsModulus="1.1" PoissonsRatio="0.42" YieldStrength="99.97" UltimateTensileStrength="210" ThermalConductivity="0.25" LinearExpansion="46.8" SpecificHeat="1.33984" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:2B14F9B9-DC6E-4650-BF3B-84970186A5DE:CF2EA7BB-3489-4672-9056-F303F6CEDC2D:0" MappingProteinMaterialId="MaterialInv_050">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (White)</SubStyle>
+    <Name Language="1028" Description="">聚芳醚酮樹脂</Name>
+    <Name Language="1029" Description="">Polyaryleterketonová pryskyřice</Name>
+    <Name Language="1031" Description="">Polyaryletherketon-Kunststoff</Name>
+    <Name Language="1033" Description="">Polyaryletherketone Resin</Name>
+    <Name Language="1036" Description="">Résine polyaryletherketone</Name>
+    <Name Language="1038" Description="">Poliariléterketon gyanta</Name>
+    <Name Language="1040" Description="">Resina poliacrileterechetone</Name>
+    <Name Language="1041" Description="">Polyaryletherketone Resin</Name>
+    <Name Language="1042" Description="">PAEK 수지</Name>
+    <Name Language="1045" Description="">Żywica poliaryloeteroketonowa</Name>
+    <Name Language="1046" Description="">Resina de poliariletercetona</Name>
+    <Name Language="1049" Description="">Полиарилэтилкетоновая смола</Name>
+    <Name Language="2052" Description="">聚芳醚酮树脂</Name>
+    <Name Language="3082" Description="">Resina poliariletercetona</Name>
+  </Style>
+  <Style InternalName="1:Polycarbonate, Clear " EditFlag="0" Density="1.2" YoungsModulus="2.275" PoissonsRatio="0.38" YieldStrength="62.01" UltimateTensileStrength="68.9" ThermalConductivity="0.137" LinearExpansion="67.5" SpecificHeat="1.2561" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:E70314B2-4EE9-4DF9-AAF0-62D045EDD8F4:EBE80FE8-0503-48AB-A974-2A434C77368C:0" MappingProteinMaterialId="MaterialInv_051">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Polycarbonate (Clear)</SubStyle>
+    <Name Language="1028" Description="">聚碳酸酯，透明</Name>
+    <Name Language="1029" Description="">Polykarbonát, čirý</Name>
+    <Name Language="1031" Description="">Polycarbonat (klar)</Name>
+    <Name Language="1033" Description="">Polycarbonate, Clear</Name>
+    <Name Language="1036" Description="">Polycarbonate, transparent</Name>
+    <Name Language="1038" Description="">Polikarbonát, víztiszta</Name>
+    <Name Language="1040" Description="">Policarbonato, chiaro</Name>
+    <Name Language="1041" Description="">Polycarbonate, Clear</Name>
+    <Name Language="1042" Description="">폴리카보네이트, 밝음</Name>
+    <Name Language="1045" Description="">Poliwęglan, przezroczyste</Name>
+    <Name Language="1046" Description="">Policarbonato, claro</Name>
+    <Name Language="1049" Description="">Поликарбонат, чистый</Name>
+    <Name Language="2052" Description="">聚碳酸酯，半透明</Name>
+    <Name Language="3082" Description="">Policarbonato, Claro</Name>
+  </Style>
+  <Style InternalName="1:Polycarbonate, Smoke " EditFlag="0" Density="1.2" YoungsModulus="2.275" PoissonsRatio="0.38" YieldStrength="62.01" UltimateTensileStrength="68.9" ThermalConductivity="0.137" LinearExpansion="67.5" SpecificHeat="1.2561" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:E70314B2-4EE9-4DF9-AAF0-62D045EDD8F4:EBE80FE8-0503-48AB-A974-2A434C77368C:0" MappingProteinMaterialId="MaterialInv_052">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Polycarbonate (Smoked)</SubStyle>
+    <Name Language="1028" Description="">聚碳酸酯，深色</Name>
+    <Name Language="1029" Description="">Polykarbonát, kouřový</Name>
+    <Name Language="1031" Description="">Polycarbonat (Rauch)</Name>
+    <Name Language="1033" Description="">Polycarbonate, Smoke</Name>
+    <Name Language="1036" Description="">Polycarbonate, fumé</Name>
+    <Name Language="1038" Description="">Polikarbonát, füstszínű</Name>
+    <Name Language="1040" Description="">Policarbonato, scuro</Name>
+    <Name Language="1041" Description="">Polycarbonate, Smoke</Name>
+    <Name Language="1042" Description="">폴리카보네이트, 흐림</Name>
+    <Name Language="1045" Description="">Poliwęglan, przyciemniany</Name>
+    <Name Language="1046" Description="">Policarbonato, fumê</Name>
+    <Name Language="1049" Description="">Поликарбонат, дымчатый</Name>
+    <Name Language="2052" Description="">聚碳酸酯，非透明</Name>
+    <Name Language="3082" Description="">Policarbonato, Ahumado</Name>
+  </Style>
+  <Style InternalName="1:Polypropylene " EditFlag="0" Density="0.899" YoungsModulus="1.34" PoissonsRatio="0.392" YieldStrength="30.3" UltimateTensileStrength="36.5" ThermalConductivity="0.1" LinearExpansion="90.5" SpecificHeat="2.731" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:FF860C73-D74D-48D2-A9B6-5CED973D81F3:0E93EE24-01F8-4558-B835-9833D1FCC101:0" MappingProteinMaterialId="Material-127">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (White)</SubStyle>
+    <Name Language="1028" Description="">聚丙烯</Name>
+    <Name Language="1029" Description="">Polypropylen</Name>
+    <Name Language="1031" Description="">Polypropylen</Name>
+    <Name Language="1033" Description="">Polypropylene</Name>
+    <Name Language="1036" Description="">Polypropylène</Name>
+    <Name Language="1038" Description="">Unnamed Style</Name>
+    <Name Language="1040" Description="">Polipropilene</Name>
+    <Name Language="1041" Description="">Polypropylene</Name>
+    <Name Language="1042" Description="">폴리프로필렌</Name>
+    <Name Language="1045" Description="">Polipropylen</Name>
+    <Name Language="1046" Description="">Polipropileno</Name>
+    <Name Language="1049" Description="">Полипропилен</Name>
+    <Name Language="2052" Description="">聚丙烯</Name>
+    <Name Language="3082" Description="">Polipropileno</Name>
+  </Style>
+  <Style InternalName="1:Polystyrene " EditFlag="0" Density="1.021" YoungsModulus="3.2" PoissonsRatio="0.353" YieldStrength="43.4" UltimateTensileStrength="44.8" ThermalConductivity="0.22" LinearExpansion="76.5" SpecificHeat="2.144" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:173B9261-78AF-4A25-ACA4-E602DDBDBEB1:6B958878-7FCC-4515-AC1B-53CF795D6F53:0" MappingProteinMaterialId="MaterialInv_054">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Polycarbonate (Clear)</SubStyle>
+    <Name Language="1028" Description="">聚苯乙烯</Name>
+    <Name Language="1029" Description="">Polystyren</Name>
+    <Name Language="1031" Description="">Polystyrol</Name>
+    <Name Language="1033" Description="">Polystyrene</Name>
+    <Name Language="1036" Description="">Polystyrène</Name>
+    <Name Language="1038" Description="">Unnamed Style</Name>
+    <Name Language="1040" Description="">Polistirene</Name>
+    <Name Language="1041" Description="">Polystyrene</Name>
+    <Name Language="1042" Description="">폴리스티렌</Name>
+    <Name Language="1045" Description="">Polistyren</Name>
+    <Name Language="1046" Description="">Poliestireno</Name>
+    <Name Language="1049" Description="">Полистирол</Name>
+    <Name Language="2052" Description="">聚苯乙烯</Name>
+    <Name Language="3082" Description="">Poliestireno</Name>
+  </Style>
+  <Style InternalName="1:Portland Cement Concrete " EditFlag="0" Density="2.24" YoungsModulus="14" PoissonsRatio="0.2" YieldStrength="20" UltimateTensileStrength="2" ThermalConductivity="0.53" LinearExpansion="10" SpecificHeat="0.75" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:25277663-90B1-411B-8DC4-15987B1842B8:0BC5439C-A1AC-4700-B9A3-DEFD3B0C9350:0" MappingProteinMaterialId="MaterialInv_001">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Concrete (Cast-in-Place)</SubStyle>
+    <Name Language="1028" Description="">波特蘭鋼筋混凝土</Name>
+    <Name Language="1029" Description="">Portlandský cement</Name>
+    <Name Language="1031" Description="">Portland-Zementbeton</Name>
+    <Name Language="1033" Description="">Portland Cement Concrete</Name>
+    <Name Language="1036" Description="">Ciment Portland</Name>
+    <Name Language="1038" Description="">Portland cementes beton</Name>
+    <Name Language="1040" Description="">Cemento Portland</Name>
+    <Name Language="1041" Description="">Portland Cement Concrete</Name>
+    <Name Language="1042" Description="">포틀랜드 시멘트 콘크리트</Name>
+    <Name Language="1045" Description="">Beton z cementu portlandzkiego</Name>
+    <Name Language="1046" Description="">Concreto de cimento Portland</Name>
+    <Name Language="1049" Description="">Бетон на портландцементе</Name>
+    <Name Language="2052" Description="">硅酸盐水泥混凝土</Name>
+    <Name Language="3082" Description="">Hormigón de cemento Portland</Name>
+  </Style>
+  <Style InternalName="1:PPS Plastic " EditFlag="0" Density="1.637" YoungsModulus="2.7" PoissonsRatio="0.4" YieldStrength="68.9" UltimateTensileStrength="82.7" ThermalConductivity="0.27" LinearExpansion="15.5" SpecificHeat="1.412" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:42A7A596-8240-40F5-A2EB-8DBC42FF435A:DFB7BEA0-81BC-40C3-8FB3-4D8413744E1B:0" MappingProteinMaterialId="MaterialInv_055">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (White)</SubStyle>
+    <Name Language="1028" Description="">PPS 塑膠</Name>
+    <Name Language="1029" Description="">Plast PPS</Name>
+    <Name Language="1031" Description="">PPS (Kunststoff)</Name>
+    <Name Language="1033" Description="">PPS Plastic</Name>
+    <Name Language="1036" Description="">Polysulfure de phénylène</Name>
+    <Name Language="1038" Description="">Unnamed Style</Name>
+    <Name Language="1040" Description="">Plastica PPS</Name>
+    <Name Language="1041" Description="">PPS Plastic</Name>
+    <Name Language="1042" Description="">PPS 플라스틱</Name>
+    <Name Language="1045" Description="">Tworzywo sztuczne PPS</Name>
+    <Name Language="1046" Description="">Plástico PPS (Polissulfeto de Fenileno)</Name>
+    <Name Language="1049" Description="">Пластик PPS</Name>
+    <Name Language="2052" Description="">PPS 塑料</Name>
+    <Name Language="3082" Description="">Plástico de PPS</Name>
+  </Style>
+  <Style InternalName="1:PVC-Piping " EditFlag="0" Density="1.4" YoungsModulus="2.585" PoissonsRatio="0" YieldStrength="46.53" UltimateTensileStrength="52.36" ThermalConductivity="1.785" LinearExpansion="5.4" SpecificHeat="0" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:16196A76-8F29-43BB-ABAA-79FC30547E7A:DE368321-2CB0-4C4D-8170-02D092724A7D:0" MappingProteinMaterialId="MaterialInv_056">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (White)</SubStyle>
+    <Name Language="1028" Description="">PVC 管</Name>
+    <Name Language="1029" Description="">PVC - potrubí</Name>
+    <Name Language="1031" Description="">PVC-Leitung</Name>
+    <Name Language="1033" Description="">PVC-Piping</Name>
+    <Name Language="1036" Description="">Tuyauterie PVC</Name>
+    <Name Language="1038" Description="">PVC - csővezetékekhez</Name>
+    <Name Language="1040" Description="">PVC - Condutture</Name>
+    <Name Language="1041" Description="">PVC-Piping</Name>
+    <Name Language="1042" Description="">PVC-배관</Name>
+    <Name Language="1045" Description="">Rura PVC</Name>
+    <Name Language="1046" Description="">Tubo de PVC</Name>
+    <Name Language="1049" Description="">ПВХ</Name>
+    <Name Language="2052" Description="">PVC - 管道用</Name>
+    <Name Language="3082" Description="">PVC - Tubería</Name>
+  </Style>
+  <Style InternalName="1:PVC-U " EditFlag="0" Density="1.4" YoungsModulus="2.5" PoissonsRatio="0" YieldStrength="46.53" UltimateTensileStrength="50" ThermalConductivity="0.14" LinearExpansion="0" SpecificHeat="0" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:16196A76-8F29-43BB-ABAA-79FC30547E7A:DE368321-2CB0-4C4D-8170-02D092724A7D:0" MappingProteinMaterialId="MaterialInv_057">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (White)</SubStyle>
+    <Name Language="1028" Description="">PVC-U</Name>
+    <Name Language="1029" Description="">PVC-U</Name>
+    <Name Language="1031" Description="">PVC-U</Name>
+    <Name Language="1033" Description="">PVC-U</Name>
+    <Name Language="1036" Description="">PVC-U</Name>
+    <Name Language="1038" Description="">PVC-U</Name>
+    <Name Language="1040" Description="">PVC-U</Name>
+    <Name Language="1041" Description="">PVC-U</Name>
+    <Name Language="1042" Description="">PVC-U</Name>
+    <Name Language="1045" Description="">PVC-U</Name>
+    <Name Language="1046" Description="">PVC-U</Name>
+    <Name Language="1049" Description="">PVC-U</Name>
+    <Name Language="2052" Description="">PVC-U</Name>
+    <Name Language="3082" Description="">PVC-U</Name>
+  </Style>
+  <Style InternalName="1:Rubber " EditFlag="0" Density="0.93" YoungsModulus="0" PoissonsRatio="0.5" YieldStrength="0" UltimateTensileStrength="27.6" ThermalConductivity="0.14" LinearExpansion="0" SpecificHeat="0.45" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:781199BA-200C-4B6B-BD14-80CD4C1C23AA:7B7C1432-436E-46BE-8B52-08FB25FD88AA:0" MappingProteinMaterialId="MaterialInv_058">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Rubber (Black)</SubStyle>
+    <Name Language="1028" Description="">橡膠</Name>
+    <Name Language="1029" Description="">Guma</Name>
+    <Name Language="1031" Description="">Gummi</Name>
+    <Name Language="1033" Description="">Rubber</Name>
+    <Name Language="1036" Description="">Caoutchouc</Name>
+    <Name Language="1038" Description="">Gumi</Name>
+    <Name Language="1040" Description="">Gomma</Name>
+    <Name Language="1041" Description="">Rubber</Name>
+    <Name Language="1042" Description="">고무</Name>
+    <Name Language="1045" Description="">Kauczuk</Name>
+    <Name Language="1046" Description="">Borracha</Name>
+    <Name Language="1049" Description="">Резина</Name>
+    <Name Language="2052" Description="">橡胶</Name>
+    <Name Language="3082" Description="">Caucho</Name>
+  </Style>
+  <Style InternalName="1:SAN Plastic " EditFlag="0" Density="1.068" YoungsModulus="3.57" PoissonsRatio="0.38" YieldStrength="72.3" UltimateTensileStrength="72.3" ThermalConductivity="0.2" LinearExpansion="65" SpecificHeat="2.185" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:529E714E-B764-4D3D-A3E7-3D9C55C052BE:F581794E-D5D6-4044-B806-694ACF7373D2:0" MappingProteinMaterialId="MaterialInv_059">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Polycarbonate (Clear)</SubStyle>
+    <Name Language="1028" Description="">SAN 塑膠</Name>
+    <Name Language="1029" Description="">Plast SAN</Name>
+    <Name Language="1031" Description="">SAN (Kunststoff)</Name>
+    <Name Language="1033" Description="">SAN Plastic</Name>
+    <Name Language="1036" Description="">Polyacrylonitrile</Name>
+    <Name Language="1038" Description="">Unnamed Style</Name>
+    <Name Language="1040" Description="">Plastica SAN</Name>
+    <Name Language="1041" Description="">SAN Plastic</Name>
+    <Name Language="1042" Description="">SAN 플라스틱</Name>
+    <Name Language="1045" Description="">Tworzywo sztuczne SAN</Name>
+    <Name Language="1046" Description="">Plástico SAN (Estireno Acrilonitrila)</Name>
+    <Name Language="1049" Description="">Пластик SAN</Name>
+    <Name Language="2052" Description="">SAN 塑料</Name>
+    <Name Language="3082" Description="">Plástico de SAN</Name>
+  </Style>
+  <Style InternalName="1:Silicon Nitride " EditFlag="0" Density="3.18" YoungsModulus="427.18" PoissonsRatio="0.23" YieldStrength="2411.5" UltimateTensileStrength="2411.5" ThermalConductivity="27" LinearExpansion="6.1" SpecificHeat="0.71179" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:744A58FD-F721-42E3-8105-61F6649E0E53:198377D2-55D5-4F54-BCC5-7BB74172711C:0" MappingProteinMaterialId="MaterialInv_064">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Black Chrome</SubStyle>
+    <Name Language="1028" Description="">氮化矽</Name>
+    <Name Language="1029" Description="">Nitrid křemíku</Name>
+    <Name Language="1031" Description="">Siliziumnitrid</Name>
+    <Name Language="1033" Description="">Silicon Nitride</Name>
+    <Name Language="1036" Description="">Nitrure de silicium</Name>
+    <Name Language="1038" Description="">Szilícium-nitrid</Name>
+    <Name Language="1040" Description="">Nitruro di silicio</Name>
+    <Name Language="1041" Description="">Silicon Nitride</Name>
+    <Name Language="1042" Description="">질화 실리콘</Name>
+    <Name Language="1045" Description="">Azotek krzemu</Name>
+    <Name Language="1046" Description="">Nitreto de silício</Name>
+    <Name Language="1049" Description="">Нитрид кремния</Name>
+    <Name Language="2052" Description="">氮化硅</Name>
+    <Name Language="3082" Description="">Nitruro de siliceo</Name>
+  </Style>
+  <Style InternalName="1:Silicone " EditFlag="0" Density="1.25" YoungsModulus="0" PoissonsRatio="0.375" YieldStrength="10.34" UltimateTensileStrength="3.92" ThermalConductivity="0.2275" LinearExpansion="4.67" SpecificHeat="0" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:8CC0C1A4-5319-47DB-9238-A5EAAEBBE0AD:6EAF14F4-978D-4632-862D-577E5EC60BCE:0" MappingProteinMaterialId="MaterialInv_060">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Rubber (Black)</SubStyle>
+    <Name Language="1028" Description="">矽樹脂</Name>
+    <Name Language="1029" Description="">Silikon</Name>
+    <Name Language="1031" Description="">Silikon</Name>
+    <Name Language="1033" Description="">Silicone</Name>
+    <Name Language="1036" Description="">Silicium</Name>
+    <Name Language="1038" Description="">Szilikon</Name>
+    <Name Language="1040" Description="">Silicone</Name>
+    <Name Language="1041" Description="">Silicone</Name>
+    <Name Language="1042" Description="">실리콘</Name>
+    <Name Language="1045" Description="">Krzem</Name>
+    <Name Language="1046" Description="">Silicone</Name>
+    <Name Language="1049" Description="">Кремний</Name>
+    <Name Language="2052" Description="">硅酮</Name>
+    <Name Language="3082" Description="">Silicona</Name>
+  </Style>
+  <Style InternalName="1:Silver " EditFlag="0" Density="10.49" YoungsModulus="75.84" PoissonsRatio="0.35" YieldStrength="303.37" UltimateTensileStrength="344.74" ThermalConductivity="423.5" LinearExpansion="19.6" SpecificHeat="0.234" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:CBACEDCE-0850-4304-9270-D0512AA24496:19BEA74D-8004-4EF1-B8EA-27A066969D6F:0" MappingProteinMaterialId="Material-076">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Silver</SubStyle>
+    <Name Language="1028" Description="">銀</Name>
+    <Name Language="1029" Description="">Stříbro</Name>
+    <Name Language="1031" Description="">Silber</Name>
+    <Name Language="1033" Description="">Silver</Name>
+    <Name Language="1036" Description="">Argent</Name>
+    <Name Language="1038" Description="">Ezüst</Name>
+    <Name Language="1040" Description="">Argento</Name>
+    <Name Language="1041" Description="">Silver</Name>
+    <Name Language="1042" Description="">은</Name>
+    <Name Language="1045" Description="">Srebro</Name>
+    <Name Language="1046" Description="">Prata</Name>
+    <Name Language="1049" Description="">Серебро</Name>
+    <Name Language="2052" Description="">银</Name>
+    <Name Language="3082" Description="">Plata</Name>
+  </Style>
+  <Style InternalName="1:Stainless Steel " EditFlag="0" Density="8.08" YoungsModulus="193" PoissonsRatio="0.3" YieldStrength="250" UltimateTensileStrength="0" ThermalConductivity="16" LinearExpansion="10.4" SpecificHeat="0.477" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:46EF4DD7-2D17-4D2C-B5A0-BD890EBB0F27:37746F5C-8216-4078-954A-0573E8ED82E4:0" MappingProteinMaterialId="MaterialInv_024">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel</SubStyle>
+    <Name Language="1028" Description="">不銹鋼</Name>
+    <Name Language="1029" Description="">Nerezavějící ocel</Name>
+    <Name Language="1031" Description="">Edelstahl</Name>
+    <Name Language="1033" Description="">Stainless Steel</Name>
+    <Name Language="1036" Description="">Acier inoxydable</Name>
+    <Name Language="1038" Description="">Rozsdamentes acél</Name>
+    <Name Language="1040" Description="">Acciaio inossidabile</Name>
+    <Name Language="1041" Description="">Stainless Steel</Name>
+    <Name Language="1042" Description="">스테인리스강</Name>
+    <Name Language="1045" Description="">Spawana stal nierdzewna</Name>
+    <Name Language="1046" Description="">Aço inox</Name>
+    <Name Language="1049" Description="">Сталь нержавеющая</Name>
+    <Name Language="2052" Description="">不锈钢</Name>
+    <Name Language="3082" Description="">Acero inoxidable</Name>
+  </Style>
+  <Style InternalName="1:Stainless Steel, 440C " EditFlag="0" Density="7.75" YoungsModulus="206.7" PoissonsRatio="0.27" YieldStrength="689" UltimateTensileStrength="861.25" ThermalConductivity="24.23" LinearExpansion="10.4" SpecificHeat="0.16057" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:B4E11081-8547-46B6-8E48-63435818884A:36763963-34A7-4032-A6F5-414766F6E49A:0" MappingProteinMaterialId="MaterialInv_025">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel</SubStyle>
+    <Name Language="1028" Description="">不銹鋼，440C</Name>
+    <Name Language="1029" Description="">Nerezová ocel, 440C</Name>
+    <Name Language="1031" Description="">EdelStahl - 440C</Name>
+    <Name Language="1033" Description="">Stainless Steel, 440C</Name>
+    <Name Language="1036" Description="">Acier inoxydable - 440C</Name>
+    <Name Language="1038" Description="">Rozsdamentes acél, 440 C</Name>
+    <Name Language="1040" Description="">Acciaio inossidabile - 440C</Name>
+    <Name Language="1041" Description="">Stainless Steel, 440C</Name>
+    <Name Language="1042" Description="">스테인리스 강, 440C</Name>
+    <Name Language="1045" Description="">Stal nierdzewna, 440C</Name>
+    <Name Language="1046" Description="">Aço inox, 440C</Name>
+    <Name Language="1049" Description="">Сталь нержавеющая - 440C</Name>
+    <Name Language="2052" Description="">不锈钢，440C</Name>
+    <Name Language="3082" Description="">Acero inoxidable - 440C</Name>
+  </Style>
+  <Style InternalName="1:Stainless Steel, Austenitic " EditFlag="0" Density="8.03" YoungsModulus="190.3" PoissonsRatio="0.305" YieldStrength="228" UltimateTensileStrength="540" ThermalConductivity="14" LinearExpansion="17.4" SpecificHeat="0.456" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:46EF4DD7-2D17-4D2C-B5A0-BD890EBB0F27:37746F5C-8216-4078-954A-0573E8ED82E4:0" MappingProteinMaterialId="MaterialInv_026">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel</SubStyle>
+    <Name Language="1028" Description="">不銹鋼，奧氏體</Name>
+    <Name Language="1029" Description="">Nerezová ocel (austenitická)</Name>
+    <Name Language="1031" Description="">Edelstahl, austenitisch</Name>
+    <Name Language="1033" Description="">Stainless Steel, Austenitic</Name>
+    <Name Language="1036" Description="">Acier inoxydable austénitique</Name>
+    <Name Language="1038" Description="">Rozsdamentes acél, ausztenites</Name>
+    <Name Language="1040" Description="">Acciaio inossidabile austenitico</Name>
+    <Name Language="1041" Description="">Stainless Steel, Austenitic</Name>
+    <Name Language="1042" Description="">스테인리스 강, 오스테나이트</Name>
+    <Name Language="1045" Description="">Stal nierdzewna, austenityczna</Name>
+    <Name Language="1046" Description="">Aço inox, austenítico</Name>
+    <Name Language="1049" Description="">Сталь нержавеющая аустенитная</Name>
+    <Name Language="2052" Description="">不锈钢，奥氏体</Name>
+    <Name Language="3082" Description="">Acero inoxidable, austenítico</Name>
+  </Style>
+  <Style InternalName="1:Steel " EditFlag="0" Density="7.85" YoungsModulus="210" PoissonsRatio="0.3" YieldStrength="207" UltimateTensileStrength="345" ThermalConductivity="56" LinearExpansion="12" SpecificHeat="0.46" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:443FF4C0-B220-406B-A03C-AE1602BB69A3:48745BB7-BE14-4E5F-B4E0-4C3D4A7AE7A5:0" MappingProteinMaterialId="Material-077">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel</SubStyle>
+    <Name Language="1028" Description="">鋼</Name>
+    <Name Language="1029" Description="">Ocel</Name>
+    <Name Language="1031" Description="">Stahl</Name>
+    <Name Language="1033" Description="">Steel</Name>
+    <Name Language="1036" Description="">Acier</Name>
+    <Name Language="1038" Description="">Acél</Name>
+    <Name Language="1040" Description="">Acciaio</Name>
+    <Name Language="1041" Description="">Steel</Name>
+    <Name Language="1042" Description="">강</Name>
+    <Name Language="1045" Description="">Stal</Name>
+    <Name Language="1046" Description="">Aço</Name>
+    <Name Language="1049" Description="">Сталь</Name>
+    <Name Language="2052" Description="">钢</Name>
+    <Name Language="3082" Description="">Acero</Name>
+  </Style>
+  <Style InternalName="1:Steel, High Strength Low Alloy " EditFlag="0" Density="7.84" YoungsModulus="200" PoissonsRatio="0.287" YieldStrength="275.8" UltimateTensileStrength="448" ThermalConductivity="47" LinearExpansion="12" SpecificHeat="0.42" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:38365331-F8C4-4CB8-A340-8972007108B5:D0ED92F8-268C-4E23-8193-ED2D785B0988:0" MappingProteinMaterialId="MaterialInv_028">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel (Polished)</SubStyle>
+    <Name Language="1028" Description="">鋼，高強度低合金</Name>
+    <Name Language="1029" Description="">Ocel (nízkolegovaná s vysokou pevností)</Name>
+    <Name Language="1031" Description="">Stahl (hohe Festigk., niedr. Legier.)</Name>
+    <Name Language="1033" Description="">Steel, High Strength Low Alloy</Name>
+    <Name Language="1036" Description="">Acier (alliage faible hypertrempé)</Name>
+    <Name Language="1038" Description="">Acél (nagyszilárdságú, alacsony ötvözőtartalmú)</Name>
+    <Name Language="1040" Description="">Acciaio alta resistenza bassa lega</Name>
+    <Name Language="1041" Description="">Steel, High Strength Low Alloy</Name>
+    <Name Language="1042" Description="">강, 고강도 저합금</Name>
+    <Name Language="1045" Description="">Stal, stop niskoprocentowy o dużej wytrzymałości</Name>
+    <Name Language="1046" Description="">Ferro, baixa liga e alta resistência</Name>
+    <Name Language="1049" Description="">Сталь высокопрочная низколегированная</Name>
+    <Name Language="2052" Description="">钢，高强度低合金</Name>
+    <Name Language="3082" Description="">Acero baja aleación, alta resistencia</Name>
+  </Style>
+  <Style InternalName="1:Steel, Mild " EditFlag="0" Density="7.86" YoungsModulus="220" PoissonsRatio="0.275" YieldStrength="207" UltimateTensileStrength="345" ThermalConductivity="56" LinearExpansion="12" SpecificHeat="0.46" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:443FF4C0-B220-406B-A03C-AE1602BB69A3:48745BB7-BE14-4E5F-B4E0-4C3D4A7AE7A5:0" MappingProteinMaterialId="MaterialInv_029">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel</SubStyle>
+    <Name Language="1028" Description="">鋼，軟</Name>
+    <Name Language="1029" Description="">Měkká ocel</Name>
+    <Name Language="1031" Description="">Stahl, weich, unlegiert</Name>
+    <Name Language="1033" Description="">Steel, Mild</Name>
+    <Name Language="1036" Description="">Acier doux</Name>
+    <Name Language="1038" Description="">Acél, lágy</Name>
+    <Name Language="1040" Description="">Acciaio dolce</Name>
+    <Name Language="1041" Description="">Steel, Mild</Name>
+    <Name Language="1042" Description="">강, 연강</Name>
+    <Name Language="1045" Description="">Stal, miękka</Name>
+    <Name Language="1046" Description="">Ferro, doce</Name>
+    <Name Language="1049" Description="">Сталь низкоуглеродистая</Name>
+    <Name Language="2052" Description="">低炭钢</Name>
+    <Name Language="3082" Description="">Acero dulce</Name>
+  </Style>
+  <Style InternalName="1:Thermoplastic Resin " EditFlag="0" Density="1.28" YoungsModulus="3.3" PoissonsRatio="0.36" YieldStrength="0" UltimateTensileStrength="114" ThermalConductivity="0.13" LinearExpansion="56" SpecificHeat="0" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:D710D7D9-CC85-4A8D-9EB9-2F2571ABD85B:9F820AF7-C439-43CA-957E-C891831DB49A:0" MappingProteinMaterialId="MaterialInv_061">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (Black)</SubStyle>
+    <Name Language="1028" Description="">熱塑性樹脂</Name>
+    <Name Language="1029" Description="">Termoplastická pryskyřice</Name>
+    <Name Language="1031" Description="">Thermoplastischer Kunststoff</Name>
+    <Name Language="1033" Description="">Thermoplastic Resin</Name>
+    <Name Language="1036" Description="">Résine thermoplastique</Name>
+    <Name Language="1038" Description="">Hőre lágyuló műgyanta</Name>
+    <Name Language="1040" Description="">Resina termoplastica</Name>
+    <Name Language="1041" Description="">Thermoplastic Resin</Name>
+    <Name Language="1042" Description="">열가소성 수지</Name>
+    <Name Language="1045" Description="">Żywica termoplastyczna</Name>
+    <Name Language="1046" Description="">Resina termoplástica</Name>
+    <Name Language="1049" Description="">Термопластическая смола</Name>
+    <Name Language="2052" Description="">热塑树脂</Name>
+    <Name Language="3082" Description="">Resina termoplástica</Name>
+  </Style>
+  <Style InternalName="1:Titanium " EditFlag="0" Density="4.51" YoungsModulus="102.81" PoissonsRatio="0.361" YieldStrength="275.6" UltimateTensileStrength="344.5" ThermalConductivity="16.44" LinearExpansion="8.6" SpecificHeat="0.50244" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:3B22C367-E109-4BC1-93B3-CE51C5649B90:E1B2FD39-63B9-4B31-B5E6-D9380C048A4E:0" MappingProteinMaterialId="Material-094">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Titanium</SubStyle>
+    <Name Language="1028" Description="">鈦</Name>
+    <Name Language="1029" Description="">Titan</Name>
+    <Name Language="1031" Description="">Titan</Name>
+    <Name Language="1033" Description="">Titanium</Name>
+    <Name Language="1036" Description="">Titane</Name>
+    <Name Language="1038" Description="">Titán</Name>
+    <Name Language="1040" Description="">Titanio</Name>
+    <Name Language="1041" Description="">Titanium</Name>
+    <Name Language="1042" Description="">티타늄</Name>
+    <Name Language="1045" Description="">Tytan</Name>
+    <Name Language="1046" Description="">Titânio</Name>
+    <Name Language="1049" Description="">Титан</Name>
+    <Name Language="2052" Description="">钛</Name>
+    <Name Language="3082" Description="">Titanio</Name>
+  </Style>
+  <Style InternalName="1:UHMW, Black " EditFlag="0" Density="0.94" YoungsModulus="0.861" PoissonsRatio="0" YieldStrength="39.27" UltimateTensileStrength="37.9" ThermalConductivity="3.99" LinearExpansion="0" SpecificHeat="2.113" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:A8BE3DD3-CF3F-4705-8E03-B6A9799C5360:AA7ACDEB-39D5-400C-BA87-A7E70B35B8C2:0" MappingProteinMaterialId="MaterialInv_062">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (Black)</SubStyle>
+    <Name Language="1028" Description="">UHMW，黑色</Name>
+    <Name Language="1029" Description="">UHMW - černá</Name>
+    <Name Language="1031" Description="">UHMW - Schwarz</Name>
+    <Name Language="1033" Description="">UHMW, Black</Name>
+    <Name Language="1036" Description="">UHMW - Noir</Name>
+    <Name Language="1038" Description="">UHMW - fekete</Name>
+    <Name Language="1040" Description="">UHMW - Nero</Name>
+    <Name Language="1041" Description="">UHMW, Black</Name>
+    <Name Language="1042" Description="">UHMW, 검은색</Name>
+    <Name Language="1045" Description="">UHMW, czarny</Name>
+    <Name Language="1046" Description="">UHMW, preto</Name>
+    <Name Language="1049" Description="">Полиэтилен с/в-молекулярный черный</Name>
+    <Name Language="2052" Description="">UHMW，黑</Name>
+    <Name Language="3082" Description="">UHMW - Negro</Name>
+  </Style>
+  <Style InternalName="1:UHMW, White " EditFlag="0" Density="0.94" YoungsModulus="0.861" PoissonsRatio="0" YieldStrength="39.27" UltimateTensileStrength="37.9" ThermalConductivity="3.99" LinearExpansion="0" SpecificHeat="2.113" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:A8BE3DD3-CF3F-4705-8E03-B6A9799C5360:AA7ACDEB-39D5-400C-BA87-A7E70B35B8C2:0" MappingProteinMaterialId="MaterialInv_063">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Plastic (White)</SubStyle>
+    <Name Language="1028" Description="">UHMW，白色</Name>
+    <Name Language="1029" Description="">UHMW - bílá</Name>
+    <Name Language="1031" Description="">UHMW - Weiß</Name>
+    <Name Language="1033" Description="">UHMW, White</Name>
+    <Name Language="1036" Description="">UHMW - Blanc</Name>
+    <Name Language="1038" Description="">UHMW - fehér</Name>
+    <Name Language="1040" Description="">UHMW - Bianco</Name>
+    <Name Language="1041" Description="">UHMW, White</Name>
+    <Name Language="1042" Description="">UHMW, 흰색</Name>
+    <Name Language="1045" Description="">UHMW, biały</Name>
+    <Name Language="1046" Description="">UHMW, branco</Name>
+    <Name Language="1049" Description="">Полиэтилен с/в-молекулярный белый</Name>
+    <Name Language="2052" Description="">UHMW，白</Name>
+    <Name Language="3082" Description="">UHMW - Blanco</Name>
+  </Style>
+  <Style InternalName="1:Welded Aluminum-6061 " EditFlag="0" Density="2.71" YoungsModulus="68.9" PoissonsRatio="0.33" YieldStrength="275" UltimateTensileStrength="310" ThermalConductivity="167" LinearExpansion="23.6" SpecificHeat="1.2561" WeldmentMaterial="1" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:4B6DBD91-43C6-4D25-8DF6-8066300DF3C8:032A8753-4C73-4F67-A4CF-066E33C4A0C3:0" MappingProteinMaterialId="MaterialInv_031">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Welded Aluminum-6061</SubStyle>
+    <Name Language="1028" Description="">熔接鋁 6061</Name>
+    <Name Language="1029" Description="">Svařovaný hliník-6061</Name>
+    <Name Language="1031" Description="">Geschweißtes Aluminum-6061</Name>
+    <Name Language="1033" Description="">Welded Aluminum-6061</Name>
+    <Name Language="1036" Description="">Aluminium soudé - 6061</Name>
+    <Name Language="1038" Description="">Hegesztett alumínium - 6061</Name>
+    <Name Language="1040" Description="">Alluminio saldato-6061</Name>
+    <Name Language="1041" Description="">Welded Aluminum-6061</Name>
+    <Name Language="1042" Description="">용접된 알루미늄-6061</Name>
+    <Name Language="1045" Description="">Spawane aluminium-6061</Name>
+    <Name Language="1046" Description="">Alumínio soldado-6061</Name>
+    <Name Language="1049" Description="">Сварка - Алюминий-6061</Name>
+    <Name Language="2052" Description="">焊接铝 - 6061</Name>
+    <Name Language="3082" Description="">Aluminio soldado-6061</Name>
+  </Style>
+  <Style InternalName="1:Welded Brass, Soft Yellow " EditFlag="0" Density="8.47" YoungsModulus="109.6" PoissonsRatio="0.331" YieldStrength="103.4" UltimateTensileStrength="275" ThermalConductivity="116" LinearExpansion="20.5" SpecificHeat="0.369" WeldmentMaterial="1" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:FAAD7CFC-DB1E-497E-9256-0CE07CCBF18F:04823EFC-3717-4206-B95C-6B0386A71B98:0" MappingProteinMaterialId="MaterialInv_032">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Welded Brass, Soft Yellow</SubStyle>
+    <Name Language="1028" Description="">熔接黃銅，柔和的黃色</Name>
+    <Name Language="1029" Description="">Svařovaná mosaz, měkká žlutá</Name>
+    <Name Language="1031" Description="">Geschw. Messing (gelb, weich)</Name>
+    <Name Language="1033" Description="">Welded Brass, Soft Yellow</Name>
+    <Name Language="1036" Description="">Laiton jaune doux soudé</Name>
+    <Name Language="1038" Description="">Hegesztett sárgaréz, lágy</Name>
+    <Name Language="1040" Description="">Ottone saldato, giallo chiaro</Name>
+    <Name Language="1041" Description="">Welded Brass, Soft Yellow</Name>
+    <Name Language="1042" Description="">용접된 황동, 연한 노란색</Name>
+    <Name Language="1045" Description="">Spawany mosiądz, jasnożółty</Name>
+    <Name Language="1046" Description="">Latão soldado, amarelo macio</Name>
+    <Name Language="1049" Description="">Сварка - Латунь светло-желтая</Name>
+    <Name Language="2052" Description="">焊接铜，柔和的黄色</Name>
+    <Name Language="3082" Description="">Bronce soldado, amarillo claro</Name>
+  </Style>
+  <Style InternalName="1:Welded Stainless Steel, 440C " EditFlag="0" Density="7.75" YoungsModulus="206.7" PoissonsRatio="0.27" YieldStrength="689" UltimateTensileStrength="861.25" ThermalConductivity="24.23" LinearExpansion="10.4" SpecificHeat="0.16057" WeldmentMaterial="1" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:B4E11081-8547-46B6-8E48-63435818884A:36763963-34A7-4032-A6F5-414766F6E49A:0" MappingProteinMaterialId="MaterialInv_033">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Welded Stainless Steel, 440C</SubStyle>
+    <Name Language="1028" Description="">熔接不銹鋼，440C</Name>
+    <Name Language="1029" Description="">Svařovaná nerezová ocel, 440C</Name>
+    <Name Language="1031" Description="">Geschweißter Stahl (rostfrei), 440C</Name>
+    <Name Language="1033" Description="">Welded Stainless Steel, 440C</Name>
+    <Name Language="1036" Description="">Acier inoxydable soudé, 440C</Name>
+    <Name Language="1038" Description="">Hegesztett acél (rozsdamentes) 440C</Name>
+    <Name Language="1040" Description="">Acciaio inossidabile saldato, 440C</Name>
+    <Name Language="1041" Description="">Welded Stainless Steel, 440C</Name>
+    <Name Language="1042" Description="">용접된 스테인리스강, 440C</Name>
+    <Name Language="1045" Description="">Spawana stal nierdzewna, 440C</Name>
+    <Name Language="1046" Description="">Aço inox soldado, 440C</Name>
+    <Name Language="1049" Description="">Сварка - Сталь нержавеющая - 440C</Name>
+    <Name Language="2052" Description="">焊接不锈钢，440C</Name>
+    <Name Language="3082" Description="">Acero inoxidable soldado, 440C</Name>
+  </Style>
+  <Style InternalName="1:Welded Steel Mild " EditFlag="0" Density="7.86" YoungsModulus="220" PoissonsRatio="0.275" YieldStrength="207" UltimateTensileStrength="345" ThermalConductivity="56" LinearExpansion="12" SpecificHeat="0.46" WeldmentMaterial="1" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:443FF4C0-B220-406B-A03C-AE1602BB69A3:48745BB7-BE14-4E5F-B4E0-4C3D4A7AE7A5:0" MappingProteinMaterialId="MaterialInv_034">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Welded Steel Mild</SubStyle>
+    <Name Language="1028" Description="">熔接可鍛鋼</Name>
+    <Name Language="1029" Description="">Svařovaná měkká ocel</Name>
+    <Name Language="1031" Description="">Geschweißter Stahl (weich)</Name>
+    <Name Language="1033" Description="">Welded Steel Mild</Name>
+    <Name Language="1036" Description="">Acier doux soudé</Name>
+    <Name Language="1038" Description="">Hegesztett acél (lágy)</Name>
+    <Name Language="1040" Description="">Acciaio dolce saldato</Name>
+    <Name Language="1041" Description="">Welded Steel Mild</Name>
+    <Name Language="1042" Description="">용접된 연강</Name>
+    <Name Language="1045" Description="">Spawana stal miękka</Name>
+    <Name Language="1046" Description="">Aço macio soldado</Name>
+    <Name Language="1049" Description="">Сварка - Сталь низкоуглеродистая</Name>
+    <Name Language="2052" Description="">焊接软钢</Name>
+    <Name Language="3082" Description="">Acero suave soldado</Name>
+  </Style>
+  <Style InternalName="1:Wood (Birch) " EditFlag="0" Density="0.55" YoungsModulus="10.3" PoissonsRatio="0.426" YieldStrength="56.3" UltimateTensileStrength="6.3" ThermalConductivity="0.15" LinearExpansion="4.5" SpecificHeat="1.2" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:578C5565-19A3-4B87-94E5-2FC5DD96E36B:BD37C431-8175-4396-BC56-0532A7B467EF:0" MappingProteinMaterialId="MaterialInv_066">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Wood (Birch)</SubStyle>
+    <Name Language="1028" Description="">木材 (樺木)</Name>
+    <Name Language="1029" Description="">Dřevo (bříza)</Name>
+    <Name Language="1031" Description="">Holz (Birke)</Name>
+    <Name Language="1033" Description="">Wood (Birch)</Name>
+    <Name Language="1036" Description="">Bois (bouleau)</Name>
+    <Name Language="1038" Description="">Fa (nyírfa)</Name>
+    <Name Language="1040" Description="">Legno (betulla)</Name>
+    <Name Language="1041" Description="">Wood (Birch)</Name>
+    <Name Language="1042" Description="">나무(자작나무)</Name>
+    <Name Language="1045" Description="">Drewno (brzoza)</Name>
+    <Name Language="1046" Description="">Madeira (Bétula)</Name>
+    <Name Language="1049" Description="">Дерево (береза)</Name>
+    <Name Language="2052" Description="">木材(桦木)</Name>
+    <Name Language="3082" Description="">Madera (abedul)</Name>
+  </Style>
+  <Style InternalName="1:Wood (Cherry) " EditFlag="0" Density="0.5" YoungsModulus="10.3" PoissonsRatio="0.392" YieldStrength="49" UltimateTensileStrength="3.9" ThermalConductivity="0.12" LinearExpansion="4.5" SpecificHeat="1.2" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:F5BAD8E7-A593-4851-944B-C9EE2740032B:6E6E40AC-4081-41D9-9050-0F7267D138A8:0" MappingProteinMaterialId="MaterialInv_067">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Wood (Cherry)</SubStyle>
+    <Name Language="1028" Description="">木材 (櫻桃木)</Name>
+    <Name Language="1029" Description="">Dřevo (třešeň)</Name>
+    <Name Language="1031" Description="">Holz (Kirschbaum)</Name>
+    <Name Language="1033" Description="">Wood (Cherry)</Name>
+    <Name Language="1036" Description="">Bois (cerisier)</Name>
+    <Name Language="1038" Description="">Fa (cseresznye)</Name>
+    <Name Language="1040" Description="">Legno (ciliegio)</Name>
+    <Name Language="1041" Description="">Wood (Cherry)</Name>
+    <Name Language="1042" Description="">나무(체리)</Name>
+    <Name Language="1045" Description="">Drewno (wiśnia)</Name>
+    <Name Language="1046" Description="">Madeira (Cerejeira)</Name>
+    <Name Language="1049" Description="">Дерево (вишня)</Name>
+    <Name Language="2052" Description="">木材(樱桃木)</Name>
+    <Name Language="3082" Description="">Madera (cerezo)</Name>
+  </Style>
+  <Style InternalName="1:Wood (Maple) " EditFlag="0" Density="0.57" YoungsModulus="10.7" PoissonsRatio="0.424" YieldStrength="54" UltimateTensileStrength="6.4" ThermalConductivity="0.15" LinearExpansion="4.5" SpecificHeat="1.2" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:E4FF557A-5BA7-4EDF-98E1-8CE34C71C730:60A89968-BAFB-4EAC-8340-8D008E3FC6D4:0" MappingProteinMaterialId="MaterialInv_068">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Wood (Maple)</SubStyle>
+    <Name Language="1028" Description="">木材 (楓木)</Name>
+    <Name Language="1029" Description="">Dřevo (javor)</Name>
+    <Name Language="1031" Description="">Holz (Ahorn)</Name>
+    <Name Language="1033" Description="">Wood (Maple)</Name>
+    <Name Language="1036" Description="">Bois (érable)</Name>
+    <Name Language="1038" Description="">Fa (juharfa)</Name>
+    <Name Language="1040" Description="">Legno (acero)</Name>
+    <Name Language="1041" Description="">Wood (Maple)</Name>
+    <Name Language="1042" Description="">나무(메이플)</Name>
+    <Name Language="1045" Description="">Drewno (klon)</Name>
+    <Name Language="1046" Description="">Madeira (Bordo)</Name>
+    <Name Language="1049" Description="">Дерево (клен)</Name>
+    <Name Language="2052" Description="">木材(枫木)</Name>
+    <Name Language="3082" Description="">Madera (arce)</Name>
+  </Style>
+  <Style InternalName="1:Wood (Oak) " EditFlag="0" Density="0.56" YoungsModulus="9.3" PoissonsRatio="0.35" YieldStrength="46.6" UltimateTensileStrength="5.5" ThermalConductivity="0.14" LinearExpansion="4.9" SpecificHeat="1.2" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:3AD50617-D51A-4289-8267-E073A56B0BB5:02C545A6-AACA-4BD3-A9B0-3EDBB9B18926:0" MappingProteinMaterialId="MaterialInv_069">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Wood (Oak)</SubStyle>
+    <Name Language="1028" Description="">木材 (橡木)</Name>
+    <Name Language="1029" Description="">Dřevo (dub)</Name>
+    <Name Language="1031" Description="">Holz (Eiche)</Name>
+    <Name Language="1033" Description="">Wood (Oak)</Name>
+    <Name Language="1036" Description="">Bois (chêne)</Name>
+    <Name Language="1038" Description="">Fa (tölgy)</Name>
+    <Name Language="1040" Description="">Legno (quercia)</Name>
+    <Name Language="1041" Description="">Wood (Oak)</Name>
+    <Name Language="1042" Description="">나무(오크)</Name>
+    <Name Language="1045" Description="">Drewno (dąb)</Name>
+    <Name Language="1046" Description="">Madeira (carvalho)</Name>
+    <Name Language="1049" Description="">Дерево (дуб)</Name>
+    <Name Language="2052" Description="">木材 (橡木)</Name>
+    <Name Language="3082" Description="">Madera (roble)</Name>
+  </Style>
+  <Style InternalName="1:Wood (Walnut) " EditFlag="0" Density="0.55" YoungsModulus="9.8" PoissonsRatio="0.495" YieldStrength="52.3" UltimateTensileStrength="4.8" ThermalConductivity="0.15" LinearExpansion="4.5" SpecificHeat="1.2" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:A74DDBBF-A01C-41DF-88DF-164FDA7D4013:D28CD648-4E5A-4C7A-9776-81F7561C2428:0" MappingProteinMaterialId="MaterialInv_070">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Wood (Walnut)</SubStyle>
+    <Name Language="1028" Description="">木材 (胡桃木)</Name>
+    <Name Language="1029" Description="">Dřevo (ořech)</Name>
+    <Name Language="1031" Description="">Holz (Walnuss)</Name>
+    <Name Language="1033" Description="">Wood (Walnut)</Name>
+    <Name Language="1036" Description="">Bois (noyer)</Name>
+    <Name Language="1038" Description="">Fa (dió)</Name>
+    <Name Language="1040" Description="">Legno (noce)</Name>
+    <Name Language="1041" Description="">Wood (Walnut)</Name>
+    <Name Language="1042" Description="">나무(월넛)</Name>
+    <Name Language="1045" Description="">Drewno (orzech włoski)</Name>
+    <Name Language="1046" Description="">Madeira (Amendoeira)</Name>
+    <Name Language="1049" Description="">Дерево (грецкий орех)</Name>
+    <Name Language="2052" Description="">木材(胡桃木)</Name>
+    <Name Language="3082" Description="">Madera (nogal)</Name>
+  </Style>
+  <Style InternalName="1:Wrought Copper " EditFlag="0" Density="8.94" YoungsModulus="117.5" PoissonsRatio="0.345" YieldStrength="330" UltimateTensileStrength="380" ThermalConductivity="386" LinearExpansion="16.7" SpecificHeat="0.383" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:B5C15342-D95B-46BD-BB6F-85B6CDD3AABD:D3A96026-3297-45F7-8BFB-BB4FAFFD88BD:0" MappingProteinMaterialId="MaterialInv_035">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Copper</SubStyle>
+    <Name Language="1028" Description="">鍛造銅</Name>
+    <Name Language="1029" Description="">Tvářená měď</Name>
+    <Name Language="1031" Description="">Schweißkupfer</Name>
+    <Name Language="1033" Description="">Wrought Copper</Name>
+    <Name Language="1036" Description="">Cuivre battu</Name>
+    <Name Language="1038" Description="">Hidegalakított réz</Name>
+    <Name Language="1040" Description="">Rame lavorato</Name>
+    <Name Language="1041" Description="">Wrought Copper</Name>
+    <Name Language="1042" Description="">연동</Name>
+    <Name Language="1045" Description="">Miedź kuta</Name>
+    <Name Language="1046" Description="">Cobre forjado</Name>
+    <Name Language="1049" Description="">Кованная медь</Name>
+    <Name Language="2052" Description="">锻铜</Name>
+    <Name Language="3082" Description="">Cobre forjado</Name>
+  </Style>
+  <Style InternalName="1:Wrought Steel " EditFlag="0" Density="7.85" YoungsModulus="210" PoissonsRatio="0.3" YieldStrength="250" UltimateTensileStrength="300" ThermalConductivity="47" LinearExpansion="12" SpecificHeat="0.46" WeldmentMaterial="0" ExternalMaterialId="2:MATERIAL:MI_InventorSustainability:443FF4C0-B220-406B-A03C-AE1602BB69A3:48745BB7-BE14-4E5F-B4E0-4C3D4A7AE7A5:0" MappingProteinMaterialId="MaterialInv_036">
+    <SubStyle Type="ColorStyle" Language="1033" Collection="Colors">Metal-Steel</SubStyle>
+    <Name Language="1028" Description="">鍛造鋼</Name>
+    <Name Language="1029" Description="">Tvářená ocel</Name>
+    <Name Language="1031" Description="">Schweißstahl</Name>
+    <Name Language="1033" Description="">Wrought Steel</Name>
+    <Name Language="1036" Description="">Acier laminé à chaud</Name>
+    <Name Language="1038" Description="">Kovácsolt acél</Name>
+    <Name Language="1040" Description="">Acciaio battuto</Name>
+    <Name Language="1041" Description="">Wrought Steel</Name>
+    <Name Language="1042" Description="">정제강</Name>
+    <Name Language="1045" Description="">Stal kuta</Name>
+    <Name Language="1046" Description="">Ferro forjado</Name>
+    <Name Language="1049" Description="">Ковкая сталь</Name>
+    <Name Language="2052" Description="">锻钢</Name>
+    <Name Language="3082" Description="">Acero forjado</Name>
+  </Style>
+</Materials>

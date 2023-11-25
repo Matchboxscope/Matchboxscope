@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<CenterMark Version="1">
+
+  <!--Created by Autodesk Inventor Version 28.0 Production Candidate-->
+
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+
+  <Style EditFlag="0" Extension="0.39878" Gap="0.29972" InternalName="1:Center Mark (ANSI)&#xA;" Mark="0.635" Overshoot="0.3175" Radius="1.27" Style="1">
+    <Name Description="" Language="1028">中心標記 (ANSI)</Name>
+    <Name Description="" Language="1029">Středová značka (ANSI)</Name>
+    <Name Description="" Language="1031">Mittelpunktmarkierung (ANSI)</Name>
+    <Name Description="" Language="1033">Center Mark (ANSI)</Name>
+    <Name Description="" Language="1036">Marque de centre (ANSI)</Name>
+    <Name Description="" Language="1038">Középjel (ANSI)</Name>
+    <Name Description="" Language="1040">Centro (ANSI)</Name>
+    <Name Description="" Language="1041">Center Mark (ANSI)</Name>
+    <Name Description="" Language="1042">중심 표식 (ANSI)</Name>
+    <Name Description="" Language="1045">Znacznik środka (ANSI)</Name>
+    <Name Description="" Language="1046">Marca de centro (ANSI)</Name>
+    <Name Description="" Language="1049">Маркер центра (ANSI)</Name>
+    <Name Description="" Language="2052">中心标记 (ANSI)</Name>
+    <Name Description="" Language="3082">Marca de centro (ANSI)</Name>
+  </Style>
+
+  <Style EditFlag="0" Extension="0.25" Gap="0.075" InternalName="1:Center Mark (BSI)&#xA;" Mark="0.5" Overshoot="0.25" Radius="1" Style="2">
+    <Name Description="" Language="1028">中心標記 (BSI)</Name>
+    <Name Description="" Language="1029">Středová značka (BSI)</Name>
+    <Name Description="" Language="1031">Mittelpunktmarkierung (BSI)</Name>
+    <Name Description="" Language="1033">Center Mark (BSI)</Name>
+    <Name Description="" Language="1036">Marque de centre (BSI)</Name>
+    <Name Description="" Language="1038">Középjel (BSI)</Name>
+    <Name Description="" Language="1040">Centro (BSI)</Name>
+    <Name Description="" Language="1041">Center Mark (BSI)</Name>
+    <Name Description="" Language="1042">중심 표식 (BSI)</Name>
+    <Name Description="" Language="1045">Znacznik środka (BSI)</Name>
+    <Name Description="" Language="1046">Marca de centro (BSI)</Name>
+    <Name Description="" Language="1049">Маркер центра (BSI)</Name>
+    <Name Description="" Language="2052">中心标记 (BSI)</Name>
+    <Name Description="" Language="3082">Marca de centro (BSI)</Name>
+  </Style>
+
+  <Style EditFlag="0" Extension="0.25" Gap="0.05" InternalName="1:Center Mark (GB)&#xA;" Mark="0.5" Overshoot="0.25" Radius="0.5" Style="2">
+    <Name Description="" Language="1028">中心標記 (GB)</Name>
+    <Name Description="" Language="1029">Středová značka (GB)</Name>
+    <Name Description="" Language="1031">Mittelpunktmarkierung (GB)</Name>
+    <Name Description="" Language="1033">Center Mark (GB)</Name>
+    <Name Description="" Language="1036">Marque de centre (GB)</Name>
+    <Name Description="" Language="1038">Középjel (GB)</Name>
+    <Name Description="" Language="1040">Centro (GB)</Name>
+    <Name Description="" Language="1041">Center Mark (GB)</Name>
+    <Name Description="" Language="1042">중심 표식 (GB)</Name>
+    <Name Description="" Language="1045">Znacznik środka (GB)</Name>
+    <Name Description="" Language="1046">Marca de centro (GB)</Name>
+    <Name Description="" Language="1049">Маркер центра (GB)</Name>
+    <Name Description="" Language="2052">中心标记 (GB)</Name>
+    <Name Description="" Language="3082">Marca de centro (GB)</Name>
+  </Style>
+
+  <Style EditFlag="0" Extension="0.15" Gap="0.15" InternalName="1:Center Mark (GOST)&#xA;" Mark="0.5" Overshoot="0.25" Radius="1" Style="2">
+    <Name Description="" Language="1028">中心標記 (GOST)</Name>
+    <Name Description="" Language="1029">Středová značka (GOST)</Name>
+    <Name Description="" Language="1031">Mittelpunktmarkierung (GOST)</Name>
+    <Name Description="" Language="1033">Center Mark (GOST)</Name>
+    <Name Description="" Language="1036">Marque de centre (GOST)</Name>
+    <Name Description="" Language="1038">Középjel (GOST)</Name>
+    <Name Description="" Language="1040">Centro (GOST)</Name>
+    <Name Description="" Language="1041">Center Mark (GOST)</Name>
+    <Name Description="" Language="1042">중심 표식(GOST)</Name>
+    <Name Description="" Language="1045">Znacznik środka (GOST)</Name>
+    <Name Description="" Language="1046">Marca de centro (GOST)</Name>
+    <Name Description="" Language="1049">Маркер центра (ГОСТ)</Name>
+    <Name Description="" Language="2052">中心标记 (GOST)</Name>
+    <Name Description="" Language="3082">Marca de centro (GOST)</Name>
+  </Style>
+
+  <Style EditFlag="0" Extension="0.15" Gap="0.15" InternalName="1:Center Mark (ISO)&#xA;" Mark="0.5" Overshoot="0.25" Radius="1" Style="2">
+    <Name Description="" Language="1028">中心標記 (ISO)</Name>
+    <Name Description="" Language="1029">Středová značka (ISO)</Name>
+    <Name Description="" Language="1031">Mittelpunktmarkierung (ISO)</Name>
+    <Name Description="" Language="1033">Center Mark (ISO)</Name>
+    <Name Description="" Language="1036">Marque de centre (ISO)</Name>
+    <Name Description="" Language="1038">Középjel (ISO)</Name>
+    <Name Description="" Language="1040">Centro (ISO)</Name>
+    <Name Description="" Language="1041">Center Mark (ISO)</Name>
+    <Name Description="" Language="1042">중심 표식 (ISO)</Name>
+    <Name Description="" Language="1045">Znacznik środka (ISO)</Name>
+    <Name Description="" Language="1046">Marca de centro (ISO)</Name>
+    <Name Description="" Language="1049">Маркер центра (ISO)</Name>
+    <Name Description="" Language="2052">中心标记 (ISO)</Name>
+    <Name Description="" Language="3082">Marca de centro (ISO)</Name>
+  </Style>
+
+</CenterMark>

@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FeatureAutoname Version="2024"><!--Change this version every major release-->
+  <!--Created by Autodesk Inventor Version 15.0 Production Candidate-->
+  <!--The schema of this file is subject to change without notice and is not guaranteed to remain the same from one release to the next.-->
+  <Feature InternalName="ExtrudeFeature" ShowExtendedName="1" >
+    <!-- [xExtents] and [xExtent2] means this item already contains prefix: " x " if needed-->
+    <Format InternalName="DefaultFormat" FormatString="[Operation][xExtent] x [Taper]" Default="[Operation][xExtent] x [Taper]"/>
+    <Format InternalName="TwoExtents" FormatString="[Operation][xExtent] x [Taper],[xExtent2] x [Taper2]" Default="[Operation][xExtent] x [Taper],[xExtent2] x [Taper2]"/>
+  </Feature>
+  <Feature InternalName="HoleFeature" ShowExtendedName="1" UseSubFormat="1">
+    <!--Use different formats according to hole operation and thread type-->
+    <Format InternalName="Simple_Drill" FormatString="[SimpleHole]" Default="[SimpleHole]"/>
+    <Format InternalName="Simple_Counterbore" FormatString="[HoleType] [HoleOperation], [SimpleHole]" Default="[HoleType] [HoleOperation], [SimpleHole]"/>
+    <Format InternalName="Simple_Countersink" FormatString="[HoleType] [HoleOperation], [SimpleHole]" Default="[HoleType] [HoleOperation], [SimpleHole]"/>
+    <Format InternalName="Simple_Spotface" FormatString="[HoleType] [HoleOperation], [SimpleHole]" Default="[HoleType] [HoleOperation], [SimpleHole]"/>
+    <Format InternalName="Clearance_Drill" FormatString="[FastenerSize], [SimpleHole]" Default="[FastenerSize], [SimpleHole]"/>
+    <Format InternalName="Clearance_Counterbore" FormatString="[FastenerSize], [HoleType] [HoleOperation], [SimpleHole]" Default="[FastenerSize], [HoleType] [HoleOperation], [SimpleHole]"/>
+    <Format InternalName="Clearance_Countersink" FormatString="[FastenerSize], [HoleType] [HoleOperation], [SimpleHole]" Default="[FastenerSize], [HoleType] [HoleOperation], [SimpleHole]"/>
+    <Format InternalName="Clearance_Spotface" FormatString="[FastenerSize], [HoleType] [HoleOperation], [SimpleHole]" Default="[FastenerSize], [HoleType] [HoleOperation], [SimpleHole]"/>
+    <Format InternalName="Tapped_Drill" FormatString="[ThreadInfo]" Default="[ThreadInfo]"/>
+    <Format InternalName="Tapped_Counterbore" FormatString="[HoleType] [HoleOperation], [ThreadInfo]" Default="[HoleType] [HoleOperation], [ThreadInfo]"/>
+    <Format InternalName="Tapped_Countersink" FormatString="[HoleType] [HoleOperation], [ThreadInfo]" Default="[HoleType] [HoleOperation], [ThreadInfo]"/>
+    <Format InternalName="Tapped_Spotface" FormatString="[HoleType] [HoleOperation], [ThreadInfo]" Default="[HoleType] [HoleOperation], [ThreadInfo]"/>
+    <Format InternalName="TaperTapped_Drill" FormatString="[TaperThreadInfo]" Default="[TaperThreadInfo]"/>
+    <Format InternalName="TaperTapped_Countersink" FormatString="[HoleType] [HoleOperation], [TaperThreadInfo]" Default="[HoleType] [HoleOperation], [TaperThreadInfo]"/>
+    <Format InternalName="TaperTapped_Spotface" FormatString="[HoleType] [HoleOperation], [TaperThreadInfo]" Default="[HoleType] [HoleOperation], [TaperThreadInfo]"/>
+    <!--Sub formats are defined below-->
+    <Format InternalName="SimpleHole" FormatString="Ø[HoleDiameter][xHoleDepth] [DepthString]" Default="Ø[HoleDiameter][xHoleDepth] [DepthString]"/>
+    <Format InternalName="HoleOperation" FormatString="Ø[HeadDiameter] x [HoleHeadDepthOrAngle]" Default="Ø[HeadDiameter] x [HoleHeadDepthOrAngle], "/>
+    <Format InternalName="ThreadInfo" FormatString="[ThreadDesignation][xThreadDepth] [ThreadDepthString][xHoleDepth] [DepthString]" Default="[ThreadDesignation][xThreadDepth] [ThreadDepthString][xHoleDepth] [DepthString]"/>
+    <Format InternalName="TaperThreadInfo" FormatString="[ThreadDesignation][xHoleDepth] [DepthString]" Default="[ThreadDesignation][xHoleDepth] [DepthString]"/>
+  </Feature>
+  <Feature InternalName="ChamferFeature" ShowExtendedName="1" >
+		<Format InternalName="OneDistance" FormatString="[Distance1]" Default="[Distance1]"/>
+		<Format InternalName="DistanceAndAngle" FormatString="[Distance1] x [Angle]" Default="[Distance1] x [Angle]"/>
+		<Format InternalName="TwoDistances" FormatString="[Distance1] x [Distance2]" Default="[Distance1] x [Distance2]"/>
+  </Feature>
+  <Feature InternalName="LoftFeature" ShowExtendedName="1" >
+		<Format InternalName="DefaultFormat" FormatString="[Operation]" Default="[Operation]"/>
+  </Feature>
+  <Feature InternalName="CoilFeature" ShowExtendedName="1" >
+		<Format InternalName="PitchAndRevolution" FormatString="[Operation] x [Pitch] x [Revolution] x [Taper]" Default="[Operation] x [Pitch] x [Revolution] x [Taper]"/>
+		<Format InternalName="RevolutionAndHeight" FormatString="[Operation] x [Height] x [Revolution] x [Taper]" Default="Operation] x [Height] x [Revolution] x [Taper]"/>
+		<Format InternalName="PitchAndHeight" FormatString="[Operation] x [Pitch] x [Height] x [Taper]" Default="[Operation] x [Pitch] x [Height] x [Taper]"/>
+		<Format InternalName="Spiral" FormatString="[Operation] x [Pitch] x [Revolution]" Default="[Operation] x [Pitch] x [Revolution]"/>
+  </Feature>
+  <Feature InternalName="SweepFeature" ShowExtendedName="1" >
+		<Format InternalName="DefaultFormat" FormatString="[Operation]" Default="[Operation]"/>
+  </Feature>
+  <Feature InternalName="RibFeature" ShowExtendedName="1" >
+    <Format InternalName="DefaultFormat" FormatString="[Extents] x [Thickness] x [Width], x [Taper]" Default="[Extents] x [Thickness] x [Width] x [Taper]"/>
+    <Format InternalName="RibWithBoss" FormatString="[Extents] x [Thickness] x [Width], x [Taper], Ø[Diameter] x [Offset] x [DraftAngle]" Default="[Extents] x [Thickness] x [Width] x [Taper], Ø[Diameter] x [Offset] x [DraftAngle]"/>
+  </Feature>
+  <Feature InternalName="RevolutionFeature" ShowExtendedName="1" >
+		<Format InternalName="AngleExtents" FormatString="[Operation] x [Angle]" Default="[Operation] x [Angle]"/>
+		<!--NotdistanceExtents include "To Next, To, Between, Full"-->
+		<Format InternalName="NotAngleExtents" FormatString="[Operation] [Extents]" Default="[Operation] [Extents]"/>		
+  </Feature>
+  <Feature InternalName="MirrorPattern" ShowExtendedName="1">
+    <Format InternalName="DefaultFormat" FormatString="[PatternType] x [MirrorPlane]" Default="[PatternType] x [MirrorPlane]"/>
+  </Feature>
+  <Feature InternalName="RectangularPattern" ShowExtendedName="1">
+		<Format InternalName="DefaultFormat" FormatString="[PatternType] x [Count1] x [Distance1], x [Count2] x [Distance2]" Default="[PatternType] x [Count1] x [Distance1], x [Count2] x [Distance2]"/>
+		<Format InternalName="OnlyDirection1" FormatString="[PatternType] x [Count1] x [Distance1]" Default="[PatternType] x [Count1] x [Distance1]" />
+		<Format InternalName="OnlyDirection2" FormatString="[PatternType] x [Count2] x [Distance2]" Default="[PatternType] x [Count2] x [Distance2]" />
+  </Feature>
+  <Feature InternalName="CircularPattern" ShowExtendedName="1" >
+		<Format InternalName="DefaultFormat" FormatString="[PatternType] x [Count] x [Angle]" Default="[PatternType] x [Count] x [Angle]"/>
+  </Feature>
+  <Feature InternalName="SketchPattern" ShowExtendedName="1" >
+		<Format InternalName="DefaultFormat" FormatString="[PatternType] x [Count]" Default="[PatternType] x [Count]"/>
+  </Feature>
+  <Feature InternalName="SplitFeature" ShowExtendedName="1" >
+    <Format InternalName="DefaultFormat" FormatString="[SplitMethod] x [SplitPlane]" Default="[SplitMethod] x [SplitPlane]"/>
+  </Feature>
+  <Feature InternalName="DraftFeature" ShowExtendedName="1" >
+    <Format InternalName="DefaultFormat" FormatString="x [DraftAngle]" Default="x [DraftAngle]"/>
+    <Format InternalName="TwoAnglesFormat" FormatString="x [DraftAngle], x [DraftAngle2]" Default="x [DraftAngle], x [DraftAngle2]"/>
+  </Feature>
+  <Feature InternalName="ThreadFeature" ShowExtendedName="1" >
+    <Format InternalName="DefaultFormat" FormatString="[ThreadDesignation] - [ThreadClass] x [ThreadLength]" Default="[ThreadDesignation] - [ThreadClass] x [ThreadLength]"/>
+    <Format InternalName="FullLengthNoClass" FormatString="[ThreadDesignation] - [ThreadClass]" Default="[ThreadDesignation] - [ThreadClass]"/>
+    <Format InternalName="OnlyThreadDesignation" FormatString="[ThreadDesignation]" Default="[ThreadDesignation]"/>
+  </Feature>
+  <Feature InternalName="FilletFeature" ShowExtendedName="1">
+    <!--MaxNumberOfItems represents the max number of radius to be shown, more radius will be shown as "...", and "0" means all items-->
+    <Format InternalName="DefaultFormat" FormatString="[AllRadius]" Default="[AllRadius]" MaxNumberOfItems="10"/>
+  </Feature>
+  <Feature InternalName="ThickenFeature" ShowExtendedName="1">
+    <Format InternalName="DefaultFormat" FormatString="[Operation] x [Distance]" Default="[Operation] x [Distance]" MaxNumberOfItems="1"/>
+	<Format InternalName="SurfaceFormat" FormatString="[Distance]" Default="[Distance]" MaxNumberOfItems="1"/>
+  </Feature>
+  <Feature InternalName="ShellFeature" ShowExtendedName="1">
+    <!--MaxNumberOfItems represents the max number of thicknesses to be shown, more will be shown as ", ...", and "0", or no value in xml, means all items-->
+    <Format InternalName="DefaultFormat" FormatString="[ShellType] x [Thickness]" Default="[ShellType] x [Thickness]" MaxNumberOfItems="10"/>
+  </Feature>
+  <Feature InternalName="CombineFeature" ShowExtendedName="1">
+    <Format InternalName="DefaultFormat" FormatString="[Type]" Default="[Type]"/>
+  </Feature>
+  <Feature InternalName="BendPartFeature" ShowExtendedName="1">
+    <Format InternalName="RadiusAndAngle" FormatString="[Radius] x [Angle]" Default="[Radius] x [Angle]"/>
+    <Format InternalName="RadiusAndArcLength" FormatString="[Radius] x [ArcLength]" Default="[Radius] x [ArcLength]"/>
+    <Format InternalName="ArcLengthAndAngle" FormatString="[ArcLength] x [Angle]" Default="[ArcLength] x [Angle]"/>
+  </Feature>
+  <Feature InternalName="WorkPlane" ShowExtendedName="1">
+    <Format InternalName="ParallelThroughPoint" FormatString="[WorkPlaneParallelThroughPoint]" Default="[WorkPlaneParallelThroughPoint]"/>
+    <Format InternalName="OffsetPlaneFormat" FormatString="[WorkPlaneOffsetTypeInfo] [WorkPlaneRelatedPlane] x [OffsetValue]" Default="[WorkPlaneOffsetTypeInfo] [WorkPlaneRelatedPlane] x [OffsetValue]"/>
+    <Format InternalName="MidPlaneFormat" FormatString="[MidWorkPlaneBetweenPlanes]" Default="[MidWorkPlaneBetweenPlanes]"/>
+    <Format InternalName="LinePlaneAnglePlane" FormatString="[LinePlaneAnglePlane]" Default="[LinePlaneAnglePlane]"/>
+	<Format InternalName="ThreePoints" FormatString="[ThreePoints]" Default="[ThreePoints]"/>
+	<Format InternalName="TwoCoplanarEdges" FormatString="[TwoCoplanarEdges]" Default="[TwoCoplanarEdges]"/>
+	<Format InternalName="TangentToSurfaceThroughEdge" FormatString="[TangentToSurfaceThroughEdge]" Default="[TangentToSurfaceThroughEdge]"/>
+	<Format InternalName="TangentToSurfaceThroughPoint" FormatString="[TangentToSurfaceThroughPoint]" Default="[TangentToSurfaceThroughPoint]"/>
+	<Format InternalName="TangentToSurfaceParallelToPlane" FormatString="[TangentToSurfaceParallelToPlane]" Default="[TangentToSurfaceParallelToPlane]"/>
+	<Format InternalName="NormalToAxisThroughPoint" FormatString="[NormalToAxisThroughPoint]" Default="[NormalToAxisThroughPoint]"/>
+	<Format InternalName="NormalToCurveAtPoint" FormatString="[NormalToCurveAtPoint]" Default="[NormalToCurveAtPoint]"/>
+	<Format InternalName="TorusMidPlane" FormatString="[TorusMidPlane]" Default="[TorusMidPlane]"/>
+  </Feature>
+    <Feature InternalName="WorkPoint" ShowExtendedName="1">
+    <Format InternalName="GroundedPoint" FormatString="[GroundedPoint]" Default="[GroundedPoint]"/>
+    <Format InternalName="TorusCenter" FormatString="[TorusCenter]" Default="[TorusCenter]"/>
+    <Format InternalName="SphereCenter" FormatString="[SphereCenter]" Default="[SphereCenter]"/>
+    <Format InternalName="CurveCurveIntersection" FormatString="[CurveCurveIntersection]" Default="[CurveCurveIntersection]"/>
+	<Format InternalName="ThreePlanes" FormatString="[ThreePlanes]" Default="[ThreePlanes]"/>
+	<Format InternalName="CurveSurface" FormatString="[CurveSurface]" Default="[CurveSurface]"/>
+	<Format InternalName="OnVertex" FormatString="[OnVertex]" Default="[OnVertex]"/>
+	<Format InternalName="MidPoint" FormatString="[MidPoint]" Default="[MidPoint]"/>
+	<Format InternalName="SketchPoint" FormatString="[SketchPoint]" Default="[SketchPoint]"/>
+	<Format InternalName="ByWorkPoint" FormatString="[ByWorkPoint]" Default="[ByWorkPoint]"/>
+	<Format InternalName="CenterPointOfLoop" FormatString="[CenterPointOfLoop]" Default="[CenterPointOfLoop]"/>
+  </Feature>
+  <Feature InternalName="WorkLine" ShowExtendedName="1">
+    <Format InternalName="ParallelThroughPoint" FormatString="[ParallelThroughPoint]" Default="[ParallelThroughPoint]"/>
+    <Format InternalName="RevolutionAxis" FormatString="[RevolutionAxis]" Default="[RevolutionAxis]"/>
+    <Format InternalName="LoopNormal" FormatString="[LoopNormal]" Default="[LoopNormal]"/>
+    <Format InternalName="TwoPoints" FormatString="[TwoPoints]" Default="[TwoPoints]"/>
+	<Format InternalName="TwoPlanes" FormatString="[TwoPlanes]" Default="[TwoPlanes]"/>
+	<Format InternalName="PointPlaneNormal" FormatString="[PointPlaneNormal]" Default="[PointPlaneNormal]"/>
+	<Format InternalName="LineCopyLine" FormatString="[LineCopyLine]" Default="[LineCopyLine]"/>
+	<Format InternalName="3DSketchLine" FormatString="[3DSketchLine]" Default="[3DSketchLine]"/>
+	<Format InternalName="LinearEdge" FormatString="[LinearEdge]" Default="[LinearEdge]"/>
+  </Feature>
+  
+  <!-- 3da features start here. -->
+  
+  <Feature InternalName="3da" ShowExtendedName="1">
+    <Format InternalName="DatumTarget" FormatString="[Length1] x [Length2]" Default="[Length1] x [Length2]"/>
+  </Feature>
+
+  <!-- Sheet Metal features start here. -->
+
+  <Feature InternalName="SheetMetal_Cut" ShowExtendedName="1">
+    <Format InternalName="DefaultFormat" FormatString="[Thickness]" Default="[Thickness]"/>
+  </Feature>
+  <Feature InternalName="SheetMetal_CornerChamfer" ShowExtendedName="1">
+		<Format InternalName="OneDistance" FormatString="[Distance1]" Default="[Distance1]"/>
+		<Format InternalName="DistanceAndAngle" FormatString="[Distance1] x [Angle]" Default="[Distance1] x [Angle]"/>
+		<Format InternalName="TwoDistances" FormatString="[Distance1] x [Distance2]" Default="[Distance1] x [Distance2]"/>
+  </Feature>
+  <Feature InternalName="SheetMetal_CornerRound" ShowExtendedName="1">
+    <!--MaxNumberOfItems represents the max number of thicknesses to be shown, more will be shown as ", ...", and "0", or no value in xml, means all items-->
+    <Format InternalName="DefaultFormat" FormatString="[Radius]" Default="[Radius]" MaxNumberOfItems="10"/>
+  </Feature>
+  <Feature InternalName="SheetMetal_CornerSeam" ShowExtendedName="1">
+    <Format InternalName="DefaultFormat" FormatString="[Shape], [Gap]" Default="[Shape], [Gap]"/>
+  </Feature>
+  <Feature InternalName="SheetMetal_Fold" ShowExtendedName="1">
+    <Format InternalName="DefaultFormat" FormatString="[Angle]" Default="[Angle]"/>
+  </Feature>
+  <Feature InternalName="SheetMetal_Plate" ShowExtendedName="1">
+    <Format InternalName="DefaultFormat" FormatString="[Thickness]" Default="[Thickness]"/>
+  </Feature>
+  <Feature InternalName="SheetMetal_Face" ShowExtendedName="1">
+    <Format InternalName="DefaultFormat" FormatString="[Operation] [Thickness]" Default="[Operation] [Thickness]"/>
+  </Feature>
+  <Feature InternalName="SheetMetal_Flange" ShowExtendedName="1">
+    <Format InternalName="DefaultFormat" FormatString="[HeightExtents] x [Angle]" Default="[HeightExtents] x [Angle]"/>
+  </Feature>	
+  <Feature InternalName="SheetMetal_ContourFlange" ShowExtendedName="1">
+    <Format InternalName="DefaultFormat" FormatString="[Operation] x [Thickness][xExtents]" Default="[Operation][Thickness][xExtents]"/>
+  </Feature>
+  <Feature InternalName="SheetMetal_Bend" ShowExtendedName="1">
+    <Format InternalName="DefaultFormat" FormatString="[Radius]" Default="[Radius]"/>
+  </Feature>
+  <Feature InternalName="SheetMetal_Hem" ShowExtendedName="1">
+	<Format InternalName="GapAndLength" FormatString="[Type], [Gap] x [Length]" Default="[Type], [Gap] x [Length]"/>
+	<Format InternalName="RadiusAndAngle" FormatString="[Type], [Radius] x [Angle]" Default="[Type], [Radius] x [Angle]"/>
+  </Feature>	
+  <Feature InternalName="SheetMetal_FlangeCorner" ShowExtendedName="1">
+    <Format InternalName="DefaultFormat" FormatString="[Gap] x [Length]" Default="[Gap] x [Length]"/>
+  </Feature>	
+  <Feature InternalName="SheetMetal_Punch" ShowExtendedName="1">
+    <Format InternalName="WithAcrossBend" FormatString="[AcrossBend] - [PunchRepresentationState] - [UnfoldInFlatPattern] - [AngleOfRotation]" Default="[AcrossBend] - [PunchRepresentationState] - [UnfoldInFlatPattern] - [AngleOfRotation]"/>
+    <Format InternalName="WithoutAcrossBend" FormatString="[PunchRepresentationState] - [UnfoldInFlatPattern] - [AngleOfRotation]" Default="[PunchRepresentationState] - [UnfoldInFlatPattern] - [AngleOfRotation]"/>
+  </Feature>
+
+  <!-- Sheet Metal features end here. -->
+
+  <Feature InternalName="EmbossFeature" ShowExtendedName="1">
+    <Format InternalName="DefaultFormat" FormatString="[EmbossType] x [Value]" Default="[EmbossType] x [Value]"/>
+  </Feature>
+  <Feature InternalName="RuledSurface" ShowExtendedName="1" >
+    <Format InternalName="DefaultFormat" FormatString="[Type], [Distance] x [Angle]" Default="[Type], [Distance] x [Angle]"/>
+  </Feature>
+  <Feature InternalName="ExtendSurface" ShowExtendedName="1" >
+    <Format InternalName="DefaultFormat" FormatString="[Distance]" Default="[Distance]"/>
+  </Feature>
+
+</FeatureAutoname>
